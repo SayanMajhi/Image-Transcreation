@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "culture-transcreation"
+version = "0.1.0"
+description = "A modular research pipeline for culturally adapting images."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = []
+
+[project.scripts]
+transcreate = "transcreation.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

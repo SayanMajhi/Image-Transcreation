@@ -1,0 +1,60 @@
+# Virtual environments and local interpreter bootstrap
+.venv/
+venv/
+.python311/
+.python311.nupkg
+
+# Editors
+.idea/
+.vscode/
+
+# Python bytecode and package artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Environment secrets
+.env
+.env.*
+*.env
+*.env.*
+
+# Model checkpoints and download caches
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+.cache/
+.huggingface/
+huggingface/
+torch_cache/
+checkpoints/
+models/
+
+# Generated outputs and local datasets
+outputs/*
+!outputs/.gitkeep
+data/*
+!data/.gitkeep
+
+# Operating system files
+.DS_Store
+Thumbs.db
+sayan.txt
