@@ -1,1 +1,1 @@
-"""Image transcreation research package."""
+"""Culture transcreation application."""

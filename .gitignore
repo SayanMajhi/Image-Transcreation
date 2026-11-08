@@ -53,8 +53,18 @@ outputs/*
 !outputs/.gitkeep
 data/*
 !data/.gitkeep
+!data/sample_images/
+data/sample_images/*
+!data/sample_images/.gitkeep
 
 # Operating system files
 .DS_Store
 Thumbs.db
-sayan.txt
+sayan.md
+
+# Local cleanup archives may contain private source images and raw experiment copies
+.local_archive/
+
+# Additional generated checkpoint formats
+pytorch_model*.bin
+*.onnx

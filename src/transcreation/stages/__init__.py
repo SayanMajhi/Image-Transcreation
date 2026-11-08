@@ -1,1 +1,1 @@
-"""Namespace for future pipeline stages."""
+"""Image captioning and future cultural adaptation stages."""
