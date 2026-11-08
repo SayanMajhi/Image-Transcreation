@@ -119,7 +119,7 @@ $env:PYTHONPATH = (Resolve-Path .\src).Path
 
 Tests use a mocked model and do not download weights or run full AI inference.
 
-See [model findings](reports/model_comparison.md) and
-[saved experimental outputs](reports/experiment_results.md).
+See [model findings](.local_archive/model_comparison.md) and
+[saved experimental outputs](.local_archive/experiment_results.md).
 Original experiment evidence remains in
 `.local_archive/smolvlm_commitment_20261108/`.
