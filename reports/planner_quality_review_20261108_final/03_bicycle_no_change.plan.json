@@ -1,0 +1,13 @@
+{
+  "decision": "ABSTAIN",
+  "decision_reason": "The image contains graffiti, which is culturally sensitive and requires verification to ensure it aligns with the target culture's norms and regulations. The user instructions do not specify how to handle graffiti, so the image should not be modified.",
+  "scene_summary": "A bicycle is leaning against a set of black doors. The doors are framed with white trim and have graffiti on them. The graffiti is in various colors including blue, white, yellow, and black. The bicycle is black and has a front basket. The sidewalk is made of brick and is lined with black doors.",
+  "candidate_edits": [],
+  "must_preserve": [],
+  "uncertainties": [],
+  "verification_requirements": [
+    "Verify the graffiti's content and style to ensure it aligns with Indian cultural norms and regulations.",
+    "Confirm the presence and condition of the black doors and their graffiti.",
+    "No image change is authorized. Verify any unconfirmed scene claims before using them in a future edit."
+  ]
+}

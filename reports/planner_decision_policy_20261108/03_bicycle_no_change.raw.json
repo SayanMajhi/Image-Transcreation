@@ -1,0 +1,9 @@
+{
+  "decision": "PROPOSE",
+  "decision_reason": "The scene depicts a common parked bicycle activity in a specific urban setting. The target culture is India, which is a diverse country with various urban landscapes. The proposed change is to keep the ordinary parked-bicycle activity and maintain the original scene's meaning and relationships. The bicycle, doors, graffiti, and sidewalk are kept as they are, and no cultural decoration is added. The bicycle is black and has a front basket, and the doors are black with graffiti. The sidewalk is made of brick and lined with black doors. The scene's purpose is to depict a typical urban setting with a parked bicycle, and the target culture is India, which can accommodate this scene without adding cultural decoration.",
+  "scene_summary": "A bicycle is leaning against a set of black doors. The doors are framed with white trim and have graffiti on them. The bicycle is black and has a front basket. The sidewalk is made of brick and is lined with black doors.",
+  "candidate_edits": [],
+  "must_preserve": ["A bicycle is leaning against a set of black doors.", "The doors are framed with white trim and have graffiti on them.", "The bicycle is black and has a front basket.", "The sidewalk is made of brick and is lined with black doors."],
+  "uncertainties": [],
+  "verification_requirements": []
+}

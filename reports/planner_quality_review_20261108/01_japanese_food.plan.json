@@ -1,0 +1,34 @@
+{
+  "decision": "REVIEW",
+  "decision_reason": "The proposed change is justified as a bowl of dal is a common Indian dish and would be a suitable alternative to ramen in a lunch setting. The scene is kept intact with the exception of the meal, which is replaced with a bowl of dal. The identity of the people and their shared lunch is preserved, as well as the seating arrangement. Verify the source-object identity of: {\"object_id\": \"meal-1\", \"description\": \"bowl of ramen\", \"object_id\": null, \"identity_uncertain\": true}. Localization must retain the original object label: {\"object_id\": \"meal-1\", \"description\": \"bowl of ramen\", \"object_id\": null, \"identity_uncertain\": true}.",
+  "scene_summary": "{\"SOURCE\": null, \"FUTURE\": null}",
+  "candidate_edits": [
+    {
+      "object_description": "{\"object_id\": \"meal-1\", \"description\": \"bowl of ramen\", \"object_id\": null, \"identity_uncertain\": true}",
+      "localization_phrase": "A bowl of ramen",
+      "proposed_change": "replace with a bowl of dal",
+      "cultural_reason": "Dal is a common Indian dish and would be a suitable alternative to ramen in a lunch setting.",
+      "identity_uncertain": false,
+      "verified_object_id": "meal-1"
+    }
+  ],
+  "must_preserve": [
+    "Two people share lunch at a table.",
+    "A bowl of ramen with chopsticks sits between them.",
+    "A table with two people sitting at it.",
+    "original scene purpose",
+    "important people",
+    "activity",
+    "person and object relationships"
+  ],
+  "uncertainties": [],
+  "verification_requirements": [
+    "Verify that the proposed change to a bowl of dal is culturally suitable and visually appropriate for the Indian context.",
+    "Verify the source-object identity of: {\"object_id\": \"meal-1\", \"description\": \"bowl of ramen\", \"object_id\": null, \"identity_uncertain\": true}.",
+    "Localization must retain the original object label: {\"object_id\": \"meal-1\", \"description\": \"bowl of ramen\", \"object_id\": null, \"identity_uncertain\": true}.",
+    "Check proposed changes and cultural reasons with the user.",
+    "Verify localization phrases against the image before grounding or editing.",
+    "Compare scene_summary with the original image; caption-only claims are unverified, including any paraphrased identities.",
+    "Check every preservation statement against every proposed change; surface-label checks cannot prove semantic consistency."
+  ]
+}

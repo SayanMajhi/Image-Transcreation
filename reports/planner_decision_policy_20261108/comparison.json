@@ -1,0 +1,176 @@
+[
+  {
+    "example": "01_japanese_food",
+    "before_file": "reports\\planner_quality_review_20261108_final\\01_japanese_food.audit.json",
+    "before": {
+      "raw_decision": "ABSTAIN",
+      "final_decision": "ABSTAIN",
+      "candidate_count": 0,
+      "validation": {
+        "status": "valid",
+        "raw_decision": "ABSTAIN",
+        "final_decision": "ABSTAIN",
+        "deterministic_review_applied": false,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 4.306817500000761,
+      "generation_seconds": 1.817998,
+      "prompt_tokens": 678,
+      "output_tokens": 125
+    },
+    "after": {
+      "raw_decision": "PROPOSE",
+      "final_decision": "REVIEW",
+      "candidate_count": 0,
+      "validation": {
+        "status": "valid",
+        "raw_decision": "PROPOSE",
+        "final_decision": "REVIEW",
+        "deterministic_review_applied": true,
+        "raw_schema_valid": true,
+        "issues": [
+          {
+            "code": "SOURCE_OBJECT_MISMATCH",
+            "message": "The source-object identity does not match the user-verified description.",
+            "candidate_index": 0,
+            "severity": "review"
+          },
+          {
+            "code": "SOURCE_REPLACEMENT_IDENTICAL",
+            "message": "The proposed replacement/modification is indistinguishable from the original object.",
+            "candidate_index": 0,
+            "severity": "review"
+          },
+          {
+            "code": "USER_CONSTRAINTS_UNRESOLVED",
+            "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+            "candidate_index": null,
+            "severity": "review"
+          }
+        ],
+        "rejected_candidates": [
+          {
+            "candidate_index": 0,
+            "raw_proposal": {
+              "object_description": "bowl of dal with curry and rice",
+              "localization_phrase": "bowl of dal with curry and rice",
+              "proposed_change": "bowl of dal with curry and rice",
+              "cultural_reason": "Dal is a common Indian dish that can be served with rice and curry, providing a culturally appropriate alternative to ramen.",
+              "identity_uncertain": false,
+              "verified_object_id": "meal-1"
+            },
+            "issue_codes": [
+              "SOURCE_OBJECT_MISMATCH",
+              "SOURCE_REPLACEMENT_IDENTICAL",
+              "USER_CONSTRAINTS_UNRESOLVED"
+            ]
+          }
+        ],
+        "automatically_authorized": false,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 8.22688250000283,
+      "generation_seconds": 3.663789,
+      "prompt_tokens": 714,
+      "output_tokens": 242
+    },
+    "fixture_sha256": "410c23dde4c57d39ca0fb8bf45b76d29363366a79230c66621f9ad5fed615882",
+    "cli_exit_code": 0,
+    "human_review_notes": ""
+  },
+  {
+    "example": "02_durga_uncertain_incense",
+    "before_file": "reports\\planner_quality_review_20261108_final\\02_durga_uncertain_incense.audit.json",
+    "before": {
+      "raw_decision": "REVIEW",
+      "final_decision": "REVIEW",
+      "candidate_count": 1,
+      "validation": {
+        "status": "valid",
+        "raw_decision": "REVIEW",
+        "final_decision": "REVIEW",
+        "deterministic_review_applied": false,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 10.415787500001898,
+      "generation_seconds": 7.352194,
+      "prompt_tokens": 783,
+      "output_tokens": 529
+    },
+    "after": {
+      "raw_decision": "REVIEW",
+      "final_decision": "REVIEW",
+      "candidate_count": 0,
+      "validation": {
+        "status": "valid",
+        "raw_decision": "REVIEW",
+        "final_decision": "REVIEW",
+        "deterministic_review_applied": false,
+        "raw_schema_valid": true,
+        "issues": [
+          {
+            "code": "CAPTION_INCOMPLETE",
+            "message": "Verify the complete source caption and image before planning an edit.",
+            "candidate_index": null,
+            "severity": "review"
+          }
+        ],
+        "rejected_candidates": [],
+        "automatically_authorized": false,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 9.208857200002967,
+      "generation_seconds": 5.80937,
+      "prompt_tokens": 819,
+      "output_tokens": 432
+    },
+    "fixture_sha256": "a8d1a27d72cb4270b4e00c3365a11fe09e31db6b8496732951a2dd780ff7dccf",
+    "cli_exit_code": 0,
+    "human_review_notes": ""
+  },
+  {
+    "example": "03_bicycle_no_change",
+    "before_file": "reports\\planner_quality_review_20261108_final\\03_bicycle_no_change.audit.json",
+    "before": {
+      "raw_decision": "ABSTAIN",
+      "final_decision": "ABSTAIN",
+      "candidate_count": 0,
+      "validation": {
+        "status": "valid",
+        "raw_decision": "ABSTAIN",
+        "final_decision": "ABSTAIN",
+        "deterministic_review_applied": false,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 5.790805900000123,
+      "generation_seconds": 2.772294,
+      "prompt_tokens": 697,
+      "output_tokens": 198
+    },
+    "after": {
+      "raw_decision": "PROPOSE",
+      "final_decision": null,
+      "candidate_count": 0,
+      "validation": {
+        "status": "error",
+        "code": "schema_validation_failed",
+        "message": "malformed planner response: PROPOSE requires at least one candidate edit",
+        "issues": [
+          {
+            "code": "schema_validation_failed",
+            "message": "malformed planner response: PROPOSE requires at least one candidate edit",
+            "candidate_index": null,
+            "severity": "error"
+          }
+        ]
+      },
+      "request_seconds": 7.087977799998043,
+      "generation_seconds": 3.992627,
+      "prompt_tokens": 733,
+      "output_tokens": 288
+    },
+    "fixture_sha256": "71eb8fc52a6215bda79b1ba430a2321b23e163af69604c8d7a3268b4f8207efb",
+    "cli_exit_code": 2,
+    "human_review_notes": ""
+  }
+]

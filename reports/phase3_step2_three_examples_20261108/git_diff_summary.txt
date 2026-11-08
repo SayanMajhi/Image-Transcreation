@@ -1,0 +1,23 @@
+Cumulative uncommitted changes (includes earlier planner work):
+ README.md                            | 227 +++++++++++++++++++++++++++++++++--
+ src/transcreation/cli.py             |  32 +++++
+ src/transcreation/config.py          |  55 ++++++++-
+ src/transcreation/contracts.py       | 142 +++++++++++++++++++++-
+ src/transcreation/stages/planning.py |  93 +++++++++++++-
+ 5 files changed, 536 insertions(+), 13 deletions(-)
+
+ M README.md
+ M src/transcreation/cli.py
+ M src/transcreation/config.py
+ M src/transcreation/contracts.py
+ M src/transcreation/stages/planning.py
+?? configs/planner.yaml
+?? reports/ollama_planner_phase3_20261108/
+?? reports/ollama_planner_phase3_20261108_prompt_v2/
+?? reports/ollama_planner_phase3_20261108_prompt_v3/
+?? reports/phase3_step2_three_examples_20261108/
+?? scripts/
+?? src/transcreation/stages/ollama_planner.py
+?? tests/fixtures/
+?? tests/test_ollama_planner.py
+?? tests/test_planning.py

@@ -1,7 +1,9 @@
 """Read models.yaml and check the captioning settings."""
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Mapping
+import math
+from urllib.parse import urlparse
 
 import yaml
 
@@ -105,3 +107,54 @@ def load_config(path: Path, model: str | None = None) -> CaptionConfig:
     except yaml.YAMLError as exc:
         raise ValueError(f"Invalid YAML in {path}: {exc}") from exc
     return validate_config(config, model)
+
+
+@dataclass(frozen=True)
+class PlannerConfig:
+    """Local Ollama settings, independent of the existing VLM configuration."""
+
+    model: str = "qwen2.5:3b"
+    endpoint: str = "http://127.0.0.1:11434/api/chat"
+    timeout: float = 180.0
+    keep_alive: int = 0
+    options: dict[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.model, str) or not self.model.strip():
+            raise ValueError("planner model must be a nonempty string")
+        if not isinstance(self.endpoint, str):
+            raise ValueError("planner endpoint must be a string")
+        parsed = urlparse(self.endpoint)
+        if (parsed.scheme != "http" or parsed.hostname not in ("localhost", "127.0.0.1", "::1")
+                or parsed.path != "/api/chat" or parsed.query or parsed.fragment
+                or parsed.username or parsed.password):
+            raise ValueError("planner endpoint must be a local http /api/chat URL")
+        if type(self.timeout) not in (int, float) or not math.isfinite(self.timeout) or self.timeout <= 0:
+            raise ValueError("planner timeout must be a positive finite number")
+        if type(self.keep_alive) is not int or self.keep_alive < 0:
+            raise ValueError("keep_alive must be nonnegative seconds; use 0 to unload")
+        options = {"temperature": 0, "seed": 42, "num_ctx": 4096, "num_predict": 1024}
+        if not isinstance(self.options, dict):
+            raise ValueError("planner options must be an object")
+        options.update(self.options)
+        for name, value in options.items():
+            if name in ("seed", "num_ctx", "num_predict", "num_gpu", "top_k"):
+                minimum = 0 if name in ("seed", "num_gpu") else 1
+                if type(value) is not int or value < minimum:
+                    raise ValueError(f"invalid planner option: {name}")
+            elif name in ("temperature", "top_p", "repeat_penalty"):
+                if type(value) not in (int, float) or not math.isfinite(value) or value < 0:
+                    raise ValueError(f"invalid planner option: {name}")
+            else:
+                raise ValueError(f"unknown planner option: {name}")
+        object.__setattr__(self, "options", options)
+
+
+def load_planner_config(path: Path) -> PlannerConfig:
+    try:
+        values = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if not isinstance(values, dict):
+            raise ValueError("planner configuration must be an object")
+        return PlannerConfig(**values)
+    except (TypeError, yaml.YAMLError) as exc:
+        raise ValueError(f"invalid planner configuration: {exc}") from exc

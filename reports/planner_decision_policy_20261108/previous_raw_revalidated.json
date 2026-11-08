@@ -1,0 +1,106 @@
+[
+  {
+    "example": "01_japanese_food",
+    "source_file": "reports\\planner_quality_review_20261108_final\\01_japanese_food.audit.json",
+    "final_under_new_policy": {
+      "decision": "REVIEW",
+      "decision_reason": "Review required; no candidate edit is released downstream. Review the target-context justification: an object's source-culture membership alone neither requires nor rules out adaptation.",
+      "scene_summary": "The caption reports Two people share lunch at a table. A bowl of ramen with chopsticks sits between them.",
+      "candidate_edits": [],
+      "must_preserve": [],
+      "uncertainties": [],
+      "verification_requirements": [
+        "Review the target-context justification: an object's source-culture membership alone neither requires nor rules out adaptation.",
+        "Review the original-scene summary and any paraphrased identities against the image.",
+        "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+      ]
+    },
+    "validation_issues": [
+      {
+        "code": "ABSTENTION_CONTEXT_UNVERIFIED",
+        "message": "Review the target-context justification: an object's source-culture membership alone neither requires nor rules out adaptation.",
+        "candidate_index": null,
+        "severity": "review"
+      }
+    ]
+  },
+  {
+    "example": "02_durga_uncertain_incense",
+    "source_file": "reports\\planner_quality_review_20261108_final\\02_durga_uncertain_incense.audit.json",
+    "final_under_new_policy": {
+      "decision": "REVIEW",
+      "decision_reason": "Review required; no candidate edit is released downstream. object_description cannot be a placeholder localization_phrase must be a short source-object phrase (at most 16 words / 160 characters) The raw candidate batch failed validation; no candidate is released until reviewed. Verify the complete source caption and image before planning an edit. Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "scene_summary": "The caption reports an image depicting a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood. The background includes a building with a large, white wall and a few trees.",
+      "candidate_edits": [],
+      "must_preserve": [
+        "The deity's position and the crowd of people, including their relationships and expressions."
+      ],
+      "uncertainties": [
+        "The identity of the objects held by the people (incense sticks) and their cultural significance in Japan.",
+        "The exact nature of the cloud of smoke and its cultural significance in Japan."
+      ],
+      "verification_requirements": [
+        "object_description cannot be a placeholder",
+        "localization_phrase must be a short source-object phrase (at most 16 words / 160 characters)",
+        "The raw candidate batch failed validation; no candidate is released until reviewed.",
+        "Verify the complete source caption and image before planning an edit.",
+        "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "Review the original-scene summary and any paraphrased identities against the image.",
+        "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+      ]
+    },
+    "validation_issues": [
+      {
+        "code": "PLACEHOLDER_OBJECT_FIELD",
+        "message": "object_description cannot be a placeholder",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "LOCALIZATION_NOT_OBJECT_PHRASE",
+        "message": "localization_phrase must be a short source-object phrase (at most 16 words / 160 characters)",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "BATCH_REVIEW_REQUIRED",
+        "message": "The raw candidate batch failed validation; no candidate is released until reviewed.",
+        "candidate_index": null,
+        "severity": "review"
+      },
+      {
+        "code": "CAPTION_INCOMPLETE",
+        "message": "Verify the complete source caption and image before planning an edit.",
+        "candidate_index": null,
+        "severity": "review"
+      },
+      {
+        "code": "USER_CONSTRAINTS_UNRESOLVED",
+        "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "candidate_index": null,
+        "severity": "review"
+      }
+    ]
+  },
+  {
+    "example": "03_bicycle_no_change",
+    "source_file": "reports\\planner_quality_review_20261108_final\\03_bicycle_no_change.audit.json",
+    "final_under_new_policy": {
+      "decision": "ABSTAIN",
+      "decision_reason": "No justified image edit is established; leave the source image unchanged. This does not authorize modification or certify cultural appropriateness.",
+      "scene_summary": "A bicycle is leaning against a set of black doors. The doors are framed with white trim and have graffiti on them. The graffiti is in various colors including blue, white, yellow, and black. The bicycle is black and has a front basket. The sidewalk is made of brick and is lined with black doors.",
+      "candidate_edits": [],
+      "must_preserve": [],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "validation_issues": [
+      {
+        "code": "ABSTENTION_NORMALIZED",
+        "message": "No-edit reason and checks normalized; raw cultural claims/checks remain in the audit.",
+        "candidate_index": null,
+        "severity": "info"
+      }
+    ]
+  }
+]

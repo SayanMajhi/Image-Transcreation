@@ -1,0 +1,32 @@
+[
+  {
+    "file": "src\\transcreation\\contracts.py",
+    "added": 15,
+    "removed": 2
+  },
+  {
+    "file": "src\\transcreation\\stages\\ollama_planner.py",
+    "added": 46,
+    "removed": 49
+  },
+  {
+    "file": "src\\transcreation\\stages\\planning.py",
+    "added": 46,
+    "removed": 20
+  },
+  {
+    "file": "tests\\test_ollama_planner.py",
+    "added": 5,
+    "removed": 4
+  },
+  {
+    "file": "tests\\test_planning.py",
+    "added": 98,
+    "removed": 0
+  },
+  {
+    "file": "README.md",
+    "added": 41,
+    "removed": 9
+  }
+]

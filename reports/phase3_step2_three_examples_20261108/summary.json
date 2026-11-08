@@ -1,0 +1,143 @@
+[
+  {
+    "example": "01_japanese_food",
+    "cli_exit_code": 0,
+    "validation": {
+      "status": "valid",
+      "raw_decision": "PROPOSE",
+      "final_decision": "REVIEW",
+      "deterministic_review_applied": true,
+      "cultural_correctness": "not assessed; human review required"
+    },
+    "decision": "REVIEW",
+    "model": {
+      "name": "qwen2.5:3b",
+      "model": "qwen2.5:3b",
+      "modified_at": "2026-11-08T14:30:01.081001+05:30",
+      "size": 1929912432,
+      "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 2048,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    },
+    "request_seconds": 7.224897100000817,
+    "generation_seconds": 4.163743999,
+    "load_seconds": 2.6481402,
+    "prompt_tokens": 823,
+    "output_tokens": 277,
+    "cli_wall_seconds": 7.648819099998946,
+    "ollama_ps_after": {
+      "models": []
+    },
+    "fixture_sha256": "410c23dde4c57d39ca0fb8bf45b76d29363366a79230c66621f9ad5fed615882",
+    "human_review_notes": ""
+  },
+  {
+    "example": "02_durga_uncertain_incense",
+    "cli_exit_code": 0,
+    "validation": {
+      "status": "valid",
+      "raw_decision": "ABSTAIN",
+      "final_decision": "REVIEW",
+      "deterministic_review_applied": true,
+      "cultural_correctness": "not assessed; human review required"
+    },
+    "decision": "REVIEW",
+    "model": {
+      "name": "qwen2.5:3b",
+      "model": "qwen2.5:3b",
+      "modified_at": "2026-11-08T14:30:01.081001+05:30",
+      "size": 1929912432,
+      "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 2048,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    },
+    "request_seconds": 7.54876399999921,
+    "generation_seconds": 4.454373,
+    "load_seconds": 2.6633201,
+    "prompt_tokens": 928,
+    "output_tokens": 329,
+    "cli_wall_seconds": 7.94670430000042,
+    "ollama_ps_after": {
+      "models": []
+    },
+    "fixture_sha256": "a8d1a27d72cb4270b4e00c3365a11fe09e31db6b8496732951a2dd780ff7dccf",
+    "human_review_notes": ""
+  },
+  {
+    "example": "03_bicycle_no_change",
+    "cli_exit_code": 0,
+    "validation": {
+      "status": "valid",
+      "raw_decision": "ABSTAIN",
+      "final_decision": "REVIEW",
+      "deterministic_review_applied": true,
+      "cultural_correctness": "not assessed; human review required"
+    },
+    "decision": "REVIEW",
+    "model": {
+      "name": "qwen2.5:3b",
+      "model": "qwen2.5:3b",
+      "modified_at": "2026-11-08T14:30:01.081001+05:30",
+      "size": 1929912432,
+      "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 2048,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    },
+    "request_seconds": 6.173015600001236,
+    "generation_seconds": 3.115505,
+    "load_seconds": 2.6607994,
+    "prompt_tokens": 842,
+    "output_tokens": 217,
+    "cli_wall_seconds": 6.571027800000593,
+    "ollama_ps_after": {
+      "models": []
+    },
+    "fixture_sha256": "71eb8fc52a6215bda79b1ba430a2321b23e163af69604c8d7a3268b4f8207efb",
+    "human_review_notes": ""
+  }
+]

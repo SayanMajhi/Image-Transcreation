@@ -1,0 +1,8 @@
+{
+  "tests_run": 53,
+  "elapsed_seconds": 0.335,
+  "result": "OK",
+  "new_tests": 12,
+  "existing_caption_regression_tests": 11,
+  "all_llm_transport_tests_mocked": true
+}

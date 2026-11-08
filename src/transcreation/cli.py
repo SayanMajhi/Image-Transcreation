@@ -21,9 +21,41 @@ def main(argv: list[str] | None = None) -> None:
     caption.add_argument("--prompt-variant", choices=("default", "concise_grounded"))
     caption.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     caption.add_argument("--out", type=Path, default=Path("outputs/caption.json"))
+    plan = commands.add_parser("plan", help="Plan cultural edits with local Ollama; never modifies images")
+    plan.add_argument("--input", type=Path, required=True, help="PlanningInput JSON, including target culture")
+    plan.add_argument("--config", type=Path, default=DEFAULT_CONFIG.with_name("planner.yaml"))
+    plan.add_argument("--model", help="Override the configured Ollama model name")
+    plan.add_argument("--endpoint", help="Override the local /api/chat URL")
+    plan.add_argument("--timeout", type=float, help="Override request timeout in seconds")
+    plan.add_argument("--out", type=Path, default=Path("outputs/plan.json"), help="New audit JSON; existing files are preserved")
     args = parser.parse_args(argv)
     if args.command is None:
         print("Culture Transcreation CLI is ready.")
+        return
+
+    if args.command == "plan":
+        from transcreation.config import load_planner_config
+        from transcreation.stages.ollama_planner import OllamaPlanner, parse_planning_input
+
+        try:
+            if args.out.exists():
+                raise ValueError(f"Output already exists; choose a new --out path: {args.out}")
+            config = load_planner_config(args.config)
+            overrides = {key: getattr(args, key) for key in ("model", "endpoint", "timeout")
+                         if getattr(args, key) is not None}
+            config = replace(config, **overrides)
+            request = parse_planning_input(json.loads(args.input.read_text(encoding="utf-8-sig")))
+            record = OllamaPlanner(config).record_plan(request)
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            with args.out.open("x", encoding="utf-8") as output:
+                json.dump(record, output, indent=2, ensure_ascii=False, allow_nan=False)
+                output.write("\n")
+        except (OSError, ValueError) as exc:
+            parser.error(str(exc))
+        print(f"Saved: {args.out}")
+        if record["validation"]["status"] != "valid":
+            parser.error(record["validation"]["message"])
+        print(record["planning_result"]["decision"])
         return
 
     from PIL import Image, UnidentifiedImageError

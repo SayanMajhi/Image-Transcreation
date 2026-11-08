@@ -1,0 +1,6 @@
+{
+  "tests": 52,
+  "elapsed_seconds": 0.324,
+  "result": "OK",
+  "command": "python -B -m unittest discover -s tests -v"
+}

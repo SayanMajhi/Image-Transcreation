@@ -1,0 +1,62 @@
+{
+  "basis": "Engineering comparison against supplied captions and user assertions, not new image-ground-truth verification or cultural-expert scoring.",
+  "examples": {
+    "01_japanese_food": {
+      "original_scene": {
+        "before": "Summary incorrectly described a bowl of dal already present instead of the verified original ramen.",
+        "after": "Summary refers to the original ramen meal and attributes it to the caption; no imagined replacement is described."
+      },
+      "localization": {
+        "before": "bowl of dal names the future object, not the original ramen.",
+        "after": "Not applicable: no candidate edit. This does not demonstrate successful localization generation."
+      },
+      "preservation": {
+        "before": "Preserves the whole original bowl of ramen while proposing to replace it, a detectable potential conflict.",
+        "after": "No candidate edits or preservation list, so the previous conflict is absent because the model abstained."
+      },
+      "uncertainty": {
+        "before": "Treats its own proposed substitution as an uncertainty.",
+        "after": "No reported uncertainties."
+      },
+      "remaining_issue": "The abstention reason focuses on the Japanese source and does not substantively address the Indian target; a potentially useful adaptation was lost, not demonstrated to be inappropriate."
+    },
+    "02_durga_uncertain_incense": {
+      "original_scene": {
+        "before": "Original scene mostly retained, but tentative incense identity restated as fact.",
+        "after": "Starts with caption attribution and retains objects resembling incense sticks and likely offerings. These remain unverified caption claims."
+      },
+      "localization": {
+        "before": "Not applicable: no candidate edits.",
+        "after": "Incorrect: source description is the literal string null and localization is a long copied paragraph. Source-reference checks flag both."
+      },
+      "preservation": {
+        "before": "No edits, so no edit/preserve conflict to assess.",
+        "after": "No reliable source label to compare. Changing sacred headdress/jewelry for national styling may conflict with religious meaning even if position and crowd remain; this requires human judgment and is not automatically proven consistent."
+      },
+      "uncertainty": {
+        "before": "Uncertain incense identity plus broad cultural-context doubts.",
+        "after": "Unresolved source identity and religious/contextual significance; review remains conservative."
+      },
+      "remaining_issue": "Despite the prompt, the model suggests culturally inappropriate national restyling of sacred objects. The draft is not approved; unresolved identity, broken localization and truncation all require review."
+    },
+    "03_bicycle_no_change": {
+      "original_scene": {
+        "before": "Description remains about the original bicycle scene.",
+        "after": "Copies the original caption rather than describing a changed scene, but does not explicitly attribute it to the caption."
+      },
+      "localization": {
+        "before": "Not applicable: no edits.",
+        "after": "Not applicable: no edits."
+      },
+      "preservation": {
+        "before": "No edits, so no contradiction.",
+        "after": "No edits, so no contradiction."
+      },
+      "uncertainty": {
+        "before": "Irrelevant speculation about national graffiti styles forced final REVIEW.",
+        "after": "uncertainties is empty and ABSTAIN remains ABSTAIN. However, verification_requirements still include irrelevant national-norm checks."
+      },
+      "remaining_issue": "Qwen still calls graffiti culturally sensitive and invents target-country verification needs. No-change safety improved; cultural reasoning and attribution are not fully fixed."
+    }
+  }
+}

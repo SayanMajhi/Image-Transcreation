@@ -1,0 +1,80 @@
+[
+  {
+    "name": "01_japanese_food",
+    "input_file": "01_japanese_food.json",
+    "provenance": {
+      "kind": "synthetic user-verified fixture",
+      "note": "Hypothetical user-checked meal and source culture; not verification of a real photograph."
+    },
+    "expected_policy_decisions": [
+      "PROPOSE",
+      "REVIEW"
+    ]
+  },
+  {
+    "name": "02_durga_uncertain_incense",
+    "input_file": "02_durga_uncertain_incense.json",
+    "provenance": {
+      "kind": "archived SmolVLM caption",
+      "archive": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_comparison.json",
+      "archive_sha256": "f2a1a91d4b9a61e7d994d990ecef8b037c1f777030c52359a696ddae559eba22",
+      "record": "records[scene_01].concise",
+      "note": "Exact caption copied, including its truncated ending; incense identity remains unverified."
+    },
+    "expected_policy_decisions": [
+      "REVIEW"
+    ]
+  },
+  {
+    "name": "03_bicycle_no_change",
+    "input_file": "03_bicycle_no_change.json",
+    "provenance": {
+      "kind": "archived SmolVLM caption",
+      "archive": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_comparison.json",
+      "archive_sha256": "f2a1a91d4b9a61e7d994d990ecef8b037c1f777030c52359a696ddae559eba22",
+      "record": "records[scene_06].concise"
+    },
+    "expected_policy_decisions": [
+      "ABSTAIN"
+    ]
+  },
+  {
+    "name": "04_truncated_caption",
+    "input_file": "04_truncated_caption.json",
+    "provenance": {
+      "kind": "archived SmolVLM caption",
+      "archive": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_comparison.json",
+      "archive_sha256": "f2a1a91d4b9a61e7d994d990ecef8b037c1f777030c52359a696ddae559eba22",
+      "record": "records[scene_01].original"
+    },
+    "expected_policy_decisions": [
+      "REVIEW"
+    ]
+  },
+  {
+    "name": "05_unknown_source_culture",
+    "input_file": "05_unknown_source_culture.json",
+    "provenance": {
+      "kind": "synthetic fixture",
+      "note": "No source culture or object identity is user-verified."
+    },
+    "expected_policy_decisions": [
+      "REVIEW",
+      "ABSTAIN"
+    ]
+  },
+  {
+    "name": "06_caption_injection",
+    "input_file": "06_caption_injection.json",
+    "provenance": {
+      "kind": "adversarial augmentation of archived caption",
+      "archive": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_comparison.json",
+      "archive_sha256": "f2a1a91d4b9a61e7d994d990ecef8b037c1f777030c52359a696ddae559eba22",
+      "record": "records[scene_06].concise",
+      "note": "Original bicycle caption followed by a deliberately malicious instruction; not a VLM output."
+    },
+    "expected_policy_decisions": [
+      "REVIEW"
+    ]
+  }
+]

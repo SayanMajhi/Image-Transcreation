@@ -1,0 +1,38 @@
+[
+  {
+    "failure": "Food abstains because original meal belongs to source culture",
+    "input": "Correct: source Japan, target India, a verified original object and conditional adaptation instructions. The input did not say target Japan or require preserving the original dish.",
+    "prompt": "The previous prompt named target culture but did not expressly distinguish source membership from target-context justification.",
+    "generation": "Qwen interpreted source membership as a reason to abstain and did not assess the requested target.",
+    "contract_validation": "Shape/type validation cannot establish whether a natural-language cultural reason is justified.",
+    "postprocessing": "Accepted the raw abstention reason without a target-context assessment boundary.",
+    "fix": "Explicit source/target/object/replacement instructions; known-source/verified-object adaptation requests with opaque instructions need contextual review if no edit is established. This is conservative review, not a rule that cultural differences require changes."
+  },
+  {
+    "failure": "Truncated protected-content draft retained a deity-restyling candidate",
+    "input": "Correct: TRUNCATED status and explicit requests to preserve worship, idol, people and relationships.",
+    "prompt": "Already requested preservation but did not make a REVIEW draft non-actionable at the code boundary.",
+    "generation": "Qwen suggested protected religious restyling despite the instructions.",
+    "contract_validation": "A REVIEW result was permitted to carry candidate edits because the same type represents raw drafts.",
+    "postprocessing": "Added warnings and REVIEW but returned the unsafe candidate unchanged. This was a deterministic-policy failure.",
+    "fix": "All final REVIEW candidates are removed; truncation and opaque preservation instructions get explicit issue codes. No protected-entity semantics are claimed proven by text matching."
+  },
+  {
+    "failure": "Quoted null description and full-scene localization",
+    "input": "Neither value came from the fixture; the fixture had no verified object to identify the proposed source.",
+    "prompt": "Asked for source descriptions but had no enforceable short-phrase/placeholder rules.",
+    "generation": "Qwen generated object_description as the literal string null and a scene-length localization paragraph. Its verified_object_id was already actual JSON null; the description failure was not a serializer converting None to a string.",
+    "contract_validation": "Previously accepted every nonempty string, including placeholders and a paragraph.",
+    "postprocessing": "Warned about identity/localization but retained them.",
+    "fix": "Strict placeholder and nullable-id checks, documented short-phrase bounds, candidate quarantine with independent issue codes for placeholder and long localization. No action proceeds without a verified source id and matching original description."
+  },
+  {
+    "failure": "Bicycle abstention retains irrelevant cultural checks",
+    "input": "Correct: an ordinary parked-bicycle scene, unknown source culture, and instructions to keep the activity without cultural decoration.",
+    "prompt": "Allowed ABSTAIN but did not reliably prevent generated invented cultural restrictions.",
+    "generation": "Qwen invented graffiti-related cultural checks despite proposing no edit.",
+    "contract_validation": "String lists were valid structurally; there was no no-edit/check consistency policy.",
+    "postprocessing": "Copied the generated cultural reason and checks into ABSTAIN, adding another generic check.",
+    "fix": "No-action ABSTAIN has a neutral policy reason, empty candidates and empty edit-verification requirements. The raw reason/checks remain unchanged in the audit, and normalization is coded explicitly."
+  }
+]

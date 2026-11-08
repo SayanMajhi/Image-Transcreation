@@ -1,0 +1,7 @@
+{
+  "initial_ollama_ps": {
+    "models": []
+  },
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "settings": "# settings for the local cultural planner; the image model settings stay separate\nmodel: qwen2.5:3b\nendpoint: http://127.0.0.1:11434/api/chat\ntimeout: 180\nkeep_alive: 0 # unload after each request to free memory for other stages\noptions:\n  temperature: 0 # use the most likely next text piece\n  seed: 42 # helps repeat the same experiment\n  num_ctx: 4096 # maximum working space for input and output text\n  num_predict: 1024 # maximum generated text pieces; incomplete output is rejected\n"
+}

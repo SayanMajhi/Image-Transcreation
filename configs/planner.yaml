@@ -1,0 +1,10 @@
+# settings for the local cultural planner; the image model settings stay separate
+model: qwen2.5:3b
+endpoint: http://127.0.0.1:11434/api/chat
+timeout: 180
+keep_alive: 0 # unload after each request to free memory for other stages
+options:
+  temperature: 0 # use the most likely next text piece
+  seed: 42 # helps repeat the same experiment
+  num_ctx: 4096 # maximum working space for input and output text
+  num_predict: 1024 # maximum generated text pieces; incomplete output is rejected

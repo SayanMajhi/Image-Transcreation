@@ -1,0 +1,20 @@
+{
+  "decision": "REVIEW",
+  "decision_reason": "ABSTAIN",
+  "scene_summary": "A bicycle is leaning against a set of black doors. The doors are framed with white trim and have graffiti on them. The graffiti is in various colors including blue, white, yellow, and black. The bicycle is black and has a front basket. The sidewalk is made of brick and is lined with black doors.",
+  "candidate_edits": [],
+  "must_preserve": [
+    "A bicycle is leaning against a set of black doors.",
+    "The doors are framed with white trim and have graffiti on them.",
+    "The graffiti is in various colors including blue, white, yellow, and black.",
+    "The bicycle is black and has a front basket.",
+    "The sidewalk is made of brick and is lined with black doors."
+  ],
+  "uncertainties": [],
+  "verification_requirements": [
+    "The bicycle is black and has a front basket.",
+    "The doors are framed with white trim and have graffiti on them.",
+    "The graffiti is in various colors including blue, white, yellow, and black.",
+    "The sidewalk is made of brick and is lined with black doors."
+  ]
+}
