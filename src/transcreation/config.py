@@ -1,4 +1,4 @@
-"""Read models.yaml and check the captioning settings."""
+"""Read and validate separate captioning and local Ollama settings."""
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Mapping

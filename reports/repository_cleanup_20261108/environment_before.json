@@ -1,0 +1,16 @@
+{
+  "executable": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "virtual_env_variable": null,
+  "source_path_used_for_checks": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\src",
+  "packages": {
+    "culture-transcreation": "0.1.0",
+    "torch": "2.15.0+cu132",
+    "Pillow": "13.0.0",
+    "PyYAML": "6.0.3",
+    "transformers": "4.57.6",
+    "pip": "26.3",
+    "setuptools": "78.1.0"
+  }
+}

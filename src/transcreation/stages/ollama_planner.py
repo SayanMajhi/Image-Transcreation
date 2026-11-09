@@ -3,7 +3,6 @@ from dataclasses import asdict, fields
 from datetime import datetime, timezone
 import json
 from http.client import HTTPException
-import socket
 import time
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -128,10 +127,10 @@ class OllamaPlanner:
             message = exc.read().decode("utf-8", errors="replace")
             code = "model_not_installed" if exc.code == 404 and "model" in message.lower() else "http_error"
             raise OllamaPlannerError(code, f"Ollama HTTP {exc.code}: {message}") from exc
-        except (TimeoutError, socket.timeout) as exc:
+        except TimeoutError as exc:
             raise OllamaPlannerError("timeout", "Ollama request timed out; no plan was accepted.") from exc
         except URLError as exc:
-            code = "timeout" if isinstance(exc.reason, (TimeoutError, socket.timeout)) else "connection_failed"
+            code = "timeout" if isinstance(exc.reason, TimeoutError) else "connection_failed"
             raise OllamaPlannerError(code, f"Cannot reach local Ollama: {exc.reason}") from exc
         except HTTPException as exc:
             raise OllamaPlannerError("incomplete_response", f"Ollama HTTP response was interrupted: {exc}") from exc

@@ -1,0 +1,61 @@
+{
+  "source --help": {
+    "command": [
+      "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "transcreation.cli",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: cli.py [-h] [--version] {caption,plan} ...\n\nCulture transcreation research CLI.\n\npositional arguments:\n  {caption,plan}\n    caption       Caption one image with SmolVLM-500M\n    plan          Plan cultural edits with local Ollama; never modifies images\n\noptions:\n  -h, --help      show this help message and exit\n  --version       show program's version number and exit\n",
+    "stderr": ""
+  },
+  "source caption --help": {
+    "command": [
+      "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "transcreation.cli",
+      "caption",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: cli.py caption [-h] --image IMAGE [--model {smolvlm}]\n                      [--prompt-variant {default,concise_grounded}]\n                      [--config CONFIG] [--out OUT]\n\noptions:\n  -h, --help            show this help message and exit\n  --image IMAGE\n  --model {smolvlm}\n  --prompt-variant {default,concise_grounded}\n  --config CONFIG\n  --out OUT\n",
+    "stderr": ""
+  },
+  "source plan --help": {
+    "command": [
+      "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "transcreation.cli",
+      "plan",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: cli.py plan [-h] --input INPUT [--config CONFIG] [--model MODEL]\n                   [--endpoint ENDPOINT] [--timeout TIMEOUT] [--out OUT]\n\noptions:\n  -h, --help           show this help message and exit\n  --input INPUT        PlanningInput JSON, including target culture\n  --config CONFIG\n  --model MODEL        Override the configured Ollama model name\n  --endpoint ENDPOINT  Override the local /api/chat URL\n  --timeout TIMEOUT    Override request timeout in seconds\n  --out OUT            New audit JSON; existing files are preserved\n",
+    "stderr": ""
+  },
+  "source --version": {
+    "command": [
+      "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "transcreation.cli",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "transcreate 0.1.0\n",
+    "stderr": ""
+  },
+  "installed --help": {
+    "command": [
+      "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\transcreate.exe",
+      "--help"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\transcreate.exe\\__main__.py\", line 2, in <module>\nModuleNotFoundError: No module named 'main'\n"
+  }
+}

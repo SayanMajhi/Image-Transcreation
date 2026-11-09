@@ -1,6 +1,5 @@
 """General decision-policy regressions; no culture-specific substitutions or LLM."""
 from copy import deepcopy
-from dataclasses import asdict
 import unittest
 
 from transcreation.contracts import (

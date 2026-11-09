@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "scripts/evaluate_planner.py",
+    "--help"
+  ],
+  "exit_code": 0,
+  "stdout": "usage: evaluate_planner.py [-h] [--config CONFIG] [--fixtures FIXTURES] --out\n                           OUT\n\nRun the six archived/synthetic planning cases, sequentially and without a VLM.\n\noptions:\n  -h, --help           show this help message and exit\n  --config CONFIG\n  --fixtures FIXTURES\n  --out OUT            New directory; existing evidence is never overwritten\n",
+  "stderr": ""
+}

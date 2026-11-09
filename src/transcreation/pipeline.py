@@ -10,7 +10,7 @@ from transcreation.contracts import Captioner, CaptionResult
 
 
 def run_caption(image: Image.Image, config: CaptionConfig) -> CaptionResult:
-    """Run captioning; later adaptation stages are not implemented yet."""
+    """Run captioning; the cultural planner is invoked separately."""
     return create_captioner(config).caption(image)
 
 

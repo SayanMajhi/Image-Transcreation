@@ -1,0 +1,27 @@
+[
+  {
+    "item": "edit_consistency_issues",
+    "classification": "NEEDS REVIEW",
+    "reason": "No active internal caller found; retained as an existing public diagnostic. Removing it could break external imports."
+  },
+  {
+    "item": "validate_planning_result",
+    "classification": "KEEP",
+    "reason": "Long safety-policy function; branch/issue ordering is observable. No broad extraction performed."
+  },
+  {
+    "item": "grounding.py / segmentation.py / inpainting.py",
+    "classification": "NEEDS REVIEW",
+    "reason": "Existing import paths referenced by ignored user notes. Not implemented, not newly created, not removed."
+  },
+  {
+    "item": ".venv / .python311 / .python311.nupkg / model caches",
+    "classification": "KEEP",
+    "reason": "Local runtime/bootstrap/cache state; .venv explicitly depends on .python311/tools. Untouched."
+  },
+  {
+    "item": "culture_transcreation.egg-info / installed transcreate.exe",
+    "classification": "NEEDS REVIEW",
+    "reason": "Generated entry point still points at main:main; source pyproject is correct. No manual metadata repair or reinstall performed."
+  }
+]

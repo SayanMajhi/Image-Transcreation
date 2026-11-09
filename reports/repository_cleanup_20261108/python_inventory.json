@@ -1,0 +1,2212 @@
+{
+  "imports": [
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 2,
+      "module": null,
+      "name": "argparse",
+      "local_name": "argparse",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 3,
+      "module": "dataclasses",
+      "name": "asdict",
+      "local_name": "asdict",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 3,
+      "module": "dataclasses",
+      "name": "replace",
+      "local_name": "replace",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 4,
+      "module": null,
+      "name": "hashlib",
+      "local_name": "hashlib",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 5,
+      "module": "importlib.metadata",
+      "name": "version",
+      "local_name": "version",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 6,
+      "module": "io",
+      "name": "BytesIO",
+      "local_name": "BytesIO",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 7,
+      "module": null,
+      "name": "json",
+      "local_name": "json",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 8,
+      "module": "pathlib",
+      "name": "Path",
+      "local_name": "Path",
+      "loaded_name_occurrences": 9
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 61,
+      "module": "PIL",
+      "name": "Image",
+      "local_name": "Image",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 61,
+      "module": "PIL",
+      "name": "UnidentifiedImageError",
+      "local_name": "UnidentifiedImageError",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 62,
+      "module": "transcreation.config",
+      "name": "load_config",
+      "local_name": "load_config",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 63,
+      "module": "transcreation.pipeline",
+      "name": "run_caption",
+      "local_name": "run_caption",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 37,
+      "module": "transcreation.config",
+      "name": "load_planner_config",
+      "local_name": "load_planner_config",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 38,
+      "module": "transcreation.stages.ollama_planner",
+      "name": "OllamaPlanner",
+      "local_name": "OllamaPlanner",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/cli.py",
+      "line": 38,
+      "module": "transcreation.stages.ollama_planner",
+      "name": "parse_planning_input",
+      "local_name": "parse_planning_input",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "line": 2,
+      "module": "dataclasses",
+      "name": "dataclass",
+      "local_name": "dataclass",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "line": 2,
+      "module": "dataclasses",
+      "name": "field",
+      "local_name": "field",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "line": 3,
+      "module": "pathlib",
+      "name": "Path",
+      "local_name": "Path",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "line": 4,
+      "module": "typing",
+      "name": "Any",
+      "local_name": "Any",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "line": 4,
+      "module": "typing",
+      "name": "Mapping",
+      "local_name": "Mapping",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "line": 5,
+      "module": null,
+      "name": "math",
+      "local_name": "math",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "line": 6,
+      "module": "urllib.parse",
+      "name": "urlparse",
+      "local_name": "urlparse",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "line": 8,
+      "module": null,
+      "name": "yaml",
+      "local_name": "yaml",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "line": 2,
+      "module": "dataclasses",
+      "name": "dataclass",
+      "local_name": "dataclass",
+      "loaded_name_occurrences": 6
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "line": 2,
+      "module": "dataclasses",
+      "name": "field",
+      "local_name": "field",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "line": 3,
+      "module": "enum",
+      "name": "StrEnum",
+      "local_name": "StrEnum",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "line": 4,
+      "module": "typing",
+      "name": "Any",
+      "local_name": "Any",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "line": 4,
+      "module": "typing",
+      "name": "Protocol",
+      "local_name": "Protocol",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "line": 4,
+      "module": "typing",
+      "name": "runtime_checkable",
+      "local_name": "runtime_checkable",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "line": 6,
+      "module": "PIL",
+      "name": "Image",
+      "local_name": "Image",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 2,
+      "module": "dataclasses",
+      "name": "replace",
+      "local_name": "replace",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 3,
+      "module": "typing",
+      "name": "Any",
+      "local_name": "Any",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 3,
+      "module": "typing",
+      "name": "Mapping",
+      "local_name": "Mapping",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 4,
+      "module": null,
+      "name": "warnings",
+      "local_name": "warnings",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 6,
+      "module": "PIL",
+      "name": "Image",
+      "local_name": "Image",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 8,
+      "module": "transcreation.config",
+      "name": "CaptionConfig",
+      "local_name": "CaptionConfig",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 8,
+      "module": "transcreation.config",
+      "name": "validate_config",
+      "local_name": "validate_config",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 9,
+      "module": "transcreation.contracts",
+      "name": "Captioner",
+      "local_name": "Captioner",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 9,
+      "module": "transcreation.contracts",
+      "name": "CaptionResult",
+      "local_name": "CaptionResult",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 20,
+      "module": null,
+      "name": "torch",
+      "local_name": "torch",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "line": 32,
+      "module": "transcreation.stages.caption",
+      "name": "SmolVLMCaptioner",
+      "local_name": "SmolVLMCaptioner",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 2,
+      "module": "dataclasses",
+      "name": "dataclass",
+      "local_name": "dataclass",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 2,
+      "module": "dataclasses",
+      "name": "field",
+      "local_name": "field",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 3,
+      "module": null,
+      "name": "random",
+      "local_name": "random",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 4,
+      "module": null,
+      "name": "time",
+      "local_name": "time",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 5,
+      "module": "typing",
+      "name": "Any",
+      "local_name": "Any",
+      "loaded_name_occurrences": 17
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 5,
+      "module": "typing",
+      "name": "Callable",
+      "local_name": "Callable",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 5,
+      "module": "typing",
+      "name": "TypeVar",
+      "local_name": "TypeVar",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 7,
+      "module": null,
+      "name": "torch",
+      "local_name": "torch",
+      "loaded_name_occurrences": 12
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 8,
+      "module": "PIL",
+      "name": "Image",
+      "local_name": "Image",
+      "loaded_name_occurrences": 6
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 10,
+      "module": "transcreation.config",
+      "name": "CaptionConfig",
+      "local_name": "CaptionConfig",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 11,
+      "module": "transcreation.contracts",
+      "name": "CaptionTaskResult",
+      "local_name": "CaptionTaskResult",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "line": 18,
+      "module": null,
+      "name": "transformers",
+      "local_name": "transformers",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 2,
+      "module": "dataclasses",
+      "name": "asdict",
+      "local_name": "asdict",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 2,
+      "module": "dataclasses",
+      "name": "fields",
+      "local_name": "fields",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 3,
+      "module": "datetime",
+      "name": "datetime",
+      "local_name": "datetime",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 3,
+      "module": "datetime",
+      "name": "timezone",
+      "local_name": "timezone",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 4,
+      "module": null,
+      "name": "json",
+      "local_name": "json",
+      "loaded_name_occurrences": 7
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 5,
+      "module": "http.client",
+      "name": "HTTPException",
+      "local_name": "HTTPException",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 6,
+      "module": null,
+      "name": "socket",
+      "local_name": "socket",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 7,
+      "module": null,
+      "name": "time",
+      "local_name": "time",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 8,
+      "module": "typing",
+      "name": "Any",
+      "local_name": "Any",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 9,
+      "module": "urllib.error",
+      "name": "HTTPError",
+      "local_name": "HTTPError",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 9,
+      "module": "urllib.error",
+      "name": "URLError",
+      "local_name": "URLError",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 10,
+      "module": "urllib.parse",
+      "name": "urlsplit",
+      "local_name": "urlsplit",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 11,
+      "module": "urllib.request",
+      "name": "Request",
+      "local_name": "Request",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 11,
+      "module": "urllib.request",
+      "name": "urlopen",
+      "local_name": "urlopen",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 13,
+      "module": "transcreation.config",
+      "name": "PlannerConfig",
+      "local_name": "PlannerConfig",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 14,
+      "module": "transcreation.contracts",
+      "name": "CandidateEdit",
+      "local_name": "CandidateEdit",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 14,
+      "module": "transcreation.contracts",
+      "name": "CaptionStatus",
+      "local_name": "CaptionStatus",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 14,
+      "module": "transcreation.contracts",
+      "name": "PlanningDecision",
+      "local_name": "PlanningDecision",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 14,
+      "module": "transcreation.contracts",
+      "name": "PlanningInput",
+      "local_name": "PlanningInput",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 14,
+      "module": "transcreation.contracts",
+      "name": "PlanningResult",
+      "local_name": "PlanningResult",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 14,
+      "module": "transcreation.contracts",
+      "name": "VerifiedObject",
+      "local_name": "VerifiedObject",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 17,
+      "module": "transcreation.stages.planning",
+      "name": "parse_model_draft",
+      "local_name": "parse_model_draft",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "line": 17,
+      "module": "transcreation.stages.planning",
+      "name": "validate_planning_result",
+      "local_name": "validate_planning_result",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 2,
+      "module": "collections.abc",
+      "name": "Mapping",
+      "local_name": "Mapping",
+      "loaded_name_occurrences": 8
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 3,
+      "module": "dataclasses",
+      "name": "replace",
+      "local_name": "replace",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 4,
+      "module": "typing",
+      "name": "Any",
+      "local_name": "Any",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 4,
+      "module": "typing",
+      "name": "TypedDict",
+      "local_name": "TypedDict",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 5,
+      "module": null,
+      "name": "re",
+      "local_name": "re",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "CandidateEdit",
+      "local_name": "CandidateEdit",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "CaptionStatus",
+      "local_name": "CaptionStatus",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "CulturalPlanner",
+      "local_name": "CulturalPlanner",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "PlanningDecision",
+      "local_name": "PlanningDecision",
+      "loaded_name_occurrences": 11
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "PlanningInput",
+      "local_name": "PlanningInput",
+      "loaded_name_occurrences": 6
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "PlanningResult",
+      "local_name": "PlanningResult",
+      "loaded_name_occurrences": 9
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "validate_localization_phrase",
+      "local_name": "validate_localization_phrase",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 2,
+      "module": null,
+      "name": "argparse",
+      "local_name": "argparse",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 3,
+      "module": "dataclasses",
+      "name": "asdict",
+      "local_name": "asdict",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 4,
+      "module": "datetime",
+      "name": "datetime",
+      "local_name": "datetime",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 4,
+      "module": "datetime",
+      "name": "timezone",
+      "local_name": "timezone",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 5,
+      "module": null,
+      "name": "hashlib",
+      "local_name": "hashlib",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 6,
+      "module": null,
+      "name": "json",
+      "local_name": "json",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 7,
+      "module": "pathlib",
+      "name": "Path",
+      "local_name": "Path",
+      "loaded_name_occurrences": 6
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 8,
+      "module": null,
+      "name": "subprocess",
+      "local_name": "subprocess",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 9,
+      "module": null,
+      "name": "threading",
+      "local_name": "threading",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 10,
+      "module": null,
+      "name": "time",
+      "local_name": "time",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 12,
+      "module": "transcreation.config",
+      "name": "load_planner_config",
+      "local_name": "load_planner_config",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 13,
+      "module": "transcreation.stages.ollama_planner",
+      "name": "OllamaPlanner",
+      "local_name": "OllamaPlanner",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "line": 13,
+      "module": "transcreation.stages.ollama_planner",
+      "name": "parse_planning_input",
+      "local_name": "parse_planning_input",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 2,
+      "module": "contextlib",
+      "name": "redirect_stdout",
+      "local_name": "redirect_stdout",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 3,
+      "module": "dataclasses",
+      "name": "asdict",
+      "local_name": "asdict",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 3,
+      "module": "dataclasses",
+      "name": "fields",
+      "local_name": "fields",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 3,
+      "module": "dataclasses",
+      "name": "replace",
+      "local_name": "replace",
+      "loaded_name_occurrences": 6
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 4,
+      "module": "io",
+      "name": "BytesIO",
+      "local_name": "BytesIO",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 4,
+      "module": "io",
+      "name": "StringIO",
+      "local_name": "StringIO",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 5,
+      "module": "http.client",
+      "name": "IncompleteRead",
+      "local_name": "IncompleteRead",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 6,
+      "module": null,
+      "name": "json",
+      "local_name": "json",
+      "loaded_name_occurrences": 10
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 7,
+      "module": "pathlib",
+      "name": "Path",
+      "local_name": "Path",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 8,
+      "module": "tempfile",
+      "name": "TemporaryDirectory",
+      "local_name": "TemporaryDirectory",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 9,
+      "module": null,
+      "name": "unittest",
+      "local_name": "unittest",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 10,
+      "module": "unittest.mock",
+      "name": "MagicMock",
+      "local_name": "MagicMock",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 10,
+      "module": "unittest.mock",
+      "name": "patch",
+      "local_name": "patch",
+      "loaded_name_occurrences": 10
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 11,
+      "module": "urllib.error",
+      "name": "HTTPError",
+      "local_name": "HTTPError",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 11,
+      "module": "urllib.error",
+      "name": "URLError",
+      "local_name": "URLError",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 13,
+      "module": "transcreation.cli",
+      "name": "main",
+      "local_name": "main",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 14,
+      "module": "transcreation.config",
+      "name": "PlannerConfig",
+      "local_name": "PlannerConfig",
+      "loaded_name_occurrences": 6
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 14,
+      "module": "transcreation.config",
+      "name": "load_planner_config",
+      "local_name": "load_planner_config",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 15,
+      "module": "transcreation.contracts",
+      "name": "CandidateEdit",
+      "local_name": "CandidateEdit",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 15,
+      "module": "transcreation.contracts",
+      "name": "CaptionStatus",
+      "local_name": "CaptionStatus",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 15,
+      "module": "transcreation.contracts",
+      "name": "PlanningResult",
+      "local_name": "PlanningResult",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 16,
+      "module": "transcreation.stages.ollama_planner",
+      "name": "OllamaPlanner",
+      "local_name": "OllamaPlanner",
+      "loaded_name_occurrences": 5
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 16,
+      "module": "transcreation.stages.ollama_planner",
+      "name": "SYSTEM_PROMPT",
+      "local_name": "SYSTEM_PROMPT",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 16,
+      "module": "transcreation.stages.ollama_planner",
+      "name": "parse_planning_input",
+      "local_name": "parse_planning_input",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "line": 16,
+      "module": "transcreation.stages.ollama_planner",
+      "name": "planning_result_schema",
+      "local_name": "planning_result_schema",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 2,
+      "module": "copy",
+      "name": "deepcopy",
+      "local_name": "deepcopy",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 3,
+      "module": "dataclasses",
+      "name": "asdict",
+      "local_name": "asdict",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 3,
+      "module": "dataclasses",
+      "name": "replace",
+      "local_name": "replace",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 4,
+      "module": null,
+      "name": "json",
+      "local_name": "json",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 5,
+      "module": null,
+      "name": "unittest",
+      "local_name": "unittest",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "CaptionResult",
+      "local_name": "CaptionResult",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "CaptionStatus",
+      "local_name": "CaptionStatus",
+      "loaded_name_occurrences": 10
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "CulturalPlanner",
+      "local_name": "CulturalPlanner",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "PlanningDecision",
+      "local_name": "PlanningDecision",
+      "loaded_name_occurrences": 20
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "PlanningInput",
+      "local_name": "PlanningInput",
+      "loaded_name_occurrences": 5
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 7,
+      "module": "transcreation.contracts",
+      "name": "VerifiedObject",
+      "local_name": "VerifiedObject",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 11,
+      "module": "transcreation.stages.planning",
+      "name": "MockPlanner",
+      "local_name": "MockPlanner",
+      "loaded_name_occurrences": 22
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 11,
+      "module": "transcreation.stages.planning",
+      "name": "parse_planning_result",
+      "local_name": "parse_planning_result",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 11,
+      "module": "transcreation.stages.planning",
+      "name": "plan_cultural_edits",
+      "local_name": "plan_cultural_edits",
+      "loaded_name_occurrences": 21
+    },
+    {
+      "file": "tests/test_planning.py",
+      "line": 259,
+      "module": "dataclasses",
+      "name": "dataclass",
+      "local_name": "dataclass",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "line": 2,
+      "module": "copy",
+      "name": "deepcopy",
+      "local_name": "deepcopy",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "line": 3,
+      "module": "dataclasses",
+      "name": "asdict",
+      "local_name": "asdict",
+      "loaded_name_occurrences": 0
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "line": 4,
+      "module": null,
+      "name": "unittest",
+      "local_name": "unittest",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "line": 6,
+      "module": "transcreation.contracts",
+      "name": "CandidateEdit",
+      "local_name": "CandidateEdit",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "line": 6,
+      "module": "transcreation.contracts",
+      "name": "CaptionStatus",
+      "local_name": "CaptionStatus",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "line": 6,
+      "module": "transcreation.contracts",
+      "name": "PlanningInput",
+      "local_name": "PlanningInput",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "line": 6,
+      "module": "transcreation.contracts",
+      "name": "VerifiedObject",
+      "local_name": "VerifiedObject",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "line": 9,
+      "module": "transcreation.stages.planning",
+      "name": "parse_model_draft",
+      "local_name": "parse_model_draft",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "line": 9,
+      "module": "transcreation.stages.planning",
+      "name": "validate_planning_result",
+      "local_name": "validate_planning_result",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 2,
+      "module": "contextlib",
+      "name": "chdir",
+      "local_name": "chdir",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 2,
+      "module": "contextlib",
+      "name": "redirect_stdout",
+      "local_name": "redirect_stdout",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 3,
+      "module": "io",
+      "name": "StringIO",
+      "local_name": "StringIO",
+      "loaded_name_occurrences": 5
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 4,
+      "module": null,
+      "name": "json",
+      "local_name": "json",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 5,
+      "module": "pathlib",
+      "name": "Path",
+      "local_name": "Path",
+      "loaded_name_occurrences": 5
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 6,
+      "module": "tempfile",
+      "name": "TemporaryDirectory",
+      "local_name": "TemporaryDirectory",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 7,
+      "module": "types",
+      "name": "SimpleNamespace",
+      "local_name": "SimpleNamespace",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 8,
+      "module": null,
+      "name": "unittest",
+      "local_name": "unittest",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 9,
+      "module": "unittest.mock",
+      "name": "MagicMock",
+      "local_name": "MagicMock",
+      "loaded_name_occurrences": 4
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 9,
+      "module": "unittest.mock",
+      "name": "patch",
+      "local_name": "patch",
+      "loaded_name_occurrences": 13
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 11,
+      "module": "PIL",
+      "name": "Image",
+      "local_name": "Image",
+      "loaded_name_occurrences": 6
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 12,
+      "module": null,
+      "name": "torch",
+      "local_name": "torch",
+      "loaded_name_occurrences": 11
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 14,
+      "module": "transcreation.cli",
+      "name": "main",
+      "local_name": "main",
+      "loaded_name_occurrences": 5
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 15,
+      "module": "transcreation.config",
+      "name": "CaptionConfig",
+      "local_name": "CaptionConfig",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 15,
+      "module": "transcreation.config",
+      "name": "load_config",
+      "local_name": "load_config",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 15,
+      "module": "transcreation.config",
+      "name": "validate_config",
+      "local_name": "validate_config",
+      "loaded_name_occurrences": 2
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 16,
+      "module": "transcreation.contracts",
+      "name": "Captioner",
+      "local_name": "Captioner",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 16,
+      "module": "transcreation.contracts",
+      "name": "CaptionTaskResult",
+      "local_name": "CaptionTaskResult",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 17,
+      "module": "transcreation.pipeline",
+      "name": "create_captioner",
+      "local_name": "create_captioner",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 18,
+      "module": "transcreation.stages.caption",
+      "name": "CONCISE_PROMPT",
+      "local_name": "CONCISE_PROMPT",
+      "loaded_name_occurrences": 1
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 18,
+      "module": "transcreation.stages.caption",
+      "name": "PROMPT",
+      "local_name": "PROMPT",
+      "loaded_name_occurrences": 3
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "line": 18,
+      "module": "transcreation.stages.caption",
+      "name": "SmolVLMCaptioner",
+      "local_name": "SmolVLMCaptioner",
+      "loaded_name_occurrences": 3
+    }
+  ],
+  "definitions": [
+    {
+      "file": "src/transcreation/cli.py",
+      "name": "main",
+      "line": 13
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "name": "CaptionConfig",
+      "line": 16
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "name": "validate_config",
+      "line": 64
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "name": "load_config",
+      "line": 102
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "name": "PlannerConfig",
+      "line": 113
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "name": "load_planner_config",
+      "line": 153
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "name": "__post_init__",
+      "line": 28
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "name": "generation_settings",
+      "line": 54
+    },
+    {
+      "file": "src/transcreation/config.py",
+      "name": "__post_init__",
+      "line": 122
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "CaptionResult",
+      "line": 9
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "CaptionTaskResult",
+      "line": 34
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "Captioner",
+      "line": 41
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "CaptionStatus",
+      "line": 46
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "PlanningDecision",
+      "line": 52
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "_require_text",
+      "line": 58
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "_require_text_tuple",
+      "line": 63
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "PlanningContractError",
+      "line": 70
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "_require_object_text",
+      "line": 78
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "validate_localization_phrase",
+      "line": 84
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "VerifiedObject",
+      "line": 93
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "PlanningInput",
+      "line": 105
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "CandidateEdit",
+      "line": 151
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "PlanningResult",
+      "line": 181
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "CulturalPlanner",
+      "line": 222
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "__post_init__",
+      "line": 26
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "caption",
+      "line": 42
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "__init__",
+      "line": 73
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "__post_init__",
+      "line": 99
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "__post_init__",
+      "line": 115
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "from_caption",
+      "line": 133
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "__post_init__",
+      "line": 166
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "__post_init__",
+      "line": 202
+    },
+    {
+      "file": "src/transcreation/contracts.py",
+      "name": "plan",
+      "line": 223
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "name": "run_caption",
+      "line": 12
+    },
+    {
+      "file": "src/transcreation/pipeline.py",
+      "name": "create_captioner",
+      "line": 17
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "_transformers",
+      "line": 16
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "_seed",
+      "line": 29
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "_sync",
+      "line": 39
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "_load",
+      "line": 44
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "_run_inference",
+      "line": 70
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "_generated_token_count",
+      "line": 111
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "SmolCaptionResult",
+      "line": 146
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "SmolVLMCaptioner",
+      "line": 155
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "__init__",
+      "line": 156
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "caption",
+      "line": 165
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "prepare",
+      "line": 169
+    },
+    {
+      "file": "src/transcreation/stages/caption.py",
+      "name": "decode",
+      "line": 181
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "name": "planning_result_schema",
+      "line": 69
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "name": "parse_planning_input",
+      "line": 92
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "name": "OllamaPlannerError",
+      "line": 108
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "name": "OllamaPlanner",
+      "line": 114
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "name": "__init__",
+      "line": 109
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "name": "__init__",
+      "line": 115
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "name": "api",
+      "line": 121
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "name": "plan",
+      "line": 148
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "name": "unload",
+      "line": 198
+    },
+    {
+      "file": "src/transcreation/stages/ollama_planner.py",
+      "name": "record_plan",
+      "line": 203
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "parse_planning_result",
+      "line": 14
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "_contains_label",
+      "line": 34
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "edit_consistency_issues",
+      "line": 44
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "ValidationIssue",
+      "line": 50
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "_issue",
+      "line": 57
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "parse_model_draft",
+      "line": 62
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "validate_planning_result",
+      "line": 110
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "_normalized_label",
+      "line": 191
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "plan_cultural_edits",
+      "line": 195
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "MockPlanner",
+      "line": 202
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "__init__",
+      "line": 205
+    },
+    {
+      "file": "src/transcreation/stages/planning.py",
+      "name": "plan",
+      "line": 208
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "name": "save",
+      "line": 16
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "name": "memory_sample",
+      "line": 22
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "name": "measured_run",
+      "line": 39
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "name": "main",
+      "line": 58
+    },
+    {
+      "file": "scripts/evaluate_planner.py",
+      "name": "sample_loop",
+      "line": 43
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "request",
+      "line": 23
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "proposed",
+      "line": 27
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "envelope",
+      "line": 41
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "TestOllamaPlanner",
+      "line": 50
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "transport",
+      "line": 51
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "run_mock",
+      "line": 73
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_valid_structured_response_and_metadata",
+      "line": 80
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_malformed_response",
+      "line": 95
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_failed_connection",
+      "line": 112
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_timeout",
+      "line": 119
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_model_not_installed",
+      "line": 127
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_http_model_not_found",
+      "line": 131
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_interrupted_http_response_is_not_a_plan",
+      "line": 137
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_malformed_model_list_is_rejected",
+      "line": 143
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_uncertain_object_requires_review_even_if_model_proposes",
+      "line": 147
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_unverified_source_identity_requires_review_without_keyword_inference",
+      "line": 154
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_truncated_caption_requires_review",
+      "line": 160
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_no_justified_edit_abstains",
+      "line": 164
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_injection_cannot_change_system_prompt_or_verification",
+      "line": 170
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_schema_matches_contract_fields",
+      "line": 183
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_invalid_raw_candidate_is_quarantined_with_codes_and_preserved",
+      "line": 189
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_config_validation",
+      "line": 207
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_cli_saves_record_and_preserves_existing_files",
+      "line": 216
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "test_cli_failure_is_recorded_and_exits_nonzero",
+      "line": 233
+    },
+    {
+      "file": "tests/test_ollama_planner.py",
+      "name": "send",
+      "line": 54
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "food_request",
+      "line": 14
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "food_response",
+      "line": 25
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "TestPlanning",
+      "line": 45
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_valid_proposed_food_adaptation",
+      "line": 46
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_truncated_caption_requires_review",
+      "line": 60
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_unknown_completion_requires_review",
+      "line": 67
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_uncertain_or_unsupported_identity_requires_review",
+      "line": 73
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_caption_alone_does_not_verify_an_object",
+      "line": 83
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_stated_uncertainty_requires_review_even_with_verified_object",
+      "line": 87
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_no_change_is_appropriate",
+      "line": 93
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_abstention_with_truncated_caption_still_requires_review",
+      "line": 103
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_malformed_responses_are_rejected",
+      "line": 112
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_missing_target_and_invalid_inputs_are_rejected",
+      "line": 131
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_direct_typed_results_are_validated_too",
+      "line": 142
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_existing_review_is_never_promoted",
+      "line": 151
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_replacement_cannot_masquerade_as_verified_source",
+      "line": 157
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_future_object_in_localization_requires_review",
+      "line": 165
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_future_scene_phrase_absent_from_source_requires_review",
+      "line": 172
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_preserving_edited_object_flags_possible_conflict",
+      "line": 180
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_preserving_future_object_is_flagged",
+      "line": 191
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_harmless_uncertainty_allows_no_change_and_is_retained",
+      "line": 199
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_material_uncertainty_in_edit_remains_review",
+      "line": 209
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_uncertainty_words_do_not_classify_scene_materiality",
+      "line": 215
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_no_change_does_not_depend_on_instruction_keyword_blacklist",
+      "line": 224
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_verified_reference_survives_case_and_punctuation_in_localization",
+      "line": 235
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_semantic_paraphrases_are_explicitly_left_for_human_checks",
+      "line": 242
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_empty_edit_abstention_stays_valid",
+      "line": 250
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "test_caption_conversion_preserves_completion_without_verifying_text",
+      "line": 257
+    },
+    {
+      "file": "tests/test_planning.py",
+      "name": "FlaggedCaption",
+      "line": 262
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "source_request",
+      "line": 12
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "proposal",
+      "line": 22
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "evaluate",
+      "line": 35
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "TestDecisionPolicy",
+      "line": 40
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_source_membership_does_not_validate_abstention_for_an_adaptation_request",
+      "line": 41
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_placeholder_descriptions_are_rejected_and_quarantined",
+      "line": 53
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_full_scene_localization_is_not_an_object_phrase",
+      "line": 65
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_actual_null_is_nullable_but_not_a_verified_identity",
+      "line": 75
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_string_null_id_is_invalid",
+      "line": 86
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_unknown_verified_id_is_removed",
+      "line": 93
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_user_protected_content_cannot_silently_be_edited",
+      "line": 101
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_unresolved_protection_paraphrase_is_not_claimed_compatible",
+      "line": 107
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_preserved_source_object_cannot_be_released_for_replacement",
+      "line": 112
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_truncated_caption_cannot_release_even_verified_candidates",
+      "line": 119
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_verified_edit_with_correct_source_localization_stays_a_draft",
+      "line": 125
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_review_is_nonactionable_even_if_its_candidate_is_well_formed",
+      "line": 132
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_abstention_clears_unrelated_checks_without_claiming_cultural_correctness",
+      "line": 139
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_source_and_replacement_must_be_distinct",
+      "line": 153
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_explicit_no_edit_review_stays_nonactionable",
+      "line": 160
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_empty_proposal_resolves_only_to_no_action_with_an_explicit_code",
+      "line": 168
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_empty_proposal_with_incomplete_caption_remains_review",
+      "line": 177
+    },
+    {
+      "file": "tests/test_planning_policy.py",
+      "name": "test_one_invalid_candidate_does_not_release_the_rest_of_a_review_batch",
+      "line": 185
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "smol_config",
+      "line": 22
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "TestSmolVLM",
+      "line": 30
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "TestApplication",
+      "line": 140
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "mock_smol",
+      "line": 31
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_chat_template_loading_and_prompt_tokens_removed",
+      "line": 65
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_config_factory_and_no_other_model_construction",
+      "line": 91
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_cli_serializes_prompt_metadata_and_measurements",
+      "line": 99
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_empty_caption_is_rejected",
+      "line": 117
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_concise_prompt_and_truncation_metadata",
+      "line": 125
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_cli_finds_default_settings_outside_project_folder",
+      "line": 141
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_default_config_selects_pinned_smolvlm",
+      "line": 158
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_retired_models_and_commands_are_rejected",
+      "line": 165
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_invalid_settings_are_rejected",
+      "line": 177
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_cpu_precision_fallback_and_unavailable_cuda",
+      "line": 186
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "test_cli_refuses_to_overwrite_source_image",
+      "line": 196
+    },
+    {
+      "file": "tests/test_smolvlm.py",
+      "name": "generate",
+      "line": 54
+    }
+  ]
+}

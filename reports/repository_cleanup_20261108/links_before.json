@@ -1,0 +1,1331 @@
+{
+  "checked": [
+    {
+      "file": "reports/ollama_planner_phase3_20261108_prompt_v3/REPORT.md",
+      "target": "01_japanese_food.json",
+      "exists": true
+    },
+    {
+      "file": "reports/ollama_planner_phase3_20261108_prompt_v3/REPORT.md",
+      "target": "02_durga_uncertain_incense.json",
+      "exists": true
+    },
+    {
+      "file": "reports/ollama_planner_phase3_20261108_prompt_v3/REPORT.md",
+      "target": "03_bicycle_no_change.json",
+      "exists": true
+    },
+    {
+      "file": "reports/ollama_planner_phase3_20261108_prompt_v3/REPORT.md",
+      "target": "04_truncated_caption.json",
+      "exists": true
+    },
+    {
+      "file": "reports/ollama_planner_phase3_20261108_prompt_v3/REPORT.md",
+      "target": "05_unknown_source_culture.json",
+      "exists": true
+    },
+    {
+      "file": "reports/ollama_planner_phase3_20261108_prompt_v3/REPORT.md",
+      "target": "06_caption_injection.json",
+      "exists": true
+    },
+    {
+      "file": "reports/ollama_planner_phase3_20261108_prompt_v3/REPORT.md",
+      "target": "../ollama_planner_phase3_20261108/summary.json",
+      "exists": true
+    },
+    {
+      "file": "reports/ollama_planner_phase3_20261108_prompt_v3/REPORT.md",
+      "target": "../ollama_planner_phase3_20261108_prompt_v2/summary.json",
+      "exists": true
+    },
+    {
+      "file": "reports/ollama_planner_phase3_20261108_prompt_v3/REPORT.md",
+      "target": "summary.json",
+      "exists": true
+    },
+    {
+      "file": "reports/phase3_step2_three_examples_20261108/REPORT.md",
+      "target": "01_japanese_food.plan.json",
+      "exists": true
+    },
+    {
+      "file": "reports/phase3_step2_three_examples_20261108/REPORT.md",
+      "target": "02_durga_uncertain_incense.plan.json",
+      "exists": true
+    },
+    {
+      "file": "reports/phase3_step2_three_examples_20261108/REPORT.md",
+      "target": "03_bicycle_no_change.plan.json",
+      "exists": true
+    },
+    {
+      "file": "reports/planner_decision_policy_20261108_final/REPORT.md",
+      "target": "01_japanese_food.plan.json",
+      "exists": true
+    },
+    {
+      "file": "reports/planner_decision_policy_20261108_final/REPORT.md",
+      "target": "02_durga_uncertain_incense.plan.json",
+      "exists": true
+    },
+    {
+      "file": "reports/planner_decision_policy_20261108_final/REPORT.md",
+      "target": "03_bicycle_no_change.plan.json",
+      "exists": true
+    },
+    {
+      "file": "reports/planner_quality_review_20261108_final/REPORT.md",
+      "target": "01_japanese_food.plan.json",
+      "exists": true
+    },
+    {
+      "file": "reports/planner_quality_review_20261108_final/REPORT.md",
+      "target": "02_durga_uncertain_incense.plan.json",
+      "exists": true
+    },
+    {
+      "file": "reports/planner_quality_review_20261108_final/REPORT.md",
+      "target": "03_bicycle_no_change.plan.json",
+      "exists": true
+    },
+    {
+      "file": "reports/planner_quality_review_20261108_final/REPORT.md",
+      "target": "../planner_quality_review_20261108/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/experiment_results.md",
+      "target": "model_comparison.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/experiment_results.md",
+      "target": "../.local_archive/smolvlm_commitment_20261108/",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/model_comparison.md",
+      "target": "experiment_results.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/model_comparison.md",
+      "target": "experiment_results.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/model_comparison.md",
+      "target": "../.local_archive/smolvlm_commitment_20261108/",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_dense/review.md",
+      "target": "annotated.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/review.md",
+      "target": "full.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/review.md",
+      "target": "top_left.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/review.md",
+      "target": "top_right.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/review.md",
+      "target": "bottom_left.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/review.md",
+      "target": "bottom_right.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "concise_comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/durga.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "concise_comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/durga.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/review.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "truncation_comparison.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "smol_extended.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/durga.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/truncation_comparison.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/truncation_comparison.md",
+      "target": "smol_extended.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/truncation_comparison.md",
+      "target": "review.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/review.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "truncation_comparison.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "smol_extended.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/durga.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/truncation_comparison.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/truncation_comparison.md",
+      "target": "smol_extended.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/truncation_comparison.md",
+      "target": "review.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/sanity_cats.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/sanity_cats.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/durga.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/durga_dense/review.md",
+      "target": "annotated.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/review.md",
+      "target": "full.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/review.md",
+      "target": "top_left.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/review.md",
+      "target": "top_right.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/review.md",
+      "target": "bottom_left.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/review.md",
+      "target": "bottom_right.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "concise_comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/durga.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/review.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "truncation_comparison.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "smol_extended.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/durga.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/truncation_comparison.md",
+      "target": "../vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/truncation_comparison.md",
+      "target": "smol_extended.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/truncation_comparison.md",
+      "target": "review.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/sanity_cats.png",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/sanity_cats.png",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/durga.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_summary.md",
+      "target": "cleanup_tree_before.txt",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_summary.md",
+      "target": "cleanup_tree_after.txt",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_summary.md",
+      "target": "experiment_usage.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_summary.md",
+      "target": "vlm_selection.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_summary.md",
+      "target": "archive_manifest.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/experiment_usage.md",
+      "target": "vlm_selection.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/vlm_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/vlm_comparison/models.yaml",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/vlm_comparison/frozen_manifest.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/vlm_comparison/review.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/smol_extended/smol_extended.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/smol_extended/truncation_comparison.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/smol_extended/review.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/smol_concise/concise_comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/smol_concise/concise_review.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/durga_comparison/comparison.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/durga_crop_diagnostic/caption_crop.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/durga_regions/observations.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/durga_dense/regions.json",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/durga_dense/annotated.png",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "../outputs/smolvlm_sanity_review.md",
+      "exists": true
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+      "target": "archive_manifest.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/previous_raw_revalidated.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108/",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/test_results.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/task_changes.diff",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/task_diff_summary.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/01_japanese_food.input.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/01_japanese_food.raw.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/01_japanese_food.plan.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/01_japanese_food.audit.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/02_durga_uncertain_incense.input.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/02_durga_uncertain_incense.raw.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/02_durga_uncertain_incense.plan.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/02_durga_uncertain_incense.audit.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/03_bicycle_no_change.input.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/03_bicycle_no_change.raw.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/03_bicycle_no_change.plan.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/03_bicycle_no_change.audit.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/comparison.json",
+      "exists": true
+    },
+    {
+      "file": "outputs/planner_review.md",
+      "target": "../reports/planner_decision_policy_20261108_final/root_cause_analysis.json",
+      "exists": true
+    }
+  ],
+  "broken": [
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/durga.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/durga.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/sanity_cats.png",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/sanity_cats.png",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/durga.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_02.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_03.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_04.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_05.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_06.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_07.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_08.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_09.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_10.jpg",
+      "exists": false
+    },
+    {
+      "file": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+      "target": "../../data/vlm_collection/scene_11.jpg",
+      "exists": false
+    }
+  ]
+}

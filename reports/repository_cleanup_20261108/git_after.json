@@ -1,0 +1,42 @@
+{
+  "status": {
+    "command": [
+      "git",
+      "status",
+      "--porcelain=v1"
+    ],
+    "exit_code": 0,
+    "stdout": " M README.md\n M src/transcreation/config.py\n M src/transcreation/pipeline.py\n M src/transcreation/stages/__init__.py\n M src/transcreation/stages/ollama_planner.py\n M src/transcreation/stages/planning.py\n M tests/test_planning_policy.py\n?? reports/README.md\n?? reports/repository_cleanup_20261108/\n?? reports/repository_cleanup_review.md\n",
+    "stderr": ""
+  },
+  "diff_stat": {
+    "command": [
+      "git",
+      "diff",
+      "--stat"
+    ],
+    "exit_code": 0,
+    "stdout": " README.md                                  | 458 +++++++----------------------\n src/transcreation/config.py                |   2 +-\n src/transcreation/pipeline.py              |   2 +-\n src/transcreation/stages/__init__.py       |   2 +-\n src/transcreation/stages/ollama_planner.py |   5 +-\n src/transcreation/stages/planning.py       |   4 +-\n tests/test_planning_policy.py              |   1 -\n 7 files changed, 106 insertions(+), 368 deletions(-)\n",
+    "stderr": "warning: in the working copy of 'tests/test_planning_policy.py', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'tests/test_planning_policy.py', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "head": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "434ab23b316157f39a553dc2b2023b029af31689\n",
+    "stderr": ""
+  }
+}

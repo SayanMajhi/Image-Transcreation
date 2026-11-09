@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pip",
+    "check"
+  ],
+  "exit_code": 0,
+  "stdout": "No broken requirements found.\n",
+  "stderr": ""
+}

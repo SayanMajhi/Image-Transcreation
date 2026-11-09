@@ -33,8 +33,8 @@ def parse_planning_result(payload: Mapping[str, object]) -> PlanningResult:
 
 def _contains_label(text: str, label: str) -> bool:
     """Match an explicit label, ignoring case/punctuation, without guessing synonyms."""
-    words = tuple(re.findall(r"\w+", text.casefold()))
-    reference = tuple(re.findall(r"\w+", label.casefold()))
+    words = _normalized_label(text)
+    reference = _normalized_label(label)
     return bool(reference) and any(
         words[start:start + len(reference)] == reference
         for start in range(len(words) - len(reference) + 1)

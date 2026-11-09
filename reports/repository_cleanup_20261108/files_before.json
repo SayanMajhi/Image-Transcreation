@@ -1,0 +1,1797 @@
+[
+  {
+    "path": "src/transcreation/cli.py",
+    "size": 4785,
+    "sha256": "2cc32ddbc0afab29bc35088ee8ee5cf16a01ad8be44fafcd9225bdf09695be16"
+  },
+  {
+    "path": "src/transcreation/config.py",
+    "size": 7429,
+    "sha256": "2491f1ad96f5e8971b70b180be00db3060eacb3b4c379c65e96add2e45b6e051"
+  },
+  {
+    "path": "src/transcreation/contracts.py",
+    "size": 9219,
+    "sha256": "d2ccb911b5de3d7ec7f51d2a7ad7af1f4f7d78260e7de914606e8f84237f52bd"
+  },
+  {
+    "path": "src/transcreation/pipeline.py",
+    "size": 1359,
+    "sha256": "7e00f69f908ce88d75f7d4f208b2e7b0fa6fc651c8e756e95c9d2e51ad3f57db"
+  },
+  {
+    "path": "src/transcreation/__init__.py",
+    "size": 42,
+    "sha256": "349d501bb47ff3c9985c6776cf02e9070cfafb7f7a8c17358c4d341e45b72504"
+  },
+  {
+    "path": "src/transcreation/stages/caption.py",
+    "size": 9160,
+    "sha256": "b0ceaf508087c0535bbded07277c394b028c0f9499d8f2ee3a2310f7e69da1bc"
+  },
+  {
+    "path": "src/transcreation/stages/grounding.py",
+    "size": 91,
+    "sha256": "2a9b0edaad95922d5da38b43efec8be926e4656576766b4f334a6069615835cf"
+  },
+  {
+    "path": "src/transcreation/stages/inpainting.py",
+    "size": 80,
+    "sha256": "0f56f3f2e1823abac0ba968af5d6628971d225ecc2f0f173c5c7970e3abd46e2"
+  },
+  {
+    "path": "src/transcreation/stages/ollama_planner.py",
+    "size": 14223,
+    "sha256": "4491b634c4408311d48bc7d2fe7c2cb79eb82702b14963a4557c0348681c9275"
+  },
+  {
+    "path": "src/transcreation/stages/planning.py",
+    "size": 13110,
+    "sha256": "62f736cd4e719859bc3241ae8c4c451bf76aecaa23b18b8ad7f66574345e4b93"
+  },
+  {
+    "path": "src/transcreation/stages/segmentation.py",
+    "size": 86,
+    "sha256": "63d4186780fb0e88d7c5d716c20a9f0e80e87451928a783fae0091d4e0509014"
+  },
+  {
+    "path": "src/transcreation/stages/__init__.py",
+    "size": 63,
+    "sha256": "317777877a1e787e88d7c57cc920c2e224294a6bc417f988b91162f95f1bc012"
+  },
+  {
+    "path": "configs/models.yaml",
+    "size": 731,
+    "sha256": "cc26e25c666b839acdd5a38a68d0f6a74a296ee087fab954c003856337c86e77"
+  },
+  {
+    "path": "configs/planner.yaml",
+    "size": 488,
+    "sha256": "5e9434a484d8347df5fa67472cbe199d78c9e2b734a25644fc1c11144ce096d5"
+  },
+  {
+    "path": "configs/__pycache__/config.cpython-311.pyc",
+    "size": 7234,
+    "sha256": "300b476ae25402aa58945cd9d6c6a90dbaaba602876e7d806fe3eff6fce9cede"
+  },
+  {
+    "path": "configs/__pycache__/__init__.cpython-311.pyc",
+    "size": 231,
+    "sha256": "ee0eaa58e6a613676c6abd0928020498b2f847f9e5e2490027722d7afa22b2bb"
+  },
+  {
+    "path": "scripts/evaluate_planner.py",
+    "size": 6328,
+    "sha256": "efb0c9cf5c566b43afcfbd23d94741e98b1887b5db2ddec0d3b05d47daa27e58"
+  },
+  {
+    "path": "tests/test_ollama_planner.py",
+    "size": 13758,
+    "sha256": "13b4230f725350db33b3c1748693a0a0b2fff598c6b20fc55e16cba060e286c5"
+  },
+  {
+    "path": "tests/test_planning.py",
+    "size": 15556,
+    "sha256": "9f5e22e921efb9c997d4ae6f48b9fd7b78716a7cb8aeb34405ece985582193f7"
+  },
+  {
+    "path": "tests/test_planning_policy.py",
+    "size": 9792,
+    "sha256": "0e30d257e4978822d1a210a8a7ac55496a06a1c3c13e5793a85266271e89dd9e"
+  },
+  {
+    "path": "tests/test_smolvlm.py",
+    "size": 11043,
+    "sha256": "336c73be332f7fa248499d1e45d21cef22c2a37e060b3901e71818c6ab72ebd7"
+  },
+  {
+    "path": "tests/fixtures/planning/01_japanese_food.json",
+    "size": 433,
+    "sha256": "410c23dde4c57d39ca0fb8bf45b76d29363366a79230c66621f9ad5fed615882"
+  },
+  {
+    "path": "tests/fixtures/planning/02_durga_uncertain_incense.json",
+    "size": 961,
+    "sha256": "a8d1a27d72cb4270b4e00c3365a11fe09e31db6b8496732951a2dd780ff7dccf"
+  },
+  {
+    "path": "tests/fixtures/planning/03_bicycle_no_change.json",
+    "size": 545,
+    "sha256": "71eb8fc52a6215bda79b1ba430a2321b23e163af69604c8d7a3268b4f8207efb"
+  },
+  {
+    "path": "tests/fixtures/planning/04_truncated_caption.json",
+    "size": 844,
+    "sha256": "68e1f0eafd72c1299ed38fd0b712ab2cb55c05b35eda2c970b029c111b0473ce"
+  },
+  {
+    "path": "tests/fixtures/planning/05_unknown_source_culture.json",
+    "size": 340,
+    "sha256": "de90ad4c81b468c0bdc542d60950c55530a61311fd382a8356cbe32487a1e278"
+  },
+  {
+    "path": "tests/fixtures/planning/06_caption_injection.json",
+    "size": 684,
+    "sha256": "9ce03f998c0e36e0bf2d73028456aff827920e4543bbab4bb93103cd7964b089"
+  },
+  {
+    "path": "tests/fixtures/planning/scenarios.json",
+    "size": 2826,
+    "sha256": "c814503ed20841eb9075b4e82ba56b7c7102db236c6f1d96524464083632b7f9"
+  },
+  {
+    "path": "tests/__pycache__/test_caption.cpython-311.pyc",
+    "size": 37924,
+    "sha256": "7311a35feb780859284a0d38b775ff0e9df455c8b8c58b1b3c411bb0331f8b9a"
+  },
+  {
+    "path": "tests/__pycache__/test_smolvlm.cpython-311.pyc",
+    "size": 25279,
+    "sha256": "b0a0e0d459302abaded9dff5d45653ee0950a994a8e615e06d8f47a8e5da6737"
+  },
+  {
+    "path": "data/sample_images/durga.jpg",
+    "size": 1428196,
+    "sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0"
+  },
+  {
+    "path": "data/vlm_collection/manifest.json",
+    "size": 9421,
+    "sha256": "5c983ab679d4a9ec7d7b57dada5f9328aa1ce6a77803da98db1002ce6f4b6743"
+  },
+  {
+    "path": "data/vlm_collection/manifest.partial.json",
+    "size": 8829,
+    "sha256": "f01a3ea9b31e4d3977f9beb071944376604e12d0bfb8eb73e569247692b80ec3"
+  },
+  {
+    "path": "data/vlm_collection/sanity_cats.png",
+    "size": 694498,
+    "sha256": "cf6f3c4befa148732c7453e0de5afab00f682427435fead2d88b07a9615cdac2"
+  },
+  {
+    "path": "data/vlm_collection/scene_02.jpg",
+    "size": 149138,
+    "sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2"
+  },
+  {
+    "path": "data/vlm_collection/scene_03.jpg",
+    "size": 488370,
+    "sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0"
+  },
+  {
+    "path": "data/vlm_collection/scene_04.jpg",
+    "size": 457260,
+    "sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab"
+  },
+  {
+    "path": "data/vlm_collection/scene_05.jpg",
+    "size": 638718,
+    "sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99"
+  },
+  {
+    "path": "data/vlm_collection/scene_06.jpg",
+    "size": 502854,
+    "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0"
+  },
+  {
+    "path": "data/vlm_collection/scene_07.jpg",
+    "size": 262521,
+    "sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a"
+  },
+  {
+    "path": "data/vlm_collection/scene_08.jpg",
+    "size": 375245,
+    "sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c"
+  },
+  {
+    "path": "data/vlm_collection/scene_09.jpg",
+    "size": 374162,
+    "sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a"
+  },
+  {
+    "path": "data/vlm_collection/scene_10.jpg",
+    "size": 771161,
+    "sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643"
+  },
+  {
+    "path": "data/vlm_collection/scene_11.jpg",
+    "size": 260601,
+    "sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d"
+  },
+  {
+    "path": "outputs/caption.json",
+    "size": 2311,
+    "sha256": "11448a81a7cc2b8461fa7e5d1ce61262263da85ac378547663208110eb021d21"
+  },
+  {
+    "path": "outputs/new_food_plan.json",
+    "size": 12279,
+    "sha256": "d35a860ff5d31ffd8a33fdad792c386fa76d9464347e0afa6299f10f0c214ea9"
+  },
+  {
+    "path": "outputs/planner_review.md",
+    "size": 20904,
+    "sha256": "29e9b5d27365343048fea8b4de6a04abfbf9f52b3339efa0d495fc5a7a9f859f"
+  },
+  {
+    "path": "outputs/planning/01_japanese_food_cli_20261108.json",
+    "size": 12279,
+    "sha256": "802a1eede13f38eaa093ea5a4ad4b7b9258d1b59d76ec26db9302921ebeb3cba"
+  },
+  {
+    "path": "reports/VLM_Selection_Experimental_Findings_Refined.md",
+    "size": 15324,
+    "sha256": "c6ae9e282ee2909e78b32a3004986b141fe23a1720b008bc1afa0b920be2c38e"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108/01_japanese_food.json",
+    "size": 16613,
+    "sha256": "13304fa3587dc8e576c6c5edf9b4ff9572f83000f44971fb7fa6d85b90c4b458"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108/02_durga_uncertain_incense.json",
+    "size": 19876,
+    "sha256": "0f84ddbc505ff1a6d4094b72d1557372ec886091c6b9fec4d521b8ca942f80b8"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108/03_bicycle_no_change.json",
+    "size": 16028,
+    "sha256": "27bb87c81b7fb50cd06a15debb05c804b35b5b875503765dc7feda1e79da5c2f"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108/04_truncated_caption.json",
+    "size": 19471,
+    "sha256": "ef612ad45d0cda4feb9e521bb629ad0c509905ce050653d5003eedffa1fb989d"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108/05_unknown_source_culture.json",
+    "size": 15690,
+    "sha256": "a503031ab52c60f6edde06471a45f5cbdbfdbcfe4c3b73a78541206cddb5b922"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108/06_caption_injection.json",
+    "size": 16514,
+    "sha256": "9167f12a218d8f4cf34ea5ec7b9c3676598cd956df70ca6b0a70986ef73e7bd3"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108/environment.json",
+    "size": 1568,
+    "sha256": "15bbc88e080280ed626eda134f3a9fce35a9001e81d2cb5605e47ef0fbc7a6d4"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108/final_memory.json",
+    "size": 127,
+    "sha256": "2603940daa99665932e25de5465eecdf2f7f5183e98e13cda76c5cfd5749be3c"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108/standalone_probe.json",
+    "size": 4017,
+    "sha256": "86b00a2310120850da08d09d8e4bbed49cae1393302f36e0db02f050512cf3e7"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108/summary.json",
+    "size": 3861,
+    "sha256": "f6b4985f867d49aad8fe9955a101e83c301c23460ad308d984106025bdfc8823"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v2/01_japanese_food.json",
+    "size": 20306,
+    "sha256": "55f659077e950fe6cfbb0c80d1f46acf76b42eee1d64d507c713520782faf10f"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v2/02_durga_uncertain_incense.json",
+    "size": 23449,
+    "sha256": "8344ea9eabedd2d167cb3b228c4c292c1757ab2e77ee56702c6db74568f5a82a"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v2/03_bicycle_no_change.json",
+    "size": 20581,
+    "sha256": "42465fba45cf4162517b5ce924341319b7cb34e03fb6f0badfe600aedd802d1a"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v2/04_truncated_caption.json",
+    "size": 20306,
+    "sha256": "5882c57944fd1122a475b12e40008d26726d2190efd8644483aea5e158795374"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v2/05_unknown_source_culture.json",
+    "size": 16474,
+    "sha256": "83c10d0603f1d9fbb7b83cff8ad741b23d97bff30ee6e8fe2ff33bc8077f21cb"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v2/06_caption_injection.json",
+    "size": 18666,
+    "sha256": "c59c668c9ccc8929788ec7391e3cbfc6e7a31e87789d3bfda16cc48a62d92cf6"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v2/environment.json",
+    "size": 1568,
+    "sha256": "f4f5601d2028588eddabd54ec7717af451ccce8cc30ab0620592cbc2cd9ca0f4"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v2/final_memory.json",
+    "size": 127,
+    "sha256": "1d7bcc4c1c300b5e3725161b17c4ee908fe7a9dcc8bfe30678bf820b3f489246"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v2/standalone_probe.json",
+    "size": 3153,
+    "sha256": "f95ec4d7433317e05f09b5dd1a9c8aff6f8314d10a0aa542025e2e7ef378b33e"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v2/summary.json",
+    "size": 3856,
+    "sha256": "d594f8a106a050a621548c8086dd9c6fc7e4a7b7d1f6da52bf544c561bb26d6e"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/01_japanese_food.json",
+    "size": 21152,
+    "sha256": "851cbcca4e1cbd0d1f057b2ac237c031249cb2d3e6b4cdfba8b51b48d12867c5"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/02_durga_uncertain_incense.json",
+    "size": 23553,
+    "sha256": "634f58f806c4ba0d2b5d8186c6e07efa600ea8ddb7bd92a5abbd532787ac8613"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/03_bicycle_no_change.json",
+    "size": 19741,
+    "sha256": "ec70f06b217c4c52331b3c3c4fdec8785db323f3910ea1050b1690ae44f6d981"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/04_truncated_caption.json",
+    "size": 21242,
+    "sha256": "035a7ab17feadb2030e627b5cf908a628b653927fb71a55578f50f8312d126e1"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/05_unknown_source_culture.json",
+    "size": 15650,
+    "sha256": "9dea7869d998cfeb8dfaefdd7ca3405688c3b23938a66a9d828eb588c0058fe4"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/06_caption_injection.json",
+    "size": 22240,
+    "sha256": "8de52fd215481df8b7b45f6e5a136cac950ac71572b5482aa679c4373cda178b"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/environment.json",
+    "size": 1569,
+    "sha256": "f5e316606d11b703e46a1ac8c230db4fd2361347b7396bb2eb908e7ff65fe548"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/final_memory.json",
+    "size": 127,
+    "sha256": "e94bedc5dc41dbd2db3bdaeb22625d2ea4f1932ae7ba5c214b93e2221ba35fe2"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/REPORT.md",
+    "size": 7497,
+    "sha256": "9e087531dd7d5e44388df0903aeeebd04c0d25ee359ce99dc1b4c19a239d7e6e"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/standalone_probe.json",
+    "size": 3152,
+    "sha256": "39604f790c753b83d74b1d6d09d7db0f27c3598ca315964c30d3504403e9c591"
+  },
+  {
+    "path": "reports/ollama_planner_phase3_20261108_prompt_v3/summary.json",
+    "size": 3805,
+    "sha256": "84ad2334407be796a805af33da1e23e28d59a07d4c6bb8ef7e924fd3de0c8f07"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/01_japanese_food.audit.json",
+    "size": 12279,
+    "sha256": "a8d2cb07441f7b52e2a393b822dd3521ae894ecd396b6f3ffcabbe8e8cba0fc2"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/01_japanese_food.plan.json",
+    "size": 1527,
+    "sha256": "0369f40f0261b810bf0616eca45778e25df117c601bc47b4b750ec978dc8325f"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/02_durga_uncertain_incense.audit.json",
+    "size": 14056,
+    "sha256": "215557d60c142a03aafbeee85ce9d76aa3f506e13581d65bd6672918c28e50c1"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/02_durga_uncertain_incense.plan.json",
+    "size": 1905,
+    "sha256": "707cac992095f20f302d847edcb78f3645dad0242f071029887d94d8b3a71894"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/03_bicycle_no_change.audit.json",
+    "size": 11928,
+    "sha256": "0f2664b65abe0ebf10c153e8e862a80d07e0e4f7c07ce4e1222b1739e5a97b81"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/03_bicycle_no_change.plan.json",
+    "size": 1121,
+    "sha256": "be0f324d8c7ac5f42ca4b7570052ed53549bd25c31ba328df0c9bbc7158d9047"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/environment.json",
+    "size": 669,
+    "sha256": "bdcd6bb915d99334af264c1741de39322d341d2f5bb92ecf3e620d29a40b1c90"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/git_diff_summary.txt",
+    "size": 954,
+    "sha256": "d01006e09858f78d1530f8fd82c18797a324511a5173578e64a4f3d52e8679df"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/REPORT.md",
+    "size": 5441,
+    "sha256": "cdefd60c240b20473673ea2b3a274b24cdf3d2359af20bda70f08bdf2f67596b"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/summary.json",
+    "size": 4184,
+    "sha256": "66dce4605828388be13bc2b7cc06f1ac66d5dfeff66070ab5fef7e02dc24562a"
+  },
+  {
+    "path": "reports/phase3_step2_three_examples_20261108/test_results.json",
+    "size": 165,
+    "sha256": "6af01481bf573799946ee40719b819931e59f94f1febc569354ca3c76ba5aefb"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/01_japanese_food.audit.json",
+    "size": 14019,
+    "sha256": "88fdb908abeb631abafc19024538ccf313780fea8816ad2abac80cb30de35c3e"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/01_japanese_food.input.json",
+    "size": 433,
+    "sha256": "410c23dde4c57d39ca0fb8bf45b76d29363366a79230c66621f9ad5fed615882"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/01_japanese_food.plan.json",
+    "size": 1355,
+    "sha256": "d5f636c488083d15c0c5a39f4b96959e8cb27fe767e7754bee33823e16885a7c"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/01_japanese_food.raw.json",
+    "size": 1035,
+    "sha256": "f7dd36a29a366f8cb5eb6c4856ade77e36652927708941658f8a7da02b0133d4"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/02_durga_uncertain_incense.audit.json",
+    "size": 16592,
+    "sha256": "a8dcbb9e78dcf066ae8075e8b7edf41a1aef1f6398f797a6f945dcb8407cf242"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/02_durga_uncertain_incense.input.json",
+    "size": 961,
+    "sha256": "a8d1a27d72cb4270b4e00c3365a11fe09e31db6b8496732951a2dd780ff7dccf"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/02_durga_uncertain_incense.plan.json",
+    "size": 1946,
+    "sha256": "9b90e7691667534e68e1afd7c1ba2142d3afa8967830ecc970bfa35ac4537664"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/02_durga_uncertain_incense.raw.json",
+    "size": 2101,
+    "sha256": "8c858df10e38a4d42222baedd335f12dfee18f82e8e2fd62408f515a4c98db97"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/03_bicycle_no_change.audit.json",
+    "size": 12142,
+    "sha256": "31f9920ed76c821139c397c73f8993f62d29b2755f021a1c6be0ecdfc2d13388"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/03_bicycle_no_change.input.json",
+    "size": 545,
+    "sha256": "71eb8fc52a6215bda79b1ba430a2321b23e163af69604c8d7a3268b4f8207efb"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/03_bicycle_no_change.raw.json",
+    "size": 1361,
+    "sha256": "fc8da2807da331d23f685087092e4c9c7d7a08c78fb308b4e2ba4d7a6ec96e19"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/comparison.json",
+    "size": 6328,
+    "sha256": "ed987c10b0a07430ae24f3203395f58da7ff2804b075d2a3c540b40fe33ff79a"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/final_memory.json",
+    "size": 22,
+    "sha256": "7f9fc2997f5fc9f5a40bc2302e51ed9331c744cd56a88e709136d1762ff7be89"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/previous_raw_revalidated.json",
+    "size": 6263,
+    "sha256": "7e88737455554d14d1ceff8d9b1c336042a7019e280cbf87d6b1f631a630a326"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108/test_results.json",
+    "size": 230,
+    "sha256": "327174d6ea34995d1811b6fad512605553b2552ba019f38c8ed58dfb1bfab9ba"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/01_japanese_food.audit.json",
+    "size": 14020,
+    "sha256": "e830fd69b71b0177dc9f147c9eb4e5f560d600af28118d182c761684f11d31ce"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/01_japanese_food.input.json",
+    "size": 433,
+    "sha256": "410c23dde4c57d39ca0fb8bf45b76d29363366a79230c66621f9ad5fed615882"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/01_japanese_food.plan.json",
+    "size": 1355,
+    "sha256": "d5f636c488083d15c0c5a39f4b96959e8cb27fe767e7754bee33823e16885a7c"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/01_japanese_food.raw.json",
+    "size": 1035,
+    "sha256": "f7dd36a29a366f8cb5eb6c4856ade77e36652927708941658f8a7da02b0133d4"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/02_durga_uncertain_incense.audit.json",
+    "size": 16949,
+    "sha256": "2eceabb9ee3f51f8e448e0d0050b4cac8711659b739a53afebf804b0fd417e67"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/02_durga_uncertain_incense.input.json",
+    "size": 961,
+    "sha256": "a8d1a27d72cb4270b4e00c3365a11fe09e31db6b8496732951a2dd780ff7dccf"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/02_durga_uncertain_incense.plan.json",
+    "size": 2086,
+    "sha256": "452ac6dfc82ca41d7ce154731a9b1fb9bbf74730a09313cfe9fff39c909139bf"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/02_durga_uncertain_incense.raw.json",
+    "size": 2101,
+    "sha256": "8c858df10e38a4d42222baedd335f12dfee18f82e8e2fd62408f515a4c98db97"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/03_bicycle_no_change.audit.json",
+    "size": 13620,
+    "sha256": "5e4b66f12f792ec5e732020f6ca4adc67efae01ff8277158c89f21edba82fb18"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/03_bicycle_no_change.input.json",
+    "size": 545,
+    "sha256": "71eb8fc52a6215bda79b1ba430a2321b23e163af69604c8d7a3268b4f8207efb"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/03_bicycle_no_change.plan.json",
+    "size": 814,
+    "sha256": "68c6a7c91e199f440c755043f8d4a9903093d3ee296ba019c75427a63f093c72"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/03_bicycle_no_change.raw.json",
+    "size": 1361,
+    "sha256": "fc8da2807da331d23f685087092e4c9c7d7a08c78fb308b4e2ba4d7a6ec96e19"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/comparison.json",
+    "size": 7022,
+    "sha256": "d7674c5cd75b5a53c2f9cf8dedde03d256a057e2c6e07438515985325fcf50d4"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/final_memory.json",
+    "size": 22,
+    "sha256": "7f9fc2997f5fc9f5a40bc2302e51ed9331c744cd56a88e709136d1762ff7be89"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/previous_raw_revalidated.json",
+    "size": 6263,
+    "sha256": "7e88737455554d14d1ceff8d9b1c336042a7019e280cbf87d6b1f631a630a326"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/REPORT.md",
+    "size": 10542,
+    "sha256": "fa029ea14504b6cb077291476d0588f427eceb71b7e127e41431f4e20cabf148"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/root_cause_analysis.json",
+    "size": 3865,
+    "sha256": "0b7b61ed5b41eea6b7939031481cbeadb6a7f02d7ad8a4cfd98179a958998a59"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/task_changes.diff",
+    "size": 47552,
+    "sha256": "5e91b1e7ebd8acc7c0c9af7f9a8b091862e34e0b09c428d65dde4aec9b091d06"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/task_diff_summary.json",
+    "size": 795,
+    "sha256": "a253b8fdd37caf208f26c01b243a7a852b02e440952f94ea002b0d5f7a579476"
+  },
+  {
+    "path": "reports/planner_decision_policy_20261108_final/test_results.json",
+    "size": 230,
+    "sha256": "da9083f4bd76864a20a5ad2bf9afcb1823457441ec6e8a8e9ed60012a0b1faa3"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108/01_japanese_food.audit.json",
+    "size": 13097,
+    "sha256": "277a6d062d8fb8657bf9829507cceed0bac87a0f011420a25398c506db6c0f0a"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108/01_japanese_food.plan.json",
+    "size": 2491,
+    "sha256": "8720c12e6e882e228d7e2e41105cea18f781b88eee18eda424432aa2ba56c065"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108/02_durga_uncertain_incense.audit.json",
+    "size": 13605,
+    "sha256": "ffe60173a1a3f7a544f1a4fd774e8212cd4ae89efc8291ace61d71115f7eaa71"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108/02_durga_uncertain_incense.plan.json",
+    "size": 1740,
+    "sha256": "2d442043059561a0808c850e0395f6cce47e1b490461e04933abfdc660e75d1b"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108/03_bicycle_no_change.audit.json",
+    "size": 11688,
+    "sha256": "a61e55c6b78ea5aade20bfb3740be842f1cfbc93209371fbd32de7ecf59f90f7"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108/03_bicycle_no_change.plan.json",
+    "size": 1114,
+    "sha256": "53a7e9c14ee5c18401db2c4d1a0c2a2781714ff851895b91360dd5bcfe1a776b"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108/comparison.json",
+    "size": 4710,
+    "sha256": "1b823f8f20ceab832465c8ba33eaabe932c6b1fb96da165d2395b547552ef8b6"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108/final_memory.json",
+    "size": 22,
+    "sha256": "7f9fc2997f5fc9f5a40bc2302e51ed9331c744cd56a88e709136d1762ff7be89"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108/test_results.json",
+    "size": 129,
+    "sha256": "5709d74d7ed4595d6c3b981ac5a77c053f31491e34ff7394c75a6810468d2d78"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/01_japanese_food.audit.json",
+    "size": 9905,
+    "sha256": "fc20b0fde2aaa090f91cc5042490423d50dabb5249a2322c01399fd9bd314e3a"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/01_japanese_food.plan.json",
+    "size": 658,
+    "sha256": "f3fcb57f1a09c70e6cf3dd42eb9ae7d44b19ac61d8199b61ba2d4a885e1bdcde"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/02_durga_uncertain_incense.audit.json",
+    "size": 16200,
+    "sha256": "ca7432c776c0f5b3ab25b5c12807926ab2d8c1e170603bccae2699142f54d7e1"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/02_durga_uncertain_incense.plan.json",
+    "size": 3712,
+    "sha256": "5516cab8d29bd97c9915cacf0dbc7d63c945f1c6df77a6e97809c7bb59e83728"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/03_bicycle_no_change.audit.json",
+    "size": 10926,
+    "sha256": "e23dd43a46fbf74c44c735c74d31410f80d025df0cfd5d06c2d36ddcd42aae07"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/03_bicycle_no_change.plan.json",
+    "size": 1046,
+    "sha256": "427a8159d7c334523808eda8c935fdce0065c86dc422702154afef3e8db88972"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/comparison.json",
+    "size": 4501,
+    "sha256": "c3fd66412e31b5b1438d092ad7e6ad513a360a1b88b1e1a7d1ca1f42a7a82edf"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/final_memory.json",
+    "size": 22,
+    "sha256": "7f9fc2997f5fc9f5a40bc2302e51ed9331c744cd56a88e709136d1762ff7be89"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/qualitative_comparison.json",
+    "size": 3882,
+    "sha256": "1faaa223b4113d93a6f33a20fa01034bd9c8bc56e96db76512d2522e08d734df"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/REPORT.md",
+    "size": 10224,
+    "sha256": "48de9f1dd9231a8ece3c4a1442754a9bc0c01fb57085d0f4daeb043e28c15c5c"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/task_changes.diff",
+    "size": 30080,
+    "sha256": "ae8268de06a17a420b63c0187bdd5b1ca589f3f847ccf807c27cf159b1ba7e49"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/task_diff_summary.json",
+    "size": 567,
+    "sha256": "a129eacbda4203a2944eb06a178dce10a97705ea557b17a05cf55c8001ccd32e"
+  },
+  {
+    "path": "reports/planner_quality_review_20261108_final/test_results.json",
+    "size": 180,
+    "sha256": "989a630341e4136c5d95243e6dcfc090070a19d94c9af435337791bc5ac1370f"
+  },
+  {
+    "path": ".local_archive/experiment_results.md",
+    "size": 33816,
+    "sha256": "7ae8a018c23b5dbe09f72ee2208a321d9d00170a81a683efbd9bcb9c49ceba7f"
+  },
+  {
+    "path": ".local_archive/model_comparison.md",
+    "size": 4971,
+    "sha256": "a6672d53041eb99f86a4789afaf639dab74f4b1aed7160dbbdd734e3fba0d0f4"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/archive_manifest.json",
+    "size": 17978,
+    "sha256": "8a04295981e205fb5236af69fb77c755f899230badadf27b7db4633df9969b74"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/README.md",
+    "size": 516,
+    "sha256": "611c9d0ba331c0d3981f1991e31e99b4431b1d5879915a0fbd7a4859c84efd77"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/durga.jpg",
+    "size": 1428196,
+    "sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/manifest.json",
+    "size": 9421,
+    "sha256": "5c983ab679d4a9ec7d7b57dada5f9328aa1ce6a77803da98db1002ce6f4b6743"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/manifest.partial.json",
+    "size": 8829,
+    "sha256": "f01a3ea9b31e4d3977f9beb071944376604e12d0bfb8eb73e569247692b80ec3"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/sanity_cats.png",
+    "size": 694498,
+    "sha256": "cf6f3c4befa148732c7453e0de5afab00f682427435fead2d88b07a9615cdac2"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/scene_02.jpg",
+    "size": 149138,
+    "sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/scene_03.jpg",
+    "size": 488370,
+    "sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/scene_04.jpg",
+    "size": 457260,
+    "sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/scene_05.jpg",
+    "size": 638718,
+    "sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/scene_06.jpg",
+    "size": 502854,
+    "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/scene_07.jpg",
+    "size": 262521,
+    "sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/scene_08.jpg",
+    "size": 375245,
+    "sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/scene_09.jpg",
+    "size": 374162,
+    "sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/scene_10.jpg",
+    "size": 771161,
+    "sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/data/vlm_collection/scene_11.jpg",
+    "size": 260601,
+    "sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/ide_generated/culture-transcreation@1.iml",
+    "size": 499,
+    "sha256": "031a85d3f739f003327a942f198338f6d858ca617bbd0b3286e5e40880ceadbf"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/ide_observed/workspace.xml",
+    "size": 7148,
+    "sha256": "5a6f0aade33b9edc34cd70486a3fd40d10f5a51a607eed54b4180117518df018"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/blip.json",
+    "size": 804,
+    "sha256": "a3e91e4722e563cc3872050de7bc4bb7a9f2dff945469a3003c4ff83f9caaa2f"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/blip_check.json",
+    "size": 804,
+    "sha256": "76a6c89786f56cb309caba311415e79b2b7d772319fb6c395a4b73046d1658d6"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/florence.json",
+    "size": 1122,
+    "sha256": "bde14f5ff6e1405309050360a17ed57b9d83273a3fdc90c7dcb745cdae8f148f"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smolvlm_sanity.json",
+    "size": 1766,
+    "sha256": "e7b7f99c7e190ea4ed8a7a8f38c2d0872c44988e8215c0abc64a34d45915c80c"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smolvlm_sanity_review.md",
+    "size": 834,
+    "sha256": "c7a2d8abba4b5d9c57a84b7dfcd996df1d2d0807d00a7e528bc133edd168d7a6"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_comparison/caption_detailed.json",
+    "size": 1048,
+    "sha256": "4f84d0966f6a6ded836146851c0cbafd38882224f1594b28e7ac0b758e9beb97"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_comparison/caption_more_detailed.json",
+    "size": 1239,
+    "sha256": "c79afc594c4c2d036835beb92e6afa87952b0d66e51a60795b5a208c5dfe87a9"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_comparison/caption_standard.json",
+    "size": 955,
+    "sha256": "af82963c14cfb452d5bc9e999a22bc6ab5042a5d6af842dc0a8cc0b5e54bfcc1"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_comparison/comparison.json",
+    "size": 4725,
+    "sha256": "31e34cd8718af9cc1071e230dd21a04fc7fed55705c3e7264f5b935e03e557e0"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_comparison/comparison.md",
+    "size": 3355,
+    "sha256": "0a4b29dc4534df30e77e3c5c8573fff4d9508119712b4c7bf3b4afcda85f7ce7"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_crop_diagnostic/caption_crop.json",
+    "size": 2400,
+    "sha256": "390a23445b001187f64508ac431b6935dc6f41420306d89fb8c07b99ba978b75"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_crop_diagnostic/caption_full.json",
+    "size": 2193,
+    "sha256": "2d34468303792cff010bb75b88acdaa03094a1f956645008d0104a0ea75f6f11"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_crop_diagnostic/crop.png",
+    "size": 316498,
+    "sha256": "f9c4886a4eebe7270e63d05e10e290a81f464914ea6a46ee3e36f0b6eab936f3"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_dense/annotated.png",
+    "size": 1051850,
+    "sha256": "f225e7f14d7f04c7a9b687f12c3468cddfd10eeec5b2ab307c52fddbd5824a1f"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_dense/regions.json",
+    "size": 4832,
+    "sha256": "517541649172faba8042f5a13452a6f3ee530b827af84cbff49df93d31032bb4"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_dense/review.md",
+    "size": 2836,
+    "sha256": "b9d3e6cae00f3b40cac3ba4f1762c8f54248fd45e0ff47267ca93aea30e309c4"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/bottom_left.png",
+    "size": 271055,
+    "sha256": "9c71d32b8179d04fd1af3df4bd57cafd5d1b58ffb4e68f4ff177367b0a159d1d"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/bottom_right.png",
+    "size": 311622,
+    "sha256": "afe03d298aa4bfba3568f7c611b977401050af492b7425f36b76a184b14a37f0"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/full.png",
+    "size": 1068784,
+    "sha256": "5fb5d8c34f8afdff1deb8dd2d2c0cd95af2875bc6471fc9c790b7a0808b39172"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/observations.json",
+    "size": 9584,
+    "sha256": "a0617bea1a82446288a2152256336f65ef39146070b87a20a0a4f909e4a824b8"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/review.md",
+    "size": 4663,
+    "sha256": "bf0bff3a8c8bac950ad8432a04f7db2aa77195c4c36edc653c87ee9e1bf12f3a"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/top_left.png",
+    "size": 202733,
+    "sha256": "7e5957f2224a3c06bc274b031959bbef33e12c1afe21d65f4d617db6effe1290"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/durga_regions/top_right.png",
+    "size": 273787,
+    "sha256": "31408fcf172652bd084e1cf3097c4e664a76f4544398818643b145d4a636892e"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_comparison.json",
+    "size": 66197,
+    "sha256": "f2a1a91d4b9a61e7d994d990ecef8b037c1f777030c52359a696ddae559eba22"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise/concise_review.md",
+    "size": 17956,
+    "sha256": "0b4ed009db59bcfb396470570543ba4dee6fc88028c77ee5018eae5776e33a9c"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_comparison.json",
+    "size": 66194,
+    "sha256": "8f47dda8d522ea6276dddfee8e97fb80f29484e7de285a06e72211709c6c3a83"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_concise_run2/concise_review.md",
+    "size": 17956,
+    "sha256": "8433ab02811ef9a14b6732c0aa9d9deedb2bed77bf62f81121cebf64d8fd24e9"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/review.md",
+    "size": 15598,
+    "sha256": "0e8c3c2220bff3660648028d6451e32b63b50d7bc55477e9ef1effc32ca1605b"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/smol_extended.json",
+    "size": 85853,
+    "sha256": "d2536c3689c92fd0527ab4dd00af5bfbf9ed0558fef3f0431a78e115b535ab80"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended/truncation_comparison.md",
+    "size": 10900,
+    "sha256": "9b88e8f7f6f2fddc8cd5031cfe0c853ec48b6739b63ae3f3edabd971cbbce5e3"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/review.md",
+    "size": 15598,
+    "sha256": "0e8c3c2220bff3660648028d6451e32b63b50d7bc55477e9ef1effc32ca1605b"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/smol_extended.json",
+    "size": 85841,
+    "sha256": "c980142910d03d0b41c774aa2fb10a9c25bcc40e9764cfde1a75ccda755b5c33"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/smol_extended_run2/truncation_comparison.md",
+    "size": 10900,
+    "sha256": "3e5c59bcefed6ee11545e5f452f55e19e5d10de8dffb5ec20bce021a89b826b9"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/comparison.json",
+    "size": 66857,
+    "sha256": "5caa6e3a8d8a7899735dcce7d46995d295ddabcd5983005692fcdf3a206af8c3"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/florence.json",
+    "size": 19317,
+    "sha256": "c75d20627a0b1362f4514f8dacc38b0f52f0e9418d24a8b525514dcd9d71e3f1"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/frozen_manifest.json",
+    "size": 11150,
+    "sha256": "3d066643489e5766ff3237eb04ea857ad82993b5fde06622d4853f487ca49792"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/models.yaml",
+    "size": 773,
+    "sha256": "ae0aa0c967efa0dd427bbdab8d5d2c05255c39c4a99b6bba90c88317b9973e15"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/review.md",
+    "size": 15842,
+    "sha256": "e79f5e41517d7dde23e6454c226ff725eb500ae577c57985d97887dd60a5a546"
+  },
+  {
+    "path": ".local_archive/cleanup_20261107T221221_378823/outputs/vlm_comparison/smolvlm.json",
+    "size": 29423,
+    "sha256": "4a4b8eb3d2b6d9e9383bb35506b7b972beacb2be8a6e8e5eb036428b2e7a9416"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/culture_transcreation.egg-info/dependency_links.txt",
+    "size": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/culture_transcreation.egg-info/entry_points.txt",
+    "size": 55,
+    "sha256": "9088c6508591a8d7a06127c2dcc40b95e07765409a4e6b6bfd9317d1dd938644"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/culture_transcreation.egg-info/PKG-INFO",
+    "size": 10745,
+    "sha256": "d6bb7e04c5cc1d2bc7336ef0727404ed4fe2454e38959f3d6000c93fdcad46fb"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/culture_transcreation.egg-info/requires.txt",
+    "size": 85,
+    "sha256": "1546a11f6252f12e6bdff66a7bd89ea257289470ed61115cb77143e791e9cc88"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/culture_transcreation.egg-info/SOURCES.txt",
+    "size": 558,
+    "sha256": "3763790e76290f605e7f24ec3829bcc6acb6bbd4721e4f945144a83507203392"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/culture_transcreation.egg-info/top_level.txt",
+    "size": 14,
+    "sha256": "6edbd2fad877a9dccc5571012bba3af4c37bce5aefc71a3489be60c256bf73a6"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/__init__.py",
+    "size": 44,
+    "sha256": "de264de557487b283fa4866c77d1b061a1059faba9bd9d4bc99b62604a051202"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/stages/__init__.py",
+    "size": 44,
+    "sha256": "2d7659e73574e6b6859ba8df4acbbd75e399b0d030f3b4c7478107b58b68e018"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/stages/__pycache__/caption.cpython-311.pyc",
+    "size": 18442,
+    "sha256": "36b349323459016b52cec6b0db6e0b40ae5a0b4e9855f1c00cad5c5058b3ae9e"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/stages/__pycache__/inference.cpython-311.pyc",
+    "size": 8559,
+    "sha256": "34278cb5160bad94b3029b83b134f914a41ad7656b74df4de5a71a6a71e7bfb4"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/stages/__pycache__/smolvlm.cpython-311.pyc",
+    "size": 6303,
+    "sha256": "baa2e31cf14097425863cdb3e321559cab6ec1c03e9efe2c902811a915c8c624"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/stages/__pycache__/__init__.cpython-311.pyc",
+    "size": 239,
+    "sha256": "a40682396f34210a3dd38287adefe10ad4ef7c439507e1ad9a2bb4718e7a0ba8"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/__pycache__/cli.cpython-311.pyc",
+    "size": 5112,
+    "sha256": "ece80638d6d0cca09ba017bffc14ca36fa6ca4e024b37a96f752a47feb5cca43"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/__pycache__/contracts.cpython-311.pyc",
+    "size": 3249,
+    "sha256": "d768f0c557d5f57c33c9d730057a1fc594cd35fb19b8a7cf650aa5c778824db9"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/__pycache__/crop_diagnostic.cpython-311.pyc",
+    "size": 7685,
+    "sha256": "b7fbf82576632c0da2c274b9b4b2aa28891fdc598147a8d0d9ec45f6debb09e9"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/__pycache__/factory.cpython-311.pyc",
+    "size": 1801,
+    "sha256": "257016f61b123f1a1fd88f464b18dfed5a7cc4abe73b6cad3b12bce830861e02"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/__pycache__/smol_concise.cpython-311.pyc",
+    "size": 16509,
+    "sha256": "3089b51a74ac9214d08e7af99f98d4a6be709c9cb7785050208939ed0b363805"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/__pycache__/smol_extension.cpython-311.pyc",
+    "size": 20177,
+    "sha256": "a7feb2eeb4640945eb2b6f86107e8e8dc5d2a40075f588bb7533aeb77a884136"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/__pycache__/vlm_evaluation.cpython-311.pyc",
+    "size": 26039,
+    "sha256": "3eb91933a6faa0a924ebabcdb30d2b983054cc233f58b0a14e4ea825798a1fc4"
+  },
+  {
+    "path": ".local_archive/legacy_src_layout_20261108/transcreation/__pycache__/__init__.cpython-311.pyc",
+    "size": 232,
+    "sha256": "a37c8657f43237d5b56ec00b42676368f3af4b87a2ea00527c81e9af06961961"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/cleanup_smolvlm.py",
+    "size": 12581,
+    "sha256": "a023f0d6bc3e81f8ef42e620c1811d1c9dee92479ea2cf3985809a61d807637a"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/manifest.json",
+    "size": 35425,
+    "sha256": "ef05aef32112c7db9d4562ddd197f423122e156400d01c5c702d63eea67e7e27"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/blip.json",
+    "size": 804,
+    "sha256": "a3e91e4722e563cc3872050de7bc4bb7a9f2dff945469a3003c4ff83f9caaa2f"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/florence.json",
+    "size": 1122,
+    "sha256": "bde14f5ff6e1405309050360a17ed57b9d83273a3fdc90c7dcb745cdae8f148f"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/smolvlm_sanity.json",
+    "size": 1766,
+    "sha256": "e7b7f99c7e190ea4ed8a7a8f38c2d0872c44988e8215c0abc64a34d45915c80c"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/smolvlm_sanity_review.md",
+    "size": 834,
+    "sha256": "c7a2d8abba4b5d9c57a84b7dfcd996df1d2d0807d00a7e528bc133edd168d7a6"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_comparison/caption_detailed.json",
+    "size": 1048,
+    "sha256": "4f84d0966f6a6ded836146851c0cbafd38882224f1594b28e7ac0b758e9beb97"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_comparison/caption_more_detailed.json",
+    "size": 1239,
+    "sha256": "c79afc594c4c2d036835beb92e6afa87952b0d66e51a60795b5a208c5dfe87a9"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_comparison/caption_standard.json",
+    "size": 955,
+    "sha256": "af82963c14cfb452d5bc9e999a22bc6ab5042a5d6af842dc0a8cc0b5e54bfcc1"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_comparison/comparison.json",
+    "size": 4725,
+    "sha256": "31e34cd8718af9cc1071e230dd21a04fc7fed55705c3e7264f5b935e03e557e0"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_comparison/comparison.md",
+    "size": 3355,
+    "sha256": "0a4b29dc4534df30e77e3c5c8573fff4d9508119712b4c7bf3b4afcda85f7ce7"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_crop_diagnostic/caption_crop.json",
+    "size": 2400,
+    "sha256": "390a23445b001187f64508ac431b6935dc6f41420306d89fb8c07b99ba978b75"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_crop_diagnostic/caption_full.json",
+    "size": 2193,
+    "sha256": "2d34468303792cff010bb75b88acdaa03094a1f956645008d0104a0ea75f6f11"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_crop_diagnostic/crop.png",
+    "size": 316498,
+    "sha256": "f9c4886a4eebe7270e63d05e10e290a81f464914ea6a46ee3e36f0b6eab936f3"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_dense/annotated.png",
+    "size": 1051850,
+    "sha256": "f225e7f14d7f04c7a9b687f12c3468cddfd10eeec5b2ab307c52fddbd5824a1f"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_dense/regions.json",
+    "size": 4832,
+    "sha256": "517541649172faba8042f5a13452a6f3ee530b827af84cbff49df93d31032bb4"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_dense/review.md",
+    "size": 2836,
+    "sha256": "b9d3e6cae00f3b40cac3ba4f1762c8f54248fd45e0ff47267ca93aea30e309c4"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/bottom_left.png",
+    "size": 271055,
+    "sha256": "9c71d32b8179d04fd1af3df4bd57cafd5d1b58ffb4e68f4ff177367b0a159d1d"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/bottom_right.png",
+    "size": 311622,
+    "sha256": "afe03d298aa4bfba3568f7c611b977401050af492b7425f36b76a184b14a37f0"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/full.png",
+    "size": 1068784,
+    "sha256": "5fb5d8c34f8afdff1deb8dd2d2c0cd95af2875bc6471fc9c790b7a0808b39172"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/observations.json",
+    "size": 9584,
+    "sha256": "a0617bea1a82446288a2152256336f65ef39146070b87a20a0a4f909e4a824b8"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/review.md",
+    "size": 4663,
+    "sha256": "bf0bff3a8c8bac950ad8432a04f7db2aa77195c4c36edc653c87ee9e1bf12f3a"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/top_left.png",
+    "size": 202733,
+    "sha256": "7e5957f2224a3c06bc274b031959bbef33e12c1afe21d65f4d617db6effe1290"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/top_right.png",
+    "size": 273787,
+    "sha256": "31408fcf172652bd084e1cf3097c4e664a76f4544398818643b145d4a636892e"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_cli.json",
+    "size": 6854,
+    "sha256": "9b9abbe0a99006c398f82ec006c801a9b1f2a60245fd1e7af22f62ff568423ed"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_deterministic.json",
+    "size": 10711,
+    "sha256": "d811893d6356bf05a8981ebbf570fe4e4d71ef35da8f190dfe6cec800f11154f"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_environment.json",
+    "size": 1736,
+    "sha256": "0ac0e868579a5057ccae8f0cee2716146269e923b9fb17aa4eb05b11868ed0ef"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_git_diff.json",
+    "size": 503,
+    "sha256": "568025a8864555b45843dd6a8da4d798f9199782f206a09d9b32a1b22bf82a65"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_git_status.json",
+    "size": 689,
+    "sha256": "69677062166c80f9555e68224bd3c97c05cbc67844a6e25e7b672e265a533809"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_manifest.json",
+    "size": 15184,
+    "sha256": "198760ba17d949a7860ce0ace92da6925cde8db371ff1db7a9a11f2469698656"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_pip_check.json",
+    "size": 242,
+    "sha256": "41b029172b1a3138646af36d5eac7406425db9be4e4dfa4ed4c5a7382dc049b9"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_source_audit.json",
+    "size": 327380,
+    "sha256": "ac1bd17ab49e588fdc2d89e00bbe7df4a747169ee24713276712556476ffe680"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_tests.json",
+    "size": 10413,
+    "sha256": "4eacaad8dc9e588e8b60c0dd34469449b76797910cb04e4f53c0d181b315e7af"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_tests.txt",
+    "size": 10158,
+    "sha256": "853aee55ca60fded21c84970ec50296a61f404db5316b26ca2dbdd2d01a802a8"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_tree.txt",
+    "size": 2990,
+    "sha256": "bc71451b082ffc6ca9f084c456a329956cb6b269fa54c0e34ff14342219e9d25"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/audit.py",
+    "size": 7662,
+    "sha256": "f6cc9fd0b558820d6cb2c09cbe30a784394757b5f158f10a4c0a1d17354601bc"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_cli.json",
+    "size": 6854,
+    "sha256": "9b9abbe0a99006c398f82ec006c801a9b1f2a60245fd1e7af22f62ff568423ed"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_deterministic.json",
+    "size": 10711,
+    "sha256": "d811893d6356bf05a8981ebbf570fe4e4d71ef35da8f190dfe6cec800f11154f"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_environment.json",
+    "size": 1736,
+    "sha256": "0ac0e868579a5057ccae8f0cee2716146269e923b9fb17aa4eb05b11868ed0ef"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_git.diff",
+    "size": 40277,
+    "sha256": "00f071a6bd7b1cb230bf9b20edf22fa8a57bfe55fdd4a8e88da71195d3f49bdd"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_git_diff.json",
+    "size": 338,
+    "sha256": "ba693783240fb5b63087f8f721bd5fbb0001bf123ca0f45476b756184a00c493"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_git_status.json",
+    "size": 661,
+    "sha256": "3525039c91d098d2f072ae95600e133a42e2590791e68f06fff609c15e41e82b"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_manifest.json",
+    "size": 14940,
+    "sha256": "a8766e8e71a0aaba98a9b3da050e1ceca54376851405e21e0667327b7ddc5e9b"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_pip_check.json",
+    "size": 242,
+    "sha256": "41b029172b1a3138646af36d5eac7406425db9be4e4dfa4ed4c5a7382dc049b9"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_source_audit.json",
+    "size": 324705,
+    "sha256": "d5e606edb2b721283050eb14be9843f21f213e82273a15014bc9ba78a8d17c11"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_tests.json",
+    "size": 10412,
+    "sha256": "1f98f36f9ff535861a1c3d937bbe4fe5628a7b4d5c61f2ece6a3b2b3edf866bc"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_tests.txt",
+    "size": 10157,
+    "sha256": "0ba37aa20cfaa0239f21ffe2319a64f0d4cf66a103f3e0e1a03f3adb7b5e69ce"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_tree.txt",
+    "size": 2986,
+    "sha256": "58791abaac7e6e5e583505835a2e28bcf17441aa17c5fb89215956793429f42a"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/cleanup_only.diff",
+    "size": 129524,
+    "sha256": "002003f99d33032f9e8e4023143b35b3f5cbc97ba196691a9aebb305a07a9c18"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/deterministic_snapshot.py",
+    "size": 5399,
+    "sha256": "718fd44157e1628067d9ad6beae4b855a8543e340848aec4a0e6ad9d308eb34d"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/ide_events.json",
+    "size": 1293,
+    "sha256": "798acb1d12a8e576da20e5958dc20a04ee6e1422e2c33bf032be3f8bf1f64261"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/verification.json",
+    "size": 1170,
+    "sha256": "321941a7fae3c6ca76915051790536dfb68b9fa11a571b22faa7144602938188"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/.gitignore",
+    "size": 705,
+    "sha256": "0bef755dfc8cb93d7a91157c517ce8dabcbfa5b50ec64adbffb1f80ddc880a1d"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/pyproject.toml.snapshot",
+    "size": 552,
+    "sha256": "5c376c2e6d9a7ce908b44d7882b0cd7d0dafabe6e9667d8a3d798e250437a31a"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/README.md",
+    "size": 28104,
+    "sha256": "5de266d7a580b46b4c08a5c50a08ba15b9f54015d2430de65d0f90f9488f0435"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/.idea/.gitignore",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/configs/config.py",
+    "size": 156,
+    "sha256": "a8bf198ec56b8946d8dd47ff4e11793c78f6e6534f7f18b100944e8515b32aa6"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/configs/models.yaml",
+    "size": 773,
+    "sha256": "ae0aa0c967efa0dd427bbdab8d5d2c05255c39c4a99b6bba90c88317b9973e15"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/scripts/prepare_vlm_sample.py",
+    "size": 4988,
+    "sha256": "a943ac848a51d75a61a4c9f19e9a98f0bcbb8d8a7eb8c847cbb57d3b0f8008ba"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/cli.py",
+    "size": 7580,
+    "sha256": "df50fd94d57d1e1bd9e5dfe779188fde637a655dd03014c3c251bfe0f3cb7fad"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/comparison.py",
+    "size": 7343,
+    "sha256": "7f78979864b6366146604d0b4928bf381f45c1f5ac011c1c981d63b5eed89c40"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/config.py",
+    "size": 6181,
+    "sha256": "c6bd81189253b4b89d5600ac6def4186e3a04d236235b43b599260aaa9288d68"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/contracts.py",
+    "size": 1391,
+    "sha256": "d46db06d58a1b446dd2f05c9dc840bd9a62ae16e83bc625ae61115544fb0bd0f"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/crop_diagnostic.py",
+    "size": 4975,
+    "sha256": "1865cb0a1afe05f9f65198b0af1ed640009b18673365625b30f6086708e55c68"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/dense.py",
+    "size": 11251,
+    "sha256": "6908fa9dc2a1edfdd27129e91d897710f54b7cfccd9562ef93643932114543b8"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/factory.py",
+    "size": 1325,
+    "sha256": "75e76722f6014edf713c029ea14ba6d8fc1b3236d4d75680e45db9ce201f0dfa"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/regions.py",
+    "size": 9036,
+    "sha256": "e269979c192e73779582861b8740da71b527bbf376685675ca0a9d299b77358c"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/smol_concise.py",
+    "size": 10798,
+    "sha256": "061b4f4ba06f2b5fd5cb3da93e1cce34cb05b1162092d68aff5674f6ae6a7a17"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/smol_extension.py",
+    "size": 13968,
+    "sha256": "a20b04a0b09c13bb98179d0ce3accaf18451fd1a67137b49eda279a55f8427d5"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/vlm_evaluation.py",
+    "size": 16405,
+    "sha256": "371f09aca0d3d2c5ad7bc076641ee901f5b9262bc6529f4a89312bd22aea62ee"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/__init__.py",
+    "size": 44,
+    "sha256": "de264de557487b283fa4866c77d1b061a1059faba9bd9d4bc99b62604a051202"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/stages/caption.py",
+    "size": 11726,
+    "sha256": "f00aa20e96e9d20c24ee03531556b31487fa10cc634f5c58e8c1570f1ee2f139"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/stages/smolvlm.py",
+    "size": 4011,
+    "sha256": "dedf9dfada0aa9e289a2587b7ee85938c8bf7d1e908a038989bbea344a0097c5"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/stages/__init__.py",
+    "size": 44,
+    "sha256": "2d7659e73574e6b6859ba8df4acbbd75e399b0d030f3b4c7478107b58b68e018"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_caption.py",
+    "size": 16439,
+    "sha256": "d249438314caaa6e67254a502997b899283c06e613b397909aa226dc49b9a21c"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_comparison.py",
+    "size": 8954,
+    "sha256": "e26b6090dc7a3b2a6ec640f0387dbbea658c219dc91221e9efe77a2a82d212c7"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_crop_diagnostic.py",
+    "size": 8540,
+    "sha256": "19ce3f677fd7ea73eca118e6e165d63e34aa5a7de18cf1013087e5fd9a47bc15"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_dense.py",
+    "size": 14076,
+    "sha256": "039e6944767642b2ead4b6487a68ec772aeda39c7b57290fdfae5956d3c210e2"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_regions.py",
+    "size": 10634,
+    "sha256": "418cdc32eade8e15dce6596875b3a0982c878e0e6b24905b62b991fdb8d114de"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_smolvlm.py",
+    "size": 6095,
+    "sha256": "13515b1e233f2740814de582c5d9e0a2edc48380555dc59e750c92a561222a77"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_smol_concise.py",
+    "size": 10310,
+    "sha256": "51dcffb57fc8353ca3e8ccfdd26d91b39e3b230b36992d5e21460c23391adf6f"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_smol_extension.py",
+    "size": 11323,
+    "sha256": "fa45782b0789839377fb91db74ae8a6e4217ff55f729558f71e564c2f3bd25c6"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_vlm_evaluation.py",
+    "size": 9264,
+    "sha256": "9be858b6dce85d2a54f509e9a459916205008498a759e90e18c9eb6010aa34f8"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_comparison.json",
+    "size": 66197,
+    "sha256": "f2a1a91d4b9a61e7d994d990ecef8b037c1f777030c52359a696ddae559eba22"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+    "size": 17956,
+    "sha256": "0b4ed009db59bcfb396470570543ba4dee6fc88028c77ee5018eae5776e33a9c"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+    "size": 15598,
+    "sha256": "0e8c3c2220bff3660648028d6451e32b63b50d7bc55477e9ef1effc32ca1605b"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/smol_extended.json",
+    "size": 85853,
+    "sha256": "d2536c3689c92fd0527ab4dd00af5bfbf9ed0558fef3f0431a78e115b535ab80"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/truncation_comparison.md",
+    "size": 10900,
+    "sha256": "9b88e8f7f6f2fddc8cd5031cfe0c853ec48b6739b63ae3f3edabd971cbbce5e3"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/comparison.json",
+    "size": 66857,
+    "sha256": "5caa6e3a8d8a7899735dcce7d46995d295ddabcd5983005692fcdf3a206af8c3"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/florence.json",
+    "size": 19317,
+    "sha256": "c75d20627a0b1362f4514f8dacc38b0f52f0e9418d24a8b525514dcd9d71e3f1"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/frozen_manifest.json",
+    "size": 11150,
+    "sha256": "3d066643489e5766ff3237eb04ea857ad82993b5fde06622d4853f487ca49792"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/models.yaml",
+    "size": 773,
+    "sha256": "ae0aa0c967efa0dd427bbdab8d5d2c05255c39c4a99b6bba90c88317b9973e15"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+    "size": 15842,
+    "sha256": "e79f5e41517d7dde23e6454c226ff725eb500ae577c57985d97887dd60a5a546"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/smolvlm.json",
+    "size": 29423,
+    "sha256": "4a4b8eb3d2b6d9e9383bb35506b7b972beacb2be8a6e8e5eb036428b2e7a9416"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/reports/archive_manifest.json",
+    "size": 17978,
+    "sha256": "8a04295981e205fb5236af69fb77c755f899230badadf27b7db4633df9969b74"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_inventory.md",
+    "size": 21953,
+    "sha256": "4ec8333635cde0083411c93f17bfbee1ec5622215691db7605ed1b478cc9b614"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_summary.md",
+    "size": 9027,
+    "sha256": "495343739106f28759fc917cb91e5dd42f92d7361e7f77684dd72cf74a7a4a41"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_tree_after.txt",
+    "size": 2990,
+    "sha256": "bc71451b082ffc6ca9f084c456a329956cb6b269fa54c0e34ff14342219e9d25"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_tree_before.txt",
+    "size": 2986,
+    "sha256": "58791abaac7e6e5e583505835a2e28bcf17441aa17c5fb89215956793429f42a"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/reports/experiment_usage.md",
+    "size": 17804,
+    "sha256": "f056e8f4a84dd4e85163a4b7d47983d5e35cae90df47586a037e46d702ef44a3"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+    "size": 5487,
+    "sha256": "9155af488d307831d98e7671fecfe83d0d1517249e3da5ecf8cdf3abe7be2a6b"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/scripts/prepare_vlm_sample.py",
+    "size": 609,
+    "sha256": "e9fd62f8726ad2df93de4010d068363a8dac9a7b566a9004ec97dd01210adf3b"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/scripts/experiments/prepare_vlm_sample.py",
+    "size": 4988,
+    "sha256": "a943ac848a51d75a61a4c9f19e9a98f0bcbb8d8a7eb8c847cbb57d3b0f8008ba"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/src/transcreation/comparison.py",
+    "size": 7133,
+    "sha256": "b62bf3c7d54c8c649fbbcfdad8bad6efa459d3cdfd8faba04001cb0ce3d64d85"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/src/transcreation/crop_diagnostic.py",
+    "size": 4975,
+    "sha256": "1865cb0a1afe05f9f65198b0af1ed640009b18673365625b30f6086708e55c68"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/src/transcreation/dense.py",
+    "size": 11250,
+    "sha256": "c77254772503879c747816eb6d0bcdc80cd9cfac8b4a550d071431e87c189aba"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/src/transcreation/regions.py",
+    "size": 9035,
+    "sha256": "5db5908f459aa88a55e03df30925b88df03d3508731e8c3fbd24e3f103e2ff3a"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/src/transcreation/smol_concise.py",
+    "size": 10798,
+    "sha256": "061b4f4ba06f2b5fd5cb3da93e1cce34cb05b1162092d68aff5674f6ae6a7a17"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/src/transcreation/smol_extension.py",
+    "size": 13968,
+    "sha256": "a20b04a0b09c13bb98179d0ce3accaf18451fd1a67137b49eda279a55f8427d5"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/src/transcreation/vlm_evaluation.py",
+    "size": 16405,
+    "sha256": "371f09aca0d3d2c5ad7bc076641ee901f5b9262bc6529f4a89312bd22aea62ee"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/src/transcreation/stages/caption.py",
+    "size": 11726,
+    "sha256": "f00aa20e96e9d20c24ee03531556b31487fa10cc634f5c58e8c1570f1ee2f139"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/tests/test_caption.py",
+    "size": 16439,
+    "sha256": "d249438314caaa6e67254a502997b899283c06e613b397909aa226dc49b9a21c"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/tests/test_comparison.py",
+    "size": 8954,
+    "sha256": "e26b6090dc7a3b2a6ec640f0387dbbea658c219dc91221e9efe77a2a82d212c7"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/tests/test_crop_diagnostic.py",
+    "size": 8540,
+    "sha256": "19ce3f677fd7ea73eca118e6e165d63e34aa5a7de18cf1013087e5fd9a47bc15"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/tests/test_dense.py",
+    "size": 14076,
+    "sha256": "039e6944767642b2ead4b6487a68ec772aeda39c7b57290fdfae5956d3c210e2"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/tests/test_regions.py",
+    "size": 10634,
+    "sha256": "418cdc32eade8e15dce6596875b3a0982c878e0e6b24905b62b991fdb8d114de"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/tests/test_smol_concise.py",
+    "size": 10310,
+    "sha256": "51dcffb57fc8353ca3e8ccfdd26d91b39e3b230b36992d5e21460c23391adf6f"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/tests/test_smol_extension.py",
+    "size": 11323,
+    "sha256": "fa45782b0789839377fb91db74ae8a6e4217ff55f729558f71e564c2f3bd25c6"
+  },
+  {
+    "path": ".local_archive/smolvlm_commitment_20261108/tests/test_vlm_evaluation.py",
+    "size": 9264,
+    "sha256": "9be858b6dce85d2a54f509e9a459916205008498a759e90e18c9eb6010aa34f8"
+  },
+  {
+    "path": ".local_archive/structure_build_check_20261108/lib/main.py",
+    "size": 2831,
+    "sha256": "97e046235ee8b58c2b714e5ab0a690933e50c75149013734c92d319e8649ac5e"
+  },
+  {
+    "path": ".local_archive/structure_build_check_20261108/lib/captioning/inference.py",
+    "size": 5328,
+    "sha256": "b26bfff78398944cb8b63b2fd97dfd66fb5ba8c66cbad93211f544723a25c817"
+  },
+  {
+    "path": ".local_archive/structure_build_check_20261108/lib/captioning/model.py",
+    "size": 4075,
+    "sha256": "f9693bb106f8a6813dd94d6d29373b4c0c02f4ac83aa811163e19253957c0211"
+  },
+  {
+    "path": ".local_archive/structure_build_check_20261108/lib/captioning/model_setup.py",
+    "size": 1054,
+    "sha256": "01b7ef92529aca3c78ee7bcc44b775aaa65a44c63cb612974349a7a66b296e22"
+  },
+  {
+    "path": ".local_archive/structure_build_check_20261108/lib/captioning/results.py",
+    "size": 1389,
+    "sha256": "5ff3ef0ffca0b6f949d9a990cd5a5ab85049f5af1da43fe35c9d7d1b10a38395"
+  },
+  {
+    "path": ".local_archive/structure_build_check_20261108/lib/captioning/__init__.py",
+    "size": 49,
+    "sha256": "e1ee5de9199a044140b442414183a786ce62a3709a0405b53e8ea814265fc2da"
+  },
+  {
+    "path": ".local_archive/structure_build_check_20261108/lib/configs/config.py",
+    "size": 4669,
+    "sha256": "bfc103c34198e42b2bf5fe05fd3d72e274d861326ed1f350f813b05ecb9ec853"
+  },
+  {
+    "path": ".local_archive/structure_build_check_20261108/lib/configs/models.yaml",
+    "size": 259,
+    "sha256": "553aa1fc066857b5f71d1dbb7c14d47b0e0664c85ffdfb6c1227aec95ff18e91"
+  },
+  {
+    "path": ".local_archive/structure_build_check_20261108/lib/configs/__init__.py",
+    "size": 54,
+    "sha256": "fc33a8976025ecaefb80cf17a4a2bdd835b44d0848c76edba4454fb86161ce5d"
+  },
+  {
+    "path": "README.md",
+    "size": 21402,
+    "sha256": "535638a1c733f64c70d782b902e86c65149a4c1802344a724800ae0c4eb4d822"
+  },
+  {
+    "path": "pyproject.toml",
+    "size": 504,
+    "sha256": "aec09bf1e47999b114679ae7264bd7580501e5158afc81cf5f95c26e4cd934cb"
+  },
+  {
+    "path": ".gitignore",
+    "size": 946,
+    "sha256": "a5aa97c548a34141c1297dbc0e8ae0107856d477f87543285da88b433b6d9fef"
+  },
+  {
+    "path": "sayan.md",
+    "size": 3861,
+    "sha256": "ccada75a5e5b1ba5df491ae4845a0fe3e4133e6a373dd9ffd79d9780d49561a6"
+  }
+]
