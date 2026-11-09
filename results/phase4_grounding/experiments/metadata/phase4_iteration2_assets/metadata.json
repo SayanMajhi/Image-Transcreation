@@ -1,0 +1,58 @@
+{
+  "created_at_utc": "2026-11-09T07:02:22.229781+00:00",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "interpreter": ".venv/Scripts/python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.15.0+cu132",
+    "transformers": "4.57.6",
+    "Pillow": "13.0.0",
+    "PyYAML": "6.0.3",
+    "huggingface-hub": "0.36.2"
+  },
+  "same_packages_as_iteration1": true,
+  "nvidia_smi_before": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 1506 MiB used, driver 592.00",
+  "ollama_ps_before": {
+    "models": []
+  },
+  "negative_control_pre_inference_observation": "Original bicycle image visually inspected before inference: no recognizable airplane or plausible aircraft object visible. Graffiti is present; not all abstract marks can be assigned meaning.",
+  "command": "$env:PYTHONPATH = (Resolve-Path .\\src).Path; .\\.venv\\Scripts\\python.exe -B scripts/evaluate_grounding_iteration2.py --out reports/phase4_iteration2_assets/runs",
+  "initial_git_status": " M README.md\n M reports/README.md\n M src/transcreation/cli.py\n M src/transcreation/config.py\n M src/transcreation/contracts.py\n M src/transcreation/stages/grounding.py\n?? configs/grounding.yaml\n?? reports/experimentLLM.md\n?? reports/phase4_grounding_assets/\n?? reports/phase4_grounding_review.md\n?? reports/phase4_iteration2_assets/\n?? reports/phase4_review_package.zip\n?? scripts/evaluate_grounding_iteration2.py\n?? tests/test_grounding.py\n",
+  "application_changes_required": false,
+  "source_provenance": {
+    "A_bicycle": {
+      "repository_input": "data/vlm_collection/scene_06.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0"
+    },
+    "B_oil_lamp": {
+      "repository_input": "data/vlm_collection/scene_02.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diwali_Oil_lamps_Darjeeling.jpg",
+      "author": "Benoy",
+      "license": "CC BY-SA 3.0"
+    },
+    "C_incense_burner": {
+      "repository_input": "data/sample_images/durga.jpg",
+      "source": "user-provided project image",
+      "author": null,
+      "license": null,
+      "use": "local research and mentor review; external publication permission unverified"
+    }
+  },
+  "nvidia_smi_after": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 1145 MiB used, driver 592.00",
+  "checkpoint_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "cuda_runtime": "13.2",
+  "precision": "float32",
+  "batch_size": 1,
+  "seed": 42,
+  "text_threshold": 0.25,
+  "disable_custom_kernels": true,
+  "model_reuse": "first call loaded once; same model object retained across all 10 calls (8 matrix, 1 negative control, 1 unchanged baseline replay)",
+  "actual_run_command": ".\\.venv\\Scripts\\python.exe -B scripts/evaluate_grounding_iteration2.py --out reports/phase4_iteration2_assets/runs",
+  "no_smolvlm_or_qwen_inference": true,
+  "negative_pre_inference_note_location": "runs/experiment_plan.json; written before model loading",
+  "timing_notes": "one timing sample per condition, fixed order, no separate warm-up run, synchronized forward timings; rendering measured separately; high-threshold and low-threshold speeds confounded by warm-up/order",
+  "review_notes": "Assistant subjective visual assessments are separate from blank human worksheet fields; no ground-truth annotations or SAM masks."
+}

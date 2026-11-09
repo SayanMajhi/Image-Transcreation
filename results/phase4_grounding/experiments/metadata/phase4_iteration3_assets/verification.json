@@ -1,0 +1,40 @@
+{
+  "existing_files_preserved": 497,
+  "examples": [
+    {
+      "example": "A_bicycle",
+      "decision": "PENDING",
+      "all_bound_hashes_valid": true,
+      "input_copies_byte_identical": true,
+      "predictions_retained": 1,
+      "pending_candidate_release_blocked": true
+    },
+    {
+      "example": "B_airplane_negative",
+      "decision": "PENDING",
+      "all_bound_hashes_valid": true,
+      "input_copies_byte_identical": true,
+      "predictions_retained": 1,
+      "pending_candidate_release_blocked": true
+    },
+    {
+      "example": "C_oil_lamp_multiple",
+      "decision": "PENDING",
+      "all_bound_hashes_valid": true,
+      "input_copies_byte_identical": true,
+      "predictions_retained": 8,
+      "pending_candidate_release_blocked": true
+    },
+    {
+      "example": "D_vessels_unresolved",
+      "decision": "PENDING",
+      "all_bound_hashes_valid": true,
+      "input_copies_byte_identical": true,
+      "predictions_retained": 7,
+      "pending_candidate_release_blocked": true
+    }
+  ],
+  "real_human_acceptance_records": 0,
+  "model_calls": 0,
+  "new_dependencies": 0
+}

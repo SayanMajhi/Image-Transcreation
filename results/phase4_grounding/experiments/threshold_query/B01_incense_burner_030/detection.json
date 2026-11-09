@@ -1,0 +1,176 @@
+{
+  "image_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+  "original_dimensions": [
+    980,
+    692
+  ],
+  "source_phrase": "incense burner",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "resolved_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        432.9006652832031,
+        318.7935485839844,
+        516.6528930664062,
+        390.9607238769531
+      ],
+      "score": 0.416083961725235,
+      "label": "incense burner"
+    },
+    {
+      "box": [
+        0.5056810975074768,
+        216.00436401367188,
+        95.62265014648438,
+        294.68292236328125
+      ],
+      "score": 0.42385584115982056,
+      "label": "incense burner"
+    },
+    {
+      "box": [
+        141.2554931640625,
+        279.7826843261719,
+        221.29359436035156,
+        346.8909606933594
+      ],
+      "score": 0.4130173921585083,
+      "label": "incense burner"
+    },
+    {
+      "box": [
+        752.6505126953125,
+        250.71444702148438,
+        846.41845703125,
+        345.23577880859375
+      ],
+      "score": 0.37217119336128235,
+      "label": "incense burner"
+    },
+    {
+      "box": [
+        283.3313903808594,
+        315.6833190917969,
+        365.1260986328125,
+        380.8550720214844
+      ],
+      "score": 0.3860558569431305,
+      "label": "incense burner"
+    }
+  ],
+  "settings": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42,
+    "effective_device": "cuda",
+    "normalized_prompt": "incense burner.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "disable_custom_kernels": true,
+    "inference_mode": true,
+    "eval": true,
+    "coordinate_format": "xyxy_original_pixels",
+    "postprocess_box_argument": "threshold",
+    "target_sizes": [
+      [
+        692,
+        980
+      ]
+    ],
+    "image_processor": {
+      "_processor_class": "GroundingDinoProcessor",
+      "image_processor_type": "GroundingDinoImageProcessor",
+      "format": "coco_detection",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1333,
+        "shortest_edge": 800
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "do_convert_annotations": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": null
+    }
+  },
+  "timing": {
+    "load_seconds": 1.8999999156221747e-06,
+    "preprocess_seconds": 0.06731080000463407,
+    "inference_seconds": 0.46828200000163633,
+    "postprocess_seconds": 0.011702600007993169,
+    "total_seconds": 0.5499156000005314
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 692084224,
+    "inference_peak_allocated_bytes": 1901925888,
+    "device": "cuda"
+  },
+  "raw_predictions": {
+    "boxes": [
+      [
+        432.9006652832031,
+        318.7935485839844,
+        516.6528930664062,
+        390.9607238769531
+      ],
+      [
+        0.5056810975074768,
+        216.00436401367188,
+        95.62265014648438,
+        294.68292236328125
+      ],
+      [
+        141.2554931640625,
+        279.7826843261719,
+        221.29359436035156,
+        346.8909606933594
+      ],
+      [
+        752.6505126953125,
+        250.71444702148438,
+        846.41845703125,
+        345.23577880859375
+      ],
+      [
+        283.3313903808594,
+        315.6833190917969,
+        365.1260986328125,
+        380.8550720214844
+      ]
+    ],
+    "scores": [
+      0.416083961725235,
+      0.42385584115982056,
+      0.4130173921585083,
+      0.37217119336128235,
+      0.3860558569431305
+    ],
+    "text_labels": [
+      "incense burner",
+      "incense burner",
+      "incense burner",
+      "incense burner",
+      "incense burner"
+    ]
+  },
+  "observations": [],
+  "research_only": true
+}

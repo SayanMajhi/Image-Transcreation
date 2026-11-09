@@ -1,148 +1,100 @@
-# Culture-aware image transcreation
+# Culture-Aware Image Transcreation
 
-The project describes an image with **SmolVLM-500M**, then uses **Qwen2.5-3B through
-local Ollama** to draft cultural adaptations. Deterministic validation checks the
-planner output. It does not edit images.
+An undergraduate research project investigating culturally contextual image adaptation while preserving the original scene's activity, people and relationships.
 
-Implemented: single-image captioning, a typed cultural planner, candidate quarantine,
-raw/final audit records, mocked tests, and reproducible planner evaluation.
-Grounding DINO is next; grounding, segmentation, inpainting, and complete transcreation
-are not implemented. BLIP and Florence-2 are retired research baselines.
+The project implements independent captioning, planning, localization, segmentation and review stages. **It does not yet perform image editing or complete end-to-end transcreation.** Phase 6 diffusion inpainting has not started.
+
+## Implemented pipeline
+
+```text
+Image -> SmolVLM caption -> Qwen cultural draft -> deterministic validation
+Independent research: Grounding DINO box -> explicit selection -> SAM masks -> mask review
+```
+
+- **SmolVLM-500M:** captioning with completion/truncation metadata.
+- **Qwen2.5-3B / Ollama:** structured cultural suggestions, with raw/final audit records.
+- **Validation:** PROPOSE remains conditional; REVIEW quarantines candidates; ABSTAIN requests no change. None authorizes editing.
+- **Grounding DINO Tiny:** original-pixel bounding boxes and explicit box-review records.
+- **SAM ViT-Base:** box and optional positive/negative point prompts; all three candidate masks retained.
+- **Mask review:** hash-bound selection for a specified segmentation test only. No genuine human-approved mask is recorded.
+
+Python 3.11, PyTorch, Transformers 4.57.6, Pillow and PyYAML. Recorded experiments used an RTX 3050 Laptop GPU with 4 GB VRAM. Run model stages sequentially.
 
 ## Structure
 
 ```text
-MiniProject/
-|-- src/transcreation/
-|   |-- cli.py                 caption and plan commands
-|   |-- config.py              validated caption/planner settings
-|   |-- contracts.py           typed inputs, drafts, and results
-|   |-- pipeline.py            captioning entry point and device selection
-|   `-- stages/
-|       |-- caption.py         SmolVLM loading, prompts, generation, measurements
-|       |-- planning.py        deterministic validation and mock planner
-|       `-- ollama_planner.py  local HTTP adapter and audit records
-|-- configs/                   models.yaml and planner.yaml
-|-- tests/                     offline tests and planning fixtures
-|-- scripts/evaluate_planner.py reproducible real-model evaluation utility
-|-- data/                      source images and datasets
-|-- outputs/                   generated captions/plans and review packages
-|-- reports/                   findings, saved experiment evidence, cleanup review
-|-- .local_archive/            historical research, ignored by Git
-`-- pyproject.toml             installation, dependencies, console entry point
+configs/                   model/runtime settings, including sam.yaml
+src/transcreation/         working application, contracts and validation
+scripts/                   independent SAM, evaluation and review commands
+tests/                     offline regression tests and fixtures
+data/                      source images; mostly local and Git-ignored
+outputs/                   new generated runs; Git-ignored
+reports/                   exactly five final phase reports
+results/phase2_vlm/         actual caption/comparison evidence
+results/phase3_llm/         actual raw/validated planner trials
+results/phase4_grounding/   detections, comparisons and box reviews
+results/phase5_segmentation/ masks, point protocols and mask reviews
+.local_archive/            historical development records and cleanup audits
 ```
 
-Python package marker files remain in place. Three existing docstring-only future
-stage modules remain for path compatibility and are flagged in the cleanup review;
-they are not implemented stages. SmolVLM lives in `caption.py`; no separate
-`smolvlm.py` wrapper is required. Local environments, caches, and editor files are
-separate from application code.
+[Relocation manifest](results/relocation_manifest.json) maps recorded old paths to current evidence. Saved model JSON remains byte-identical. Historical iteration documents and ZIPs are archived; the active reading path uses reports and results.
 
-## Installation
+## Install
 
-Use Python 3.11 and run commands from the project root. If no environment exists:
+From the project root:
 
 ```powershell
 py -3.11 -m venv .venv
-```
-
-Install or refresh the project:
-
-```powershell
 .\.venv\Scripts\python.exe -m pip install -e .
+$env:PYTHONPATH = (Resolve-Path .\src).Path
 ```
 
-This registers `transcreate` as `transcreation.cli:main`. An older local launcher
-may still reference the retired `main` module; reinstalling refreshes it. The source
-commands below also work without changing generated installation metadata.
+Use a CUDA-compatible PyTorch build for GPU work. Pinned Hugging Face weights download on first uncached use. Planning requires local Ollama with `qwen2.5:3b` installed. Dataset inputs are not all committed; result bundles and manifests record their identity and provenance.
 
-## Run captioning and planning
+## Run
+
+Commands are independent stages. Use fresh output paths; the planner reads a typed planning input, not the whole caption audit JSON.
 
 ```powershell
-$env:PYTHONPATH = (Resolve-Path .\src).Path
 .\.venv\Scripts\python.exe -B -m transcreation.cli caption --image data/sample_images/durga.jpg --out outputs/caption_new.json
 .\.venv\Scripts\python.exe -B -m transcreation.cli plan --input tests/fixtures/planning/01_japanese_food.json --out outputs/plan_new.json
+.\.venv\Scripts\python.exe -B -m transcreation.cli ground --image data/vlm_collection/scene_06.jpg --phrase bicycle --out outputs/grounding_new
+.\.venv\Scripts\python.exe -B -m scripts.segment_sam --image data/vlm_collection/scene_06.jpg --detection results/phase4_grounding/experiments/threshold_query/R01_bicycle_replay/detection.json --prediction-index 0 --research-only --note "Explicit bicycle segmentation test" --out outputs/sam_new
 ```
 
-After editable installation, `transcreate caption ...` and `transcreate plan ...`
-provide the same commands. Use `--help`, `caption --help`, or `plan --help` for flags.
-Use fresh output names: planner records are never overwritten.
+SAM accepts optional source-bound `--points` JSON. `transcreate caption|plan|ground` is also available after installation. Use each command's `--help` for options.
 
-Captioning uses [configs/models.yaml](configs/models.yaml). Planning uses
-[configs/planner.yaml](configs/planner.yaml), with model, local endpoint, timeout,
-keep-alive, seed, and generation options. CLI overrides include `--model`,
-`--endpoint`, and `--timeout` for planning. Do not change settings when reproducing
-a recorded experiment without recording that change.
+Prepare review evidence without inference:
 
-Captioning downloads weights if uncached. Planning requires Ollama running with
-`qwen2.5:3b` installed (`ollama pull qwen2.5:3b` if needed); the application does not
-silently download the LLM or fabricate a plan when Ollama fails.
+```powershell
+.\.venv\Scripts\python.exe -B -m scripts.review_grounding prepare --image data/vlm_collection/scene_06.jpg --detection results/phase4_grounding/experiments/threshold_query/R01_bicycle_replay/detection.json --out outputs/box_review_new
+.\.venv\Scripts\python.exe -B -m scripts.review_mask prepare --segmentation results/phase5_segmentation/experiments/box_points/B_oil_lamp/segmentation.json --candidates 0 1 --target "Visible clay bowl only; exclude flame" --experiment "Controlled segmentation test; no editing" --out outputs/mask_review_new
+```
 
-## How the modules communicate
+Preparation creates PENDING requests. A real reviewer must inspect the original, mask and overlay before submitting a named decision through `scripts.review_mask decide`. Acceptance is restricted to a segmentation experiment and does not authorize cultural editing.
 
-The commands are separate stages, not an automatic end-to-end workflow:
-
-1. Captioning returns text, model/settings metadata, and completion flags.
-2. `PlanningInput.from_caption(caption_result, target_culture=...)` converts a typed
-   caption result into planning input. It maps completion flags and never creates
-   verified objects. Users supply the target culture, optional source context,
-   instructions, and independently checked object records.
-3. The planner CLI reads that planning-input JSON, not the full caption audit JSON.
-   [Planning fixtures](tests/fixtures/planning/) demonstrate the input shape.
-4. Ollama receives fixed system instructions plus separate input data. The response
-   is parsed, checked against the contracts, and passed through validation.
-
-Caption claims remain unverified. Source culture describes the original context;
-target culture is the requested context. A cultural difference alone does not
-require an edit. Run the stages sequentially on a 4 GB GPU; the planner requests
-unloading and records cleanup failures rather than assuming both models fit.
-
-## Validation and audit records
-
-- `PROPOSE`: a conditional draft, never permission to modify an image.
-- `REVIEW`: unresolved facts, invalid candidates, truncation, or preservation concerns;
-  the final candidate list is empty.
-- `ABSTAIN`: no image change; final candidates and edit-verification checks are empty.
-
-Source IDs must match user-verified originals. Placeholders, scene-length localization,
-source/replacement mix-ups, and detectable preservation conflicts are checked.
-Free-text user constraints are handled conservatively: their compatibility with an
-edit requires human review. Text checks do not prove cultural or visual correctness.
-
-Audit JSON keeps `response` and `raw_planning_result` separate from `planning_result`.
-`validation.issues` explains decisions; `rejected_candidates` retains quarantined
-proposals, and `raw_schema_valid` distinguishes raw from final validity.
-`automatically_authorized` is always false. A coded empty proposal can resolve to
-no-action abstention; it never produces an invented edit. Malformed JSON, top-level
-schema failures, timeouts, and connection failures remain explicit errors.
-
-## Tests and reproducible evaluation
-
-Offline tests do not need running models or model downloads:
+## Tests
 
 ```powershell
 $env:PYTHONPATH = (Resolve-Path .\src).Path
+$env:HF_HUB_OFFLINE = "1"
 .\.venv\Scripts\python.exe -B -m unittest discover -s tests -v
 ```
 
-Real evaluation is a separate, intentional operation requiring Ollama:
+The offline suite uses mocks/synthetic fixtures and does not download model weights.
 
-```powershell
-.\.venv\Scripts\python.exe -B scripts/evaluate_planner.py --out reports/new_planner_run
-```
+## Reports and experimental results
 
-Use a new directory. The utility records a standalone probe, six fixtures, exact
-prompts/settings/model digest, raw/final output, timings, token use, and memory
-observations. This is not an automatic cultural-correctness benchmark.
+| Phase | Final report | Actual evidence |
+| --- | --- | --- |
+| 1 | [Research and architecture](reports/phase1_research.md) | Architecture; separate original Phase 1 experiment evidence unavailable |
+| 2 | [VLM selection](reports/phase2_vlm.md) | [Captions and measurements](results/phase2_vlm/summary.md) |
+| 3 | [Cultural planning](reports/phase3_llm.md) | [Raw/final plans and failures](results/phase3_llm/summary.md) |
+| 4 | [Localization](reports/phase4_grounding.md) | [Detections, negative control and review](results/phase4_grounding/summary.md) |
+| 5 | [Segmentation](reports/phase5_segmentation.md) | [Masks, points and pending review](results/phase5_segmentation/summary.md) |
 
-## Reports and evidence
+## Limitations
 
-Start with the [report index](reports/README.md), including the latest planner
-validation, VLM findings, and [cleanup review](reports/repository_cleanup_review.md).
-Existing inference artifacts remain in `outputs/`; experiment bundles remain at
-their recorded paths in `reports/` to preserve links and provenance.
+Captions can hallucinate or truncate; text checks cannot prove cultural correctness. Grounding mislabeled a bicycle as an airplane in a negative control. SAM still loses bicycle spokes/rims or includes background. Lamp review is bowl-only and PENDING. No independent box/mask ground truth supports accuracy claims.
 
-Historical VLM raw outputs, token-ceiling/concise-prompt experiments, and retired
-code are in `.local_archive/`. That folder, datasets, and outputs are Git-ignored.
-No independent backup of the local archive was verified during cleanup; Git history
-alone does not protect its untracked contents. Preserve/backup these files separately.
+Historical text/provenance has a [nonignored preservation copy](results/historical_text_provenance.zip), but no independent external backup is verified. Original images retain attribution/license restrictions; see result summaries. Inspect evidence and obtain mentor review before Phase 6.

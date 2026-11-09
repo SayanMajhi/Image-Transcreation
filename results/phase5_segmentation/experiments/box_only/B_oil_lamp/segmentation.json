@@ -1,0 +1,220 @@
+{
+  "request": {
+    "source_image": "data\\vlm_collection\\scene_02.jpg",
+    "image_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+    "original_dimensions": [
+      1280,
+      842
+    ],
+    "detection_file": "reports\\phase4_iteration2_assets\\runs\\A02_oil_lamp_020\\detection.json",
+    "detection_sha256": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+    "prediction_index": 2,
+    "selected_detection": {
+      "box": [
+        631.4442138671875,
+        248.13294982910156,
+        889.331787109375,
+        443.25518798828125
+      ],
+      "score": 0.31422239542007446,
+      "label": "oil lamp"
+    },
+    "source_phrase": "oil lamp",
+    "grounding_model_id": "IDEA-Research/grounding-dino-tiny",
+    "grounding_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "selection_status": "RESEARCH_ONLY",
+    "selection_note": "Manually chosen zero-based prediction index 2 from saved visual evidence: the central burning lamp bowl and flame, not an automatic highest-confidence selection; no human approval claimed.",
+    "review_file": null,
+    "review_sha256": null,
+    "image_edit_authorized": false,
+    "cultural_transformation_authorized": false
+  },
+  "model_id": "facebook/sam-vit-base",
+  "resolved_revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+  "status": "SEGMENTED",
+  "masks": [
+    {
+      "index": 0,
+      "filename": "mask_0.png",
+      "dimensions": [
+        1280,
+        842
+      ],
+      "sam_score": 0.9646106362342834,
+      "foreground_pixels": 33862,
+      "mask_box": [
+        635,
+        253,
+        888,
+        444
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 1,
+      "filename": "mask_1.png",
+      "dimensions": [
+        1280,
+        842
+      ],
+      "sam_score": 0.9569181799888611,
+      "foreground_pixels": 30373,
+      "mask_box": [
+        634,
+        253,
+        888,
+        442
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 2,
+      "filename": "mask_2.png",
+      "dimensions": [
+        1280,
+        842
+      ],
+      "sam_score": 0.9472739696502686,
+      "foreground_pixels": 27917,
+      "mask_box": [
+        634,
+        253,
+        888,
+        442
+      ],
+      "status": "VALID"
+    }
+  ],
+  "visualization_mask_index": 0,
+  "settings": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "precision": "float32",
+    "seed": 42,
+    "multimask_output": true,
+    "mask_threshold": 0.0,
+    "effective_device": "cuda",
+    "batch_size": 1,
+    "eval": true,
+    "inference_mode": true,
+    "postprocess_device": "cpu",
+    "attention_backend": "sdpa",
+    "processor": {
+      "_processor_class": "SamProcessor",
+      "image_processor_type": "SamImageProcessor",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1024
+      },
+      "mask_size": {
+        "longest_edge": 256
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": {
+        "height": 1024,
+        "width": 1024
+      },
+      "mask_pad_size": {
+        "height": 256,
+        "width": 256
+      },
+      "do_convert_rgb": true
+    },
+    "api_shapes": {
+      "input_boxes": [
+        1,
+        1,
+        4
+      ],
+      "transformed_input_boxes": [
+        [
+          [
+            505.15537109375003,
+            198.62423774918582,
+            711.4654296875001,
+            354.8147229264864
+          ]
+        ]
+      ],
+      "original_sizes": [
+        [
+          842,
+          1280
+        ]
+      ],
+      "reshaped_input_sizes": [
+        [
+          674,
+          1024
+        ]
+      ],
+      "pred_masks": [
+        1,
+        1,
+        3,
+        256,
+        256
+      ],
+      "iou_scores": [
+        1,
+        1,
+        3
+      ],
+      "restored_masks": [
+        1,
+        3,
+        842,
+        1280
+      ]
+    },
+    "binary_values": [
+      0,
+      255
+    ],
+    "mask_box_upper_bounds": "exclusive",
+    "source_image_copy": "original.jpg",
+    "source_detection_copy": "source_detection.json",
+    "visualization_selection": "highest finite SAM score among nonempty candidates; no human mask approval"
+  },
+  "timing": {
+    "load_seconds": 7.928846399998292,
+    "preprocess_seconds": 0.05082299999776296,
+    "inference_seconds": 0.9839937000069767,
+    "postprocess_and_mask_save_seconds": 0.05523209999955725,
+    "stage_seconds": 9.049325100000715,
+    "visualization_seconds": 0.9855588000064017
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 374956544,
+    "effective_device": "cuda",
+    "peak_allocated_cuda_bytes": 2065262592
+  },
+  "observations": [
+    {
+      "code": "RESEARCH_SCOPE",
+      "message": "Segmentation test only; SAM scores are not measured accuracy and no image editing is authorized."
+    },
+    {
+      "code": "NO_CONFIRMED_HUMAN_APPROVAL",
+      "message": "Manually chosen zero-based prediction index 2 from saved visual evidence: the central burning lamp bowl and flame, not an automatic highest-confidence selection; no human approval claimed."
+    }
+  ],
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false
+}

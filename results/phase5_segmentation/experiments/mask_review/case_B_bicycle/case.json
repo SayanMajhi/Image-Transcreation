@@ -1,0 +1,19 @@
+{
+  "record_type": "mask_review_case_manifest",
+  "preparation_status": "NEEDS_REVIEW",
+  "status_origin": "preparation triage, not a human decision",
+  "case_note": "Preparation triage only: known background leakage, missing thin structures and incomplete wheel rims/spokes; no successful human-approved bicycle mask exists.",
+  "human_decision": "PENDING",
+  "target_definition": "Physical bicycle parts including frame, handlebars, saddle, rims, tires and visible spokes; exclude wall, road and background through wheels.",
+  "controlled_experiment": "Controlled bicycle physical-parts segmentation-quality review; no image modification.",
+  "candidate_indices": [
+    0,
+    1,
+    2
+  ],
+  "requests": [
+    "pending_0.json",
+    "pending_1.json",
+    "pending_2.json"
+  ]
+}

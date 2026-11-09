@@ -158,3 +158,77 @@ def load_planner_config(path: Path) -> PlannerConfig:
         return PlannerConfig(**values)
     except (TypeError, yaml.YAMLError) as exc:
         raise ValueError(f"invalid planner configuration: {exc}") from exc
+
+
+@dataclass(frozen=True)
+class GroundingConfig:
+    """Independent, batch-one Grounding DINO experiment settings."""
+
+    model_id: str = "IDEA-Research/grounding-dino-tiny"
+    revision: str = "a2bb814dd30d776dcf7e30523b00659f4f141c71"
+    device: str = "cuda"
+    cpu_fallback: bool = True
+    box_threshold: float = 0.30
+    text_threshold: float = 0.25
+    seed: int = 42
+
+    def __post_init__(self) -> None:
+        if self.model_id != "IDEA-Research/grounding-dino-tiny":
+            raise ValueError("this milestone supports only Grounding DINO Tiny")
+        if not isinstance(self.revision, str) or len(self.revision) != 40 or any(
+            ch not in "0123456789abcdef" for ch in self.revision
+        ):
+            raise ValueError("grounding revision must be a pinned 40-character commit")
+        if self.device not in ("cuda", "cpu") or type(self.cpu_fallback) is not bool:
+            raise ValueError("grounding requires cuda/cpu and a boolean cpu_fallback")
+        for name in ("box_threshold", "text_threshold"):
+            value = getattr(self, name)
+            if type(value) not in (float, int) or not math.isfinite(value) or not 0 <= value <= 1:
+                raise ValueError(f"{name} must be finite and between 0 and 1")
+        if type(self.seed) is not int or not 0 <= self.seed < 2**32:
+            raise ValueError("grounding seed must be an integer in [0, 2**32)")
+
+
+def load_grounding_config(path: Path) -> GroundingConfig:
+    try:
+        values = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if not isinstance(values, dict):
+            raise ValueError("grounding configuration must be an object")
+        return GroundingConfig(**values)
+    except (TypeError, yaml.YAMLError) as exc:
+        raise ValueError(f"invalid grounding configuration: {exc}") from exc
+
+
+@dataclass(frozen=True)
+class SamConfig:
+    model_id: str = "facebook/sam-vit-base"
+    revision: str = "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f"
+    device: str = "cuda"
+    cpu_fallback: bool = True
+    precision: str = "float32"
+    seed: int = 42
+    multimask_output: bool = True
+    mask_threshold: float = 0.0
+
+    def __post_init__(self) -> None:
+        if self.model_id != "facebook/sam-vit-base" or self.precision != "float32":
+            raise ValueError("this milestone uses SAM ViT Base in float32")
+        if not isinstance(self.revision, str) or len(self.revision) != 40 or any(c not in "0123456789abcdef" for c in self.revision):
+            raise ValueError("SAM revision must be a pinned commit")
+        if self.device not in ("cpu", "cuda") or type(self.cpu_fallback) is not bool:
+            raise ValueError("SAM requires cpu/cuda and a boolean fallback setting")
+        if type(self.seed) is not int or not 0 <= self.seed < 2**32:
+            raise ValueError("SAM seed must be an integer in [0, 2**32)")
+        if (self.multimask_output is not True or type(self.mask_threshold) not in (int, float)
+                or self.mask_threshold != 0.0):
+            raise ValueError("retain all SAM candidates using the initial zero-logit mask threshold")
+
+
+def load_sam_config(path: Path) -> SamConfig:
+    try:
+        values = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if not isinstance(values, dict):
+            raise ValueError("SAM configuration must be an object")
+        return SamConfig(**values)
+    except (TypeError, yaml.YAMLError) as exc:
+        raise ValueError(f"invalid SAM configuration: {exc}") from exc

@@ -1,0 +1,48 @@
+{
+  "pending_requests": [
+    {
+      "case": "case_A_oil_lamp",
+      "request": "pending_0.json",
+      "candidate_index": 0,
+      "decision": "PENDING",
+      "all_hashes_contracts_and_png_checks_valid": true,
+      "candidate_release_blocked": true
+    },
+    {
+      "case": "case_A_oil_lamp",
+      "request": "pending_1.json",
+      "candidate_index": 1,
+      "decision": "PENDING",
+      "all_hashes_contracts_and_png_checks_valid": true,
+      "candidate_release_blocked": true
+    },
+    {
+      "case": "case_B_bicycle",
+      "request": "pending_0.json",
+      "candidate_index": 0,
+      "decision": "PENDING",
+      "all_hashes_contracts_and_png_checks_valid": true,
+      "candidate_release_blocked": true
+    },
+    {
+      "case": "case_B_bicycle",
+      "request": "pending_1.json",
+      "candidate_index": 1,
+      "decision": "PENDING",
+      "all_hashes_contracts_and_png_checks_valid": true,
+      "candidate_release_blocked": true
+    },
+    {
+      "case": "case_B_bicycle",
+      "request": "pending_2.json",
+      "candidate_index": 2,
+      "decision": "PENDING",
+      "all_hashes_contracts_and_png_checks_valid": true,
+      "candidate_release_blocked": true
+    }
+  ],
+  "actual_human_acceptances": 0,
+  "bicycle_needs_review_is_triage_not_human_verdict": true,
+  "existing_files_unchanged": 699,
+  "new_model_calls": 0
+}

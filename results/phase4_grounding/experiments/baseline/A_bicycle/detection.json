@@ -1,0 +1,104 @@
+{
+  "image_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+  "original_dimensions": [
+    1280,
+    966
+  ],
+  "source_phrase": "bicycle",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "resolved_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        441.8973388671875,
+        581.3589477539062,
+        953.31396484375,
+        924.9127197265625
+      ],
+      "score": 0.9432805180549622,
+      "label": "bicycle"
+    }
+  ],
+  "settings": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42,
+    "effective_device": "cuda",
+    "normalized_prompt": "bicycle.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "disable_custom_kernels": true,
+    "inference_mode": true,
+    "eval": true,
+    "coordinate_format": "xyxy_original_pixels",
+    "postprocess_box_argument": "threshold",
+    "target_sizes": [
+      [
+        966,
+        1280
+      ]
+    ],
+    "image_processor": {
+      "_processor_class": "GroundingDinoProcessor",
+      "image_processor_type": "GroundingDinoImageProcessor",
+      "format": "coco_detection",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1333,
+        "shortest_edge": 800
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "do_convert_annotations": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": null
+    }
+  },
+  "timing": {
+    "load_seconds": 12.574197400012054,
+    "preprocess_seconds": 0.06427519999851938,
+    "inference_seconds": 1.5987100999918766,
+    "postprocess_seconds": 0.017099899996537715,
+    "total_seconds": 14.282799799999339
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 692084224,
+    "inference_peak_allocated_bytes": 1824719360,
+    "device": "cuda"
+  },
+  "raw_predictions": {
+    "boxes": [
+      [
+        441.8973388671875,
+        581.3589477539062,
+        953.31396484375,
+        924.9127197265625
+      ]
+    ],
+    "scores": [
+      0.9432805180549622
+    ],
+    "text_labels": [
+      "bicycle"
+    ]
+  },
+  "observations": [],
+  "research_only": true
+}

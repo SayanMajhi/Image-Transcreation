@@ -1,0 +1,8 @@
+model_id: facebook/sam-vit-base
+revision: 70c1a07f894ebb5b307fd9eaaee97b9dfc16068f
+device: cuda
+cpu_fallback: true
+precision: float32
+seed: 42
+multimask_output: true
+mask_threshold: 0.0

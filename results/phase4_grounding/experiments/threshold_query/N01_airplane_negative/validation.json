@@ -1,0 +1,17 @@
+{
+  "status": "DETECTED",
+  "valid_predictions": [
+    {
+      "box": [
+        441.4779052734375,
+        581.3060913085938,
+        952.7521362304688,
+        924.2832641601562
+      ],
+      "score": 0.4191797375679016,
+      "label": "airplane"
+    }
+  ],
+  "invalid_predictions": [],
+  "observations": []
+}

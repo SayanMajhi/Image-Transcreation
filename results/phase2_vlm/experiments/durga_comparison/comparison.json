@@ -1,0 +1,113 @@
+{
+  "input_image": "data\\durga.jpg",
+  "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+  "image_dimensions": [
+    980,
+    692
+  ],
+  "model_id": "microsoft/Florence-2-base-ft",
+  "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "task_order": [
+    "<CAPTION>",
+    "<DETAILED_CAPTION>",
+    "<MORE_DETAILED_CAPTION>"
+  ],
+  "token_count_definition": "Generated decoder token IDs excluding the initial decoder-start token and padding after the first EOS; includes EOS and any generated special tokens. This is not the tokenization length of the postprocessed caption.",
+  "measurement_notes": "One sequential observation per task; no warmup. Inference includes preprocessing, transfers, generation, decoding and postprocessing; excludes model loading and image file reading. CUDA peak allocated bytes include resident weights, exclude loading transients and are not total driver memory. CPU peak GPU allocation is null.",
+  "cultural_assessment": "Unreviewed; requires human comparison with the source image.",
+  "captions": [
+    {
+      "caption": "A group of women dressed in traditional Indian garb.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        980,
+        692
+      ],
+      "seed": 42,
+      "task": "<CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2386.0209999984363,
+      "inference_ms": 2366.1538000014843,
+      "peak_gpu_memory_bytes": 639566848,
+      "generated_tokens": 13,
+      "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+      "caption_words": 9,
+      "caption_characters": 52,
+      "token_ceiling_reached": false
+    },
+    {
+      "caption": "In this image we can see a few people, among them some are holding objects, there is a tree, there are some wires, also we can the sky.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        980,
+        692
+      ],
+      "seed": 42,
+      "task": "<DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2386.0209999984363,
+      "inference_ms": 643.1695999926887,
+      "peak_gpu_memory_bytes": 639574528,
+      "generated_tokens": 35,
+      "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+      "caption_words": 28,
+      "caption_characters": 135,
+      "token_ceiling_reached": false
+    },
+    {
+      "caption": "A group of women are dancing together. They are all dressed in traditional Indian garb. One of the women is in the middle of the group dancing. She is wearing a colorful garb and headdress. The women are holding brown bowls in their hands. There is smoke coming out of the bowls. There are wires hanging above the women.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        980,
+        692
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2386.0209999984363,
+      "inference_ms": 1172.9333999974187,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 71,
+      "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+      "caption_words": 59,
+      "caption_characters": 320,
+      "token_ceiling_reached": false
+    }
+  ]
+}

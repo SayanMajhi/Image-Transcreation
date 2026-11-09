@@ -1,0 +1,16 @@
+{
+  "before": {
+    "tests": 170,
+    "seconds": 10.399,
+    "result": "OK",
+    "failures": 0,
+    "errors": 0
+  },
+  "after": {
+    "tests": 199,
+    "new_mask_review_tests": 29,
+    "returncode": 0,
+    "output": "----------------------------------------------------------------------\nRan 199 tests in 12.696s\n\nOK\n"
+  },
+  "offline": "HF_HUB_OFFLINE=1; all model calls in the pre-existing suite mocked. New mask-review tests use only synthetic Pillow artifacts. No SAM/other model inference or weights download."
+}

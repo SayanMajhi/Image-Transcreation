@@ -1,0 +1,1285 @@
+{
+  "collection_description": "11-image exploratory convenience sample (10 photographs and one market illustration), not a benchmark or verified cultural ground truth. Groups and source titles are provenance metadata, never inference inputs. Public photos may overlap model training data; generalization is not established.",
+  "model_execution_order": [
+    "smolvlm",
+    "florence"
+  ],
+  "model_isolation": "Sequential subprocesses; only one model CUDA context exists at a time",
+  "config_sha256": "ae0aa0c967efa0dd427bbdab8d5d2c05255c39c4a99b6bba90c88317b9973e15",
+  "limitations": [
+    "Exploratory convenience sample, not a held-out benchmark. Possible overlap with training data.",
+    "SmolVLM uses a fixed uncertainty-aware instruction and its native processor chat template. Florence retains its configured MORE_DETAILED_CAPTION task and native task expansion.",
+    "SmolVLM uses greedy decoding (one beam), SDPA, generation caching and a 1024-pixel longest-edge processor setting with image splitting. Florence retains three beams, eager attention, disabled caching and its original processor. These are different operating points.",
+    "Token counts use different tokenizers and are not equivalent measures of information or accuracy.",
+    "A common 128-token ceiling can truncate verbose outputs. Inspect ceiling/EOS flags and the reported counts; incomplete captions limit omission and relationship comparisons.",
+    "One timed observation per image after one unrelated sanity/warmup image per model. Loading and file reading are excluded. Timing includes processor work, transfers, generation and decoding. Peak allocated CUDA memory includes resident weights, not total driver memory.",
+    "No automatic winner or cultural correctness score. Manual review must separate visible object recognition from specific identity claims. Caption length is not an accuracy metric."
+  ],
+  "quality_assessment": "Unscored; manual review required",
+  "models": {
+    "smolvlm": {
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "device": "cuda",
+      "precision": "float16",
+      "image_count": 11,
+      "mean_inference_ms": 5127.573163637531,
+      "median_inference_ms": 5617.28239999502,
+      "max_peak_gpu_memory_bytes": 1178738688,
+      "sanity": {
+        "caption": "Two tabby cats are sleeping on a pink blanket. One cat is curled up with its head on the other cat's back.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          640,
+          480
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 2365.954900000361,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 28,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "image_id": "sanity",
+        "input_sha256": "cf6f3c4befa148732c7453e0de5afab00f682427435fead2d88b07a9615cdac2",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\sanity_cats.png",
+        "caption_words": 22,
+        "caption_characters": 106
+      },
+      "token_ceiling_reached_count": 5,
+      "suspected_truncation_count": 5
+    },
+    "florence": {
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "device": "cuda",
+      "precision": "float16",
+      "image_count": 11,
+      "mean_inference_ms": 737.8952999993503,
+      "median_inference_ms": 663.7692999938736,
+      "max_peak_gpu_memory_bytes": 639576064,
+      "sanity": {
+        "caption": "There are two cats laying on a pink blanket. There are remotes next to the cats. The cats are brown and black.",
+        "model_id": "microsoft/Florence-2-base-ft",
+        "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+        "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+        "image_dimensions": [
+          640,
+          480
+        ],
+        "seed": 42,
+        "task": "<MORE_DETAILED_CAPTION>",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 3,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": false
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 2075.6526999903144,
+        "inference_ms": 1864.9173000012524,
+        "peak_gpu_memory_bytes": 639576064,
+        "generated_tokens": 29,
+        "prompt_text": "<MORE_DETAILED_CAPTION>",
+        "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+        "processor_settings": {
+          "size": {
+            "height": 768,
+            "width": 768
+          },
+          "attention_implementation": "eager"
+        },
+        "image_id": "sanity",
+        "input_sha256": "cf6f3c4befa148732c7453e0de5afab00f682427435fead2d88b07a9615cdac2",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\sanity_cats.png",
+        "caption_words": 22,
+        "caption_characters": 110
+      },
+      "token_ceiling_reached_count": 0,
+      "suspected_truncation_count": 0
+    }
+  },
+  "images": [
+    {
+      "id": "scene_01",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\durga.jpg",
+      "group": "cultural",
+      "source_url": "User-provided local photograph; public provenance unspecified",
+      "license": "Unspecified; local research use",
+      "sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+      "image_dimensions": [
+        980,
+        692
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "The image depicts a large, ornate, and colorful deity, likely a Hindu goddess, prominently featured in the center of the image. The deity is seated on a throne, with its arms outstretched, and is surrounded by a large, swirling, and billowing cloud of smoke. The goddess is adorned with elaborate jewelry, including a large, ornate headdress, and a richly decorated skirt. Her body is adorned with multiple arms, each holding a different object, which may represent various aspects of the goddess's power or attributes.\n\nThe goddess is surrounded by a group of people, some of whom are holding objects, likely offerings",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            980,
+            692
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 5978.217800002312,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 128,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": false,
+          "token_ceiling_reached": true,
+          "image_id": "scene_01",
+          "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\durga.jpg",
+          "caption_words": 101,
+          "caption_characters": 619
+        },
+        "florence": {
+          "caption": "A group of women are dancing together. They are all dressed in traditional Indian garb. One of the women is in the middle of the group dancing. She is wearing a colorful garb and headdress. The women are holding brown bowls in their hands. There is smoke coming out of the bowls. There are wires hanging above the women.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            980,
+            692
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 1196.0230999975465,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 71,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_01",
+          "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\durga.jpg",
+          "caption_words": 59,
+          "caption_characters": 320
+        }
+      }
+    },
+    {
+      "id": "scene_02",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_02.jpg",
+      "group": "cultural",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Diwali_Oil_lamps_Darjeeling.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Diwali_Oil_lamps_Darjeeling.jpg/1280px-Diwali_Oil_lamps_Darjeeling.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Diwali Oil lamps Darjeeling.jpg",
+      "search_query": "Diwali oil lamps",
+      "license": "CC BY-SA 3.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Benoy\" title=\"User:Benoy\">Benoy</a>",
+      "sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+      "image_dimensions": [
+        1280,
+        842
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "In the image there are a lot of diyas placed on the floor.",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            1280,
+            842
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 1103.1737999874167,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 16,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": true,
+          "token_ceiling_reached": false,
+          "image_id": "scene_02",
+          "input_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_02.jpg",
+          "caption_words": 13,
+          "caption_characters": 58
+        },
+        "florence": {
+          "caption": "There are several small candles on the ground. There are small white rocks under the candles. There is a small gold bowl in the middle of the rocks.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            1280,
+            842
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 538.4714999963762,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 34,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_02",
+          "input_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_02.jpg",
+          "caption_words": 28,
+          "caption_characters": 148
+        }
+      }
+    },
+    {
+      "id": "scene_03",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_03.jpg",
+      "group": "cultural",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_New_Year_Lion_Dance.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Chinese_New_Year_Lion_Dance.jpg/1280px-Chinese_New_Year_Lion_Dance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Chinese New Year Lion Dance.jpg",
+      "search_query": "Chinese New Year lion dance",
+      "license": "CC BY 2.0",
+      "attribution_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/20801313@N00\">Bob Jagendorf</a> from Manalapan, NJ, USA.",
+      "sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0",
+      "image_dimensions": [
+        1280,
+        1443
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "A large, colorful lion costume is being worn by a group of people in a street. The costume is yellow, red, and gold, and it has a large, round head with a red nose and two large, yellow eyes. The costume has a long, curling tail, and the arms are outstretched to the sides. The people wearing the costume are standing on a street, and there are other people standing in the background. There are buildings in the background, and the sky is blue with some scattered clouds.",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            1280,
+            1443
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 5060.266800006502,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 106,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": true,
+          "token_ceiling_reached": false,
+          "image_id": "scene_03",
+          "input_sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_03.jpg",
+          "caption_words": 88,
+          "caption_characters": 472
+        },
+        "florence": {
+          "caption": "There is a person in a large yellow and red costume. They are standing in the middle of the street. There are people standing behind them watching them.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            1280,
+            1443
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 651.6990000091027,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 34,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_03",
+          "input_sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_03.jpg",
+          "caption_words": 28,
+          "caption_characters": 152
+        }
+      }
+    },
+    {
+      "id": "scene_04",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_04.jpg",
+      "group": "cultural",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Japan_tea_ceremony_1165.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Japan_tea_ceremony_1165.jpg/1280px-Japan_tea_ceremony_1165.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Japan tea ceremony 1165.jpg",
+      "search_query": "Japanese tea ceremony",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Ermell\" title=\"User:Ermell\">Ermell</a>",
+      "sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+      "image_dimensions": [
+        1280,
+        960
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "A woman kneels on a table in front of a tea pot and a dish of food. There is an umbrella behind her. There are red tablecloths on the seating area. There are trees behind the seating area.",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            1280,
+            960
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 2342.5189000117825,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 46,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": true,
+          "token_ceiling_reached": false,
+          "image_id": "scene_04",
+          "input_sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_04.jpg",
+          "caption_words": 38,
+          "caption_characters": 188
+        },
+        "florence": {
+          "caption": "A woman is wearing a brown dress. She is sitting in front of a table. There is a red umbrella over the table.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            1280,
+            960
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 463.3358999999473,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 29,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_04",
+          "input_sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_04.jpg",
+          "caption_words": 23,
+          "caption_characters": 109
+        }
+      }
+    },
+    {
+      "id": "scene_05",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_05.jpg",
+      "group": "cultural",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Altardediademuertos.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Altardediademuertos.jpg/1280px-Altardediademuertos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Altardediademuertos.jpg",
+      "search_query": "Day of the Dead altar",
+      "license": "CC BY 2.0",
+      "attribution_html": "Eneas de Troya",
+      "sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99",
+      "image_dimensions": [
+        1280,
+        1912
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "The image depicts a vibrant and colorful table setup, likely intended for a festive or celebratory occasion. The table is covered with a yellow tablecloth, which is complemented by a colorful patterned drape that includes shades of purple, yellow, and red. The table is also adorned with various fruits and vegetables, arranged in a visually appealing manner.\n\nStarting from the top, there is a framed photograph of a person, likely a family member or close friend, positioned in the center of the table. The photograph is bordered by a decorative frame, adding a touch of elegance to the setup. Below the photograph, there is a bowl filled with",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            1280,
+            1912
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 7655.522699991707,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 128,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": false,
+          "token_ceiling_reached": true,
+          "image_id": "scene_05",
+          "input_sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_05.jpg",
+          "caption_words": 108,
+          "caption_characters": 645
+        },
+        "florence": {
+          "caption": "There is a table with a yellow table cloth on it. There is a picture hanging on the wall behind the table. There are flowers in vases on the table in front of the flowers.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            1280,
+            1912
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 685.3625999938231,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 42,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_05",
+          "input_sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_05.jpg",
+          "caption_words": 35,
+          "caption_characters": 171
+        }
+      }
+    },
+    {
+      "id": "scene_06",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_06.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg/1280px-Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Parked bicycle with graffitied building facade and doors in Amsterdam.jpg",
+      "search_query": "bicycle parked street",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+      "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+      "image_dimensions": [
+        1280,
+        966
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "A medium outdoor shot shows a row of black doors with graffiti on them, a bicycle leaning against the sidewalk in front of the doors, and a brick sidewalk in the foreground. The doors are framed by a white wall, and the graffiti on the doors includes a blue cat, the word \"AGAN\" in white, and the word \"Lane\" in white. The bicycle is a standard two-wheeled bike with a black frame and blue seat. The sidewalk is made of red bricks, and the bricks are laid in a herringbone pattern.",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            1280,
+            966
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 5617.28239999502,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 112,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": true,
+          "token_ceiling_reached": false,
+          "image_id": "scene_06",
+          "input_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_06.jpg",
+          "caption_words": 91,
+          "caption_characters": 481
+        },
+        "florence": {
+          "caption": "A bicycle is parked in front of a building. The building is covered in graffiti. The graffiti is colorful. There are three doors on the building.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            1280,
+            966
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 1009.6712999948068,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 33,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_06",
+          "input_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_06.jpg",
+          "caption_words": 26,
+          "caption_characters": 145
+        }
+      }
+    },
+    {
+      "id": "scene_07",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_07.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grandmother_preparing_food_inside_traditional_kitchen_(edited).jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Grandmother_preparing_food_inside_traditional_kitchen_%28edited%29.jpg/1280px-Grandmother_preparing_food_inside_traditional_kitchen_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Grandmother preparing food inside traditional kitchen (edited).jpg",
+      "search_query": "person cooking kitchen",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<ul><li><b>Original: </b> <a href=\"//commons.wikimedia.org/wiki/User:Mithunkunwar9\" title=\"User:Mithunkunwar9\">Mithun Kunwar</a></li>\n<li><b>Derivative work: </b> <a href=\"//commons.wikimedia.org/wiki/User:Radomianin\" title=\"User:Radomianin\">Radomianin</a></li></ul>",
+      "sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+      "image_dimensions": [
+        1280,
+        914
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "The image depicts a cozy, rustic interior of a traditional house. The room is dimly lit, with a warm orange hue, suggesting that it is either early morning or late afternoon. The walls are made of rough-hewn stone, giving the space a rustic and homely feel. The ceiling is made of wooden beams, adding to the rustic charm of the room.\n\nIn the center of the room, there is a small, round, glowing fire pit. The fire pit is surrounded by a few items: a few metal pots and pans, a small bowl, and a few other objects that appear to be cooking utensils.",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            1280,
+            914
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 6192.096700004186,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 128,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": false,
+          "token_ceiling_reached": true,
+          "image_id": "scene_07",
+          "input_sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_07.jpg",
+          "caption_words": 104,
+          "caption_characters": 549
+        },
+        "florence": {
+          "caption": "A man is sitting in front of a fire. The man is wearing a checkered shirt. There is a shelf above the man with utensils on it.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            1280,
+            914
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 731.3282999966759,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 37,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_07",
+          "input_sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_07.jpg",
+          "caption_words": 27,
+          "caption_characters": 126
+        }
+      }
+    },
+    {
+      "id": "scene_08",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_08.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boys_playing_street_football_in_Egypt.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Boys_playing_street_football_in_Egypt.jpg/1280px-Boys_playing_street_football_in_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Boys playing street football in Egypt.jpg",
+      "search_query": "children playing football",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Hozyen\" title=\"User:Hozyen\">Mohamed Hozyen Ahmed </a>",
+      "sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c",
+      "image_dimensions": [
+        1280,
+        835
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "In an outdoor setting, a group of young men are playing soccer on a stone-paved area. One of the players is in a blue shirt with the number 38 on the back. The player is stretching out his body with one arm extended towards the ball. Another player is in a white shirt with a blue and black graphic on the back. The player in the white shirt is looking at the player in the blue shirt. The player in the blue shirt is looking at the ball. The player in the white shirt has his arms extended out to the sides. The player in the blue shirt has his arms extended out to the",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            1280,
+            835
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 6218.498400005046,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 128,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": false,
+          "token_ceiling_reached": true,
+          "image_id": "scene_08",
+          "input_sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_08.jpg",
+          "caption_words": 115,
+          "caption_characters": 570
+        },
+        "florence": {
+          "caption": "A group of boys are playing soccer outside on a sunny day. Two of the boys are wearing blue shirts and shorts. One boy is laying on the ground trying to kick the ball. A group of people can be seen standing on a sidewalk behind the boys. A tall brick building is standing near the people.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            1280,
+            835
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 887.5082000013208,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 64,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_08",
+          "input_sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_08.jpg",
+          "caption_words": 57,
+          "caption_characters": 288
+        }
+      }
+    },
+    {
+      "id": "scene_09",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_09.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:John_Frederick_Tayler_-_A_Fruit_Stall_in_a_Market_-_B1975.4.952_-_Yale_Center_for_British_Art.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/John_Frederick_Tayler_-_A_Fruit_Stall_in_a_Market_-_B1975.4.952_-_Yale_Center_for_British_Art.jpg/1280px-John_Frederick_Tayler_-_A_Fruit_Stall_in_a_Market_-_B1975.4.952_-_Yale_Center_for_British_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:John Frederick Tayler - A Fruit Stall in a Market - B1975.4.952 - Yale Center for British Art.jpg",
+      "search_query": "fruit market stall",
+      "license": "CC0",
+      "attribution_html": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:John_Frederick_Tayler\" class=\"extiw\" title=\"w:en:John Frederick Tayler\"><span title=\"English landscape watercolour painter (1802-1889)\">John Frederick Tayler</span></a></bdi>",
+      "sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a",
+      "image_dimensions": [
+        1280,
+        897
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "The image depicts a scene of a kitchen or cooking area. The primary objects in the image include:\n\n1. **People**: There are three individuals in the image. \n   - **Person in the Front**: This person is standing and appears to be holding a large bowl or container. The person is wearing a long, dark-colored garment, possibly a skirt or a long coat.\n   - **Person Behind the Person in the Front**: This person is standing behind the person in the front. They are wearing a light-colored garment, possibly a shirt or a jacket.\n   - **Person Behind the Person Behind the Person**: This",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            1280,
+            897
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 6743.704200009233,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 128,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": false,
+          "token_ceiling_reached": true,
+          "image_id": "scene_09",
+          "input_sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_09.jpg",
+          "caption_words": 100,
+          "caption_characters": 582
+        },
+        "florence": {
+          "caption": "A painting of people standing around a table. There are baskets on the table in front of them. There is a woman in a red dress standing next to the table.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            1280,
+            897
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 647.9381000099238,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 37,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_09",
+          "input_sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_09.jpg",
+          "caption_words": 31,
+          "caption_characters": 154
+        }
+      }
+    },
+    {
+      "id": "scene_10",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_10.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Huntington_Dog_Beach_and_Bolsa_Chica.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Huntington_Dog_Beach_and_Bolsa_Chica.jpg/1280px-Huntington_Dog_Beach_and_Bolsa_Chica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Huntington Dog Beach and Bolsa Chica.jpg",
+      "search_query": "dog on beach",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Dicklyon\" class=\"mw-redirect\" title=\"User:Dicklyon\">Dicklyon</a>",
+      "sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643",
+      "image_dimensions": [
+        1280,
+        1696
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "An aerial shot of the Netherlands. The river IJsselmeer is on the left side of the image, and the IJsselmeer is on the right side. The IJsselmeer is a large river that flows from the North Sea to the South Sea. The Netherlands is a country in Western Europe. The Netherlands is known for its canals. The canals are a major feature of the Netherlands. The Netherlands is a country that is known for its architecture. The architecture is a mix of Dutch and European styles.",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            1280,
+            1696
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 5299.933999995119,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 111,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": true,
+          "token_ceiling_reached": false,
+          "image_id": "scene_10",
+          "input_sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_10.jpg",
+          "caption_words": 86,
+          "caption_characters": 471
+        },
+        "florence": {
+          "caption": "This is an aerial view of a city. The sky is blue with white fluffy clouds. The water is blue and calm. The land is brown. There are many buildings and houses on the land.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            1280,
+            1696
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 663.7692999938736,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 42,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_10",
+          "input_sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_10.jpg",
+          "caption_words": 35,
+          "caption_characters": 171
+        }
+      }
+    },
+    {
+      "id": "scene_11",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_11.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jesen%C3%ADk_train_station_2025.01.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Jesen%C3%ADk_train_station_2025.01.jpg/1280px-Jesen%C3%ADk_train_station_2025.01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Jeseník train station 2025.01.jpg",
+      "search_query": "train station platform",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Pudelek\" title=\"User:Pudelek\">Pudelek</a>",
+      "sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d",
+      "image_dimensions": [
+        1280,
+        852
+      ],
+      "captions": {
+        "smolvlm": {
+          "caption": "A train station with two trains parked facing away from the viewer. The train on the right is a blue train with a red sign on top of it. The train on the left is a white train with a blue stripe along the side. There is a pole in the foreground with a sign on it that says \"1\". There is snow on the ground. The sky is dark with a thick, dark cloud above the station.",
+          "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+          "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+          "image_dimensions": [
+            1280,
+            852
+          ],
+          "seed": 42,
+          "task": "caption",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 1,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": true
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 1651.29490000254,
+          "inference_ms": 4192.089100004523,
+          "peak_gpu_memory_bytes": 1178738688,
+          "generated_tokens": 87,
+          "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+          "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+          "processor_settings": {
+            "size": {
+              "longest_edge": 1024
+            },
+            "do_image_splitting": true,
+            "max_image_size": {
+              "longest_edge": 512
+            },
+            "attention_implementation": "sdpa"
+          },
+          "eos_reached": true,
+          "token_ceiling_reached": false,
+          "image_id": "scene_11",
+          "input_sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_11.jpg",
+          "caption_words": 78,
+          "caption_characters": 366
+        },
+        "florence": {
+          "caption": "Two blue and white trains are parked at a train station at night. There is a light pole in front of the platform with a sign on it.",
+          "model_id": "microsoft/Florence-2-base-ft",
+          "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+          "image_dimensions": [
+            1280,
+            852
+          ],
+          "seed": 42,
+          "task": "<MORE_DETAILED_CAPTION>",
+          "generation_settings": {
+            "max_new_tokens": 128,
+            "num_beams": 3,
+            "do_sample": false,
+            "num_return_sequences": 1,
+            "use_cache": false
+          },
+          "device": "cuda",
+          "precision": "float16",
+          "torch_version": "2.15.0+cu132",
+          "transformers_version": "4.57.6",
+          "model_loading_ms": 2075.6526999903144,
+          "inference_ms": 641.7409999994561,
+          "peak_gpu_memory_bytes": 639576064,
+          "generated_tokens": 33,
+          "prompt_text": "<MORE_DETAILED_CAPTION>",
+          "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+          "processor_settings": {
+            "size": {
+              "height": 768,
+              "width": 768
+            },
+            "attention_implementation": "eager"
+          },
+          "image_id": "scene_11",
+          "input_sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d",
+          "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_11.jpg",
+          "caption_words": 28,
+          "caption_characters": 131
+        }
+      }
+    }
+  ]
+}

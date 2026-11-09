@@ -1,0 +1,557 @@
+{
+  "model": "smolvlm",
+  "sanity": {
+    "caption": "Two tabby cats are sleeping on a pink blanket. One cat is curled up with its head on the other cat's back.",
+    "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+    "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+    "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+    "image_dimensions": [
+      640,
+      480
+    ],
+    "seed": 42,
+    "task": "caption",
+    "generation_settings": {
+      "max_new_tokens": 128,
+      "num_beams": 1,
+      "do_sample": false,
+      "num_return_sequences": 1,
+      "use_cache": true
+    },
+    "device": "cuda",
+    "precision": "float16",
+    "torch_version": "2.15.0+cu132",
+    "transformers_version": "4.57.6",
+    "model_loading_ms": 1651.29490000254,
+    "inference_ms": 2365.954900000361,
+    "peak_gpu_memory_bytes": 1178738688,
+    "generated_tokens": 28,
+    "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+    "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+    "processor_settings": {
+      "size": {
+        "longest_edge": 1024
+      },
+      "do_image_splitting": true,
+      "max_image_size": {
+        "longest_edge": 512
+      },
+      "attention_implementation": "sdpa"
+    },
+    "eos_reached": true,
+    "token_ceiling_reached": false,
+    "image_id": "sanity",
+    "input_sha256": "cf6f3c4befa148732c7453e0de5afab00f682427435fead2d88b07a9615cdac2",
+    "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\sanity_cats.png",
+    "caption_words": 22,
+    "caption_characters": 106
+  },
+  "records": [
+    {
+      "caption": "The image depicts a large, ornate, and colorful deity, likely a Hindu goddess, prominently featured in the center of the image. The deity is seated on a throne, with its arms outstretched, and is surrounded by a large, swirling, and billowing cloud of smoke. The goddess is adorned with elaborate jewelry, including a large, ornate headdress, and a richly decorated skirt. Her body is adorned with multiple arms, each holding a different object, which may represent various aspects of the goddess's power or attributes.\n\nThe goddess is surrounded by a group of people, some of whom are holding objects, likely offerings",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        980,
+        692
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 5978.217800002312,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 128,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": false,
+      "token_ceiling_reached": true,
+      "image_id": "scene_01",
+      "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\durga.jpg",
+      "caption_words": 101,
+      "caption_characters": 619
+    },
+    {
+      "caption": "In the image there are a lot of diyas placed on the floor.",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        1280,
+        842
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 1103.1737999874167,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 16,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": true,
+      "token_ceiling_reached": false,
+      "image_id": "scene_02",
+      "input_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_02.jpg",
+      "caption_words": 13,
+      "caption_characters": 58
+    },
+    {
+      "caption": "A large, colorful lion costume is being worn by a group of people in a street. The costume is yellow, red, and gold, and it has a large, round head with a red nose and two large, yellow eyes. The costume has a long, curling tail, and the arms are outstretched to the sides. The people wearing the costume are standing on a street, and there are other people standing in the background. There are buildings in the background, and the sky is blue with some scattered clouds.",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        1280,
+        1443
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 5060.266800006502,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 106,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": true,
+      "token_ceiling_reached": false,
+      "image_id": "scene_03",
+      "input_sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_03.jpg",
+      "caption_words": 88,
+      "caption_characters": 472
+    },
+    {
+      "caption": "A woman kneels on a table in front of a tea pot and a dish of food. There is an umbrella behind her. There are red tablecloths on the seating area. There are trees behind the seating area.",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        1280,
+        960
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 2342.5189000117825,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 46,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": true,
+      "token_ceiling_reached": false,
+      "image_id": "scene_04",
+      "input_sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_04.jpg",
+      "caption_words": 38,
+      "caption_characters": 188
+    },
+    {
+      "caption": "The image depicts a vibrant and colorful table setup, likely intended for a festive or celebratory occasion. The table is covered with a yellow tablecloth, which is complemented by a colorful patterned drape that includes shades of purple, yellow, and red. The table is also adorned with various fruits and vegetables, arranged in a visually appealing manner.\n\nStarting from the top, there is a framed photograph of a person, likely a family member or close friend, positioned in the center of the table. The photograph is bordered by a decorative frame, adding a touch of elegance to the setup. Below the photograph, there is a bowl filled with",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        1280,
+        1912
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 7655.522699991707,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 128,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": false,
+      "token_ceiling_reached": true,
+      "image_id": "scene_05",
+      "input_sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_05.jpg",
+      "caption_words": 108,
+      "caption_characters": 645
+    },
+    {
+      "caption": "A medium outdoor shot shows a row of black doors with graffiti on them, a bicycle leaning against the sidewalk in front of the doors, and a brick sidewalk in the foreground. The doors are framed by a white wall, and the graffiti on the doors includes a blue cat, the word \"AGAN\" in white, and the word \"Lane\" in white. The bicycle is a standard two-wheeled bike with a black frame and blue seat. The sidewalk is made of red bricks, and the bricks are laid in a herringbone pattern.",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        1280,
+        966
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 5617.28239999502,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 112,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": true,
+      "token_ceiling_reached": false,
+      "image_id": "scene_06",
+      "input_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_06.jpg",
+      "caption_words": 91,
+      "caption_characters": 481
+    },
+    {
+      "caption": "The image depicts a cozy, rustic interior of a traditional house. The room is dimly lit, with a warm orange hue, suggesting that it is either early morning or late afternoon. The walls are made of rough-hewn stone, giving the space a rustic and homely feel. The ceiling is made of wooden beams, adding to the rustic charm of the room.\n\nIn the center of the room, there is a small, round, glowing fire pit. The fire pit is surrounded by a few items: a few metal pots and pans, a small bowl, and a few other objects that appear to be cooking utensils.",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        1280,
+        914
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 6192.096700004186,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 128,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": false,
+      "token_ceiling_reached": true,
+      "image_id": "scene_07",
+      "input_sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_07.jpg",
+      "caption_words": 104,
+      "caption_characters": 549
+    },
+    {
+      "caption": "In an outdoor setting, a group of young men are playing soccer on a stone-paved area. One of the players is in a blue shirt with the number 38 on the back. The player is stretching out his body with one arm extended towards the ball. Another player is in a white shirt with a blue and black graphic on the back. The player in the white shirt is looking at the player in the blue shirt. The player in the blue shirt is looking at the ball. The player in the white shirt has his arms extended out to the sides. The player in the blue shirt has his arms extended out to the",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        1280,
+        835
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 6218.498400005046,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 128,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": false,
+      "token_ceiling_reached": true,
+      "image_id": "scene_08",
+      "input_sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_08.jpg",
+      "caption_words": 115,
+      "caption_characters": 570
+    },
+    {
+      "caption": "The image depicts a scene of a kitchen or cooking area. The primary objects in the image include:\n\n1. **People**: There are three individuals in the image. \n   - **Person in the Front**: This person is standing and appears to be holding a large bowl or container. The person is wearing a long, dark-colored garment, possibly a skirt or a long coat.\n   - **Person Behind the Person in the Front**: This person is standing behind the person in the front. They are wearing a light-colored garment, possibly a shirt or a jacket.\n   - **Person Behind the Person Behind the Person**: This",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        1280,
+        897
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 6743.704200009233,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 128,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": false,
+      "token_ceiling_reached": true,
+      "image_id": "scene_09",
+      "input_sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_09.jpg",
+      "caption_words": 100,
+      "caption_characters": 582
+    },
+    {
+      "caption": "An aerial shot of the Netherlands. The river IJsselmeer is on the left side of the image, and the IJsselmeer is on the right side. The IJsselmeer is a large river that flows from the North Sea to the South Sea. The Netherlands is a country in Western Europe. The Netherlands is known for its canals. The canals are a major feature of the Netherlands. The Netherlands is a country that is known for its architecture. The architecture is a mix of Dutch and European styles.",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        1280,
+        1696
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 5299.933999995119,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 111,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": true,
+      "token_ceiling_reached": false,
+      "image_id": "scene_10",
+      "input_sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_10.jpg",
+      "caption_words": 86,
+      "caption_characters": 471
+    },
+    {
+      "caption": "A train station with two trains parked facing away from the viewer. The train on the right is a blue train with a red sign on top of it. The train on the left is a white train with a blue stripe along the side. There is a pole in the foreground with a sign on it that says \"1\". There is snow on the ground. The sky is dark with a thick, dark cloud above the station.",
+      "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "image_dimensions": [
+        1280,
+        852
+      ],
+      "seed": 42,
+      "task": "caption",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": true
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 1651.29490000254,
+      "inference_ms": 4192.089100004523,
+      "peak_gpu_memory_bytes": 1178738688,
+      "generated_tokens": 87,
+      "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+      "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+      "processor_settings": {
+        "size": {
+          "longest_edge": 1024
+        },
+        "do_image_splitting": true,
+        "max_image_size": {
+          "longest_edge": 512
+        },
+        "attention_implementation": "sdpa"
+      },
+      "eos_reached": true,
+      "token_ceiling_reached": false,
+      "image_id": "scene_11",
+      "input_sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_11.jpg",
+      "caption_words": 78,
+      "caption_characters": 366
+    }
+  ]
+}

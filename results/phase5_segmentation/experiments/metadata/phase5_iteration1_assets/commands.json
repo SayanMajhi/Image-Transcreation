@@ -1,0 +1,10 @@
+[
+  {
+    "experiment": "A_bicycle",
+    "command": ".\\.venv\\Scripts\\python.exe -B -m scripts.segment_sam --image data/vlm_collection/scene_06.jpg --detection reports/phase4_iteration2_assets/runs/R01_bicycle_replay/detection.json --prediction-index 0 --research-only --note \"Explicit Phase 4 bicycle prediction index 0; segmentation research only; placeholder reviewer record is not treated as confirmed approval.\" --out reports/phase5_iteration1_assets/A_bicycle"
+  },
+  {
+    "experiment": "B_oil_lamp",
+    "command": ".\\.venv\\Scripts\\python.exe -B -m scripts.segment_sam --image data/vlm_collection/scene_02.jpg --detection reports/phase4_iteration2_assets/runs/A02_oil_lamp_020/detection.json --prediction-index 2 --research-only --note \"Manually chosen zero-based prediction index 2 from saved visual evidence: the central burning lamp bowl and flame, not an automatic highest-confidence selection; no human approval claimed.\" --out reports/phase5_iteration1_assets/B_oil_lamp"
+  }
+]

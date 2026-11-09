@@ -1,0 +1,39 @@
+{
+  "cli_help": [
+    {
+      "command": "python -B -m transcreation.cli  --help",
+      "returncode": 0,
+      "stdout": "usage: cli.py [-h] [--version] {caption,plan,ground} ...\n\nCulture transcreation research CLI.\n\npositional arguments:\n  {caption,plan,ground}\n    caption             Caption one image with SmolVLM-500M\n    plan                Plan cultural edits with local Ollama; never modifies\n                        images\n    ground              Research-only text localization; never executes\n                        planner edits\n\noptions:\n  -h, --help            show this help message and exit\n  --version             show program's version number and exit\n",
+      "stderr": ""
+    },
+    {
+      "command": "python -B -m transcreation.cli caption --help",
+      "returncode": 0,
+      "stdout": "usage: cli.py caption [-h] --image IMAGE [--model {smolvlm}]\n                      [--prompt-variant {default,concise_grounded}]\n                      [--config CONFIG] [--out OUT]\n\noptions:\n  -h, --help            show this help message and exit\n  --image IMAGE\n  --model {smolvlm}\n  --prompt-variant {default,concise_grounded}\n  --config CONFIG\n  --out OUT\n",
+      "stderr": ""
+    },
+    {
+      "command": "python -B -m transcreation.cli plan --help",
+      "returncode": 0,
+      "stdout": "usage: cli.py plan [-h] --input INPUT [--config CONFIG] [--model MODEL]\n                   [--endpoint ENDPOINT] [--timeout TIMEOUT] [--out OUT]\n\noptions:\n  -h, --help           show this help message and exit\n  --input INPUT        PlanningInput JSON, including target culture\n  --config CONFIG\n  --model MODEL        Override the configured Ollama model name\n  --endpoint ENDPOINT  Override the local /api/chat URL\n  --timeout TIMEOUT    Override request timeout in seconds\n  --out OUT            New audit JSON; existing files are preserved\n",
+      "stderr": ""
+    },
+    {
+      "command": "python -B -m transcreation.cli ground --help",
+      "returncode": 0,
+      "stdout": "usage: cli.py ground [-h] --image IMAGE --phrase PHRASE [--config CONFIG]\n                     [--box-threshold BOX_THRESHOLD]\n                     [--text-threshold TEXT_THRESHOLD] [--device {cuda,cpu}]\n                     --out OUT\n\noptions:\n  -h, --help            show this help message and exit\n  --image IMAGE\n  --phrase PHRASE\n  --config CONFIG\n  --box-threshold BOX_THRESHOLD\n  --text-threshold TEXT_THRESHOLD\n  --device {cuda,cpu}\n  --out OUT             New artifact directory\n",
+      "stderr": ""
+    }
+  ],
+  "existing_module_imports": {
+    "transcreation.stages.caption": "imported; no model inference",
+    "transcreation.stages.ollama_planner": "imported; no model inference",
+    "transcreation.stages.planning": "imported; no model inference",
+    "transcreation.pipeline": "imported; no model inference"
+  },
+  "configs": {
+    "caption": "CaptionConfig",
+    "planner": "PlannerConfig",
+    "grounding": "GroundingConfig"
+  }
+}

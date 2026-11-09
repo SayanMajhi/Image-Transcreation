@@ -1,0 +1,592 @@
+[
+  {
+    "original": "src/transcreation/comparison.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/src/transcreation/comparison.py",
+    "sha256": "b62bf3c7d54c8c649fbbcfdad8bad6efa459d3cdfd8faba04001cb0ce3d64d85"
+  },
+  {
+    "original": "src/transcreation/crop_diagnostic.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/src/transcreation/crop_diagnostic.py",
+    "sha256": "1865cb0a1afe05f9f65198b0af1ed640009b18673365625b30f6086708e55c68"
+  },
+  {
+    "original": "src/transcreation/regions.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/src/transcreation/regions.py",
+    "sha256": "5db5908f459aa88a55e03df30925b88df03d3508731e8c3fbd24e3f103e2ff3a"
+  },
+  {
+    "original": "src/transcreation/dense.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/src/transcreation/dense.py",
+    "sha256": "c77254772503879c747816eb6d0bcdc80cd9cfac8b4a550d071431e87c189aba"
+  },
+  {
+    "original": "src/transcreation/vlm_evaluation.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/src/transcreation/vlm_evaluation.py",
+    "sha256": "371f09aca0d3d2c5ad7bc076641ee901f5b9262bc6529f4a89312bd22aea62ee"
+  },
+  {
+    "original": "src/transcreation/smol_extension.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/src/transcreation/smol_extension.py",
+    "sha256": "a20b04a0b09c13bb98179d0ce3accaf18451fd1a67137b49eda279a55f8427d5"
+  },
+  {
+    "original": "src/transcreation/smol_concise.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/src/transcreation/smol_concise.py",
+    "sha256": "061b4f4ba06f2b5fd5cb3da93e1cce34cb05b1162092d68aff5674f6ae6a7a17"
+  },
+  {
+    "original": "src/transcreation/stages/caption.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/src/transcreation/stages/caption.py",
+    "sha256": "f00aa20e96e9d20c24ee03531556b31487fa10cc634f5c58e8c1570f1ee2f139"
+  },
+  {
+    "original": "tests/test_caption.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/tests/test_caption.py",
+    "sha256": "d249438314caaa6e67254a502997b899283c06e613b397909aa226dc49b9a21c"
+  },
+  {
+    "original": "tests/test_comparison.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/tests/test_comparison.py",
+    "sha256": "e26b6090dc7a3b2a6ec640f0387dbbea658c219dc91221e9efe77a2a82d212c7"
+  },
+  {
+    "original": "tests/test_crop_diagnostic.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/tests/test_crop_diagnostic.py",
+    "sha256": "19ce3f677fd7ea73eca118e6e165d63e34aa5a7de18cf1013087e5fd9a47bc15"
+  },
+  {
+    "original": "tests/test_dense.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/tests/test_dense.py",
+    "sha256": "039e6944767642b2ead4b6487a68ec772aeda39c7b57290fdfae5956d3c210e2"
+  },
+  {
+    "original": "tests/test_regions.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/tests/test_regions.py",
+    "sha256": "418cdc32eade8e15dce6596875b3a0982c878e0e6b24905b62b991fdb8d114de"
+  },
+  {
+    "original": "tests/test_smol_concise.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/tests/test_smol_concise.py",
+    "sha256": "51dcffb57fc8353ca3e8ccfdd26d91b39e3b230b36992d5e21460c23391adf6f"
+  },
+  {
+    "original": "tests/test_smol_extension.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/tests/test_smol_extension.py",
+    "sha256": "fa45782b0789839377fb91db74ae8a6e4217ff55f729558f71e564c2f3bd25c6"
+  },
+  {
+    "original": "tests/test_vlm_evaluation.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/tests/test_vlm_evaluation.py",
+    "sha256": "9be858b6dce85d2a54f509e9a459916205008498a759e90e18c9eb6010aa34f8"
+  },
+  {
+    "original": "reports/archive_manifest.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/reports/archive_manifest.json",
+    "sha256": "8a04295981e205fb5236af69fb77c755f899230badadf27b7db4633df9969b74"
+  },
+  {
+    "original": "reports/cleanup_inventory.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_inventory.md",
+    "sha256": "6e2ac921cad9b56c6deb9c6ffc5ff700869976560aad7fe4448382cc05da1f2e"
+  },
+  {
+    "original": "reports/cleanup_summary.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_summary.md",
+    "sha256": "495343739106f28759fc917cb91e5dd42f92d7361e7f77684dd72cf74a7a4a41"
+  },
+  {
+    "original": "reports/cleanup_tree_after.txt",
+    "archived": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_tree_after.txt",
+    "sha256": "bc71451b082ffc6ca9f084c456a329956cb6b269fa54c0e34ff14342219e9d25"
+  },
+  {
+    "original": "reports/cleanup_tree_before.txt",
+    "archived": ".local_archive/smolvlm_commitment_20261108/reports/cleanup_tree_before.txt",
+    "sha256": "58791abaac7e6e5e583505835a2e28bcf17441aa17c5fb89215956793429f42a"
+  },
+  {
+    "original": "reports/experiment_usage.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/reports/experiment_usage.md",
+    "sha256": "f056e8f4a84dd4e85163a4b7d47983d5e35cae90df47586a037e46d702ef44a3"
+  },
+  {
+    "original": "reports/vlm_selection.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/reports/vlm_selection.md",
+    "sha256": "9155af488d307831d98e7671fecfe83d0d1517249e3da5ecf8cdf3abe7be2a6b"
+  },
+  {
+    "original": "scripts/prepare_vlm_sample.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/scripts/prepare_vlm_sample.py",
+    "sha256": "e9fd62f8726ad2df93de4010d068363a8dac9a7b566a9004ec97dd01210adf3b"
+  },
+  {
+    "original": "scripts/experiments/prepare_vlm_sample.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/scripts/experiments/prepare_vlm_sample.py",
+    "sha256": "a943ac848a51d75a61a4c9f19e9a98f0bcbb8d8a7eb8c847cbb57d3b0f8008ba"
+  },
+  {
+    "original": "outputs/blip.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/blip.json",
+    "sha256": "a3e91e4722e563cc3872050de7bc4bb7a9f2dff945469a3003c4ff83f9caaa2f"
+  },
+  {
+    "original": "outputs/florence.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/florence.json",
+    "sha256": "bde14f5ff6e1405309050360a17ed57b9d83273a3fdc90c7dcb745cdae8f148f"
+  },
+  {
+    "original": "outputs/smolvlm_sanity.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/smolvlm_sanity.json",
+    "sha256": "e7b7f99c7e190ea4ed8a7a8f38c2d0872c44988e8215c0abc64a34d45915c80c"
+  },
+  {
+    "original": "outputs/smolvlm_sanity_review.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/smolvlm_sanity_review.md",
+    "sha256": "c7a2d8abba4b5d9c57a84b7dfcd996df1d2d0807d00a7e528bc133edd168d7a6"
+  },
+  {
+    "original": "outputs/durga_comparison/caption_detailed.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_comparison/caption_detailed.json",
+    "sha256": "4f84d0966f6a6ded836146851c0cbafd38882224f1594b28e7ac0b758e9beb97"
+  },
+  {
+    "original": "outputs/durga_comparison/caption_more_detailed.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_comparison/caption_more_detailed.json",
+    "sha256": "c79afc594c4c2d036835beb92e6afa87952b0d66e51a60795b5a208c5dfe87a9"
+  },
+  {
+    "original": "outputs/durga_comparison/caption_standard.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_comparison/caption_standard.json",
+    "sha256": "af82963c14cfb452d5bc9e999a22bc6ab5042a5d6af842dc0a8cc0b5e54bfcc1"
+  },
+  {
+    "original": "outputs/durga_comparison/comparison.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_comparison/comparison.json",
+    "sha256": "31e34cd8718af9cc1071e230dd21a04fc7fed55705c3e7264f5b935e03e557e0"
+  },
+  {
+    "original": "outputs/durga_comparison/comparison.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_comparison/comparison.md",
+    "sha256": "0a4b29dc4534df30e77e3c5c8573fff4d9508119712b4c7bf3b4afcda85f7ce7"
+  },
+  {
+    "original": "outputs/durga_crop_diagnostic/caption_crop.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_crop_diagnostic/caption_crop.json",
+    "sha256": "390a23445b001187f64508ac431b6935dc6f41420306d89fb8c07b99ba978b75"
+  },
+  {
+    "original": "outputs/durga_crop_diagnostic/caption_full.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_crop_diagnostic/caption_full.json",
+    "sha256": "2d34468303792cff010bb75b88acdaa03094a1f956645008d0104a0ea75f6f11"
+  },
+  {
+    "original": "outputs/durga_crop_diagnostic/crop.png",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_crop_diagnostic/crop.png",
+    "sha256": "f9c4886a4eebe7270e63d05e10e290a81f464914ea6a46ee3e36f0b6eab936f3"
+  },
+  {
+    "original": "outputs/durga_dense/annotated.png",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_dense/annotated.png",
+    "sha256": "f225e7f14d7f04c7a9b687f12c3468cddfd10eeec5b2ab307c52fddbd5824a1f"
+  },
+  {
+    "original": "outputs/durga_dense/regions.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_dense/regions.json",
+    "sha256": "517541649172faba8042f5a13452a6f3ee530b827af84cbff49df93d31032bb4"
+  },
+  {
+    "original": "outputs/durga_dense/review.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_dense/review.md",
+    "sha256": "b9d3e6cae00f3b40cac3ba4f1762c8f54248fd45e0ff47267ca93aea30e309c4"
+  },
+  {
+    "original": "outputs/durga_regions/bottom_left.png",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/bottom_left.png",
+    "sha256": "9c71d32b8179d04fd1af3df4bd57cafd5d1b58ffb4e68f4ff177367b0a159d1d"
+  },
+  {
+    "original": "outputs/durga_regions/bottom_right.png",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/bottom_right.png",
+    "sha256": "afe03d298aa4bfba3568f7c611b977401050af492b7425f36b76a184b14a37f0"
+  },
+  {
+    "original": "outputs/durga_regions/full.png",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/full.png",
+    "sha256": "5fb5d8c34f8afdff1deb8dd2d2c0cd95af2875bc6471fc9c790b7a0808b39172"
+  },
+  {
+    "original": "outputs/durga_regions/observations.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/observations.json",
+    "sha256": "a0617bea1a82446288a2152256336f65ef39146070b87a20a0a4f909e4a824b8"
+  },
+  {
+    "original": "outputs/durga_regions/review.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/review.md",
+    "sha256": "bf0bff3a8c8bac950ad8432a04f7db2aa77195c4c36edc653c87ee9e1bf12f3a"
+  },
+  {
+    "original": "outputs/durga_regions/top_left.png",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/top_left.png",
+    "sha256": "7e5957f2224a3c06bc274b031959bbef33e12c1afe21d65f4d617db6effe1290"
+  },
+  {
+    "original": "outputs/durga_regions/top_right.png",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/durga_regions/top_right.png",
+    "sha256": "31408fcf172652bd084e1cf3097c4e664a76f4544398818643b145d4a636892e"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_cli.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_cli.json",
+    "sha256": "9b9abbe0a99006c398f82ec006c801a9b1f2a60245fd1e7af22f62ff568423ed"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_deterministic.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_deterministic.json",
+    "sha256": "d811893d6356bf05a8981ebbf570fe4e4d71ef35da8f190dfe6cec800f11154f"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_environment.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_environment.json",
+    "sha256": "0ac0e868579a5057ccae8f0cee2716146269e923b9fb17aa4eb05b11868ed0ef"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_git_diff.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_git_diff.json",
+    "sha256": "568025a8864555b45843dd6a8da4d798f9199782f206a09d9b32a1b22bf82a65"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_git_status.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_git_status.json",
+    "sha256": "69677062166c80f9555e68224bd3c97c05cbc67844a6e25e7b672e265a533809"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_manifest.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_manifest.json",
+    "sha256": "198760ba17d949a7860ce0ace92da6925cde8db371ff1db7a9a11f2469698656"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_pip_check.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_pip_check.json",
+    "sha256": "41b029172b1a3138646af36d5eac7406425db9be4e4dfa4ed4c5a7382dc049b9"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_source_audit.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_source_audit.json",
+    "sha256": "ac1bd17ab49e588fdc2d89e00bbe7df4a747169ee24713276712556476ffe680"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_tests.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_tests.json",
+    "sha256": "4eacaad8dc9e588e8b60c0dd34469449b76797910cb04e4f53c0d181b315e7af"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_tests.txt",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_tests.txt",
+    "sha256": "853aee55ca60fded21c84970ec50296a61f404db5316b26ca2dbdd2d01a802a8"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/after_tree.txt",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/after_tree.txt",
+    "sha256": "bc71451b082ffc6ca9f084c456a329956cb6b269fa54c0e34ff14342219e9d25"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/audit.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/audit.py",
+    "sha256": "f6cc9fd0b558820d6cb2c09cbe30a784394757b5f158f10a4c0a1d17354601bc"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_cli.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_cli.json",
+    "sha256": "9b9abbe0a99006c398f82ec006c801a9b1f2a60245fd1e7af22f62ff568423ed"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_deterministic.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_deterministic.json",
+    "sha256": "d811893d6356bf05a8981ebbf570fe4e4d71ef35da8f190dfe6cec800f11154f"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_environment.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_environment.json",
+    "sha256": "0ac0e868579a5057ccae8f0cee2716146269e923b9fb17aa4eb05b11868ed0ef"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_git.diff",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_git.diff",
+    "sha256": "00f071a6bd7b1cb230bf9b20edf22fa8a57bfe55fdd4a8e88da71195d3f49bdd"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_git_diff.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_git_diff.json",
+    "sha256": "ba693783240fb5b63087f8f721bd5fbb0001bf123ca0f45476b756184a00c493"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_git_status.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_git_status.json",
+    "sha256": "3525039c91d098d2f072ae95600e133a42e2590791e68f06fff609c15e41e82b"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_manifest.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_manifest.json",
+    "sha256": "a8766e8e71a0aaba98a9b3da050e1ceca54376851405e21e0667327b7ddc5e9b"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_pip_check.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_pip_check.json",
+    "sha256": "41b029172b1a3138646af36d5eac7406425db9be4e4dfa4ed4c5a7382dc049b9"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_source_audit.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_source_audit.json",
+    "sha256": "d5e606edb2b721283050eb14be9843f21f213e82273a15014bc9ba78a8d17c11"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_tests.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_tests.json",
+    "sha256": "1f98f36f9ff535861a1c3d937bbe4fe5628a7b4d5c61f2ece6a3b2b3edf866bc"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_tests.txt",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_tests.txt",
+    "sha256": "0ba37aa20cfaa0239f21ffe2319a64f0d4cf66a103f3e0e1a03f3adb7b5e69ce"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/before_tree.txt",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/before_tree.txt",
+    "sha256": "58791abaac7e6e5e583505835a2e28bcf17441aa17c5fb89215956793429f42a"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/cleanup_only.diff",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/cleanup_only.diff",
+    "sha256": "002003f99d33032f9e8e4023143b35b3f5cbc97ba196691a9aebb305a07a9c18"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/deterministic_snapshot.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/deterministic_snapshot.py",
+    "sha256": "718fd44157e1628067d9ad6beae4b855a8543e340848aec4a0e6ad9d308eb34d"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/ide_events.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/ide_events.json",
+    "sha256": "798acb1d12a8e576da20e5958dc20a04ee6e1422e2c33bf032be3f8bf1f64261"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/verification.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/verification.json",
+    "sha256": "321941a7fae3c6ca76915051790536dfb68b9fa11a571b22faa7144602938188"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/.gitignore",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/.gitignore",
+    "sha256": "0bef755dfc8cb93d7a91157c517ce8dabcbfa5b50ec64adbffb1f80ddc880a1d"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/pyproject.toml.snapshot",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/pyproject.toml.snapshot",
+    "sha256": "5c376c2e6d9a7ce908b44d7882b0cd7d0dafabe6e9667d8a3d798e250437a31a"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/README.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/README.md",
+    "sha256": "5de266d7a580b46b4c08a5c50a08ba15b9f54015d2430de65d0f90f9488f0435"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/.idea/.gitignore",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/.idea/.gitignore",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/configs/config.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/configs/config.py",
+    "sha256": "a8bf198ec56b8946d8dd47ff4e11793c78f6e6534f7f18b100944e8515b32aa6"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/configs/models.yaml",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/configs/models.yaml",
+    "sha256": "ae0aa0c967efa0dd427bbdab8d5d2c05255c39c4a99b6bba90c88317b9973e15"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/scripts/prepare_vlm_sample.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/scripts/prepare_vlm_sample.py",
+    "sha256": "a943ac848a51d75a61a4c9f19e9a98f0bcbb8d8a7eb8c847cbb57d3b0f8008ba"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/cli.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/cli.py",
+    "sha256": "df50fd94d57d1e1bd9e5dfe779188fde637a655dd03014c3c251bfe0f3cb7fad"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/comparison.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/comparison.py",
+    "sha256": "7f78979864b6366146604d0b4928bf381f45c1f5ac011c1c981d63b5eed89c40"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/config.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/config.py",
+    "sha256": "c6bd81189253b4b89d5600ac6def4186e3a04d236235b43b599260aaa9288d68"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/contracts.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/contracts.py",
+    "sha256": "d46db06d58a1b446dd2f05c9dc840bd9a62ae16e83bc625ae61115544fb0bd0f"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/crop_diagnostic.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/crop_diagnostic.py",
+    "sha256": "1865cb0a1afe05f9f65198b0af1ed640009b18673365625b30f6086708e55c68"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/dense.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/dense.py",
+    "sha256": "6908fa9dc2a1edfdd27129e91d897710f54b7cfccd9562ef93643932114543b8"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/factory.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/factory.py",
+    "sha256": "75e76722f6014edf713c029ea14ba6d8fc1b3236d4d75680e45db9ce201f0dfa"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/regions.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/regions.py",
+    "sha256": "e269979c192e73779582861b8740da71b527bbf376685675ca0a9d299b77358c"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/smol_concise.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/smol_concise.py",
+    "sha256": "061b4f4ba06f2b5fd5cb3da93e1cce34cb05b1162092d68aff5674f6ae6a7a17"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/smol_extension.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/smol_extension.py",
+    "sha256": "a20b04a0b09c13bb98179d0ce3accaf18451fd1a67137b49eda279a55f8427d5"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/vlm_evaluation.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/vlm_evaluation.py",
+    "sha256": "371f09aca0d3d2c5ad7bc076641ee901f5b9262bc6529f4a89312bd22aea62ee"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/__init__.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/__init__.py",
+    "sha256": "de264de557487b283fa4866c77d1b061a1059faba9bd9d4bc99b62604a051202"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/stages/caption.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/stages/caption.py",
+    "sha256": "f00aa20e96e9d20c24ee03531556b31487fa10cc634f5c58e8c1570f1ee2f139"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/stages/smolvlm.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/stages/smolvlm.py",
+    "sha256": "dedf9dfada0aa9e289a2587b7ee85938c8bf7d1e908a038989bbea344a0097c5"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/stages/__init__.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/src.snapshot/transcreation/stages/__init__.py",
+    "sha256": "2d7659e73574e6b6859ba8df4acbbd75e399b0d030f3b4c7478107b58b68e018"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_caption.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_caption.py",
+    "sha256": "d249438314caaa6e67254a502997b899283c06e613b397909aa226dc49b9a21c"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_comparison.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_comparison.py",
+    "sha256": "e26b6090dc7a3b2a6ec640f0387dbbea658c219dc91221e9efe77a2a82d212c7"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_crop_diagnostic.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_crop_diagnostic.py",
+    "sha256": "19ce3f677fd7ea73eca118e6e165d63e34aa5a7de18cf1013087e5fd9a47bc15"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_dense.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_dense.py",
+    "sha256": "039e6944767642b2ead4b6487a68ec772aeda39c7b57290fdfae5956d3c210e2"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_regions.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_regions.py",
+    "sha256": "418cdc32eade8e15dce6596875b3a0982c878e0e6b24905b62b991fdb8d114de"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_smolvlm.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_smolvlm.py",
+    "sha256": "13515b1e233f2740814de582c5d9e0a2edc48380555dc59e750c92a561222a77"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_smol_concise.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_smol_concise.py",
+    "sha256": "51dcffb57fc8353ca3e8ccfdd26d91b39e3b230b36992d5e21460c23391adf6f"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_smol_extension.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_smol_extension.py",
+    "sha256": "fa45782b0789839377fb91db74ae8a6e4217ff55f729558f71e564c2f3bd25c6"
+  },
+  {
+    "original": "outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_vlm_evaluation.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/repository_audit/cleanup_20261107T221221_378823/source_snapshot/tests/test_vlm_evaluation.py",
+    "sha256": "9be858b6dce85d2a54f509e9a459916205008498a759e90e18c9eb6010aa34f8"
+  },
+  {
+    "original": "outputs/smol_concise/concise_comparison.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_comparison.json",
+    "sha256": "f2a1a91d4b9a61e7d994d990ecef8b037c1f777030c52359a696ddae559eba22"
+  },
+  {
+    "original": "outputs/smol_concise/concise_review.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/smol_concise/concise_review.md",
+    "sha256": "0b4ed009db59bcfb396470570543ba4dee6fc88028c77ee5018eae5776e33a9c"
+  },
+  {
+    "original": "outputs/smol_extended/review.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/review.md",
+    "sha256": "0e8c3c2220bff3660648028d6451e32b63b50d7bc55477e9ef1effc32ca1605b"
+  },
+  {
+    "original": "outputs/smol_extended/smol_extended.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/smol_extended.json",
+    "sha256": "d2536c3689c92fd0527ab4dd00af5bfbf9ed0558fef3f0431a78e115b535ab80"
+  },
+  {
+    "original": "outputs/smol_extended/truncation_comparison.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/smol_extended/truncation_comparison.md",
+    "sha256": "9b88e8f7f6f2fddc8cd5031cfe0c853ec48b6739b63ae3f3edabd971cbbce5e3"
+  },
+  {
+    "original": "outputs/vlm_comparison/comparison.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/comparison.json",
+    "sha256": "5caa6e3a8d8a7899735dcce7d46995d295ddabcd5983005692fcdf3a206af8c3"
+  },
+  {
+    "original": "outputs/vlm_comparison/florence.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/florence.json",
+    "sha256": "c75d20627a0b1362f4514f8dacc38b0f52f0e9418d24a8b525514dcd9d71e3f1"
+  },
+  {
+    "original": "outputs/vlm_comparison/frozen_manifest.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/frozen_manifest.json",
+    "sha256": "3d066643489e5766ff3237eb04ea857ad82993b5fde06622d4853f487ca49792"
+  },
+  {
+    "original": "outputs/vlm_comparison/models.yaml",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/models.yaml",
+    "sha256": "ae0aa0c967efa0dd427bbdab8d5d2c05255c39c4a99b6bba90c88317b9973e15"
+  },
+  {
+    "original": "outputs/vlm_comparison/review.md",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/review.md",
+    "sha256": "e79f5e41517d7dde23e6454c226ff725eb500ae577c57985d97887dd60a5a546"
+  },
+  {
+    "original": "outputs/vlm_comparison/smolvlm.json",
+    "archived": ".local_archive/smolvlm_commitment_20261108/outputs/vlm_comparison/smolvlm.json",
+    "sha256": "4a4b8eb3d2b6d9e9383bb35506b7b972beacb2be8a6e8e5eb036428b2e7a9416"
+  },
+  {
+    "original": "cleanup_smolvlm.py",
+    "archived": ".local_archive/smolvlm_commitment_20261108/cleanup_smolvlm.py",
+    "sha256": "a023f0d6bc3e81f8ef42e620c1811d1c9dee92479ea2cf3985809a61d807637a"
+  }
+]

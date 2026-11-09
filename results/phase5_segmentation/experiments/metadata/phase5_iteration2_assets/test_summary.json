@@ -1,0 +1,16 @@
+{
+  "before": {
+    "tests": 157,
+    "seconds": 3.521,
+    "result": "OK",
+    "failures": 0,
+    "errors": 0
+  },
+  "after": {
+    "tests": 170,
+    "new_point_tests": 13,
+    "returncode": 0,
+    "output": "----------------------------------------------------------------------\nRan 170 tests in 10.015s\n\nOK\n"
+  },
+  "offline_note": "SAM model factories mocked; native processor-only shape test uses a small synthetic image and no model weights/downloads."
+}

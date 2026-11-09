@@ -1,0 +1,17 @@
+{
+  "status": "DETECTED",
+  "valid_predictions": [
+    {
+      "box": [
+        441.8973388671875,
+        581.3589477539062,
+        953.31396484375,
+        924.9127197265625
+      ],
+      "score": 0.9432805180549622,
+      "label": "bicycle"
+    }
+  ],
+  "invalid_predictions": [],
+  "observations": []
+}

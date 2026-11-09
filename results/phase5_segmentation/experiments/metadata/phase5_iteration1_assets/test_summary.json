@@ -1,0 +1,16 @@
+{
+  "before": {
+    "tests": 126,
+    "seconds": 1.405,
+    "result": "OK",
+    "failures": 0,
+    "errors": 0
+  },
+  "after": {
+    "tests": 157,
+    "new_sam_tests": 31,
+    "returncode": 0,
+    "stdout_stderr": "----------------------------------------------------------------------\nRan 157 tests in 3.658s\n\nOK\n"
+  },
+  "offline": "All SAM model factories are mocked; no weights downloaded by tests. Accepted-review fixtures are synthetic declarations only."
+}

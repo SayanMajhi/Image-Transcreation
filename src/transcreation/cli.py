@@ -28,9 +28,41 @@ def main(argv: list[str] | None = None) -> None:
     plan.add_argument("--endpoint", help="Override the local /api/chat URL")
     plan.add_argument("--timeout", type=float, help="Override request timeout in seconds")
     plan.add_argument("--out", type=Path, default=Path("outputs/plan.json"), help="New audit JSON; existing files are preserved")
+    ground = commands.add_parser("ground", help="Research-only text localization; never executes planner edits")
+    ground.add_argument("--image", type=Path, required=True)
+    ground.add_argument("--phrase", required=True)
+    ground.add_argument("--config", type=Path, default=DEFAULT_CONFIG.with_name("grounding.yaml"))
+    ground.add_argument("--box-threshold", type=float)
+    ground.add_argument("--text-threshold", type=float)
+    ground.add_argument("--device", choices=("cuda", "cpu"))
+    ground.add_argument("--out", type=Path, required=True, help="New artifact directory")
     args = parser.parse_args(argv)
     if args.command is None:
         print("Culture Transcreation CLI is ready.")
+        return
+
+    if args.command == "ground":
+        from transcreation.config import load_grounding_config
+        from transcreation.stages.grounding import GroundingDetector, save_grounding_artifacts
+
+        detector = None
+        try:
+            if args.out.exists():
+                raise ValueError("grounding output directory already exists")
+            config = load_grounding_config(args.config)
+            overrides = {name: getattr(args, name) for name in ("box_threshold", "text_threshold", "device")
+                         if getattr(args, name) is not None}
+            detector = GroundingDetector(replace(config, **overrides))
+            result = detector.detect(args.image, args.phrase)
+            save_grounding_artifacts(args.image, result, args.out)
+        except (OSError, ValueError, RuntimeError, ImportError) as exc:
+            parser.error(str(exc))
+        finally:
+            if detector is not None:
+                detector.close()
+        print(f"{result.status}: {len(result.detections)} boxes; saved {args.out}")
+        if result.status in ("ERROR", "INVALID_OUTPUT"):
+            parser.error(str(result.observations))
         return
 
     if args.command == "plan":

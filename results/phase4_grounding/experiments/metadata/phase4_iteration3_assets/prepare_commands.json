@@ -1,0 +1,38 @@
+[
+  {
+    "example": "A_bicycle",
+    "command": ".\\.venv\\Scripts\\python.exe -B scripts/review_grounding.py prepare --detection reports/phase4_iteration2_assets/runs/R01_bicycle_replay/detection.json --image data/vlm_collection/scene_06.jpg --out reports/phase4_iteration3_assets/examples/A_bicycle",
+    "returncode": 0,
+    "stdout": "reports\\phase4_iteration3_assets\\examples\\A_bicycle\\pending.json\n",
+    "source_detection": "reports/phase4_iteration2_assets/runs/R01_bicycle_replay/detection.json",
+    "source_image": "data/vlm_collection/scene_06.jpg",
+    "actual_human_decision": "PENDING"
+  },
+  {
+    "example": "B_airplane_negative",
+    "command": ".\\.venv\\Scripts\\python.exe -B scripts/review_grounding.py prepare --detection reports/phase4_iteration2_assets/runs/N01_airplane_negative/detection.json --image data/vlm_collection/scene_06.jpg --out reports/phase4_iteration3_assets/examples/B_airplane_negative",
+    "returncode": 0,
+    "stdout": "reports\\phase4_iteration3_assets\\examples\\B_airplane_negative\\pending.json\n",
+    "source_detection": "reports/phase4_iteration2_assets/runs/N01_airplane_negative/detection.json",
+    "source_image": "data/vlm_collection/scene_06.jpg",
+    "actual_human_decision": "PENDING"
+  },
+  {
+    "example": "C_oil_lamp_multiple",
+    "command": ".\\.venv\\Scripts\\python.exe -B scripts/review_grounding.py prepare --detection reports/phase4_iteration2_assets/runs/A02_oil_lamp_020/detection.json --image data/vlm_collection/scene_02.jpg --out reports/phase4_iteration3_assets/examples/C_oil_lamp_multiple",
+    "returncode": 0,
+    "stdout": "reports\\phase4_iteration3_assets\\examples\\C_oil_lamp_multiple\\pending.json\n",
+    "source_detection": "reports/phase4_iteration2_assets/runs/A02_oil_lamp_020/detection.json",
+    "source_image": "data/vlm_collection/scene_02.jpg",
+    "actual_human_decision": "PENDING"
+  },
+  {
+    "example": "D_vessels_unresolved",
+    "command": ".\\.venv\\Scripts\\python.exe -B scripts/review_grounding.py prepare --detection reports/phase4_iteration2_assets/runs/B03_clay_incense_burner_030/detection.json --image data/sample_images/durga.jpg --out reports/phase4_iteration3_assets/examples/D_vessels_unresolved",
+    "returncode": 0,
+    "stdout": "reports\\phase4_iteration3_assets\\examples\\D_vessels_unresolved\\pending.json\n",
+    "source_detection": "reports/phase4_iteration2_assets/runs/B03_clay_incense_burner_030/detection.json",
+    "source_image": "data/sample_images/durga.jpg",
+    "actual_human_decision": "PENDING"
+  }
+]

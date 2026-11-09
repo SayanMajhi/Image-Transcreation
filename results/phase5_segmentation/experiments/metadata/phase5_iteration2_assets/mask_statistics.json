@@ -1,0 +1,780 @@
+{
+  "A_bicycle": {
+    "scope": "Descriptive comparison of predicted masks only. Neither baseline masks nor prompt labels are independent ground truth. Candidate indices are output positions, not established semantic correspondences.",
+    "baseline_masks": [
+      {
+        "index": 0,
+        "filename": "mask_0.png",
+        "dimensions": [
+          1280,
+          966
+        ],
+        "sam_score": 0.9553276300430298,
+        "foreground_pixels": 110800,
+        "mask_box": [
+          444,
+          578,
+          957,
+          924
+        ],
+        "status": "VALID"
+      },
+      {
+        "index": 1,
+        "filename": "mask_1.png",
+        "dimensions": [
+          1280,
+          966
+        ],
+        "sam_score": 0.9438023567199707,
+        "foreground_pixels": 88076,
+        "mask_box": [
+          444,
+          584,
+          956,
+          924
+        ],
+        "status": "VALID"
+      },
+      {
+        "index": 2,
+        "filename": "mask_2.png",
+        "dimensions": [
+          1280,
+          966
+        ],
+        "sam_score": 0.864693284034729,
+        "foreground_pixels": 72998,
+        "mask_box": [
+          444,
+          583,
+          949,
+          924
+        ],
+        "status": "VALID"
+      }
+    ],
+    "point_masks": [
+      {
+        "index": 0,
+        "filename": "mask_0.png",
+        "dimensions": [
+          1280,
+          966
+        ],
+        "sam_score": 0.8876341581344604,
+        "foreground_pixels": 97388,
+        "mask_box": [
+          432,
+          582,
+          949,
+          924
+        ],
+        "status": "VALID"
+      },
+      {
+        "index": 1,
+        "filename": "mask_1.png",
+        "dimensions": [
+          1280,
+          966
+        ],
+        "sam_score": 0.8160944581031799,
+        "foreground_pixels": 74911,
+        "mask_box": [
+          444,
+          583,
+          939,
+          925
+        ],
+        "status": "VALID"
+      },
+      {
+        "index": 2,
+        "filename": "mask_2.png",
+        "dimensions": [
+          1280,
+          966
+        ],
+        "sam_score": 0.7313309907913208,
+        "foreground_pixels": 26559,
+        "mask_box": [
+          444,
+          583,
+          914,
+          925
+        ],
+        "status": "VALID"
+      }
+    ],
+    "all_pairwise_overlaps": [
+      {
+        "baseline_index": 0,
+        "point_index": 0,
+        "baseline_pixels": 110800,
+        "point_pixels": 97388,
+        "intersection_pixels": 95285,
+        "union_pixels": 112903,
+        "point_only_pixels": 2103,
+        "baseline_only_pixels": 15515,
+        "prediction_overlap_ratio": 0.8439545450519472
+      },
+      {
+        "baseline_index": 0,
+        "point_index": 1,
+        "baseline_pixels": 110800,
+        "point_pixels": 74911,
+        "intersection_pixels": 73275,
+        "union_pixels": 112436,
+        "point_only_pixels": 1636,
+        "baseline_only_pixels": 37525,
+        "prediction_overlap_ratio": 0.6517040805435982
+      },
+      {
+        "baseline_index": 0,
+        "point_index": 2,
+        "baseline_pixels": 110800,
+        "point_pixels": 26559,
+        "intersection_pixels": 25841,
+        "union_pixels": 111518,
+        "point_only_pixels": 718,
+        "baseline_only_pixels": 84959,
+        "prediction_overlap_ratio": 0.23172043974963683
+      },
+      {
+        "baseline_index": 1,
+        "point_index": 0,
+        "baseline_pixels": 88076,
+        "point_pixels": 97388,
+        "intersection_pixels": 85879,
+        "union_pixels": 99585,
+        "point_only_pixels": 11509,
+        "baseline_only_pixels": 2197,
+        "prediction_overlap_ratio": 0.8623688306471858
+      },
+      {
+        "baseline_index": 1,
+        "point_index": 1,
+        "baseline_pixels": 88076,
+        "point_pixels": 74911,
+        "intersection_pixels": 70611,
+        "union_pixels": 92376,
+        "point_only_pixels": 4300,
+        "baseline_only_pixels": 17465,
+        "prediction_overlap_ratio": 0.7643868537282411
+      },
+      {
+        "baseline_index": 1,
+        "point_index": 2,
+        "baseline_pixels": 88076,
+        "point_pixels": 26559,
+        "intersection_pixels": 24343,
+        "union_pixels": 90292,
+        "point_only_pixels": 2216,
+        "baseline_only_pixels": 63733,
+        "prediction_overlap_ratio": 0.2696030656093563
+      },
+      {
+        "baseline_index": 2,
+        "point_index": 0,
+        "baseline_pixels": 72998,
+        "point_pixels": 97388,
+        "intersection_pixels": 71722,
+        "union_pixels": 98664,
+        "point_only_pixels": 25666,
+        "baseline_only_pixels": 1276,
+        "prediction_overlap_ratio": 0.72693180896781
+      },
+      {
+        "baseline_index": 2,
+        "point_index": 1,
+        "baseline_pixels": 72998,
+        "point_pixels": 74911,
+        "intersection_pixels": 59488,
+        "union_pixels": 88421,
+        "point_only_pixels": 15423,
+        "baseline_only_pixels": 13510,
+        "prediction_overlap_ratio": 0.6727813528460433
+      },
+      {
+        "baseline_index": 2,
+        "point_index": 2,
+        "baseline_pixels": 72998,
+        "point_pixels": 26559,
+        "intersection_pixels": 23721,
+        "union_pixels": 75836,
+        "point_only_pixels": 2838,
+        "baseline_only_pixels": 49277,
+        "prediction_overlap_ratio": 0.3127933962761749
+      }
+    ],
+    "prompt_pixel_membership": [
+      {
+        "mask_index": 0,
+        "matches": 6,
+        "supplied_points": 8,
+        "checks": [
+          {
+            "point_index": 0,
+            "x": 680,
+            "y": 653,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 1,
+            "x": 658,
+            "y": 722,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 2,
+            "x": 550,
+            "y": 913,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 3,
+            "x": 850,
+            "y": 882,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 4,
+            "x": 830,
+            "y": 625,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 5,
+            "x": 680,
+            "y": 695,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 6,
+            "x": 505,
+            "y": 750,
+            "supplied_research_label": 0,
+            "predicted_foreground": 1,
+            "matches_supplied_label": false
+          },
+          {
+            "point_index": 7,
+            "x": 908,
+            "y": 758,
+            "supplied_research_label": 0,
+            "predicted_foreground": 1,
+            "matches_supplied_label": false
+          }
+        ]
+      },
+      {
+        "mask_index": 1,
+        "matches": 7,
+        "supplied_points": 8,
+        "checks": [
+          {
+            "point_index": 0,
+            "x": 680,
+            "y": 653,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 1,
+            "x": 658,
+            "y": 722,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 2,
+            "x": 550,
+            "y": 913,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 3,
+            "x": 850,
+            "y": 882,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 4,
+            "x": 830,
+            "y": 625,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 5,
+            "x": 680,
+            "y": 695,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 6,
+            "x": 505,
+            "y": 750,
+            "supplied_research_label": 0,
+            "predicted_foreground": 1,
+            "matches_supplied_label": false
+          },
+          {
+            "point_index": 7,
+            "x": 908,
+            "y": 758,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          }
+        ]
+      },
+      {
+        "mask_index": 2,
+        "matches": 8,
+        "supplied_points": 8,
+        "checks": [
+          {
+            "point_index": 0,
+            "x": 680,
+            "y": 653,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 1,
+            "x": 658,
+            "y": 722,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 2,
+            "x": 550,
+            "y": 913,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 3,
+            "x": 850,
+            "y": 882,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 4,
+            "x": 830,
+            "y": 625,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 5,
+            "x": 680,
+            "y": 695,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 6,
+            "x": 505,
+            "y": 750,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 7,
+            "x": 908,
+            "y": 758,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          }
+        ]
+      }
+    ]
+  },
+  "B_oil_lamp": {
+    "scope": "Descriptive comparison of predicted masks only. Neither baseline masks nor prompt labels are independent ground truth. Candidate indices are output positions, not established semantic correspondences.",
+    "baseline_masks": [
+      {
+        "index": 0,
+        "filename": "mask_0.png",
+        "dimensions": [
+          1280,
+          842
+        ],
+        "sam_score": 0.9646106362342834,
+        "foreground_pixels": 33862,
+        "mask_box": [
+          635,
+          253,
+          888,
+          444
+        ],
+        "status": "VALID"
+      },
+      {
+        "index": 1,
+        "filename": "mask_1.png",
+        "dimensions": [
+          1280,
+          842
+        ],
+        "sam_score": 0.9569181799888611,
+        "foreground_pixels": 30373,
+        "mask_box": [
+          634,
+          253,
+          888,
+          442
+        ],
+        "status": "VALID"
+      },
+      {
+        "index": 2,
+        "filename": "mask_2.png",
+        "dimensions": [
+          1280,
+          842
+        ],
+        "sam_score": 0.9472739696502686,
+        "foreground_pixels": 27917,
+        "mask_box": [
+          634,
+          253,
+          888,
+          442
+        ],
+        "status": "VALID"
+      }
+    ],
+    "point_masks": [
+      {
+        "index": 0,
+        "filename": "mask_0.png",
+        "dimensions": [
+          1280,
+          842
+        ],
+        "sam_score": 0.9707409143447876,
+        "foreground_pixels": 32088,
+        "mask_box": [
+          634,
+          253,
+          888,
+          444
+        ],
+        "status": "VALID"
+      },
+      {
+        "index": 1,
+        "filename": "mask_1.png",
+        "dimensions": [
+          1280,
+          842
+        ],
+        "sam_score": 0.962729811668396,
+        "foreground_pixels": 31757,
+        "mask_box": [
+          634,
+          253,
+          888,
+          443
+        ],
+        "status": "VALID"
+      },
+      {
+        "index": 2,
+        "filename": "mask_2.png",
+        "dimensions": [
+          1280,
+          842
+        ],
+        "sam_score": 0.945954442024231,
+        "foreground_pixels": 27687,
+        "mask_box": [
+          634,
+          252,
+          888,
+          441
+        ],
+        "status": "VALID"
+      }
+    ],
+    "all_pairwise_overlaps": [
+      {
+        "baseline_index": 0,
+        "point_index": 0,
+        "baseline_pixels": 33862,
+        "point_pixels": 32088,
+        "intersection_pixels": 32050,
+        "union_pixels": 33900,
+        "point_only_pixels": 38,
+        "baseline_only_pixels": 1812,
+        "prediction_overlap_ratio": 0.9454277286135693
+      },
+      {
+        "baseline_index": 0,
+        "point_index": 1,
+        "baseline_pixels": 33862,
+        "point_pixels": 31757,
+        "intersection_pixels": 31643,
+        "union_pixels": 33976,
+        "point_only_pixels": 114,
+        "baseline_only_pixels": 2219,
+        "prediction_overlap_ratio": 0.9313338827407582
+      },
+      {
+        "baseline_index": 0,
+        "point_index": 2,
+        "baseline_pixels": 33862,
+        "point_pixels": 27687,
+        "intersection_pixels": 27571,
+        "union_pixels": 33978,
+        "point_only_pixels": 116,
+        "baseline_only_pixels": 6291,
+        "prediction_overlap_ratio": 0.8114368120548591
+      },
+      {
+        "baseline_index": 1,
+        "point_index": 0,
+        "baseline_pixels": 30373,
+        "point_pixels": 32088,
+        "intersection_pixels": 30310,
+        "union_pixels": 32151,
+        "point_only_pixels": 1778,
+        "baseline_only_pixels": 63,
+        "prediction_overlap_ratio": 0.942738950576965
+      },
+      {
+        "baseline_index": 1,
+        "point_index": 1,
+        "baseline_pixels": 30373,
+        "point_pixels": 31757,
+        "intersection_pixels": 30183,
+        "union_pixels": 31947,
+        "point_only_pixels": 1574,
+        "baseline_only_pixels": 190,
+        "prediction_overlap_ratio": 0.9447835477509625
+      },
+      {
+        "baseline_index": 1,
+        "point_index": 2,
+        "baseline_pixels": 30373,
+        "point_pixels": 27687,
+        "intersection_pixels": 27618,
+        "union_pixels": 30442,
+        "point_only_pixels": 69,
+        "baseline_only_pixels": 2755,
+        "prediction_overlap_ratio": 0.9072334275014782
+      },
+      {
+        "baseline_index": 2,
+        "point_index": 0,
+        "baseline_pixels": 27917,
+        "point_pixels": 32088,
+        "intersection_pixels": 27835,
+        "union_pixels": 32170,
+        "point_only_pixels": 4253,
+        "baseline_only_pixels": 82,
+        "prediction_overlap_ratio": 0.8652471246502953
+      },
+      {
+        "baseline_index": 2,
+        "point_index": 1,
+        "baseline_pixels": 27917,
+        "point_pixels": 31757,
+        "intersection_pixels": 27844,
+        "union_pixels": 31830,
+        "point_only_pixels": 3913,
+        "baseline_only_pixels": 73,
+        "prediction_overlap_ratio": 0.8747722274583726
+      },
+      {
+        "baseline_index": 2,
+        "point_index": 2,
+        "baseline_pixels": 27917,
+        "point_pixels": 27687,
+        "intersection_pixels": 27482,
+        "union_pixels": 28122,
+        "point_only_pixels": 205,
+        "baseline_only_pixels": 435,
+        "prediction_overlap_ratio": 0.9772420169262499
+      }
+    ],
+    "prompt_pixel_membership": [
+      {
+        "mask_index": 0,
+        "matches": 5,
+        "supplied_points": 5,
+        "checks": [
+          {
+            "point_index": 0,
+            "x": 650,
+            "y": 330,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 1,
+            "x": 760,
+            "y": 418,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 2,
+            "x": 850,
+            "y": 365,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 3,
+            "x": 769,
+            "y": 310,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 4,
+            "x": 880,
+            "y": 420,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          }
+        ]
+      },
+      {
+        "mask_index": 1,
+        "matches": 5,
+        "supplied_points": 5,
+        "checks": [
+          {
+            "point_index": 0,
+            "x": 650,
+            "y": 330,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 1,
+            "x": 760,
+            "y": 418,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 2,
+            "x": 850,
+            "y": 365,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 3,
+            "x": 769,
+            "y": 310,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 4,
+            "x": 880,
+            "y": 420,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          }
+        ]
+      },
+      {
+        "mask_index": 2,
+        "matches": 5,
+        "supplied_points": 5,
+        "checks": [
+          {
+            "point_index": 0,
+            "x": 650,
+            "y": 330,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 1,
+            "x": 760,
+            "y": 418,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 2,
+            "x": 850,
+            "y": 365,
+            "supplied_research_label": 1,
+            "predicted_foreground": 1,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 3,
+            "x": 769,
+            "y": 310,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          },
+          {
+            "point_index": 4,
+            "x": 880,
+            "y": 420,
+            "supplied_research_label": 0,
+            "predicted_foreground": 0,
+            "matches_supplied_label": true
+          }
+        ]
+      }
+    ]
+  }
+}

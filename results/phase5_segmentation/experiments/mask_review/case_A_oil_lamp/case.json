@@ -1,0 +1,17 @@
+{
+  "record_type": "mask_review_case_manifest",
+  "preparation_status": "PENDING",
+  "status_origin": "preparation triage, not a human decision",
+  "case_note": "Candidates 0 and 1 await actual human comparison; neither is accepted.",
+  "human_decision": "PENDING",
+  "target_definition": "Visible clay bowl/body only. Exclude flame and unrelated surrounding objects. Approval is not for complete lamp replacement.",
+  "controlled_experiment": "Controlled bowl-only mask inspection and segmentation-test evaluation; no image modification.",
+  "candidate_indices": [
+    0,
+    1
+  ],
+  "requests": [
+    "pending_0.json",
+    "pending_1.json"
+  ]
+}

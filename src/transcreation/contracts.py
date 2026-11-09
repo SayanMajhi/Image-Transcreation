@@ -222,3 +222,180 @@ class PlanningResult:
 class CulturalPlanner(Protocol):
     def plan(self, request: PlanningInput) -> PlanningResult:
         ...
+
+
+@dataclass(frozen=True)
+class GroundingDetection:
+    """One model-returned source-image box; not approval to modify an object."""
+
+    box: tuple[float, float, float, float]
+    score: float
+    label: str
+
+    def validate(self, width: int, height: int) -> None:
+        import math
+
+        if width <= 0 or height <= 0:
+            raise ValueError("image dimensions must be positive")
+        if len(self.box) != 4 or any(type(v) not in (float, int) or not math.isfinite(v) for v in self.box):
+            raise ValueError("box requires four finite coordinates")
+        x0, y0, x1, y1 = self.box
+        if not (0 <= x0 < x1 <= width and 0 <= y0 < y1 <= height):
+            raise ValueError("box must be ordered and within original-image boundaries")
+        if type(self.score) not in (float, int) or not math.isfinite(self.score) or not 0 <= self.score <= 1:
+            raise ValueError("score must be finite and within [0, 1]")
+        if not isinstance(self.label, str):
+            raise ValueError("returned label must be text")
+
+
+@dataclass(frozen=True)
+class GroundingResult:
+    image_sha256: str
+    original_dimensions: tuple[int, int]
+    source_phrase: str
+    model_id: str
+    resolved_revision: str
+    status: str
+    detections: tuple[GroundingDetection, ...]
+    settings: dict[str, Any]
+    timing: dict[str, Any]
+    memory: dict[str, Any]
+    raw_predictions: dict[str, Any]
+    observations: tuple[dict[str, Any], ...] = ()
+    research_only: bool = True
+
+    def __post_init__(self) -> None:
+        if self.status not in ("DETECTED", "NO_DETECTIONS", "INVALID_OUTPUT", "ERROR"):
+            raise ValueError("invalid detection status")
+        if len(self.original_dimensions) != 2 or any(type(v) is not int or v <= 0 for v in self.original_dimensions):
+            raise ValueError("original dimensions must be positive integer width and height")
+        for item in self.detections:
+            item.validate(*self.original_dimensions)
+        if (self.status == "DETECTED" and not self.detections) or (
+            self.status in ("NO_DETECTIONS", "ERROR") and self.detections
+        ):
+            raise ValueError("detection status and boxes disagree")
+
+
+@dataclass(frozen=True)
+class SamPoint:
+    x: float
+    y: float
+    label: int
+    note: str = ""
+
+    def __post_init__(self) -> None:
+        import math
+
+        if any(type(v) not in (int, float) or not math.isfinite(v) for v in (self.x, self.y)):
+            raise ValueError("SAM point coordinates must be finite numbers")
+        if type(self.label) is not int or self.label not in (0, 1):
+            raise ValueError("SAM point label must be integer 1 (foreground) or 0 (background)")
+        if not isinstance(self.note, str):
+            raise ValueError("point note must be text")
+
+
+@dataclass(frozen=True)
+class SegmentationInput:
+    source_image: str
+    image_sha256: str
+    original_dimensions: tuple[int, int]
+    detection_file: str
+    detection_sha256: str
+    prediction_index: int
+    selected_detection: GroundingDetection
+    source_phrase: str
+    grounding_model_id: str
+    grounding_revision: str
+    selection_status: str
+    selection_note: str
+    review_file: str | None = None
+    review_sha256: str | None = None
+    image_edit_authorized: bool = False
+    cultural_transformation_authorized: bool = False
+    points: tuple[SamPoint, ...] = ()
+    point_prompt_file: str | None = None
+    point_prompt_sha256: str | None = None
+
+    def __post_init__(self) -> None:
+        if self.image_edit_authorized is not False or self.cultural_transformation_authorized is not False:
+            raise ValueError("segmentation research cannot authorize editing")
+        if self.selection_status not in ("RESEARCH_ONLY", "REVIEWED_SELECTION"):
+            raise ValueError("choose explicit research-only or validated reviewed selection")
+        if type(self.prediction_index) is not int or self.prediction_index < 0:
+            raise ValueError("segmentation requires an explicit zero-based index")
+        if not isinstance(self.selection_note, str) or not self.selection_note.strip():
+            raise ValueError("record why this source box is being tested")
+        if self.selection_status == "REVIEWED_SELECTION" and (not self.review_file or not self.review_sha256):
+            raise ValueError("reviewed selection requires bound review evidence")
+        self.selected_detection.validate(*self.original_dimensions)
+        if not isinstance(self.points, tuple) or any(not isinstance(point, SamPoint) for point in self.points):
+            raise ValueError("points must be a tuple of SamPoint values")
+        if self.point_prompt_file is not None:
+            if self.selection_status != "RESEARCH_ONLY" or not self.point_prompt_sha256:
+                raise ValueError("new point annotations require explicit research-only provenance")
+        elif self.points or self.point_prompt_sha256:
+            raise ValueError("point annotations require a bound source file/hash")
+        width, height = self.original_dimensions
+        if any(not (0 <= point.x < width and 0 <= point.y < height) for point in self.points):
+            raise ValueError("point coordinates must lie inside the original image")
+
+
+@dataclass(frozen=True)
+class SegmentationMask:
+    index: int
+    filename: str
+    dimensions: tuple[int, int]
+    sam_score: float
+    foreground_pixels: int
+    mask_box: tuple[int, int, int, int] | None
+    status: str
+
+    def __post_init__(self) -> None:
+        import math
+
+        if type(self.index) is not int or self.index < 0 or not self.filename:
+            raise ValueError("mask requires an index and filename")
+        if len(self.dimensions) != 2 or any(type(v) is not int or v <= 0 for v in self.dimensions):
+            raise ValueError("mask dimensions must be positive integer width and height")
+        if type(self.sam_score) not in (int, float) or not math.isfinite(self.sam_score):
+            raise ValueError("SAM score must be finite; it is not measured accuracy")
+        width, height = self.dimensions
+        if type(self.foreground_pixels) is not int or not 0 <= self.foreground_pixels <= width * height:
+            raise ValueError("invalid foreground pixel count")
+        if self.status not in ("VALID", "REJECTED_EMPTY"):
+            raise ValueError("unknown mask status")
+        if self.status == "REJECTED_EMPTY":
+            if self.foreground_pixels != 0 or self.mask_box is not None:
+                raise ValueError("empty rejected mask cannot have foreground bounds")
+        else:
+            if not self.foreground_pixels or self.mask_box is None:
+                raise ValueError("valid mask cannot be empty")
+            GroundingDetection(self.mask_box, 0.0, "mask extent").validate(width, height)
+
+
+@dataclass(frozen=True)
+class SegmentationResult:
+    request: SegmentationInput
+    model_id: str
+    resolved_revision: str | None
+    status: str
+    masks: tuple[SegmentationMask, ...]
+    visualization_mask_index: int | None
+    settings: dict[str, Any]
+    timing: dict[str, Any]
+    memory: dict[str, Any]
+    observations: tuple[dict[str, Any], ...]
+    image_edit_authorized: bool = False
+    cultural_transformation_authorized: bool = False
+
+    def __post_init__(self) -> None:
+        if self.status not in ("SEGMENTED", "PARTIAL_INVALID", "INVALID_OUTPUT", "ERROR"):
+            raise ValueError("unknown segmentation status")
+        if self.image_edit_authorized is not False or self.cultural_transformation_authorized is not False:
+            raise ValueError("segmentation results never authorize editing")
+        valid = [mask.index for mask in self.masks if mask.status == "VALID"]
+        if self.visualization_mask_index is not None and self.visualization_mask_index not in valid:
+            raise ValueError("visualization must reference a nonempty saved mask")
+        if self.status == "SEGMENTED" and (not self.masks or len(valid) != len(self.masks)):
+            raise ValueError("segmented status requires valid masks")

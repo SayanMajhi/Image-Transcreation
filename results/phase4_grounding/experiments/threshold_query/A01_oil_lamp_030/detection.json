@@ -1,0 +1,104 @@
+{
+  "image_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+  "original_dimensions": [
+    1280,
+    842
+  ],
+  "source_phrase": "oil lamp",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "resolved_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        631.4442138671875,
+        248.13294982910156,
+        889.331787109375,
+        443.25518798828125
+      ],
+      "score": 0.31422239542007446,
+      "label": "oil lamp"
+    }
+  ],
+  "settings": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42,
+    "effective_device": "cuda",
+    "normalized_prompt": "oil lamp.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "disable_custom_kernels": true,
+    "inference_mode": true,
+    "eval": true,
+    "coordinate_format": "xyxy_original_pixels",
+    "postprocess_box_argument": "threshold",
+    "target_sizes": [
+      [
+        842,
+        1280
+      ]
+    ],
+    "image_processor": {
+      "_processor_class": "GroundingDinoProcessor",
+      "image_processor_type": "GroundingDinoImageProcessor",
+      "format": "coco_detection",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1333,
+        "shortest_edge": 800
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "do_convert_annotations": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": null
+    }
+  },
+  "timing": {
+    "load_seconds": 3.2999960239976645e-06,
+    "preprocess_seconds": 0.07154250000894535,
+    "inference_seconds": 1.2007763000001432,
+    "postprocess_seconds": 0.001883600009023212,
+    "total_seconds": 1.3146568999945885
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 692084224,
+    "inference_peak_allocated_bytes": 1984237056,
+    "device": "cuda"
+  },
+  "raw_predictions": {
+    "boxes": [
+      [
+        631.4442138671875,
+        248.13294982910156,
+        889.331787109375,
+        443.25518798828125
+      ]
+    ],
+    "scores": [
+      0.31422239542007446
+    ],
+    "text_labels": [
+      "oil lamp"
+    ]
+  },
+  "observations": [],
+  "research_only": true
+}

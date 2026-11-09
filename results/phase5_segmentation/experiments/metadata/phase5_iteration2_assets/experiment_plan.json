@@ -1,0 +1,46 @@
+{
+  "declared_at_utc": "2026-11-09T11:09:44.916159+00:00",
+  "real_sam_conditions": 2,
+  "mode": "RESEARCH_ONLY",
+  "point_approval": "research annotations requiring independent review; not human-approved or ground-truth labels",
+  "no_post_result_changes": true,
+  "targets": {
+    "A_bicycle": "Physical bicycle parts, including frame, handlebars, saddle, rims, tires and visible spokes. Exclude wall, road and background visible through wheels.",
+    "B_oil_lamp": "For this diagnostic only: visible clay lamp bowl/body. Exclude flame, unrelated tray, rice/grains and surrounding background. This bowl-only target is not sufficient for full lamp replacement; eventual flame, wick and supporting-object treatment remains separate and unresolved."
+  },
+  "conditions": [
+    {
+      "experiment": "A_bicycle",
+      "source_image": "data\\vlm_collection\\scene_06.jpg",
+      "detection_file": "reports\\phase4_iteration2_assets\\runs\\R01_bicycle_replay\\detection.json",
+      "prediction_index": 0,
+      "original_box": [
+        441.8973388671875,
+        581.3589477539062,
+        953.31396484375,
+        924.9127197265625
+      ],
+      "point_file": "reports/phase5_iteration2_assets/prompts/A_bicycle.json",
+      "point_sha256": "8dcf2a168ce68b8958a00fabc12ba1fb9ddb894e1911bcabecd3e16567d68ea4",
+      "preview_sha256": "9128a9696a68c011ac06e57937a666cc98027855a819aa28ddc360dd7b6471dc",
+      "point_count": 8
+    },
+    {
+      "experiment": "B_oil_lamp",
+      "source_image": "data\\vlm_collection\\scene_02.jpg",
+      "detection_file": "reports\\phase4_iteration2_assets\\runs\\A02_oil_lamp_020\\detection.json",
+      "prediction_index": 2,
+      "original_box": [
+        631.4442138671875,
+        248.13294982910156,
+        889.331787109375,
+        443.25518798828125
+      ],
+      "point_file": "reports/phase5_iteration2_assets/prompts/B_oil_lamp.json",
+      "point_sha256": "49c3e6f58bdc84f3ec620fdc52718f1224ff911ccebf761f416a1b5eaef3c8f4",
+      "preview_sha256": "32fe4e56f7da36ee680590ddbea49980942ca1484bd4b58a1b6758b57d8288f0",
+      "point_count": 5
+    }
+  ],
+  "placement_note": "Coordinates manually selected by visual inspection of the original photographs. One provisional front-wheel background point was moved from (904,753) to (908,758) before preregistration because the original-source zoom placed it close to a spoke; no SAM result had been run or viewed for this point set. Draft inspection preview retained separately."
+}
