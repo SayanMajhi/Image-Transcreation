@@ -399,3 +399,31 @@ class SegmentationResult:
             raise ValueError("visualization must reference a nonempty saved mask")
         if self.status == "SEGMENTED" and (not self.masks or len(valid) != len(self.masks)):
             raise ValueError("segmented status requires valid masks")
+
+
+@dataclass(frozen=True)
+class InpaintingInput:
+    source_image: str
+    image_sha256: str
+    segmentation_file: str
+    segmentation_sha256: str
+    mask_file: str
+    mask_sha256: str
+    candidate_index: int
+    prompt: str
+    selection_note: str
+    scope: str  # explicit user-directed isolated research, never inferred from a review or plan
+
+    def __post_init__(self) -> None:
+        if self.scope != "RESEARCH_ONLY":
+            raise ValueError("only explicit isolated RESEARCH_ONLY generation is supported")
+        for name in ("source_image", "segmentation_file", "mask_file", "prompt", "selection_note"):
+            value = getattr(self, name)
+            if not isinstance(value, str) or not value.strip() or value.strip().lower() in ("null", "none", "n/a"):
+                raise ValueError(f"{name} must be meaningful text")
+        for name in ("image_sha256", "segmentation_sha256", "mask_sha256"):
+            value = getattr(self, name)
+            if not isinstance(value, str) or len(value) != 64 or any(c not in "0123456789abcdef" for c in value):
+                raise ValueError(f"{name} must be a SHA-256")
+        if type(self.candidate_index) is not int or self.candidate_index < 0:
+            raise ValueError("select one explicit integer SAM candidate index")

@@ -2,7 +2,7 @@
 
 An undergraduate research project investigating culturally contextual image adaptation while preserving the original scene's activity, people and relationships.
 
-The project implements independent captioning, planning, localization, segmentation and review stages. **It does not yet perform image editing or complete end-to-end transcreation.** Phase 6 diffusion inpainting has not started.
+The project implements independent captioning, planning, localization, segmentation and review stages. Phase 6 now has an isolated RESEARCH_ONLY diffusion-inpainting feasibility experiment. **Complete end-to-end cultural transcreation is not implemented.** Phase 6 awaits mentor evaluation.
 
 ## Implemented pipeline
 
@@ -18,7 +18,7 @@ Independent research: Grounding DINO box -> explicit selection -> SAM masks -> m
 - **SAM ViT-Base:** box and optional positive/negative point prompts; all three candidate masks retained.
 - **Mask review:** hash-bound selection for a specified segmentation test only. No genuine human-approved mask is recorded.
 
-Python 3.11, PyTorch, Transformers 4.57.6, Pillow and PyYAML. Recorded experiments used an RTX 3050 Laptop GPU with 4 GB VRAM. Run model stages sequentially.
+Python 3.11, PyTorch, Transformers 4.57.6, Pillow and PyYAML; optional Diffusers 0.35.2 and Accelerate 1.11.0 for inpainting. Recorded experiments used an RTX 3050 Laptop GPU with 4 GB VRAM. Run model stages sequentially.
 
 ## Structure
 
@@ -29,11 +29,12 @@ scripts/                   independent SAM, evaluation and review commands
 tests/                     offline regression tests and fixtures
 data/                      source images; mostly local and Git-ignored
 outputs/                   new generated runs; Git-ignored
-reports/                   exactly five final phase reports
+reports/                   five final phase reports and one Phase 6 working report
 results/phase2_vlm/         actual caption/comparison evidence
 results/phase3_llm/         actual raw/validated planner trials
 results/phase4_grounding/   detections, comparisons and box reviews
 results/phase5_segmentation/ masks, point protocols and mask reviews
+results/phase6_inpainting/  isolated inpainting evidence; no cultural editing approval
 .local_archive/            historical development records and cleanup audits
 ```
 
@@ -73,6 +74,14 @@ Prepare review evidence without inference:
 
 Preparation creates PENDING requests. A real reviewer must inspect the original, mask and overlay before submitting a named decision through `scripts.review_mask decide`. Acceptance is restricted to a segmentation experiment and does not authorize cultural editing.
 
+Isolated inpainting (requires `pip install -e ".[inpainting]"`):
+
+```powershell
+.\.venv\Scripts\python.exe -B -m scripts.inpaint --input results/phase6_inpainting/iteration1/input.json --out outputs/inpainting_new
+```
+
+This explicit research request is not planner integration or inherited review approval. [Phase 6 working report](reports/phase6_working.md) records the single experiment and limitations; no polished final Phase 6 report exists.
+
 ## Tests
 
 ```powershell
@@ -97,4 +106,4 @@ The offline suite uses mocks/synthetic fixtures and does not download model weig
 
 Captions can hallucinate or truncate; text checks cannot prove cultural correctness. Grounding mislabeled a bicycle as an airplane in a negative control. SAM still loses bicycle spokes/rims or includes background. Lamp review is bowl-only and PENDING. No independent box/mask ground truth supports accuracy claims.
 
-Historical text/provenance has a [nonignored preservation copy](results/historical_text_provenance.zip), but no independent external backup is verified. Original images retain attribution/license restrictions; see result summaries. Inspect evidence and obtain mentor review before Phase 6.
+Historical text/provenance has a [nonignored preservation copy](results/historical_text_provenance.zip), but no independent external backup is verified. Original images retain attribution/license restrictions; see result summaries. Inspect evidence and obtain mentor review before the next Phase 6 iteration. No mask has been human-approved.

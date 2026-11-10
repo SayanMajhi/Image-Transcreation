@@ -1,0 +1,17 @@
+[
+  {
+    "source": "results/phase5_segmentation/experiments/mask_review/case_A_oil_lamp/pending_0.json",
+    "copy": "results/phase6_inpainting/iteration1/review_provenance/pending_0.json",
+    "sha256": "531f5c0563aa1088fceb47af73cd8e72b577507b81d872aef47e88ba5152cbcb"
+  },
+  {
+    "source": "results/phase5_segmentation/experiments/mask_review/case_A_oil_lamp/pending_1.json",
+    "copy": "results/phase6_inpainting/iteration1/review_provenance/pending_1.json",
+    "sha256": "42d14eac8a9a2474b55bec50983c19e793bc79abc4b2d37279f3cb1dbf41782d"
+  },
+  {
+    "source": "results/phase5_segmentation/experiments/mask_review/case_A_oil_lamp/case.json",
+    "copy": "results/phase6_inpainting/iteration1/review_provenance/case.json",
+    "sha256": "f894f7a0ecd4ae258c4c655217cf900109ab6581ac8468ea7d5d7c966f24ea75"
+  }
+]

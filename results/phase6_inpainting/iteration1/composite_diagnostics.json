@@ -1,0 +1,11 @@
+{
+  "restored_crop_dimensions": [
+    382,
+    319
+  ],
+  "noneditable_pixels_in_crop": 89770,
+  "raw_restored_changed_noneditable_pixels": 89372,
+  "raw_restored_changed_editable_pixels": 32080,
+  "final_changed_outside_original_mask": 0,
+  "interpretation": "Raw model crop and resizing can alter context. Final hard binary compositing discards all generated noneditable pixels. No additional inference."
+}

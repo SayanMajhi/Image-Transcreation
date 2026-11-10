@@ -1,0 +1,50 @@
+{
+  "bowl_crop": [
+    570,
+    189,
+    952,
+    508
+  ],
+  "bowl_zoom": 2,
+  "bowl_resampling": "LANCZOS display only",
+  "detail_regions": [
+    [
+      "Rim",
+      [
+        632,
+        248,
+        891,
+        302
+      ]
+    ],
+    [
+      "Wick/base",
+      [
+        725,
+        333,
+        817,
+        410
+      ]
+    ],
+    [
+      "Interior texture",
+      [
+        677,
+        335,
+        735,
+        379
+      ]
+    ],
+    [
+      "Surrounding support",
+      [
+        593,
+        421,
+        918,
+        541
+      ]
+    ]
+  ],
+  "detail_resampling": "NEAREST display only",
+  "no_generation_crop_or_mask_changed": true
+}

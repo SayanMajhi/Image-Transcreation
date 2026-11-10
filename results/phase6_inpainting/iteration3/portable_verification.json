@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "stdout": "{\n  \"manifest_files\": 178,\n  \"alpha_outside\": 0,\n  \"changed_inside\": 32080,\n  \"changed_outside\": 0,\n  \"hard_vs_blended_pixels\": 9630,\n  \"RGB_integer_reference_exact\": true,\n  \"old_report_prefix_preserved\": true,\n  \"model_imports_or_calls\": 0\n}\n",
+  "stderr": "",
+  "model_calls": 0
+}

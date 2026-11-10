@@ -1,0 +1,10 @@
+usage: inpaint.py [-h] --input INPUT [--config CONFIG] --out OUT
+
+Run one explicitly scoped inpainting research request, independently of the
+planner.
+
+options:
+  -h, --help       show this help message and exit
+  --input INPUT    Explicit RESEARCH_ONLY request with pinned source hashes
+  --config CONFIG
+  --out OUT        New experiment directory

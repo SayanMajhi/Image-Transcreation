@@ -1,0 +1,15 @@
+usage: cli.py [-h] [--version] {caption,plan,ground} ...
+
+Culture transcreation research CLI.
+
+positional arguments:
+  {caption,plan,ground}
+    caption             Caption one image with SmolVLM-500M
+    plan                Plan cultural edits with local Ollama; never modifies
+                        images
+    ground              Research-only text localization; never executes
+                        planner edits
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit

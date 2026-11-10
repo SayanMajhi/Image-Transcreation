@@ -1,0 +1,21 @@
+{
+  "source_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+  "original_mask_sha256": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+  "original_dimensions": [
+    1280,
+    842
+  ],
+  "mask_dimensions": [
+    1280,
+    842
+  ],
+  "original_editable_pixels": 32088,
+  "mask_edits": 0,
+  "new_mask_available": false,
+  "new_output_available": false,
+  "outside_revised_mask_pixel_changes": null,
+  "outside_original_mask_changes_from_this_iteration": 0,
+  "note": "Zero edits/calls performed. No new diffusion image exists; do not interpret absent revised-output metrics as measured localization success. Prior I2/I3 outside-mask equality was independently rechecked.",
+  "generation_calls": 0,
+  "copies_verified": true
+}

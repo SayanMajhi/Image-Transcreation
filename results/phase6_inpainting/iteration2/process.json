@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "results\\phase6_inpainting\\iteration2\\execute_once.py"
+  ],
+  "returncode": 0,
+  "wall_seconds": 30.31319159999839
+}

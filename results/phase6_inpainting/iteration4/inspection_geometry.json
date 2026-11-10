@@ -1,0 +1,18 @@
+{
+  "grid_crop_xyxy": [
+    738,
+    350,
+    806,
+    398
+  ],
+  "grid_zoom": 12,
+  "context_crop_xyxy": [
+    720,
+    320,
+    820,
+    410
+  ],
+  "context_zoom": 10,
+  "resampling": "NEAREST view only; no additional source detail",
+  "mask_edits_so_far": 0
+}

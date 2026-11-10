@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "stdout": "PASS: original source/mask, prior image locality, unchanged report prefix and blocked zero-edit/zero-generation decision verified. No new output exists.\n",
+  "stderr": "",
+  "model_calls": 0
+}

@@ -1,0 +1,12 @@
+{
+  "checked_files": 100,
+  "unchanged_except_appended_report": true,
+  "changed": [
+    "reports/phase6_working.md"
+  ],
+  "original_report_prefix_unchanged": true,
+  "all_iteration1_files_and_zip_unchanged": true,
+  "all_application_scripts_tests_configs_unchanged": true,
+  "old_report_sha256": "2ee13c78251b5ba0b0cf5003797f46b7246d587711bb523096937c5f4bb5c6de",
+  "new_report_sha256": "62761dca674768d17621f67ec94717da5d45d3a4e7b75fd23e74ebcedcb3f1bf"
+}

@@ -232,3 +232,45 @@ def load_sam_config(path: Path) -> SamConfig:
         return SamConfig(**values)
     except (TypeError, yaml.YAMLError) as exc:
         raise ValueError(f"invalid SAM configuration: {exc}") from exc
+
+
+@dataclass(frozen=True)
+class InpaintingConfig:
+    model_id: str = "stable-diffusion-v1-5/stable-diffusion-inpainting"
+    revision: str = "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb"
+    processing_size: int = 512
+    context_margin: int = 64
+    seed: int = 42
+    steps: int = 20
+    guidance_scale: float = 7.5
+    strength: float = 0.9
+
+    def __post_init__(self) -> None:
+        if self.model_id != "stable-diffusion-v1-5/stable-diffusion-inpainting":
+            raise ValueError("this milestone uses the dedicated SD 1.5 inpainting checkpoint")
+        if not isinstance(self.revision, str) or len(self.revision) != 40 or any(c not in "0123456789abcdef" for c in self.revision):
+            raise ValueError("inpainting requires a pinned checkpoint commit")
+        if type(self.processing_size) is not int or self.processing_size != 512:
+            raise ValueError("this experiment uses a 512-pixel processing square")
+        if type(self.context_margin) is not int or self.context_margin < 0:
+            raise ValueError("context margin must be a nonnegative integer")
+        if type(self.seed) is not int or not 0 <= self.seed < 2**32:
+            raise ValueError("seed must be an integer in [0, 2**32)")
+        if type(self.steps) is not int or self.steps <= 0:
+            raise ValueError("steps must be a positive integer")
+        for name in ("guidance_scale", "strength"):
+            value = getattr(self, name)
+            if type(value) not in (int, float) or not math.isfinite(value):
+                raise ValueError(f"{name} must be finite")
+        if self.guidance_scale < 0 or not 0 < self.strength <= 1:
+            raise ValueError("invalid guidance or strength")
+
+
+def load_inpainting_config(path: Path) -> InpaintingConfig:
+    try:
+        values = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if not isinstance(values, dict):
+            raise ValueError("inpainting configuration must be an object")
+        return InpaintingConfig(**values)
+    except (TypeError, yaml.YAMLError) as exc:
+        raise ValueError(f"invalid inpainting configuration: {exc}") from exc

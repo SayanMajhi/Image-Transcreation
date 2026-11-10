@@ -1,0 +1,10 @@
+ M README.md
+ M pyproject.toml
+ M src/transcreation/config.py
+ M src/transcreation/contracts.py
+?? configs/inpainting.yaml
+?? reports/phase6_working.md
+?? results/phase6_inpainting/
+?? scripts/inpaint.py
+?? src/transcreation/stages/inpainting.py
+?? tests/test_inpainting.py

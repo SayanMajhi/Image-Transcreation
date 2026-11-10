@@ -1,0 +1,163 @@
+{
+  "status": "COMPLETED",
+  "scope": "RESEARCH_ONLY",
+  "request": {
+    "source_image": "results/phase5_segmentation/experiments/box_points/B_oil_lamp/original.jpg",
+    "image_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+    "segmentation_file": "results/phase5_segmentation/experiments/box_points/B_oil_lamp/segmentation.json",
+    "segmentation_sha256": "62c9213bb551f693d620e7bea939fa43e8023616390ee9439fe364cabccf6309",
+    "mask_file": "results/phase5_segmentation/experiments/box_points/B_oil_lamp/mask_0.png",
+    "mask_sha256": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+    "candidate_index": 0,
+    "prompt": "A realistic darker terracotta clay oil-lamp bowl with a subtle carved rim, matching the original position, perspective, scale, lighting, shadows and surrounding photograph.",
+    "selection_note": "Explicit research selection after inspecting saved original and candidate 0 overlay: visible central clay bowl/body, with flame excluded; excludes supporting tray/base. Not human-approved, not full-lamp replacement, not cultural adaptation.",
+    "scope": "RESEARCH_ONLY"
+  },
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "resolved_revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+  "settings": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+    "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+    "processing_size": 512,
+    "context_margin": 64,
+    "seed": 42,
+    "steps": 20,
+    "guidance_scale": 7.5,
+    "strength": 0.9,
+    "precision": "float16",
+    "batch_size": 1,
+    "variant": "fp16",
+    "use_safetensors": true,
+    "negative_prompt": null,
+    "generator_device": "cpu",
+    "initial_offload": "model_cpu_offload",
+    "allowed_oom_fallback": "sequential_cpu_offload",
+    "scheduler": "DDIMScheduler",
+    "scheduler_config": {
+      "num_train_timesteps": 1000,
+      "beta_start": 0.00085,
+      "beta_end": 0.012,
+      "beta_schedule": "scaled_linear",
+      "trained_betas": null,
+      "clip_sample": false,
+      "set_alpha_to_one": false,
+      "steps_offset": 1,
+      "prediction_type": "epsilon",
+      "thresholding": false,
+      "dynamic_thresholding_ratio": 0.995,
+      "clip_sample_range": 1.0,
+      "sample_max_value": 1.0,
+      "timestep_spacing": "leading",
+      "rescale_betas_zero_snr": false,
+      "_use_default_values": [
+        "rescale_betas_zero_snr",
+        "prediction_type",
+        "sample_max_value",
+        "dynamic_thresholding_ratio",
+        "clip_sample_range",
+        "thresholding",
+        "timestep_spacing"
+      ],
+      "_class_name": "DDIMScheduler",
+      "_diffusers_version": "0.6.0.dev0",
+      "skip_prk_steps": true
+    },
+    "effective_denoising_steps": 18
+  },
+  "source_sam": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "grounding_index": 2,
+    "grounding_box": [
+      631.4442138671875,
+      248.13294982910156,
+      889.331787109375,
+      443.25518798828125
+    ],
+    "detection_sha256": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+    "point_sha256": "49c3e6f58bdc84f3ec620fdc52718f1224ff911ccebf761f416a1b5eaef3c8f4",
+    "selection_status": "RESEARCH_ONLY"
+  },
+  "geometry": {
+    "crop_box_xyxy": [
+      570,
+      189,
+      952,
+      508
+    ],
+    "padding_ltrb": [
+      0,
+      31,
+      0,
+      32
+    ],
+    "padded_side": 382,
+    "original_dimensions": [
+      1280,
+      842
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "attempts": [
+    {
+      "offload": "model_cpu_offload",
+      "status": "COMPLETED",
+      "seconds": 12.7066702000011,
+      "peak_allocated_cuda_bytes": 2654782464
+    }
+  ],
+  "timing": {
+    "load_seconds": 7.380937299996731,
+    "inference_seconds": 12.7066702000011,
+    "stage_seconds": 21.364212199994654
+  },
+  "memory": {
+    "initial_allocated_bytes": 0,
+    "free_total_before": [
+      3459986228,
+      4294443008
+    ],
+    "peak_allocated_cuda_bytes": 2654782464
+  },
+  "observations": [],
+  "cultural_edit_authorized": false,
+  "human_approved": false,
+  "safety_checker_flags": [
+    false
+  ],
+  "metrics": {
+    "editable_pixels": 32088,
+    "changed_inside_mask": 32080,
+    "changed_outside_mask": 0,
+    "dimensions": [
+      1280,
+      842
+    ]
+  },
+  "artifact_sha256": {
+    "comparison.png": "bd62520ac0b424a30d07daf030707e36e886c758ed339dad27e0db47b07c9efa",
+    "detail.png": "03df9fb2437bc48c9e1234e346b5cd3b250b4a870d4982e06fcd29e4da025494",
+    "final.png": "948769e32a20fc08672664b8a0fdde709146c926d52896c095e0aee6cec5ea71",
+    "generated_region.png": "72cef9c52200259b61044850db729932b1c7790d6bdd18b629a5b423d5968f8a",
+    "processing_image.png": "886bd00b2b54e01e3a88c27d32d5197758b3eb69e51736756f1c23083f94395f",
+    "processing_mask.png": "a0880e44c8c4ab8b70442381d71559a021d081c637056642c486f8ad0f42c914",
+    "raw_generated_crop.png": "4e35f7345e5eae2eca25aa68723f83780f5f08503e61fbeeda3a90bc7106d564",
+    "restored_crop.png": "b7c1c7e65976fad365bc18c6a327870a160ed2c8c5a87a1b2c35d6c701f4deff",
+    "source_decoded.png": "e7daaa0483f3fcf420bee2f40e2e63bef2329345867f55f4ae498fc92a17d161",
+    "evidence/box.png": "0b6fbca61008d56564382b103daed55c9cbc422948282c70b380b985f41a367e",
+    "evidence/mask_0.png": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+    "evidence/mask_1.png": "8ad8562a58ab16fe72841a5b1ed403d9bf527a1116cefb664ae072f43fbe6300",
+    "evidence/mask_2.png": "4d5592685dce2de2942b24aad9063260c1a95a43242e9919838482bd3d890004",
+    "evidence/original.jpg": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+    "evidence/overlay_0.png": "7d424d37c87f46d011508bc30260af0da5c09b6a253ae9f46c76077c91106b26",
+    "evidence/overlay_1.png": "82e86540d74a1b5d030958fabeebf4458f52f18df5de35f921ba1ecf2099ce95",
+    "evidence/overlay_2.png": "0af2b5316691a820003b872fb5b284dae35d3abdae6c1f222a354a86c2277f0f",
+    "evidence/points.json": "49c3e6f58bdc84f3ec620fdc52718f1224ff911ccebf761f416a1b5eaef3c8f4",
+    "evidence/points.png": "32fe4e56f7da36ee680590ddbea49980942ca1484bd4b58a1b6758b57d8288f0",
+    "evidence/segmentation.json": "62c9213bb551f693d620e7bea939fa43e8023616390ee9439fe364cabccf6309",
+    "evidence/source_detection.json": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6"
+  }
+}

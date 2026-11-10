@@ -1,0 +1,157 @@
+diff --git a/README.md b/README.md
+index 4e33c39..85fc5e4 100644
+--- a/README.md
++++ b/README.md
+@@ -2,7 +2,7 @@
+ 
+ An undergraduate research project investigating culturally contextual image adaptation while preserving the original scene's activity, people and relationships.
+ 
+-The project implements independent captioning, planning, localization, segmentation and review stages. **It does not yet perform image editing or complete end-to-end transcreation.** Phase 6 diffusion inpainting has not started.
++The project implements independent captioning, planning, localization, segmentation and review stages. Phase 6 now has an isolated RESEARCH_ONLY diffusion-inpainting feasibility experiment. **Complete end-to-end cultural transcreation is not implemented.** Phase 6 awaits mentor evaluation.
+ 
+ ## Implemented pipeline
+ 
+@@ -18,7 +18,7 @@ Independent research: Grounding DINO box -> explicit selection -> SAM masks -> m
+ - **SAM ViT-Base:** box and optional positive/negative point prompts; all three candidate masks retained.
+ - **Mask review:** hash-bound selection for a specified segmentation test only. No genuine human-approved mask is recorded.
+ 
+-Python 3.11, PyTorch, Transformers 4.57.6, Pillow and PyYAML. Recorded experiments used an RTX 3050 Laptop GPU with 4 GB VRAM. Run model stages sequentially.
++Python 3.11, PyTorch, Transformers 4.57.6, Pillow and PyYAML; optional Diffusers 0.35.2 and Accelerate 1.11.0 for inpainting. Recorded experiments used an RTX 3050 Laptop GPU with 4 GB VRAM. Run model stages sequentially.
+ 
+ ## Structure
+ 
+@@ -29,11 +29,12 @@ scripts/                   independent SAM, evaluation and review commands
+ tests/                     offline regression tests and fixtures
+ data/                      source images; mostly local and Git-ignored
+ outputs/                   new generated runs; Git-ignored
+-reports/                   exactly five final phase reports
++reports/                   five final phase reports and one Phase 6 working report
+ results/phase2_vlm/         actual caption/comparison evidence
+ results/phase3_llm/         actual raw/validated planner trials
+ results/phase4_grounding/   detections, comparisons and box reviews
+ results/phase5_segmentation/ masks, point protocols and mask reviews
++results/phase6_inpainting/  isolated inpainting evidence; no cultural editing approval
+ .local_archive/            historical development records and cleanup audits
+ ```
+ 
+@@ -73,6 +74,14 @@ Prepare review evidence without inference:
+ 
+ Preparation creates PENDING requests. A real reviewer must inspect the original, mask and overlay before submitting a named decision through `scripts.review_mask decide`. Acceptance is restricted to a segmentation experiment and does not authorize cultural editing.
+ 
++Isolated inpainting (requires `pip install -e ".[inpainting]"`):
++
++```powershell
++.\.venv\Scripts\python.exe -B -m scripts.inpaint --input results/phase6_inpainting/iteration1/input.json --out outputs/inpainting_new
++```
++
++This explicit research request is not planner integration or inherited review approval. [Phase 6 working report](reports/phase6_working.md) records the single experiment and limitations; no polished final Phase 6 report exists.
++
+ ## Tests
+ 
+ ```powershell
+@@ -97,4 +106,4 @@ The offline suite uses mocks/synthetic fixtures and does not download model weig
+ 
+ Captions can hallucinate or truncate; text checks cannot prove cultural correctness. Grounding mislabeled a bicycle as an airplane in a negative control. SAM still loses bicycle spokes/rims or includes background. Lamp review is bowl-only and PENDING. No independent box/mask ground truth supports accuracy claims.
+ 
+-Historical text/provenance has a [nonignored preservation copy](results/historical_text_provenance.zip), but no independent external backup is verified. Original images retain attribution/license restrictions; see result summaries. Inspect evidence and obtain mentor review before Phase 6.
++Historical text/provenance has a [nonignored preservation copy](results/historical_text_provenance.zip), but no independent external backup is verified. Original images retain attribution/license restrictions; see result summaries. Inspect evidence and obtain mentor review before the next Phase 6 iteration. No mask has been human-approved.
+diff --git a/pyproject.toml b/pyproject.toml
+index 7e17335..64134d0 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -15,6 +15,9 @@ dependencies = [
+     "transformers==4.57.6",
+ ]
+ 
++[project.optional-dependencies]
++inpainting = ["diffusers==0.35.2", "accelerate==1.11.0"]
++
+ [project.scripts]
+ transcreate = "transcreation.cli:main"
+ 
+diff --git a/src/transcreation/config.py b/src/transcreation/config.py
+index 4f9da45..6743775 100644
+--- a/src/transcreation/config.py
++++ b/src/transcreation/config.py
+@@ -232,3 +232,45 @@ def load_sam_config(path: Path) -> SamConfig:
+         return SamConfig(**values)
+     except (TypeError, yaml.YAMLError) as exc:
+         raise ValueError(f"invalid SAM configuration: {exc}") from exc
++
++
++@dataclass(frozen=True)
++class InpaintingConfig:
++    model_id: str = "stable-diffusion-v1-5/stable-diffusion-inpainting"
++    revision: str = "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb"
++    processing_size: int = 512
++    context_margin: int = 64
++    seed: int = 42
++    steps: int = 20
++    guidance_scale: float = 7.5
++    strength: float = 0.9
++
++    def __post_init__(self) -> None:
++        if self.model_id != "stable-diffusion-v1-5/stable-diffusion-inpainting":
++            raise ValueError("this milestone uses the dedicated SD 1.5 inpainting checkpoint")
++        if not isinstance(self.revision, str) or len(self.revision) != 40 or any(c not in "0123456789abcdef" for c in self.revision):
++            raise ValueError("inpainting requires a pinned checkpoint commit")
++        if type(self.processing_size) is not int or self.processing_size != 512:
++            raise ValueError("this experiment uses a 512-pixel processing square")
++        if type(self.context_margin) is not int or self.context_margin < 0:
++            raise ValueError("context margin must be a nonnegative integer")
++        if type(self.seed) is not int or not 0 <= self.seed < 2**32:
++            raise ValueError("seed must be an integer in [0, 2**32)")
++        if type(self.steps) is not int or self.steps <= 0:
++            raise ValueError("steps must be a positive integer")
++        for name in ("guidance_scale", "strength"):
++            value = getattr(self, name)
++            if type(value) not in (int, float) or not math.isfinite(value):
++                raise ValueError(f"{name} must be finite")
++        if self.guidance_scale < 0 or not 0 < self.strength <= 1:
++            raise ValueError("invalid guidance or strength")
++
++
++def load_inpainting_config(path: Path) -> InpaintingConfig:
++    try:
++        values = yaml.safe_load(path.read_text(encoding="utf-8"))
++        if not isinstance(values, dict):
++            raise ValueError("inpainting configuration must be an object")
++        return InpaintingConfig(**values)
++    except (TypeError, yaml.YAMLError) as exc:
++        raise ValueError(f"invalid inpainting configuration: {exc}") from exc
+diff --git a/src/transcreation/contracts.py b/src/transcreation/contracts.py
+index 4e7073f..a1793bb 100644
+--- a/src/transcreation/contracts.py
++++ b/src/transcreation/contracts.py
+@@ -399,3 +399,31 @@ class SegmentationResult:
+             raise ValueError("visualization must reference a nonempty saved mask")
+         if self.status == "SEGMENTED" and (not self.masks or len(valid) != len(self.masks)):
+             raise ValueError("segmented status requires valid masks")
++
++
++@dataclass(frozen=True)
++class InpaintingInput:
++    source_image: str
++    image_sha256: str
++    segmentation_file: str
++    segmentation_sha256: str
++    mask_file: str
++    mask_sha256: str
++    candidate_index: int
++    prompt: str
++    selection_note: str
++    scope: str  # explicit user-directed isolated research, never inferred from a review or plan
++
++    def __post_init__(self) -> None:
++        if self.scope != "RESEARCH_ONLY":
++            raise ValueError("only explicit isolated RESEARCH_ONLY generation is supported")
++        for name in ("source_image", "segmentation_file", "mask_file", "prompt", "selection_note"):
++            value = getattr(self, name)
++            if not isinstance(value, str) or not value.strip() or value.strip().lower() in ("null", "none", "n/a"):
++                raise ValueError(f"{name} must be meaningful text")
++        for name in ("image_sha256", "segmentation_sha256", "mask_sha256"):
++            value = getattr(self, name)
++            if not isinstance(value, str) or len(value) != 64 or any(c not in "0123456789abcdef" for c in value):
++                raise ValueError(f"{name} must be a SHA-256")
++        if type(self.candidate_index) is not int or self.candidate_index < 0:
++            raise ValueError("select one explicit integer SAM candidate index")

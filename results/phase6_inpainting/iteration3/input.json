@@ -1,0 +1,11 @@
+{
+  "source_image": "results/phase6_inpainting/iteration2/run/evidence/original.jpg",
+  "mask_file": "results/phase6_inpainting/iteration2/run/evidence/mask_0.png",
+  "hard_image": "results/phase6_inpainting/iteration2/run/final.png",
+  "sha256": {
+    "source_image": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+    "mask_file": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+    "hard_image": "e68c79d3b3ff9efd8a81c47f590666d7b142f2aab8eb8a7ececc30ccf9558cfc"
+  },
+  "scope": "RESEARCH_ONLY"
+}

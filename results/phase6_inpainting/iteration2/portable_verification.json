@@ -1,0 +1,7 @@
+{
+  "command": "python -B verify_evidence.py",
+  "returncode": 0,
+  "stdout": "{\n  \"manifest_files\": 146,\n  \"pixel_checks\": [\n    {\n      \"iteration\": \"iteration1\",\n      \"changed_inside\": 32080,\n      \"changed_outside\": 0\n    },\n    {\n      \"iteration\": \"iteration2\",\n      \"changed_inside\": 32081,\n      \"changed_outside\": 0\n    }\n  ],\n  \"only_prompt_changed\": true,\n  \"original_report_prefix_preserved\": true,\n  \"model_inference_calls\": 0\n}\n",
+  "stderr": "",
+  "model_calls": 0
+}

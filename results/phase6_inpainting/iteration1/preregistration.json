@@ -1,0 +1,16 @@
+{
+  "declared_at_utc": "2026-11-10T06:48:37.732229+00:00",
+  "conditions": 1,
+  "seed": 42,
+  "prompt": "A realistic darker terracotta clay oil-lamp bowl with a subtle carved rim, matching the original position, perspective, scale, lighting, shadows and surrounding photograph.",
+  "input_sha256": "f8a5e6f1aecefe6c064b5bbd90d64ceaabbce185c7da352d7a42aba5764b8017",
+  "config_sha256": "9d6612020af4735688625f37beb885debeb6ad0874362b406e6edc5affb423d9",
+  "initial_offload": "model CPU offload",
+  "allowed_fallback": "one sequential CPU-offload retry only on CUDA OOM",
+  "processing_size": 512,
+  "steps": 20,
+  "strength": 0.9,
+  "guidance_scale": 7.5,
+  "target": "visible clay bowl/body only; excludes flame, wick and unrelated supporting objects",
+  "human_review": "PENDING; explicit user-directed research exception, not approval inherited from review records"
+}
