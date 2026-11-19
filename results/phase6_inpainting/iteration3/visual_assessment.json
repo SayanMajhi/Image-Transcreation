@@ -1,0 +1,18 @@
+{
+  "assessment_type": "assistant qualitative visual inspection; not independent human approval",
+  "inspected": [
+    "bowl_comparison.png",
+    "detail_comparison.png",
+    "alpha_comparison.png"
+  ],
+  "boundary_smoothness": "Very subtle softening of parts of the rim/cutout transition; the decorative rim and cutout still remain visible. No broad seam-removal improvement established.",
+  "color_discontinuity": "Contrast is reduced locally by mixing source colors back in, but a transition and regular rim pattern persist.",
+  "wick_continuity": "Detached disc/candle-like base remains. Blending does not relocate fixed flame pixels or correct the generated interior geometry.",
+  "matte_material": "Interior clay texture is largely preserved away from boundaries. Blended edge pixels mix original surface appearance back into the generated region.",
+  "ghosting": "No obvious large double object seen; subtle mixed colors near rim/wick can act as a halo. Source contribution is measured/guaranteed by the formula, not proof of a specific visible glossy artifact.",
+  "texture_loss": "Some edge detail/contrast softening; the central comparison patch appears essentially unchanged. 19586 pixels retain full generated alpha.",
+  "original_gloss": "Original highlights/colors are reintroduced wherever alpha is fractional; no large new glossy patch was clearly established in inspection. This is a tradeoff, not an automatic quality gain.",
+  "support": "Noneditable support/background and flame cutout remain exactly original by independent pixel comparison.",
+  "recommendation": "NEEDS FIXES; preserve hard composite as the primary baseline/default. Keep this one blend as experimental evidence pending mentor preference; do not claim physical continuity is solved.",
+  "human_review_notes": ""
+}

@@ -1,0 +1,23 @@
+{
+  "previous_files_checked": 1014,
+  "changed_existing_files": [
+    "src/transcreation/stages/inpainting.py",
+    "src/transcreation/stages/refined_inpainting.py",
+    "scripts/inpaint.py",
+    "tests/test_refined_inpainting.py",
+    "reports/phase7_integration.md",
+    "README.md"
+  ],
+  "missing_files": [],
+  "V2_all_artifacts_and_zip_unchanged": true,
+  "old_model_predictions_and_six_SAM_masks_unchanged": true,
+  "source_image_unchanged": true,
+  "model_configurations_unchanged": true,
+  "old_human_decision": "MATERIAL_UNRESOLVED",
+  "old_planner_decision": "REVIEW",
+  "released_candidates": 0,
+  "same_A_B_geometry": true,
+  "same_A_B_numerical_sampling": true,
+  "actual_new_calls": 2,
+  "quality_retries": 0
+}

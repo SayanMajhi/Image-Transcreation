@@ -1,0 +1,14 @@
+{
+  "accepted_files_found": [
+    "reports/phase4_iteration3_assets/examples/A_bicycle/accepted.json"
+  ],
+  "existing_gate_passes": true,
+  "reviewer": "YOUR_NAME",
+  "confirmed_human_approval": false,
+  "issue": "reviewer is an unresolved placeholder; no new human approval was invented",
+  "provisional_experiment_mode": "RESEARCH_ONLY",
+  "bicycle_prediction_index": 0,
+  "lamp_detection": "reports/phase4_iteration2_assets/runs/A02_oil_lamp_020/detection.json",
+  "lamp_prediction_index": 2,
+  "lamp_selection_reason": "Saved source image and indexed review preview show this box enclosing the central burning lamp; selected manually for research, not by confidence."
+}

@@ -1,0 +1,17 @@
+{
+  "assessment_type": "assistant qualitative visual inspection, not human approval or ground truth",
+  "inspected": [
+    "run/final.png",
+    "original_diffusion_baseline.png",
+    "boundaries_native.png",
+    "noodles_native.png"
+  ],
+  "geometry_and_highlights": "original strands/detail preserved; better coherence than SD A/B",
+  "appearance": "mainly yellow/orange warming, insufficient reddish-brown coating",
+  "seams": "faint protected-rectangle transition traces remain",
+  "new_objects_or_text": "none synthesized by this non-generative transform",
+  "cultural_food_target": "FAIL",
+  "appearance_baseline_technical": "PASS",
+  "authenticity": "not established",
+  "additional_tuning": false
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "assistant qualitative inspection of full/raw/native comparisons, not new human approval",
+  "A": {
+    "depth": "more raised than former seed43; two faces and inflated ridge",
+    "texture": "more blister-like detail, but repetitive/soft at native enlargement",
+    "one_pastry": "ambiguous rear-left lobe could read as another piece",
+    "extra_props": "no lime, chutney, board or garnish observed",
+    "background": "exact outside region; shadow cutoff/halo and faint retained source edges remain",
+    "overall": "partial visual progress, not a convincing complete success"
+  },
+  "B": {
+    "depth": "some facets but overly sharp geometric/wrapper appearance",
+    "texture": "regressed: smooth glossy/foil-like surface with artificial patterned detail",
+    "one_pastry": "rear-left lobe still present; hypothesis not convincingly supported",
+    "extra_props": "no separate side dishes observed; ambiguous second-piece structure persists",
+    "background": "same exact locality; visible local cutout/shadow issues persist",
+    "overall": "VISUAL_FAIL; stronger control did not solve the target problem"
+  },
+  "comparison_preference": "A preferred over B for discussion only; neither human-confirmed",
+  "new_output_human_review": "PENDING_SIMPLE_CHAT_REVIEW",
+  "new_generations": 2,
+  "third_condition_prohibited": true
+}

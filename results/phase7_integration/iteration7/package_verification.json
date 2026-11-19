@@ -1,0 +1,19 @@
+{
+  "zip": "results/phase7_integration/iteration7_review.zip",
+  "sha256": "353b5d664a5973dff444578f2a6754d9e4e2a9c75b0408e2bd9a965130006eb0",
+  "bytes": 14703227,
+  "entries": 687,
+  "crc": "passed",
+  "manifest_hashes": "all matched",
+  "working_report_links": 210,
+  "broken_links": 0,
+  "previous_report_exact_prefix": true,
+  "portable_focused_tests_passed": 6,
+  "saved_run_verification": "passed without models",
+  "qwen_generation_calls": 1,
+  "other_model_calls": 0,
+  "raw_decision": "PROPOSE",
+  "final_decision": "REVIEW",
+  "released_candidates": 0,
+  "recommendation": "NEEDS FIXES before candidate release; source anchoring improved in one case"
+}

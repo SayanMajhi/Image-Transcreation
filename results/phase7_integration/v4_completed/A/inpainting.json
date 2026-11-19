@@ -1,0 +1,180 @@
+{
+  "status": "COMPLETED",
+  "scope": "RESEARCH_ONLY",
+  "request": {
+    "source_image": "results\\phase7_integration\\v4_completed\\source.jpg",
+    "image_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+    "segmentation_file": "results\\phase7_integration\\v4_completed\\sam\\segmentation\\segmentation.json",
+    "segmentation_sha256": "31d6cfece2d8b67a5dc87e42c2a8c1a25f6e0ac7e8a4ee12b4988a05b44b4a2e",
+    "mask_file": "results\\phase7_integration\\v4_completed\\research_mask.png",
+    "mask_sha256": "a025cfe02f676ac6464d62cf143feca3292e016049ff9778ca239514a91167cb",
+    "candidate_index": 0,
+    "prompt": "Photorealistic spaghetti strands coated in reddish-brown Indian masala sauce and spices, visible individual pasta strands, natural food texture, matching the original composition, camera angle and lighting.",
+    "selection_note": "Explicit V4 operator-defined RESEARCH_ONLY masala-spaghetti experiment. SAM 0 is only reference. Manual inner-food polygon plus conservative gap exclusions; original plate/background protected. No human mask approval or automated Qwen success claimed.",
+    "scope": "RESEARCH_ONLY",
+    "annotation_file": "results\\phase7_integration\\v4_completed\\annotations.json",
+    "annotation_sha256": "3e88fd257214fbc00dc1f2fa22436741a2fdbcb7605c1ceed05e1d6a7e681422",
+    "protected_mask_file": "results\\phase7_integration\\v4_completed\\protected_regions.png",
+    "protected_mask_sha256": "75508040b65e99635504dd84e6652e790edb41d423fc19316305f91ea9537baa",
+    "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED",
+    "negative_prompt": null
+  },
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "resolved_revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+  "settings": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+    "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+    "processing_size": 512,
+    "context_margin": 64,
+    "seed": 42,
+    "steps": 20,
+    "guidance_scale": 7.5,
+    "strength": 0.9,
+    "precision": "float16",
+    "batch_size": 1,
+    "variant": "fp16",
+    "use_safetensors": true,
+    "negative_prompt": null,
+    "generator_device": "cpu",
+    "initial_offload": "model_cpu_offload",
+    "allowed_oom_fallback": null,
+    "max_generation_attempts": 1,
+    "scheduler": "DDIMScheduler",
+    "scheduler_config": {
+      "num_train_timesteps": 1000,
+      "beta_start": 0.00085,
+      "beta_end": 0.012,
+      "beta_schedule": "scaled_linear",
+      "trained_betas": null,
+      "clip_sample": false,
+      "set_alpha_to_one": false,
+      "steps_offset": 1,
+      "prediction_type": "epsilon",
+      "thresholding": false,
+      "dynamic_thresholding_ratio": 0.995,
+      "clip_sample_range": 1.0,
+      "sample_max_value": 1.0,
+      "timestep_spacing": "leading",
+      "rescale_betas_zero_snr": false,
+      "_use_default_values": [
+        "sample_max_value",
+        "timestep_spacing",
+        "thresholding",
+        "rescale_betas_zero_snr",
+        "dynamic_thresholding_ratio",
+        "clip_sample_range",
+        "prediction_type"
+      ],
+      "_class_name": "DDIMScheduler",
+      "_diffusers_version": "0.6.0.dev0",
+      "skip_prk_steps": true
+    },
+    "effective_denoising_steps": 18
+  },
+  "source_sam": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "grounding_index": 0,
+    "grounding_box": [
+      3.6668148040771484,
+      394.75372314453125,
+      2266.13720703125,
+      1698.0286865234375
+    ],
+    "detection_sha256": "a7bd4d39ff3011c548d25f2c379617a7c8daf58ce195eff8465703e898ab4e30",
+    "point_sha256": null,
+    "selection_status": "RESEARCH_ONLY"
+  },
+  "geometry": {
+    "crop_box_xyxy": [
+      11,
+      406,
+      2255,
+      1685
+    ],
+    "padding_ltrb": [
+      0,
+      482,
+      0,
+      483
+    ],
+    "padded_side": 2244,
+    "original_dimensions": [
+      2272,
+      1704
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "attempts": [
+    {
+      "offload": "model_cpu_offload",
+      "status": "COMPLETED",
+      "seconds": 10.984199099999387,
+      "peak_allocated_cuda_bytes": 2654782464
+    }
+  ],
+  "timing": {
+    "load_seconds": 7.612210499999492,
+    "inference_seconds": 10.984199099999387,
+    "stage_seconds": 23.38756839999769
+  },
+  "memory": {
+    "initial_allocated_bytes": 0,
+    "free_total_before": [
+      3459986228,
+      4294443008
+    ],
+    "peak_allocated_cuda_bytes": 2654782464
+  },
+  "observations": [],
+  "cultural_edit_authorized": false,
+  "human_approved": false,
+  "editing_mask": {
+    "origin": "RESEARCH_MASK_MANUALLY_REFINED",
+    "human_approved": false,
+    "original_sam_reference_candidate_index": 0,
+    "original_sam_reference_mask_sha256": "387d469b5f94d0d9b3e38a9c4c7cc3ad2c54956e71198d1570ff20b0cd915e1b",
+    "refined_mask_sha256": "a025cfe02f676ac6464d62cf143feca3292e016049ff9778ca239514a91167cb",
+    "annotation_sha256": "3e88fd257214fbc00dc1f2fa22436741a2fdbcb7605c1ceed05e1d6a7e681422",
+    "protected_mask_sha256": "75508040b65e99635504dd84e6652e790edb41d423fc19316305f91ea9537baa"
+  },
+  "safety_checker_flags": [
+    false
+  ],
+  "metrics": {
+    "editable_pixels": 1846716,
+    "changed_inside_mask": 1846657,
+    "changed_outside_mask": 0,
+    "dimensions": [
+      2272,
+      1704
+    ]
+  },
+  "artifact_sha256": {
+    "comparison.png": "e1b5db9c7ebe97ad7517d48d268d90a5cda32e594467f3226adaa8b59d65d39b",
+    "detail.png": "7aff5065e3dfa452a2a156ec3142ba23c24ff73167d76930fce8deee9653cca5",
+    "final.png": "274f1afe12080c861ab8d521a9b6b67708b7036fc126e8078468880ab992d358",
+    "generated_region.png": "f3938446d58f9e5b2f25fe29eb8ca3804369386cdb46c5f90fd561edf7ce49b4",
+    "processing_image.png": "2af84242e4fccf8cb91ca15a6efc4cc0ea6dbcc7f38012ea1abd898954901fa8",
+    "processing_mask.png": "cbac7b762f38ccc65a32229c18085152a5236c292686d78c1ecedb312666ae75",
+    "raw_generated_crop.png": "ff5711f25dff88667191b0c10e5667cfa04c328f6a4283a2fe783a6c3b96fff1",
+    "restored_crop.png": "f36034eeaaa7cae8ee7b4601f842c1832e595c5ea94467a63ab06ae03fe7410c",
+    "source_decoded.png": "d6e2e3d2bce6c47f10befcf7d903bde0c8f499512185be0d48d12f0c2bd7932e",
+    "evidence/box.png": "1c39df20298143f146349edea586c1f3fcdf32cb5d63624a194c4cf60c2aaf0a",
+    "evidence/mask_0.png": "387d469b5f94d0d9b3e38a9c4c7cc3ad2c54956e71198d1570ff20b0cd915e1b",
+    "evidence/mask_1.png": "42ca4a55a96efcaa324ab2f7199c963383e2d23f1fbf244887686e03655bb176",
+    "evidence/mask_2.png": "cc9b53a65ce4a2962225f6e2d61df25178ae094b549d1f0def27851f220d6bba",
+    "evidence/original.jpg": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+    "evidence/overlay_0.png": "4c12d4461c8e3d23997d9af482d26a331fa88ac1413e3676b5b9e2daf48cfcb5",
+    "evidence/overlay_1.png": "8840080dc8c390d56d535d1d36fa582aee28e4bcbf3db520f448eeb1b0778b47",
+    "evidence/overlay_2.png": "ba76d8926d80d471e84cd1fc0c3be9b8b445bd86ce196fea3384eb6fd20c43aa",
+    "evidence/protected_exclusions.png": "75508040b65e99635504dd84e6652e790edb41d423fc19316305f91ea9537baa",
+    "evidence/refined_mask.png": "a025cfe02f676ac6464d62cf143feca3292e016049ff9778ca239514a91167cb",
+    "evidence/refinement_annotations.json": "3e88fd257214fbc00dc1f2fa22436741a2fdbcb7605c1ceed05e1d6a7e681422",
+    "evidence/segmentation.json": "31d6cfece2d8b67a5dc87e42c2a8c1a25f6e0ac7e8a4ee12b4988a05b44b4a2e",
+    "evidence/source_detection.json": "a7bd4d39ff3011c548d25f2c379617a7c8daf58ce195eff8465703e898ab4e30"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "stdout": "{\n  \"real_state\": \"PLAN_REQUIRES_REVIEW\",\n  \"portable_replay_state\": \"SOURCE_OBJECT_REQUIRES_REVIEW\",\n  \"replay_validated\": true,\n  \"required_reviews\": [\n    \"BOX_REVIEW_MISSING\",\n    \"MASK_REVIEW_PENDING\"\n  ],\n  \"model_calls\": 0,\n  \"model_libraries_imported\": false,\n  \"new_generation_permitted\": false\n}\n",
+  "stderr": "",
+  "new_model_calls": 0
+}

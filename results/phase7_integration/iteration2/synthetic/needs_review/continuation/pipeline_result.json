@@ -1,0 +1,45 @@
+{
+  "execution_mode": "GROUNDING_TEST",
+  "state": "EDIT_INTENT_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source"
+  ],
+  "stopped_at": "edit_intent_review",
+  "reason": "Explicit acceptance is absent; localization blocked.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "f2d2d732c1e90ec4f2524001de4a4ee349ca701ee4a021f422238f77302c5a70",
+      "sha256": "f2d2d732c1e90ec4f2524001de4a4ee349ca701ee4a021f422238f77302c5a70",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "path": "evidence/source/original.png"
+    },
+    "edit_intent": {
+      "id": "4a738c2a33f00e07c8d24169a780100521268bff8a84f1fb4d2dbfd770367ecc",
+      "sha256": "4a738c2a33f00e07c8d24169a780100521268bff8a84f1fb4d2dbfd770367ecc",
+      "path": "evidence/edit_intent/decision.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.0017240999950445257
+    },
+    {
+      "stage": "edit_intent_review",
+      "action": "STOP",
+      "seconds": 0.017963299993425608,
+      "state": "EDIT_INTENT_REQUIRES_REVIEW",
+      "reason": "Explicit acceptance is absent; localization blocked.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

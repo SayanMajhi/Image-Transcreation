@@ -1,0 +1,24 @@
+{
+  "decision": "PROPOSE",
+  "decision_reason": "The user requested to transform the Japanese ramen noodles into Indian-style masala noodles while preserving the bowl, table, camera angle, lighting, and background. This adaptation is contextually justified as Indian cuisine often uses masala noodles in a similar manner to ramen.",
+  "scene_summary": "A bowl of food with chopsticks and a spoon. The caption reports a Japanese ramen bowl with chopsticks and a spoon, but the bowl contains masala noodles instead of ramen.",
+  "candidate_edits": [
+    {
+      "object_description": "A bowl of masala noodles with chopsticks and a spoon.",
+      "localization_phrase": "Indian masala noodles in a bowl",
+      "proposed_change": "A bowl of masala noodles with chopsticks and a spoon.",
+      "cultural_reason": "Indian cuisine often uses masala noodles in a similar manner to ramen, thus the adaptation is contextually justified.",
+      "identity_uncertain": false,
+      "verified_object_id": "ramen-food-1"
+    }
+  ],
+  "must_preserve": [
+    "The bowl, table, camera angle, lighting, and background should remain unchanged."
+  ],
+  "uncertainties": [
+    "The specific masala noodles used in the adaptation are not specified, but Indian cuisine commonly uses masala noodles in a similar manner to ramen."
+  ],
+  "verification_requirements": [
+    "Verify that the masala noodles are correctly prepared and presented in the bowl."
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "planning_result": {
+    "decision": "REVIEW",
+    "decision_reason": "Review required; no candidate edit is released downstream. The source-object identity does not match the user-verified description. Localization must retain the original object label: A bowl of masala noodles with chopsticks and a spoon.. The proposed replacement/modification is indistinguishable from the original object. Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+    "scene_summary": "A bowl of food with chopsticks and a spoon. The caption reports a Japanese ramen bowl with chopsticks and a spoon, but the bowl contains masala noodles instead of ramen.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "The bowl, table, camera angle, lighting, and background should remain unchanged."
+    ],
+    "uncertainties": [
+      "The specific masala noodles used in the adaptation are not specified, but Indian cuisine commonly uses masala noodles in a similar manner to ramen."
+    ],
+    "verification_requirements": [
+      "The source-object identity does not match the user-verified description.",
+      "Localization must retain the original object label: A bowl of masala noodles with chopsticks and a spoon..",
+      "The proposed replacement/modification is indistinguishable from the original object.",
+      "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "Review the original-scene summary and any paraphrased identities against the image.",
+      "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+    ]
+  },
+  "issues": [
+    {
+      "code": "SOURCE_OBJECT_MISMATCH",
+      "message": "The source-object identity does not match the user-verified description.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "SOURCE_LOCALIZATION_MISMATCH",
+      "message": "Localization must retain the original object label: A bowl of masala noodles with chopsticks and a spoon..",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "SOURCE_REPLACEMENT_IDENTICAL",
+      "message": "The proposed replacement/modification is indistinguishable from the original object.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    },
+    {
+      "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+      "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "candidate_index": null,
+      "severity": "review"
+    }
+  ]
+}

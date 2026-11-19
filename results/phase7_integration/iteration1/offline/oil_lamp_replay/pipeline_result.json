@@ -1,0 +1,93 @@
+{
+  "execution_mode": "RESEARCH_REPLAY",
+  "state": "SOURCE_OBJECT_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source",
+    "grounding_evidence",
+    "segmentation_evidence",
+    "inpainting_evidence"
+  ],
+  "stopped_at": "box_review",
+  "reason": "Research chain integrity verified; missing box review prevents approved execution.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "1ea0695a606f74047e7820d07e7f886650f5e14b8010fa4812db62cd9f336968",
+      "sha256": "1ea0695a606f74047e7820d07e7f886650f5e14b8010fa4812db62cd9f336968",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+      "sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+      "path": "evidence/source/original.jpg"
+    },
+    "grounding": {
+      "id": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+      "sha256": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+      "path": "evidence/grounding/source_detection.json"
+    },
+    "segmentation": {
+      "id": "62c9213bb551f693d620e7bea939fa43e8023616390ee9439fe364cabccf6309",
+      "sha256": "62c9213bb551f693d620e7bea939fa43e8023616390ee9439fe364cabccf6309",
+      "path": "evidence/segmentation/segmentation.json"
+    },
+    "selected_mask": {
+      "id": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+      "sha256": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+      "path": "evidence/sam_bundle/mask_0.png"
+    },
+    "mask_review": {
+      "id": "531f5c0563aa1088fceb47af73cd8e72b577507b81d872aef47e88ba5152cbcb",
+      "sha256": "531f5c0563aa1088fceb47af73cd8e72b577507b81d872aef47e88ba5152cbcb",
+      "path": "evidence/mask_review/pending_0.json"
+    },
+    "inpainting": {
+      "id": "2a232f80e0dcfbb6dbb47d063c9b10d934c542bd464a880326edfd2def24282b",
+      "sha256": "2a232f80e0dcfbb6dbb47d063c9b10d934c542bd464a880326edfd2def24282b",
+      "path": "evidence/inpainting/inpainting.json"
+    },
+    "existing_final_image": {
+      "id": "e68c79d3b3ff9efd8a81c47f590666d7b142f2aab8eb8a7ececc30ccf9558cfc",
+      "sha256": "e68c79d3b3ff9efd8a81c47f590666d7b142f2aab8eb8a7ececc30ccf9558cfc",
+      "path": "evidence/existing_final_image/final.png"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.043718300003092736
+    },
+    {
+      "stage": "grounding_evidence",
+      "action": "EXISTING_ARTIFACT_VALIDATED",
+      "seconds": 0.08484029999817722,
+      "count": 8
+    },
+    {
+      "stage": "segmentation_evidence",
+      "action": "EXISTING_ARTIFACT_VALIDATED",
+      "seconds": 0.23624379999819212,
+      "selection_status": "RESEARCH_ONLY"
+    },
+    {
+      "stage": "inpainting_evidence",
+      "action": "EXISTING_OUTPUT_VERIFIED_NOT_GENERATED",
+      "seconds": 0.6734410999997635
+    },
+    {
+      "stage": "box_review",
+      "action": "STOP",
+      "seconds": 0.6734492000032333,
+      "state": "SOURCE_OBJECT_REQUIRES_REVIEW",
+      "reason": "Research chain integrity verified; missing box review prevents approved execution.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [
+    "BOX_REVIEW_MISSING",
+    "MASK_REVIEW_PENDING"
+  ],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": true
+}

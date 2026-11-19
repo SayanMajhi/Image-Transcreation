@@ -1,0 +1,38 @@
+{
+  "full_columns": [
+    "Original photograph",
+    "Original SAM mask overlay",
+    "Iteration 1 final",
+    "Iteration 2 final"
+  ],
+  "bowl_source_crop": [
+    570,
+    189,
+    952,
+    508
+  ],
+  "bowl_zoom": 2,
+  "bowl_view_resampling": "LANCZOS",
+  "detail_regions": [
+    [
+      "Rim",
+      [
+        632,
+        248,
+        891,
+        300
+      ]
+    ],
+    [
+      "Wick/base",
+      [
+        725,
+        334,
+        814,
+        402
+      ]
+    ]
+  ],
+  "detail_view_resampling": "NEAREST",
+  "generation_crop_or_mask_modified": false
+}

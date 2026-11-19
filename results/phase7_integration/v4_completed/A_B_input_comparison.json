@@ -1,0 +1,13 @@
+{
+  "changed_fields": {
+    "negative_prompt": {
+      "A": null,
+      "B": "text, letters, printed labels, watermark, logo, packaging, smooth plastic, melted food, distorted pasta, disconnected noodle strands"
+    }
+  },
+  "same_positive_prompt": true,
+  "same_source_mask_annotations_protection": true,
+  "same_numerical_sampling_and_crop": true,
+  "per_condition_attempt_limit": 1,
+  "actual_calls_before_B": 1
+}

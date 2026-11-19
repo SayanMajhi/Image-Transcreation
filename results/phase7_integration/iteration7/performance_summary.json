@@ -1,0 +1,18 @@
+{
+  "wall_seconds": 30.590075699999943,
+  "adapter_elapsed_seconds": 30.458284599999956,
+  "server_total_seconds": 30.4298727,
+  "server_load_seconds": 6.6426679,
+  "prompt_tokens": 1030,
+  "output_tokens": 301,
+  "prompt_eval_seconds": 19.132517,
+  "output_generation_seconds": 4.616509,
+  "device_samples": 28,
+  "sampled_total_device_memory_max_MiB": 3842.0,
+  "sampled_total_device_utilization_max_percent": 94.0,
+  "measurement_limitations": "Device totals include other processes; no per-model allocated peak or reliable CPU/offload measurement.",
+  "qwen_generation_calls": 1,
+  "retries": 0,
+  "other_model_calls": 0,
+  "post_run_models": []
+}

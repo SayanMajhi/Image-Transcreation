@@ -1,0 +1,18 @@
+{
+  "planner_wall_seconds": 39.04620369999611,
+  "adapter_elapsed_seconds": 38.792348700008006,
+  "server_total_seconds": 38.7566853,
+  "server_load_seconds": 16.4965784,
+  "prompt_tokens": 741,
+  "prompt_eval_seconds": 1.563915,
+  "output_tokens": 327,
+  "output_generation_seconds": 20.673393,
+  "valid_gpu_samples": 31,
+  "sampled_total_device_peak_MiB": 3921.0,
+  "sampled_total_gpu_utilization_max_percent": 100.0,
+  "limitations": "Device totals include desktop/other processes and are sampled, not Qwen-only allocated peak. CPU usage/offloading not reliably measured.",
+  "qwen_per_model_peak_bytes": null,
+  "smolvlm_execution_this_run": false,
+  "retries": 0,
+  "post_run_models": []
+}

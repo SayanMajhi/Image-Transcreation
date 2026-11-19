@@ -1,0 +1,10 @@
+[
+  {
+    "experiment": "A_bicycle",
+    "command": ".\\.venv\\Scripts\\python.exe -B -m scripts.segment_sam --image data\\vlm_collection\\scene_06.jpg --detection reports\\phase4_iteration2_assets\\runs\\R01_bicycle_replay\\detection.json --prediction-index 0 --research-only --points reports/phase5_iteration2_assets/prompts/A_bicycle.json --note \"One preregistered bicycle box-plus-point experiment; physical parts only; research annotations requiring review.\" --out reports/phase5_iteration2_assets/A_bicycle"
+  },
+  {
+    "experiment": "B_oil_lamp",
+    "command": ".\\.venv\\Scripts\\python.exe -B -m scripts.segment_sam --image data\\vlm_collection\\scene_02.jpg --detection reports\\phase4_iteration2_assets\\runs\\A02_oil_lamp_020\\detection.json --prediction-index 2 --research-only --points reports/phase5_iteration2_assets/prompts/B_oil_lamp.json --note \"One preregistered bowl-only box-plus-point diagnostic; exclude flame and unrelated background; research annotations requiring review.\" --out reports/phase5_iteration2_assets/B_oil_lamp"
+  }
+]

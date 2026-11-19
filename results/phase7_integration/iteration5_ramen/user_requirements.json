@@ -1,0 +1,11 @@
+{
+  "declared_original_object": "Japanese ramen noodles in a bowl",
+  "source_culture": "Japanese",
+  "target_culture": "Indian",
+  "transformation": "Transform the ramen into Indian-style masala noodles.",
+  "preservation": "Preserve the bowl, table, camera angle, lighting, and background.",
+  "provenance": "Exact requirements supplied in the current user message.",
+  "user_declared_identity": true,
+  "human_image_inspection_confirmed": false,
+  "independent_human_approval": false
+}

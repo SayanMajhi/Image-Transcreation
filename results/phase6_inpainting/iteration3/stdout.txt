@@ -1,0 +1,52 @@
+{
+  "status": "COMPLETED",
+  "scope": "RESEARCH_ONLY",
+  "human_approved": false,
+  "cultural_edit_authorized": false,
+  "method": "M * GaussianBlur(M, radius=5), then alpha*hard + (1-alpha)*original",
+  "radius_original_pixels": 5,
+  "implementation": "Pillow GaussianBlur on uint8 L mask; normalize blurred values to float64 [0,1]",
+  "alpha_encoding": "alpha.png L uint8; actual applied alpha = pixel / 255",
+  "rounding": "numpy.rint ties-to-even; clip [0,255]; uint8",
+  "input_sha256": {
+    "source_image": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+    "mask_file": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+    "hard_image": "e68c79d3b3ff9efd8a81c47f590666d7b142f2aab8eb8a7ececc30ccf9558cfc"
+  },
+  "metrics": {
+    "image_dimensions": [
+      1280,
+      842
+    ],
+    "mask_dimensions": [
+      1280,
+      842
+    ],
+    "editable_pixels": 32088,
+    "nonzero_alpha_pixels": 32088,
+    "nonzero_alpha_outside_mask": 0,
+    "partial_alpha_pixels": 12502,
+    "full_alpha_pixels": 19586,
+    "changed_inside_mask": 32080,
+    "changed_outside_mask": 0,
+    "max_outside_channel_difference": 0,
+    "different_from_hard_pixels": 9630,
+    "different_from_hard_outside": 0
+  },
+  "timing": {
+    "blend_seconds": 0.24180660000274656
+  },
+  "model_inference_calls": 0,
+  "libraries_present": {
+    "torch": false,
+    "transformers": false,
+    "diffusers": false
+  },
+  "artifact_sha256": {
+    "alpha.png": "df9deb79da1176c53bf17c1b8cfd25ebd76c72c91e5a3b98dc28116e5e7107dd",
+    "final.png": "36f94ee1be574e4a5a2ae249330da966ec11cc60253c444020abffed1bf8b13f",
+    "iteration2_final.png": "e68c79d3b3ff9efd8a81c47f590666d7b142f2aab8eb8a7ececc30ccf9558cfc",
+    "original.jpg": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+    "original_mask.png": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46"
+  }
+}

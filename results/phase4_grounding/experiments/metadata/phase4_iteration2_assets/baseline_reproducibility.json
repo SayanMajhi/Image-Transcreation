@@ -1,0 +1,23 @@
+[
+  {
+    "old": "A_bicycle",
+    "new": "R01_bicycle_replay",
+    "same_input_hash": true,
+    "exact_predictions_equal": true,
+    "same_processor": true
+  },
+  {
+    "old": "B_oil_lamp",
+    "new": "A01_oil_lamp_030",
+    "same_input_hash": true,
+    "exact_predictions_equal": true,
+    "same_processor": true
+  },
+  {
+    "old": "C_incense_burner",
+    "new": "B01_incense_burner_030",
+    "same_input_hash": true,
+    "exact_predictions_equal": true,
+    "same_processor": true
+  }
+]

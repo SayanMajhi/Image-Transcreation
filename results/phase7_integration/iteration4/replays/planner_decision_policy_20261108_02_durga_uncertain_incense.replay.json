@@ -1,0 +1,124 @@
+{
+  "record_type": "POLICY_REPLAY_ONLY",
+  "case": "planner_decision_policy_20261108/02_durga_uncertain_incense",
+  "provenance": {
+    "source": "results/phase3_llm/experiments/planner_decision_policy_20261108/02_durga_uncertain_incense.audit.json",
+    "sha256": "a8dcbb9e78dcf066ae8075e8b7edf41a1aef1f6398f797a6f945dcb8407cf242",
+    "saved_final_decision": "REVIEW",
+    "scope": "HISTORICAL_SAVED_RAW_RESPONSE"
+  },
+  "input": {
+    "source_caption": "The image depicts a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood.\n\nThe background includes a building with a large, white wall and a few trees",
+    "caption_status": "TRUNCATED",
+    "target_culture": "Japan",
+    "source_culture": "India",
+    "user_instructions": "The source context is Durga Puja. The incense-object identity is uncertain. Preserve worship, the idol, people, and their relationships.",
+    "verified_objects": []
+  },
+  "untouched_raw_result": {
+    "decision": "REVIEW",
+    "decision_reason": "The scene depicts Durga Puja, a significant religious event in India. The proposed target culture is Japan, which is not a common context for Durga Puja. The scene includes elements that are specific to Indian culture and religion, such as the goddess Durga, her headdress, and the offerings of incense sticks. These elements would need to be adapted in a way that is culturally appropriate and meaningful in Japan, which is not a straightforward process. The proposed change would require a detailed understanding of Japanese religious practices and cultural norms, which is beyond the scope of this system.",
+    "scene_summary": "The image depicts a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood. The background includes a building with a large, white wall and a few trees.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "The image depicts a large, ornate deity with multiple arms, prominently featuring the goddess Durga.",
+      "The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke.",
+      "Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms.",
+      "The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess.",
+      "The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood.",
+      "The background includes a building with a large, white wall and a few trees."
+    ],
+    "uncertainties": [],
+    "verification_requirements": []
+  },
+  "before": {
+    "status": "VALIDATED",
+    "planning_result": {
+      "decision": "REVIEW",
+      "decision_reason": "Review required; no candidate edit is released downstream. Verify the complete source caption and image before planning an edit. The model requested context review; no direct edit is authorized.",
+      "scene_summary": "The image depicts a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood. The background includes a building with a large, white wall and a few trees.",
+      "candidate_edits": [],
+      "must_preserve": [
+        "The image depicts a large, ornate deity with multiple arms, prominently featuring the goddess Durga.",
+        "The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke.",
+        "Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms.",
+        "The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess.",
+        "The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood.",
+        "The background includes a building with a large, white wall and a few trees."
+      ],
+      "uncertainties": [],
+      "verification_requirements": [
+        "Verify the complete source caption and image before planning an edit.",
+        "The model requested context review; no direct edit is authorized.",
+        "Review the original-scene summary and any paraphrased identities against the image.",
+        "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+      ]
+    },
+    "issues": [
+      {
+        "code": "CAPTION_INCOMPLETE",
+        "message": "Verify the complete source caption and image before planning an edit.",
+        "candidate_index": null,
+        "severity": "review"
+      },
+      {
+        "code": "MODEL_REVIEW_REQUESTED",
+        "message": "The model requested context review; no direct edit is authorized.",
+        "candidate_index": null,
+        "severity": "review"
+      }
+    ],
+    "decision": "REVIEW",
+    "candidate_count": 0,
+    "human_review_requirement": "NO_RELEASED_CANDIDATES",
+    "grounding_permitted": false,
+    "sam_permitted": false,
+    "inpainting_permitted": false
+  },
+  "after": {
+    "status": "VALIDATED",
+    "planning_result": {
+      "decision": "REVIEW",
+      "decision_reason": "Review required; no candidate edit is released downstream. Verify the complete source caption and image before planning an edit. The model requested context review; no direct edit is authorized.",
+      "scene_summary": "The image depicts a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood. The background includes a building with a large, white wall and a few trees.",
+      "candidate_edits": [],
+      "must_preserve": [
+        "The image depicts a large, ornate deity with multiple arms, prominently featuring the goddess Durga.",
+        "The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke.",
+        "Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms.",
+        "The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess.",
+        "The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood.",
+        "The background includes a building with a large, white wall and a few trees."
+      ],
+      "uncertainties": [],
+      "verification_requirements": [
+        "Verify the complete source caption and image before planning an edit.",
+        "The model requested context review; no direct edit is authorized.",
+        "Review the original-scene summary and any paraphrased identities against the image.",
+        "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+      ]
+    },
+    "issues": [
+      {
+        "code": "CAPTION_INCOMPLETE",
+        "message": "Verify the complete source caption and image before planning an edit.",
+        "candidate_index": null,
+        "severity": "review"
+      },
+      {
+        "code": "MODEL_REVIEW_REQUESTED",
+        "message": "The model requested context review; no direct edit is authorized.",
+        "candidate_index": null,
+        "severity": "review"
+      }
+    ],
+    "decision": "REVIEW",
+    "candidate_count": 0,
+    "human_review_requirement": "NO_RELEASED_CANDIDATES",
+    "grounding_permitted": false,
+    "sam_permitted": false,
+    "inpainting_permitted": false
+  },
+  "model_calls": 0,
+  "review_approval_created": false
+}

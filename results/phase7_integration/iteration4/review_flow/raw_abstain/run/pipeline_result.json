@@ -1,0 +1,90 @@
+{
+  "execution_mode": "AUTOMATED_PLANNING",
+  "state": "NO_EDIT_JUSTIFIED",
+  "completed_stages": [
+    "source",
+    "caption",
+    "planning",
+    "deterministic_validation"
+  ],
+  "stopped_at": "planning",
+  "reason": "Validated ABSTAIN; terminate without editing.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "6269b9147565ebc4a405657c1a15ccf592381a2e0016f3fea1385195788b674e",
+      "sha256": "6269b9147565ebc4a405657c1a15ccf592381a2e0016f3fea1385195788b674e",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "path": "evidence/source/original.png"
+    },
+    "caption.json": {
+      "id": "1e859e876e188b7b2131c23e08a75015d36d526110b6e620107de08ace1e1dd5",
+      "sha256": "1e859e876e188b7b2131c23e08a75015d36d526110b6e620107de08ace1e1dd5",
+      "path": "caption.json"
+    },
+    "planning_input.json": {
+      "id": "4f570c8d36f6dfb9edfa1373a4ca0f34e2a1a05674b0445735b10779bd83f21d",
+      "sha256": "4f570c8d36f6dfb9edfa1373a4ca0f34e2a1a05674b0445735b10779bd83f21d",
+      "path": "planning_input.json"
+    },
+    "planner_audit.json": {
+      "id": "70b42c7d2cbb4763a44d4d74124e3f2abd3f16cd50f108ca14e7cae092e6cdc8",
+      "sha256": "70b42c7d2cbb4763a44d4d74124e3f2abd3f16cd50f108ca14e7cae092e6cdc8",
+      "path": "planner_audit.json"
+    },
+    "validated_plan.json": {
+      "id": "a430658960437745fc7e5a74c5ff582a1edd34f5e67c5d06097b77f95879455f",
+      "sha256": "a430658960437745fc7e5a74c5ff582a1edd34f5e67c5d06097b77f95879455f",
+      "path": "validated_plan.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.001705500006210059
+    },
+    {
+      "stage": "resource_preflight",
+      "action": "QWEN_NOT_RESIDENT",
+      "seconds": 0.0026104999997187406
+    },
+    {
+      "stage": "caption",
+      "action": "CAPTION_COMPLETED",
+      "seconds": 0.00406479999946896
+    },
+    {
+      "stage": "caption",
+      "action": "MODEL_REFERENCES_RELEASED",
+      "seconds": 0.05491260000417242,
+      "cuda_allocated_bytes_after": 0
+    },
+    {
+      "stage": "planning",
+      "action": "VALIDATED",
+      "seconds": 0.05745750000642147,
+      "decision": "ABSTAIN"
+    },
+    {
+      "stage": "planning",
+      "action": "QWEN_UNLOAD_CONFIRMED",
+      "seconds": 0.057492899999488145
+    },
+    {
+      "stage": "planning",
+      "action": "STOP",
+      "seconds": 0.05749690000084229,
+      "state": "NO_EDIT_JUSTIFIED",
+      "reason": "Validated ABSTAIN; terminate without editing.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

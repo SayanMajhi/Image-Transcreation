@@ -1,0 +1,38 @@
+{
+  "decision": "REVIEW",
+  "decision_reason": "The caption status is TRUNCATED, which requires review to determine if a meaningful adaptation can be made without making assumptions or uncertainties. Review the image because caption completion is truncated or unknown. Resolve uncertainties material to the proposed edits; relevance is not automatically proven. Verify the source-object identity of: null. Localization must retain the original object label: null.",
+  "scene_summary": "The caption reports an image depicting a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood. The background includes a building with a large, white wall and a few trees.",
+  "candidate_edits": [
+    {
+      "object_description": "null",
+      "localization_phrase": "The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood. The background includes a building with a large, white wall and a few trees.",
+      "proposed_change": "The deity's headdress and jewelry are replaced with Japanese traditional attire and accessories, while maintaining the overall composition and crowd of people.",
+      "cultural_reason": "To respect the cultural context while making a small adaptation, the headdress and jewelry are replaced with Japanese traditional attire and accessories, which are culturally appropriate for the scene.",
+      "identity_uncertain": true,
+      "verified_object_id": null
+    }
+  ],
+  "must_preserve": [
+    "The deity's position and the crowd of people, including their relationships and expressions.",
+    "original scene purpose",
+    "important people",
+    "activity",
+    "person and object relationships"
+  ],
+  "uncertainties": [
+    "The identity of the objects held by the people (incense sticks) and their cultural significance in Japan.",
+    "The exact nature of the cloud of smoke and its cultural significance in Japan."
+  ],
+  "verification_requirements": [
+    "Verify the identity of the objects held by the people and their cultural significance in Japan.",
+    "Verify the nature of the cloud of smoke and its cultural significance in Japan.",
+    "Review the image because caption completion is truncated or unknown.",
+    "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+    "Verify the source-object identity of: null.",
+    "Localization must retain the original object label: null.",
+    "Check proposed changes and cultural reasons with the user.",
+    "Verify localization phrases against the image before grounding or editing.",
+    "Compare scene_summary with the original image; caption-only claims are unverified, including any paraphrased identities.",
+    "Check every preservation statement against every proposed change; surface-label checks cannot prove semantic consistency."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "portable_source_hash_matches": true,
+  "source_dimensions": [
+    1280,
+    966
+  ],
+  "unknown_verification_fields_not_filled": true,
+  "no_live_condition_executed": true,
+  "all_model_calls_zero": true,
+  "absolute_windows_paths_not_needed_for_packet_inspection": true
+}

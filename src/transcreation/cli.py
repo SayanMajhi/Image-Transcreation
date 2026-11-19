@@ -15,15 +15,97 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--version", action="version",
                         version=f"transcreate {version('culture-transcreation')}")
     commands = parser.add_subparsers(dest="command")
+    run = commands.add_parser("run", help="Run automated planning/reviewed grounding/replay or explicit guided research from JSON")
+    run.add_argument("--input", type=Path, required=True, help="PipelineInput or independent ResearchInput JSON; paths relative to current directory")
     caption = commands.add_parser("caption", help="Caption one image with SmolVLM-500M")
     caption.add_argument("--image", type=Path, required=True)
     caption.add_argument("--model", choices=("smolvlm",))
     caption.add_argument("--prompt-variant", choices=("default", "concise_grounded"))
     caption.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     caption.add_argument("--out", type=Path, default=Path("outputs/caption.json"))
+    plan = commands.add_parser("plan", help="Plan cultural edits with local Ollama; never modifies images")
+    plan.add_argument("--input", type=Path, required=True, help="PlanningInput JSON, including target culture")
+    plan.add_argument("--config", type=Path, default=DEFAULT_CONFIG.with_name("planner.yaml"))
+    plan.add_argument("--model", help="Override the configured Ollama model name")
+    plan.add_argument("--endpoint", help="Override the local /api/chat URL")
+    plan.add_argument("--timeout", type=float, help="Override request timeout in seconds")
+    plan.add_argument("--out", type=Path, default=Path("outputs/plan.json"), help="New audit JSON; existing files are preserved")
+    ground = commands.add_parser("ground", help="Research-only text localization; never executes planner edits")
+    ground.add_argument("--image", type=Path, required=True)
+    ground.add_argument("--phrase", required=True)
+    ground.add_argument("--config", type=Path, default=DEFAULT_CONFIG.with_name("grounding.yaml"))
+    ground.add_argument("--box-threshold", type=float)
+    ground.add_argument("--text-threshold", type=float)
+    ground.add_argument("--device", choices=("cuda", "cpu"))
+    ground.add_argument("--out", type=Path, required=True, help="New artifact directory")
     args = parser.parse_args(argv)
     if args.command is None:
         print("Culture Transcreation CLI is ready.")
+        return
+
+    if args.command == "run":
+        try:
+            values = json.loads(args.input.read_text(encoding="utf-8-sig"))
+            if values.get("execution_mode") == "GUIDED_RESEARCH":
+                from transcreation.guided_research import ResearchInput, run_guided_research
+                result = run_guided_research(ResearchInput(**values))
+                print(f"{result['status']}: {result['reason']}")
+                if result["status"] == "FAILED":
+                    raise SystemExit(1)
+            else:
+                from scripts.run_pipeline import main as pipeline_main
+                pipeline_main(["--input", str(args.input)])
+        except (OSError, TypeError, ValueError, KeyError) as exc:
+            parser.error(str(exc))
+        return
+
+    if args.command == "ground":
+        from transcreation.config import load_grounding_config
+        from transcreation.stages.grounding import GroundingDetector, save_grounding_artifacts
+
+        detector = None
+        try:
+            if args.out.exists():
+                raise ValueError("grounding output directory already exists")
+            config = load_grounding_config(args.config)
+            overrides = {name: getattr(args, name) for name in ("box_threshold", "text_threshold", "device")
+                         if getattr(args, name) is not None}
+            detector = GroundingDetector(replace(config, **overrides))
+            result = detector.detect(args.image, args.phrase)
+            save_grounding_artifacts(args.image, result, args.out)
+        except (OSError, ValueError, RuntimeError, ImportError) as exc:
+            parser.error(str(exc))
+        finally:
+            if detector is not None:
+                detector.close()
+        print(f"{result.status}: {len(result.detections)} boxes; saved {args.out}")
+        if result.status in ("ERROR", "INVALID_OUTPUT"):
+            parser.error(str(result.observations))
+        return
+
+    if args.command == "plan":
+        from transcreation.config import load_planner_config
+        from transcreation.stages.ollama_planner import OllamaPlanner, parse_planning_input
+
+        try:
+            if args.out.exists():
+                raise ValueError(f"Output already exists; choose a new --out path: {args.out}")
+            config = load_planner_config(args.config)
+            overrides = {key: getattr(args, key) for key in ("model", "endpoint", "timeout")
+                         if getattr(args, key) is not None}
+            config = replace(config, **overrides)
+            request = parse_planning_input(json.loads(args.input.read_text(encoding="utf-8-sig")))
+            record = OllamaPlanner(config).record_plan(request)
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            with args.out.open("x", encoding="utf-8") as output:
+                json.dump(record, output, indent=2, ensure_ascii=False, allow_nan=False)
+                output.write("\n")
+        except (OSError, ValueError) as exc:
+            parser.error(str(exc))
+        print(f"Saved: {args.out}")
+        if record["validation"]["status"] != "valid":
+            parser.error(record["validation"]["message"])
+        print(record["planning_result"]["decision"])
         return
 
     from PIL import Image, UnidentifiedImageError

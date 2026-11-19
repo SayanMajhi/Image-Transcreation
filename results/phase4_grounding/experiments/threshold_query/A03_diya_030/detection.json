@@ -1,0 +1,176 @@
+{
+  "image_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+  "original_dimensions": [
+    1280,
+    842
+  ],
+  "source_phrase": "diya",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "resolved_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        898.9425659179688,
+        437.91070556640625,
+        1194.177490234375,
+        680.5514526367188
+      ],
+      "score": 0.413595974445343,
+      "label": "diya"
+    },
+    {
+      "box": [
+        1031.7933349609375,
+        130.4326629638672,
+        1245.4749755859375,
+        296.5723876953125
+      ],
+      "score": 0.35099124908447266,
+      "label": "diya"
+    },
+    {
+      "box": [
+        239.4505157470703,
+        29.393260955810547,
+        458.8706970214844,
+        242.1914520263672
+      ],
+      "score": 0.30267179012298584,
+      "label": "diya"
+    },
+    {
+      "box": [
+        735.638916015625,
+        63.895389556884766,
+        927.334716796875,
+        219.18927001953125
+      ],
+      "score": 0.3047580420970917,
+      "label": "diya"
+    },
+    {
+      "box": [
+        632.1923828125,
+        249.28231811523438,
+        888.8585205078125,
+        440.6268615722656
+      ],
+      "score": 0.36185088753700256,
+      "label": "diya"
+    }
+  ],
+  "settings": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42,
+    "effective_device": "cuda",
+    "normalized_prompt": "diya.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "disable_custom_kernels": true,
+    "inference_mode": true,
+    "eval": true,
+    "coordinate_format": "xyxy_original_pixels",
+    "postprocess_box_argument": "threshold",
+    "target_sizes": [
+      [
+        842,
+        1280
+      ]
+    ],
+    "image_processor": {
+      "_processor_class": "GroundingDinoProcessor",
+      "image_processor_type": "GroundingDinoImageProcessor",
+      "format": "coco_detection",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1333,
+        "shortest_edge": 800
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "do_convert_annotations": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": null
+    }
+  },
+  "timing": {
+    "load_seconds": 1.5999976312741637e-06,
+    "preprocess_seconds": 0.0794432999973651,
+    "inference_seconds": 0.5063065000140341,
+    "postprocess_seconds": 0.002867899995180778,
+    "total_seconds": 0.5910225999978138
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 692084224,
+    "inference_peak_allocated_bytes": 1984237056,
+    "device": "cuda"
+  },
+  "raw_predictions": {
+    "boxes": [
+      [
+        898.9425659179688,
+        437.91070556640625,
+        1194.177490234375,
+        680.5514526367188
+      ],
+      [
+        1031.7933349609375,
+        130.4326629638672,
+        1245.4749755859375,
+        296.5723876953125
+      ],
+      [
+        239.4505157470703,
+        29.393260955810547,
+        458.8706970214844,
+        242.1914520263672
+      ],
+      [
+        735.638916015625,
+        63.895389556884766,
+        927.334716796875,
+        219.18927001953125
+      ],
+      [
+        632.1923828125,
+        249.28231811523438,
+        888.8585205078125,
+        440.6268615722656
+      ]
+    ],
+    "scores": [
+      0.413595974445343,
+      0.35099124908447266,
+      0.30267179012298584,
+      0.3047580420970917,
+      0.36185088753700256
+    ],
+    "text_labels": [
+      "diya",
+      "diya",
+      "diya",
+      "diya",
+      "diya"
+    ]
+  },
+  "observations": [],
+  "research_only": true
+}

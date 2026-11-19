@@ -1,0 +1,43 @@
+{
+  "caption": "A medium outdoor shot shows a row of black doors with graffiti on them, a bicycle leaning against the sidewalk in front of the doors, and a brick sidewalk in the foreground. The doors are framed by a white wall, and the graffiti on the doors includes a blue cat, the word \"AGAN\" in white, and the word \"Lane\" in white. The bicycle is a standard two-wheeled bike with a black frame and blue seat. The sidewalk is made of red bricks, and the bricks are laid in a herringbone pattern.",
+  "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+  "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "image_dimensions": [
+    1280,
+    966
+  ],
+  "seed": 42,
+  "task": "caption",
+  "generation_settings": {
+    "max_new_tokens": 128,
+    "num_beams": 1,
+    "do_sample": false,
+    "num_return_sequences": 1,
+    "use_cache": true
+  },
+  "device": "cuda",
+  "precision": "float16",
+  "torch_version": "2.15.0+cu132",
+  "transformers_version": "4.57.6",
+  "model_loading_ms": 2141.0165000052075,
+  "inference_ms": 6152.279699999781,
+  "peak_gpu_memory_bytes": 1178738688,
+  "generated_tokens": 112,
+  "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+  "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+  "processor_settings": {
+    "size": {
+      "longest_edge": 1024
+    },
+    "do_image_splitting": true,
+    "max_image_size": {
+      "longest_edge": 512
+    },
+    "attention_implementation": "sdpa"
+  },
+  "eos_reached": true,
+  "token_ceiling_reached": false,
+  "prompt_variant": "default",
+  "input_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0"
+}

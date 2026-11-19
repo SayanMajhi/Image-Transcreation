@@ -1,0 +1,327 @@
+{
+  "checked": 64,
+  "broken": [],
+  "links": [
+    {
+      "document": "README.md",
+      "target": "reports/phase6_working.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "results/phase6_inpainting/iteration2/full_comparison.png",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "results/phase6_inpainting/iteration2/bowl_comparison.png",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "results/phase6_inpainting/iteration2/rim_wick_comparison.png",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "results/phase6_inpainting/iteration2/run/final.png",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "results/phase6_inpainting/iteration2/independent_verification.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/detail.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/comparison.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/final.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/raw_generated_crop.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/review_status.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/input.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/preregistration.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/evidence/mask_0.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/evidence/overlay_0.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/checkpoint_access.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/download.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/installed_api.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/dependency_install.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/environment_before.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/environment_after.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/processing_image.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/processing_mask.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/restored_crop.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/generated_region.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/composite_diagnostics.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/inpainting.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/independent_verification.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/real_invocation.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/inference_stderr.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/visual_assessment.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/tests_before.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/tests_after.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/preservation_after.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/inpainting_cli_help.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/existing_cli_help.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/git_diff_summary.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/git_status_after.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/ATTRIBUTION.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/portable_tests.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/portable_integrity.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/input.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/preregistration.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/independent_verification.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/execute_once.py",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/invocation.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/process.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/weights_verification.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/prompt_tokenization.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/stderr.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/run/inpainting.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/independent_verification.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/run/raw_generated_crop.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/run/final.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/bowl_comparison.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/full_comparison.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/rim_wick_comparison.png",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/figure_geometry.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/visual_assessment.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/tests.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/preservation_before.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/preservation_after.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/git_before.json",
+      "exists": true
+    },
+    {
+      "document": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration2/git_after.json",
+      "exists": true
+    }
+  ],
+  "remote_urls_not_checked": true
+}

@@ -1,0 +1,43 @@
+{
+  "caption": "In the foreground of this image is a plate of spaghetti with parsley on top. The spaghetti is white and the parsley is light green. The parsley is sprinkled over the top of the spaghetti. There is a small piece of what appears to be a mushroom or a small piece of meat on top of the parsley. The plate is white and is sitting on a table. In the background, there are several glass jars with a dark liquid in them.",
+  "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+  "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "image_dimensions": [
+    2272,
+    1704
+  ],
+  "seed": 42,
+  "task": "caption",
+  "generation_settings": {
+    "max_new_tokens": 128,
+    "num_beams": 1,
+    "do_sample": false,
+    "num_return_sequences": 1,
+    "use_cache": true
+  },
+  "device": "cuda",
+  "precision": "float16",
+  "torch_version": "2.15.0+cu132",
+  "transformers_version": "4.57.6",
+  "model_loading_ms": 2095.1385000007576,
+  "inference_ms": 5122.13850000262,
+  "peak_gpu_memory_bytes": 1178738688,
+  "generated_tokens": 93,
+  "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+  "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+  "processor_settings": {
+    "size": {
+      "longest_edge": 1024
+    },
+    "do_image_splitting": true,
+    "max_image_size": {
+      "longest_edge": 512
+    },
+    "attention_implementation": "sdpa"
+  },
+  "eos_reached": true,
+  "token_ceiling_reached": false,
+  "prompt_variant": "default",
+  "input_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e"
+}

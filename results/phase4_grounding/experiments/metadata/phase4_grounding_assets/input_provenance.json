@@ -1,0 +1,21 @@
+{
+  "A_bicycle": {
+    "repository_input": "data/vlm_collection/scene_06.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0"
+  },
+  "B_oil_lamp": {
+    "repository_input": "data/vlm_collection/scene_02.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Diwali_Oil_lamps_Darjeeling.jpg",
+    "author": "Benoy",
+    "license": "CC BY-SA 3.0"
+  },
+  "C_incense_burner": {
+    "repository_input": "data/sample_images/durga.jpg",
+    "source": "user-provided project image",
+    "author": null,
+    "license": null,
+    "use": "local research and mentor review; external publication permission unverified"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "decision": "MATERIAL_UNRESOLVED",
+  "reviewer": "Sayan",
+  "original_final_decision": "REVIEW",
+  "released_candidates": 0,
+  "all_execution_permissions": false,
+  "full_tests_passed": 370,
+  "portable_focused_tests_passed": 33,
+  "portable_decision_verified": true,
+  "earlier_evidence_preserved": true,
+  "earlier_report_exact_prefix": true,
+  "new_model_calls": 0,
+  "note": "Final archive CRC, manifest hashes and link checks are recorded in package_receipt.json outside the archive to avoid self-reference."
+}

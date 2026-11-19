@@ -1,0 +1,21 @@
+{
+  "planning_result": {
+    "decision": "ABSTAIN",
+    "decision_reason": "No justified image edit is established; leave the source image unchanged. This does not authorize modification or certify cultural appropriateness.",
+    "scene_summary": "Caption describes a synthetic object.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "background"
+    ],
+    "uncertainties": [],
+    "verification_requirements": []
+  },
+  "issues": [
+    {
+      "code": "ABSTENTION_NORMALIZED",
+      "message": "No-edit reason and checks normalized; raw cultural claims/checks remain in the audit.",
+      "candidate_index": null,
+      "severity": "info"
+    }
+  ]
+}

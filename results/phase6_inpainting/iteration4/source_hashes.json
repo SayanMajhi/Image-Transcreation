@@ -1,0 +1,32 @@
+[
+  {
+    "source": "results/phase6_inpainting/iteration2/run/evidence/original.jpg",
+    "copy": "results/phase6_inpainting/iteration4/evidence/original.jpg",
+    "sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+    "copy_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2"
+  },
+  {
+    "source": "results/phase6_inpainting/iteration2/run/evidence/mask_0.png",
+    "copy": "results/phase6_inpainting/iteration4/evidence/original_mask.png",
+    "sha256": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+    "copy_sha256": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46"
+  },
+  {
+    "source": "results/phase6_inpainting/iteration2/run/evidence/overlay_0.png",
+    "copy": "results/phase6_inpainting/iteration4/evidence/original_overlay.png",
+    "sha256": "7d424d37c87f46d011508bc30260af0da5c09b6a253ae9f46c76077c91106b26",
+    "copy_sha256": "7d424d37c87f46d011508bc30260af0da5c09b6a253ae9f46c76077c91106b26"
+  },
+  {
+    "source": "results/phase6_inpainting/iteration2/run/final.png",
+    "copy": "results/phase6_inpainting/iteration4/evidence/iteration2_final.png",
+    "sha256": "e68c79d3b3ff9efd8a81c47f590666d7b142f2aab8eb8a7ececc30ccf9558cfc",
+    "copy_sha256": "e68c79d3b3ff9efd8a81c47f590666d7b142f2aab8eb8a7ececc30ccf9558cfc"
+  },
+  {
+    "source": "results/phase6_inpainting/iteration3/run/final.png",
+    "copy": "results/phase6_inpainting/iteration4/evidence/iteration3_final.png",
+    "sha256": "36f94ee1be574e4a5a2ae249330da966ec11cc60253c444020abffed1bf8b13f",
+    "copy_sha256": "36f94ee1be574e4a5a2ae249330da966ec11cc60253c444020abffed1bf8b13f"
+  }
+]

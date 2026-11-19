@@ -1,0 +1,52 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "packages": {
+    "Pillow": "13.0.0",
+    "torch": "2.15.0+cu132",
+    "transformers": "4.57.6",
+    "PyYAML": "6.0.3"
+  },
+  "no_new_dependencies": true,
+  "new_model_inference_calls": 0,
+  "actual_human_review_available": false,
+  "real_review_records": {
+    "PENDING": 4,
+    "ACCEPT": 0,
+    "REJECT": 0,
+    "NEEDS_REVIEW": 0
+  },
+  "detection_checkpoint": "IDEA-Research/grounding-dino-tiny",
+  "saved_detection_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "defaults_unchanged": {
+    "box_threshold": 0.3,
+    "text_threshold": 0.25
+  },
+  "review_indexing": "zero_based_detections_array; iteration 1/2 visual labels were one-based; use new indexed preview and exact JSON array index",
+  "source_provenance": {
+    "A_bicycle": {
+      "repository_input": "data/vlm_collection/scene_06.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0"
+    },
+    "B_oil_lamp": {
+      "repository_input": "data/vlm_collection/scene_02.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diwali_Oil_lamps_Darjeeling.jpg",
+      "author": "Benoy",
+      "license": "CC BY-SA 3.0"
+    },
+    "C_incense_burner": {
+      "repository_input": "data/sample_images/durga.jpg",
+      "source": "user-provided project image",
+      "author": null,
+      "license": null,
+      "use": "local research and mentor review; external publication permission unverified"
+    }
+  },
+  "limitations": [
+    "Human inspection flags are explicit declarations, not proof that a person viewed an image.",
+    "Local reviewer names are not authenticated or digitally signed.",
+    "Hashes bind exact evidence bytes after preparation; they do not prove semantic correctness or authenticity of evidence before preparation.",
+    "No human-reviewed real selection or SAM performance has been claimed."
+  ]
+}

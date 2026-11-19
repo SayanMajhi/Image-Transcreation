@@ -1,0 +1,16 @@
+{
+  "original_files_checked": 147,
+  "changed": [
+    "reports/phase6_working.md"
+  ],
+  "report_prefix_preserved": true,
+  "all_iteration1_iteration2_and_prior_packages_unchanged": true,
+  "all_existing_application_scripts_configs_tests_unchanged": true,
+  "additions": [
+    "scripts/blend_mask.py",
+    "tests/test_mask_blending.py",
+    "results/phase6_inpainting/iteration3/"
+  ],
+  "original_report_sha256": "62761dca674768d17621f67ec94717da5d45d3a4e7b75fd23e74ebcedcb3f1bf",
+  "new_report_sha256": "fbd220039477b824a1f9bcc46ef3354c11260d52cc6faf4b1519f1cab3cfd1ae"
+}

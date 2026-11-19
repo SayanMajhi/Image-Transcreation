@@ -1,0 +1,28 @@
+{
+  "caption": "A synthetic object sits on a surface.",
+  "model_id": "synthetic captioner",
+  "resolved_revision": null,
+  "requested_revision": null,
+  "image_dimensions": [
+    60,
+    40
+  ],
+  "seed": 42,
+  "task": "caption",
+  "generation_settings": {},
+  "device": "cpu",
+  "precision": "float32",
+  "torch_version": null,
+  "transformers_version": null,
+  "model_loading_ms": null,
+  "inference_ms": null,
+  "peak_gpu_memory_bytes": null,
+  "generated_tokens": 0,
+  "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+  "formatted_prompt": "",
+  "processor_settings": {},
+  "eos_reached": true,
+  "token_ceiling_reached": false,
+  "prompt_variant": "default",
+  "input_sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30"
+}

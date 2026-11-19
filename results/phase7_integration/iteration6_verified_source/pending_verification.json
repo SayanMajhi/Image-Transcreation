@@ -1,0 +1,40 @@
+{
+  "record_type": "SOURCE_IMAGE_CONFIRMATION_REQUEST_NOT_APPROVAL",
+  "status": "PENDING_ACTUAL_USER_CONFIRMATION",
+  "packet_created_at_utc": "2026-11-10T13:01:55.921296+00:00",
+  "source_path": "data/ramen.jpg",
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "actual_format": "WEBP",
+  "dimensions": [
+    1408,
+    1120
+  ],
+  "original_image_shown_to_user": true,
+  "request_channel": "request_user_input_async",
+  "exact_question": "After inspecting the ramen photograph shown above (data/ramen.jpg; SHA-256 37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0), do you personally confirm: original object “Japanese ramen noodles in a bowl”; editable content = noodles and relevant food contents; white bowl itself protected; Indian target and Indian-style masala noodles replacement; preserve bowl, tabletop, camera angle, lighting and background? Preserving the bowl does not require preserving its contents. Please explicitly confirm or correct these statements; I will retain your actual reply and will not invent an identity or confirmation time.",
+  "requested_confirmation": {
+    "source_description": "Japanese ramen noodles in a bowl",
+    "editable_content": "noodles and relevant food contents",
+    "protected_object": "the white bowl itself",
+    "target_culture": "Indian",
+    "intended_replacement": "Indian-style masala noodles",
+    "preserve": [
+      "bowl",
+      "tabletop",
+      "camera angle",
+      "lighting",
+      "background"
+    ],
+    "clarification": "Preserving the bowl does not necessarily mean preserving its contents."
+  },
+  "actual_user_confirmation_received": false,
+  "reviewer_supplied_confirmation": null,
+  "reviewer_supplied_identity": null,
+  "verification_timestamp": null,
+  "assigned_verified_object_id": null,
+  "verified_object_created": false,
+  "model_inference_allowed": false,
+  "grounding_authorized": false,
+  "sam_authorized": false,
+  "image_edit_authorized": false
+}

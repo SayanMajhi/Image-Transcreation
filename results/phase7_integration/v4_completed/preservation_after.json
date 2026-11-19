@@ -1,0 +1,16 @@
+{
+  "previous_files_checked": 1127,
+  "changed_existing_files": [
+    "README.md"
+  ],
+  "missing_files": [],
+  "README_prior_bytes_preserved": true,
+  "new_report": "reports/final_project_report.md",
+  "application_source_and_tests_unchanged": true,
+  "model_configs_unchanged": true,
+  "all_historical_results_and_reviews_unchanged": true,
+  "V3_zip_and_V4_readiness_zip_unchanged": true,
+  "actual_diffusion_calls": 2,
+  "same_A_B_geometry": true,
+  "only_A_B_request_change": "negative_prompt"
+}

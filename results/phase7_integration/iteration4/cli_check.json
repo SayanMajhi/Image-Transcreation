@@ -1,0 +1,6 @@
+{
+  "command": "python -B -m scripts.review_edit_intent decide --help",
+  "returncode": 0,
+  "stdout": "usage: review_edit_intent.py decide [-h] --pending PENDING --out OUT\n                                    --decision\n                                    {ACCEPT_FOR_GROUNDING_TEST,REJECT,NEEDS_REVIEW}\n                                    --reviewer REVIEWER --reason REASON\n                                    [--inspected-original] [--inspected-edit]\n                                    [--checked-user-instructions]\n\noptions:\n  -h, --help            show this help message and exit\n  --pending PENDING\n  --out OUT\n  --decision {ACCEPT_FOR_GROUNDING_TEST,REJECT,NEEDS_REVIEW}\n  --reviewer REVIEWER\n  --reason REASON\n  --inspected-original\n  --inspected-edit\n  --checked-user-instructions\n                        declare that the proposal was checked against the\n                        complete original instructions\n",
+  "stderr": ""
+}

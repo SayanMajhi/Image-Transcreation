@@ -1,0 +1,45 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.15.0+cu132",
+    "transformers": "4.57.6",
+    "Pillow": "13.0.0",
+    "PyYAML": "6.0.3",
+    "huggingface-hub": "0.36.2"
+  },
+  "model_id": "facebook/sam-vit-base",
+  "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+  "nvidia_before": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 1469 MiB used, driver 592.00",
+  "ollama_ps_before": {
+    "models": []
+  },
+  "real_sam_forward_calls": 2,
+  "other_model_forward_calls": 0,
+  "manual_point_status": "RESEARCH_ONLY_REQUIRES_REVIEW",
+  "target_definitions_frozen_in": "experiment_plan.json",
+  "native_api_inspected_before_implementation": {
+    "point_processing": "    def _check_and_preprocess_points(\n        self,\n        input_points=None,\n        input_labels=None,\n        input_boxes=None,\n    ):\n        r\"\"\"\n        Check and preprocesses the 2D points, labels and bounding boxes. It checks if the input is valid and if they\n        are, it converts the coordinates of the points and bounding boxes. If a user passes directly a `torch.Tensor`,\n        it is converted to a `numpy.ndarray` and then to a `list`.\n        \"\"\"\n        if input_points is not None:\n            if hasattr(input_points, \"numpy\"):  # Checks for TF or Torch tensor\n                input_points = input_points.numpy().tolist()\n\n            if not isinstance(input_points, list) or not isinstance(input_points[0], list):\n                raise ValueError(\"Input points must be a list of list of floating points.\")\n            input_points = [np.array(input_point) for input_point in input_points]\n        else:\n            input_points = None\n\n        if input_labels is not None:\n            if hasattr(input_labels, \"numpy\"):\n                input_labels = input_labels.numpy().tolist()\n\n            if not isinstance(input_labels, list) or not isinstance(input_labels[0], list):\n                raise ValueError(\"Input labels must be a list of list integers.\")\n            input_labels = [np.array(label) for label in input_labels]\n        else:\n            input_labels = None\n\n        if input_boxes is not None:\n            if hasattr(input_boxes, \"numpy\"):\n                input_boxes = input_boxes.numpy().tolist()\n\n            if (\n                not isinstance(input_boxes, list)\n                or not isinstance(input_boxes[0], list)\n                or not isinstance(input_boxes[0][0], list)\n            ):\n                raise ValueError(\"Input boxes must be a list of list of list of floating points.\")\n            input_boxes = [np.array(box).astype(np.float32) for box in input_boxes]\n        else:\n            input_boxes = None\n\n        return input_points, input_labels, input_boxes\n",
+    "normalization": "    def _normalize_and_convert(\n        self,\n        encoding_image_processor,\n        original_sizes,\n        input_points=None,\n        input_labels=None,\n        input_boxes=None,\n        return_tensors=\"pt\",\n        point_pad_value=-10,\n    ):\n        if input_points is not None:\n            if len(original_sizes) != len(input_points):\n                input_points = [\n                    self._normalize_coordinates(self.target_size, point, original_sizes[0]) for point in input_points\n                ]\n            else:\n                input_points = [\n                    self._normalize_coordinates(self.target_size, point, original_size)\n                    for point, original_size in zip(input_points, original_sizes)\n                ]\n            # check that all arrays have the same shape\n            if not all(point.shape == input_points[0].shape for point in input_points):\n                if input_labels is not None:\n                    input_points, input_labels = self._pad_points_and_labels(\n                        input_points, input_labels, point_pad_value\n                    )\n\n            input_points = np.array(input_points)\n\n        if input_labels is not None:\n            input_labels = np.array(input_labels)\n\n        if input_boxes is not None:\n            if len(original_sizes) != len(input_boxes):\n                input_boxes = [\n                    self._normalize_coordinates(self.target_size, box, original_sizes[0], is_bounding_box=True)\n                    for box in input_boxes\n                ]\n            else:\n                input_boxes = [\n                    self._normalize_coordinates(self.target_size, box, original_size, is_bounding_box=True)\n                    for box, original_size in zip(input_boxes, original_sizes)\n                ]\n            input_boxes = np.array(input_boxes)\n\n        if input_boxes is not None:\n            if return_tensors == \"pt\":\n                input_boxes = torch.from_numpy(input_boxes)\n                # boxes batch size of 1 by default\n                input_boxes = input_boxes.unsqueeze(1) if len(input_boxes.shape) != 3 else input_boxes\n            elif return_tensors == \"tf\":\n                input_boxes = tf.convert_to_tensor(input_boxes)\n                # boxes batch size of 1 by default\n                input_boxes = tf.expand_dims(input_boxes, 1) if len(input_boxes.shape) != 3 else input_boxes\n            encoding_image_processor.update({\"input_boxes\": input_boxes})\n        if input_points is not None:\n            if return_tensors == \"pt\":\n                input_points = torch.from_numpy(input_points)\n                # point batch size of 1 by default\n                input_points = input_points.unsqueeze(1) if len(input_points.shape) != 4 else input_points\n            elif return_tensors == \"tf\":\n                input_points = tf.convert_to_tensor(input_points)\n                # point batch size of 1 by default\n                input_points = tf.expand_dims(input_points, 1) if len(input_points.shape) != 4 else input_points\n            encoding_image_processor.update({\"input_points\": input_points})\n        if input_labels is not None:\n            if return_tensors == \"pt\":\n                input_labels = torch.from_numpy(input_labels)\n                # point batch size of 1 by default\n                input_labels = input_labels.unsqueeze(1) if len(input_labels.shape) != 3 else input_labels\n            elif return_tensors == \"tf\":\n                input_labels = tf.convert_to_tensor(input_labels)\n                # point batch size of 1 by default\n                input_labels = tf.expand_dims(input_labels, 1) if len(input_labels.shape) != 3 else input_labels\n            encoding_image_processor.update({\"input_labels\": input_labels})\n\n        return encoding_image_processor\n"
+  },
+  "expected_shapes": {
+    "input_points": "[1,1,N,2]",
+    "input_labels": "[1,1,N]",
+    "input_boxes": [
+      1,
+      1,
+      4
+    ]
+  },
+  "backward_compatibility": "Omitting --points or an empty point list sends no point/label keywords to processor or model; existing fields retained, new optional request fields are additive. Strict external JSON readers not covered by repository tests may need to allow these added keys.",
+  "new_restriction": "New point annotations cannot inherit approval from a reviewed box; they require research-only mode. Existing reviewed box-only behavior remains supported.",
+  "overlap_note": "All nine baseline/new candidate pairs per scene; predicted-mask agreement only, not ground-truth IoU or Dice.",
+  "limits": [
+    "No independent ground truth or human-approved point annotations.",
+    "Only two real calls; no repeated timing benchmark.",
+    "SAM prompt labels are soft guidance; point-pixel membership is descriptive, not semantic accuracy.",
+    "Binary masks saved without manual correction or morphological cleanup.",
+    "One provisional source-placement point moved before preregistration/inference; no points or target definitions changed after results."
+  ],
+  "nvidia_after": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 1068 MiB used, driver 592.00"
+}

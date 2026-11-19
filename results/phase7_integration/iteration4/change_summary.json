@@ -1,0 +1,15 @@
+{
+  "modified": [
+    "src/transcreation/stages/planning.py",
+    "scripts/review_edit_intent.py",
+    "src/transcreation/orchestration.py",
+    "tests/test_planning_policy.py"
+  ],
+  "added": [
+    "tests/test_instruction_review.py"
+  ],
+  "added_lines": 301,
+  "removed_lines": 19,
+  "existing_tests_removed": 0,
+  "existing_tests_adjusted_for_requested_policy_change": 2
+}

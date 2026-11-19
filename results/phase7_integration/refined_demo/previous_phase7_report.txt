@@ -1,0 +1,184 @@
+# Phase 7: Integration and final project review
+
+## Objective
+Adapt an existing photograph to a user-directed cultural context while preserving its scene and protected objects. This review covers the current implementation and one bounded real ramen demonstration. **Project status: PARTIALLY COMPLETE. No culturally verified end-to-end transformation has been produced.**
+
+## Architecture
+
+```text
+AUTOMATED: image -> SmolVLM -> Qwen raw draft -> deterministic validator
+           REVIEW / ABSTAIN -> stop
+           PROPOSE -> pending edit-intent review -> accepted grounding test
+           -> all source-object boxes -> box-review boundary
+
+GUIDED RESEARCH (independent objective, never a recovered Qwen candidate):
+           source + explicit research specification -> Grounding DINO
+           -> inspect/select pinned box -> SAM -> inspect/select pinned mask
+           -> protected-sample veto -> SD inpainting -> original-size composite
+           -> independent saved-pixel verification
+```
+
+The guided path is deliberately separate: a research objective is operator-specified and labeled RESEARCH_ONLY. It cannot accept planner candidates, review records or human-approval fields. It never changes the automated validator or its quarantined candidates. A named reviewer is not inferred from an assistant selection.
+
+## Implementation
+
+- `cli.py`: one configuration-driven `run --input` entry point; existing caption/plan/ground commands remain available.
+- `orchestration.py`: existing real caption/planning, reviewed grounding and read-only replay remain unchanged.
+- `guided_research.py`: thin progressive coordinator reusing existing detector, segmenter, inpainting and evidence readers. Missing explicit selections stop before the next model; it never chooses the highest score. A fresh output directory is mandatory for each invocation.
+- Existing SAM contracts check source/detection/point hashes, original coordinates, binary masks and exact dimensions. All candidates are retained.
+- Existing inpainting checks the pinned SAM candidate, crop/padding and mask hashes. It uses CPU offloading, one allowed OOM fallback and original-mask hard compositing.
+- The coordinator independently reopens saved final pixels and rejects changed outside-mask pixels or a no-change result. Optional original-coordinate protected sample points veto a mask before diffusion. Passing these sparse checks does **not** establish full semantic preservation.
+- No model checkpoint, prompt, thresholds, generation defaults, planner policy, schema or human-review authorization was changed in this completion. No new dependency or review framework was added.
+
+[New coordinator](../src/transcreation/guided_research.py), [CLI](../src/transcreation/cli.py), [mocked integration tests](../tests/test_guided_research.py).
+
+## Experiments
+
+### Source and scope
+The actual user-bound source is `data/ramen.jpg`, encoded WEBP, **1408 x 1120**, SHA-256 `37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0`. Source identity and Japanese origin are user declarations; visual appearance alone does not independently prove dish origin. The photo shows noodles, broth, egg, apparent meat slices, seaweed, garnish, a white bowl, black spoon and wooden chopsticks.
+
+The latest user authorized exploring a **proposed research scope**: noodles, sauce/broth and relevant edible toppings, protecting ceramic bowl, spoon, chopsticks, table, background and composition. This is not a confirmation that every topping may be changed. Exact ingredient-level scope remains unresolved. Earlier human source confirmation and Sayan's MATERIAL_UNRESOLVED decision remain byte-identical.
+
+[Source photograph](../results/phase7_integration/final_demo/source.webp), [historical real human decision](../results/phase7_integration/iteration8/ramen_uncertainty_review/human_decision.json), [current authorization status](../results/phase7_integration/final_demo/current_authorization_status.json).
+
+### Frozen setup and budget
+Windows, Python 3.11.9, RTX 3050 Laptop GPU, 4 GB. Models were run in separate sequential CLI processes. Existing configurations and pinned model revisions were retained:
+
+| Stage | Model | Revision / identifier |
+| --- | --- | --- |
+| Caption | SmolVLM-500M-Instruct | a7da5b986cb59b408707209984f360a5f4ad7e47 |
+| Planner | qwen2.5:3b, Q4_K_M | 357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b |
+| Grounding | Grounding DINO Tiny | a2bb814dd30d776dcf7e30523b00659f4f141c71 |
+| Segmentation | SAM ViT-Base | 70c1a07f894ebb5b307fd9eaaee97b9dfc16068f |
+| Inpainting, available but not dispatched here | SD v1.5 Inpainting | 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb |
+
+Predeclared budget: one live caption/planning condition, one grounding query (`noodles`, box .30 / text .25), one box-only SAM condition and at most one point-guided correction. At most one new diffusion generation was permitted if a usable mask existed; **actual count was zero**. No seed, query or threshold sweep occurred.
+
+The unused generation configuration remains 512-square padded local crop, context margin 64 original pixels, FP16, seed 42, 20 requested steps, strength .9, guidance 7.5 and model CPU offloading. The fixed research prompt and complete settings are preserved in the preregistration; they were not tuned after outputs.
+
+[Preregistration](../results/phase7_integration/final_demo/predeclared_experiment.json), [exact software versions](../results/phase7_integration/final_demo/environment.json).
+
+## Results
+
+### Actual caption and planner
+SmolVLM output: **"A bowl of food with chopsticks and a spoon."** It reached EOS after 12 generated tokens without truncation. It identified broad scene context but did not recognize the dish or visible toppings specifically.
+
+Qwen raw PROPOSE correctly copied source object/localization `Japanese ramen noodles in a white bowl`, ID `ramen-food-1`; proposed `change the noodles to masala noodles`. Its summary attributed the generic caption and user verification separately. It did not solve the precise food/utensil edit scope, and its cultural reasoning merely restated the user objective rather than establishing culinary authenticity.
+
+Full original uncertainty:
+
+> The user instruction to transform the ramen into masala noodles is a cultural adaptation, which may require visual verification beyond the provided caption and verified object description.
+
+Final validator: **REVIEW; zero released candidates**. Issues: `USER_CONSTRAINTS_UNRESOLVED` (human_verification), `EDIT_UNCERTAINTY_UNRESOLVED` (review). No rejected candidate was reused as a downstream plan. The independent research specification is separately archived and explicitly identifies its provenance.
+
+[Actual caption](../results/phase7_integration/final_demo/automated/caption.json), [complete raw response and audit](../results/phase7_integration/final_demo/automated/planner_audit.json), [validated plan](../results/phase7_integration/final_demo/automated/validated_plan.json), [safe stopping/resource log](../results/phase7_integration/final_demo/automated/pipeline_result.json).
+
+### Actual localization
+One detection for original-source query `noodles`: XYXY `[244.73678588867188, 160.3011016845703, 1145.2908935546875, 914.7277221679688]`, confidence **0.818872**. The box plausibly contains the noodle region but also toppings, spoon and ceramic margins, and excludes some upper/lower food extents. It is a prompt for segmentation, not a safe editing region or verified food label. Prediction index 0 was selected explicitly for research after inspection of the sole annotated prediction, not by a score-based selection rule. Human box review remains PENDING.
+
+[Detection JSON](../results/phase7_integration/final_demo/localization/grounding/detection.json), [original versus annotated](../results/phase7_integration/final_demo/localization/grounding/comparison.png).
+
+### Actual segmentation and one correction
+
+| Condition | Candidate | SAM predicted score | Foreground pixels | XYXY extent (upper bounds exclusive) |
+| --- | ---: | ---: | ---: | --- |
+| Box only | 0 | 0.858799 | 319,806 | [246, 160, 1152, 952] |
+| Box only | 1 | 0.730520 | 200,805 | [250, 157, 1142, 910] |
+| Box only | 2 | 0.465494 | 84,344 | [243, 166, 1145, 943] |
+| Box + fixed points | 0 | 0.841154 | 228,070 | [237, 139, 1149, 1000] |
+| Box + fixed points | 1 | 0.815489 | 165,421 | [244, 136, 1149, 1004] |
+| Box + fixed points | 2 | 0.873136 | 209,839 | [109, 117, 1271, 1070] |
+
+All six binary masks are preserved. Box-only candidate 0 includes the spoon and part of a chopstick. Other box masks preserve more utensils but miss substantial food regions and contain protected ceramic pixels. The single correction used positives `(562,467), (1030,258), (405,718)` and negatives `(980,462), (1100,657), (290,530), (206,550), (1187,535), (800,1054), (473,115)`. Coordinates and preview were saved before that inference. No original mask was overwritten or manually cleaned.
+
+Corrected candidate 0 still includes a chopstick edge and ceramic speckles; candidate 1 excludes the spoon interior but still leaks onto ceramic and omits most egg/meat/other topping regions. Candidate 2 has the highest predicted score but obvious broad ceramic leakage. Neither a higher score nor a smaller area establishes better semantic segmentation.
+
+Assistant-selected **diagnostic protected samples**, not ground-truth annotations, demonstrate inclusion at known visible ceramic/utensil points in every candidate. For example `(1130,539)` lies on visible white ceramic beside the spoon and is foreground in box candidates 1/2 and all corrected candidates; box candidate 0 instead includes the spoon interior `(1000,470)` and chopstick `(256,279)`. Corrected candidates also include ceramic sample `(490,160)`. These samples are sufficient vetoes for this demonstration, not measurements of accuracy, recall or full-mask boundary quality.
+
+The real CLI generation preflight was exercised with corrected candidate 1 as an explicitly **unsafe negative test** and these protected samples. It returned **MASK_REQUIRES_REVIEW before dispatching diffusion**. No candidate was approved, no current ramen image was generated and no outside-mask locality measurement is claimed for a nonexistent output.
+
+[All box masks and overlays](../results/phase7_integration/final_demo/sam_box/segmentation), [all point-guided masks and overlays](../results/phase7_integration/final_demo/sam_points/segmentation), [point preview](../results/phase7_integration/final_demo/points_before_inference.png), [sample inclusion values](../results/phase7_integration/final_demo/mask_assessment.json), [actual generation veto](../results/phase7_integration/final_demo/generation_gate/research_result.json).
+
+![Ramen source, detections and all six mask candidates; no generated output](../results/phase7_integration/final_demo/ramen_evaluation.png)
+
+### Runtime and memory
+Single observations, not a model benchmark. CUDA figures are PyTorch allocated peaks for each process, excluding desktop/driver/other process memory. Qwen peak GPU allocation was not measured.
+
+| Actual new stage | Forward/request seconds | Peak allocated CUDA GiB |
+| --- | ---: | ---: |
+| SmolVLM | 1.830 | 1.098 |
+| Qwen HTTP planning, including service loading | 11.673 | Not measured |
+| Grounding DINO | 1.158 | 1.642 |
+| SAM box-only | 0.952 | 1.923 |
+| SAM box+points | 0.864 | 1.923 |
+| New diffusion | Not executed | Not applicable |
+
+Qwen used 1,030 prompt / 301 output tokens. Caption model references were released before Qwen; recorded PyTorch allocated bytes after caption cleanup were zero. Ollama unloading was confirmed after planning and before GPU-heavy research stages. Detector and SAM `close()` ran in finally blocks; stages were separate processes. No CUDA OOM/fallback occurred in these real runs. Logs and phase JSONs retain loading/stage timing separately. [GPU process snapshot after runs](../results/phase7_integration/final_demo/gpu_after.txt).
+
+### Historical diffusion reference, explicitly not a ramen transformation
+The preserved Phase 6 Iteration 2 oil-lamp generation is included only to substantiate the already implemented inpainting component. No new call was made. Its saved PNG was independently rechecked: **32,081 inside-mask changed pixels; zero outside-mask changes**, dimensions 1280 x 842. Historical generation took 15.256 seconds, allocated peak 2.472 GiB, FP16, DDIM and CPU offloading. Its wick/bowl continuity remained visibly weak. It is not a culturally verified transformation and does not meet the current ramen objective.
+
+[Historical lamp comparison](../results/phase7_integration/final_demo/historical_inpainting_reference/comparison.png), [historical metadata](../results/phase7_integration/final_demo/historical_inpainting_reference/inpainting.json), [fresh saved-pixel recheck](../results/phase7_integration/final_demo/historical_inpainting_reference/independent_recheck.json).
+
+## Evaluation and failure analysis
+
+- **System correctness:** all requested stage handoffs are available through two explicitly separate modes; automated rejection/review boundaries remain intact. Explicit box and mask indices/hashes prevent implicit score selection. The real protected-pixel preflight stopped safely.
+- **Preservation:** all original images and historical evidence are unchanged. A binary composite can guarantee outside-mask preservation but cannot protect ceramic accidentally included inside a bad mask. The experiment therefore did not generate. No complete semantic boundary verification or human mask approval exists.
+- **Cultural relevance:** user-directed ramen-to-masala-noodles is the intended research objective. Qwen's text is a draft, not proof of cultural appropriateness. No generated ramen result exists for assessing culinary appearance, realism, lighting or seams.
+- **Root cause:** the planner still lacks sufficiently specific edit scope; its generic uncertainty remains blocked. Independently, a text box around mixed food/utensils plus one fixed SAM refinement did not produce a safe food-only mask. New review infrastructure or validator relaxation would not repair those pixels.
+- **No cherry-picking:** one Qwen call, one detection call and two SAM calls are retained, including unsafe/high-score masks. No further correction or generation attempt was made.
+
+## Tests and code quality
+
+Before: **370 passed**, 39.941 s unittest. After: **392 passed**, zero failures/errors, 34.035 s unittest. The 22 new synthetic/mocked integration tests cover stage handoffs, explicit lower-score selection, missing selection, source/replacement mismatch, every pinned evidence hash, no detections, invalid indices/specification, protected-point veto, failure propagation, cleanup order, independent output-pixel checks, no overwrite and CLI routing. Existing planner/review/quarantine tests were not weakened or removed.
+
+Mocked successful generation establishes interface and pixel-verification behavior only; it is not actual new diffusion inference or a successful real cultural transformation. The previous inpainting stage has separate mocked CUDA/failure tests and historical real evidence. No runtime equivalence is asserted beyond these measured cases.
+
+[Baseline summary](../results/phase7_integration/final_demo/tests_before.json), [complete revised suite log](../results/phase7_integration/final_demo/tests_after.json), [CLI compatibility checks](../results/phase7_integration/final_demo/cli_checks.json), [Git/code diff](../results/phase7_integration/final_demo/implementation.diff), [preservation checks](../results/phase7_integration/final_demo/preservation_after.json).
+
+## Reproducibility
+
+From the extracted package/repository root, use Python 3.11 and the installed versions in `environment.json`. Install this source with `python -m pip install -e ".[inpainting]"`; obtain a compatible CUDA PyTorch build separately. Cached pinned models are required for offline real runs, and Ollama must provide the recorded digest. No dependencies were upgraded in this completion.
+
+```powershell
+$env:PYTHONPATH = (Resolve-Path src).Path
+$env:HF_HUB_OFFLINE = "1"
+python -B -m unittest discover -s tests -v
+python -B -m transcreation.cli run --help
+```
+
+Exact executed CLI commands (request JSONs contain all inputs, assumptions and fixed settings):
+
+```powershell
+python -B -m transcreation.cli run --input results/phase7_integration/final_demo/automated_request.json
+python -B -m transcreation.cli run --input results/phase7_integration/final_demo/localization_request.json
+python -B -m transcreation.cli run --input results/phase7_integration/final_demo/segmentation_request.json
+python -B -m transcreation.cli run --input results/phase7_integration/final_demo/segmentation_points_request.json
+python -B -m transcreation.cli run --input results/phase7_integration/final_demo/guarded_generation_request.json
+```
+
+These commands were actually executed, not just proposed. They refuse to overwrite their existing output directories. For a new independent replay, copy a request to a new JSON and change only `output_dir` to a fresh path; saved source/detection/segmentation/mask paths remain relative to the extracted root. Do not regenerate upstream evidence and silently reuse stale downstream hashes. The last request is deliberately unsafe and should stop without generation.
+
+An independently inspected future mask can use the same generation handoff by supplying its genuine segmentation JSON/hash, explicit candidate index, PNG hash, selection note and the fixed research specification. Do not relabel any current failed mask or pending human record as accepted. No automatic pipeline continuation beyond the actual review authorization is provided.
+
+## Limitations and outstanding decisions
+
+The practical next requirement is **an explicit food-content scope plus a reliable inspected food-only mask** excluding the ceramic bowl and utensils. Confirm which toppings may change and whether liquid held in the spoon is protected. Every prepared new human box/mask review remains PENDING. Historical MATERIAL_UNRESOLVED is preserved, not retrospectively cleared. Model confidence, sparse points and assistant inspection do not substitute for a real human review or pixel ground truth.
+
+A research-only mask selection never certifies cultural appropriateness or gives an automated edit permission. A future genuinely approved automated SAM/inpainting chain still needs explicit editing authority; existing segmentation-test acceptance alone cannot provide it. Source-image redistribution/license evidence is not established here; copies are supplied for the requested private research review. No independent external backup is claimed. Final evidence omits model weights, caches, environments and credentials.
+
+## Final status
+
+| Area | Status |
+| --- | --- |
+| Components | Caption, planner, validator, grounding, SAM, inpainting and review utilities implemented |
+| CLI integration | Automated/reviewed/replay entry point plus resumable independent guided research route implemented |
+| Automated real run | SmolVLM -> Qwen -> REVIEW, zero released candidates; no approved transformation |
+| Guided real demonstration | DINO + six SAM masks; unsuitable protected-object boundaries; generation preflight blocks |
+| Real new ramen image generation | **Not performed: no suitable mask** |
+| Historical localized generation | Existing lamp result rechecked, with unresolved physical-continuity limitations |
+| Human review | MATERIAL_UNRESOLVED unchanged; new reviews PENDING; no approvals invented |
+| Tests | 392 passed, zero failures/errors |
+| Overall | **PARTIALLY COMPLETE; real cultural-generation criterion BLOCKED** |
+
+No commit/push, new model, prompt tuning, threshold sweep or safety-policy change occurred. The real experiment budget is exhausted; stop for independent mentor evaluation. Package: `results/final_project_review.zip`.

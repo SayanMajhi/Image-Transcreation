@@ -1,0 +1,13 @@
+{
+  "source_caption": "Two people share lunch at a table. A bowl of ramen with chopsticks sits between them.",
+  "caption_status": "COMPLETE",
+  "target_culture": "India",
+  "source_culture": "Japan",
+  "user_instructions": "Adapt only the meal if justified; keep both people, their shared lunch, and seating.",
+  "verified_objects": [
+    {
+      "object_id": "meal-1",
+      "description": "bowl of ramen"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "scripts.run_pipeline",
+    "--input",
+    "results\\phase7_integration\\iteration1\\real_input.json"
+  ],
+  "returncode": 0,
+  "wall_seconds": 28.60505479999847,
+  "repeat_attempted": false,
+  "HF_HUB_OFFLINE": "1",
+  "ollama_network": "local API only"
+}

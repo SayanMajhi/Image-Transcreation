@@ -1,0 +1,75 @@
+{
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source": {
+    "path": "../assets/pretzel.jpg",
+    "sha256": "47a8f399d08e33bd86bce10f5921b63ed9a0eca511635fa3ff1674ef5f66ff4b"
+  },
+  "reference": {
+    "path": "../../phase8_cultural_validation/true_object_replacement/source.jpg",
+    "sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8"
+  },
+  "selection": {
+    "path": "../reference_masks/croissant.png",
+    "sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d"
+  },
+  "permitted": {
+    "path": "permitted.png",
+    "sha256": "f2d48140e3c39779018559ea48aaaa7580b75c3359db14222de22267dd69b476"
+  },
+  "protected": {
+    "path": "protected.png",
+    "sha256": "6ef41180c14fb94a5d70319d32cf6ede42dbb6e8694712b7c28d470915223355"
+  },
+  "parameters": {
+    "target_width": 2100,
+    "position": [
+      300,
+      350
+    ],
+    "background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "edge_radius": 1.0,
+    "shadows": []
+  },
+  "attribution": {
+    "path": "results\\phase8_cultural_validation\\true_object_replacement\\source.jpg",
+    "sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "dimensions": [
+      1280,
+      853
+    ],
+    "title": "Croissant",
+    "author": "Petr Kratochvil",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Croissant-Petr_Kratochvil.jpg"
+  },
+  "source_attribution": {
+    "path": "results\\phase9_repeatability\\assets\\pretzel.jpg",
+    "sha256": "47a8f399d08e33bd86bce10f5921b63ed9a0eca511635fa3ff1674ef5f66ff4b",
+    "dimensions": [
+      2700,
+      1800
+    ],
+    "title": "Pretzel (1).jpg",
+    "author": "Renee Comet / National Cancer Institute",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Pretzel_(1).jpg"
+  },
+  "annotation_method": "Frozen annotations.json reference photo patch or manual polygon. Source envelope: largest RGB-min<235 component +30px margin, union explicit reference placement and declared soft-shadow footprint. Not SAM, not human approval.",
+  "case": {
+    "id": 2,
+    "source": "pretzel",
+    "target": "croissant",
+    "source_culture": "German-associated pretzel context",
+    "target_culture": "French pastry context",
+    "category": "food",
+    "difficulty": "low: isolated studio white background, target photographic texture"
+  },
+  "frozen_at_utc": "2026-11-11T20:12:55.191367+00:00",
+  "frozen_manifest_sha256": "741ce80c309eb37b35f4af23d0172f86f3c26c273e36e6a31b26b230291d419b",
+  "lighting_limits": "Reference illumination retained; no intrinsic relighting or 3D pose recovery. Uniform source background reconstruction is a research assumption."
+}

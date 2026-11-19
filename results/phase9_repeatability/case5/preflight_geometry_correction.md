@@ -1,0 +1,1 @@
+Native mask inspection found disconnected original tassel strands outside the largest-component envelope. The existing inspected full fez+shadow envelope was added BEFORE primary execution. Original preflight request/masks retained. This is not an output correction or an extra image attempt.

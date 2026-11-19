@@ -1,0 +1,14 @@
+{
+  "zip": "results/phase7_integration/iteration6_review.zip",
+  "sha256": "83433d64f5e72c2f116e286ff4afeaaf866ac84a9ef525002627af3c9beac11e",
+  "bytes": 12590210,
+  "entries": 612,
+  "crc": "passed",
+  "manifest_hashes": "all matched",
+  "working_report_links": 144,
+  "broken_links": 0,
+  "previous_report_exact_prefix": true,
+  "status": "BLOCKED_PENDING_ACTUAL_USER_CONFIRMATION",
+  "qwen_calls": 0,
+  "verified_objects_created": 0
+}

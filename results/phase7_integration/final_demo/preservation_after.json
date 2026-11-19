@@ -1,0 +1,21 @@
+{
+  "existing_files_checked": 813,
+  "changed_existing_snapshot_files": [
+    "src/transcreation/cli.py"
+  ],
+  "missing_files": [],
+  "allowed_completion_changes": [
+    "src/transcreation/cli.py",
+    "README.md"
+  ],
+  "new_implementation": [
+    "src/transcreation/guided_research.py",
+    "tests/test_guided_research.py"
+  ],
+  "new_report": "reports/phase7_integration.md",
+  "historical_phase7_evidence_unchanged": true,
+  "existing_planner_models_configs_tests_review_policies_unchanged": true,
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "original_review": "MATERIAL_UNRESOLVED",
+  "old_released_candidates": 0
+}

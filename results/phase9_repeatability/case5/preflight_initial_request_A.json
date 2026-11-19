@@ -1,0 +1,75 @@
+{
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source": {
+    "path": "../assets/fez.jpg",
+    "sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344"
+  },
+  "reference": {
+    "path": "../assets/fedora.jpg",
+    "sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b"
+  },
+  "selection": {
+    "path": "../reference_masks/fedora.png",
+    "sha256": "d8bd3fc38d9803bfc9d59cb63bb736ea8bd758baddfd9a51f8d0e32759e83a54"
+  },
+  "permitted": {
+    "path": "permitted.png",
+    "sha256": "b952efbfc64f5dbd8ba2ca599fbff20ed0dbd722b8209db6bc37be7db614b1ad"
+  },
+  "protected": {
+    "path": "protected.png",
+    "sha256": "cd2324bdacaa7e61a1493a362a3eea39fb0d41d0e95fc3c9c3a216172919545b"
+  },
+  "parameters": {
+    "target_width": 3400,
+    "position": [
+      1180,
+      700
+    ],
+    "background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "edge_radius": 1.0,
+    "shadows": []
+  },
+  "attribution": {
+    "path": "results\\phase9_repeatability\\assets\\fedora.jpg",
+    "sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+    "dimensions": [
+      1952,
+      1732
+    ],
+    "title": "A fedora hat, made by Borsalino.jpg",
+    "author": "Kjetil Ree",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:A_fedora_hat,_made_by_Borsalino.jpg"
+  },
+  "source_attribution": {
+    "path": "results\\phase9_repeatability\\assets\\fez.jpg",
+    "sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+    "dimensions": [
+      5760,
+      4320
+    ],
+    "title": "Fez.jpg",
+    "author": "Edouard Hue",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fez.jpg"
+  },
+  "annotation_method": "Frozen annotations.json reference photo patch or manual polygon. Source envelope: largest RGB-min<235 component +30px margin, union explicit reference placement and declared soft-shadow footprint. Not SAM, not human approval.",
+  "case": {
+    "id": 5,
+    "source": "fez",
+    "target": "fedora",
+    "source_culture": "Moroccan-associated fez, not an exclusive national object",
+    "target_culture": "Italian Borsalino fedora / wider Western headwear context",
+    "category": "headwear",
+    "difficulty": "medium: inverse headwear case reuses assets; not statistically independent"
+  },
+  "frozen_at_utc": "2026-11-11T20:12:56.908919+00:00",
+  "frozen_manifest_sha256": "741ce80c309eb37b35f4af23d0172f86f3c26c273e36e6a31b26b230291d419b",
+  "lighting_limits": "Reference illumination retained; no intrinsic relighting or 3D pose recovery. Uniform source background reconstruction is a research assumption."
+}

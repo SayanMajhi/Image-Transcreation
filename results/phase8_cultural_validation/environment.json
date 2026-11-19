@@ -1,0 +1,19 @@
+{
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.15.0+cu132",
+    "transformers": "4.57.6",
+    "diffusers": "0.35.2",
+    "accelerate": "1.11.0",
+    "Pillow": "13.0.0",
+    "numpy": "2.4.6",
+    "huggingface-hub": "0.36.2",
+    "opencv-python-headless": "5.0.0.93"
+  },
+  "new_ml_dependencies": [],
+  "new_processing_dependency": "opencv-python-headless 5.0.0.93 installed without upgrading existing packages; Canny preprocessing only",
+  "document_reading": "pypdf wheel loaded from research folder, not installed into application environment",
+  "missing_root_REPRODUCTION_md": true,
+  "reproduction_found": "inside prior submission ZIP and prior report; read from local package"
+}

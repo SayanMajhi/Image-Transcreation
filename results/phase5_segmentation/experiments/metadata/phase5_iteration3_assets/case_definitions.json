@@ -1,0 +1,27 @@
+[
+  {
+    "id": "case_A_oil_lamp",
+    "source": "B_oil_lamp",
+    "indices": [
+      0,
+      1
+    ],
+    "target": "Visible clay bowl/body only. Exclude flame and unrelated surrounding objects. Approval is not for complete lamp replacement.",
+    "experiment": "Controlled bowl-only mask inspection and segmentation-test evaluation; no image modification.",
+    "status": "PENDING",
+    "note": "Candidates 0 and 1 await actual human comparison; neither is accepted."
+  },
+  {
+    "id": "case_B_bicycle",
+    "source": "A_bicycle",
+    "indices": [
+      0,
+      1,
+      2
+    ],
+    "target": "Physical bicycle parts including frame, handlebars, saddle, rims, tires and visible spokes; exclude wall, road and background through wheels.",
+    "experiment": "Controlled bicycle physical-parts segmentation-quality review; no image modification.",
+    "status": "NEEDS_REVIEW",
+    "note": "Preparation triage only: known background leakage, missing thin structures and incomplete wheel rims/spokes; no successful human-approved bicycle mask exists."
+  }
+]

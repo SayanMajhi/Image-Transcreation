@@ -1,0 +1,24 @@
+{
+  "prior_files_checked": 1294,
+  "modified_or_missing": [],
+  "original_ramen_hash_unchanged": true,
+  "previous_final_zip_receipts_matched": [
+    "results/final_project_submission.zip",
+    "results/final_project_review_v4_completed.zip"
+  ],
+  "preregistered_input_configuration_specification_and_region_hashes": "all unchanged",
+  "existing_validator_models_and_review_code": "unchanged",
+  "new_implementation": [
+    "src/transcreation/stages/instruction_editor.py",
+    "scripts/instruction_edit.py",
+    "tests/test_instruction_editor.py"
+  ],
+  "other_authorized_changes": [
+    "README Phase8 status/link",
+    "pyproject optional cultural-validation extra"
+  ],
+  "new_editor_calls": 2,
+  "hidden_generation_retries": 0,
+  "new_SD15_calls": 0,
+  "old_human_decisions_changed": false
+}

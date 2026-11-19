@@ -1,0 +1,9 @@
+{
+  "purpose": "byte-exact replay, not a new condition or model inference",
+  "identical_saved_pngs": {
+    "final.png": true,
+    "source_removed.png": true,
+    "placed_alpha.png": true,
+    "shadow_alpha.png": true
+  }
+}

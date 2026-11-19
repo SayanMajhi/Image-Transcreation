@@ -1,0 +1,17 @@
+{
+  "status": "DETECTED",
+  "valid_predictions": [
+    {
+      "box": [
+        631.4442138671875,
+        248.13294982910156,
+        889.331787109375,
+        443.25518798828125
+      ],
+      "score": 0.31422239542007446,
+      "label": "oil lamp"
+    }
+  ],
+  "invalid_predictions": [],
+  "observations": []
+}

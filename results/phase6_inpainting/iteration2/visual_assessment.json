@@ -1,0 +1,44 @@
+{
+  "assessment_type": "assistant qualitative inspection of saved images; not independent human verification",
+  "views_inspected": [
+    "bowl_comparison.png",
+    "rim_wick_comparison.png",
+    "run/raw_generated_crop.png"
+  ],
+  "matte_clay": {
+    "change": "partial improvement",
+    "observation": "Bowl floor has a visibly grainier surface and fewer broad glossy streaks than Iteration 1; sidewalls remain smooth reddish and the rim still resembles regular beaded decoration rather than gently carved unglazed clay."
+  },
+  "texture": {
+    "change": "mixed",
+    "observation": "More fine grain suggests roughness, but a uniform circular light patch/floor reads synthetic; no independently verified material realism."
+  },
+  "geometry": {
+    "change": "outer unchanged; internal altered",
+    "observation": "Fixed source-mask footprint retained. A brighter, larger-looking round floor/insert around the wick becomes more prominent."
+  },
+  "wick_continuity": {
+    "change": "not resolved, possibly more conspicuous",
+    "observation": "Preserved flame/base still looks mounted on an isolated small disc/candle above the generated interior. No convincing continuous oil/wick/clay connection."
+  },
+  "lighting": {
+    "change": "broadly unchanged",
+    "observation": "Warm red/orange illumination remains broadly consistent. Surrounding real light/shadow pixels are exact originals."
+  },
+  "seams": {
+    "change": "not resolved",
+    "observation": "Thin rim transition and protected flame/base boundary remain abrupt on close inspection; no feathering applied."
+  },
+  "unwanted_objects": {
+    "change": "no obvious unrelated new object; disc-like structure remains",
+    "observation": "Disc/insert impression is not a verified new semantic object but is an unwanted visual interpretation."
+  },
+  "surroundings": {
+    "change": "unchanged by measurement",
+    "observation": "Both outputs have zero changed pixels outside the original mask."
+  },
+  "geometric_limit": "Only white mask pixels can change. The existing black wick/flame cutout is locked, so this experiment cannot move or redraw those pixels. It can only make generated surroundings compatible. This run did not achieve that; these observations do not prove all prompt-only continuity is mathematically impossible.",
+  "prompt_limit": "81 tokens including specials exceed CLIP 77. Final lighting and shadows phrase truncated; material and wick clauses retained. Exact supplied prompt passed unchanged.",
+  "recommendation": "NEEDS FIXES",
+  "human_review_notes": ""
+}

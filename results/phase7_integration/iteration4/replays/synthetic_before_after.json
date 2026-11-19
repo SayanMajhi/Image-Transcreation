@@ -1,0 +1,2034 @@
+[
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "complete_verified_no_instructions",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "PROPOSE",
+        "decision_reason": "Synthetic policy diagnostic only.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [
+          {
+            "object_description": "synthetic bowl",
+            "localization_phrase": "synthetic bowl",
+            "proposed_change": "a different surface finish",
+            "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+            "identity_uncertain": false,
+            "verified_object_id": "test-object-1"
+          }
+        ],
+        "must_preserve": [
+          "background",
+          "original scene purpose",
+          "important people",
+          "activity",
+          "person and object relationships"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
+          "Verify localization phrases against the original image before grounding or editing.",
+          "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",
+          "Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness."
+        ]
+      },
+      "issues": [],
+      "decision": "PROPOSE",
+      "candidate_count": 1,
+      "human_review_requirement": "PENDING_EDIT_INTENT_REQUIRED",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "PROPOSE",
+        "decision_reason": "Synthetic policy diagnostic only.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [
+          {
+            "object_description": "synthetic bowl",
+            "localization_phrase": "synthetic bowl",
+            "proposed_change": "a different surface finish",
+            "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+            "identity_uncertain": false,
+            "verified_object_id": "test-object-1"
+          }
+        ],
+        "must_preserve": [
+          "background",
+          "original scene purpose",
+          "important people",
+          "activity",
+          "person and object relationships"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
+          "Verify localization phrases against the original image before grounding or editing.",
+          "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",
+          "Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness."
+        ]
+      },
+      "issues": [],
+      "decision": "PROPOSE",
+      "candidate_count": 1,
+      "human_review_requirement": "PENDING_EDIT_INTENT_REQUIRED",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "same_candidate_with_satisfied_preservation_instruction",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": "Keep the background unchanged.",
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "USER_CONSTRAINTS_UNRESOLVED",
+          "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "PROPOSE",
+        "decision_reason": "Synthetic policy diagnostic only.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [
+          {
+            "object_description": "synthetic bowl",
+            "localization_phrase": "synthetic bowl",
+            "proposed_change": "a different surface finish",
+            "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+            "identity_uncertain": false,
+            "verified_object_id": "test-object-1"
+          }
+        ],
+        "must_preserve": [
+          "background",
+          "original scene purpose",
+          "important people",
+          "activity",
+          "person and object relationships"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
+          "Verify localization phrases against the original image before grounding or editing.",
+          "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",
+          "Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "USER_CONSTRAINTS_UNRESOLVED",
+          "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "candidate_index": null,
+          "severity": "human_verification"
+        }
+      ],
+      "decision": "PROPOSE",
+      "candidate_count": 1,
+      "human_review_requirement": "PENDING_EDIT_INTENT_REQUIRED",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "same_candidate_with_general_non_preservation_instruction",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": "Consider the supplied target context.",
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "USER_CONSTRAINTS_UNRESOLVED",
+          "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "PROPOSE",
+        "decision_reason": "Synthetic policy diagnostic only.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [
+          {
+            "object_description": "synthetic bowl",
+            "localization_phrase": "synthetic bowl",
+            "proposed_change": "a different surface finish",
+            "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+            "identity_uncertain": false,
+            "verified_object_id": "test-object-1"
+          }
+        ],
+        "must_preserve": [
+          "background",
+          "original scene purpose",
+          "important people",
+          "activity",
+          "person and object relationships"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
+          "Verify localization phrases against the original image before grounding or editing.",
+          "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",
+          "Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "USER_CONSTRAINTS_UNRESOLVED",
+          "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "candidate_index": null,
+          "severity": "human_verification"
+        }
+      ],
+      "decision": "PROPOSE",
+      "candidate_count": 1,
+      "human_review_requirement": "PENDING_EDIT_INTENT_REQUIRED",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "missing_verified_identity",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": []
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": null
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Verify the source-object identity of: synthetic bowl.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Verify the source-object identity of: synthetic bowl.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "UNVERIFIED_SOURCE_OBJECT",
+          "message": "Verify the source-object identity of: synthetic bowl.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Verify the source-object identity of: synthetic bowl.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Verify the source-object identity of: synthetic bowl.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "UNVERIFIED_SOURCE_OBJECT",
+          "message": "Verify the source-object identity of: synthetic bowl.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "unknown_verified_identity",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "missing-id"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. The verified source-object identity id does not exist in the supplied input.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "The verified source-object identity id does not exist in the supplied input.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "UNKNOWN_VERIFIED_OBJECT_ID",
+          "message": "The verified source-object identity id does not exist in the supplied input.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. The verified source-object identity id does not exist in the supplied input.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "The verified source-object identity id does not exist in the supplied input.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "UNKNOWN_VERIFIED_OBJECT_ID",
+          "message": "The verified source-object identity id does not exist in the supplied input.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "description_case_difference",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "Synthetic bowl",
+          "localization_phrase": "Synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. The source-object identity does not match the user-verified description.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "The source-object identity does not match the user-verified description.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "SOURCE_OBJECT_MISMATCH",
+          "message": "The source-object identity does not match the user-verified description.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. The source-object identity does not match the user-verified description.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "The source-object identity does not match the user-verified description.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "SOURCE_OBJECT_MISMATCH",
+          "message": "The source-object identity does not match the user-verified description.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "replacement_used_for_localization",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "a different surface finish",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Localization must retain the original object label: synthetic bowl.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Localization must retain the original object label: synthetic bowl.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "SOURCE_LOCALIZATION_MISMATCH",
+          "message": "Localization must retain the original object label: synthetic bowl.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Localization must retain the original object label: synthetic bowl.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Localization must retain the original object label: synthetic bowl.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "SOURCE_LOCALIZATION_MISMATCH",
+          "message": "Localization must retain the original object label: synthetic bowl.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "preserve_position_mentions_source_label",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "position of the synthetic bowl"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Potential preserve/edit conflict involving: synthetic bowl; distinguish identity from unchanged features.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "position of the synthetic bowl"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Potential preserve/edit conflict involving: synthetic bowl; distinguish identity from unchanged features.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "PRESERVATION_CONFLICT",
+          "message": "Potential preserve/edit conflict involving: synthetic bowl; distinguish identity from unchanged features.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Potential preserve/edit conflict involving: synthetic bowl; distinguish identity from unchanged features.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "position of the synthetic bowl"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Potential preserve/edit conflict involving: synthetic bowl; distinguish identity from unchanged features.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "PRESERVATION_CONFLICT",
+          "message": "Potential preserve/edit conflict involving: synthetic bowl; distinguish identity from unchanged features.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "source_identity_uncertain",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": true,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Resolve the source-object identity before an edit.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Resolve the source-object identity before an edit.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "SOURCE_IDENTITY_UNCERTAIN",
+          "message": "Resolve the source-object identity before an edit.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Resolve the source-object identity before an edit.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Resolve the source-object identity before an edit.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "SOURCE_IDENTITY_UNCERTAIN",
+          "message": "Resolve the source-object identity before an edit.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "truncated_caption",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "TRUNCATED",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Verify the complete source caption and image before planning an edit.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Verify the complete source caption and image before planning an edit.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "CAPTION_INCOMPLETE",
+          "message": "Verify the complete source caption and image before planning an edit.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Verify the complete source caption and image before planning an edit.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Verify the complete source caption and image before planning an edit.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "CAPTION_INCOMPLETE",
+          "message": "Verify the complete source caption and image before planning an edit.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "minor_unrelated_uncertainty_with_edit",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [
+        "Uncertain background wall color."
+      ],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [
+          "Uncertain background wall color."
+        ],
+        "verification_requirements": [
+          "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+          "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [
+          "Uncertain background wall color."
+        ],
+        "verification_requirements": [
+          "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+          "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "source_and_replacement_identical",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "synthetic bowl",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. The proposed replacement/modification is indistinguishable from the original object.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "The proposed replacement/modification is indistinguishable from the original object.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "SOURCE_REPLACEMENT_IDENTICAL",
+          "message": "The proposed replacement/modification is indistinguishable from the original object.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. The proposed replacement/modification is indistinguishable from the original object.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "The proposed replacement/modification is indistinguishable from the original object.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "SOURCE_REPLACEMENT_IDENTICAL",
+          "message": "The proposed replacement/modification is indistinguishable from the original object.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "future_scene_summary",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The scene shows a different surface finish.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Scene summary contains an intended-change phrase absent from source evidence.",
+        "scene_summary": "The scene shows a different surface finish.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Scene summary contains an intended-change phrase absent from source evidence.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "FUTURE_SCENE_CONTAMINATION",
+          "message": "Scene summary contains an intended-change phrase absent from source evidence.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. Scene summary contains an intended-change phrase absent from source evidence.",
+        "scene_summary": "The scene shows a different surface finish.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "Scene summary contains an intended-change phrase absent from source evidence.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "FUTURE_SCENE_CONTAMINATION",
+          "message": "Scene summary contains an intended-change phrase absent from source evidence.",
+          "candidate_index": 0,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "model_review",
+    "provenance": {
+      "scope": "SYNTHETIC_POLICY_DIAGNOSTIC",
+      "source": "results/phase7_integration/iteration3/policy_diagnostics.json"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": null,
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "REVIEW",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. The model requested review; its candidates are draft-only, not downstream edits.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "The model requested review; its candidates are draft-only, not downstream edits.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "MODEL_REVIEW_ONLY",
+          "message": "The model requested review; its candidates are draft-only, not downstream edits.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. The model requested review; its candidates are draft-only, not downstream edits.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "The model requested review; its candidates are draft-only, not downstream edits.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "MODEL_REVIEW_ONLY",
+          "message": "The model requested review; its candidates are draft-only, not downstream edits.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "placeholder_object",
+    "provenance": {
+      "scope": "SYNTHETIC_NEGATIVE_REGRESSION"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": "Keep the background unchanged.",
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "null",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. object_description cannot be a placeholder The raw candidate batch failed validation; no candidate is released until reviewed. Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "object_description cannot be a placeholder",
+          "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "PLACEHOLDER_OBJECT_FIELD",
+          "message": "object_description cannot be a placeholder",
+          "candidate_index": 0,
+          "severity": "review"
+        },
+        {
+          "code": "BATCH_REVIEW_REQUIRED",
+          "message": "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "candidate_index": null,
+          "severity": "review"
+        },
+        {
+          "code": "USER_CONSTRAINTS_UNRESOLVED",
+          "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. object_description cannot be a placeholder The raw candidate batch failed validation; no candidate is released until reviewed.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "object_description cannot be a placeholder",
+          "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "PLACEHOLDER_OBJECT_FIELD",
+          "message": "object_description cannot be a placeholder",
+          "candidate_index": 0,
+          "severity": "review"
+        },
+        {
+          "code": "BATCH_REVIEW_REQUIRED",
+          "message": "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "candidate_index": null,
+          "severity": "review"
+        },
+        {
+          "code": "USER_CONSTRAINTS_UNRESOLVED",
+          "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "candidate_index": null,
+          "severity": "human_verification"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "malformed_candidate_structure",
+    "provenance": {
+      "scope": "SYNTHETIC_NEGATIVE_REGRESSION"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": "Keep the background unchanged.",
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "synthetic bowl",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1",
+          "unexpected_field": "invalid"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. CandidateEdit.__init__() got an unexpected keyword argument 'unexpected_field' The raw candidate batch failed validation; no candidate is released until reviewed. Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "CandidateEdit.__init__() got an unexpected keyword argument 'unexpected_field'",
+          "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "CANDIDATE_SCHEMA_INVALID",
+          "message": "CandidateEdit.__init__() got an unexpected keyword argument 'unexpected_field'",
+          "candidate_index": 0,
+          "severity": "review"
+        },
+        {
+          "code": "BATCH_REVIEW_REQUIRED",
+          "message": "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "candidate_index": null,
+          "severity": "review"
+        },
+        {
+          "code": "USER_CONSTRAINTS_UNRESOLVED",
+          "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. CandidateEdit.__init__() got an unexpected keyword argument 'unexpected_field' The raw candidate batch failed validation; no candidate is released until reviewed.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "CandidateEdit.__init__() got an unexpected keyword argument 'unexpected_field'",
+          "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "CANDIDATE_SCHEMA_INVALID",
+          "message": "CandidateEdit.__init__() got an unexpected keyword argument 'unexpected_field'",
+          "candidate_index": 0,
+          "severity": "review"
+        },
+        {
+          "code": "BATCH_REVIEW_REQUIRED",
+          "message": "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "candidate_index": null,
+          "severity": "review"
+        },
+        {
+          "code": "USER_CONSTRAINTS_UNRESOLVED",
+          "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "candidate_index": null,
+          "severity": "human_verification"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "overlong_localization",
+    "provenance": {
+      "scope": "SYNTHETIC_NEGATIVE_REGRESSION"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": "Keep the background unchanged.",
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "PROPOSE",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [
+        {
+          "object_description": "synthetic bowl",
+          "localization_phrase": "source object source object source object source object source object source object source object source object source object source object source object source object source object source object source object source object source object source object source object source object ",
+          "proposed_change": "a different surface finish",
+          "cultural_reason": "Synthetic non-cultural policy diagnostic.",
+          "identity_uncertain": false,
+          "verified_object_id": "test-object-1"
+        }
+      ],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. localization_phrase must be a short source-object phrase (at most 16 words / 160 characters) The raw candidate batch failed validation; no candidate is released until reviewed. Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "localization_phrase must be a short source-object phrase (at most 16 words / 160 characters)",
+          "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "LOCALIZATION_NOT_OBJECT_PHRASE",
+          "message": "localization_phrase must be a short source-object phrase (at most 16 words / 160 characters)",
+          "candidate_index": 0,
+          "severity": "review"
+        },
+        {
+          "code": "BATCH_REVIEW_REQUIRED",
+          "message": "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "candidate_index": null,
+          "severity": "review"
+        },
+        {
+          "code": "USER_CONSTRAINTS_UNRESOLVED",
+          "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "candidate_index": null,
+          "severity": "review"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "REVIEW",
+        "decision_reason": "Review required; no candidate edit is released downstream. localization_phrase must be a short source-object phrase (at most 16 words / 160 characters) The raw candidate batch failed validation; no candidate is released until reviewed.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": [
+          "localization_phrase must be a short source-object phrase (at most 16 words / 160 characters)",
+          "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "Review the original-scene summary and any paraphrased identities against the image.",
+          "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+        ]
+      },
+      "issues": [
+        {
+          "code": "LOCALIZATION_NOT_OBJECT_PHRASE",
+          "message": "localization_phrase must be a short source-object phrase (at most 16 words / 160 characters)",
+          "candidate_index": 0,
+          "severity": "review"
+        },
+        {
+          "code": "BATCH_REVIEW_REQUIRED",
+          "message": "The raw candidate batch failed validation; no candidate is released until reviewed.",
+          "candidate_index": null,
+          "severity": "review"
+        },
+        {
+          "code": "USER_CONSTRAINTS_UNRESOLVED",
+          "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+          "candidate_index": null,
+          "severity": "human_verification"
+        }
+      ],
+      "decision": "REVIEW",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  },
+  {
+    "record_type": "POLICY_REPLAY_ONLY",
+    "case": "raw_abstain",
+    "provenance": {
+      "scope": "SYNTHETIC_NEGATIVE_REGRESSION"
+    },
+    "input": {
+      "source_caption": "The synthetic caption reports a synthetic bowl on a surface.",
+      "caption_status": "COMPLETE",
+      "target_culture": "synthetic target context",
+      "source_culture": null,
+      "user_instructions": "Keep the background unchanged.",
+      "verified_objects": [
+        {
+          "object_id": "test-object-1",
+          "description": "synthetic bowl"
+        }
+      ]
+    },
+    "untouched_raw_result": {
+      "decision": "ABSTAIN",
+      "decision_reason": "Synthetic policy diagnostic only.",
+      "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+      "candidate_edits": [],
+      "must_preserve": [
+        "background"
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "before": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "ABSTAIN",
+        "decision_reason": "No justified image edit is established; leave the source image unchanged. This does not authorize modification or certify cultural appropriateness.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": []
+      },
+      "issues": [
+        {
+          "code": "ABSTENTION_NORMALIZED",
+          "message": "No-edit reason and checks normalized; raw cultural claims/checks remain in the audit.",
+          "candidate_index": null,
+          "severity": "info"
+        }
+      ],
+      "decision": "ABSTAIN",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "after": {
+      "status": "VALIDATED",
+      "planning_result": {
+        "decision": "ABSTAIN",
+        "decision_reason": "No justified image edit is established; leave the source image unchanged. This does not authorize modification or certify cultural appropriateness.",
+        "scene_summary": "The synthetic caption reports a synthetic bowl on a surface.",
+        "candidate_edits": [],
+        "must_preserve": [
+          "background"
+        ],
+        "uncertainties": [],
+        "verification_requirements": []
+      },
+      "issues": [
+        {
+          "code": "ABSTENTION_NORMALIZED",
+          "message": "No-edit reason and checks normalized; raw cultural claims/checks remain in the audit.",
+          "candidate_index": null,
+          "severity": "info"
+        }
+      ],
+      "decision": "ABSTAIN",
+      "candidate_count": 0,
+      "human_review_requirement": "NO_RELEASED_CANDIDATES",
+      "grounding_permitted": false,
+      "sam_permitted": false,
+      "inpainting_permitted": false
+    },
+    "model_calls": 0,
+    "review_approval_created": false
+  }
+]

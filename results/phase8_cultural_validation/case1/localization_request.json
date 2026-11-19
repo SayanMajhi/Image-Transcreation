@@ -1,0 +1,14 @@
+{
+  "source_image": "results\\phase8_cultural_validation\\case1\\source.jpg",
+  "image_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+  "source_culture": "French-associated croissant, research culinary frame; photo does not prove origin",
+  "target_culture": "Indian samosa snack context",
+  "objective": "replace the crescent layered croissant with a single triangular folded fried pastry shell characteristic of a samosa",
+  "preservation_instructions": "original image dimensions; white background outside the declared edit rectangle; camera viewpoint; one-snack product-photo composition; lighting direction",
+  "source_phrase": "croissant",
+  "generation_prompt": "Photorealistic product photograph of one triangular Indian samosa, crisp golden brown fried pastry shell, folded sealed edges, subtle blistered texture, resting on a plain white surface, soft natural contact shadow, same camera viewpoint and lighting.",
+  "research_assumptions": "This is snack-product localization, not breakfast-menu equivalence or a claim of unique national ownership.; The permitted rectangle includes the entire old pastry and nearby white surface/contact shadow to allow silhouette replacement. No plate, utensil or person is visible.; A hand-drawn triangular ControlNet silhouette will guide target shape; it is not source segmentation or ground truth.",
+  "output_dir": "results\\phase8_cultural_validation\\case1\\localization",
+  "execution_mode": "GUIDED_RESEARCH",
+  "scope": "RESEARCH_ONLY"
+}

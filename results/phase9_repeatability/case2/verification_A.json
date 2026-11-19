@@ -1,0 +1,45 @@
+{
+  "case": 2,
+  "attempt": "A",
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source_path": "results\\phase9_repeatability\\case2\\..\\assets\\pretzel.jpg",
+  "source_sha256": "47a8f399d08e33bd86bce10f5921b63ed9a0eca511635fa3ff1674ef5f66ff4b",
+  "mask_path": "results\\phase9_repeatability\\case2\\permitted.png",
+  "mask_sha256": "f2d48140e3c39779018559ea48aaaa7580b75c3359db14222de22267dd69b476",
+  "output_path": "results\\phase9_repeatability\\case2\\A\\final.png",
+  "output_sha256": "66fab2ccad388d7c73ef87c1cb6a1a46af9c6a63fc6a98c97365da8bbd969e61",
+  "dimensions": [
+    2700,
+    1800
+  ],
+  "permitted_pixels": 2970760,
+  "protected_pixels": 1889240,
+  "changed_inside": 2499350,
+  "changed_outside": 0,
+  "maximum_outside_channel_difference": 0,
+  "protected_differences": 0,
+  "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+  "memory": "not instrumented; CPU only, no new CUDA/model inference",
+  "input_hash_checks": {
+    "source": true,
+    "reference": true,
+    "selection": true,
+    "permitted": true,
+    "protected": true
+  },
+  "reference": {
+    "path": "results\\phase8_cultural_validation\\true_object_replacement\\source.jpg",
+    "sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "dimensions": [
+      1280,
+      853
+    ],
+    "title": "Croissant",
+    "author": "Petr Kratochvil",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Croissant-Petr_Kratochvil.jpg"
+  },
+  "runtime_seconds": 0.8166568999949959,
+  "clean_plate_inside_equals_background": true
+}

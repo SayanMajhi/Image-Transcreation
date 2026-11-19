@@ -1,0 +1,17 @@
+[
+  {
+    "path": "/api/tags",
+    "generation": false,
+    "seconds": 0.02427490000002308
+  },
+  {
+    "path": "/api/chat",
+    "generation": true,
+    "seconds": 30.43389000000002
+  },
+  {
+    "path": "/api/chat",
+    "generation": false,
+    "seconds": 0.11628459999997176
+  }
+]

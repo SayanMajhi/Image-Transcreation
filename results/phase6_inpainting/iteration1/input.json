@@ -1,0 +1,12 @@
+{
+  "source_image": "results/phase5_segmentation/experiments/box_points/B_oil_lamp/original.jpg",
+  "image_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+  "segmentation_file": "results/phase5_segmentation/experiments/box_points/B_oil_lamp/segmentation.json",
+  "segmentation_sha256": "62c9213bb551f693d620e7bea939fa43e8023616390ee9439fe364cabccf6309",
+  "mask_file": "results/phase5_segmentation/experiments/box_points/B_oil_lamp/mask_0.png",
+  "mask_sha256": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+  "candidate_index": 0,
+  "prompt": "A realistic darker terracotta clay oil-lamp bowl with a subtle carved rim, matching the original position, perspective, scale, lighting, shadows and surrounding photograph.",
+  "selection_note": "Explicit research selection after inspecting saved original and candidate 0 overlay: visible central clay bowl/body, with flame excluded; excludes supporting tray/base. Not human-approved, not full-lamp replacement, not cultural adaptation.",
+  "scope": "RESEARCH_ONLY"
+}

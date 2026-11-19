@@ -1,0 +1,12 @@
+{
+  "checked": 328,
+  "changed": [
+    "results/phase7_integration/phase7_working_report.md"
+  ],
+  "unexpected_changes": [],
+  "previous_working_report_exact_prefix": true,
+  "source_image_unchanged": true,
+  "source_copy_byte_identical": true,
+  "previous_audit_hashes_unchanged": true,
+  "app_code_and_configs_unchanged": true
+}

@@ -1,0 +1,12 @@
+{
+  "zip": "results/phase6_inpainting/iteration4_review.zip",
+  "files": 161,
+  "bytes": 34739582,
+  "sha256": "7c147efc55dabeeed1c069e7c37392de750b9fc0402b5bcb0465703b033f20b2",
+  "CRC": "passed",
+  "manifest_hashes": "passed",
+  "local_review_links": 96,
+  "new_generation_calls": 0,
+  "mask_edits": 0,
+  "weights_or_environments": false
+}

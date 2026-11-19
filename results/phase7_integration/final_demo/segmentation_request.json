@@ -1,0 +1,18 @@
+{
+  "source_image": "data\\ramen.jpg",
+  "image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "source_culture": "Japanese (user-declared)",
+  "target_culture": "Indian",
+  "objective": "Transform the food into Indian-style masala noodles; independent feasibility demonstration, not a culturally verified result.",
+  "preservation_instructions": "Preserve the white ceramic bowl, black spoon, wooden chopsticks, table, composition, camera angle, lighting and background.",
+  "source_phrase": "noodles",
+  "generation_prompt": "A realistic photograph of Indian-style masala noodles, reddish-brown spiced sauce coating the noodles with small vegetable pieces, appetizing natural food texture. Match the existing perspective, scale, warm lighting and shadows. Keep the surrounding white ceramic bowl and utensils unchanged.",
+  "research_assumptions": "RESEARCH_ONLY proposed scope: noodles, broth/sauce and relevant edible toppings inside the bowl; protect ceramic bowl, spoon, chopsticks, table and background. This is an assistant-inspected research assumption authorized for exploration, not user confirmation of every ingredient change, human mask approval or an accepted Qwen proposal. No food-origin or cultural correctness claim.",
+  "output_dir": "results\\phase7_integration\\final_demo\\sam_box",
+  "execution_mode": "GUIDED_RESEARCH",
+  "scope": "RESEARCH_ONLY",
+  "detection_file": "results\\phase7_integration\\final_demo\\localization\\grounding\\detection.json",
+  "detection_sha256": "26ebbb6012d651e58d9189efd9d71eb36a136f561551cb9d4a04197541542a13",
+  "prediction_index": 0,
+  "selection_note": "Assistant visually inspected original and annotated prediction. Explicit research selection of the only food-area detection, index 0. It encloses noodles but also toppings, bowl-interior margins and spoon; box is a SAM prompt only, not an editable mask or human acceptance."
+}

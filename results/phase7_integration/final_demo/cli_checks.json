@@ -1,0 +1,63 @@
+[
+  {
+    "args": [
+      "-m",
+      "transcreation.cli",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: cli.py [-h] [--version] {run,caption,plan,ground} ...\n\nCulture transcreation research CLI.\n\npositional arguments:\n  {run,caption,plan,ground}\n    run                 Run automated planning/reviewed grounding/replay or\n                        explicit guided research from JSON\n    caption             Caption one image with SmolVLM-500M\n    plan                Plan cultural edits with local Ollama; never modifies\n                        images\n    ground              Research-only text localization; never executes\n                        planner edits\n\noptions:\n  -h, --help            show this help message and exit\n  --version             show program's version number and exit\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "-m",
+      "transcreation.cli",
+      "run",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: cli.py run [-h] --input INPUT\n\noptions:\n  -h, --help     show this help message and exit\n  --input INPUT  PipelineInput or independent ResearchInput JSON; paths\n                 relative to current directory\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "-m",
+      "scripts.run_pipeline",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: run_pipeline.py [-h] --input INPUT\n\nRun planning, reviewed grounding tests, or read-only research replay; never\ngenerate.\n\noptions:\n  -h, --help     show this help message and exit\n  --input INPUT\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "-m",
+      "scripts.segment_sam",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: segment_sam.py [-h] --image IMAGE [--image-sha256 IMAGE_SHA256]\n                      --detection DETECTION\n                      [--prediction-index PREDICTION_INDEX] [--points POINTS]\n                      (--research-only | --review REVIEW) --note NOTE\n                      [--config CONFIG] [--device {cuda,cpu}] --out OUT\n\nIndependent SAM research CLI; run as a module from the repository root.\n\noptions:\n  -h, --help            show this help message and exit\n  --image IMAGE\n  --image-sha256 IMAGE_SHA256\n  --detection DETECTION\n  --prediction-index PREDICTION_INDEX\n  --points POINTS       Optional source-bound research point JSON; coordinates\n                        stay in original pixels\n  --research-only\n  --review REVIEW\n  --note NOTE           Why this exact source box is being tested\n  --config CONFIG\n  --device {cuda,cpu}\n  --out OUT             New artifact directory only\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "-m",
+      "scripts.inpaint",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: inpaint.py [-h] --input INPUT [--config CONFIG] --out OUT\n\nRun one explicitly scoped inpainting research request, independently of the\nplanner.\n\noptions:\n  -h, --help       show this help message and exit\n  --input INPUT    Explicit RESEARCH_ONLY request with pinned source hashes\n  --config CONFIG\n  --out OUT        New experiment directory\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "-m",
+      "scripts.review_mask",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: review_mask.py [-h] {prepare,decide} ...\n\nReview saved SAM masks for controlled segmentation tests, never for editing.\n\npositional arguments:\n  {prepare,decide}\n    prepare         Copy existing evidence and create only PENDING human\n                    requests\n    decide          Record a real human decision; not automated approval\n\noptions:\n  -h, --help        show this help message and exit\n",
+    "stderr": ""
+  }
+]

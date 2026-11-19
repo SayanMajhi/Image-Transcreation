@@ -1,0 +1,50 @@
+[
+  {
+    "command": "python -B -m transcreation.cli --help",
+    "returncode": 0,
+    "stdout": "usage: cli.py [-h] [--version] {caption,plan,ground} ...\n\nCulture transcreation research CLI.\n\npositional arguments:\n  {caption,plan,ground}\n    caption             Caption one image with SmolVLM-500M\n    plan                Plan cultural edits with local Ollama; never modifies\n                        images\n    ground              Research-only text localization; never executes\n                        planner edits\n\noptions:\n  -h, --help            show this help message and exit\n  --version             show program's version number and exit\n",
+    "stderr": ""
+  },
+  {
+    "command": "python -B -m scripts.run_pipeline --help",
+    "returncode": 0,
+    "stdout": "usage: run_pipeline.py [-h] --input INPUT\n\nRun planning, reviewed grounding tests, or read-only research replay; never\ngenerate.\n\noptions:\n  -h, --help     show this help message and exit\n  --input INPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": "python -B -m scripts.review_edit_intent --help",
+    "returncode": 0,
+    "stdout": "usage: review_edit_intent.py [-h] {prepare,decide,verify} ...\n\nEvidence-bound human review of a final PROPOSE; permits a grounding test only.\n\npositional arguments:\n  {prepare,decide,verify}\n\noptions:\n  -h, --help            show this help message and exit\n",
+    "stderr": ""
+  },
+  {
+    "command": "python -B -m scripts.review_edit_intent prepare --help",
+    "returncode": 0,
+    "stdout": "usage: review_edit_intent.py prepare [-h] --run RUN --image IMAGE --out OUT\n                                     --index INDEX\n\noptions:\n  -h, --help     show this help message and exit\n  --run RUN\n  --image IMAGE\n  --out OUT\n  --index INDEX\n",
+    "stderr": ""
+  },
+  {
+    "command": "python -B -m scripts.review_edit_intent decide --help",
+    "returncode": 0,
+    "stdout": "usage: review_edit_intent.py decide [-h] --pending PENDING --out OUT\n                                    --decision\n                                    {ACCEPT_FOR_GROUNDING_TEST,REJECT,NEEDS_REVIEW}\n                                    --reviewer REVIEWER --reason REASON\n                                    [--inspected-original] [--inspected-edit]\n\noptions:\n  -h, --help            show this help message and exit\n  --pending PENDING\n  --out OUT\n  --decision {ACCEPT_FOR_GROUNDING_TEST,REJECT,NEEDS_REVIEW}\n  --reviewer REVIEWER\n  --reason REASON\n  --inspected-original\n  --inspected-edit\n",
+    "stderr": ""
+  },
+  {
+    "command": "python -B -m scripts.review_edit_intent verify --help",
+    "returncode": 0,
+    "stdout": "usage: review_edit_intent.py verify [-h] --review REVIEW\n\noptions:\n  -h, --help       show this help message and exit\n  --review REVIEW\n",
+    "stderr": ""
+  },
+  {
+    "command": "python -B -m scripts.review_grounding --help",
+    "returncode": 0,
+    "stdout": "usage: review_grounding.py [-h] {prepare,decide} ...\n\nHuman review of saved boxes only. Never grants image-edit authorization.\n\npositional arguments:\n  {prepare,decide}\n    prepare         Create evidence copies, indexed preview and PENDING\n                    request\n    decide          Record a real human decision; never use for automated\n                    approval\n\noptions:\n  -h, --help        show this help message and exit\n",
+    "stderr": ""
+  },
+  {
+    "command": "python -B -m scripts.review_mask --help",
+    "returncode": 0,
+    "stdout": "usage: review_mask.py [-h] {prepare,decide} ...\n\nReview saved SAM masks for controlled segmentation tests, never for editing.\n\npositional arguments:\n  {prepare,decide}\n    prepare         Copy existing evidence and create only PENDING human\n                    requests\n    decide          Record a real human decision; not automated approval\n\noptions:\n  -h, --help        show this help message and exit\n",
+    "stderr": ""
+  }
+]

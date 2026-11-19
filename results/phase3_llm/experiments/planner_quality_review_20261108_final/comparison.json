@@ -1,0 +1,123 @@
+[
+  {
+    "example": "01_japanese_food",
+    "before_file": "reports\\phase3_step2_three_examples_20261108\\01_japanese_food.audit.json",
+    "before": {
+      "raw_decision": "PROPOSE",
+      "final_decision": "REVIEW",
+      "validation": {
+        "status": "valid",
+        "raw_decision": "PROPOSE",
+        "final_decision": "REVIEW",
+        "deterministic_review_applied": true,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 7.224897100000817,
+      "generation_seconds": 4.163743999,
+      "prompt_tokens": 823,
+      "output_tokens": 277
+    },
+    "after": {
+      "raw_decision": "ABSTAIN",
+      "final_decision": "ABSTAIN",
+      "validation": {
+        "status": "valid",
+        "raw_decision": "ABSTAIN",
+        "final_decision": "ABSTAIN",
+        "deterministic_review_applied": false,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 4.306817500000761,
+      "generation_seconds": 1.817998,
+      "prompt_tokens": 678,
+      "output_tokens": 125
+    },
+    "unchanged_input_sha256": "410c23dde4c57d39ca0fb8bf45b76d29363366a79230c66621f9ad5fed615882",
+    "before_surface_consistency_issues": [
+      "Localization must retain the original object label: bowl of ramen.",
+      "Scene summary contains an intended-change phrase absent from source evidence; verify the original scene.",
+      "Potential preserve/edit conflict involving: bowl of ramen; distinguish unchanged features from object identity."
+    ],
+    "after_surface_consistency_issues": [],
+    "human_review_notes": ""
+  },
+  {
+    "example": "02_durga_uncertain_incense",
+    "before_file": "reports\\phase3_step2_three_examples_20261108\\02_durga_uncertain_incense.audit.json",
+    "before": {
+      "raw_decision": "ABSTAIN",
+      "final_decision": "REVIEW",
+      "validation": {
+        "status": "valid",
+        "raw_decision": "ABSTAIN",
+        "final_decision": "REVIEW",
+        "deterministic_review_applied": true,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 7.54876399999921,
+      "generation_seconds": 4.454373,
+      "prompt_tokens": 928,
+      "output_tokens": 329
+    },
+    "after": {
+      "raw_decision": "REVIEW",
+      "final_decision": "REVIEW",
+      "validation": {
+        "status": "valid",
+        "raw_decision": "REVIEW",
+        "final_decision": "REVIEW",
+        "deterministic_review_applied": false,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 10.415787500001898,
+      "generation_seconds": 7.352194,
+      "prompt_tokens": 783,
+      "output_tokens": 529
+    },
+    "unchanged_input_sha256": "a8d1a27d72cb4270b4e00c3365a11fe09e31db6b8496732951a2dd780ff7dccf",
+    "before_surface_consistency_issues": [],
+    "after_surface_consistency_issues": [
+      "Verify the source-object identity of: null.",
+      "Localization must retain the original object label: null."
+    ],
+    "human_review_notes": ""
+  },
+  {
+    "example": "03_bicycle_no_change",
+    "before_file": "reports\\phase3_step2_three_examples_20261108\\03_bicycle_no_change.audit.json",
+    "before": {
+      "raw_decision": "ABSTAIN",
+      "final_decision": "REVIEW",
+      "validation": {
+        "status": "valid",
+        "raw_decision": "ABSTAIN",
+        "final_decision": "REVIEW",
+        "deterministic_review_applied": true,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 6.173015600001236,
+      "generation_seconds": 3.115505,
+      "prompt_tokens": 842,
+      "output_tokens": 217
+    },
+    "after": {
+      "raw_decision": "ABSTAIN",
+      "final_decision": "ABSTAIN",
+      "validation": {
+        "status": "valid",
+        "raw_decision": "ABSTAIN",
+        "final_decision": "ABSTAIN",
+        "deterministic_review_applied": false,
+        "cultural_correctness": "not assessed; human review required"
+      },
+      "request_seconds": 5.790805900000123,
+      "generation_seconds": 2.772294,
+      "prompt_tokens": 697,
+      "output_tokens": 198
+    },
+    "unchanged_input_sha256": "71eb8fc52a6215bda79b1ba430a2321b23e163af69604c8d7a3268b4f8207efb",
+    "before_surface_consistency_issues": [],
+    "after_surface_consistency_issues": [],
+    "human_review_notes": ""
+  }
+]

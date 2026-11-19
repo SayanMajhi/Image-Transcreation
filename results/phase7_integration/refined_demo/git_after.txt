@@ -1,0 +1,23 @@
+ M README.md
+ M scripts/inpaint.py
+ M src/transcreation/cli.py
+ M src/transcreation/stages/inpainting.py
+ M src/transcreation/stages/ollama_planner.py
+ M src/transcreation/stages/planning.py
+ M tests/test_planning_policy.py
+?? reports/phase7_integration.md
+?? results/final_project_review.zip
+?? results/phase7_integration/
+?? scripts/review_edit_intent.py
+?? scripts/review_uncertainty.py
+?? scripts/run_pipeline.py
+?? src/transcreation/guided_research.py
+?? src/transcreation/orchestration.py
+?? src/transcreation/stages/refined_inpainting.py
+?? tests/test_edit_intent.py
+?? tests/test_guided_research.py
+?? tests/test_instruction_review.py
+?? tests/test_orchestration.py
+?? tests/test_refined_inpainting.py
+?? tests/test_source_anchor_prompt.py
+?? tests/test_uncertainty_review.py

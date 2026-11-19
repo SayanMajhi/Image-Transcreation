@@ -1,0 +1,7 @@
+model_id: IDEA-Research/grounding-dino-tiny
+revision: a2bb814dd30d776dcf7e30523b00659f4f141c71
+device: cuda
+cpu_fallback: true # one explicit retry on cpu if cuda is unavailable or out of memory
+box_threshold: 0.30
+text_threshold: 0.25
+seed: 42

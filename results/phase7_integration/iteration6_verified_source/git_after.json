@@ -1,0 +1,9 @@
+{
+  "status": " M src/transcreation/stages/planning.py\n M tests/test_planning_policy.py\n?? results/phase7_integration/\n?? scripts/review_edit_intent.py\n?? scripts/run_pipeline.py\n?? src/transcreation/orchestration.py\n?? tests/test_edit_intent.py\n?? tests/test_instruction_review.py\n?? tests/test_orchestration.py\n",
+  "application_changes_in_iteration6": [],
+  "working_report": "append only",
+  "new_artifacts": "results/phase7_integration/iteration6_verified_source/ and iteration6_review.zip",
+  "commits": 0,
+  "pushes": 0,
+  "note": "Earlier modifications/untracked integration work preserved; hashes distinguish this iteration."
+}

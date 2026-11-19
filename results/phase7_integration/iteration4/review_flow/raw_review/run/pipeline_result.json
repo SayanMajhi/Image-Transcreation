@@ -1,0 +1,94 @@
+{
+  "execution_mode": "AUTOMATED_PLANNING",
+  "state": "PLAN_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source",
+    "caption",
+    "planning",
+    "deterministic_validation"
+  ],
+  "stopped_at": "planning_review",
+  "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "2ab25d02302b7258a0382c727e6899a8876bdb41849fa311c9d577a5bf39128b",
+      "sha256": "2ab25d02302b7258a0382c727e6899a8876bdb41849fa311c9d577a5bf39128b",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "path": "evidence/source/original.png"
+    },
+    "caption.json": {
+      "id": "1e859e876e188b7b2131c23e08a75015d36d526110b6e620107de08ace1e1dd5",
+      "sha256": "1e859e876e188b7b2131c23e08a75015d36d526110b6e620107de08ace1e1dd5",
+      "path": "caption.json"
+    },
+    "planning_input.json": {
+      "id": "4f570c8d36f6dfb9edfa1373a4ca0f34e2a1a05674b0445735b10779bd83f21d",
+      "sha256": "4f570c8d36f6dfb9edfa1373a4ca0f34e2a1a05674b0445735b10779bd83f21d",
+      "path": "planning_input.json"
+    },
+    "planner_audit.json": {
+      "id": "825dc9b1dde65733ead6a6c984e35ab049117bae0486eee6647f35d9cd1d4091",
+      "sha256": "825dc9b1dde65733ead6a6c984e35ab049117bae0486eee6647f35d9cd1d4091",
+      "path": "planner_audit.json"
+    },
+    "validated_plan.json": {
+      "id": "38a725d6d660296042bf6d8f9ba77a1bcd35069758ba50faabe8c78ac0fed57a",
+      "sha256": "38a725d6d660296042bf6d8f9ba77a1bcd35069758ba50faabe8c78ac0fed57a",
+      "path": "validated_plan.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.0015017999976407737
+    },
+    {
+      "stage": "resource_preflight",
+      "action": "QWEN_NOT_RESIDENT",
+      "seconds": 0.0023794000007910654
+    },
+    {
+      "stage": "caption",
+      "action": "CAPTION_COMPLETED",
+      "seconds": 0.003838600001472514
+    },
+    {
+      "stage": "caption",
+      "action": "MODEL_REFERENCES_RELEASED",
+      "seconds": 0.05357659999572206,
+      "cuda_allocated_bytes_after": 0
+    },
+    {
+      "stage": "planning",
+      "action": "VALIDATED",
+      "seconds": 0.05659709999599727,
+      "decision": "REVIEW"
+    },
+    {
+      "stage": "planning",
+      "action": "QWEN_UNLOAD_CONFIRMED",
+      "seconds": 0.05662819999997737
+    },
+    {
+      "stage": "planning_review",
+      "action": "STOP",
+      "seconds": 0.05663110000023153,
+      "state": "PLAN_REQUIRES_REVIEW",
+      "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [
+    "The model requested review; its candidates are draft-only, not downstream edits.",
+    "Review the original-scene summary and any paraphrased identities against the image.",
+    "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+  ],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

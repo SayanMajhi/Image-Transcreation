@@ -1,0 +1,22 @@
+{
+  "evidence_type": "ACTUAL_USER_MESSAGE",
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "verbatim_user_confirmation": "I have personally inspected the exact photograph `data/ramen.jpg`, SHA-256 `37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0`.\n\nI confirm:\n- Original object: Japanese ramen noodles in a white bowl.\n- Editable content: Noodles and relevant food contents.\n- Protected object: The white bowl itself.\n- Target culture: Indian.\n- Intended transformation: Indian-style masala noodles.\n- Preserve: Bowl, tabletop, camera angle, lighting and background.\n\nThis is my explicit image-bound user confirmation. Record it as user-provided evidence, not independent proof of the dish's origin or authorization to edit the image.",
+  "confirmed_object": {
+    "object_id": "ramen-food-1",
+    "description": "Japanese ramen noodles in a white bowl"
+  },
+  "editable_content": "Noodles and relevant food contents.",
+  "protected_object": "The white bowl itself.",
+  "target_culture": "Indian",
+  "intended_transformation": "Indian-style masala noodles.",
+  "preserve": "Bowl, tabletop, camera angle, lighting and background.",
+  "recorded_at_utc": "2026-11-10T13:14:24.363045+00:00",
+  "timestamp_meaning": "System time of recording this received confirmation, not an invented inspection time.",
+  "inspection_time_supplied_by_user": null,
+  "named_reviewer_identity": null,
+  "source_verification_provided_by_actual_user": true,
+  "independent_cultural_origin_proven": false,
+  "image_edit_authorized": false,
+  "edit_intent_accepted": false
+}

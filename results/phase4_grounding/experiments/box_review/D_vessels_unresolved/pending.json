@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_type": "grounding_box_human_review",
+  "original_image_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+  "original_dimensions": [
+    980,
+    692
+  ],
+  "source_phrase": "clay incense burner",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "prediction_count": 7,
+  "detection_json_sha256": "4f891891cfabbe2a47b7a9b0df7a701e45e6ee864d53c7e8a4709e2b2012e897",
+  "annotation_sha256": "c45fb88f92a10f88a1911dc281a096b79813904803bfdac7f6757d8c3bb4400b",
+  "image_file": "original.jpg",
+  "detection_file": "detection.json",
+  "annotation_file": "annotated.png",
+  "prediction_indexing": "zero_based_detections_array",
+  "decision": "PENDING",
+  "selected_prediction_index": null,
+  "selected_prediction": null,
+  "candidate_kind": null,
+  "reviewer": null,
+  "explanation": "Awaiting explicit human review; no selection has been made.",
+  "created_at_utc": "2026-11-09T07:39:14.020666+00:00",
+  "reviewed_at_utc": null,
+  "inspected_original": false,
+  "inspected_boxes": false,
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false
+}

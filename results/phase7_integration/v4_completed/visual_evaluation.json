@@ -1,0 +1,32 @@
+{
+  "assessor": "Codex assistant qualitative inspection; not independent cultural certification",
+  "views": [
+    "A/final.png",
+    "A/raw_generated_crop.png",
+    "B/final.png",
+    "food_native_comparison.png",
+    "boundary_native_comparison.png",
+    "original_generated_comparison.png"
+  ],
+  "A_visual_verdict": "FAIL",
+  "B_visual_verdict": "FAIL",
+  "criteria": {
+    "recognizable_spaghetti": "Pasta remains recognizable, but generated strands are broadened/flattened or disconnected in places.",
+    "reddish_brown_masala_coating": "FAIL: a conspicuous red chunk/insert appears near the upper center instead of a coherent sauce coating over the strands. Most pasta remains pale.",
+    "food_texture": "Some food-like texture, but waxy/softened regions and a synthetic red insert undermine realism.",
+    "strand_continuity": "Not adequately preserved; local shape and direction changes plus frozen original islands interrupt continuity.",
+    "lighting": "Original flash highlights and unchanged surroundings remain, but generated texture/material does not fully match the original.",
+    "plate_and_background": "Exact decoded RGB outside mask and in annotated exclusions; zero differences in both outputs.",
+    "seams_and_halos": "Visible hard-composite contours and rectangular frozen-gap islands; conservative gap exclusions contribute to mosaic-like transitions.",
+    "text_or_graphics": "No obvious text-like artifact in inspected A/B views. Red insert is an unwanted interpretation of the target, not proof of cultural adaptation.",
+    "normal_image_view": "Change is noticeable, but as an unnatural insert/local food rearrangement rather than credible masala-coated spaghetti.",
+    "coverage": "Substantial but partial localized research edit (47.7004% of image); untouched food margins remain. Not complete dish adaptation."
+  },
+  "failure_analysis": "Raw generated crops already contain the unwanted red insert and pale pasta, so prompt/model following is a contributor independent of compositing. Hard compositing around conservatively preserved uncertain gaps adds visible rectangular seams. The source flash exposure and 512-grid scale may contribute, but causes are not individually isolated. A/B differ only in negative prompt; no additional variant was tried.",
+  "actual_diffusion_calls": 2,
+  "extra_quality_attempts": 0,
+  "no_further_generation": true,
+  "human_approved": false,
+  "historical_human_review": "MATERIAL_UNRESOLVED unchanged",
+  "project_status": "PARTIALLY_COMPLETE; technical execution complete, cultural visual objective not achieved"
+}

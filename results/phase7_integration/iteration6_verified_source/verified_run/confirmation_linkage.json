@@ -1,0 +1,8 @@
+{
+  "pending_request_sha256": "2f53cd7b5278116a02d6d743ccd207e14abaa66456d886058a5a1f2d1ba66524",
+  "actual_confirmation_sha256": "b20ac0cf777edf302cd3b5eacda95b74f301d8f8a3fc1c5e50317a969295b0c7",
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "pending_record_preserved_as_history": true,
+  "actual_confirmation_received": true,
+  "source_identity_confirmation_is_not_edit_authorization": true
+}

@@ -1,0 +1,30 @@
+{
+  "source_path": "data/vlm_collection/scene_06.jpg",
+  "image_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+  "original_dimensions": [
+    1280,
+    966
+  ],
+  "source_copy": "original.jpg",
+  "preview_file": "source_preview.jpg",
+  "preview_sha256": "33b1ef9642dcfad3f7eade08b5b252257b58967d1ff444ef3939a99bf68260cc",
+  "preview_dimensions": [
+    640,
+    483
+  ],
+  "preview_transform": "Aspect-ratio-preserving thumbnail; original untouched.",
+  "attribution": {
+    "id": "scene_06",
+    "path": "scene_06.jpg",
+    "group": "ordinary",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg/1280px-Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source_title": "File:Parked bicycle with graffitied building facade and doors in Amsterdam.jpg",
+    "search_query": "bicycle parked street",
+    "license": "CC BY-SA 4.0",
+    "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+    "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0"
+  },
+  "assistant_visual_observation": "A bicycle stands in front of a graffiti-covered facade. This is an assistant observation, not user verification, a VLM caption or a cultural fact.",
+  "cultural_justification": "Not established. An everyday bicycle does not require adaptation merely because a target culture is supplied."
+}

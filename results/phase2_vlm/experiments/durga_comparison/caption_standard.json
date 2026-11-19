@@ -1,0 +1,31 @@
+{
+  "caption": "A group of women dressed in traditional Indian garb.",
+  "model_id": "microsoft/Florence-2-base-ft",
+  "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "image_dimensions": [
+    980,
+    692
+  ],
+  "seed": 42,
+  "task": "<CAPTION>",
+  "generation_settings": {
+    "max_new_tokens": 128,
+    "num_beams": 3,
+    "do_sample": false,
+    "num_return_sequences": 1,
+    "use_cache": false
+  },
+  "device": "cuda",
+  "precision": "float16",
+  "torch_version": "2.15.0+cu132",
+  "transformers_version": "4.57.6",
+  "model_loading_ms": 2386.0209999984363,
+  "inference_ms": 2366.1538000014843,
+  "peak_gpu_memory_bytes": 639566848,
+  "generated_tokens": 13,
+  "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+  "caption_words": 9,
+  "caption_characters": 52,
+  "token_ceiling_reached": false
+}

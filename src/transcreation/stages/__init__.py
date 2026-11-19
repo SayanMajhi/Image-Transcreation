@@ -1,1 +1,1 @@
-"""Image captioning and future cultural adaptation stages."""
+"""Captioning and cultural planning; legacy future-stage stubs are unimplemented."""

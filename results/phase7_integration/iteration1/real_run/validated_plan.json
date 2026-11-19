@@ -1,0 +1,23 @@
+{
+  "planning_result": {
+    "decision": "REVIEW",
+    "decision_reason": "Review required; no candidate edit is released downstream. The model requested context review; no direct edit is authorized.",
+    "scene_summary": "A medium outdoor shot shows a row of black doors with graffiti on them, a bicycle leaning against the sidewalk in front of the doors, and a brick sidewalk in the foreground. The doors are framed by a white wall, and the graffiti on the doors includes a blue cat, the word \"AGAN\" in white, and the word \"Lane\" in white. The bicycle is a standard two-wheeled bike with a black frame and blue seat. The sidewalk is made of red bricks, and the bricks are laid in a herringbone pattern.",
+    "candidate_edits": [],
+    "must_preserve": [],
+    "uncertainties": [],
+    "verification_requirements": [
+      "The model requested context review; no direct edit is authorized.",
+      "Review the original-scene summary and any paraphrased identities against the image.",
+      "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+    ]
+  },
+  "issues": [
+    {
+      "code": "MODEL_REVIEW_REQUESTED",
+      "message": "The model requested context review; no direct edit is authorized.",
+      "candidate_index": null,
+      "severity": "review"
+    }
+  ]
+}

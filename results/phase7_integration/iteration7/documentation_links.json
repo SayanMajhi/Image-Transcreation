@@ -1,0 +1,1055 @@
+{
+  "links": [
+    {
+      "target": "iteration1/offline/planner_regressions.json",
+      "path": "results/phase7_integration/iteration1/offline/planner_regressions.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/offline/replay_input.json",
+      "path": "results/phase7_integration/iteration1/offline/replay_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/offline/oil_lamp_replay/pipeline_result.json",
+      "path": "results/phase7_integration/iteration1/offline/oil_lamp_replay/pipeline_result.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/offline/summary.json",
+      "path": "results/phase7_integration/iteration1/offline/summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/offline/guard_evaluations.json",
+      "path": "results/phase7_integration/iteration1/offline/guard_evaluations.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_preregistration.json",
+      "path": "results/phase7_integration/iteration1/real_preregistration.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_input.json",
+      "path": "results/phase7_integration/iteration1/real_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/evidence/source/scene_06.jpg",
+      "path": "results/phase7_integration/iteration1/real_run/evidence/source/scene_06.jpg",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/caption.json",
+      "path": "results/phase7_integration/iteration1/real_run/caption.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/planning_input.json",
+      "path": "results/phase7_integration/iteration1/real_run/planning_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/planner_audit.json",
+      "path": "results/phase7_integration/iteration1/real_run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/validated_plan.json",
+      "path": "results/phase7_integration/iteration1/real_run/validated_plan.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/pipeline_result.json",
+      "path": "results/phase7_integration/iteration1/real_run/pipeline_result.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_invocation.json",
+      "path": "results/phase7_integration/iteration1/real_invocation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/tests_before.json",
+      "path": "results/phase7_integration/iteration1/tests_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/tests_after.json",
+      "path": "results/phase7_integration/iteration1/tests_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/environment.json",
+      "path": "results/phase7_integration/iteration1/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/preservation_after.json",
+      "path": "results/phase7_integration/iteration1/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/git_before.json",
+      "path": "results/phase7_integration/iteration1/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/git_after.json",
+      "path": "results/phase7_integration/iteration1/git_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/iteration2_changes.patch",
+      "path": "results/phase7_integration/iteration2/iteration2_changes.patch",
+      "exists": true
+    },
+    {
+      "target": "iteration2/change_summary.json",
+      "path": "results/phase7_integration/iteration2/change_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic_block_input.json",
+      "path": "results/phase7_integration/iteration2/synthetic_block_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic_evaluation.json",
+      "path": "results/phase7_integration/iteration2/synthetic_evaluation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/intent/pending.json",
+      "path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/intent/pending.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/intent/decision.json",
+      "path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/intent/decision.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/run/validated_plan.json",
+      "path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/run/validated_plan.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/run/planner_audit.json",
+      "path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/continuation/pipeline_result.json",
+      "path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/continuation/pipeline_result.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/continuation/grounding/comparison.png",
+      "path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/continuation/grounding/comparison.png",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/continuation/box_review/pending.json",
+      "path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/continuation/box_review/pending.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/01_japanese_food.audit.json",
+      "path": "results/phase7_integration/iteration2/real_evidence/01_japanese_food.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/02_durga_uncertain_incense.audit.json",
+      "path": "results/phase7_integration/iteration2/real_evidence/02_durga_uncertain_incense.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/03_bicycle_no_change.audit.json",
+      "path": "results/phase7_integration/iteration2/real_evidence/03_bicycle_no_change.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_review_boundary.json",
+      "path": "results/phase7_integration/iteration2/real_review_boundary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/image_suitability.json",
+      "path": "results/phase7_integration/iteration2/image_suitability.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_candidate_survey.json",
+      "path": "results/phase7_integration/iteration2/real_candidate_survey.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/tests_before.json",
+      "path": "results/phase7_integration/iteration2/tests_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/tests_after.json",
+      "path": "results/phase7_integration/iteration2/tests_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/cli_checks.json",
+      "path": "results/phase7_integration/iteration2/cli_checks.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/environment.json",
+      "path": "results/phase7_integration/iteration2/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/preservation_before.json",
+      "path": "results/phase7_integration/iteration2/preservation_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/preservation_after.json",
+      "path": "results/phase7_integration/iteration2/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/git_before.json",
+      "path": "results/phase7_integration/iteration2/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/git_after.json",
+      "path": "results/phase7_integration/iteration2/git_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/extraction_verification.json",
+      "path": "results/phase7_integration/iteration2/extraction_verification.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/execution_status.json",
+      "path": "results/phase7_integration/iteration3/execution_status.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/policy_diagnostics.json",
+      "path": "results/phase7_integration/iteration3/policy_diagnostics.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/reproduce_policy_diagnostics.py",
+      "path": "results/phase7_integration/iteration3/reproduce_policy_diagnostics.py",
+      "exists": true
+    },
+    {
+      "target": "iteration3/policy_source_anchors.json",
+      "path": "results/phase7_integration/iteration3/policy_source_anchors.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/historical_bottleneck_analysis.json",
+      "path": "results/phase7_integration/iteration3/historical_bottleneck_analysis.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/01_japanese_food.audit.json",
+      "path": "results/phase7_integration/iteration2/real_evidence/01_japanese_food.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/02_durga_uncertain_incense.audit.json",
+      "path": "results/phase7_integration/iteration2/real_evidence/02_durga_uncertain_incense.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/03_bicycle_no_change.audit.json",
+      "path": "results/phase7_integration/iteration2/real_evidence/03_bicycle_no_change.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/planner_audit.json",
+      "path": "results/phase7_integration/iteration1/real_run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/original.jpg",
+      "path": "results/phase7_integration/iteration3/original.jpg",
+      "exists": true
+    },
+    {
+      "target": "iteration3/source_preview.jpg",
+      "path": "results/phase7_integration/iteration3/source_preview.jpg",
+      "exists": true
+    },
+    {
+      "target": "iteration3/source_provenance.json",
+      "path": "results/phase7_integration/iteration3/source_provenance.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/pending_source_verification.json",
+      "path": "results/phase7_integration/iteration3/pending_source_verification.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/configured_future_run_settings.json",
+      "path": "results/phase7_integration/iteration3/configured_future_run_settings.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/tests.json",
+      "path": "results/phase7_integration/iteration3/tests.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/environment.json",
+      "path": "results/phase7_integration/iteration3/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/git_before.json",
+      "path": "results/phase7_integration/iteration3/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/preservation_after.json",
+      "path": "results/phase7_integration/iteration3/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/changes.patch",
+      "path": "results/phase7_integration/iteration4/changes.patch",
+      "exists": true
+    },
+    {
+      "target": "iteration4/change_summary.json",
+      "path": "results/phase7_integration/iteration4/change_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/replays/synthetic_before_after.json",
+      "path": "results/phase7_integration/iteration4/replays/synthetic_before_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/review_flow_summary.json",
+      "path": "results/phase7_integration/iteration4/review_flow_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/review_flow/instructions_pending/intent/pending.json",
+      "path": "results/phase7_integration/iteration4/review_flow/instructions_pending/intent/pending.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/review_flow/accepted_grounding_only/intent/decision.json",
+      "path": "results/phase7_integration/iteration4/review_flow/accepted_grounding_only/intent/decision.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/review_flow/accepted_grounding_only/run/planner_audit.json",
+      "path": "results/phase7_integration/iteration4/review_flow/accepted_grounding_only/run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/review_flow/accepted_grounding_only/continuation/pipeline_result.json",
+      "path": "results/phase7_integration/iteration4/review_flow/accepted_grounding_only/continuation/pipeline_result.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/cli_check.json",
+      "path": "results/phase7_integration/iteration4/cli_check.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/replays/summary.json",
+      "path": "results/phase7_integration/iteration4/replays/summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/replays/planner_decision_policy_20261108_final_01_japanese_food.replay.json",
+      "path": "results/phase7_integration/iteration4/replays/planner_decision_policy_20261108_final_01_japanese_food.replay.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/replays/planner_decision_policy_20261108_final_02_durga_uncertain_incense.replay.json",
+      "path": "results/phase7_integration/iteration4/replays/planner_decision_policy_20261108_final_02_durga_uncertain_incense.replay.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/replays/planner_decision_policy_20261108_final_03_bicycle_no_change.replay.json",
+      "path": "results/phase7_integration/iteration4/replays/planner_decision_policy_20261108_final_03_bicycle_no_change.replay.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/replays/planner_quality_review_20261108_final_02_durga_uncertain_incense.replay.json",
+      "path": "results/phase7_integration/iteration4/replays/planner_quality_review_20261108_final_02_durga_uncertain_incense.replay.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/tests_before.json",
+      "path": "results/phase7_integration/iteration4/tests_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/tests_after.json",
+      "path": "results/phase7_integration/iteration4/tests_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/environment.json",
+      "path": "results/phase7_integration/iteration4/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/git_before.json",
+      "path": "results/phase7_integration/iteration4/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/git_after.json",
+      "path": "results/phase7_integration/iteration4/git_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/preservation_before.json",
+      "path": "results/phase7_integration/iteration4/preservation_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/preservation_after.json",
+      "path": "results/phase7_integration/iteration4/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration4/portable_verification.json",
+      "path": "results/phase7_integration/iteration4/portable_verification.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/source_preview.jpg",
+      "path": "results/phase7_integration/iteration5/source_preview.jpg",
+      "exists": true
+    },
+    {
+      "target": "iteration5/original.jpg",
+      "path": "results/phase7_integration/iteration5/original.jpg",
+      "exists": true
+    },
+    {
+      "target": "iteration5/source_provenance.json",
+      "path": "results/phase7_integration/iteration5/source_provenance.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/source_selection_analysis.json",
+      "path": "results/phase7_integration/iteration5/source_selection_analysis.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/source_inventory.json",
+      "path": "results/phase7_integration/iteration5/source_inventory.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/pending_source_verification.json",
+      "path": "results/phase7_integration/iteration5/pending_source_verification.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/configuration_snapshot.json",
+      "path": "results/phase7_integration/iteration5/configuration_snapshot.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/execution_status.json",
+      "path": "results/phase7_integration/iteration5/execution_status.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/tests.json",
+      "path": "results/phase7_integration/iteration5/tests.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/environment.json",
+      "path": "results/phase7_integration/iteration5/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/git_before.json",
+      "path": "results/phase7_integration/iteration5/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/git_after.json",
+      "path": "results/phase7_integration/iteration5/git_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/preservation_before.json",
+      "path": "results/phase7_integration/iteration5/preservation_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5/preservation_after.json",
+      "path": "results/phase7_integration/iteration5/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/original.webp",
+      "path": "results/phase7_integration/iteration5_ramen/original.webp",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/source_preview.png",
+      "path": "results/phase7_integration/iteration5_ramen/source_preview.png",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/source_verification.json",
+      "path": "results/phase7_integration/iteration5_ramen/source_verification.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/user_requirements.json",
+      "path": "results/phase7_integration/iteration5_ramen/user_requirements.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/experiment_frozen.json",
+      "path": "results/phase7_integration/iteration5_ramen/experiment_frozen.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/pipeline_input.json",
+      "path": "results/phase7_integration/iteration5_ramen/pipeline_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/invocation_started.json",
+      "path": "results/phase7_integration/iteration5_ramen/invocation_started.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/invocation_result.json",
+      "path": "results/phase7_integration/iteration5_ramen/invocation_result.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/run/caption.json",
+      "path": "results/phase7_integration/iteration5_ramen/run/caption.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/run/planning_input.json",
+      "path": "results/phase7_integration/iteration5_ramen/run/planning_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/raw_qwen_message.txt",
+      "path": "results/phase7_integration/iteration5_ramen/raw_qwen_message.txt",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/run/planner_audit.json",
+      "path": "results/phase7_integration/iteration5_ramen/run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/run/validated_plan.json",
+      "path": "results/phase7_integration/iteration5_ramen/run/validated_plan.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/validation_summary.json",
+      "path": "results/phase7_integration/iteration5_ramen/validation_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/run/pipeline_result.json",
+      "path": "results/phase7_integration/iteration5_ramen/run/pipeline_result.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/preflight.json",
+      "path": "results/phase7_integration/iteration5_ramen/preflight.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/environment.json",
+      "path": "results/phase7_integration/iteration5_ramen/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/performance_summary.json",
+      "path": "results/phase7_integration/iteration5_ramen/performance_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/gpu_samples.json",
+      "path": "results/phase7_integration/iteration5_ramen/gpu_samples.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/post_run_residency.json",
+      "path": "results/phase7_integration/iteration5_ramen/post_run_residency.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/tests.json",
+      "path": "results/phase7_integration/iteration5_ramen/tests.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/preservation_before.json",
+      "path": "results/phase7_integration/iteration5_ramen/preservation_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/preservation_after.json",
+      "path": "results/phase7_integration/iteration5_ramen/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/git_before.json",
+      "path": "results/phase7_integration/iteration5_ramen/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/git_after.json",
+      "path": "results/phase7_integration/iteration5_ramen/git_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/portable_verification.json",
+      "path": "results/phase7_integration/iteration5_ramen/portable_verification.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/historical_planner_preservation.json",
+      "path": "results/phase7_integration/iteration5_ramen/historical_planner_preservation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/original.webp",
+      "path": "results/phase7_integration/iteration6_verified_source/original.webp",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/source_preview.png",
+      "path": "results/phase7_integration/iteration6_verified_source/source_preview.png",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/pending_verification.json",
+      "path": "results/phase7_integration/iteration6_verified_source/pending_verification.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/saved_caption.json",
+      "path": "results/phase7_integration/iteration6_verified_source/saved_caption.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/planning_input_before.json",
+      "path": "results/phase7_integration/iteration6_verified_source/planning_input_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/unchanged_conditions_check.json",
+      "path": "results/phase7_integration/iteration6_verified_source/unchanged_conditions_check.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/invariants_snapshot.json",
+      "path": "results/phase7_integration/iteration6_verified_source/invariants_snapshot.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/input_comparison.json",
+      "path": "results/phase7_integration/iteration6_verified_source/input_comparison.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/iteration5_vs_iteration6.json",
+      "path": "results/phase7_integration/iteration6_verified_source/iteration5_vs_iteration6.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/execution_status.json",
+      "path": "results/phase7_integration/iteration6_verified_source/execution_status.json",
+      "exists": true
+    },
+    {
+      "target": "iteration5_ramen/run/planner_audit.json",
+      "path": "results/phase7_integration/iteration5_ramen/run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/tests.json",
+      "path": "results/phase7_integration/iteration6_verified_source/tests.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/environment.json",
+      "path": "results/phase7_integration/iteration6_verified_source/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/git_before.json",
+      "path": "results/phase7_integration/iteration6_verified_source/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/git_after.json",
+      "path": "results/phase7_integration/iteration6_verified_source/git_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/preservation_before.json",
+      "path": "results/phase7_integration/iteration6_verified_source/preservation_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/preservation_after.json",
+      "path": "results/phase7_integration/iteration6_verified_source/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/human_confirmation.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/human_confirmation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/confirmation_linkage.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/confirmation_linkage.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/original.webp",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/original.webp",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/source_preview.png",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/source_preview.png",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/input_comparison.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/input_comparison.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/saved_caption.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/saved_caption.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/planning_input.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/planning_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/experiment_frozen.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/experiment_frozen.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/invocation_started.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/invocation_started.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/actual_request_comparison.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/actual_request_comparison.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/raw_response_before_validation.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/raw_response_before_validation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/raw_qwen_message.txt",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/raw_qwen_message.txt",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/planner_audit.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/transport_calls.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/transport_calls.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/controlled_call_driver.py",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/controlled_call_driver.py",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/invocation_result.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/invocation_result.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/validated_plan.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/validated_plan.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/validation_summary.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/validation_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/iteration5_vs_iteration6.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/iteration5_vs_iteration6.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/qualitative_evaluation.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/qualitative_evaluation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/performance_summary.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/performance_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/gpu_samples.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/gpu_samples.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/post_run_residency.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/post_run_residency.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/tests.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/tests.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/environment.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/git_before.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/git_after.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/git_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/preservation_before.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/preservation_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/preservation_after.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/portable_verification.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/portable_verification.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/baseline_evidence.json",
+      "path": "results/phase7_integration/iteration7/baseline_evidence.json",
+      "exists": true
+    },
+    {
+      "target": "iteration6_verified_source/verified_run/planner_audit.json",
+      "path": "results/phase7_integration/iteration6_verified_source/verified_run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/old_system_prompt.txt",
+      "path": "results/phase7_integration/iteration7/old_system_prompt.txt",
+      "exists": true
+    },
+    {
+      "target": "iteration7/new_system_prompt.txt",
+      "path": "results/phase7_integration/iteration7/new_system_prompt.txt",
+      "exists": true
+    },
+    {
+      "target": "iteration7/system_prompt.diff",
+      "path": "results/phase7_integration/iteration7/system_prompt.diff",
+      "exists": true
+    },
+    {
+      "target": "iteration7/prompt_change_summary.json",
+      "path": "results/phase7_integration/iteration7/prompt_change_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/code_changes.patch",
+      "path": "results/phase7_integration/iteration7/code_changes.patch",
+      "exists": true
+    },
+    {
+      "target": "iteration7/original.webp",
+      "path": "results/phase7_integration/iteration7/original.webp",
+      "exists": true
+    },
+    {
+      "target": "iteration7/source_preview.png",
+      "path": "results/phase7_integration/iteration7/source_preview.png",
+      "exists": true
+    },
+    {
+      "target": "iteration7/human_confirmation.json",
+      "path": "results/phase7_integration/iteration7/human_confirmation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/planning_input.json",
+      "path": "results/phase7_integration/iteration7/planning_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/saved_caption.json",
+      "path": "results/phase7_integration/iteration7/saved_caption.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/experiment_frozen.json",
+      "path": "results/phase7_integration/iteration7/experiment_frozen.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/invocation_started.json",
+      "path": "results/phase7_integration/iteration7/invocation_started.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/request_comparison_verified.json",
+      "path": "results/phase7_integration/iteration7/request_comparison_verified.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/controlled_call_driver.py",
+      "path": "results/phase7_integration/iteration7/controlled_call_driver.py",
+      "exists": true
+    },
+    {
+      "target": "iteration7/raw_qwen_message.txt",
+      "path": "results/phase7_integration/iteration7/raw_qwen_message.txt",
+      "exists": true
+    },
+    {
+      "target": "iteration7/raw_response_before_validation.json",
+      "path": "results/phase7_integration/iteration7/raw_response_before_validation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/planner_audit.json",
+      "path": "results/phase7_integration/iteration7/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/validated_plan.json",
+      "path": "results/phase7_integration/iteration7/validated_plan.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/validation_summary.json",
+      "path": "results/phase7_integration/iteration7/validation_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/review_preparation.json",
+      "path": "results/phase7_integration/iteration7/review_preparation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/iteration5_6_7_comparison.json",
+      "path": "results/phase7_integration/iteration7/iteration5_6_7_comparison.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/source_consistency_evaluation.json",
+      "path": "results/phase7_integration/iteration7/source_consistency_evaluation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/tests_before.json",
+      "path": "results/phase7_integration/iteration7/tests_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/tests_after.json",
+      "path": "results/phase7_integration/iteration7/tests_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/performance_summary.json",
+      "path": "results/phase7_integration/iteration7/performance_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/gpu_samples.json",
+      "path": "results/phase7_integration/iteration7/gpu_samples.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/transport_calls.json",
+      "path": "results/phase7_integration/iteration7/transport_calls.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/post_run_residency.json",
+      "path": "results/phase7_integration/iteration7/post_run_residency.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/environment.json",
+      "path": "results/phase7_integration/iteration7/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/git_before.json",
+      "path": "results/phase7_integration/iteration7/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/git_after.json",
+      "path": "results/phase7_integration/iteration7/git_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/preservation_before.json",
+      "path": "results/phase7_integration/iteration7/preservation_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/preservation_after.json",
+      "path": "results/phase7_integration/iteration7/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration7/portable_verification.json",
+      "path": "results/phase7_integration/iteration7/portable_verification.json",
+      "exists": true
+    }
+  ],
+  "broken": []
+}

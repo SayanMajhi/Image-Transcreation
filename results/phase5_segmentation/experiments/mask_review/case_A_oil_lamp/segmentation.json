@@ -1,0 +1,305 @@
+{
+  "request": {
+    "source_image": "data\\vlm_collection\\scene_02.jpg",
+    "image_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+    "original_dimensions": [
+      1280,
+      842
+    ],
+    "detection_file": "reports\\phase4_iteration2_assets\\runs\\A02_oil_lamp_020\\detection.json",
+    "detection_sha256": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+    "prediction_index": 2,
+    "selected_detection": {
+      "box": [
+        631.4442138671875,
+        248.13294982910156,
+        889.331787109375,
+        443.25518798828125
+      ],
+      "score": 0.31422239542007446,
+      "label": "oil lamp"
+    },
+    "source_phrase": "oil lamp",
+    "grounding_model_id": "IDEA-Research/grounding-dino-tiny",
+    "grounding_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "selection_status": "RESEARCH_ONLY",
+    "selection_note": "One preregistered bowl-only box-plus-point diagnostic; exclude flame and unrelated background; research annotations requiring review.",
+    "review_file": null,
+    "review_sha256": null,
+    "image_edit_authorized": false,
+    "cultural_transformation_authorized": false,
+    "points": [
+      {
+        "x": 650,
+        "y": 330,
+        "label": 1,
+        "note": "Left clay bowl/rim"
+      },
+      {
+        "x": 760,
+        "y": 418,
+        "label": 1,
+        "note": "Front clay bowl body"
+      },
+      {
+        "x": 850,
+        "y": 365,
+        "label": 1,
+        "note": "Right clay rim/body"
+      },
+      {
+        "x": 769,
+        "y": 310,
+        "label": 0,
+        "note": "Bright flame interior"
+      },
+      {
+        "x": 880,
+        "y": 420,
+        "label": 0,
+        "note": "Unrelated tray/rice/background beside the bowl"
+      }
+    ],
+    "point_prompt_file": "reports\\phase5_iteration2_assets\\prompts\\B_oil_lamp.json",
+    "point_prompt_sha256": "49c3e6f58bdc84f3ec620fdc52718f1224ff911ccebf761f416a1b5eaef3c8f4"
+  },
+  "model_id": "facebook/sam-vit-base",
+  "resolved_revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+  "status": "SEGMENTED",
+  "masks": [
+    {
+      "index": 0,
+      "filename": "mask_0.png",
+      "dimensions": [
+        1280,
+        842
+      ],
+      "sam_score": 0.9707409143447876,
+      "foreground_pixels": 32088,
+      "mask_box": [
+        634,
+        253,
+        888,
+        444
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 1,
+      "filename": "mask_1.png",
+      "dimensions": [
+        1280,
+        842
+      ],
+      "sam_score": 0.962729811668396,
+      "foreground_pixels": 31757,
+      "mask_box": [
+        634,
+        253,
+        888,
+        443
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 2,
+      "filename": "mask_2.png",
+      "dimensions": [
+        1280,
+        842
+      ],
+      "sam_score": 0.945954442024231,
+      "foreground_pixels": 27687,
+      "mask_box": [
+        634,
+        252,
+        888,
+        441
+      ],
+      "status": "VALID"
+    }
+  ],
+  "visualization_mask_index": 0,
+  "settings": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "precision": "float32",
+    "seed": 42,
+    "multimask_output": true,
+    "mask_threshold": 0.0,
+    "effective_device": "cuda",
+    "batch_size": 1,
+    "eval": true,
+    "inference_mode": true,
+    "postprocess_device": "cpu",
+    "attention_backend": "sdpa",
+    "processor": {
+      "_processor_class": "SamProcessor",
+      "image_processor_type": "SamImageProcessor",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1024
+      },
+      "mask_size": {
+        "longest_edge": 256
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": {
+        "height": 1024,
+        "width": 1024
+      },
+      "mask_pad_size": {
+        "height": 256,
+        "width": 256
+      },
+      "do_convert_rgb": true
+    },
+    "api_shapes": {
+      "input_points": [
+        1,
+        1,
+        5,
+        2
+      ],
+      "input_labels": [
+        1,
+        1,
+        5
+      ],
+      "transformed_input_points": [
+        [
+          [
+            [
+              520.0,
+              264.1567695961995
+            ],
+            [
+              608.0,
+              334.5985748218527
+            ],
+            [
+              680.0,
+              292.1733966745843
+            ],
+            [
+              615.2,
+              248.14726840855107
+            ],
+            [
+              704.0,
+              336.19952494061755
+            ]
+          ]
+        ]
+      ],
+      "point_labels": [
+        [
+          [
+            1,
+            1,
+            1,
+            0,
+            0
+          ]
+        ]
+      ],
+      "input_boxes": [
+        1,
+        1,
+        4
+      ],
+      "transformed_input_boxes": [
+        [
+          [
+            505.15537109375003,
+            198.62423774918582,
+            711.4654296875001,
+            354.8147229264864
+          ]
+        ]
+      ],
+      "original_sizes": [
+        [
+          842,
+          1280
+        ]
+      ],
+      "reshaped_input_sizes": [
+        [
+          674,
+          1024
+        ]
+      ],
+      "pred_masks": [
+        1,
+        1,
+        3,
+        256,
+        256
+      ],
+      "iou_scores": [
+        1,
+        1,
+        3
+      ],
+      "restored_masks": [
+        1,
+        3,
+        842,
+        1280
+      ]
+    },
+    "binary_values": [
+      0,
+      255
+    ],
+    "mask_box_upper_bounds": "exclusive",
+    "source_image_copy": "original.jpg",
+    "source_detection_copy": "source_detection.json",
+    "visualization_selection": "highest finite SAM score among nonempty candidates; no human mask approval",
+    "point_prompt_copy": "points.json",
+    "point_preview": "points.png",
+    "point_annotation_status": "RESEARCH_ONLY_REQUIRES_REVIEW"
+  },
+  "timing": {
+    "load_seconds": 9.0325448000076,
+    "preprocess_seconds": 0.08021529999678023,
+    "inference_seconds": 1.2262029000121402,
+    "postprocess_and_mask_save_seconds": 0.0855262999975821,
+    "stage_seconds": 10.454304600003525,
+    "visualization_seconds": 0.987949899994419
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 374956544,
+    "effective_device": "cuda",
+    "peak_allocated_cuda_bytes": 2065263616
+  },
+  "observations": [
+    {
+      "code": "RESEARCH_SCOPE",
+      "message": "Segmentation test only; SAM scores are not measured accuracy and no image editing is authorized."
+    },
+    {
+      "code": "NO_CONFIRMED_HUMAN_APPROVAL",
+      "message": "One preregistered bowl-only box-plus-point diagnostic; exclude flame and unrelated background; research annotations requiring review."
+    }
+  ],
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false
+}

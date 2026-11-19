@@ -1,0 +1,32 @@
+{
+  "decision": "REVIEW",
+  "decision_reason": "The meal (ramen) is adapted to be culturally appropriate for India, as it is a common lunch dish there. The people and their shared lunch and seating are preserved. Resolve the planner's stated uncertainties.",
+  "scene_summary": "Two people share lunch at a table. A bowl of dal (lentil soup) with a spoon sits between them.",
+  "candidate_edits": [
+    {
+      "object_description": "bowl of ramen",
+      "localization_phrase": "bowl of dal",
+      "proposed_change": "bowl of dal",
+      "cultural_reason": "Dal is a common lunch dish in India and is more culturally appropriate for the target culture than ramen, which is not a traditional Indian dish.",
+      "identity_uncertain": false,
+      "verified_object_id": "meal-1"
+    }
+  ],
+  "must_preserve": [
+    "Two people share lunch at a table.",
+    "A bowl of ramen with chopsticks sits between them.",
+    "original scene purpose",
+    "important people",
+    "activity",
+    "person and object relationships"
+  ],
+  "uncertainties": [
+    "The verified object (ramen) is adapted to dal, which is a culturally appropriate substitution for the target culture."
+  ],
+  "verification_requirements": [
+    "Verify that dal is a culturally appropriate and common lunch dish in India.",
+    "Resolve the planner's stated uncertainties.",
+    "Check proposed changes and cultural reasons with the user.",
+    "Verify localization phrases against the image before grounding or editing."
+  ]
+}

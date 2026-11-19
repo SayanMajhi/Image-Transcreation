@@ -1,0 +1,23 @@
+{
+  "backend": "FLUX_KONTEXT_GGUF",
+  "model_id": "black-forest-labs/FLUX.1-Kontext-dev",
+  "revision": "24e9dedc4ef646698dc8eb4e18ae2cec3c9fea0d",
+  "quantization": "Q4_K_M",
+  "gguf_repository": "QuantStack/FLUX.1-Kontext-dev-GGUF",
+  "gguf_revision": "2d083027732f81e5548620b57ac47da22d30aa5a",
+  "gguf_filename": "flux1-kontext-dev-Q4_K_M.gguf",
+  "gguf_bytes": 6931817760,
+  "gguf_sha256": "ebd4e92c44c47f104ad64e4353692f37addf06eb99420c9b459334d871c8b750",
+  "license": "flux-1-dev-non-commercial-license",
+  "official_anonymous_component_access": "HTTP 401, license acceptance and authenticated authorized access required",
+  "local_comfy_server": "connection refused",
+  "installed_gguf": false,
+  "local_vram_total_MiB": 4096,
+  "observed_free_vram_MiB": 3135,
+  "observed_system_ram_free_KiB": 3809720,
+  "T4_connection": "requested; no endpoint supplied at protocol freeze",
+  "actual_flux_model_load": false,
+  "compatibility_verdict": "NOT_ESTABLISHED; not a measured OOM or proven universal incompatibility",
+  "decision": "Use explicitly permitted SDXL+ControlNet local fallback; no FLUX weights downloaded",
+  "new_backend_path": "documented Diffusers single-file GGUF transformer + FluxKontextPipeline; not runtime validated"
+}

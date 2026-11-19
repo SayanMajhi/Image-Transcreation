@@ -1,0 +1,45 @@
+{
+  "execution_mode": "GUIDED_RESEARCH",
+  "scope": "RESEARCH_ONLY",
+  "human_approved": false,
+  "automated_plan_success": false,
+  "cultural_edit_authorized": false,
+  "status": "MASK_REQUIRES_REVIEW",
+  "events": [
+    {
+      "stage": "grounding",
+      "action": "EVIDENCE_VERIFIED",
+      "seconds": 0.030655599999590777,
+      "sha256": "fb55b34edfd0a065c822baa634bf39e05cd02d8cc8c0cd26173f3250f7de0fa3"
+    },
+    {
+      "stage": "segmentation",
+      "action": "DISPATCH",
+      "seconds": 0.04445060000216472,
+      "prediction_index": 0
+    },
+    {
+      "stage": "segmentation",
+      "action": "RELEASED",
+      "seconds": 8.007107100002031
+    }
+  ],
+  "reason": "Inspect all masks/overlays against protected objects; supply pinned SAM result, explicit candidate, mask hash and research selection note. No generation ran.",
+  "total_seconds": 8.007117299999663,
+  "artifact_sha256": {
+    "request.json": "31bda9eeabba181a9ce0b7dc1c159761648be80124369c3808169d18a87d22db",
+    "source.jpg": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "segmentation/box.png": "e4ec16a1ff8930c2bb7895669d58cb6815182747eb99113376bf2123ae96a940",
+    "segmentation/candidate_gallery.png": "c7343f3ac0d054bc420ccf43139fc41e2c72a094a1034fc5a69d6ec6cbc0afa5",
+    "segmentation/comparison.png": "f088dc041a5f9f22aa69aed150adb50768be933156a5216246a6fbe2d6194086",
+    "segmentation/mask_0.png": "97dfbc4215f0901a933f1e9ada34ff1792bb69197e87b223d60de3899657920e",
+    "segmentation/mask_1.png": "57b6c517afb558ab433048c577fc6e659e9c95f7df5a012285a72ea01453f214",
+    "segmentation/mask_2.png": "b873448f357048d612d1b64eb0c5469928d5dd5d5c4253ead610662eb03fe6bf",
+    "segmentation/original.jpg": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "segmentation/overlay_0.png": "08d3cde9d1348b97545374f6566b5cf26b626854b17998ffa0cb61280e43f9b4",
+    "segmentation/overlay_1.png": "becdd087cad43aea20971ca88576a970eea3246fb1db05d7dcd7b6cedc46e5cf",
+    "segmentation/overlay_2.png": "3f5a26ca8798e47c59896e88fc7c695c3f7d8a7f4418a856269751f376811946",
+    "segmentation/segmentation.json": "481d4f5434b685224d8bb4c6d429246672fe287c035e707cfd7b58ad6884d97e",
+    "segmentation/source_detection.json": "fb55b34edfd0a065c822baa634bf39e05cd02d8cc8c0cd26173f3250f7de0fa3"
+  }
+}

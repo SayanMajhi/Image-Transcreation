@@ -1,0 +1,7 @@
+{
+  "command": "python -B -m unittest discover -s tests -v",
+  "tests_run": 41,
+  "elapsed_seconds": 0.291,
+  "result": "OK",
+  "ollama_tests_mocked": true
+}

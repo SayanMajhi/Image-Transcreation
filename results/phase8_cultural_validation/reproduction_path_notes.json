@@ -1,0 +1,8 @@
+{
+  "original_requests_unchanged": true,
+  "reproduction_copies": "Only path separators normalized to forward slash. All hashes, prompts, seeds, crop coordinates and model config unchanged.",
+  "runtime_originals": [
+    "case1/request_seed_42.json",
+    "case1/request_seed_43.json"
+  ]
+}

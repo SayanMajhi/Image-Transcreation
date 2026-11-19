@@ -1,0 +1,12 @@
+{
+  "id": "CASE_01",
+  "status": "HISTORICAL_BASELINE",
+  "direction": "French->Indian",
+  "source_object": "croissant",
+  "target_object": "samosa",
+  "human_review_status": "PASS",
+  "attempts": [],
+  "selected_attempt": "historical",
+  "case_status": "OK",
+  "note": "Historical result copied unchanged (not regenerated)"
+}

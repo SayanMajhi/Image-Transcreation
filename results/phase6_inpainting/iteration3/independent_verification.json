@@ -1,0 +1,31 @@
+{
+  "image_dimensions": [
+    1280,
+    842
+  ],
+  "mask_dimensions": [
+    1280,
+    842
+  ],
+  "nonzero_alpha_pixels": 32088,
+  "editable_pixels": 32088,
+  "nonzero_alpha_outside": 0,
+  "changed_inside_mask": 32080,
+  "changed_outside_mask": 0,
+  "max_outside_channel_difference": 0,
+  "differences_from_hard": 9630,
+  "differences_from_hard_outside": 0,
+  "full_alpha_pixels": 19586,
+  "partial_alpha_pixels": 12502,
+  "minimum_inside_alpha_byte": 114,
+  "maximum_inside_alpha_byte": 255,
+  "original_source_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+  "original_mask_sha256": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+  "hard_sha256": "e68c79d3b3ff9efd8a81c47f590666d7b142f2aab8eb8a7ececc30ccf9558cfc",
+  "feathered_sha256": "36f94ee1be574e4a5a2ae249330da966ec11cc60253c444020abffed1bf8b13f",
+  "alpha_sha256": "df9deb79da1176c53bf17c1b8cfd25ebd76c72c91e5a3b98dc28116e5e7107dd",
+  "all_saved_artifact_hashes_match": true,
+  "pillow_radius5_alpha_reconstruction_exact": true,
+  "independent_integer_rgb_formula_exact": true,
+  "inference_calls": 0
+}

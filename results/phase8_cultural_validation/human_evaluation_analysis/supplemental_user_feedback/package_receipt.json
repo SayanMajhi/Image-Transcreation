@@ -1,0 +1,22 @@
+{
+  "status": "INSUFFICIENT_EVIDENCE",
+  "supplementary_unblinded_user_comments": 1,
+  "user_confirmation_messages": 1,
+  "formal_completed_panel_forms": 0,
+  "numeric_scores_inferred": false,
+  "candidate_assignment": null,
+  "private_key_parsed": false,
+  "pilot_proposal_prepared": false,
+  "new_model_calls": 0,
+  "relevant_tests_passed": 20,
+  "previous_full_suite_passed": 440,
+  "previous_packet_sha256": "9b534bb6e5d4b4fbf4d0481146918f05bebfe421ed6eb3e27c663552b9945f56",
+  "previous_packet_archive": "results\\phase8_cultural_validation\\human_evaluation_analysis\\package_history\\initial_missing_response_review.zip",
+  "path": "results\\cultural_human_evaluation_review.zip",
+  "sha256": "3f45594bee03f18ebe044dca2215f6975b5648d8064942d0ef02601b3379d7b2",
+  "bytes": 28004036,
+  "manifest_entries_verified": 218,
+  "CRC_and_hash_verification": "PASS",
+  "broken_report_links": [],
+  "old_packet_preserved": true
+}

@@ -1,0 +1,24 @@
+{
+  "project_status": "PARTIALLY_COMPLETE",
+  "component_implementation": "All five models and validation/review tools implemented; guided resume-to-inpainting route tested with mocks.",
+  "automated_pipeline": "Actual live SmolVLM -> Qwen -> validation completed, stopped at REVIEW with zero released candidates. No approved automated generation path exists.",
+  "guided_research": "Actual Grounding DINO and two SAM conditions completed. Real generation preflight vetoed selected unsafe mask.",
+  "real_generation_this_run": false,
+  "real_diffusion_calls_this_run": 0,
+  "historical_diffusion_reference": "One preserved old lamp result independently rechecked; not a ramen transformation or new inference.",
+  "human_review": "Historical Sayan MATERIAL_UNRESOLVED unchanged. New box/mask preparations remain PENDING; no human approval invented.",
+  "tests_passed": 392,
+  "test_failures": 0,
+  "models_executed_this_run": [
+    "HuggingFaceTB/SmolVLM-500M-Instruct",
+    "qwen2.5:3b",
+    "IDEA-Research/grounding-dino-tiny",
+    "facebook/sam-vit-base"
+  ],
+  "research_mask_calls": 2,
+  "new_grounding_calls": 1,
+  "new_caption_calls": 1,
+  "new_qwen_calls": 1,
+  "next_required_evidence": "Specify exact editable food contents/toppings and whether liquid inside the spoon is protected; provide an inspected food-only mask excluding ceramic bowl, spoon and chopsticks. Sparse points and model scores are not sufficient.",
+  "source_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0"
+}

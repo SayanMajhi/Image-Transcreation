@@ -1,0 +1,22 @@
+{
+  "baseline": {
+    "command": "python -B -m unittest discover -s tests -q",
+    "tests": 72,
+    "seconds": 0.519,
+    "result": "OK",
+    "failures": 0,
+    "errors": 0
+  },
+  "after": {
+    "command": "python -B -m unittest discover -s tests -q",
+    "returncode": 0,
+    "output": "----------------------------------------------------------------------\nRan 95 tests in 0.494s\n\nOK\n",
+    "tests": 95,
+    "new_grounding_tests": 23
+  },
+  "notes": [
+    "offline tests; no model weights or running Ollama needed",
+    "CUDA OOM and CPU fallback tested with mocks; real runs used CUDA successfully",
+    "existing planner quarantine, JSON, transport and policy regression tests included"
+  ]
+}

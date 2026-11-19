@@ -1,0 +1,25 @@
+{
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "model": null,
+  "approval": false,
+  "request_sha256": "ae7c920377576f26ff1b16a7a651fc8675683f36ac4aaf8b99a9ccaf1e23d046",
+  "dimensions": [
+    1280,
+    853
+  ],
+  "elapsed_seconds": 0.3749536999966949,
+  "target_bbox": [
+    295,
+    185,
+    985,
+    753
+  ],
+  "source_content_retained_in_removed_region": false,
+  "outputs": {
+    "final.png": "bb922916ccbdd776f2c3ec0300d2fbe40398026ee3e1c92b66e31f3eb894ddfb",
+    "placed_alpha.png": "2f6c32f273af0fd400c0ef93dccc6a3f6f59631639d77fe98089eeb251c6bbc0",
+    "shadow_alpha.png": "ef3d9371d1e2649b294a2d8e9aaef37066221312890ef35ead59a3bf01f407d2",
+    "source_removed.png": "c8623102ac01dffdfa2d94878798ed813d3d258fb0ef34ef5a563ca334385fbb"
+  }
+}

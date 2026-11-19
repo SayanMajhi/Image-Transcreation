@@ -1,0 +1,7 @@
+Source photograph: Diwali Oil lamps Darjeeling, Benoy, Wikimedia Commons.
+https://commons.wikimedia.org/wiki/File:Diwali_Oil_lamps_Darjeeling.jpg
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/
+Changes: SAM mask/overlays, research diffusion-generated bowl-region appearance, crop/comparison figures; final is a modified image, not an original photograph. Preserve attribution and applicable share-alike obligations.
+Model: stable-diffusion-v1-5/stable-diffusion-inpainting, revision 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb; model card lists CreativeML OpenRAIL-M.
+https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-inpainting
+https://huggingface.co/spaces/CompVis/stable-diffusion-license

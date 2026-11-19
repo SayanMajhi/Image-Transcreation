@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "record_type": "edit_intent_review",
+  "scope": "GROUNDING_TEST_ONLY",
+  "original_image_sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+  "source_culture": null,
+  "target_culture": "test target",
+  "user_instructions": null,
+  "verified_objects": [
+    {
+      "object_id": "object-1",
+      "description": "synthetic object"
+    }
+  ],
+  "validated_plan_sha256": "36787e83f4b1b6c809b41e0d8d655d0905fc05723e92e5c914030a02b0649c40",
+  "planning_result_sha256": "8c3dca46355d2372c19ef42e1b595a51363515f0ee33b3a1ef9f2b8e2159c76e",
+  "planner_audit_sha256": "f399a1b3271aade1d20bdb0de2ea1046ee597f7fc0fb2060ba9747c9b542a743",
+  "planning_run_sha256": "ef0e74476225166277e15cd417dc341966b64e44314873b0de4f70463e62dc44",
+  "candidate_index": 0,
+  "candidate": {
+    "object_description": "synthetic object",
+    "localization_phrase": "synthetic object",
+    "proposed_change": "a different surface material",
+    "cultural_reason": "Contextual test suggestion only",
+    "identity_uncertain": false,
+    "verified_object_id": "object-1"
+  },
+  "must_preserve": [
+    "background",
+    "original scene purpose",
+    "important people",
+    "activity",
+    "person and object relationships"
+  ],
+  "verification_requirements": [
+    "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
+    "Verify localization phrases against the original image before grounding or editing.",
+    "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",
+    "Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness."
+  ],
+  "evidence_scope": "SYNTHETIC_TEST_ONLY",
+  "image_file": "original.png",
+  "run_file": "evidence/pipeline_result.json",
+  "decision": "NEEDS_REVIEW",
+  "reviewer": "synthetic test reviewer",
+  "reason": "Synthetic inspection declaration, not actual human approval",
+  "created_at_utc": "2026-11-10T10:10:27.089782+00:00",
+  "reviewed_at_utc": "2026-11-10T10:10:27.122314+00:00",
+  "inspected_original": true,
+  "inspected_edit": true,
+  "sam_authorized": false,
+  "image_edit_authorized": false,
+  "diffusion_authorized": false,
+  "cultural_transformation_authorized": false,
+  "pending_file": "pending.json",
+  "pending_sha256": "300d26d754fadf975113340d91393a3802f1c2c215327e5b98c068c164e44865"
+}

@@ -1,0 +1,20 @@
+{
+  "source_image": "C:\\Users\\sayan\\AppData\\Local\\Temp\\tmp2f9e5xpe\\source\\original.png",
+  "image_sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+  "target_culture": "test target",
+  "output_dir": "C:\\Users\\sayan\\AppData\\Local\\Temp\\tmp2f9e5xpe\\continuation",
+  "execution_mode": "GROUNDING_TEST",
+  "source_culture": null,
+  "user_instructions": null,
+  "verified_objects": [
+    {
+      "object_id": "object-1",
+      "description": "synthetic object"
+    }
+  ],
+  "replay": null,
+  "edit_intent": {
+    "review_file": "C:\\Users\\sayan\\AppData\\Local\\Temp\\tmp2f9e5xpe\\intent\\decision.json",
+    "review_sha256": "d80b369080c8dae291837c4995f86d75908d086601261dd07176a1102135accc"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "frozen_utc": "2026-11-11T14:01:19.459390+00:00",
+  "case_specification_sha256": "203caee32748534663e2647d60a8f5d46378d076510e52869c8693cfd49b5267",
+  "configuration_sha256": "42f88982d0ce1796f6dda04ad5e15ae1345de1e3c139b534f2e0706155483abd",
+  "request_hashes": {
+    "42": "faba27f1aac572baa90e8a76a103eed5f2d19e7a50bfc2f7384f7199ec24d638",
+    "43": "4e7e3595456120be9c47f7b0e4035c2cc9bd98707cc7ea974906022e882977e8"
+  },
+  "region_provenance_sha256": "14a27b6ff1f6a8e6740625b1f0137fb100f6c688b330b5fecfb21a87cf9171a8",
+  "maximum_new_editor_generations": 2,
+  "seeds": [
+    42,
+    43
+  ],
+  "retry_policy": "only genuine technical failure correction; log all attempts; no visual tuning",
+  "human_acceptance_protocol_sha256": "bd7d6b7b486f21abec2411cdab7b3ba67cf302bd810b31d4a0fe32bf26c1eb03",
+  "initial_case_status": "PENDING_EXECUTION"
+}

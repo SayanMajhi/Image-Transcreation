@@ -1,0 +1,8 @@
+{
+  "source_caption": "A bowl of food with chopsticks and a spoon.",
+  "caption_status": "COMPLETE",
+  "target_culture": "Indian",
+  "source_culture": "Japanese",
+  "user_instructions": "Original visible object, as declared by the user:\n\"Japanese ramen noodles in a bowl\"\n\nTransform the ramen into Indian-style masala noodles.\n\nPreserve the bowl, table, camera angle, lighting, and background.",
+  "verified_objects": []
+}

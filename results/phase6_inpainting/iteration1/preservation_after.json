@@ -1,0 +1,11 @@
+{
+  "preexisting_files_checked": 156,
+  "changed": [
+    "src/transcreation/config.py",
+    "src/transcreation/contracts.py"
+  ],
+  "missing": [],
+  "all_phase5_evidence_unchanged": true,
+  "all_preexisting_tests_and_model_stages_unchanged": true,
+  "explanation": "Only append new inpainting config/input types; new stage/script/tests/config are additions. Existing inference implementations and planner/review policies remain byte-identical."
+}

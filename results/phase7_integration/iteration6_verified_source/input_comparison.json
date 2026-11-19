@@ -1,0 +1,28 @@
+{
+  "status": "PENDING_NO_AFTER_INPUT_CONSTRUCTED",
+  "before_file": "planning_input_before.json",
+  "before_file_sha256": "bbde36f1ffbf9a9a51897129ac14c62c8d38828fca674388d6deaeed2fc87cd6",
+  "before": {
+    "source_caption": "A bowl of food with chopsticks and a spoon.",
+    "caption_status": "COMPLETE",
+    "target_culture": "Indian",
+    "source_culture": "Japanese",
+    "user_instructions": "Original visible object, as declared by the user:\n\"Japanese ramen noodles in a bowl\"\n\nTransform the ramen into Indian-style masala noodles.\n\nPreserve the bowl, table, camera angle, lighting, and background.",
+    "verified_objects": []
+  },
+  "after": null,
+  "actual_changed_input_fields": [],
+  "actual_verified_objects_added": 0,
+  "allowed_future_changed_fields": [
+    "verified_objects"
+  ],
+  "must_remain_exact": [
+    "source_caption",
+    "caption_status",
+    "source_culture",
+    "target_culture",
+    "user_instructions"
+  ],
+  "user_instructions_sha256": "d3f53b5449dbd8341928a0511e978f5dce5a3c0b7dd872ed076fdbf41d8e29e5",
+  "guard": "Only after genuine confirmation may one VerifiedObject be added. Any required change to another PlanningInput field must stop this controlled experiment."
+}

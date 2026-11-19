@@ -1,0 +1,32 @@
+{
+  "project_status": "PARTIALLY_COMPLETE",
+  "protocol_execution": "COMPLETED_ALL_REQUESTED_STAGES",
+  "earlier_readiness_blocker": "RESOLVED_BY_COMPLETE_USER_V4_PROTOCOL",
+  "actual_models_executed": [
+    "SmolVLM-500M",
+    "Qwen2.5-3B",
+    "Grounding DINO Tiny",
+    "SAM ViT-Base",
+    "SD v1.5 Inpainting"
+  ],
+  "caption_calls": 1,
+  "qwen_calls": 1,
+  "grounding_conditions": 1,
+  "sam_conditions": 1,
+  "diffusion_calls": 2,
+  "quality_retries": 0,
+  "automated_final_decision": "REVIEW",
+  "released_candidates": 0,
+  "guided_technical_execution": "PASS",
+  "guided_visual_objective": "FAIL_A_AND_B",
+  "mask_pixels": 1846716,
+  "outside_mask_changes_A": 0,
+  "outside_mask_changes_B": 0,
+  "protected_changes_A": 0,
+  "protected_changes_B": 0,
+  "tests_passed": 412,
+  "tests_failed": 0,
+  "new_approvals": 0,
+  "new_source_code_changes": 0,
+  "remaining_limitation": "Unnatural red insert rather than coherent masala coating, changed strand geometry and hard-mask/gap seams. Stop after bounded protocol."
+}

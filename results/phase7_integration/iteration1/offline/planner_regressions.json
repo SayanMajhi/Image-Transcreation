@@ -1,0 +1,42 @@
+[
+  {
+    "case": "01_japanese_food",
+    "source_sha256": "e830fd69b71b0177dc9f147c9eb4e5f560d600af28118d182c761684f11d31ce",
+    "raw_decision": "PROPOSE",
+    "saved_final_decision": "REVIEW",
+    "revalidated_final_decision": "REVIEW",
+    "candidates_released": 0,
+    "issues": [
+      "SOURCE_OBJECT_MISMATCH",
+      "SOURCE_REPLACEMENT_IDENTICAL",
+      "USER_CONSTRAINTS_UNRESOLVED"
+    ],
+    "source_image_binding": "These are archived planning fixtures, not a new image-caption run. Food verification is a hypothetical test assertion."
+  },
+  {
+    "case": "02_durga_uncertain_incense",
+    "source_sha256": "2eceabb9ee3f51f8e448e0d0050b4cac8711659b739a53afebf804b0fd417e67",
+    "raw_decision": "REVIEW",
+    "saved_final_decision": "REVIEW",
+    "revalidated_final_decision": "REVIEW",
+    "candidates_released": 0,
+    "issues": [
+      "CAPTION_INCOMPLETE",
+      "MODEL_REVIEW_REQUESTED"
+    ],
+    "source_image_binding": "These are archived planning fixtures, not a new image-caption run. Food verification is a hypothetical test assertion."
+  },
+  {
+    "case": "03_bicycle_no_change",
+    "source_sha256": "5e4b66f12f792ec5e732020f6ca4adc67efae01ff8277158c89f21edba82fb18",
+    "raw_decision": "PROPOSE",
+    "saved_final_decision": "ABSTAIN",
+    "revalidated_final_decision": "ABSTAIN",
+    "candidates_released": 0,
+    "issues": [
+      "PROPOSE_WITHOUT_EDITS",
+      "ABSTENTION_NORMALIZED"
+    ],
+    "source_image_binding": "These are archived planning fixtures, not a new image-caption run. Food verification is a hypothetical test assertion."
+  }
+]

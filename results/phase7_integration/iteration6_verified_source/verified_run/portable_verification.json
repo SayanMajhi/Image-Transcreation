@@ -1,0 +1,10 @@
+{
+  "manifest_entries": 643,
+  "manifest_mismatches": [],
+  "returncode": 0,
+  "stdout": "{\n  \"input_changes\": [\n    \"verified_objects\"\n  ],\n  \"raw_decision\": \"PROPOSE\",\n  \"final_decision\": \"REVIEW\",\n  \"released_candidates\": 0,\n  \"issue_codes\": [\n    \"SOURCE_OBJECT_MISMATCH\",\n    \"SOURCE_LOCALIZATION_MISMATCH\",\n    \"SOURCE_REPLACEMENT_IDENTICAL\",\n    \"USER_CONSTRAINTS_UNRESOLVED\",\n    \"EDIT_UNCERTAINTY_UNRESOLVED\"\n  ],\n  \"raw_response_and_hashes_valid\": true,\n  \"actual_saved_qwen_generation_calls\": 1,\n  \"verification_model_calls\": 0\n}\n",
+  "stderr": "",
+  "original_repository_paths_required": false,
+  "new_model_calls": 0,
+  "all_passed": true
+}

@@ -1,0 +1,37 @@
+{
+  "dimensions": [
+    1280,
+    853
+  ],
+  "old_editable_pixels": 749700,
+  "new_editable_pixels": 433403,
+  "newly_protected_pixels": 316297,
+  "new_pixels_outside_previous_edit_region": 0,
+  "missing_original_SAM0_pixels": 0,
+  "editable_protected_overlap": 0,
+  "geometry": {
+    "crop_box_xyxy": [
+      23,
+      166,
+      1233,
+      813
+    ],
+    "padding_ltrb": [
+      0,
+      281,
+      0,
+      282
+    ],
+    "padded_side": 1210,
+    "original_dimensions": [
+      1280,
+      853
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "mask_sha256": "230255929336b256e1eba1108a0120c25df94202d56cc1b74c055b57add9045f",
+  "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8"
+}

@@ -1,0 +1,18 @@
+{
+  "source_image": "results\\phase7_integration\\v4_completed\\source.jpg",
+  "image_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+  "segmentation_file": "results\\phase7_integration\\v4_completed\\sam\\segmentation\\segmentation.json",
+  "segmentation_sha256": "31d6cfece2d8b67a5dc87e42c2a8c1a25f6e0ac7e8a4ee12b4988a05b44b4a2e",
+  "mask_file": "results\\phase7_integration\\v4_completed\\research_mask.png",
+  "mask_sha256": "a025cfe02f676ac6464d62cf143feca3292e016049ff9778ca239514a91167cb",
+  "candidate_index": 0,
+  "prompt": "Photorealistic spaghetti strands coated in reddish-brown Indian masala sauce and spices, visible individual pasta strands, natural food texture, matching the original composition, camera angle and lighting.",
+  "selection_note": "Explicit V4 operator-defined RESEARCH_ONLY masala-spaghetti experiment. SAM 0 is only reference. Manual inner-food polygon plus conservative gap exclusions; original plate/background protected. No human mask approval or automated Qwen success claimed.",
+  "scope": "RESEARCH_ONLY",
+  "annotation_file": "results\\phase7_integration\\v4_completed\\annotations.json",
+  "annotation_sha256": "3e88fd257214fbc00dc1f2fa22436741a2fdbcb7605c1ceed05e1d6a7e681422",
+  "protected_mask_file": "results\\phase7_integration\\v4_completed\\protected_regions.png",
+  "protected_mask_sha256": "75508040b65e99635504dd84e6652e790edb41d423fc19316305f91ea9537baa",
+  "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED",
+  "negative_prompt": "text, letters, printed labels, watermark, logo, packaging, smooth plastic, melted food, distorted pasta, disconnected noodle strands"
+}

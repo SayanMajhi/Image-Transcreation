@@ -1,0 +1,914 @@
+[
+  {
+    "condition": "R01_bicycle_replay",
+    "box_index": 1,
+    "box": [
+      441.8973388671875,
+      581.3589477539062,
+      953.31396484375,
+      924.9127197265625
+    ],
+    "score": 0.9432805180549622,
+    "returned_label": "bicycle",
+    "visual_region": "bicycle",
+    "extent_background_cutoff_merge_assessment": "One bicycle largely enclosed including wheels/frame/saddle/handlebar; some rectangular wall/pavement background; no obvious multi-object merge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review; thin structures remain a segmentation challenge",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A01_oil_lamp_030",
+    "box_index": 1,
+    "box": [
+      631.4442138671875,
+      248.13294982910156,
+      889.331787109375,
+      443.25518798828125
+    ],
+    "score": 0.31422239542007446,
+    "returned_label": "oil lamp",
+    "visual_region": "central burning lamp",
+    "extent_background_cutoff_merge_assessment": "Bowl/flame mostly enclosed; some tray/background; base near boundary; no obvious multi-object merge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review; full base must be checked",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A02_oil_lamp_020",
+    "box_index": 1,
+    "box": [
+      735.2825927734375,
+      62.24811553955078,
+      927.81005859375,
+      220.5501251220703
+    ],
+    "score": 0.278545618057251,
+    "returned_label": "oil lamp",
+    "visual_region": "rear central burning lamp",
+    "extent_background_cutoff_merge_assessment": "One lamp/flame largely enclosed; modest background; lower support near box edge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A02_oil_lamp_020",
+    "box_index": 2,
+    "box": [
+      1123.554931640625,
+      181.26942443847656,
+      1278.0057373046875,
+      528.7737426757812
+    ],
+    "score": 0.2787924110889435,
+    "returned_label": "oil lamp",
+    "visual_region": "right-edge metal container",
+    "extent_background_cutoff_merge_assessment": "Large metallic vessel cropped by image; not a clearly visible individual lamp.",
+    "prospective_sam_box_assessment": "unsuitable for the intended lamp query without separate verification",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A02_oil_lamp_020",
+    "box_index": 3,
+    "box": [
+      631.4442138671875,
+      248.13294982910156,
+      889.331787109375,
+      443.25518798828125
+    ],
+    "score": 0.31422239542007446,
+    "returned_label": "oil lamp",
+    "visual_region": "central burning lamp",
+    "extent_background_cutoff_merge_assessment": "Bowl/flame mostly enclosed; some tray/background; base near boundary; no obvious multi-object merge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review; full base must be checked",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A02_oil_lamp_020",
+    "box_index": 4,
+    "box": [
+      897.9613037109375,
+      426.39447021484375,
+      1193.229248046875,
+      681.9464111328125
+    ],
+    "score": 0.2399579882621765,
+    "returned_label": "",
+    "visual_region": "lower-right filled container",
+    "extent_background_cutoff_merge_assessment": "Container is enclosed with rice/context; lamp identity is uncertain from this image, not verified by its predicted label.",
+    "prospective_sam_box_assessment": "physical container could be prompted; review identity before any selection",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A02_oil_lamp_020",
+    "box_index": 5,
+    "box": [
+      53.623008728027344,
+      180.76321411132812,
+      367.1987609863281,
+      707.6920776367188
+    ],
+    "score": 0.2564091384410858,
+    "returned_label": "oil",
+    "visual_region": "left foreground vessel plus lamp context",
+    "extent_background_cutoff_merge_assessment": "Tall box includes substantial dark foreground vessel, nearby lamp and background; merged/ambiguous extent.",
+    "prospective_sam_box_assessment": "poor single-instance lamp prompt",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A02_oil_lamp_020",
+    "box_index": 6,
+    "box": [
+      426.4567565917969,
+      120.35665893554688,
+      637.9077758789062,
+      284.0110168457031
+    ],
+    "score": 0.22418521344661713,
+    "returned_label": "",
+    "visual_region": "middle-left burning lamp, shorter duplicate",
+    "extent_background_cutoff_merge_assessment": "Lamp bowl/flame enclosed but lower support may be cut; overlaps taller prediction of same apparent instance.",
+    "prospective_sam_box_assessment": "review extent and duplicate ambiguity; do not silently select",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A02_oil_lamp_020",
+    "box_index": 7,
+    "box": [
+      1031.105224609375,
+      128.7802734375,
+      1243.134521484375,
+      297.03973388671875
+    ],
+    "score": 0.20935706794261932,
+    "returned_label": "",
+    "visual_region": "upper-right burning lamp",
+    "extent_background_cutoff_merge_assessment": "One visible lamp and flame mostly enclosed; small surrounding background; base near edge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A02_oil_lamp_020",
+    "box_index": 8,
+    "box": [
+      425.9380798339844,
+      119.31079864501953,
+      638.4198608398438,
+      327.4777526855469
+    ],
+    "score": 0.20336082577705383,
+    "returned_label": "",
+    "visual_region": "middle-left burning lamp, taller duplicate",
+    "extent_background_cutoff_merge_assessment": "Includes more support/context; overlaps shorter prediction of same apparent instance.",
+    "prospective_sam_box_assessment": "review extent and duplicate ambiguity; do not silently select",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A03_diya_030",
+    "box_index": 1,
+    "box": [
+      898.9425659179688,
+      437.91070556640625,
+      1194.177490234375,
+      680.5514526367188
+    ],
+    "score": 0.413595974445343,
+    "returned_label": "diya",
+    "visual_region": "lower-right filled container",
+    "extent_background_cutoff_merge_assessment": "Container is enclosed with rice/context; lamp identity is uncertain from this image, not verified by its predicted label.",
+    "prospective_sam_box_assessment": "physical container could be prompted; review identity before any selection",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A03_diya_030",
+    "box_index": 2,
+    "box": [
+      1031.7933349609375,
+      130.4326629638672,
+      1245.4749755859375,
+      296.5723876953125
+    ],
+    "score": 0.35099124908447266,
+    "returned_label": "diya",
+    "visual_region": "upper-right burning lamp",
+    "extent_background_cutoff_merge_assessment": "One visible lamp and flame mostly enclosed; small surrounding background; base near edge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A03_diya_030",
+    "box_index": 3,
+    "box": [
+      239.4505157470703,
+      29.393260955810547,
+      458.8706970214844,
+      242.1914520263672
+    ],
+    "score": 0.30267179012298584,
+    "returned_label": "diya",
+    "visual_region": "upper-left fruit-shaped object",
+    "extent_background_cutoff_merge_assessment": "Box primarily encloses fruit, with adjacent context near lower edge; not an isolated lamp.",
+    "prospective_sam_box_assessment": "unsuitable lamp prompt: apparent query mismatch",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A03_diya_030",
+    "box_index": 4,
+    "box": [
+      735.638916015625,
+      63.895389556884766,
+      927.334716796875,
+      219.18927001953125
+    ],
+    "score": 0.3047580420970917,
+    "returned_label": "diya",
+    "visual_region": "rear central burning lamp",
+    "extent_background_cutoff_merge_assessment": "One lamp/flame largely enclosed; modest background; lower support near box edge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A03_diya_030",
+    "box_index": 5,
+    "box": [
+      632.1923828125,
+      249.28231811523438,
+      888.8585205078125,
+      440.6268615722656
+    ],
+    "score": 0.36185088753700256,
+    "returned_label": "diya",
+    "visual_region": "central burning lamp",
+    "extent_background_cutoff_merge_assessment": "Bowl/flame mostly enclosed; some tray/background; base near boundary; no obvious multi-object merge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review; full base must be checked",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 1,
+    "box": [
+      898.9425659179688,
+      437.91070556640625,
+      1194.177490234375,
+      680.5514526367188
+    ],
+    "score": 0.413595974445343,
+    "returned_label": "diya",
+    "visual_region": "lower-right filled container",
+    "extent_background_cutoff_merge_assessment": "Container is enclosed with rice/context; lamp identity is uncertain from this image, not verified by its predicted label.",
+    "prospective_sam_box_assessment": "physical container could be prompted; review identity before any selection",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 2,
+    "box": [
+      1031.7933349609375,
+      130.4326629638672,
+      1245.4749755859375,
+      296.5723876953125
+    ],
+    "score": 0.35099124908447266,
+    "returned_label": "diya",
+    "visual_region": "upper-right burning lamp",
+    "extent_background_cutoff_merge_assessment": "One visible lamp and flame mostly enclosed; small surrounding background; base near edge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 3,
+    "box": [
+      239.4505157470703,
+      29.393260955810547,
+      458.8706970214844,
+      242.1914520263672
+    ],
+    "score": 0.30267179012298584,
+    "returned_label": "diya",
+    "visual_region": "upper-left fruit-shaped object",
+    "extent_background_cutoff_merge_assessment": "Box primarily encloses fruit, with adjacent context near lower edge; not an isolated lamp.",
+    "prospective_sam_box_assessment": "unsuitable lamp prompt: apparent query mismatch",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 4,
+    "box": [
+      735.638916015625,
+      63.895389556884766,
+      927.334716796875,
+      219.18927001953125
+    ],
+    "score": 0.3047580420970917,
+    "returned_label": "diya",
+    "visual_region": "rear central burning lamp",
+    "extent_background_cutoff_merge_assessment": "One lamp/flame largely enclosed; modest background; lower support near box edge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 5,
+    "box": [
+      860.0446166992188,
+      0.44519731402397156,
+      1077.1036376953125,
+      172.0274200439453
+    ],
+    "score": 0.2902243435382843,
+    "returned_label": "diya",
+    "visual_region": "upper-right rear fruit-shaped object",
+    "extent_background_cutoff_merge_assessment": "Box encloses background fruit-like object, not a visible lamp; image top crops its extent.",
+    "prospective_sam_box_assessment": "unsuitable lamp prompt: apparent query mismatch",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 6,
+    "box": [
+      426.671142578125,
+      120.97127532958984,
+      637.74658203125,
+      285.0550537109375
+    ],
+    "score": 0.21101674437522888,
+    "returned_label": "",
+    "visual_region": "middle-left burning lamp, shorter duplicate",
+    "extent_background_cutoff_merge_assessment": "Lamp bowl/flame enclosed but lower support may be cut; overlaps taller prediction of same apparent instance.",
+    "prospective_sam_box_assessment": "review extent and duplicate ambiguity; do not silently select",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 7,
+    "box": [
+      632.1923828125,
+      249.28231811523438,
+      888.8585205078125,
+      440.6268615722656
+    ],
+    "score": 0.36185088753700256,
+    "returned_label": "diya",
+    "visual_region": "central burning lamp",
+    "extent_background_cutoff_merge_assessment": "Bowl/flame mostly enclosed; some tray/background; base near boundary; no obvious multi-object merge.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review; full base must be checked",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 8,
+    "box": [
+      345.5781555175781,
+      606.19775390625,
+      788.1571044921875,
+      839.4149780273438
+    ],
+    "score": 0.2194979190826416,
+    "returned_label": "",
+    "visual_region": "foreground fruit-shaped object",
+    "extent_background_cutoff_merge_assessment": "Box encloses large lower fruit-like object with plate/context; object is cropped by image bottom.",
+    "prospective_sam_box_assessment": "unsuitable lamp prompt: apparent query mismatch",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 9,
+    "box": [
+      9.49005126953125,
+      4.67096471786499,
+      1274.8914794921875,
+      836.4461669921875
+    ],
+    "score": 0.208175927400589,
+    "returned_label": "",
+    "visual_region": "almost the entire image",
+    "extent_background_cutoff_merge_assessment": "Multiple lamps, vessels, fruit and background merged inside one broad rectangle.",
+    "prospective_sam_box_assessment": "unsuitable for isolating a single intended instance",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 10,
+    "box": [
+      428.75592041015625,
+      396.9512939453125,
+      549.6287841796875,
+      525.9085693359375
+    ],
+    "score": 0.2010541558265686,
+    "returned_label": "",
+    "visual_region": "coin-stack region",
+    "extent_background_cutoff_merge_assessment": "Small coin-like items and nearby rice/background; not a visible lamp.",
+    "prospective_sam_box_assessment": "unsuitable lamp prompt: apparent query mismatch",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 11,
+    "box": [
+      549.9181518554688,
+      51.16105270385742,
+      720.8372802734375,
+      190.38694763183594
+    ],
+    "score": 0.21127524971961975,
+    "returned_label": "",
+    "visual_region": "small rear bowl or possible unlit lamp",
+    "extent_background_cutoff_merge_assessment": "Small bowl region enclosed; no obvious flame, with partial occlusion; identity uncertain.",
+    "prospective_sam_box_assessment": "box may isolate a container; human identity/extent review required",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 12,
+    "box": [
+      1123.852294921875,
+      183.20777893066406,
+      1278.42431640625,
+      525.1390380859375
+    ],
+    "score": 0.27887848019599915,
+    "returned_label": "diya",
+    "visual_region": "right-edge metal container",
+    "extent_background_cutoff_merge_assessment": "Large metallic vessel cropped by image; not a clearly visible individual lamp.",
+    "prospective_sam_box_assessment": "unsuitable for the intended lamp query without separate verification",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "A04_diya_020",
+    "box_index": 13,
+    "box": [
+      426.3801574707031,
+      120.91517639160156,
+      638.1194458007812,
+      322.2464599609375
+    ],
+    "score": 0.20012138783931732,
+    "returned_label": "",
+    "visual_region": "middle-left burning lamp, taller duplicate",
+    "extent_background_cutoff_merge_assessment": "Includes more support/context; overlaps shorter prediction of same apparent instance.",
+    "prospective_sam_box_assessment": "review extent and duplicate ambiguity; do not silently select",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B01_incense_burner_030",
+    "box_index": 1,
+    "box": [
+      432.9006652832031,
+      318.7935485839844,
+      516.6528930664062,
+      390.9607238769531
+    ],
+    "score": 0.416083961725235,
+    "returned_label": "incense burner",
+    "visual_region": "central held bowl-shaped vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; lower base/grip near boundary; modest sky/smoke context; no obvious merge.",
+    "prospective_sam_box_assessment": "reasonable visible-body box after identity and full-base review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B01_incense_burner_030",
+    "box_index": 2,
+    "box": [
+      0.5056810975074768,
+      216.00436401367188,
+      95.62265014648438,
+      294.68292236328125
+    ],
+    "score": 0.42385584115982056,
+    "returned_label": "incense burner",
+    "visual_region": "left-edge held vessel",
+    "extent_background_cutoff_merge_assessment": "Visible bowl mostly enclosed; vessel itself is cropped by source image left boundary.",
+    "prospective_sam_box_assessment": "visible portion only; cannot recover parts outside the original image",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B01_incense_burner_030",
+    "box_index": 3,
+    "box": [
+      141.2554931640625,
+      279.7826843261719,
+      221.29359436035156,
+      346.8909606933594
+    ],
+    "score": 0.4130173921585083,
+    "returned_label": "incense burner",
+    "visual_region": "middle-left held vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; lower base/support near boundary; some hand/background context.",
+    "prospective_sam_box_assessment": "reasonable visible-body box; verify whether base needs a larger extent",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B01_incense_burner_030",
+    "box_index": 4,
+    "box": [
+      752.6505126953125,
+      250.71444702148438,
+      846.41845703125,
+      345.23577880859375
+    ],
+    "score": 0.37217119336128235,
+    "returned_label": "incense burner",
+    "visual_region": "upper-right held vessel",
+    "extent_background_cutoff_merge_assessment": "Body/base largely enclosed; hand touches lower boundary; modest smoke/sky context.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B01_incense_burner_030",
+    "box_index": 5,
+    "box": [
+      283.3313903808594,
+      315.6833190917969,
+      365.1260986328125,
+      380.8550720214844
+    ],
+    "score": 0.3860558569431305,
+    "returned_label": "incense burner",
+    "visual_region": "left-of-center held vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; narrow base/support near bottom edge; modest smoke/background.",
+    "prospective_sam_box_assessment": "reasonable visible-body box after identity/extent review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B02_incense_burner_020",
+    "box_index": 1,
+    "box": [
+      432.9006652832031,
+      318.7935485839844,
+      516.6528930664062,
+      390.9607238769531
+    ],
+    "score": 0.416083961725235,
+    "returned_label": "incense burner",
+    "visual_region": "central held bowl-shaped vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; lower base/grip near boundary; modest sky/smoke context; no obvious merge.",
+    "prospective_sam_box_assessment": "reasonable visible-body box after identity and full-base review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B02_incense_burner_020",
+    "box_index": 2,
+    "box": [
+      0.5056810975074768,
+      216.00436401367188,
+      95.62265014648438,
+      294.68292236328125
+    ],
+    "score": 0.42385584115982056,
+    "returned_label": "incense burner",
+    "visual_region": "left-edge held vessel",
+    "extent_background_cutoff_merge_assessment": "Visible bowl mostly enclosed; vessel itself is cropped by source image left boundary.",
+    "prospective_sam_box_assessment": "visible portion only; cannot recover parts outside the original image",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B02_incense_burner_020",
+    "box_index": 3,
+    "box": [
+      141.2554931640625,
+      279.7826843261719,
+      221.29359436035156,
+      346.8909606933594
+    ],
+    "score": 0.4130173921585083,
+    "returned_label": "incense burner",
+    "visual_region": "middle-left held vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; lower base/support near boundary; some hand/background context.",
+    "prospective_sam_box_assessment": "reasonable visible-body box; verify whether base needs a larger extent",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B02_incense_burner_020",
+    "box_index": 4,
+    "box": [
+      752.6505126953125,
+      250.71444702148438,
+      846.41845703125,
+      345.23577880859375
+    ],
+    "score": 0.37217119336128235,
+    "returned_label": "incense burner",
+    "visual_region": "upper-right held vessel",
+    "extent_background_cutoff_merge_assessment": "Body/base largely enclosed; hand touches lower boundary; modest smoke/sky context.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B02_incense_burner_020",
+    "box_index": 5,
+    "box": [
+      889.7013549804688,
+      267.348388671875,
+      979.0375366210938,
+      380.0645751953125
+    ],
+    "score": 0.2706150412559509,
+    "returned_label": "incense burner",
+    "visual_region": "far-right held vessel, taller overlapping box",
+    "extent_background_cutoff_merge_assessment": "Vessel body plus gripping hand/support; source image crops its right edge; overlaps shorter box for same apparent vessel.",
+    "prospective_sam_box_assessment": "review hand inclusion and duplicate ambiguity; no automatic instance choice",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B02_incense_burner_020",
+    "box_index": 6,
+    "box": [
+      283.3313903808594,
+      315.6833190917969,
+      365.1260986328125,
+      380.8550720214844
+    ],
+    "score": 0.3860558569431305,
+    "returned_label": "incense burner",
+    "visual_region": "left-of-center held vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; narrow base/support near bottom edge; modest smoke/background.",
+    "prospective_sam_box_assessment": "reasonable visible-body box after identity/extent review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B02_incense_burner_020",
+    "box_index": 7,
+    "box": [
+      713.4117431640625,
+      402.315673828125,
+      791.4136962890625,
+      505.8907775878906
+    ],
+    "score": 0.27190089225769043,
+    "returned_label": "incense burner",
+    "visual_region": "decorated face/ornament region on idol",
+    "extent_background_cutoff_merge_assessment": "Box is over a decorated face/ornament region rather than a held bowl-shaped vessel.",
+    "prospective_sam_box_assessment": "unsuitable vessel prompt: apparent query mismatch",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B02_incense_burner_020",
+    "box_index": 8,
+    "box": [
+      889.841796875,
+      267.5908508300781,
+      978.9923095703125,
+      348.7696533203125
+    ],
+    "score": 0.295206218957901,
+    "returned_label": "incense burner",
+    "visual_region": "far-right held vessel, shorter overlapping box",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed, lower grip/support excluded; cropped by source right boundary; overlaps taller box.",
+    "prospective_sam_box_assessment": "reasonable visible-body candidate, but duplicate/extent review required",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B03_clay_incense_burner_030",
+    "box_index": 1,
+    "box": [
+      432.8678283691406,
+      318.8076477050781,
+      516.676513671875,
+      392.7162170410156
+    ],
+    "score": 0.48630067706108093,
+    "returned_label": "clay incense burner",
+    "visual_region": "central held bowl-shaped vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; lower base/grip near boundary; modest sky/smoke context; no obvious merge.",
+    "prospective_sam_box_assessment": "reasonable visible-body box after identity and full-base review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B03_clay_incense_burner_030",
+    "box_index": 2,
+    "box": [
+      0.5225404500961304,
+      216.07716369628906,
+      95.62210845947266,
+      294.6971435546875
+    ],
+    "score": 0.4505355656147003,
+    "returned_label": "clay incense burner",
+    "visual_region": "left-edge held vessel",
+    "extent_background_cutoff_merge_assessment": "Visible bowl mostly enclosed; vessel itself is cropped by source image left boundary.",
+    "prospective_sam_box_assessment": "visible portion only; cannot recover parts outside the original image",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B03_clay_incense_burner_030",
+    "box_index": 3,
+    "box": [
+      141.24038696289062,
+      279.8672790527344,
+      221.35267639160156,
+      345.88397216796875
+    ],
+    "score": 0.4649999737739563,
+    "returned_label": "clay incense burner",
+    "visual_region": "middle-left held vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; lower base/support near boundary; some hand/background context.",
+    "prospective_sam_box_assessment": "reasonable visible-body box; verify whether base needs a larger extent",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B03_clay_incense_burner_030",
+    "box_index": 4,
+    "box": [
+      752.5611572265625,
+      251.49124145507812,
+      846.450439453125,
+      342.6279296875
+    ],
+    "score": 0.4412061274051666,
+    "returned_label": "clay incense burner",
+    "visual_region": "upper-right held vessel",
+    "extent_background_cutoff_merge_assessment": "Body/base largely enclosed; hand touches lower boundary; modest smoke/sky context.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B03_clay_incense_burner_030",
+    "box_index": 5,
+    "box": [
+      889.6678466796875,
+      267.48211669921875,
+      979.0328369140625,
+      380.1351318359375
+    ],
+    "score": 0.3260664939880371,
+    "returned_label": "clay incense burner",
+    "visual_region": "far-right held vessel, taller overlapping box",
+    "extent_background_cutoff_merge_assessment": "Vessel body plus gripping hand/support; source image crops its right edge; overlaps shorter box for same apparent vessel.",
+    "prospective_sam_box_assessment": "review hand inclusion and duplicate ambiguity; no automatic instance choice",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B03_clay_incense_burner_030",
+    "box_index": 6,
+    "box": [
+      283.33624267578125,
+      315.5657653808594,
+      365.1452941894531,
+      383.1934509277344
+    ],
+    "score": 0.4399165213108063,
+    "returned_label": "clay incense burner",
+    "visual_region": "left-of-center held vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; narrow base/support near bottom edge; modest smoke/background.",
+    "prospective_sam_box_assessment": "reasonable visible-body box after identity/extent review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B03_clay_incense_burner_030",
+    "box_index": 7,
+    "box": [
+      889.7703857421875,
+      267.6300048828125,
+      978.9869995117188,
+      349.08746337890625
+    ],
+    "score": 0.32874777913093567,
+    "returned_label": "clay incense burner",
+    "visual_region": "far-right held vessel, shorter overlapping box",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed, lower grip/support excluded; cropped by source right boundary; overlaps taller box.",
+    "prospective_sam_box_assessment": "reasonable visible-body candidate, but duplicate/extent review required",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B04_clay_incense_burner_020",
+    "box_index": 1,
+    "box": [
+      432.8678283691406,
+      318.8076477050781,
+      516.676513671875,
+      392.7162170410156
+    ],
+    "score": 0.48630067706108093,
+    "returned_label": "clay incense burner",
+    "visual_region": "central held bowl-shaped vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; lower base/grip near boundary; modest sky/smoke context; no obvious merge.",
+    "prospective_sam_box_assessment": "reasonable visible-body box after identity and full-base review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B04_clay_incense_burner_020",
+    "box_index": 2,
+    "box": [
+      0.5225404500961304,
+      216.07716369628906,
+      95.62210845947266,
+      294.6971435546875
+    ],
+    "score": 0.4505355656147003,
+    "returned_label": "clay incense burner",
+    "visual_region": "left-edge held vessel",
+    "extent_background_cutoff_merge_assessment": "Visible bowl mostly enclosed; vessel itself is cropped by source image left boundary.",
+    "prospective_sam_box_assessment": "visible portion only; cannot recover parts outside the original image",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B04_clay_incense_burner_020",
+    "box_index": 3,
+    "box": [
+      141.24038696289062,
+      279.8672790527344,
+      221.35267639160156,
+      345.88397216796875
+    ],
+    "score": 0.4649999737739563,
+    "returned_label": "clay incense burner",
+    "visual_region": "middle-left held vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; lower base/support near boundary; some hand/background context.",
+    "prospective_sam_box_assessment": "reasonable visible-body box; verify whether base needs a larger extent",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B04_clay_incense_burner_020",
+    "box_index": 4,
+    "box": [
+      752.5611572265625,
+      251.49124145507812,
+      846.450439453125,
+      342.6279296875
+    ],
+    "score": 0.4412061274051666,
+    "returned_label": "clay incense burner",
+    "visual_region": "upper-right held vessel",
+    "extent_background_cutoff_merge_assessment": "Body/base largely enclosed; hand touches lower boundary; modest smoke/sky context.",
+    "prospective_sam_box_assessment": "reasonable single-instance box to review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B04_clay_incense_burner_020",
+    "box_index": 5,
+    "box": [
+      889.6678466796875,
+      267.48211669921875,
+      979.0328369140625,
+      380.1351318359375
+    ],
+    "score": 0.3260664939880371,
+    "returned_label": "clay incense burner",
+    "visual_region": "far-right held vessel, taller overlapping box",
+    "extent_background_cutoff_merge_assessment": "Vessel body plus gripping hand/support; source image crops its right edge; overlaps shorter box for same apparent vessel.",
+    "prospective_sam_box_assessment": "review hand inclusion and duplicate ambiguity; no automatic instance choice",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B04_clay_incense_burner_020",
+    "box_index": 6,
+    "box": [
+      283.33624267578125,
+      315.5657653808594,
+      365.1452941894531,
+      383.1934509277344
+    ],
+    "score": 0.4399165213108063,
+    "returned_label": "clay incense burner",
+    "visual_region": "left-of-center held vessel",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed; narrow base/support near bottom edge; modest smoke/background.",
+    "prospective_sam_box_assessment": "reasonable visible-body box after identity/extent review",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B04_clay_incense_burner_020",
+    "box_index": 7,
+    "box": [
+      889.7703857421875,
+      267.6300048828125,
+      978.9869995117188,
+      349.08746337890625
+    ],
+    "score": 0.32874777913093567,
+    "returned_label": "clay incense burner",
+    "visual_region": "far-right held vessel, shorter overlapping box",
+    "extent_background_cutoff_merge_assessment": "Bowl body enclosed, lower grip/support excluded; cropped by source right boundary; overlaps taller box.",
+    "prospective_sam_box_assessment": "reasonable visible-body candidate, but duplicate/extent review required",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "B04_clay_incense_burner_020",
+    "box_index": 8,
+    "box": [
+      713.6109619140625,
+      402.36273193359375,
+      791.2801513671875,
+      506.1211242675781
+    ],
+    "score": 0.21443337202072144,
+    "returned_label": "",
+    "visual_region": "decorated face/ornament region on idol",
+    "extent_background_cutoff_merge_assessment": "Box is over a decorated face/ornament region rather than a held bowl-shaped vessel.",
+    "prospective_sam_box_assessment": "unsuitable vessel prompt: apparent query mismatch",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  },
+  {
+    "condition": "N01_airplane_negative",
+    "box_index": 1,
+    "box": [
+      441.4779052734375,
+      581.3060913085938,
+      952.7521362304688,
+      924.2832641601562
+    ],
+    "score": 0.4191797375679016,
+    "returned_label": "airplane",
+    "visual_region": "bicycle, despite predicted airplane label",
+    "extent_background_cutoff_merge_assessment": "Box encloses the bicycle; no visible airplane; coordinate validation passes despite semantic mismatch.",
+    "prospective_sam_box_assessment": "unsuitable airplane prompt; do not suppress or reinterpret the raw label",
+    "assessment_author": "assistant visual inspection; subjective, not ground truth; SAM not run"
+  }
+]

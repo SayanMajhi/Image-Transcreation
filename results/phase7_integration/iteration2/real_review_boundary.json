@@ -1,0 +1,9 @@
+{
+  "source": "results/phase7_integration/iteration1/real_run",
+  "decision": "REVIEW",
+  "candidate_count": 0,
+  "prepare_rejected": true,
+  "reason": "only an original automated final PROPOSE run is eligible",
+  "pending_real_intent_created": false,
+  "live_grounding_calls": 0
+}

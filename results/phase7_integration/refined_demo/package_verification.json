@@ -1,0 +1,16 @@
+{
+  "zip": "results/final_project_review_v2.zip",
+  "bytes": 63313206,
+  "sha256": "dd5e45564426ede87cb9bce3f10921b1eef5fe380353b08942a24cd106fb881a",
+  "entries": 217,
+  "crc": "passed",
+  "member_hashes": "all matched",
+  "portable_full_tests": 407,
+  "portable_saved_pixel_and_provenance_checks": "passed",
+  "primary_document_links": "all valid",
+  "project_status": "PARTIALLY_COMPLETE",
+  "technical_generation": "PASS",
+  "cultural_appearance": "FAIL_TEXT_LIKE_ARTIFACT",
+  "actual_new_diffusion_calls": 1,
+  "quality_retries": 0
+}

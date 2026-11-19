@@ -1,0 +1,36 @@
+{
+  "recorded_at_utc": "2026-11-11T09:29:38.023091+00:00",
+  "model_config": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+    "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+    "processing_size": 512,
+    "context_margin": 64,
+    "seed": 42,
+    "steps": 20,
+    "guidance_scale": 7.5,
+    "strength": 0.9
+  },
+  "precision": "float16",
+  "offload": "model_cpu_offload",
+  "seed": 42,
+  "A": {
+    "positive": "Photorealistic Indian-style masala noodles with reddish-brown spiced seasoning, natural noodle texture, matching the original food position, perspective and warm lighting.",
+    "negative": null
+  },
+  "B_conditional": {
+    "positive": "Photorealistic cooked noodle strands coated in reddish-brown Indian masala spices and sauce, with visible individual noodles, natural food texture, matching the original camera perspective and warm light.",
+    "negative": "text, letters, words, numbers, labels, packaging, logo, watermark, printed graphics, signs",
+    "condition": "Only if A has important visual artifacts. Same improved mask/config; changes prompting condition together, not one phrase."
+  },
+  "token_counts_including_special": {
+    "A_positive": 31,
+    "B_positive": 37,
+    "B_negative": 23
+  },
+  "tokenizer_limit": 77,
+  "maximum_real_diffusion_calls": 2,
+  "no_extra_seeds_masks_models": true,
+  "quality_retries": 0,
+  "new_caption_qwen_grounding_sam_calls": 0,
+  "sam_masks_unchanged": true
+}

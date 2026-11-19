@@ -1,0 +1,18 @@
+{
+  "zip": "results/phase7_integration/iteration6_verified_run_review.zip",
+  "sha256": "74e3b5dae608ab495911f998eea27b245aa81d1c13d61ef2259b19b997869f32",
+  "bytes": 13630416,
+  "entries": 645,
+  "crc": "passed",
+  "manifest_hashes": "all matched",
+  "working_report_links": 174,
+  "broken_links": 0,
+  "previous_report_exact_prefix": true,
+  "portable_saved_run_verification": "passed; no model calls",
+  "qwen_generation_calls": 1,
+  "other_model_calls": 0,
+  "raw_decision": "PROPOSE",
+  "final_decision": "REVIEW",
+  "released_candidates": 0,
+  "recommendation": "NEEDS FIXES; actual source confirmed but model semantics invalid"
+}

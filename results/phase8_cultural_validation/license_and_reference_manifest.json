@@ -1,0 +1,34 @@
+{
+  "papers": [
+    {
+      "title": "An image speaks a thousand words, but can everyone listen? On image transcreation for cultural relevance",
+      "url": "https://aclanthology.org/2024.emnlp-main.573/",
+      "local_read_pages": 22,
+      "sha256": "57ea81bfac5d8f646cfdc9b8bc8b317c5fd4853675354164a626688417378a0c"
+    },
+    {
+      "title": "Towards Automatic Evaluation for Image Transcreation",
+      "url": "https://aclanthology.org/2025.naacl-long.359/",
+      "local_read_pages": 14,
+      "sha256": "5ac195a52dfa440b778678637c146e5116b44cad78b0e8c3709c8a585e2f588c"
+    }
+  ],
+  "source_image": {
+    "author": "Petr Kratochvil",
+    "title": "Croissant-Petr Kratochvil.jpg",
+    "license": "CC0 1.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Croissant-Petr_Kratochvil.jpg",
+    "original": "https://www.publicdomainpictures.net/en/view-image.php?image=12541&picture=croissant",
+    "modifications": "seed42/seed43 generated modifications, classical baseline, overlays and comparisons; no endorsement"
+  },
+  "source_context": "https://www.france.fr/en/article/croissants-france-favorite-snack/",
+  "target_context": "https://chhatarpur.nic.in/en/culinary-delight/samosa/",
+  "dataset_reuse": false,
+  "dataset_card_license": "MIT; per-photo provenance not assumed",
+  "new_backend_licenses": {
+    "FLUX_candidate": "flux-1-dev-non-commercial-license; not executed",
+    "SDXL_inpainting": "openrail++",
+    "SDXL_canny": "openrail++"
+  },
+  "references_only": "Target-cultural websites are factual references; no target photo reused or model-conditioned."
+}

@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-10T12:28:57.201622+00:00",
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "scripts.run_pipeline",
+    "--input",
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\results\\phase7_integration\\iteration5_ramen\\pipeline_input.json"
+  ],
+  "coordinator_invocations": 1,
+  "retry_permitted": false,
+  "frozen_sha256": "298e3e3eda0005f8d47e25ed7ea2ff0f38be67ffc4bef30872f973f25a2a8863"
+}

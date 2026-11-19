@@ -1,0 +1,5 @@
+ README.md                      | 17 +++++++++++++----
+ pyproject.toml                 |  3 +++
+ src/transcreation/config.py    | 42 ++++++++++++++++++++++++++++++++++++++++++
+ src/transcreation/contracts.py | 28 ++++++++++++++++++++++++++++
+ 4 files changed, 86 insertions(+), 4 deletions(-)

@@ -1,0 +1,22 @@
+[
+  {
+    "condition": "seed42",
+    "load_seconds": 8.666584099999454,
+    "inference_seconds": 116.55277709999791,
+    "internal_process_seconds": 127.69426029999886,
+    "wall_seconds": 134.80929520000063,
+    "peak_cuda_GiB": 0.6271457672119141,
+    "effective_steps": "23 visible in preserved execution log",
+    "observed_peak_host_RSS_GiB": null
+  },
+  {
+    "condition": "seed43",
+    "load_seconds": 8.210839399998804,
+    "inference_seconds": 115.43558819999816,
+    "internal_process_seconds": 126.0254915000005,
+    "wall_seconds": 133.57590370000253,
+    "peak_cuda_GiB": 0.6271457672119141,
+    "effective_steps": 23,
+    "observed_peak_host_RSS_GiB": 7.55517578125
+  }
+]

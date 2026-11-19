@@ -1,0 +1,11 @@
+{
+  "zip": "results/true_object_replacement_review.zip",
+  "bytes": 10934704,
+  "sha256": "f4c8ab90394def43082669badb8f968fbad61025838a9295a2a2d6689c34d683",
+  "files": 89,
+  "manifest_hashes_matched": 88,
+  "CRC": "PASS",
+  "generated_model_calls": 0,
+  "compositing_conditions": 2,
+  "human_evaluation": "PENDING"
+}

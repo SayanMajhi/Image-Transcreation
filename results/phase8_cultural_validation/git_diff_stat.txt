@@ -1,0 +1,9 @@
+ README.md                                  | 105 ++++++++---------------------
+ pyproject.toml                             |   1 +
+ scripts/inpaint.py                         |  16 ++++-
+ src/transcreation/cli.py                   |  18 +++++
+ src/transcreation/stages/inpainting.py     |  46 ++++++++++---
+ src/transcreation/stages/ollama_planner.py |  22 ++++++
+ src/transcreation/stages/planning.py       |   7 +-
+ tests/test_planning_policy.py              |  12 ++--
+ 8 files changed, 131 insertions(+), 96 deletions(-)

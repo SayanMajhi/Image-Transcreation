@@ -1,0 +1,223 @@
+{
+  "request": {
+    "source_image": "results\\phase7_integration\\v4_completed\\source.jpg",
+    "image_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+    "original_dimensions": [
+      2272,
+      1704
+    ],
+    "detection_file": "results\\phase7_integration\\v4_completed\\localization\\grounding\\detection.json",
+    "detection_sha256": "a7bd4d39ff3011c548d25f2c379617a7c8daf58ce195eff8465703e898ab4e30",
+    "prediction_index": 0,
+    "selected_detection": {
+      "box": [
+        3.6668148040771484,
+        394.75372314453125,
+        2266.13720703125,
+        1698.0286865234375
+      ],
+      "score": 0.9185943007469177,
+      "label": "spaghetti noodles"
+    },
+    "source_phrase": "spaghetti noodles",
+    "grounding_model_id": "IDEA-Research/grounding-dino-tiny",
+    "grounding_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "selection_status": "RESEARCH_ONLY",
+    "selection_note": "Explicit assistant research selection after inspecting original and annotated box. The sole prediction encloses the visible pasta mound, with plate margins also inside the rectangle. It is only a source-object box prompt; final mask must exclude plate/background. No human approval claimed.",
+    "review_file": null,
+    "review_sha256": null,
+    "image_edit_authorized": false,
+    "cultural_transformation_authorized": false,
+    "points": [],
+    "point_prompt_file": null,
+    "point_prompt_sha256": null
+  },
+  "model_id": "facebook/sam-vit-base",
+  "resolved_revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+  "status": "SEGMENTED",
+  "masks": [
+    {
+      "index": 0,
+      "filename": "mask_0.png",
+      "dimensions": [
+        2272,
+        1704
+      ],
+      "sam_score": 0.9071877002716064,
+      "foreground_pixels": 2476478,
+      "mask_box": [
+        0,
+        400,
+        2272,
+        1701
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 1,
+      "filename": "mask_1.png",
+      "dimensions": [
+        2272,
+        1704
+      ],
+      "sam_score": 0.7868049144744873,
+      "foreground_pixels": 1316995,
+      "mask_box": [
+        0,
+        422,
+        2272,
+        1700
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 2,
+      "filename": "mask_2.png",
+      "dimensions": [
+        2272,
+        1704
+      ],
+      "sam_score": 0.3649453818798065,
+      "foreground_pixels": 328765,
+      "mask_box": [
+        0,
+        401,
+        2179,
+        1688
+      ],
+      "status": "VALID"
+    }
+  ],
+  "visualization_mask_index": 0,
+  "settings": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "precision": "float32",
+    "seed": 42,
+    "multimask_output": true,
+    "mask_threshold": 0.0,
+    "effective_device": "cuda",
+    "batch_size": 1,
+    "eval": true,
+    "inference_mode": true,
+    "postprocess_device": "cpu",
+    "attention_backend": "sdpa",
+    "processor": {
+      "_processor_class": "SamProcessor",
+      "image_processor_type": "SamImageProcessor",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1024
+      },
+      "mask_size": {
+        "longest_edge": 256
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": {
+        "height": 1024,
+        "width": 1024
+      },
+      "mask_pad_size": {
+        "height": 256,
+        "width": 256
+      },
+      "do_convert_rgb": true
+    },
+    "api_shapes": {
+      "input_boxes": [
+        1,
+        1,
+        4
+      ],
+      "transformed_input_boxes": [
+        [
+          [
+            1.65264892578125,
+            177.9171709947183,
+            1021.3576144366198,
+            765.3087037852113
+          ]
+        ]
+      ],
+      "original_sizes": [
+        [
+          1704,
+          2272
+        ]
+      ],
+      "reshaped_input_sizes": [
+        [
+          768,
+          1024
+        ]
+      ],
+      "pred_masks": [
+        1,
+        1,
+        3,
+        256,
+        256
+      ],
+      "iou_scores": [
+        1,
+        1,
+        3
+      ],
+      "restored_masks": [
+        1,
+        3,
+        1704,
+        2272
+      ]
+    },
+    "binary_values": [
+      0,
+      255
+    ],
+    "mask_box_upper_bounds": "exclusive",
+    "source_image_copy": "original.jpg",
+    "source_detection_copy": "source_detection.json",
+    "visualization_selection": "highest finite SAM score among nonempty candidates; no human mask approval"
+  },
+  "timing": {
+    "load_seconds": 5.889049300003535,
+    "preprocess_seconds": 0.06535420000000158,
+    "inference_seconds": 0.8616523999990022,
+    "postprocess_and_mask_save_seconds": 0.1469877000017732,
+    "stage_seconds": 6.986283400001412,
+    "visualization_seconds": 4.02674019999904
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 374956544,
+    "effective_device": "cuda",
+    "peak_allocated_cuda_bytes": 2065262592
+  },
+  "observations": [
+    {
+      "code": "RESEARCH_SCOPE",
+      "message": "Segmentation test only; SAM scores are not measured accuracy and no image editing is authorized."
+    },
+    {
+      "code": "NO_CONFIRMED_HUMAN_APPROVAL",
+      "message": "Explicit assistant research selection after inspecting original and annotated box. The sole prediction encloses the visible pasta mound, with plate margins also inside the rectangle. It is only a source-object box prompt; final mask must exclude plate/background. No human approval claimed."
+    }
+  ],
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false
+}

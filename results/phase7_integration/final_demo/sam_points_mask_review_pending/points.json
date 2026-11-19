@@ -1,0 +1,61 @@
+{
+  "annotation_status": "RESEARCH_ONLY_REQUIRES_REVIEW",
+  "coordinate_system": "original_image_xy_pixels",
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "detection_json_sha256": "26ebbb6012d651e58d9189efd9d71eb36a136f561551cb9d4a04197541542a13",
+  "prediction_index": 0,
+  "target_definition": "Visible noodles and surrounding edible contents only; exclude ceramic bowl, entire spoon including liquid it holds, chopsticks and background. Partial coverage must be disclosed; no requirement to remove every topping.",
+  "points": [
+    {
+      "x": 562,
+      "y": 467,
+      "label": 1
+    },
+    {
+      "x": 1030,
+      "y": 258,
+      "label": 1
+    },
+    {
+      "x": 405,
+      "y": 718,
+      "label": 1
+    },
+    {
+      "x": 980,
+      "y": 462,
+      "label": 0
+    },
+    {
+      "x": 1100,
+      "y": 657,
+      "label": 0
+    },
+    {
+      "x": 290,
+      "y": 530,
+      "label": 0
+    },
+    {
+      "x": 206,
+      "y": 550,
+      "label": 0
+    },
+    {
+      "x": 1187,
+      "y": 535,
+      "label": 0
+    },
+    {
+      "x": 800,
+      "y": 1054,
+      "label": 0
+    },
+    {
+      "x": 473,
+      "y": 115,
+      "label": 0
+    }
+  ],
+  "provenance": "Assistant research annotations, not actual human approval. Initial mask 0 includes spoon; mask 1 has broad/speckled boundaries; mask 2 omits much food. One fixed correction adds explicit protected-object negatives and noodle positives. No mask pixels edited."
+}

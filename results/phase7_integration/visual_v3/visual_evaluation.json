@@ -1,0 +1,35 @@
+{
+  "assessor": "Codex assistant visual assessment, not independent expert cultural approval",
+  "views": [
+    "A/final.png",
+    "B/final.png",
+    "central_native_comparison.png",
+    "B/raw_generated_crop.png",
+    "lower_left_native_comparison.png"
+  ],
+  "criteria": {
+    "A_noodle_strands": "Central/right areas contain recognizable but flattened/waxy strands. Both conditions lose most lower-left noodle strands; continuity fails across the edited regions.",
+    "B_masala_appearance": "FAIL in both conditions: mostly pale/yellow noodles, not convincing reddish-brown spiced coating. A warm dark boundary alone is not cultural adaptation.",
+    "C_food_realism": "Food-like rather than text-like; local strand geometry/texture remains synthetic in places.",
+    "D_bowl_utensils": "Exact preservation outside the explicitly excluded noodle regions.",
+    "E_toppings_background": "Exact original RGB outside the edit; all protected-region differences zero.",
+    "F_seams": "Local color/continuity transitions remain visible in the central patch and under-spoon wedge.",
+    "G_text_unwanted_objects": "No obvious text/labels or unrelated new object in inspected A/B regions, unlike V2.",
+    "H_normal_view": "Changes are modest at full-photo scale; not clearly recognizable as a different preparation.",
+    "I_coverage": "Partial local changes across three exposed strand groups only; not a whole-dish or meaningful broad cultural transformation."
+  },
+  "A_B_difference": {
+    "different_pixels": 20469,
+    "maximum_channel_difference": 128,
+    "interpretation": "Prompts had actual numerical effect; visual similarity is not identical outputs. Neither meets the target appearance. Both positive and negative prompts changed in B; no single phrase is credited."
+  },
+  "visual_verdict_A": "FAIL_FOR_MASALA_TARGET",
+  "visual_verdict_B": "FAIL_FOR_MASALA_TARGET",
+  "technical_preservation": "PASS",
+  "actual_new_diffusion_calls": 2,
+  "further_generation_allowed": false,
+  "historical_human_decision": "MATERIAL_UNRESOLVED unchanged",
+  "failure_analysis": "Image complexity and preserved overlapping toppings severely fragment editable strands. Geometry change removed the observed text-like failure in A without a negative prompt, but neither condition produced convincing seasoning. Small disconnected 512-grid edit regions, context and model/prompt-following limitations are plausible contributors; none is individually proven.",
+  "recommendation": "For a separately authorized demonstration, use a researcher-provided or appropriately licensed photograph of plainly visible unoccluded noodles, minimal toppings and no overlapping utensils. Record exact source, license, image hash and scope before any experiment. No substitute photograph was selected or used here.",
+  "lower_left_closeup_finding": "Both A and B erase most of the clearly visible lower-left U-shaped noodle strands and replace them with an empty-looking brown broth/sauce area. This is loss of intended noodle structure, not convincing masala noodle generation."
+}

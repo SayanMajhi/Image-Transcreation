@@ -1,0 +1,13 @@
+{
+  "zip": "results/phase6_inpainting/phase6_iteration1_review.zip",
+  "sha256": "e4a27aae0f8b70028a574288ce9ed30b5c78a54aee5a737680c9377c34fd8fa3",
+  "bytes": 11985333,
+  "files": 102,
+  "CRC": "passed",
+  "manifest_hashes": "all passed; extracted package verified before final re-archive",
+  "portable_tests": 223,
+  "portable_review_links": 39,
+  "portable_input_and_review_binding": "passed",
+  "weights_or_environments_included": false,
+  "model_calls_during_packaging": 0
+}

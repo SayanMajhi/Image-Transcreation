@@ -1,0 +1,92 @@
+{
+  "status": "COMPLETED",
+  "scope": "RESEARCH_ONLY",
+  "human_approved": false,
+  "automated_edit_authorized": false,
+  "request": {
+    "source_image": "results\\phase8_cultural_validation\\case1\\source.jpg",
+    "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "specification_file": "results\\phase8_cultural_validation\\case1\\edit_specification.json",
+    "specification_sha256": "203caee32748534663e2647d60a8f5d46378d076510e52869c8693cfd49b5267",
+    "mask_file": "results\\phase8_cultural_validation\\case1\\edit_region.png",
+    "mask_sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d",
+    "protected_file": "results\\phase8_cultural_validation\\case1\\protected_regions.png",
+    "protected_sha256": "f5772bcde6baf7e18d2882ec58a16d65defaaa3869e5a12773cb3613768d8139",
+    "crop_box": [
+      3,
+      133,
+      1257,
+      827
+    ],
+    "prompt": "Photorealistic product photograph of one triangular Indian samosa, crisp golden brown fried pastry shell, folded sealed edges, subtle blistered texture, resting on a plain white surface, soft natural contact shadow, same camera viewpoint and lighting.",
+    "seed": 42,
+    "scope": "RESEARCH_ONLY",
+    "control_file": "results\\phase8_cultural_validation\\case1\\control_canny.png",
+    "control_sha256": "38b14eaad1b36bd9fc7fed2dd2f9d43f1f544f0f913bce8e174fc2773549c047"
+  },
+  "backend": "SDXL_CONTROLNET_CANNY",
+  "model_config": {
+    "backend": "SDXL_CONTROLNET_CANNY",
+    "model_id": "diffusers/stable-diffusion-xl-1.0-inpainting-0.1",
+    "revision": "115134f363124c53c7d878647567d04daf26e41e",
+    "controlnet_id": "diffusers/controlnet-canny-sdxl-1.0",
+    "controlnet_revision": "eb115a19a10d14909256db740ed109532ab1483c",
+    "precision": "float16",
+    "quantization": "none",
+    "offload": "sequential_cpu_offload",
+    "processing_size": 512,
+    "context_margin": 32,
+    "steps": 24,
+    "guidance_scale": 5.0,
+    "strength": 0.99,
+    "control_scale": 0.5,
+    "negative_prompt": "croissant, crescent pastry, laminated pastry layers, text, watermark, extra objects, duplicate food, distorted pastry",
+    "candidate_seeds": [
+      42,
+      43
+    ],
+    "max_candidates": 2,
+    "scheduler": "checkpoint default; actual scheduler recorded at load"
+  },
+  "geometry": {
+    "crop_box_xyxy": [
+      3,
+      133,
+      1257,
+      827
+    ],
+    "padding_ltrb": [
+      0,
+      280,
+      0,
+      280
+    ],
+    "padded_side": 1254,
+    "original_dimensions": [
+      1280,
+      853
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "native_binary_mask_support": true,
+  "calls_attempted": 1,
+  "load_seconds": 8.666584099999454,
+  "actual_scheduler": "EulerDiscreteScheduler",
+  "inference_seconds": 116.55277709999791,
+  "peak_cuda_allocated_bytes": 673392640,
+  "metrics": {
+    "editable_pixels": 749700,
+    "changed_inside_mask": 748804,
+    "changed_outside_mask": 0,
+    "dimensions": [
+      1280,
+      853
+    ],
+    "changed_in_protected_regions": 0
+  },
+  "output_sha256": "ad8adc92a919070f1abd22b1d8fc38d35165f0d75bbfe699f28482339c906b0f",
+  "process_seconds": 127.69426029999886
+}

@@ -1,0 +1,71 @@
+{
+  "caption": {
+    "active_model": "smolvlm",
+    "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+    "revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+    "device": "auto",
+    "precision": "float16",
+    "task": "caption",
+    "max_new_tokens": 128,
+    "num_beams": 1,
+    "seed": 42,
+    "prompt_variant": "default"
+  },
+  "planner": {
+    "model": "qwen2.5:3b",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "timeout": 180,
+    "keep_alive": 0,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 4096,
+      "num_predict": 1024
+    }
+  },
+  "grounding": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42
+  },
+  "sam": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "precision": "float32",
+    "seed": 42,
+    "multimask_output": true,
+    "mask_threshold": 0.0
+  },
+  "inpainting": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+    "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+    "processing_size": 512,
+    "context_margin": 64,
+    "seed": 42,
+    "steps": 20,
+    "guidance_scale": 7.5,
+    "strength": 0.9
+  },
+  "timestamp_utc": "2026-11-11T12:22:08.142112+00:00",
+  "source_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+  "A_positive": "Photorealistic spaghetti strands coated in reddish-brown Indian masala sauce and spices, visible individual pasta strands, natural food texture, matching the original composition, camera angle and lighting.",
+  "A_negative": null,
+  "B_positive": "Photorealistic spaghetti strands coated in reddish-brown Indian masala sauce and spices, visible individual pasta strands, natural food texture, matching the original composition, camera angle and lighting.",
+  "B_negative": "text, letters, printed labels, watermark, logo, packaging, smooth plastic, melted food, distorted pasta, disconnected noodle strands",
+  "B_condition": "Run only if A has artifacts or insufficient target appearance; same mask/crop/settings. Negative prompt condition only changes.",
+  "budget": {
+    "caption": 1,
+    "Qwen": 1,
+    "grounding": 1,
+    "SAM": "one box-prompt run; use existing manual refinement if required",
+    "diffusion_maximum_calls": 2,
+    "per_condition_max_attempts": 1
+  },
+  "verified_object_policy": "No personally inspected human source confirmation for this new photograph is claimed; automated verified_objects remains empty. Guided scope comes directly from actual V4 protocol."
+}

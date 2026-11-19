@@ -1,0 +1,36 @@
+{
+  "case": 1,
+  "attempt": "historical",
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source_path": "results\\phase9_repeatability\\case1\\source.jpg",
+  "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+  "mask_path": "results\\phase9_repeatability\\case1\\permitted.png",
+  "mask_sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d",
+  "output_path": "results\\phase9_repeatability\\case1\\final.png",
+  "output_sha256": "bb922916ccbdd776f2c3ec0300d2fbe40398026ee3e1c92b66e31f3eb894ddfb",
+  "dimensions": [
+    1280,
+    853
+  ],
+  "permitted_pixels": 749700,
+  "protected_pixels": 342140,
+  "changed_inside": 469215,
+  "changed_outside": 0,
+  "maximum_outside_channel_difference": 0,
+  "protected_differences": 0,
+  "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+  "memory": "not instrumented; CPU only, no new CUDA/model inference",
+  "reference": {
+    "author": "Kaushalspeed",
+    "title": "Samosa-and-Chatni.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Samosa-and-Chatni.jpg",
+    "revision": "https://commons.wikimedia.org/w/index.php?title=File:Samosa-and-Chatni.jpg&oldid=1132783440",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "Extract upper samosa, uniform scaling, inward alpha feather, white background reconstruction and modeled contact shadow; derivative images distributed CC BY-SA 4.0",
+    "original_published_sha1": "047dd1cbe3464f9eaf1fb53fe53af2316ce327e8"
+  },
+  "runtime_seconds": 0.38413159999618074,
+  "runtime_note": "historical measurement, not rerun"
+}

@@ -1,0 +1,11 @@
+{
+  "wall_seconds": 30.590075699999943,
+  "generation_calls": 1,
+  "retries": 0,
+  "SmolVLM_calls": 0,
+  "GroundingDINO_calls": 0,
+  "SAM_calls": 0,
+  "Diffusion_calls": 0,
+  "raw_saved_before_validation": true,
+  "validation_status": "valid"
+}

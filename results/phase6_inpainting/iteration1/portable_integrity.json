@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "Portable source/mask/SAM integrity, pending record bindings and exact outside-mask equality verified; no inference.\n",
+  "stderr": ""
+}

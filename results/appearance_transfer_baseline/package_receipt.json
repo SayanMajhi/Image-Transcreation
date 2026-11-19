@@ -1,0 +1,14 @@
+{
+  "path": "results/final_project_submission.zip",
+  "sha256": "e34beab51c323d4fe0f96cb881dd6b10f3491841c85367beeee0876428d3d802",
+  "bytes": 82989344,
+  "members": 137,
+  "crc_and_manifest": "PASS",
+  "portable_tests_passed": 420,
+  "deterministic_reproduction": "PNG SHA-256 identical",
+  "locality": "0 outside / 0 protected changes",
+  "baseline_visual": "better structure; full cultural-food target FAIL",
+  "new_model_calls": 0,
+  "previous_files_changed": [],
+  "no_commit_or_push": true
+}

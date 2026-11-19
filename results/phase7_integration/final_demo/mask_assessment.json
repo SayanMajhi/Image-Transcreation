@@ -1,0 +1,226 @@
+{
+  "status": "NO_SAFE_CANDIDATE_SELECTED",
+  "human_approved": false,
+  "assessment": "Assistant visual research inspection, not a human review decision or ground-truth segmentation. All six candidates include at least one sampled protected point. Point-guided candidate 2 has the highest SAM score but the most obvious broad ceramic leakage. No model-quality ranking inferred from score.",
+  "samples": [
+    {
+      "run": "sam_box",
+      "candidate": 0,
+      "samples": [
+        {
+          "x": 490,
+          "y": 160,
+          "assistant_visible_region": "ceramic above food",
+          "mask_value": 0
+        },
+        {
+          "x": 256,
+          "y": 279,
+          "assistant_visible_region": "wooden chopstick",
+          "mask_value": 255
+        },
+        {
+          "x": 1130,
+          "y": 539,
+          "assistant_visible_region": "ceramic beside spoon",
+          "mask_value": 0
+        },
+        {
+          "x": 1000,
+          "y": 470,
+          "assistant_visible_region": "spoon interior",
+          "mask_value": 255
+        },
+        {
+          "x": 1080,
+          "y": 594,
+          "assistant_visible_region": "spoon rim",
+          "mask_value": 255
+        }
+      ]
+    },
+    {
+      "run": "sam_box",
+      "candidate": 1,
+      "samples": [
+        {
+          "x": 490,
+          "y": 160,
+          "assistant_visible_region": "ceramic above food",
+          "mask_value": 0
+        },
+        {
+          "x": 256,
+          "y": 279,
+          "assistant_visible_region": "wooden chopstick",
+          "mask_value": 0
+        },
+        {
+          "x": 1130,
+          "y": 539,
+          "assistant_visible_region": "ceramic beside spoon",
+          "mask_value": 255
+        },
+        {
+          "x": 1000,
+          "y": 470,
+          "assistant_visible_region": "spoon interior",
+          "mask_value": 0
+        },
+        {
+          "x": 1080,
+          "y": 594,
+          "assistant_visible_region": "spoon rim",
+          "mask_value": 0
+        }
+      ]
+    },
+    {
+      "run": "sam_box",
+      "candidate": 2,
+      "samples": [
+        {
+          "x": 490,
+          "y": 160,
+          "assistant_visible_region": "ceramic above food",
+          "mask_value": 0
+        },
+        {
+          "x": 256,
+          "y": 279,
+          "assistant_visible_region": "wooden chopstick",
+          "mask_value": 0
+        },
+        {
+          "x": 1130,
+          "y": 539,
+          "assistant_visible_region": "ceramic beside spoon",
+          "mask_value": 255
+        },
+        {
+          "x": 1000,
+          "y": 470,
+          "assistant_visible_region": "spoon interior",
+          "mask_value": 0
+        },
+        {
+          "x": 1080,
+          "y": 594,
+          "assistant_visible_region": "spoon rim",
+          "mask_value": 0
+        }
+      ]
+    },
+    {
+      "run": "sam_points",
+      "candidate": 0,
+      "samples": [
+        {
+          "x": 490,
+          "y": 160,
+          "assistant_visible_region": "ceramic above food",
+          "mask_value": 255
+        },
+        {
+          "x": 256,
+          "y": 279,
+          "assistant_visible_region": "wooden chopstick",
+          "mask_value": 255
+        },
+        {
+          "x": 1130,
+          "y": 539,
+          "assistant_visible_region": "ceramic beside spoon",
+          "mask_value": 255
+        },
+        {
+          "x": 1000,
+          "y": 470,
+          "assistant_visible_region": "spoon interior",
+          "mask_value": 0
+        },
+        {
+          "x": 1080,
+          "y": 594,
+          "assistant_visible_region": "spoon rim",
+          "mask_value": 255
+        }
+      ]
+    },
+    {
+      "run": "sam_points",
+      "candidate": 1,
+      "samples": [
+        {
+          "x": 490,
+          "y": 160,
+          "assistant_visible_region": "ceramic above food",
+          "mask_value": 255
+        },
+        {
+          "x": 256,
+          "y": 279,
+          "assistant_visible_region": "wooden chopstick",
+          "mask_value": 0
+        },
+        {
+          "x": 1130,
+          "y": 539,
+          "assistant_visible_region": "ceramic beside spoon",
+          "mask_value": 255
+        },
+        {
+          "x": 1000,
+          "y": 470,
+          "assistant_visible_region": "spoon interior",
+          "mask_value": 0
+        },
+        {
+          "x": 1080,
+          "y": 594,
+          "assistant_visible_region": "spoon rim",
+          "mask_value": 0
+        }
+      ]
+    },
+    {
+      "run": "sam_points",
+      "candidate": 2,
+      "samples": [
+        {
+          "x": 490,
+          "y": 160,
+          "assistant_visible_region": "ceramic above food",
+          "mask_value": 255
+        },
+        {
+          "x": 256,
+          "y": 279,
+          "assistant_visible_region": "wooden chopstick",
+          "mask_value": 0
+        },
+        {
+          "x": 1130,
+          "y": 539,
+          "assistant_visible_region": "ceramic beside spoon",
+          "mask_value": 255
+        },
+        {
+          "x": 1000,
+          "y": 470,
+          "assistant_visible_region": "spoon interior",
+          "mask_value": 0
+        },
+        {
+          "x": 1080,
+          "y": 594,
+          "assistant_visible_region": "spoon rim",
+          "mask_value": 0
+        }
+      ]
+    }
+  ],
+  "generation_calls": 0,
+  "no_more_mask_tuning": true,
+  "needed_evidence": "A reliable source-bound food-only mask excluding the protected ceramic bowl and utensils, plus an explicit final food-content scope. Current historical MATERIAL_UNRESOLVED human review remains unchanged."
+}

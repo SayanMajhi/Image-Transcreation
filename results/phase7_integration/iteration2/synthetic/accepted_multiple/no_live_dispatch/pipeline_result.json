@@ -1,0 +1,45 @@
+{
+  "execution_mode": "GROUNDING_TEST",
+  "state": "EDIT_INTENT_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source"
+  ],
+  "stopped_at": "edit_intent_review",
+  "reason": "Synthetic approvals cannot dispatch live models; offline mock required.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "95f35d715c16ee982967221a4a970ec2424c4a40d17d23125819a90b7c5a3ad6",
+      "sha256": "95f35d715c16ee982967221a4a970ec2424c4a40d17d23125819a90b7c5a3ad6",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "path": "evidence/source/original.png"
+    },
+    "edit_intent": {
+      "id": "cb9c2b08a5c6a47019fefa906ca3aae8afe23bdb1e77ee67cdc0afd891ceff16",
+      "sha256": "cb9c2b08a5c6a47019fefa906ca3aae8afe23bdb1e77ee67cdc0afd891ceff16",
+      "path": "evidence/edit_intent/decision.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.002053099997283425
+    },
+    {
+      "stage": "edit_intent_review",
+      "action": "STOP",
+      "seconds": 0.018220099998870865,
+      "state": "EDIT_INTENT_REQUIRES_REVIEW",
+      "reason": "Synthetic approvals cannot dispatch live models; offline mock required.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

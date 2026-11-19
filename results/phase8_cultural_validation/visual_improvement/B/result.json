@@ -1,0 +1,92 @@
+{
+  "status": "COMPLETED",
+  "scope": "RESEARCH_ONLY",
+  "human_approved": false,
+  "automated_edit_authorized": false,
+  "request": {
+    "source_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\results\\phase8_cultural_validation\\visual_improvement\\source.jpg",
+    "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "specification_file": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\results\\phase8_cultural_validation\\visual_improvement\\edit_specification.json",
+    "specification_sha256": "609293e32d436fec9aa25cf6d44ec60e93f4f1e441ab8b35d2f1a44efbe79a4e",
+    "mask_file": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\results\\phase8_cultural_validation\\visual_improvement\\edit_region.png",
+    "mask_sha256": "230255929336b256e1eba1108a0120c25df94202d56cc1b74c055b57add9045f",
+    "protected_file": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\results\\phase8_cultural_validation\\visual_improvement\\protected_regions.png",
+    "protected_sha256": "5c03f9d72f06a330ac2e2c8039a6b81cdce91c2daf85638297dfc13765aada20",
+    "crop_box": [
+      23,
+      166,
+      1233,
+      813
+    ],
+    "prompt": "A single photorealistic Indian samosa, three-dimensional pyramidal triangular fried pastry, naturally folded and sealed dough edges, realistic golden-brown bubbly fried crust, subtle surface imperfections, physically plausible volume, natural contact shadow, consistent camera perspective and lighting, one pastry only, unchanged surrounding scene.",
+    "seed": 43,
+    "scope": "RESEARCH_ONLY",
+    "control_file": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\results\\phase8_cultural_validation\\visual_improvement\\control_canny.png",
+    "control_sha256": "b8b49af20d40abb794b05aab6f2678a77b9b703a05d2d7f1c6e014b494300b3b"
+  },
+  "backend": "SDXL_CONTROLNET_CANNY",
+  "model_config": {
+    "backend": "SDXL_CONTROLNET_CANNY",
+    "model_id": "diffusers/stable-diffusion-xl-1.0-inpainting-0.1",
+    "revision": "115134f363124c53c7d878647567d04daf26e41e",
+    "controlnet_id": "diffusers/controlnet-canny-sdxl-1.0",
+    "controlnet_revision": "eb115a19a10d14909256db740ed109532ab1483c",
+    "precision": "float16",
+    "quantization": "none",
+    "offload": "sequential_cpu_offload",
+    "processing_size": 512,
+    "context_margin": 32,
+    "steps": 24,
+    "guidance_scale": 5.0,
+    "strength": 0.99,
+    "control_scale": 0.8,
+    "negative_prompt": "flat illustration, 2D, paper cutout, cartoon, CGI, plastic texture, smooth artificial surface, geometric drawing, extra food, multiple pastries, chutney, lime, salad, garnish, vegetables, additional objects, packaging, text, logo, floating pastry, unnatural shadow, distorted edges",
+    "candidate_seeds": [
+      43
+    ],
+    "max_candidates": 1,
+    "scheduler": "checkpoint default; actual scheduler recorded at load"
+  },
+  "geometry": {
+    "crop_box_xyxy": [
+      23,
+      166,
+      1233,
+      813
+    ],
+    "padding_ltrb": [
+      0,
+      281,
+      0,
+      282
+    ],
+    "padded_side": 1210,
+    "original_dimensions": [
+      1280,
+      853
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "native_binary_mask_support": true,
+  "calls_attempted": 1,
+  "load_seconds": 12.555301299995335,
+  "actual_scheduler": "EulerDiscreteScheduler",
+  "inference_seconds": 169.8043730999998,
+  "effective_denoising_steps": 23,
+  "peak_cuda_allocated_bytes": 673392640,
+  "metrics": {
+    "editable_pixels": 433403,
+    "changed_inside_mask": 432183,
+    "changed_outside_mask": 0,
+    "dimensions": [
+      1280,
+      853
+    ],
+    "changed_in_protected_regions": 0
+  },
+  "output_sha256": "2217822ba9cfcef47d09872e4f25807eaebbbd4bf47f65dbea12dd333e5d7967",
+  "process_seconds": 186.28351350000594
+}

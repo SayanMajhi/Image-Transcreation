@@ -1,0 +1,96 @@
+{
+  "type": "object",
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "PROPOSE",
+        "REVIEW",
+        "ABSTAIN"
+      ]
+    },
+    "decision_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scene_summary": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Original scene only; attribute unverified caption claims."
+    },
+    "candidate_edits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "object_description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "localization_phrase": {
+            "type": "string",
+            "minLength": 1
+          },
+          "proposed_change": {
+            "type": "string",
+            "minLength": 1
+          },
+          "cultural_reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identity_uncertain": {
+            "type": "boolean"
+          },
+          "verified_object_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "object_description",
+          "localization_phrase",
+          "proposed_change",
+          "cultural_reason",
+          "identity_uncertain",
+          "verified_object_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "must_preserve": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "verification_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "decision",
+    "decision_reason",
+    "scene_summary",
+    "candidate_edits",
+    "must_preserve",
+    "uncertainties",
+    "verification_requirements"
+  ],
+  "additionalProperties": false
+}

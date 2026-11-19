@@ -1,0 +1,116 @@
+{
+  "old_system_prompt_sha256": "225239c922face796c1d335a05c50e14ed91da2e825390e1afe10d0e2f3eaf3a",
+  "iteration6_raw": {
+    "decision": "PROPOSE",
+    "decision_reason": "The user requested to transform the Japanese ramen noodles into Indian-style masala noodles while preserving the bowl, table, camera angle, lighting, and background. This adaptation is contextually justified as Indian cuisine often uses masala noodles in a similar manner to ramen.",
+    "scene_summary": "A bowl of food with chopsticks and a spoon. The caption reports a Japanese ramen bowl with chopsticks and a spoon, but the bowl contains masala noodles instead of ramen.",
+    "candidate_edits": [
+      {
+        "object_description": "A bowl of masala noodles with chopsticks and a spoon.",
+        "localization_phrase": "Indian masala noodles in a bowl",
+        "proposed_change": "A bowl of masala noodles with chopsticks and a spoon.",
+        "cultural_reason": "Indian cuisine often uses masala noodles in a similar manner to ramen, thus the adaptation is contextually justified.",
+        "identity_uncertain": false,
+        "verified_object_id": "ramen-food-1"
+      }
+    ],
+    "must_preserve": [
+      "The bowl, table, camera angle, lighting, and background should remain unchanged."
+    ],
+    "uncertainties": [
+      "The specific masala noodles used in the adaptation are not specified, but Indian cuisine commonly uses masala noodles in a similar manner to ramen."
+    ],
+    "verification_requirements": [
+      "Verify that the masala noodles are correctly prepared and presented in the bowl."
+    ]
+  },
+  "iteration6_final": {
+    "decision": "REVIEW",
+    "decision_reason": "Review required; no candidate edit is released downstream. The source-object identity does not match the user-verified description. Localization must retain the original object label: A bowl of masala noodles with chopsticks and a spoon.. The proposed replacement/modification is indistinguishable from the original object. Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+    "scene_summary": "A bowl of food with chopsticks and a spoon. The caption reports a Japanese ramen bowl with chopsticks and a spoon, but the bowl contains masala noodles instead of ramen.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "The bowl, table, camera angle, lighting, and background should remain unchanged."
+    ],
+    "uncertainties": [
+      "The specific masala noodles used in the adaptation are not specified, but Indian cuisine commonly uses masala noodles in a similar manner to ramen."
+    ],
+    "verification_requirements": [
+      "The source-object identity does not match the user-verified description.",
+      "Localization must retain the original object label: A bowl of masala noodles with chopsticks and a spoon..",
+      "The proposed replacement/modification is indistinguishable from the original object.",
+      "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "Review the original-scene summary and any paraphrased identities against the image.",
+      "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+    ]
+  },
+  "iteration6_issues": [
+    {
+      "code": "SOURCE_OBJECT_MISMATCH",
+      "message": "The source-object identity does not match the user-verified description.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "SOURCE_LOCALIZATION_MISMATCH",
+      "message": "Localization must retain the original object label: A bowl of masala noodles with chopsticks and a spoon..",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "SOURCE_REPLACEMENT_IDENTICAL",
+      "message": "The proposed replacement/modification is indistinguishable from the original object.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    },
+    {
+      "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+      "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "candidate_index": null,
+      "severity": "review"
+    }
+  ],
+  "model": {
+    "name": "qwen2.5:3b",
+    "model": "qwen2.5:3b",
+    "modified_at": "2026-11-08T14:30:01.081001+05:30",
+    "size": 1929912432,
+    "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen2",
+      "families": [
+        "qwen2"
+      ],
+      "parameter_size": "3.1B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 32768,
+      "embedding_length": 2048,
+      "runner": "ggml"
+    },
+    "capabilities": [
+      "completion",
+      "tools"
+    ]
+  },
+  "config": {
+    "model": "qwen2.5:3b",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "timeout": 180,
+    "keep_alive": 0,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 4096,
+      "num_predict": 1024
+    }
+  },
+  "iteration6_audit_sha256": "77a58cacdb0ed0367384cae8d4a276981cd36d4df0cf1778d015c9e57dd7918f"
+}

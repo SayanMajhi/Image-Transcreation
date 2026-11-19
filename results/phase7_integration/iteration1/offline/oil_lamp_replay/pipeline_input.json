@@ -1,0 +1,27 @@
+{
+  "source_image": "results\\phase5_segmentation\\experiments\\box_points\\B_oil_lamp\\original.jpg",
+  "image_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+  "target_culture": "India",
+  "output_dir": "results\\phase7_integration\\iteration1\\offline\\oil_lamp_replay",
+  "execution_mode": "RESEARCH_REPLAY",
+  "source_culture": null,
+  "user_instructions": null,
+  "verified_objects": [],
+  "replay": {
+    "source_phrase": "oil lamp",
+    "detection_file": "results\\phase5_segmentation\\experiments\\box_points\\B_oil_lamp\\source_detection.json",
+    "detection_sha256": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+    "fixed_generation_prompt": "A photorealistic traditional oil-lamp bowl made of matte, unglazed reddish-brown terracotta clay. Fine porous earthen texture, subtle handmade imperfections, a gently carved clay rim, and natural warm lighting. Preserve the original bowl geometry and perspective. The existing wick and flame base must appear naturally connected to the oil and clay bowl interior. Match the surrounding photograph's lighting and shadows.",
+    "prediction_index": 2,
+    "segmentation_file": "results\\phase5_segmentation\\experiments\\box_points\\B_oil_lamp\\segmentation.json",
+    "segmentation_sha256": "62c9213bb551f693d620e7bea939fa43e8023616390ee9439fe364cabccf6309",
+    "mask_index": 0,
+    "mask_sha256": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+    "box_review_file": null,
+    "box_review_sha256": null,
+    "mask_review_file": "results\\phase5_segmentation\\experiments\\mask_review\\case_A_oil_lamp\\pending_0.json",
+    "mask_review_sha256": "531f5c0563aa1088fceb47af73cd8e72b577507b81d872aef47e88ba5152cbcb",
+    "inpainting_file": "results\\phase6_inpainting\\iteration2\\run\\inpainting.json",
+    "inpainting_sha256": "2a232f80e0dcfbb6dbb47d063c9b10d934c542bd464a880326edfd2def24282b"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "scope": "current README and final report",
+  "links_checked": 53,
+  "broken": 0,
+  "links": [
+    {
+      "from": "README.md",
+      "target": "reports/final_project_report.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/v4_completed/original_generated_comparison.png",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase7_integration.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/v4_completed/environment.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/final_project_report.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase1_research.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase2_vlm.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase3_llm.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase4_grounding.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase5_segmentation.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase6_working.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase7_integration.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/final_project_report.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/v4_completed/ATTRIBUTION.md",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/automated/caption.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/automated/planner_audit.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/automated/validated_plan.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/automated/pipeline_result.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/source.jpg",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/ATTRIBUTION.md",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/source_and_license.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/protocol_and_preregistration.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/diffusion_frozen.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/localization/grounding",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/sam/segmentation",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/annotations.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/mask_overlay.png",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/protected_overlay.png",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/mask_checks.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/processing_overlay_preview.png",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/input_A.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/input_B.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/A_B_input_comparison.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/A_visual_assessment_before_B.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/original_generated_comparison.png",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/source.jpg",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/A/final.png",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/B/final.png",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/food_native_comparison.png",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/boundary_native_comparison.png",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/A_pixel_verification.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/B_pixel_verification.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/verify_outputs.py",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/visual_evaluation.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/tests_after.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/baseline_identity.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/preservation_after.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/environment.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/A_execution.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/B_execution.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/A/inpainting.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/B/inpainting.json",
+      "exists": true
+    },
+    {
+      "from": "reports/final_project_report.md",
+      "target": "../results/phase7_integration/v4_completed/reproduction_paths.json",
+      "exists": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "assessor": "assistant qualitative inspection, not an independent human rating",
+  "status": "VISUAL_FAIL",
+  "target_identity": "triangular samosa-like turnover; not certified culturally correct",
+  "observations": [
+    "unrequested lime, loose red spice, wooden board and herbs inside permitted rectangle",
+    "pastry surface too smooth and flat",
+    "clear rectangle/background transition after hard composite",
+    "triangular shape follows the control prototype; not proof of target cultural authenticity"
+  ],
+  "numerical_locality": "PASS, reported separately",
+  "next_action": "predeclared seed43 only, no prompt or geometry changes"
+}

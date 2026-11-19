@@ -1,0 +1,12 @@
+{
+  "conditions": 1,
+  "gaussian_radius_original_pixels": 5,
+  "alpha": "M * Pillow.ImageFilter.GaussianBlur(M * 255, radius=5) / 255",
+  "M": "original binary mask normalized to 0/1",
+  "source": "existing Iteration2 final image, never diffusion raw crop",
+  "rounding": "numpy.rint ties-to-even, clip [0,255], uint8",
+  "outside_mask": "explicit original source RGB",
+  "inference_calls": 0,
+  "input_sha256": "87af09c828464ce37692d6a8f52daa28203ca70327cb12c70ab583036bb737ae",
+  "initial_artifacts_verified": true
+}

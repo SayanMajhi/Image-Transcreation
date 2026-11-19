@@ -1,0 +1,29 @@
+{
+  "status": "BLOCKED_PENDING_V4_PROTOCOL",
+  "blocker_code": "V4_PROTOCOL_UNAVAILABLE",
+  "recorded_at_utc": "2026-11-11T11:59:42.998084+00:00",
+  "reason": "The latest user asks to follow previously supplied V4 instructions, but those instructions are absent from the available conversation and no saved V4 protocol was found in active folders or the local archive.",
+  "missing_information": [
+    "V4 transformation/source-target objective and exact scope",
+    "permitted real model calls and experiment conditions",
+    "any V4-specific model/stage requirements and stopping rules"
+  ],
+  "question_already_asked": "Actual user was asked asynchronously to paste the V4 protocol. No answer has arrived. No experimental limits or approvals were invented.",
+  "completed_readiness": [
+    "Inspected repository/Git status",
+    "Ran current full offline regression suite: 412 passing",
+    "Found, downloaded, hash-checked and visually inspected one licensed candidate",
+    "Preserved original download, preview and attribution/license evidence",
+    "Verified all snapshotted previous files and V3 ZIP unchanged"
+  ],
+  "candidate_selected_for_inspection_only": "source_candidate.jpg",
+  "candidate_license": "CC BY 2.0",
+  "candidate_image_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+  "mask_created": false,
+  "new_model_calls": 0,
+  "new_generated_image": false,
+  "project_visual_goal": "not met",
+  "continuation": "Provide the actual V4 protocol. Retain this readiness packet; do not treat its candidate as a verified or approved edit.",
+  "historical_planner_and_human_safeguards": "unchanged; no candidate promotion or new approval",
+  "no_git_commit_or_push": true
+}

@@ -1,0 +1,353 @@
+[
+  {
+    "case": 1,
+    "attempt": "historical",
+    "method": "REFERENCE_GUIDED_COMPOSITING",
+    "scope": "RESEARCH_ONLY",
+    "source_path": "results\\phase9_repeatability\\case1\\source.jpg",
+    "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "mask_path": "results\\phase9_repeatability\\case1\\permitted.png",
+    "mask_sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d",
+    "output_path": "results\\phase9_repeatability\\case1\\final.png",
+    "output_sha256": "bb922916ccbdd776f2c3ec0300d2fbe40398026ee3e1c92b66e31f3eb894ddfb",
+    "dimensions": [
+      1280,
+      853
+    ],
+    "permitted_pixels": 749700,
+    "protected_pixels": 342140,
+    "changed_inside": 469215,
+    "changed_outside": 0,
+    "maximum_outside_channel_difference": 0,
+    "protected_differences": 0,
+    "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+    "memory": "not instrumented; CPU only, no new CUDA/model inference",
+    "reference": {
+      "author": "Kaushalspeed",
+      "title": "Samosa-and-Chatni.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Samosa-and-Chatni.jpg",
+      "revision": "https://commons.wikimedia.org/w/index.php?title=File:Samosa-and-Chatni.jpg&oldid=1132783440",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "Extract upper samosa, uniform scaling, inward alpha feather, white background reconstruction and modeled contact shadow; derivative images distributed CC BY-SA 4.0",
+      "original_published_sha1": "047dd1cbe3464f9eaf1fb53fe53af2316ce327e8"
+    },
+    "runtime_seconds": 0.38413159999618074,
+    "runtime_note": "historical measurement, not rerun"
+  },
+  {
+    "case": 2,
+    "attempt": "A",
+    "method": "REFERENCE_GUIDED_COMPOSITING",
+    "scope": "RESEARCH_ONLY",
+    "source_path": "results\\phase9_repeatability\\case2\\..\\assets\\pretzel.jpg",
+    "source_sha256": "47a8f399d08e33bd86bce10f5921b63ed9a0eca511635fa3ff1674ef5f66ff4b",
+    "mask_path": "results\\phase9_repeatability\\case2\\permitted.png",
+    "mask_sha256": "f2d48140e3c39779018559ea48aaaa7580b75c3359db14222de22267dd69b476",
+    "output_path": "results\\phase9_repeatability\\case2\\A\\final.png",
+    "output_sha256": "66fab2ccad388d7c73ef87c1cb6a1a46af9c6a63fc6a98c97365da8bbd969e61",
+    "dimensions": [
+      2700,
+      1800
+    ],
+    "permitted_pixels": 2970760,
+    "protected_pixels": 1889240,
+    "changed_inside": 2499350,
+    "changed_outside": 0,
+    "maximum_outside_channel_difference": 0,
+    "protected_differences": 0,
+    "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+    "memory": "not instrumented; CPU only, no new CUDA/model inference",
+    "input_hash_checks": {
+      "source": true,
+      "reference": true,
+      "selection": true,
+      "permitted": true,
+      "protected": true
+    },
+    "reference": {
+      "path": "results\\phase8_cultural_validation\\true_object_replacement\\source.jpg",
+      "sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+      "dimensions": [
+        1280,
+        853
+      ],
+      "title": "Croissant",
+      "author": "Petr Kratochvil",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Croissant-Petr_Kratochvil.jpg"
+    },
+    "runtime_seconds": 0.8166568999949959,
+    "clean_plate_inside_equals_background": true
+  },
+  {
+    "case": 3,
+    "attempt": "A",
+    "method": "REFERENCE_GUIDED_COMPOSITING",
+    "scope": "RESEARCH_ONLY",
+    "source_path": "results\\phase9_repeatability\\case3\\..\\assets\\cookie.jpg",
+    "source_sha256": "8cb875b937dd642930fb421e5ad7a0e4e518144aa865293d7d7de35643bb1871",
+    "mask_path": "results\\phase9_repeatability\\case3\\permitted.png",
+    "mask_sha256": "d1a528522f1a40e1728f1f97bed47779b23724125a14254b94e430ca3cba54eb",
+    "output_path": "results\\phase9_repeatability\\case3\\A\\final.png",
+    "output_sha256": "d33e3bd97c649319dd867e6d97ff53e971e056d0688dc854ee1de117f8610b58",
+    "dimensions": [
+      2700,
+      1800
+    ],
+    "permitted_pixels": 2565107,
+    "protected_pixels": 2294893,
+    "changed_inside": 2357135,
+    "changed_outside": 0,
+    "maximum_outside_channel_difference": 0,
+    "protected_differences": 0,
+    "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+    "memory": "not instrumented; CPU only, no new CUDA/model inference",
+    "input_hash_checks": {
+      "source": true,
+      "reference": true,
+      "selection": true,
+      "permitted": true,
+      "protected": true
+    },
+    "reference": {
+      "path": "results\\phase9_repeatability\\assets\\onigiri.jpg",
+      "sha256": "768bc6594037651fabbd6c0a86fcda52dd229d67a1ee5d62f5b4c7199cdd0d67",
+      "dimensions": [
+        3770,
+        2828
+      ],
+      "title": "Yaki-Onigiri 001.jpg",
+      "author": "Ocdp",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Yaki-Onigiri_001.jpg"
+    },
+    "runtime_seconds": 1.1476031999991392,
+    "clean_plate_inside_equals_background": true
+  },
+  {
+    "case": 3,
+    "attempt": "B",
+    "method": "REFERENCE_GUIDED_COMPOSITING",
+    "scope": "RESEARCH_ONLY",
+    "source_path": "results\\phase9_repeatability\\case3\\..\\assets\\cookie.jpg",
+    "source_sha256": "8cb875b937dd642930fb421e5ad7a0e4e518144aa865293d7d7de35643bb1871",
+    "mask_path": "results\\phase9_repeatability\\case3\\permitted_B.png",
+    "mask_sha256": "2073ee8812c1e0b234d9e1cd4115b4176c0c6a3e4fed8ccf2d6ef25d8e7ab23f",
+    "output_path": "results\\phase9_repeatability\\case3\\B\\final.png",
+    "output_sha256": "18da8b80f7d0703f4420c5c86ed0cf6737f6c5b92a0bbdfb2cbbd7a95adf2636",
+    "dimensions": [
+      2700,
+      1800
+    ],
+    "permitted_pixels": 3510000,
+    "protected_pixels": 1350000,
+    "changed_inside": 2404354,
+    "changed_outside": 0,
+    "maximum_outside_channel_difference": 0,
+    "protected_differences": 0,
+    "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+    "memory": "not instrumented; CPU only, no new CUDA/model inference",
+    "input_hash_checks": {
+      "source": true,
+      "reference": true,
+      "selection": true,
+      "permitted": true,
+      "protected": true
+    },
+    "reference": {
+      "path": "results\\phase9_repeatability\\assets\\onigiri.jpg",
+      "sha256": "768bc6594037651fabbd6c0a86fcda52dd229d67a1ee5d62f5b4c7199cdd0d67",
+      "dimensions": [
+        3770,
+        2828
+      ],
+      "title": "Yaki-Onigiri 001.jpg",
+      "author": "Ocdp",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Yaki-Onigiri_001.jpg"
+    },
+    "runtime_seconds": 1.1904756000003545,
+    "clean_plate_inside_equals_background": true
+  },
+  {
+    "case": 4,
+    "attempt": "A",
+    "method": "REFERENCE_GUIDED_COMPOSITING",
+    "scope": "RESEARCH_ONLY",
+    "source_path": "results\\phase9_repeatability\\case4\\..\\assets\\fedora.jpg",
+    "source_sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+    "mask_path": "results\\phase9_repeatability\\case4\\permitted.png",
+    "mask_sha256": "749309db56baaa36b225180aeae5027de5057aa5c2c0872d60a73f1381705f44",
+    "output_path": "results\\phase9_repeatability\\case4\\A\\final.png",
+    "output_sha256": "f27218ae69d76423ccd3ddd55a5f9dd52e57a4c6fb7d797b598adae895de9718",
+    "dimensions": [
+      1952,
+      1732
+    ],
+    "permitted_pixels": 2537722,
+    "protected_pixels": 843142,
+    "changed_inside": 2367894,
+    "changed_outside": 0,
+    "maximum_outside_channel_difference": 0,
+    "protected_differences": 0,
+    "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+    "memory": "not instrumented; CPU only, no new CUDA/model inference",
+    "input_hash_checks": {
+      "source": true,
+      "reference": true,
+      "selection": true,
+      "permitted": true,
+      "protected": true
+    },
+    "reference": {
+      "path": "results\\phase9_repeatability\\assets\\fez.jpg",
+      "sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+      "dimensions": [
+        5760,
+        4320
+      ],
+      "title": "Fez.jpg",
+      "author": "Edouard Hue",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Fez.jpg"
+    },
+    "runtime_seconds": 1.203649499999301,
+    "clean_plate_inside_equals_background": true
+  },
+  {
+    "case": 5,
+    "attempt": "A",
+    "method": "REFERENCE_GUIDED_COMPOSITING",
+    "scope": "RESEARCH_ONLY",
+    "source_path": "results\\phase9_repeatability\\case5\\..\\assets\\fez.jpg",
+    "source_sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+    "mask_path": "results\\phase9_repeatability\\case5\\permitted.png",
+    "mask_sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448",
+    "output_path": "results\\phase9_repeatability\\case5\\A\\final.png",
+    "output_sha256": "30d75517d65af3b2cdd1eeff261ff72f79488a89ac55b485dee8bb3e04321f4d",
+    "dimensions": [
+      5760,
+      4320
+    ],
+    "permitted_pixels": 14877000,
+    "protected_pixels": 10006200,
+    "changed_inside": 11426476,
+    "changed_outside": 0,
+    "maximum_outside_channel_difference": 0,
+    "protected_differences": 0,
+    "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+    "memory": "not instrumented; CPU only, no new CUDA/model inference",
+    "input_hash_checks": {
+      "source": true,
+      "reference": true,
+      "selection": true,
+      "permitted": true,
+      "protected": true
+    },
+    "reference": {
+      "path": "results\\phase9_repeatability\\assets\\fedora.jpg",
+      "sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+      "dimensions": [
+        1952,
+        1732
+      ],
+      "title": "A fedora hat, made by Borsalino.jpg",
+      "author": "Kjetil Ree",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:A_fedora_hat,_made_by_Borsalino.jpg"
+    },
+    "runtime_seconds": 3.7247571000043536,
+    "clean_plate_inside_equals_background": true
+  },
+  {
+    "case": 5,
+    "attempt": "B",
+    "method": "REFERENCE_GUIDED_COMPOSITING",
+    "scope": "RESEARCH_ONLY",
+    "source_path": "results\\phase9_repeatability\\case5\\..\\assets\\fez.jpg",
+    "source_sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+    "mask_path": "results\\phase9_repeatability\\case5\\permitted.png",
+    "mask_sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448",
+    "output_path": "results\\phase9_repeatability\\case5\\B\\final.png",
+    "output_sha256": "468c80d873db135776ae7a551186ca432e3b8a09554905ea5dc0cf12e3895818",
+    "dimensions": [
+      5760,
+      4320
+    ],
+    "permitted_pixels": 14877000,
+    "protected_pixels": 10006200,
+    "changed_inside": 11815546,
+    "changed_outside": 0,
+    "maximum_outside_channel_difference": 0,
+    "protected_differences": 0,
+    "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+    "memory": "not instrumented; CPU only, no new CUDA/model inference",
+    "input_hash_checks": {
+      "source": true,
+      "reference": true,
+      "selection": true,
+      "permitted": true,
+      "protected": true
+    },
+    "reference": {
+      "path": "results\\phase9_repeatability\\assets\\fedora.jpg",
+      "sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+      "dimensions": [
+        1952,
+        1732
+      ],
+      "title": "A fedora hat, made by Borsalino.jpg",
+      "author": "Kjetil Ree",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:A_fedora_hat,_made_by_Borsalino.jpg"
+    },
+    "runtime_seconds": 4.498778900000616,
+    "clean_plate_inside_equals_background": true
+  },
+  {
+    "case": 6,
+    "attempt": "A",
+    "method": "REFERENCE_GUIDED_COMPOSITING",
+    "scope": "RESEARCH_ONLY",
+    "source_path": "results\\phase9_repeatability\\case6\\..\\assets\\mug.jpg",
+    "source_sha256": "b4c4efc124de1a87c2f5c569656aafd686fbb2caea9f76cc1021d625b1254831",
+    "mask_path": "results\\phase9_repeatability\\case6\\permitted.png",
+    "mask_sha256": "f6784de3f5fe9c9bcb3d04a8745009a3e761b9820e4da78bbb8ff4d32c6366d0",
+    "output_path": "results\\phase9_repeatability\\case6\\A\\final.png",
+    "output_sha256": "b123ac2fc87a0247d2cb3b4c0affa0d213cef7e1e7f2e76a49cfe81f1b085b20",
+    "dimensions": [
+      2008,
+      1754
+    ],
+    "permitted_pixels": 1518259,
+    "protected_pixels": 2003773,
+    "changed_inside": 1298848,
+    "changed_outside": 0,
+    "maximum_outside_channel_difference": 0,
+    "protected_differences": 0,
+    "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+    "memory": "not instrumented; CPU only, no new CUDA/model inference",
+    "input_hash_checks": {
+      "source": true,
+      "reference": true,
+      "selection": true,
+      "permitted": true,
+      "protected": true
+    },
+    "reference": {
+      "path": "results\\phase9_repeatability\\assets\\wabi.jpg",
+      "sha256": "31e636e6a873317803dac4327cd057b5fcf0a71a07ac39a78c0b8e1293232fbd",
+      "dimensions": [
+        600,
+        450
+      ],
+      "title": "Contemporary wabi-sabi tea bowl.jpg",
+      "author": "ottmarliebert.com / o2ma",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Contemporary_wabi-sabi_tea_bowl.jpg"
+    },
+    "runtime_seconds": 0.5671868999997969,
+    "clean_plate_inside_equals_background": true
+  }
+]

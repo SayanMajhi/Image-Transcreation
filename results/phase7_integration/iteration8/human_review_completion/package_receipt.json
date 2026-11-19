@@ -1,0 +1,11 @@
+{
+  "zip": "results/phase7_integration/iteration8_human_review.zip",
+  "sha256": "2a886b89e9a8e4236df32c4e6642bc149f525ddf6c745915c5cc42363d1335a8",
+  "bytes": 15896538,
+  "entries": 779,
+  "crc": "passed",
+  "manifest_hashes": "all matched",
+  "checked_local_links": 247,
+  "broken_links": 0,
+  "portable_verification": "passed"
+}

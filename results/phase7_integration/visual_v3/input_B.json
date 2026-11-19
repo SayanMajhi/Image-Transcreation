@@ -1,0 +1,18 @@
+{
+  "source_image": "data/ramen.jpg",
+  "image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "segmentation_file": "results/phase7_integration/final_demo/sam_box/segmentation/segmentation.json",
+  "segmentation_sha256": "7debbe003cb931999d7f13e1076f5deaf48b5e2919f2aea9f68d921c180d8e0d",
+  "mask_file": "results\\phase7_integration\\visual_v3\\research_mask.png",
+  "mask_sha256": "21f0e7c4c0fefb815b45a402fe7005345ae5f5bc75870bd81f5fd247dad84f45",
+  "candidate_index": 1,
+  "prompt": "Photorealistic cooked noodle strands coated in reddish-brown Indian masala spices and sauce, with visible individual noodles, natural food texture, matching the original camera perspective and warm light.",
+  "selection_note": "RESEARCH_ONLY: three separately traced exposed noodle fans/strands; all protected objects excluded by source-coordinate polygons. Operator annotation, not a SAM prediction, human acceptance or recovered Qwen candidate.",
+  "scope": "RESEARCH_ONLY",
+  "annotation_file": "results\\phase7_integration\\visual_v3\\annotations.json",
+  "annotation_sha256": "7daae71157567bef8c762fbfdf8042b10834d15812f38a06119fb6925d974e38",
+  "protected_mask_file": "results\\phase7_integration\\visual_v3\\protected_regions.png",
+  "protected_mask_sha256": "b7598fdf6bf6580d69f181ac6adefab1570a5e258a55e791c7f845c9d5f2e8f0",
+  "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED",
+  "negative_prompt": "text, letters, words, numbers, labels, packaging, logo, watermark, printed graphics, signs"
+}

@@ -1,0 +1,28 @@
+{
+  "caption": "A group of women are dancing together. They are all dressed in traditional Indian garb. One of the women is in the middle of the group dancing. She is wearing a colorful garb and headdress. The women are holding brown bowls in their hands. There is smoke coming out of the bowls. There are wires hanging above the women.",
+
+  "model_id": "microsoft/Florence-2-base-ft",
+  "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "image_dimensions": [
+    980,
+    692
+  ],
+  "seed": 42,
+  "task": "<MORE_DETAILED_CAPTION>",
+  "generation_settings": {
+    "max_new_tokens": 128,
+    "num_beams": 3,
+    "do_sample": false,
+    "num_return_sequences": 1,
+    "use_cache": false
+  },
+  "device": "cuda",
+  "precision": "float16",
+  "torch_version": "2.15.0+cu132",
+  "transformers_version": "4.57.6",
+  "model_loading_ms": 48127.8023999912,
+  "inference_ms": 3466.740200005006,
+  "peak_gpu_memory_bytes": 639576064,
+  "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0"
+}

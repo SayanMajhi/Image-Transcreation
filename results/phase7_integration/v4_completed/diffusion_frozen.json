@@ -1,0 +1,32 @@
+{
+  "recorded_at_utc": "2026-11-11T12:32:18.220181+00:00",
+  "model_config": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+    "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+    "processing_size": 512,
+    "context_margin": 64,
+    "seed": 42,
+    "steps": 20,
+    "guidance_scale": 7.5,
+    "strength": 0.9
+  },
+  "precision": "float16",
+  "initial_offload": "model_cpu_offload",
+  "batch_size": 1,
+  "positive_prompt": "Photorealistic spaghetti strands coated in reddish-brown Indian masala sauce and spices, visible individual pasta strands, natural food texture, matching the original composition, camera angle and lighting.",
+  "A_negative": null,
+  "B_negative_if_needed": "text, letters, printed labels, watermark, logo, packaging, smooth plastic, melted food, distorted pasta, disconnected noodle strands",
+  "token_counts_including_special": {
+    "positive": 38,
+    "B_negative": 31
+  },
+  "tokenizer_limit": 77,
+  "A_B_only_change_if_B_runs": "negative_prompt",
+  "sam_reference_index": 0,
+  "source_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+  "mask_sha256": "a025cfe02f676ac6464d62cf143feca3292e016049ff9778ca239514a91167cb",
+  "annotations_sha256": "3e88fd257214fbc00dc1f2fa22436741a2fdbcb7605c1ceed05e1d6a7e681422",
+  "protected_sha256": "75508040b65e99635504dd84e6652e790edb41d423fc19316305f91ea9537baa",
+  "max_new_diffusion_calls": 2,
+  "per_condition_max_attempts": 1
+}

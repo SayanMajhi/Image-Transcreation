@@ -1,0 +1,44 @@
+[
+  {
+    "file": "README.md",
+    "new": false,
+    "added": 41,
+    "removed": 1
+  },
+  {
+    "file": "src\\transcreation\\contracts.py",
+    "new": false,
+    "added": 33,
+    "removed": 4
+  },
+  {
+    "file": "src\\transcreation\\stages\\ollama_planner.py",
+    "new": false,
+    "added": 72,
+    "removed": 52
+  },
+  {
+    "file": "src\\transcreation\\stages\\planning.py",
+    "new": false,
+    "added": 145,
+    "removed": 53
+  },
+  {
+    "file": "tests\\test_ollama_planner.py",
+    "new": false,
+    "added": 20,
+    "removed": 2
+  },
+  {
+    "file": "tests\\test_planning.py",
+    "new": false,
+    "added": 6,
+    "removed": 4
+  },
+  {
+    "file": "tests\\test_planning_policy.py",
+    "new": true,
+    "added": 195,
+    "removed": 0
+  }
+]

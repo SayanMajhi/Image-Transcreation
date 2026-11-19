@@ -1,0 +1,11 @@
+{
+  "source_image": "data\\vlm_collection\\scene_06.jpg",
+  "image_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+  "target_culture": "India",
+  "output_dir": "results\\phase7_integration\\iteration1\\real_run",
+  "execution_mode": "AUTOMATED_PLANNING",
+  "source_culture": null,
+  "user_instructions": null,
+  "verified_objects": [],
+  "replay": null
+}

@@ -1,0 +1,6 @@
+{
+  "status": " M src/transcreation/stages/ollama_planner.py\n M src/transcreation/stages/planning.py\n M tests/test_planning_policy.py\n?? results/phase7_integration/\n?? scripts/review_edit_intent.py\n?? scripts/review_uncertainty.py\n?? scripts/run_pipeline.py\n?? src/transcreation/orchestration.py\n?? tests/test_edit_intent.py\n?? tests/test_instruction_review.py\n?? tests/test_orchestration.py\n?? tests/test_source_anchor_prompt.py\n?? tests/test_uncertainty_review.py\n",
+  "diff_stat": " src/transcreation/stages/ollama_planner.py | 22 ++++++++++++++++++++++\n src/transcreation/stages/planning.py       |  7 ++++---\n tests/test_planning_policy.py              | 12 ++++++++----\n 3 files changed, 34 insertions(+), 7 deletions(-)\n",
+  "completion_code_changes": [],
+  "note": "Existing uncommitted source changes predate this completion and were retained byte-for-byte."
+}

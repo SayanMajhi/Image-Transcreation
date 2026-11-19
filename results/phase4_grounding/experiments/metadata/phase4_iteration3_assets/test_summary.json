@@ -1,0 +1,17 @@
+{
+  "before": {
+    "tests": 95,
+    "seconds": 0.588,
+    "failures": 0,
+    "errors": 0,
+    "result": "OK"
+  },
+  "after": {
+    "tests": 126,
+    "new_review_tests": 31,
+    "returncode": 0,
+    "output": "----------------------------------------------------------------------\nRan 126 tests in 1.325s\n\nOK\n"
+  },
+  "human_confirmation_scope": "Test declarations use synthetic reviewers and temporary synthetic images. They are software tests, not real human review evidence. Four real examples remain PENDING.",
+  "model_inference_calls": 0
+}

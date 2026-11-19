@@ -1,0 +1,37 @@
+{
+  "original_path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\ramen.jpg",
+  "image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "dimensions": [
+    1408,
+    1120
+  ],
+  "decoded_format": "WEBP",
+  "filename_format_note": "The supplied filename ends in .jpg but Pillow identifies WEBP. Original bytes are not rewritten.",
+  "inspection_method": "Assistant directly inspected the actual source through view_image, separate from all model inference.",
+  "visible_features": [
+    "Pale noodle strands in liquid inside a white bowl",
+    "A halved egg-like topping with yellow/orange center",
+    "Green sliced garnish",
+    "Dark rectangular sheet-like topping",
+    "A white disk with pink spiral",
+    "Brown rounded slices and tan/brown strips",
+    "Black spoon at right, wooden chopsticks at left",
+    "Pale veined tabletop outside the bowl"
+  ],
+  "regions": {
+    "food": "Noodles/liquid/toppings in the interior of the bowl; parts are obscured by toppings and spoon.",
+    "bowl": "White curved vessel and outer rim around the food. This is distinct from the contents.",
+    "table_background": "Pale veined surface outside the vessel; no person or separate distant background is visible.",
+    "utensils": "Chopsticks along the left and spoon resting over the right bowl interior."
+  },
+  "visual_support_for_user_declaration": true,
+  "uncertainties": [
+    "Specific meat species, exact flavor, recipe and authenticity cannot be established from the photograph.",
+    "Japanese cultural origin is user-provided context, not proven by bowl shape or assistant visual inspection.",
+    "Specific topping ingredient names remain visual interpretations, not independently verified facts."
+  ],
+  "human_verification_state": "User declaration supplied; no image-bound human inspection or approval was asserted.",
+  "verified_objects_for_pipeline": [],
+  "reason_no_verified_object_id": "VerifiedObject requires information from a user who checked the image. Assistant inspection is not that check.",
+  "attribution": "User-supplied local photograph; creator, public source and redistribution license not supplied. Included only for requested mentor review."
+}

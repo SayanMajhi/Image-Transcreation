@@ -1,0 +1,11 @@
+{
+  "decision": "ABSTAIN",
+  "decision_reason": "The image contains a bowl of ramen, which is a meal from Japan. The user message requests to adapt only the meal if justified, but the image already depicts a meal from Japan. Keeping the image unchanged is justified based on the user instructions.",
+  "scene_summary": "The caption reports Two people share lunch at a table. A bowl of ramen with chopsticks sits between them.",
+  "candidate_edits": [],
+  "must_preserve": [],
+  "uncertainties": [],
+  "verification_requirements": [
+    "No image change is authorized. Verify any unconfirmed scene claims before using them in a future edit."
+  ]
+}

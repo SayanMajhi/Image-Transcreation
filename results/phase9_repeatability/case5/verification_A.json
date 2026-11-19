@@ -1,0 +1,45 @@
+{
+  "case": 5,
+  "attempt": "A",
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source_path": "results\\phase9_repeatability\\case5\\..\\assets\\fez.jpg",
+  "source_sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+  "mask_path": "results\\phase9_repeatability\\case5\\permitted.png",
+  "mask_sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448",
+  "output_path": "results\\phase9_repeatability\\case5\\A\\final.png",
+  "output_sha256": "30d75517d65af3b2cdd1eeff261ff72f79488a89ac55b485dee8bb3e04321f4d",
+  "dimensions": [
+    5760,
+    4320
+  ],
+  "permitted_pixels": 14877000,
+  "protected_pixels": 10006200,
+  "changed_inside": 11426476,
+  "changed_outside": 0,
+  "maximum_outside_channel_difference": 0,
+  "protected_differences": 0,
+  "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+  "memory": "not instrumented; CPU only, no new CUDA/model inference",
+  "input_hash_checks": {
+    "source": true,
+    "reference": true,
+    "selection": true,
+    "permitted": true,
+    "protected": true
+  },
+  "reference": {
+    "path": "results\\phase9_repeatability\\assets\\fedora.jpg",
+    "sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+    "dimensions": [
+      1952,
+      1732
+    ],
+    "title": "A fedora hat, made by Borsalino.jpg",
+    "author": "Kjetil Ree",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:A_fedora_hat,_made_by_Borsalino.jpg"
+  },
+  "runtime_seconds": 3.7247571000043536,
+  "clean_plate_inside_equals_background": true
+}

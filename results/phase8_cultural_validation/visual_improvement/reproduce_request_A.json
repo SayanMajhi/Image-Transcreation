@@ -1,0 +1,21 @@
+{
+  "source_image": "C:/Users/sayan/PycharmProjects/MiniProject/results/phase8_cultural_validation/visual_improvement/source.jpg",
+  "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+  "specification_file": "C:/Users/sayan/PycharmProjects/MiniProject/results/phase8_cultural_validation/visual_improvement/edit_specification.json",
+  "specification_sha256": "609293e32d436fec9aa25cf6d44ec60e93f4f1e441ab8b35d2f1a44efbe79a4e",
+  "mask_file": "C:/Users/sayan/PycharmProjects/MiniProject/results/phase8_cultural_validation/visual_improvement/edit_region.png",
+  "mask_sha256": "230255929336b256e1eba1108a0120c25df94202d56cc1b74c055b57add9045f",
+  "protected_file": "C:/Users/sayan/PycharmProjects/MiniProject/results/phase8_cultural_validation/visual_improvement/protected_regions.png",
+  "protected_sha256": "5c03f9d72f06a330ac2e2c8039a6b81cdce91c2daf85638297dfc13765aada20",
+  "crop_box": [
+    23,
+    166,
+    1233,
+    813
+  ],
+  "prompt": "A single photorealistic Indian samosa, three-dimensional pyramidal triangular fried pastry, naturally folded and sealed dough edges, realistic golden-brown bubbly fried crust, subtle surface imperfections, physically plausible volume, natural contact shadow, consistent camera perspective and lighting, one pastry only, unchanged surrounding scene.",
+  "seed": 43,
+  "scope": "RESEARCH_ONLY",
+  "control_file": "C:/Users/sayan/PycharmProjects/MiniProject/results/phase8_cultural_validation/visual_improvement/control_canny.png",
+  "control_sha256": "b8b49af20d40abb794b05aab6f2678a77b9b703a05d2d7f1c6e014b494300b3b"
+}

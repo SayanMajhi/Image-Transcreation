@@ -1,0 +1,22 @@
+{
+  "project_status": "PARTIALLY_COMPLETE",
+  "guided_visual_demonstration": "FAIL",
+  "technical_generation_and_preservation": "PASS",
+  "actual_new_diffusion_calls": 2,
+  "new_caption_qwen_grounding_sam_calls": 0,
+  "text_artifact": "not visible in inspected A/B outputs",
+  "target_masala_appearance": "not convincing in either condition",
+  "important_failure": "Lower-left noodle loop largely erased; local texture/seams remain artificial",
+  "mask_pixels": 20484,
+  "mask_source_image_percent": 1.2989549512987013,
+  "noodle_coverage_percentage": null,
+  "A_outside_changes": 0,
+  "B_outside_changes": 0,
+  "A_protected_changes": 0,
+  "B_protected_changes": 0,
+  "tests_passed": 412,
+  "test_failures": 0,
+  "historical_planner": "REVIEW, zero released candidates",
+  "historical_human": "MATERIAL_UNRESOLVED unchanged",
+  "further_generation": false
+}

@@ -1,0 +1,150 @@
+{
+  "measurement": "Total device used framebuffer MiB and GPU utilization, sampled approximately once per second.",
+  "samples": [
+    {
+      "seconds": 0.08734070000355132,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1291, 4096, 6",
+      "stderr": ""
+    },
+    {
+      "seconds": 1.213574500012328,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1291, 4096, 4",
+      "stderr": ""
+    },
+    {
+      "seconds": 2.3330977000005078,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1291, 4096, 4",
+      "stderr": ""
+    },
+    {
+      "seconds": 3.4748805000126595,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1168, 4096, 7",
+      "stderr": ""
+    },
+    {
+      "seconds": 4.638091200002236,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1168, 4096, 6",
+      "stderr": ""
+    },
+    {
+      "seconds": 5.783680700013065,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1168, 4096, 6",
+      "stderr": ""
+    },
+    {
+      "seconds": 6.907972100001643,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1168, 4096, 17",
+      "stderr": ""
+    },
+    {
+      "seconds": 8.008370400013519,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1168, 4096, 4",
+      "stderr": ""
+    },
+    {
+      "seconds": 9.112018700005137,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1168, 4096, 4",
+      "stderr": ""
+    },
+    {
+      "seconds": 10.207711300012306,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1236, 4096, 2",
+      "stderr": ""
+    },
+    {
+      "seconds": 11.491088500013575,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1236, 4096, 2",
+      "stderr": ""
+    },
+    {
+      "seconds": 12.59331110000494,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 2310, 4096, 0",
+      "stderr": ""
+    },
+    {
+      "seconds": 14.409114200010663,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1264, 4096, 0",
+      "stderr": ""
+    },
+    {
+      "seconds": 15.493069600008312,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1264, 4096, 0",
+      "stderr": ""
+    },
+    {
+      "seconds": 16.74814250000054,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1264, 4096, 1",
+      "stderr": ""
+    },
+    {
+      "seconds": 17.871400100004394,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1333, 4096, 11",
+      "stderr": ""
+    },
+    {
+      "seconds": 18.977591400005622,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 3169, 4096, 9",
+      "stderr": ""
+    },
+    {
+      "seconds": 20.142769800004316,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 3169, 4096, 9",
+      "stderr": ""
+    },
+    {
+      "seconds": 21.266238399999565,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 3423, 4096, 2",
+      "stderr": ""
+    },
+    {
+      "seconds": 22.382830700007617,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 3423, 4096, 95",
+      "stderr": ""
+    },
+    {
+      "seconds": 23.492674000008265,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 3423, 4096, 78",
+      "stderr": ""
+    },
+    {
+      "seconds": 24.595564900009776,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 3423, 4096, 96",
+      "stderr": ""
+    },
+    {
+      "seconds": 25.70526190000237,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1264, 4096, 96",
+      "stderr": ""
+    },
+    {
+      "seconds": 26.828183200006606,
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 1216, 4096, 8",
+      "stderr": ""
+    }
+  ],
+  "limitations": "Includes other applications, driver and desktop; not Qwen allocated memory or a continuous peak."
+}

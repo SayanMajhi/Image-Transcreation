@@ -1,0 +1,41 @@
+{
+  "status": "BLOCKED_BEFORE_MASK_DESIGN_AND_GENERATION",
+  "scope": "RESEARCH_ONLY",
+  "reason": "Native image does not resolve wick/contact material separately from the visible blue/purple flame base and reflected/bloomed light; a flame-preserving local edit boundary cannot be justified.",
+  "proposed_revised_mask": null,
+  "proposed_mask_sha256": null,
+  "mask_difference_file": null,
+  "added_pixels": 0,
+  "removed_pixels": 0,
+  "changed_mask_pixels": 0,
+  "model_generation_calls": 0,
+  "new_generated_image": null,
+  "inspection_windows_not_ground_truth": {
+    "contact_context_xyxy": [
+      720,
+      320,
+      820,
+      410
+    ],
+    "fine_grid_xyxy": [
+      738,
+      350,
+      806,
+      398
+    ]
+  },
+  "observation_classes": {
+    "clay_bowl": "Visible red/orange rim and dark outer body; most visible bowl already lies in original editable mask. Extent is not independently annotated.",
+    "interior_or_oil": "Bright reflective/bubbly-looking region; exact contents and oil identity not independently verified.",
+    "wick_or_attachment": "Dark reddish/charred-looking feature amid flame-base pixels; plausible wick, precise material/contact boundary unresolved.",
+    "flame": "Bright white/yellow body and surrounding blue/purple lower region visible. Its exact transition to wick/reflectance is unresolved.",
+    "unrelated_support": "Metallic-looking tray, grains, coins and neighboring objects visible; unchanged in prior final images outside original mask."
+  },
+  "flame_preservation_claim": "No pixels changed in this iteration; no new flame mask fabricated.",
+  "controlled_settings_if_run": "Not executed. Would retain Iteration2 model, prompt, seed, original crop/padding and all settings, hard compositing only.",
+  "recommendation": "BLOCKED for the alternative-mask comparison; recommend closing the technical inpainting milestone with the unresolved continuity limitation, subject to mentor decision.",
+  "human_approval": false,
+  "human_review_notes": "",
+  "added_pixel_coordinates": [],
+  "removed_pixel_coordinates": []
+}

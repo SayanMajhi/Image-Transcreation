@@ -1,0 +1,34 @@
+{
+  "original_path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_06.jpg",
+  "repository_relative_path": "data/vlm_collection/scene_06.jpg",
+  "image_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+  "original_dimensions": [
+    1280,
+    966
+  ],
+  "bundled_original": "original.jpg",
+  "preview_file": "source_preview.jpg",
+  "preview_dimensions": [
+    800,
+    604
+  ],
+  "preview_sha256": "8c674b3d3950dfe5fb741b88f36a6cde9d6621e73c61270dde76ac034e303176",
+  "preview_transform": "Aspect ratio preserved; derived preview only, original bytes unchanged.",
+  "assistant_visual_observation": "A bicycle in front of a graffiti-covered facade. This is not a user-verified identity, VLM caption or cultural fact.",
+  "source_culture": "Not established by the user; no inference from location/title.",
+  "target_culture": "Not confirmed; India was suggested in the task for a hypothetical Japanese-food photograph, not confirmed for this bicycle.",
+  "adaptation_objective": "Not established; no modification is assumed necessary or justified.",
+  "preservation_requirements": "Await exact user instructions; do not invent per-image constraints.",
+  "attribution": {
+    "id": "scene_06",
+    "path": "scene_06.jpg",
+    "group": "ordinary",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg/1280px-Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source_title": "File:Parked bicycle with graffitied building facade and doors in Amsterdam.jpg",
+    "search_query": "bicycle parked street",
+    "license": "CC BY-SA 4.0",
+    "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+    "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0"
+  }
+}

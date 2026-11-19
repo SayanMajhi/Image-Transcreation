@@ -1,0 +1,27 @@
+{
+  "dimensions": [
+    1280,
+    842
+  ],
+  "editable_pixels": 32088,
+  "changed_inside_mask": 32081,
+  "changed_outside_mask": 0,
+  "outside_pixels_checked": 1045672,
+  "max_outside_channel_difference": 0,
+  "iteration1_vs_iteration2_changed_inside": 31978,
+  "iteration1_vs_iteration2_changed_outside": 0,
+  "settings_identical": true,
+  "geometry_identical": true,
+  "processing_image_byte_identical": true,
+  "processing_mask_byte_identical": true,
+  "changed_request_fields": [
+    "prompt"
+  ],
+  "scheduler_metadata_note": "Compare _use_default_values as a set of names; list order is nonsemantic. Every effective scheduler value matches.",
+  "source_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+  "mask_sha256": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+  "iteration1_final_sha256": "948769e32a20fc08672664b8a0fdde709146c926d52896c095e0aee6cec5ea71",
+  "iteration2_final_sha256": "e68c79d3b3ff9efd8a81c47f590666d7b142f2aab8eb8a7ececc30ccf9558cfc",
+  "iteration2_raw_sha256": "063124e64dfd5b20221f39693c2f134c23dfe1e169b0d50ffee1f4f0d79fd08e",
+  "artifact_hashes_verified": true
+}

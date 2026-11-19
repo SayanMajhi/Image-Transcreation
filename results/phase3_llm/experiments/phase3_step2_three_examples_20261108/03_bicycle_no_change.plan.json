@@ -1,0 +1,17 @@
+{
+  "decision": "REVIEW",
+  "decision_reason": "The scene is an ordinary parked bicycle against black doors with graffiti. Given the user instructions to keep the ordinary parked-bicycle activity and the target culture of India, no changes are proposed as the scene already aligns with typical Indian urban settings. The bicycle, doors, and graffiti are all consistent with Indian urban aesthetics and graffiti culture. Resolve the planner's stated uncertainties.",
+  "scene_summary": "A black bicycle is parked against a set of black doors with graffiti, all on a brick sidewalk.",
+  "candidate_edits": [],
+  "must_preserve": [
+    "A black bicycle parked against a set of black doors with graffiti",
+    "A brick sidewalk"
+  ],
+  "uncertainties": [
+    "The graffiti colors and style may not be typical of all Indian graffiti, but the overall scene is consistent with Indian urban settings."
+  ],
+  "verification_requirements": [
+    "Verify the specific graffiti colors and style to ensure they are culturally appropriate for Indian graffiti.",
+    "Resolve the planner's stated uncertainties."
+  ]
+}

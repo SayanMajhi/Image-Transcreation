@@ -1,0 +1,30 @@
+[
+  {
+    "high": "A01_oil_lamp_030",
+    "low": "A02_oil_lamp_020",
+    "all_high_threshold_predictions_retained_exactly": true,
+    "high_count": 1,
+    "low_count": 8
+  },
+  {
+    "high": "A03_diya_030",
+    "low": "A04_diya_020",
+    "all_high_threshold_predictions_retained_exactly": true,
+    "high_count": 5,
+    "low_count": 13
+  },
+  {
+    "high": "B01_incense_burner_030",
+    "low": "B02_incense_burner_020",
+    "all_high_threshold_predictions_retained_exactly": true,
+    "high_count": 5,
+    "low_count": 8
+  },
+  {
+    "high": "B03_clay_incense_burner_030",
+    "low": "B04_clay_incense_burner_020",
+    "all_high_threshold_predictions_retained_exactly": true,
+    "high_count": 7,
+    "low_count": 8
+  }
+]

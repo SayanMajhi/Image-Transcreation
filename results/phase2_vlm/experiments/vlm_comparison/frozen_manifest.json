@@ -1,0 +1,186 @@
+{
+  "description": "11-image exploratory convenience sample (10 photographs and one market illustration), not a benchmark or verified cultural ground truth. Groups and source titles are provenance metadata, never inference inputs. Public photos may overlap model training data; generalization is not established.",
+  "images": [
+    {
+      "id": "scene_01",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\durga.jpg",
+      "group": "cultural",
+      "source_url": "User-provided local photograph; public provenance unspecified",
+      "license": "Unspecified; local research use",
+      "sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+      "image_dimensions": [
+        980,
+        692
+      ]
+    },
+    {
+      "id": "scene_02",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_02.jpg",
+      "group": "cultural",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Diwali_Oil_lamps_Darjeeling.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Diwali_Oil_lamps_Darjeeling.jpg/1280px-Diwali_Oil_lamps_Darjeeling.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Diwali Oil lamps Darjeeling.jpg",
+      "search_query": "Diwali oil lamps",
+      "license": "CC BY-SA 3.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Benoy\" title=\"User:Benoy\">Benoy</a>",
+      "sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+      "image_dimensions": [
+        1280,
+        842
+      ]
+    },
+    {
+      "id": "scene_03",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_03.jpg",
+      "group": "cultural",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_New_Year_Lion_Dance.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Chinese_New_Year_Lion_Dance.jpg/1280px-Chinese_New_Year_Lion_Dance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Chinese New Year Lion Dance.jpg",
+      "search_query": "Chinese New Year lion dance",
+      "license": "CC BY 2.0",
+      "attribution_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/20801313@N00\">Bob Jagendorf</a> from Manalapan, NJ, USA.",
+      "sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0",
+      "image_dimensions": [
+        1280,
+        1443
+      ]
+    },
+    {
+      "id": "scene_04",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_04.jpg",
+      "group": "cultural",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Japan_tea_ceremony_1165.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Japan_tea_ceremony_1165.jpg/1280px-Japan_tea_ceremony_1165.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Japan tea ceremony 1165.jpg",
+      "search_query": "Japanese tea ceremony",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Ermell\" title=\"User:Ermell\">Ermell</a>",
+      "sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+      "image_dimensions": [
+        1280,
+        960
+      ]
+    },
+    {
+      "id": "scene_05",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_05.jpg",
+      "group": "cultural",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Altardediademuertos.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Altardediademuertos.jpg/1280px-Altardediademuertos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Altardediademuertos.jpg",
+      "search_query": "Day of the Dead altar",
+      "license": "CC BY 2.0",
+      "attribution_html": "Eneas de Troya",
+      "sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99",
+      "image_dimensions": [
+        1280,
+        1912
+      ]
+    },
+    {
+      "id": "scene_06",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_06.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg/1280px-Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Parked bicycle with graffitied building facade and doors in Amsterdam.jpg",
+      "search_query": "bicycle parked street",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+      "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+      "image_dimensions": [
+        1280,
+        966
+      ]
+    },
+    {
+      "id": "scene_07",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_07.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grandmother_preparing_food_inside_traditional_kitchen_(edited).jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Grandmother_preparing_food_inside_traditional_kitchen_%28edited%29.jpg/1280px-Grandmother_preparing_food_inside_traditional_kitchen_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Grandmother preparing food inside traditional kitchen (edited).jpg",
+      "search_query": "person cooking kitchen",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<ul><li><b>Original: </b> <a href=\"//commons.wikimedia.org/wiki/User:Mithunkunwar9\" title=\"User:Mithunkunwar9\">Mithun Kunwar</a></li>\n<li><b>Derivative work: </b> <a href=\"//commons.wikimedia.org/wiki/User:Radomianin\" title=\"User:Radomianin\">Radomianin</a></li></ul>",
+      "sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+      "image_dimensions": [
+        1280,
+        914
+      ]
+    },
+    {
+      "id": "scene_08",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_08.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boys_playing_street_football_in_Egypt.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Boys_playing_street_football_in_Egypt.jpg/1280px-Boys_playing_street_football_in_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Boys playing street football in Egypt.jpg",
+      "search_query": "children playing football",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Hozyen\" title=\"User:Hozyen\">Mohamed Hozyen Ahmed </a>",
+      "sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c",
+      "image_dimensions": [
+        1280,
+        835
+      ]
+    },
+    {
+      "id": "scene_09",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_09.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:John_Frederick_Tayler_-_A_Fruit_Stall_in_a_Market_-_B1975.4.952_-_Yale_Center_for_British_Art.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/John_Frederick_Tayler_-_A_Fruit_Stall_in_a_Market_-_B1975.4.952_-_Yale_Center_for_British_Art.jpg/1280px-John_Frederick_Tayler_-_A_Fruit_Stall_in_a_Market_-_B1975.4.952_-_Yale_Center_for_British_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:John Frederick Tayler - A Fruit Stall in a Market - B1975.4.952 - Yale Center for British Art.jpg",
+      "search_query": "fruit market stall",
+      "license": "CC0",
+      "attribution_html": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:John_Frederick_Tayler\" class=\"extiw\" title=\"w:en:John Frederick Tayler\"><span title=\"English landscape watercolour painter (1802-1889)\">John Frederick Tayler</span></a></bdi>",
+      "sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a",
+      "image_dimensions": [
+        1280,
+        897
+      ]
+    },
+    {
+      "id": "scene_10",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_10.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Huntington_Dog_Beach_and_Bolsa_Chica.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Huntington_Dog_Beach_and_Bolsa_Chica.jpg/1280px-Huntington_Dog_Beach_and_Bolsa_Chica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Huntington Dog Beach and Bolsa Chica.jpg",
+      "search_query": "dog on beach",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Dicklyon\" class=\"mw-redirect\" title=\"User:Dicklyon\">Dicklyon</a>",
+      "sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643",
+      "image_dimensions": [
+        1280,
+        1696
+      ]
+    },
+    {
+      "id": "scene_11",
+      "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_11.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jesen%C3%ADk_train_station_2025.01.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Jesen%C3%ADk_train_station_2025.01.jpg/1280px-Jesen%C3%ADk_train_station_2025.01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Jeseník train station 2025.01.jpg",
+      "search_query": "train station platform",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Pudelek\" title=\"User:Pudelek\">Pudelek</a>",
+      "sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d",
+      "image_dimensions": [
+        1280,
+        852
+      ]
+    }
+  ],
+  "sanity_image": {
+    "id": "sanity",
+    "path": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\sanity_cats.png",
+    "sha256": "cf6f3c4befa148732c7453e0de5afab00f682427435fead2d88b07a9615cdac2",
+    "image_dimensions": [
+      640,
+      480
+    ]
+  }
+}

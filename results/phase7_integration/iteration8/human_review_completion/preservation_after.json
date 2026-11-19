@@ -1,0 +1,11 @@
+{
+  "previous_files_checked": 790,
+  "changed_files": [
+    "results/phase7_integration/phase7_working_report.md"
+  ],
+  "missing_files": [],
+  "report_original_prefix_preserved": true,
+  "original_pending_sha256": "7b62777122ba543c6430ce50ed22a7f02398d50b719582d2a939b43b102b6923",
+  "decision_sha256": "0d6fac07cb62c49e03392fd75846618a197f821833457483a20082a717c1ceab",
+  "all_existing_code_tests_and_evidence_unchanged": true
+}

@@ -1,0 +1,15 @@
+{
+  "zip": "results/phase7_integration/iteration5_review.zip",
+  "sha256": "3d0c2922330fe2ba2e7ecab50a4ca51eaf3ea5190add0b677f2b6108a7ea4f5d",
+  "bytes": 10338418,
+  "entries": 564,
+  "crc": "passed",
+  "manifest_hashes": "all matched",
+  "working_report_links": 100,
+  "broken_links": 0,
+  "previous_report_exact_prefix": true,
+  "status": "BLOCKED_PENDING_USER_VERIFICATION",
+  "live_conditions_run": 0,
+  "real_approvals_created": 0,
+  "portable_pending_packet": "source/hash/null-status checks passed"
+}

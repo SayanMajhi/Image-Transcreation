@@ -1,0 +1,14 @@
+{
+  "decision": "ABSTAIN",
+  "decision_reason": "No justified image edit is established; leave the source image unchanged. This does not authorize modification or certify cultural appropriateness.",
+  "scene_summary": "A bicycle is leaning against a set of black doors. The doors are framed with white trim and have graffiti on them. The bicycle is black and has a front basket. The sidewalk is made of brick and is lined with black doors.",
+  "candidate_edits": [],
+  "must_preserve": [
+    "A bicycle is leaning against a set of black doors.",
+    "The doors are framed with white trim and have graffiti on them.",
+    "The bicycle is black and has a front basket.",
+    "The sidewalk is made of brick and is lined with black doors."
+  ],
+  "uncertainties": [],
+  "verification_requirements": []
+}

@@ -1,0 +1,12 @@
+{
+  "planner_calls": 1,
+  "retry_count": 0,
+  "wall_seconds": 39.04620369999611,
+  "SmolVLM_calls": 0,
+  "GroundingDINO_calls": 0,
+  "SAM_calls": 0,
+  "Diffusion_calls": 0,
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "raw_response_archived_before_validation": true,
+  "planner_validation_status": "valid"
+}

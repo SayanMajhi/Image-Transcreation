@@ -1,0 +1,56 @@
+{
+  "initial_error": "Requests default user-agent returned403; explicit educational UA/referer used, no image substitution",
+  "items": [
+    {
+      "id": "pretzel",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Pretzel_(1).jpg",
+      "sha256": "47a8f399d08e33bd86bce10f5921b63ed9a0eca511635fa3ff1674ef5f66ff4b",
+      "size": [
+        2700,
+        1800
+      ]
+    },
+    {
+      "id": "onigiri",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Yaki-Onigiri_001.jpg",
+      "sha256": "768bc6594037651fabbd6c0a86fcda52dd229d67a1ee5d62f5b4c7199cdd0d67",
+      "size": [
+        3770,
+        2828
+      ]
+    },
+    {
+      "id": "fedora",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/A_fedora_hat,_made_by_Borsalino.jpg",
+      "sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+      "size": [
+        1952,
+        1732
+      ]
+    },
+    {
+      "id": "fez",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Fez.jpg",
+      "error": 429
+    },
+    {
+      "id": "mug",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Mug.jpg",
+      "error": 429
+    },
+    {
+      "id": "chawan",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Japanese_-_Tea_Bowl_-_Walters_49440_-_Profile.jpg",
+      "error": 429
+    },
+    {
+      "id": "wabi",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Contemporary_wabi-sabi_tea_bowl.jpg",
+      "sha256": "31e636e6a873317803dac4327cd057b5fcf0a71a07ac39a78c0b8e1293232fbd",
+      "size": [
+        600,
+        450
+      ]
+    }
+  ]
+}

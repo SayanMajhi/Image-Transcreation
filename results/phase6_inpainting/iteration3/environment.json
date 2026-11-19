@@ -1,0 +1,12 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "Pillow": "13.0.0",
+  "numpy": "2.4.6",
+  "new_dependencies": [],
+  "postprocessing_device": "CPU",
+  "actual_blend_process_model_libraries": {
+    "torch": false,
+    "transformers": false,
+    "diffusers": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "before": {
+    "tests": 95,
+    "seconds": 0.535,
+    "result": "OK",
+    "failures": 0,
+    "errors": 0
+  },
+  "after": {
+    "tests": 95,
+    "returncode": 0,
+    "output": "----------------------------------------------------------------------\nRan 95 tests in 0.435s\n\nOK\n"
+  },
+  "new_tests": 0,
+  "reason": "No application CLI, configuration behavior, contracts or detector code changed. Added only a fixed experimental runner. All previous tests, including planner quarantine and CUDA/mock/serialization cases, remain in the suite."
+}

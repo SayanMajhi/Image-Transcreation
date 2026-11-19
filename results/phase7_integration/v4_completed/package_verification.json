@@ -1,0 +1,16 @@
+{
+  "zip": "results/final_project_review_v4_completed.zip",
+  "sha256": "70746b0481c71fd03bbbad15e4c4c29cd0f9e0e566d40159053f906e0bb75380",
+  "bytes": 164799658,
+  "entries": 200,
+  "crc": "passed",
+  "manifest_members": "all matched",
+  "portable_full_tests_passed": 412,
+  "portable_provenance_pixel_and_audit_checks": "passed",
+  "primary_links": "all valid",
+  "project_status": "PARTIALLY_COMPLETE",
+  "protocol_execution": "COMPLETED",
+  "visual_target": "FAIL_A_AND_B",
+  "actual_diffusion_calls": 2,
+  "human_approvals_fabricated": 0
+}

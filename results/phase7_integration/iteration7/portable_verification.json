@@ -1,0 +1,19 @@
+{
+  "commands": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_source_anchor_prompt.py -v",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_mock_future_source_description_is_rejected_without_repair (test_source_anchor_prompt.SourceAnchorPromptTests.test_mock_future_source_description_is_rejected_without_repair) ... ok\ntest_mock_invented_verified_id_still_blocks (test_source_anchor_prompt.SourceAnchorPromptTests.test_mock_invented_verified_id_still_blocks) ... ok\ntest_mock_replacement_localization_cannot_release_candidate (test_source_anchor_prompt.SourceAnchorPromptTests.test_mock_replacement_localization_cannot_release_candidate) ... ok\ntest_mock_review_and_abstain_are_never_promoted (test_source_anchor_prompt.SourceAnchorPromptTests.test_mock_review_and_abstain_are_never_promoted) ... ok\ntest_mock_valid_source_draft_keeps_schema_and_never_authorizes_edit (test_source_anchor_prompt.SourceAnchorPromptTests.test_mock_valid_source_draft_keeps_schema_and_never_authorizes_edit) ... ok\ntest_read_only_anchor_and_attribution_rules_reach_actual_request (test_source_anchor_prompt.SourceAnchorPromptTests.test_read_only_anchor_and_attribution_rules_reach_actual_request) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.005s\n\nOK\n"
+    },
+    {
+      "command": "python -B results/phase7_integration/iteration7/verify_saved_run.py",
+      "returncode": 0,
+      "stdout": "{\n  \"only_changed_request_path\": \"messages[0].content\",\n  \"planning_input_unchanged\": true,\n  \"model_digest_and_schema_unchanged\": true,\n  \"raw_and_final_preserved\": true,\n  \"source_fields_exactly_match_verified_object\": true,\n  \"raw_decision\": \"PROPOSE\",\n  \"final_decision\": \"REVIEW\",\n  \"released_candidates\": 0,\n  \"issue_codes\": [\n    \"USER_CONSTRAINTS_UNRESOLVED\",\n    \"EDIT_UNCERTAINTY_UNRESOLVED\"\n  ],\n  \"verification_model_calls\": 0\n}\n",
+      "stderr": ""
+    }
+  ],
+  "all_passed": true,
+  "original_repository_paths_required": false,
+  "model_inference_in_verification": 0
+}

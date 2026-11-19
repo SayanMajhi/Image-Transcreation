@@ -1,0 +1,43 @@
+{
+  "planning_result": {
+    "decision": "REVIEW",
+    "decision_reason": "Review required; no candidate edit is released downstream. Verify the source-object identity of: golden-brown triangular Indian samosa. Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+    "scene_summary": "The caption reports a type of pastry, a croissant, on a white background. The user verified a croissant that is golden brown and flaky, with a slightly curved shape.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "white background",
+      "one-snack composition",
+      "camera viewpoint",
+      "lighting direction"
+    ],
+    "uncertainties": [
+      "The user instruction to replace the French croissant with an Indian samosa is a valid adaptation, but the cultural appropriateness of the samosa in the French context is not guaranteed."
+    ],
+    "verification_requirements": [
+      "Verify the source-object identity of: golden-brown triangular Indian samosa.",
+      "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "Review the original-scene summary and any paraphrased identities against the image.",
+      "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+    ]
+  },
+  "issues": [
+    {
+      "code": "UNVERIFIED_SOURCE_OBJECT",
+      "message": "Verify the source-object identity of: golden-brown triangular Indian samosa.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    },
+    {
+      "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+      "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "candidate_index": null,
+      "severity": "review"
+    }
+  ]
+}

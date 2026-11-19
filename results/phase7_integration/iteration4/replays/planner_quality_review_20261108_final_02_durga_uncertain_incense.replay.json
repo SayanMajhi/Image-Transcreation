@@ -1,0 +1,171 @@
+{
+  "record_type": "POLICY_REPLAY_ONLY",
+  "case": "planner_quality_review_20261108_final/02_durga_uncertain_incense",
+  "provenance": {
+    "source": "results/phase3_llm/experiments/planner_quality_review_20261108_final/02_durga_uncertain_incense.audit.json",
+    "sha256": "ca7432c776c0f5b3ab25b5c12807926ab2d8c1e170603bccae2699142f54d7e1",
+    "saved_final_decision": "REVIEW",
+    "scope": "HISTORICAL_SAVED_RAW_RESPONSE"
+  },
+  "input": {
+    "source_caption": "The image depicts a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood.\n\nThe background includes a building with a large, white wall and a few trees",
+    "caption_status": "TRUNCATED",
+    "target_culture": "Japan",
+    "source_culture": "India",
+    "user_instructions": "The source context is Durga Puja. The incense-object identity is uncertain. Preserve worship, the idol, people, and their relationships.",
+    "verified_objects": []
+  },
+  "untouched_raw_result": {
+    "decision": "REVIEW",
+    "decision_reason": "The caption status is TRUNCATED, which requires review to determine if a meaningful adaptation can be made without making assumptions or uncertainties.",
+    "scene_summary": "The caption reports an image depicting a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood. The background includes a building with a large, white wall and a few trees.",
+    "candidate_edits": [
+      {
+        "object_description": "null",
+        "localization_phrase": "The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood. The background includes a building with a large, white wall and a few trees.",
+        "proposed_change": "The deity's headdress and jewelry are replaced with Japanese traditional attire and accessories, while maintaining the overall composition and crowd of people.",
+        "cultural_reason": "To respect the cultural context while making a small adaptation, the headdress and jewelry are replaced with Japanese traditional attire and accessories, which are culturally appropriate for the scene.",
+        "identity_uncertain": true,
+        "verified_object_id": null
+      }
+    ],
+    "must_preserve": [
+      "The deity's position and the crowd of people, including their relationships and expressions."
+    ],
+    "uncertainties": [
+      "The identity of the objects held by the people (incense sticks) and their cultural significance in Japan.",
+      "The exact nature of the cloud of smoke and its cultural significance in Japan."
+    ],
+    "verification_requirements": [
+      "Verify the identity of the objects held by the people and their cultural significance in Japan.",
+      "Verify the nature of the cloud of smoke and its cultural significance in Japan."
+    ]
+  },
+  "before": {
+    "status": "VALIDATED",
+    "planning_result": {
+      "decision": "REVIEW",
+      "decision_reason": "Review required; no candidate edit is released downstream. object_description cannot be a placeholder localization_phrase must be a short source-object phrase (at most 16 words / 160 characters) The raw candidate batch failed validation; no candidate is released until reviewed. Verify the complete source caption and image before planning an edit. Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "scene_summary": "The caption reports an image depicting a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood. The background includes a building with a large, white wall and a few trees.",
+      "candidate_edits": [],
+      "must_preserve": [
+        "The deity's position and the crowd of people, including their relationships and expressions."
+      ],
+      "uncertainties": [
+        "The identity of the objects held by the people (incense sticks) and their cultural significance in Japan.",
+        "The exact nature of the cloud of smoke and its cultural significance in Japan."
+      ],
+      "verification_requirements": [
+        "object_description cannot be a placeholder",
+        "localization_phrase must be a short source-object phrase (at most 16 words / 160 characters)",
+        "The raw candidate batch failed validation; no candidate is released until reviewed.",
+        "Verify the complete source caption and image before planning an edit.",
+        "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "Review the original-scene summary and any paraphrased identities against the image.",
+        "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+      ]
+    },
+    "issues": [
+      {
+        "code": "PLACEHOLDER_OBJECT_FIELD",
+        "message": "object_description cannot be a placeholder",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "LOCALIZATION_NOT_OBJECT_PHRASE",
+        "message": "localization_phrase must be a short source-object phrase (at most 16 words / 160 characters)",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "BATCH_REVIEW_REQUIRED",
+        "message": "The raw candidate batch failed validation; no candidate is released until reviewed.",
+        "candidate_index": null,
+        "severity": "review"
+      },
+      {
+        "code": "CAPTION_INCOMPLETE",
+        "message": "Verify the complete source caption and image before planning an edit.",
+        "candidate_index": null,
+        "severity": "review"
+      },
+      {
+        "code": "USER_CONSTRAINTS_UNRESOLVED",
+        "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "candidate_index": null,
+        "severity": "review"
+      }
+    ],
+    "decision": "REVIEW",
+    "candidate_count": 0,
+    "human_review_requirement": "NO_RELEASED_CANDIDATES",
+    "grounding_permitted": false,
+    "sam_permitted": false,
+    "inpainting_permitted": false
+  },
+  "after": {
+    "status": "VALIDATED",
+    "planning_result": {
+      "decision": "REVIEW",
+      "decision_reason": "Review required; no candidate edit is released downstream. object_description cannot be a placeholder localization_phrase must be a short source-object phrase (at most 16 words / 160 characters) The raw candidate batch failed validation; no candidate is released until reviewed. Verify the complete source caption and image before planning an edit.",
+      "scene_summary": "The caption reports an image depicting a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood. The background includes a building with a large, white wall and a few trees.",
+      "candidate_edits": [],
+      "must_preserve": [
+        "The deity's position and the crowd of people, including their relationships and expressions."
+      ],
+      "uncertainties": [
+        "The identity of the objects held by the people (incense sticks) and their cultural significance in Japan.",
+        "The exact nature of the cloud of smoke and its cultural significance in Japan."
+      ],
+      "verification_requirements": [
+        "object_description cannot be a placeholder",
+        "localization_phrase must be a short source-object phrase (at most 16 words / 160 characters)",
+        "The raw candidate batch failed validation; no candidate is released until reviewed.",
+        "Verify the complete source caption and image before planning an edit.",
+        "Review the original-scene summary and any paraphrased identities against the image.",
+        "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+      ]
+    },
+    "issues": [
+      {
+        "code": "PLACEHOLDER_OBJECT_FIELD",
+        "message": "object_description cannot be a placeholder",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "LOCALIZATION_NOT_OBJECT_PHRASE",
+        "message": "localization_phrase must be a short source-object phrase (at most 16 words / 160 characters)",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "BATCH_REVIEW_REQUIRED",
+        "message": "The raw candidate batch failed validation; no candidate is released until reviewed.",
+        "candidate_index": null,
+        "severity": "review"
+      },
+      {
+        "code": "CAPTION_INCOMPLETE",
+        "message": "Verify the complete source caption and image before planning an edit.",
+        "candidate_index": null,
+        "severity": "review"
+      },
+      {
+        "code": "USER_CONSTRAINTS_UNRESOLVED",
+        "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "candidate_index": null,
+        "severity": "human_verification"
+      }
+    ],
+    "decision": "REVIEW",
+    "candidate_count": 0,
+    "human_review_requirement": "NO_RELEASED_CANDIDATES",
+    "grounding_permitted": false,
+    "sam_permitted": false,
+    "inpainting_permitted": false
+  },
+  "model_calls": 0,
+  "review_approval_created": false
+}

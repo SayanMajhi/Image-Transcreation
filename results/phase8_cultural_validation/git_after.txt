@@ -1,0 +1,39 @@
+ M README.md
+ M pyproject.toml
+ M scripts/inpaint.py
+ M src/transcreation/cli.py
+ M src/transcreation/stages/inpainting.py
+ M src/transcreation/stages/ollama_planner.py
+ M src/transcreation/stages/planning.py
+ M tests/test_planning_policy.py
+?? reports/cultural_transcreation_validation.md
+?? reports/final_project_report.md
+?? reports/phase7_integration.md
+?? results/appearance_transfer_baseline/
+?? results/final_project_review.zip
+?? results/final_project_review_v2.zip
+?? results/final_project_review_v3.zip
+?? results/final_project_review_v4.zip
+?? results/final_project_review_v4_completed.zip
+?? results/final_project_submission.zip
+?? results/phase7_integration/
+?? results/phase8_cultural_validation/
+?? scripts/appearance_transfer.py
+?? scripts/instruction_edit.py
+?? scripts/review_edit_intent.py
+?? scripts/review_uncertainty.py
+?? scripts/run_pipeline.py
+?? src/transcreation/guided_research.py
+?? src/transcreation/orchestration.py
+?? src/transcreation/stages/appearance_transfer.py
+?? src/transcreation/stages/instruction_editor.py
+?? src/transcreation/stages/refined_inpainting.py
+?? tests/test_appearance_transfer.py
+?? tests/test_edit_intent.py
+?? tests/test_guided_research.py
+?? tests/test_instruction_editor.py
+?? tests/test_instruction_review.py
+?? tests/test_orchestration.py
+?? tests/test_refined_inpainting.py
+?? tests/test_source_anchor_prompt.py
+?? tests/test_uncertainty_review.py

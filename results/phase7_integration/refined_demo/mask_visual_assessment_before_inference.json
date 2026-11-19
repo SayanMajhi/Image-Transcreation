@@ -1,0 +1,13 @@
+{
+  "assessor": "Codex assistant, not an independently named human reviewer",
+  "inspected_views": [
+    "mask_overlay.png",
+    "overlay_closeup.png",
+    "noodle_area_inspection.png"
+  ],
+  "finding": "The polygon covers a clearly visible noodle-only patch and its immediate sauce gaps; a visible margin remains from tan strips, dark strips, pink/white topping and green garnish. No bowl/utensil/topping pixel is visibly included.",
+  "coverage": "4,224 pixels; a small region, not all noodles or the dish.",
+  "full_region_checks": "Recorded exclusion polygons protect every pixel outside the narrow noodle window, plus explicit topping exclusions. Refined PNG exactly reconstructs from annotated polygons with zero intersection.",
+  "human_approved": false,
+  "ready_for_one_research_generation": true
+}

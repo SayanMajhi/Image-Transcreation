@@ -1,0 +1,272 @@
+[
+  {
+    "id": "R01_bicycle_replay",
+    "role": "reproducibility",
+    "input": "data/vlm_collection/scene_06.jpg",
+    "phrase": "bicycle",
+    "normalized_prompt": "bicycle.",
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "raw_returned_count": 1,
+    "valid_count": 1,
+    "invalid_count": 0,
+    "status": "DETECTED",
+    "model_reused": false,
+    "timing": {
+      "load_seconds": 12.557369699992705,
+      "preprocess_seconds": 0.12960080000630114,
+      "inference_seconds": 1.700773799995659,
+      "postprocess_seconds": 0.021281199995428324,
+      "total_seconds": 14.431973600003403
+    },
+    "memory": {
+      "load_peak_allocated_bytes": 692084224,
+      "inference_peak_allocated_bytes": 1824719360,
+      "device": "cuda"
+    },
+    "artifact_seconds": 0.37050669999734964
+  },
+  {
+    "id": "A01_oil_lamp_030",
+    "role": "matrix",
+    "input": "data/vlm_collection/scene_02.jpg",
+    "phrase": "oil lamp",
+    "normalized_prompt": "oil lamp.",
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "raw_returned_count": 1,
+    "valid_count": 1,
+    "invalid_count": 0,
+    "status": "DETECTED",
+    "model_reused": true,
+    "timing": {
+      "load_seconds": 3.2999960239976645e-06,
+      "preprocess_seconds": 0.07154250000894535,
+      "inference_seconds": 1.2007763000001432,
+      "postprocess_seconds": 0.001883600009023212,
+      "total_seconds": 1.3146568999945885
+    },
+    "memory": {
+      "load_peak_allocated_bytes": 692084224,
+      "inference_peak_allocated_bytes": 1984237056,
+      "device": "cuda"
+    },
+    "artifact_seconds": 0.3481037000019569
+  },
+  {
+    "id": "A02_oil_lamp_020",
+    "role": "matrix",
+    "input": "data/vlm_collection/scene_02.jpg",
+    "phrase": "oil lamp",
+    "normalized_prompt": "oil lamp.",
+    "box_threshold": 0.2,
+    "text_threshold": 0.25,
+    "raw_returned_count": 8,
+    "valid_count": 8,
+    "invalid_count": 0,
+    "status": "DETECTED",
+    "model_reused": true,
+    "timing": {
+      "load_seconds": 1.300009898841381e-06,
+      "preprocess_seconds": 0.09782789999735542,
+      "inference_seconds": 0.4923999000020558,
+      "postprocess_seconds": 0.005469800002174452,
+      "total_seconds": 0.5982178999984171
+    },
+    "memory": {
+      "load_peak_allocated_bytes": 692084224,
+      "inference_peak_allocated_bytes": 1984237056,
+      "device": "cuda"
+    },
+    "artifact_seconds": 0.33731770000304095
+  },
+  {
+    "id": "A03_diya_030",
+    "role": "matrix",
+    "input": "data/vlm_collection/scene_02.jpg",
+    "phrase": "diya",
+    "normalized_prompt": "diya.",
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "raw_returned_count": 5,
+    "valid_count": 5,
+    "invalid_count": 0,
+    "status": "DETECTED",
+    "model_reused": true,
+    "timing": {
+      "load_seconds": 1.5999976312741637e-06,
+      "preprocess_seconds": 0.0794432999973651,
+      "inference_seconds": 0.5063065000140341,
+      "postprocess_seconds": 0.002867899995180778,
+      "total_seconds": 0.5910225999978138
+    },
+    "memory": {
+      "load_peak_allocated_bytes": 692084224,
+      "inference_peak_allocated_bytes": 1984237056,
+      "device": "cuda"
+    },
+    "artifact_seconds": 0.3180265000119107
+  },
+  {
+    "id": "A04_diya_020",
+    "role": "matrix",
+    "input": "data/vlm_collection/scene_02.jpg",
+    "phrase": "diya",
+    "normalized_prompt": "diya.",
+    "box_threshold": 0.2,
+    "text_threshold": 0.25,
+    "raw_returned_count": 13,
+    "valid_count": 13,
+    "invalid_count": 0,
+    "status": "DETECTED",
+    "model_reused": true,
+    "timing": {
+      "load_seconds": 2.0000006770715117e-06,
+      "preprocess_seconds": 0.0926443000062136,
+      "inference_seconds": 0.5025018000014825,
+      "postprocess_seconds": 0.004017999992356636,
+      "total_seconds": 0.6010262000054354
+    },
+    "memory": {
+      "load_peak_allocated_bytes": 692084224,
+      "inference_peak_allocated_bytes": 1984237056,
+      "device": "cuda"
+    },
+    "artifact_seconds": 0.32582969999930356
+  },
+  {
+    "id": "B01_incense_burner_030",
+    "role": "matrix",
+    "input": "data/sample_images/durga.jpg",
+    "phrase": "incense burner",
+    "normalized_prompt": "incense burner.",
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "raw_returned_count": 5,
+    "valid_count": 5,
+    "invalid_count": 0,
+    "status": "DETECTED",
+    "model_reused": true,
+    "timing": {
+      "load_seconds": 1.8999999156221747e-06,
+      "preprocess_seconds": 0.06731080000463407,
+      "inference_seconds": 0.46828200000163633,
+      "postprocess_seconds": 0.011702600007993169,
+      "total_seconds": 0.5499156000005314
+    },
+    "memory": {
+      "load_peak_allocated_bytes": 692084224,
+      "inference_peak_allocated_bytes": 1901925888,
+      "device": "cuda"
+    },
+    "artifact_seconds": 0.2517772999999579
+  },
+  {
+    "id": "B02_incense_burner_020",
+    "role": "matrix",
+    "input": "data/sample_images/durga.jpg",
+    "phrase": "incense burner",
+    "normalized_prompt": "incense burner.",
+    "box_threshold": 0.2,
+    "text_threshold": 0.25,
+    "raw_returned_count": 8,
+    "valid_count": 8,
+    "invalid_count": 0,
+    "status": "DETECTED",
+    "model_reused": true,
+    "timing": {
+      "load_seconds": 1.00000761449337e-06,
+      "preprocess_seconds": 0.06618029999663122,
+      "inference_seconds": 0.4595218000031309,
+      "postprocess_seconds": 0.0035361000045668334,
+      "total_seconds": 0.5309895999962464
+    },
+    "memory": {
+      "load_peak_allocated_bytes": 692084224,
+      "inference_peak_allocated_bytes": 1901925888,
+      "device": "cuda"
+    },
+    "artifact_seconds": 0.1894909000111511
+  },
+  {
+    "id": "B03_clay_incense_burner_030",
+    "role": "matrix",
+    "input": "data/sample_images/durga.jpg",
+    "phrase": "clay incense burner",
+    "normalized_prompt": "clay incense burner.",
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "raw_returned_count": 7,
+    "valid_count": 7,
+    "invalid_count": 0,
+    "status": "DETECTED",
+    "model_reused": true,
+    "timing": {
+      "load_seconds": 1.300009898841381e-06,
+      "preprocess_seconds": 0.05975889999535866,
+      "inference_seconds": 0.46625420000054874,
+      "postprocess_seconds": 0.003408900010981597,
+      "total_seconds": 0.531494399998337
+    },
+    "memory": {
+      "load_peak_allocated_bytes": 692084224,
+      "inference_peak_allocated_bytes": 1901933056,
+      "device": "cuda"
+    },
+    "artifact_seconds": 0.18422119999013375
+  },
+  {
+    "id": "B04_clay_incense_burner_020",
+    "role": "matrix",
+    "input": "data/sample_images/durga.jpg",
+    "phrase": "clay incense burner",
+    "normalized_prompt": "clay incense burner.",
+    "box_threshold": 0.2,
+    "text_threshold": 0.25,
+    "raw_returned_count": 8,
+    "valid_count": 8,
+    "invalid_count": 0,
+    "status": "DETECTED",
+    "model_reused": true,
+    "timing": {
+      "load_seconds": 6.00004568696022e-07,
+      "preprocess_seconds": 0.059892999997828156,
+      "inference_seconds": 0.4568234000034863,
+      "postprocess_seconds": 0.0036411999899428338,
+      "total_seconds": 0.5220865000010235
+    },
+    "memory": {
+      "load_peak_allocated_bytes": 692084224,
+      "inference_peak_allocated_bytes": 1901933056,
+      "device": "cuda"
+    },
+    "artifact_seconds": 0.27214939999976195
+  },
+  {
+    "id": "N01_airplane_negative",
+    "role": "negative_control",
+    "input": "data/vlm_collection/scene_06.jpg",
+    "phrase": "airplane",
+    "normalized_prompt": "airplane.",
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "raw_returned_count": 1,
+    "valid_count": 1,
+    "invalid_count": 0,
+    "status": "DETECTED",
+    "model_reused": true,
+    "timing": {
+      "load_seconds": 6.999907782301307e-07,
+      "preprocess_seconds": 0.06560370000079274,
+      "inference_seconds": 0.4293708000041079,
+      "postprocess_seconds": 0.0018146000074921176,
+      "total_seconds": 0.49894670001231134
+    },
+    "memory": {
+      "load_peak_allocated_bytes": 692084224,
+      "inference_peak_allocated_bytes": 1825048576,
+      "device": "cuda"
+    },
+    "artifact_seconds": 0.3285743000014918
+  }
+]

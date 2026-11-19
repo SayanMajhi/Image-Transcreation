@@ -1,0 +1,9 @@
+{
+  "command": "python -B -m unittest discover -s tests -v",
+  "tests_run": 370,
+  "failures": 0,
+  "errors": 0,
+  "unittest_seconds": 39.941,
+  "status": "OK",
+  "note": "Actual baseline run in this session before source changes; summary retained from terminal output."
+}

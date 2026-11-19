@@ -1,0 +1,122 @@
+[
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/segmentation.json",
+    "sha256": "62c9213bb551f693d620e7bea939fa43e8023616390ee9439fe364cabccf6309",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/original.jpg",
+    "sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/source_detection.json",
+    "sha256": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/points.json",
+    "sha256": "49c3e6f58bdc84f3ec620fdc52718f1224ff911ccebf761f416a1b5eaef3c8f4",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/points.png",
+    "sha256": "32fe4e56f7da36ee680590ddbea49980942ca1484bd4b58a1b6758b57d8288f0",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/box.png",
+    "sha256": "0b6fbca61008d56564382b103daed55c9cbc422948282c70b380b985f41a367e",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/mask_0.png",
+    "sha256": "c10336f253c03f2faaf745829b3e79994e5d9acb82773d6cb9583145cf5cbf46",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/mask_1.png",
+    "sha256": "8ad8562a58ab16fe72841a5b1ed403d9bf527a1116cefb664ae072f43fbe6300",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/mask_2.png",
+    "sha256": "4d5592685dce2de2942b24aad9063260c1a95a43242e9919838482bd3d890004",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/overlay_0.png",
+    "sha256": "7d424d37c87f46d011508bc30260af0da5c09b6a253ae9f46c76077c91106b26",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/overlay_1.png",
+    "sha256": "82e86540d74a1b5d030958fabeebf4458f52f18df5de35f921ba1ecf2099ce95",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/B_oil_lamp/overlay_2.png",
+    "sha256": "0af2b5316691a820003b872fb5b284dae35d3abdae6c1f222a354a86c2277f0f",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/segmentation.json",
+    "sha256": "8666d452f8cb1aad1a816645f7e2826a199dcfae0e43d9881004aa6c9f38cb74",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/original.jpg",
+    "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/source_detection.json",
+    "sha256": "424abf5cdd98ad02be3e9ae9e68e40cc9186ba6167874bf5488dbadec94d6992",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/points.json",
+    "sha256": "8dcf2a168ce68b8958a00fabc12ba1fb9ddb894e1911bcabecd3e16567d68ea4",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/points.png",
+    "sha256": "9128a9696a68c011ac06e57937a666cc98027855a819aa28ddc360dd7b6471dc",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/box.png",
+    "sha256": "ed8682496235015eca7afe9855a34b572bd2b94c05db463f984c428dc3879c77",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/mask_0.png",
+    "sha256": "4ae88b552350db969ff9513bee7dc073a9043e7ba58e7f4fb82f1086ebf0bbf3",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/mask_1.png",
+    "sha256": "ae372e1fb61d1bd5194e64c38d3524a9bb0092f15f984ba0171241efa618cd1f",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/mask_2.png",
+    "sha256": "ccc0d62a044e626f28c309283c64e51f46326916f30a924802669f04641a039a",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/overlay_0.png",
+    "sha256": "7a4f8bdecd3f2dc2c7ff2bc31e8a44f38af85f1b1c24a7c2d202698126c5fec2",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/overlay_1.png",
+    "sha256": "d540f07bee50c065d983f7fa05fe35e51160dd4aad417395ec9c6abf51aada2b",
+    "matches_previous_review_zip": true
+  },
+  {
+    "source": "reports/phase5_iteration2_assets/A_bicycle/overlay_2.png",
+    "sha256": "60de1933bd8647a97e9d063ca3469771b03635ec2432202067c59e9ae4ce4c6c",
+    "matches_previous_review_zip": true
+  }
+]

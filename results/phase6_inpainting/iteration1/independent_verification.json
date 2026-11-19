@@ -1,0 +1,16 @@
+{
+  "decoded_original_dimensions": [
+    1280,
+    842
+  ],
+  "editable_pixels": 32088,
+  "changed_inside_mask": 32080,
+  "changed_outside_mask": 0,
+  "outside_pixels_checked": 1045672,
+  "max_outside_channel_difference": 0,
+  "mask_sha256_matches": true,
+  "source_sha256_matches": true,
+  "artifact_hashes_match": true,
+  "single_condition": true,
+  "offload": "model_cpu_offload"
+}

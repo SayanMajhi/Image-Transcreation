@@ -1,0 +1,63 @@
+{
+  "execution_mode": "GROUNDING_TEST",
+  "state": "FAILED",
+  "completed_stages": [
+    "source"
+  ],
+  "stopped_at": "edit_intent_review",
+  "reason": "changed planning evidence: validated_plan.json",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "a3daa559c8d1a26e025f3d25e5ed622a793d33f1ba85fc06bc9c1a1c8b79bbd6",
+      "sha256": "a3daa559c8d1a26e025f3d25e5ed622a793d33f1ba85fc06bc9c1a1c8b79bbd6",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "path": "evidence/source/original.png"
+    },
+    "edit_intent": {
+      "id": "d80b369080c8dae291837c4995f86d75908d086601261dd07176a1102135accc",
+      "sha256": "d80b369080c8dae291837c4995f86d75908d086601261dd07176a1102135accc",
+      "path": "evidence/edit_intent/decision.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.0017681000026641414
+    },
+    {
+      "stage": "edit_intent_review",
+      "action": "FAILED",
+      "seconds": 0.010621700006595347,
+      "error": {
+        "stage": "edit_intent_review",
+        "type": "ValueError",
+        "code": "ValueError",
+        "message": "changed planning evidence: validated_plan.json"
+      }
+    },
+    {
+      "stage": "edit_intent_review",
+      "action": "STOP",
+      "seconds": 0.010628100004396401,
+      "state": "FAILED",
+      "reason": "changed planning evidence: validated_plan.json",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [],
+  "errors": [
+    {
+      "stage": "edit_intent_review",
+      "type": "ValueError",
+      "code": "ValueError",
+      "message": "changed planning evidence: validated_plan.json"
+    }
+  ],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

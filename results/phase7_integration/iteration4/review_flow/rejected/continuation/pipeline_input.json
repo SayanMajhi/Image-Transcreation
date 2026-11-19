@@ -1,0 +1,20 @@
+{
+  "source_image": "C:\\Users\\sayan\\AppData\\Local\\Temp\\tmp0y9nifzp\\source\\original.png",
+  "image_sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+  "target_culture": "test target",
+  "output_dir": "C:\\Users\\sayan\\AppData\\Local\\Temp\\tmp0y9nifzp\\continuation",
+  "execution_mode": "GROUNDING_TEST",
+  "source_culture": null,
+  "user_instructions": "Keep the background unchanged.\nPreserve the camera angle; do not infer cultural suitability.",
+  "verified_objects": [
+    {
+      "object_id": "object-1",
+      "description": "synthetic object"
+    }
+  ],
+  "replay": null,
+  "edit_intent": {
+    "review_file": "C:\\Users\\sayan\\AppData\\Local\\Temp\\tmp0y9nifzp\\intent\\decision.json",
+    "review_sha256": "304554cb778fb060544f92bdc22dfb30a866ef06ea1aed77a4f72002b167c1f4"
+  }
+}

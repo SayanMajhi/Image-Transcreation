@@ -1,0 +1,45 @@
+{
+  "execution_mode": "GROUNDING_TEST",
+  "state": "EDIT_INTENT_REJECTED",
+  "completed_stages": [
+    "source"
+  ],
+  "stopped_at": "edit_intent_review",
+  "reason": "Reviewer rejected this edit intent; localization blocked.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "9345ac1200b68295e14550fd23e65b3626a2a41631e71870eff0869fe9526b15",
+      "sha256": "9345ac1200b68295e14550fd23e65b3626a2a41631e71870eff0869fe9526b15",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "path": "evidence/source/original.png"
+    },
+    "edit_intent": {
+      "id": "39520b876a5b1aae91c67bf268ed74a361229e910c6260670e351343868985ee",
+      "sha256": "39520b876a5b1aae91c67bf268ed74a361229e910c6260670e351343868985ee",
+      "path": "evidence/edit_intent/decision.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.0016322000010404736
+    },
+    {
+      "stage": "edit_intent_review",
+      "action": "STOP",
+      "seconds": 0.017531099998450372,
+      "state": "EDIT_INTENT_REJECTED",
+      "reason": "Reviewer rejected this edit intent; localization blocked.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

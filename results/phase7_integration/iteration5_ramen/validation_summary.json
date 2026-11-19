@@ -1,0 +1,63 @@
+{
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "raw_decision": "PROPOSE",
+  "final_decision": "REVIEW",
+  "raw_candidate_count": 1,
+  "released_candidate_count": 0,
+  "quarantined_candidates": [
+    {
+      "candidate_index": 0,
+      "raw_proposal": {
+        "object_description": "Japanese ramen noodles",
+        "localization_phrase": "Indian-style masala noodles",
+        "proposed_change": "Indian-style masala noodles",
+        "cultural_reason": "Indian masala noodles are a common dish in Indian cuisine and can be served in a similar manner to Japanese ramen.",
+        "identity_uncertain": false,
+        "verified_object_id": null
+      },
+      "issue_codes": [
+        "UNVERIFIED_SOURCE_OBJECT",
+        "SOURCE_LOCALIZATION_MISMATCH",
+        "USER_CONSTRAINTS_UNRESOLVED"
+      ]
+    }
+  ],
+  "issue_codes": [
+    "UNVERIFIED_SOURCE_OBJECT",
+    "SOURCE_LOCALIZATION_MISMATCH",
+    "USER_CONSTRAINTS_UNRESOLVED"
+  ],
+  "issues": [
+    {
+      "code": "UNVERIFIED_SOURCE_OBJECT",
+      "message": "Verify the source-object identity of: Japanese ramen noodles.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "SOURCE_LOCALIZATION_MISMATCH",
+      "message": "Localization must retain the original object label: Japanese ramen noodles.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    }
+  ],
+  "edit_intent_eligible": false,
+  "edit_intent_created": false,
+  "source_object_verification": "User-declared identity plus assistant photographic support; image-bound human check was not asserted.",
+  "verified_objects": [],
+  "user_constraints_require_human_verification": true,
+  "pipeline_state": "PLAN_REQUIRES_REVIEW",
+  "downstream_inference": {
+    "GroundingDINO": 0,
+    "SAM": 0,
+    "Diffusion": 0
+  },
+  "image_generation_permitted": false,
+  "native_run_revalidated_without_models": true
+}

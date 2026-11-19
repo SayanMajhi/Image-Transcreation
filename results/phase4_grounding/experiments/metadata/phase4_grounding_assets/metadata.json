@@ -1,0 +1,29 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.15.0+cu132",
+    "transformers": "4.57.6",
+    "Pillow": "13.0.0",
+    "PyYAML": "6.0.3",
+    "huggingface-hub": "0.36.2"
+  },
+  "cuda_runtime": "13.2",
+  "gpu_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "gpu_total_bytes": 4294443008,
+  "nvidia_smi_before_first_run": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 1735 MiB used",
+  "ollama_before_first_run": {
+    "models": []
+  },
+  "processor_signature": "(self, outputs: 'GroundingDinoObjectDetectionOutput', input_ids: Optional[transformers.utils.generic.TensorType] = None, threshold: float = 0.25, text_threshold: float = 0.25, target_sizes: Union[transformers.utils.generic.TensorType, list[tuple], NoneType] = None, text_labels: Optional[list[list[str]]] = None)",
+  "processor_api_source": "installed transformers 4.57.6 source inspected before implementation",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "notes": [
+    "GPU name differs from user-stated 3050 Ti; recorded actual device",
+    "separate CLI processes; no SmolVLM or Qwen loaded by experiments",
+    "no fallback needed in these three real runs",
+    "Windows custom kernels disabled; native Torch implementation; no new dependencies",
+    "weights were cached before timed runs; total_seconds excludes Python startup and artifact rendering"
+  ]
+}

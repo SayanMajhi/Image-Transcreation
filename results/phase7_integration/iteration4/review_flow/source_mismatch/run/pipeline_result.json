@@ -1,0 +1,95 @@
+{
+  "execution_mode": "AUTOMATED_PLANNING",
+  "state": "PLAN_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source",
+    "caption",
+    "planning",
+    "deterministic_validation"
+  ],
+  "stopped_at": "planning_review",
+  "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "77fc3ada2c5e038acad03f92c17983a5ee753a90679ded782329de3476dc1dc5",
+      "sha256": "77fc3ada2c5e038acad03f92c17983a5ee753a90679ded782329de3476dc1dc5",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "path": "evidence/source/original.png"
+    },
+    "caption.json": {
+      "id": "1e859e876e188b7b2131c23e08a75015d36d526110b6e620107de08ace1e1dd5",
+      "sha256": "1e859e876e188b7b2131c23e08a75015d36d526110b6e620107de08ace1e1dd5",
+      "path": "caption.json"
+    },
+    "planning_input.json": {
+      "id": "4f570c8d36f6dfb9edfa1373a4ca0f34e2a1a05674b0445735b10779bd83f21d",
+      "sha256": "4f570c8d36f6dfb9edfa1373a4ca0f34e2a1a05674b0445735b10779bd83f21d",
+      "path": "planning_input.json"
+    },
+    "planner_audit.json": {
+      "id": "733491b620cfd447886a1d06c8a89ab7d4f0982a7ea95b99a4a0c2875d945efb",
+      "sha256": "733491b620cfd447886a1d06c8a89ab7d4f0982a7ea95b99a4a0c2875d945efb",
+      "path": "planner_audit.json"
+    },
+    "validated_plan.json": {
+      "id": "743723483602516dbe4aa21b6afa06c2ef206d7a0bc33ce5c6b7e7e2f495e928",
+      "sha256": "743723483602516dbe4aa21b6afa06c2ef206d7a0bc33ce5c6b7e7e2f495e928",
+      "path": "validated_plan.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.0015485000039916486
+    },
+    {
+      "stage": "resource_preflight",
+      "action": "QWEN_NOT_RESIDENT",
+      "seconds": 0.0024018000040086918
+    },
+    {
+      "stage": "caption",
+      "action": "CAPTION_COMPLETED",
+      "seconds": 0.0037841000012122095
+    },
+    {
+      "stage": "caption",
+      "action": "MODEL_REFERENCES_RELEASED",
+      "seconds": 0.05331160000059754,
+      "cuda_allocated_bytes_after": 0
+    },
+    {
+      "stage": "planning",
+      "action": "VALIDATED",
+      "seconds": 0.056457500002579764,
+      "decision": "REVIEW"
+    },
+    {
+      "stage": "planning",
+      "action": "QWEN_UNLOAD_CONFIRMED",
+      "seconds": 0.056493600000976585
+    },
+    {
+      "stage": "planning_review",
+      "action": "STOP",
+      "seconds": 0.056498400001146365,
+      "state": "PLAN_REQUIRES_REVIEW",
+      "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [
+    "The source-object identity does not match the user-verified description.",
+    "Localization must retain the original object label: different object.",
+    "Review the original-scene summary and any paraphrased identities against the image.",
+    "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+  ],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

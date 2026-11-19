@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-11-11T18:16:31.254206+00:00",
+  "inspector": "assistant research inspection, not human mask approval",
+  "actually_inspected": [
+    "original source",
+    "old seed42/43 final images",
+    "old flat prototype and Canny",
+    "revised full-resolution mask overlay",
+    "new perspective prototype and Canny",
+    "actual 512 processing source"
+  ],
+  "geometry": "two projected faces plus base fold; still only 2D edges, no measured depth",
+  "mask": "covers original pastry and defined target/shadows; excludes much previous white background; no unrelated objects visible",
+  "mask_authority": "strict subset of previous permitted rectangle",
+  "decision": "defensible for one RESEARCH_ONLY feasibility generation",
+  "cultural_success_claimed": false
+}

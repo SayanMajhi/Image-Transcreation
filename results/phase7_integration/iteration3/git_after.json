@@ -1,0 +1,10 @@
+{
+  "status": "?? results/phase7_integration/\n?? scripts/review_edit_intent.py\n?? scripts/run_pipeline.py\n?? src/transcreation/orchestration.py\n?? tests/test_edit_intent.py\n?? tests/test_orchestration.py\n",
+  "head_diff_stat": "",
+  "application_changes": [],
+  "new_evidence_directory": "results/phase7_integration/iteration3",
+  "working_report": "append only",
+  "note": "Existing Phase 7 files were untracked at entry. Git diff omits untracked files; preservation hashes establish no application changes.",
+  "commits": 0,
+  "pushes": 0
+}

@@ -1,0 +1,57 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.15.0+cu132",
+    "transformers": "4.57.6",
+    "Pillow": "13.0.0",
+    "PyYAML": "6.0.3",
+    "huggingface-hub": "0.36.2"
+  },
+  "checkpoint": "facebook/sam-vit-base",
+  "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+  "revision_resolution_source": "Hugging Face API before download; checked against loaded model.config._commit_hash",
+  "nvidia_before": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 1830 MiB used, driver 592.00",
+  "ollama_ps_before": {
+    "models": []
+  },
+  "device_requested": "cuda",
+  "precision": "float32",
+  "batch_size": 1,
+  "seed": 42,
+  "postprocess_device": "cpu",
+  "no_simultaneous_vlm_llm_detector": true,
+  "new_real_sam_forward_calls": 2,
+  "new_grounding_or_vlm_or_llm_forward_calls": 0,
+  "selection_status_for_both": "RESEARCH_ONLY",
+  "human_review_note": "One existing ACCEPT record passes the Phase 4 hash gate but reviewer is YOUR_NAME. No confirmed named human review was available when experiments ran; neither record was rewritten.",
+  "api": {
+    "SamProcessor.__call__": "(self, images: Union[ForwardRef('PIL.Image.Image'), numpy.ndarray, ForwardRef('torch.Tensor'), list['PIL.Image.Image'], list[numpy.ndarray], list['torch.Tensor'], NoneType] = None, text: Union[str, list[str], list[list[str]], NoneType] = None, audio: Union[numpy.ndarray, ForwardRef('torch.Tensor'), list[numpy.ndarray], list['torch.Tensor'], NoneType] = None, video: Union[list['PIL.Image.Image'], numpy.ndarray, ForwardRef('torch.Tensor'), list[numpy.ndarray], list['torch.Tensor'], list[list['PIL.Image.Image']], list[list[numpy.ndarray]], list[list['torch.Tensor']], transformers.video_utils.URL, list[transformers.video_utils.URL], list[list[transformers.video_utils.URL]], transformers.video_utils.Path, list[transformers.video_utils.Path], list[list[transformers.video_utils.Path]], NoneType] = None, **kwargs) -> transformers.tokenization_utils_base.BatchEncoding",
+    "SamModel.forward": "(self, pixel_values: Optional[torch.FloatTensor] = None, input_points: Optional[torch.FloatTensor] = None, input_labels: Optional[torch.LongTensor] = None, input_boxes: Optional[torch.FloatTensor] = None, input_masks: Optional[torch.LongTensor] = None, image_embeddings: Optional[torch.FloatTensor] = None, multimask_output: bool = True, attention_similarity: Optional[torch.FloatTensor] = None, target_embedding: Optional[torch.FloatTensor] = None, **kwargs: *<class 'transformers.utils.generic.TransformersKwargs'>) -> transformers.models.sam.modeling_sam.SamImageSegmentationOutput",
+    "SamImageProcessor.post_process_masks": "(self, masks, original_sizes, reshaped_input_sizes, mask_threshold=0.0, binarize=True, pad_size=None, return_tensors='pt')",
+    "input_boxes": "one image, one original XYXY box: [[[x0,y0,x1,y1]]]",
+    "actual_pred_masks_shape": [
+      1,
+      1,
+      3,
+      256,
+      256
+    ],
+    "actual_iou_scores_shape": [
+      1,
+      1,
+      3
+    ],
+    "note": "Output docstring abbreviates dimensions; implementation and actual returned shapes were checked."
+  },
+  "limits": [
+    "SAM scores are predicted mask-quality scores, not measured ground-truth IoU.",
+    "GPU allocated peaks include resident tensors and inference allocations, not driver context, other processes or reserved-only memory.",
+    "Timed runs exclude checkpoint download, Python startup and pre-timer input verification/decoding.",
+    "No CPU fallback was necessary in the real runs; mocked tests exercise it.",
+    "Only visualization uses the highest SAM score. All three mask PNGs and their overlays are preserved per experiment.",
+    "No mask clipping, hole filling, morphology or manual mask correction was applied to saved binary masks. Edge dilation/erosion is display-only.",
+    "Post-run hardening only: failed-CUDA-attempt telemetry, strict invalid-config checks, binding exact copied input bytes, and null resolved revision when loading fails. No successful model or mask computation changed; no inference rerun was needed for these paths."
+  ],
+  "nvidia_after": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 1268 MiB used, driver 592.00"
+}

@@ -1,0 +1,11 @@
+﻿condition,reviewer,visible_but_undetected_description,optional_independent_gt_xyxy,visibility_or_occlusion_notes,identity_verification,notes
+R01_bicycle_replay,,,,,,
+A01_oil_lamp_030,,,,,,
+A02_oil_lamp_020,,,,,,
+A03_diya_030,,,,,,
+A04_diya_020,,,,,,
+B01_incense_burner_030,,,,,,
+B02_incense_burner_020,,,,,,
+B03_clay_incense_burner_030,,,,,,
+B04_clay_incense_burner_020,,,,,,
+N01_airplane_negative,,,,,,

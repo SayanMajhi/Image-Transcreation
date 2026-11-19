@@ -1,0 +1,23 @@
+{
+  "decision": "REVIEW",
+  "decision_reason": "The scene depicts Durga Puja, which is a significant religious event in India. The image contains elements that are culturally specific to this context, such as the goddess Durga, her headdress, and the offerings of incense sticks. Changing these elements would not be appropriate or meaningful for a Japanese context. The user instructions to preserve worship, the idol, people, and their relationships are aligned with the original scene's purpose, so no changes are proposed. Review the image because caption completion is truncated or unknown. Resolve the planner's stated uncertainties. Verify uncertain claims in the caption against the image.",
+  "scene_summary": "The image shows a large, ornate deity, likely Durga, seated on a throne with a swirling cloud of smoke. She is adorned with intricate patterns and jewelry, including a headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding incense sticks, and they are all smiling in a festive mood. The background includes a building with a white wall and a few trees.",
+  "candidate_edits": [],
+  "must_preserve": [
+    "The large, ornate deity, likely Durga",
+    "The crowd of people surrounding the deity",
+    "The incense sticks held by the people",
+    "The smiling faces of the people"
+  ],
+  "uncertainties": [
+    "The identity of the incense sticks as offerings to the goddess",
+    "The cultural context of the image (India) is not Japan"
+  ],
+  "verification_requirements": [
+    "Confirmation of the identity of the incense sticks as offerings to the goddess",
+    "Clarification of the cultural context of the image",
+    "Review the image because caption completion is truncated or unknown.",
+    "Resolve the planner's stated uncertainties.",
+    "Verify uncertain claims in the caption against the image."
+  ]
+}

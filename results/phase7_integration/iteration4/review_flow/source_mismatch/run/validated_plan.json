@@ -1,0 +1,38 @@
+{
+  "planning_result": {
+    "decision": "REVIEW",
+    "decision_reason": "Review required; no candidate edit is released downstream. The source-object identity does not match the user-verified description. Localization must retain the original object label: different object.",
+    "scene_summary": "Caption describes a synthetic object.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "background"
+    ],
+    "uncertainties": [],
+    "verification_requirements": [
+      "The source-object identity does not match the user-verified description.",
+      "Localization must retain the original object label: different object.",
+      "Review the original-scene summary and any paraphrased identities against the image.",
+      "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+    ]
+  },
+  "issues": [
+    {
+      "code": "SOURCE_OBJECT_MISMATCH",
+      "message": "The source-object identity does not match the user-verified description.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "SOURCE_LOCALIZATION_MISMATCH",
+      "message": "Localization must retain the original object label: different object.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    }
+  ]
+}

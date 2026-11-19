@@ -1,0 +1,9 @@
+{
+  "source": "actual user prompt in this session",
+  "target": "previous case1 seed43",
+  "kind": "one direct user review, not a three-person blinded panel",
+  "reviewer_supplied_timestamp": null,
+  "no_additional_scores_inferred": true,
+  "historical_feedback_or_decisions_replaced": false,
+  "recorded_at_utc": "2026-11-11T18:13:01.423488+00:00"
+}

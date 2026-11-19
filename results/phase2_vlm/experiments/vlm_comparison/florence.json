@@ -1,0 +1,497 @@
+{
+  "model": "florence",
+  "sanity": {
+    "caption": "There are two cats laying on a pink blanket. There are remotes next to the cats. The cats are brown and black.",
+    "model_id": "microsoft/Florence-2-base-ft",
+    "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+    "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+    "image_dimensions": [
+      640,
+      480
+    ],
+    "seed": 42,
+    "task": "<MORE_DETAILED_CAPTION>",
+    "generation_settings": {
+      "max_new_tokens": 128,
+      "num_beams": 3,
+      "do_sample": false,
+      "num_return_sequences": 1,
+      "use_cache": false
+    },
+    "device": "cuda",
+    "precision": "float16",
+    "torch_version": "2.15.0+cu132",
+    "transformers_version": "4.57.6",
+    "model_loading_ms": 2075.6526999903144,
+    "inference_ms": 1864.9173000012524,
+    "peak_gpu_memory_bytes": 639576064,
+    "generated_tokens": 29,
+    "prompt_text": "<MORE_DETAILED_CAPTION>",
+    "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+    "processor_settings": {
+      "size": {
+        "height": 768,
+        "width": 768
+      },
+      "attention_implementation": "eager"
+    },
+    "image_id": "sanity",
+    "input_sha256": "cf6f3c4befa148732c7453e0de5afab00f682427435fead2d88b07a9615cdac2",
+    "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\sanity_cats.png",
+    "caption_words": 22,
+    "caption_characters": 110
+  },
+  "records": [
+    {
+      "caption": "A group of women are dancing together. They are all dressed in traditional Indian garb. One of the women is in the middle of the group dancing. She is wearing a colorful garb and headdress. The women are holding brown bowls in their hands. There is smoke coming out of the bowls. There are wires hanging above the women.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        980,
+        692
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 1196.0230999975465,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 71,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_01",
+      "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\durga.jpg",
+      "caption_words": 59,
+      "caption_characters": 320
+    },
+    {
+      "caption": "There are several small candles on the ground. There are small white rocks under the candles. There is a small gold bowl in the middle of the rocks.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        1280,
+        842
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 538.4714999963762,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 34,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_02",
+      "input_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_02.jpg",
+      "caption_words": 28,
+      "caption_characters": 148
+    },
+    {
+      "caption": "There is a person in a large yellow and red costume. They are standing in the middle of the street. There are people standing behind them watching them.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        1280,
+        1443
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 651.6990000091027,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 34,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_03",
+      "input_sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_03.jpg",
+      "caption_words": 28,
+      "caption_characters": 152
+    },
+    {
+      "caption": "A woman is wearing a brown dress. She is sitting in front of a table. There is a red umbrella over the table.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        1280,
+        960
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 463.3358999999473,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 29,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_04",
+      "input_sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_04.jpg",
+      "caption_words": 23,
+      "caption_characters": 109
+    },
+    {
+      "caption": "There is a table with a yellow table cloth on it. There is a picture hanging on the wall behind the table. There are flowers in vases on the table in front of the flowers.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        1280,
+        1912
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 685.3625999938231,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 42,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_05",
+      "input_sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_05.jpg",
+      "caption_words": 35,
+      "caption_characters": 171
+    },
+    {
+      "caption": "A bicycle is parked in front of a building. The building is covered in graffiti. The graffiti is colorful. There are three doors on the building.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        1280,
+        966
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 1009.6712999948068,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 33,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_06",
+      "input_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_06.jpg",
+      "caption_words": 26,
+      "caption_characters": 145
+    },
+    {
+      "caption": "A man is sitting in front of a fire. The man is wearing a checkered shirt. There is a shelf above the man with utensils on it.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        1280,
+        914
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 731.3282999966759,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 37,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_07",
+      "input_sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_07.jpg",
+      "caption_words": 27,
+      "caption_characters": 126
+    },
+    {
+      "caption": "A group of boys are playing soccer outside on a sunny day. Two of the boys are wearing blue shirts and shorts. One boy is laying on the ground trying to kick the ball. A group of people can be seen standing on a sidewalk behind the boys. A tall brick building is standing near the people.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        1280,
+        835
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 887.5082000013208,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 64,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_08",
+      "input_sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_08.jpg",
+      "caption_words": 57,
+      "caption_characters": 288
+    },
+    {
+      "caption": "A painting of people standing around a table. There are baskets on the table in front of them. There is a woman in a red dress standing next to the table.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        1280,
+        897
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 647.9381000099238,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 37,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_09",
+      "input_sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_09.jpg",
+      "caption_words": 31,
+      "caption_characters": 154
+    },
+    {
+      "caption": "This is an aerial view of a city. The sky is blue with white fluffy clouds. The water is blue and calm. The land is brown. There are many buildings and houses on the land.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        1280,
+        1696
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 663.7692999938736,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 42,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_10",
+      "input_sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_10.jpg",
+      "caption_words": 35,
+      "caption_characters": 171
+    },
+    {
+      "caption": "Two blue and white trains are parked at a train station at night. There is a light pole in front of the platform with a sign on it.",
+      "model_id": "microsoft/Florence-2-base-ft",
+      "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "image_dimensions": [
+        1280,
+        852
+      ],
+      "seed": 42,
+      "task": "<MORE_DETAILED_CAPTION>",
+      "generation_settings": {
+        "max_new_tokens": 128,
+        "num_beams": 3,
+        "do_sample": false,
+        "num_return_sequences": 1,
+        "use_cache": false
+      },
+      "device": "cuda",
+      "precision": "float16",
+      "torch_version": "2.15.0+cu132",
+      "transformers_version": "4.57.6",
+      "model_loading_ms": 2075.6526999903144,
+      "inference_ms": 641.7409999994561,
+      "peak_gpu_memory_bytes": 639576064,
+      "generated_tokens": 33,
+      "prompt_text": "<MORE_DETAILED_CAPTION>",
+      "formatted_prompt": "Describe with a paragraph what is shown in the image.",
+      "processor_settings": {
+        "size": {
+          "height": 768,
+          "width": 768
+        },
+        "attention_implementation": "eager"
+      },
+      "image_id": "scene_11",
+      "input_sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_11.jpg",
+      "caption_words": 28,
+      "caption_characters": 131
+    }
+  ]
+}

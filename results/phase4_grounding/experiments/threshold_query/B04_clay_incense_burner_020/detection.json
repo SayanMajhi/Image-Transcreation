@@ -1,0 +1,230 @@
+{
+  "image_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+  "original_dimensions": [
+    980,
+    692
+  ],
+  "source_phrase": "clay incense burner",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "resolved_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        432.8678283691406,
+        318.8076477050781,
+        516.676513671875,
+        392.7162170410156
+      ],
+      "score": 0.48630067706108093,
+      "label": "clay incense burner"
+    },
+    {
+      "box": [
+        0.5225404500961304,
+        216.07716369628906,
+        95.62210845947266,
+        294.6971435546875
+      ],
+      "score": 0.4505355656147003,
+      "label": "clay incense burner"
+    },
+    {
+      "box": [
+        141.24038696289062,
+        279.8672790527344,
+        221.35267639160156,
+        345.88397216796875
+      ],
+      "score": 0.4649999737739563,
+      "label": "clay incense burner"
+    },
+    {
+      "box": [
+        752.5611572265625,
+        251.49124145507812,
+        846.450439453125,
+        342.6279296875
+      ],
+      "score": 0.4412061274051666,
+      "label": "clay incense burner"
+    },
+    {
+      "box": [
+        889.6678466796875,
+        267.48211669921875,
+        979.0328369140625,
+        380.1351318359375
+      ],
+      "score": 0.3260664939880371,
+      "label": "clay incense burner"
+    },
+    {
+      "box": [
+        283.33624267578125,
+        315.5657653808594,
+        365.1452941894531,
+        383.1934509277344
+      ],
+      "score": 0.4399165213108063,
+      "label": "clay incense burner"
+    },
+    {
+      "box": [
+        889.7703857421875,
+        267.6300048828125,
+        978.9869995117188,
+        349.08746337890625
+      ],
+      "score": 0.32874777913093567,
+      "label": "clay incense burner"
+    },
+    {
+      "box": [
+        713.6109619140625,
+        402.36273193359375,
+        791.2801513671875,
+        506.1211242675781
+      ],
+      "score": 0.21443337202072144,
+      "label": ""
+    }
+  ],
+  "settings": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.2,
+    "text_threshold": 0.25,
+    "seed": 42,
+    "effective_device": "cuda",
+    "normalized_prompt": "clay incense burner.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "disable_custom_kernels": true,
+    "inference_mode": true,
+    "eval": true,
+    "coordinate_format": "xyxy_original_pixels",
+    "postprocess_box_argument": "threshold",
+    "target_sizes": [
+      [
+        692,
+        980
+      ]
+    ],
+    "image_processor": {
+      "_processor_class": "GroundingDinoProcessor",
+      "image_processor_type": "GroundingDinoImageProcessor",
+      "format": "coco_detection",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1333,
+        "shortest_edge": 800
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "do_convert_annotations": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": null
+    }
+  },
+  "timing": {
+    "load_seconds": 6.00004568696022e-07,
+    "preprocess_seconds": 0.059892999997828156,
+    "inference_seconds": 0.4568234000034863,
+    "postprocess_seconds": 0.0036411999899428338,
+    "total_seconds": 0.5220865000010235
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 692084224,
+    "inference_peak_allocated_bytes": 1901933056,
+    "device": "cuda"
+  },
+  "raw_predictions": {
+    "boxes": [
+      [
+        432.8678283691406,
+        318.8076477050781,
+        516.676513671875,
+        392.7162170410156
+      ],
+      [
+        0.5225404500961304,
+        216.07716369628906,
+        95.62210845947266,
+        294.6971435546875
+      ],
+      [
+        141.24038696289062,
+        279.8672790527344,
+        221.35267639160156,
+        345.88397216796875
+      ],
+      [
+        752.5611572265625,
+        251.49124145507812,
+        846.450439453125,
+        342.6279296875
+      ],
+      [
+        889.6678466796875,
+        267.48211669921875,
+        979.0328369140625,
+        380.1351318359375
+      ],
+      [
+        283.33624267578125,
+        315.5657653808594,
+        365.1452941894531,
+        383.1934509277344
+      ],
+      [
+        889.7703857421875,
+        267.6300048828125,
+        978.9869995117188,
+        349.08746337890625
+      ],
+      [
+        713.6109619140625,
+        402.36273193359375,
+        791.2801513671875,
+        506.1211242675781
+      ]
+    ],
+    "scores": [
+      0.48630067706108093,
+      0.4505355656147003,
+      0.4649999737739563,
+      0.4412061274051666,
+      0.3260664939880371,
+      0.4399165213108063,
+      0.32874777913093567,
+      0.21443337202072144
+    ],
+    "text_labels": [
+      "clay incense burner",
+      "clay incense burner",
+      "clay incense burner",
+      "clay incense burner",
+      "clay incense burner",
+      "clay incense burner",
+      "clay incense burner",
+      ""
+    ]
+  },
+  "observations": [],
+  "research_only": true
+}

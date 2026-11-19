@@ -1,0 +1,62 @@
+{
+  "scope": "RESEARCH_ONLY",
+  "origin": "operator_declared_object_replacement_rectangle",
+  "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+  "mask_sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d",
+  "protected_sha256": "f5772bcde6baf7e18d2882ec58a16d65defaaa3869e5a12773cb3613768d8139",
+  "geometry": {
+    "crop_box_xyxy": [
+      3,
+      133,
+      1257,
+      827
+    ],
+    "padding_ltrb": [
+      0,
+      280,
+      0,
+      280
+    ],
+    "padded_side": 1254,
+    "original_dimensions": [
+      1280,
+      853
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "foreground_pixels": 749700,
+  "target_triangle_original_xy": [
+    [
+      650,
+      215
+    ],
+    [
+      300,
+      735
+    ],
+    [
+      1010,
+      735
+    ]
+  ],
+  "target_fold_line_xy": [
+    [
+      650,
+      215
+    ],
+    [
+      660,
+      690
+    ]
+  ],
+  "control_sha256": "38b14eaad1b36bd9fc7fed2dd2f9d43f1f544f0f913bce8e174fc2773549c047",
+  "control_semantics": "Canny(100,200) of explicit target silhouette prototype, not source ground truth; intentionally permits change from crescent to triangle",
+  "boundary_reason": "Entire original pastry, shadow and nearby plain surface inside; exterior white background fully protected. No plate/utensils/people exist here. SAM outline is too restrictive for a different silhouette.",
+  "sam_reference_sha256": "481d4f5434b685224d8bb4c6d429246672fe287c035e707cfd7b58ad6884d97e",
+  "sam_mask_0_sha256": "97dfbc4215f0901a933f1e9ada34ff1792bb69197e87b223d60de3899657920e",
+  "independent_ground_truth": false,
+  "human_approved": false
+}

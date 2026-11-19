@@ -1,0 +1,164 @@
+{
+  "model_id": "microsoft/Florence-2-base-ft",
+  "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "image_dimensions": [
+    980,
+    692
+  ],
+  "seed": 42,
+  "task": "<DENSE_REGION_CAPTION>",
+  "generation_settings": {
+    "max_new_tokens": 512,
+    "num_beams": 3,
+    "do_sample": false,
+    "num_return_sequences": 1,
+    "use_cache": false
+  },
+  "device": "cuda",
+  "precision": "float16",
+  "torch_version": "2.15.0+cu132",
+  "transformers_version": "4.57.6",
+  "model_loading_ms": 2271.840000001248,
+  "inference_ms": 2444.029899997986,
+  "peak_gpu_memory_bytes": 639576064,
+  "raw_model_output": "</s><s>human face<loc_79><loc_529><loc_135><loc_633><loc_241><loc_573><loc_296><loc_669><loc_392><loc_598><loc_440><loc_696><loc_556><loc_577><loc_599><loc_675><loc_629><loc_192><loc_676><loc_273><loc_182><loc_624><loc_221><loc_694></s>",
+  "parsed_results": {
+    "<DENSE_REGION_CAPTION>": {
+      "bboxes": [
+        [
+          77.91000366210938,
+          366.4139709472656,
+          132.79000854492188,
+          438.3819885253906
+        ],
+        [
+          236.6699981689453,
+          396.8619689941406,
+          290.57000732421875,
+          463.2939758300781
+        ],
+        [
+          384.6499938964844,
+          414.1619873046875,
+          431.69000244140625,
+          481.97796630859375
+        ],
+        [
+          545.3699951171875,
+          399.6299743652344,
+          587.510009765625,
+          467.44598388671875
+        ],
+        [
+          616.9100341796875,
+          133.20999145507812,
+          662.9700317382812,
+          189.26199340820312
+        ],
+        [
+          178.85000610351562,
+          432.15399169921875,
+          217.07000732421875,
+          480.593994140625
+        ]
+      ],
+      "labels": [
+        "human face",
+        "human face",
+        "human face",
+        "human face",
+        "human face",
+        "human face"
+      ]
+    }
+  },
+  "parsing_errors": [],
+  "generated_tokens": 28,
+  "token_ceiling_reached": false,
+  "eos_reached": true,
+  "suspected_truncation": false,
+  "input_image": "data\\durga.jpg",
+  "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+  "regions": [
+    {
+      "region_id": 1,
+      "bbox": [
+        77.91000366210938,
+        366.4139709472656,
+        132.79000854492188,
+        438.3819885253906
+      ],
+      "description": "human face",
+      "valid": true,
+      "validation_errors": []
+    },
+    {
+      "region_id": 2,
+      "bbox": [
+        236.6699981689453,
+        396.8619689941406,
+        290.57000732421875,
+        463.2939758300781
+      ],
+      "description": "human face",
+      "valid": true,
+      "validation_errors": []
+    },
+    {
+      "region_id": 3,
+      "bbox": [
+        384.6499938964844,
+        414.1619873046875,
+        431.69000244140625,
+        481.97796630859375
+      ],
+      "description": "human face",
+      "valid": true,
+      "validation_errors": []
+    },
+    {
+      "region_id": 4,
+      "bbox": [
+        545.3699951171875,
+        399.6299743652344,
+        587.510009765625,
+        467.44598388671875
+      ],
+      "description": "human face",
+      "valid": true,
+      "validation_errors": []
+    },
+    {
+      "region_id": 5,
+      "bbox": [
+        616.9100341796875,
+        133.20999145507812,
+        662.9700317382812,
+        189.26199340820312
+      ],
+      "description": "human face",
+      "valid": true,
+      "validation_errors": []
+    },
+    {
+      "region_id": 6,
+      "bbox": [
+        178.85000610351562,
+        432.15399169921875,
+        217.07000732421875,
+        480.593994140625
+      ],
+      "description": "human face",
+      "valid": true,
+      "validation_errors": []
+    }
+  ],
+  "validation_errors": [],
+  "warnings": [],
+  "valid_region_count": 6,
+  "token_count_definition": "Generated decoder token IDs excluding the initial decoder-start token and padding after the first EOS; includes EOS and any generated special tokens. This is not the tokenization length of the postprocessed caption.",
+  "box_convention": "Processor pixel-space [x1, y1, x2, y2] on the decoded RGB image",
+  "measurement_notes": "One sequential execution, no warmup. Inference includes preprocessing, transfers, generation, decoding and official postprocessing. Excludes loading, file reading, box validation and visualization. CUDA peak allocated bytes include resident weights; CPU value is null. Nonfinite parser numbers are saved as strings and flagged invalid.",
+  "assessment": "Unreviewed region descriptions; cultural identities are not verified."
+}

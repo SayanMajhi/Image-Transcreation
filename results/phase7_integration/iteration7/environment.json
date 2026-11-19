@@ -1,0 +1,14 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "packages": {
+    "torch": "2.15.0+cu132",
+    "transformers": "4.57.6",
+    "Pillow": "13.0.0",
+    "PyYAML": "6.0.3",
+    "diffusers": "0.35.2",
+    "accelerate": "1.11.0"
+  },
+  "new_dependencies": [],
+  "model_downloads": 0,
+  "execution": "Existing record_plan; caption/input reused, system prompt only changed."
+}

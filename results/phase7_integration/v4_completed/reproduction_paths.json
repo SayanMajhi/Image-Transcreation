@@ -1,0 +1,103 @@
+{
+  "note": "Exact actual input JSONs were preserved. These copies only normalize path separators; same source/mask/evidence bytes, hashes, prompts and settings. GPU reproducibility across OS/hardware is not asserted.",
+  "copies": [
+    {
+      "original": "automated_request.json",
+      "portable": "reproduce_automated_request.json",
+      "only_path_separator_changes": {
+        "source_image": {
+          "recorded": "results\\phase7_integration\\v4_completed\\source.jpg",
+          "portable": "results/phase7_integration/v4_completed/source.jpg"
+        },
+        "output_dir": {
+          "recorded": "results\\phase7_integration\\v4_completed\\automated",
+          "portable": "results/phase7_integration/v4_completed/automated"
+        }
+      }
+    },
+    {
+      "original": "localization_request.json",
+      "portable": "reproduce_localization_request.json",
+      "only_path_separator_changes": {
+        "source_image": {
+          "recorded": "results\\phase7_integration\\v4_completed\\source.jpg",
+          "portable": "results/phase7_integration/v4_completed/source.jpg"
+        },
+        "output_dir": {
+          "recorded": "results\\phase7_integration\\v4_completed\\localization",
+          "portable": "results/phase7_integration/v4_completed/localization"
+        }
+      }
+    },
+    {
+      "original": "segmentation_request.json",
+      "portable": "reproduce_segmentation_request.json",
+      "only_path_separator_changes": {
+        "source_image": {
+          "recorded": "results\\phase7_integration\\v4_completed\\source.jpg",
+          "portable": "results/phase7_integration/v4_completed/source.jpg"
+        },
+        "detection_file": {
+          "recorded": "results\\phase7_integration\\v4_completed\\localization\\grounding\\detection.json",
+          "portable": "results/phase7_integration/v4_completed/localization/grounding/detection.json"
+        },
+        "output_dir": {
+          "recorded": "results\\phase7_integration\\v4_completed\\sam",
+          "portable": "results/phase7_integration/v4_completed/sam"
+        }
+      }
+    },
+    {
+      "original": "input_A.json",
+      "portable": "reproduce_input_A.json",
+      "only_path_separator_changes": {
+        "source_image": {
+          "recorded": "results\\phase7_integration\\v4_completed\\source.jpg",
+          "portable": "results/phase7_integration/v4_completed/source.jpg"
+        },
+        "segmentation_file": {
+          "recorded": "results\\phase7_integration\\v4_completed\\sam\\segmentation\\segmentation.json",
+          "portable": "results/phase7_integration/v4_completed/sam/segmentation/segmentation.json"
+        },
+        "mask_file": {
+          "recorded": "results\\phase7_integration\\v4_completed\\research_mask.png",
+          "portable": "results/phase7_integration/v4_completed/research_mask.png"
+        },
+        "annotation_file": {
+          "recorded": "results\\phase7_integration\\v4_completed\\annotations.json",
+          "portable": "results/phase7_integration/v4_completed/annotations.json"
+        },
+        "protected_mask_file": {
+          "recorded": "results\\phase7_integration\\v4_completed\\protected_regions.png",
+          "portable": "results/phase7_integration/v4_completed/protected_regions.png"
+        }
+      }
+    },
+    {
+      "original": "input_B.json",
+      "portable": "reproduce_input_B.json",
+      "only_path_separator_changes": {
+        "source_image": {
+          "recorded": "results\\phase7_integration\\v4_completed\\source.jpg",
+          "portable": "results/phase7_integration/v4_completed/source.jpg"
+        },
+        "segmentation_file": {
+          "recorded": "results\\phase7_integration\\v4_completed\\sam\\segmentation\\segmentation.json",
+          "portable": "results/phase7_integration/v4_completed/sam/segmentation/segmentation.json"
+        },
+        "mask_file": {
+          "recorded": "results\\phase7_integration\\v4_completed\\research_mask.png",
+          "portable": "results/phase7_integration/v4_completed/research_mask.png"
+        },
+        "annotation_file": {
+          "recorded": "results\\phase7_integration\\v4_completed\\annotations.json",
+          "portable": "results/phase7_integration/v4_completed/annotations.json"
+        },
+        "protected_mask_file": {
+          "recorded": "results\\phase7_integration\\v4_completed\\protected_regions.png",
+          "portable": "results/phase7_integration/v4_completed/protected_regions.png"
+        }
+      }
+    }
+  ]
+}

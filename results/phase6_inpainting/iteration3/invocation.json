@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "scripts.blend_mask",
+    "--input",
+    "results\\phase6_inpainting\\iteration3\\input.json",
+    "--out",
+    "results\\phase6_inpainting\\iteration3\\run"
+  ],
+  "returncode": 0,
+  "wall_seconds": 0.8277987999972538,
+  "model_calls": 0,
+  "postprocessing_conditions": 1
+}

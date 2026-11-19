@@ -1,0 +1,96 @@
+{
+  "execution_mode": "AUTOMATED_PLANNING",
+  "state": "EDIT_PROPOSAL_READY",
+  "completed_stages": [
+    "source",
+    "caption",
+    "planning",
+    "deterministic_validation"
+  ],
+  "stopped_at": "edit_intent_review",
+  "reason": "PROPOSE is only a draft. No existing record authorizes edit intent or cultural generation; localization was not invoked.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "e369ff3c1016ee55aebc01594147b081d8e40ad3169d99044d3c8132c0c34d90",
+      "sha256": "e369ff3c1016ee55aebc01594147b081d8e40ad3169d99044d3c8132c0c34d90",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "path": "evidence/source/original.png"
+    },
+    "caption.json": {
+      "id": "1e859e876e188b7b2131c23e08a75015d36d526110b6e620107de08ace1e1dd5",
+      "sha256": "1e859e876e188b7b2131c23e08a75015d36d526110b6e620107de08ace1e1dd5",
+      "path": "caption.json"
+    },
+    "planning_input.json": {
+      "id": "6a1a504649f7b9c0b9dd48c90926bc986a959f352062a67bb713c22e1a84d8ce",
+      "sha256": "6a1a504649f7b9c0b9dd48c90926bc986a959f352062a67bb713c22e1a84d8ce",
+      "path": "planning_input.json"
+    },
+    "planner_audit.json": {
+      "id": "f399a1b3271aade1d20bdb0de2ea1046ee597f7fc0fb2060ba9747c9b542a743",
+      "sha256": "f399a1b3271aade1d20bdb0de2ea1046ee597f7fc0fb2060ba9747c9b542a743",
+      "path": "planner_audit.json"
+    },
+    "validated_plan.json": {
+      "id": "36787e83f4b1b6c809b41e0d8d655d0905fc05723e92e5c914030a02b0649c40",
+      "sha256": "36787e83f4b1b6c809b41e0d8d655d0905fc05723e92e5c914030a02b0649c40",
+      "path": "validated_plan.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.0015208999975584447
+    },
+    {
+      "stage": "resource_preflight",
+      "action": "QWEN_NOT_RESIDENT",
+      "seconds": 0.0024235999953816645
+    },
+    {
+      "stage": "caption",
+      "action": "CAPTION_COMPLETED",
+      "seconds": 0.003852299996651709
+    },
+    {
+      "stage": "caption",
+      "action": "MODEL_REFERENCES_RELEASED",
+      "seconds": 0.05443769999692449,
+      "cuda_allocated_bytes_after": 0
+    },
+    {
+      "stage": "planning",
+      "action": "VALIDATED",
+      "seconds": 0.05693020000035176,
+      "decision": "PROPOSE"
+    },
+    {
+      "stage": "planning",
+      "action": "QWEN_UNLOAD_CONFIRMED",
+      "seconds": 0.05697719999443507
+    },
+    {
+      "stage": "edit_intent_review",
+      "action": "STOP",
+      "seconds": 0.0569818999938434,
+      "state": "EDIT_PROPOSAL_READY",
+      "reason": "PROPOSE is only a draft. No existing record authorizes edit intent or cultural generation; localization was not invoked.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [
+    "Explicit edit-intent review required",
+    "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
+    "Verify localization phrases against the original image before grounding or editing.",
+    "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",
+    "Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness."
+  ],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

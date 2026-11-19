@@ -1,0 +1,82 @@
+{
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "raw_decision": "PROPOSE",
+  "final_decision": "REVIEW",
+  "raw_candidate_count": 1,
+  "released_candidate_count": 0,
+  "quarantined_candidates": [
+    {
+      "candidate_index": 0,
+      "raw_proposal": {
+        "object_description": "A bowl of masala noodles with chopsticks and a spoon.",
+        "localization_phrase": "Indian masala noodles in a bowl",
+        "proposed_change": "A bowl of masala noodles with chopsticks and a spoon.",
+        "cultural_reason": "Indian cuisine often uses masala noodles in a similar manner to ramen, thus the adaptation is contextually justified.",
+        "identity_uncertain": false,
+        "verified_object_id": "ramen-food-1"
+      },
+      "issue_codes": [
+        "SOURCE_OBJECT_MISMATCH",
+        "SOURCE_LOCALIZATION_MISMATCH",
+        "SOURCE_REPLACEMENT_IDENTICAL",
+        "USER_CONSTRAINTS_UNRESOLVED",
+        "EDIT_UNCERTAINTY_UNRESOLVED"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "code": "SOURCE_OBJECT_MISMATCH",
+      "message": "The source-object identity does not match the user-verified description.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "SOURCE_LOCALIZATION_MISMATCH",
+      "message": "Localization must retain the original object label: A bowl of masala noodles with chopsticks and a spoon..",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "SOURCE_REPLACEMENT_IDENTICAL",
+      "message": "The proposed replacement/modification is indistinguishable from the original object.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    },
+    {
+      "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+      "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "candidate_index": null,
+      "severity": "review"
+    }
+  ],
+  "issue_codes": [
+    "SOURCE_OBJECT_MISMATCH",
+    "SOURCE_LOCALIZATION_MISMATCH",
+    "SOURCE_REPLACEMENT_IDENTICAL",
+    "USER_CONSTRAINTS_UNRESOLVED",
+    "EDIT_UNCERTAINTY_UNRESOLVED"
+  ],
+  "verified_object": {
+    "object_id": "ramen-food-1",
+    "description": "Japanese ramen noodles in a white bowl"
+  },
+  "missing_verification_id_resolved": true,
+  "source_identity_matches_model_description": false,
+  "pending_edit_intent_created": false,
+  "image_generation_permitted": false,
+  "stop_reason": "Final REVIEW; no released candidate eligible for edit-intent review.",
+  "model_calls": {
+    "SmolVLM": 0,
+    "Qwen": 1,
+    "GroundingDINO": 0,
+    "SAM": 0,
+    "Diffusion": 0
+  }
+}

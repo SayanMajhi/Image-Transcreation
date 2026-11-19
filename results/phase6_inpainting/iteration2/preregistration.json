@@ -1,0 +1,97 @@
+{
+  "declared_utc": "2026-11-10T07:26:26.285619+00:00",
+  "allowed_changed_request_fields": [
+    "prompt"
+  ],
+  "input_sha256": "a114da67b7715b7fb7b32d025a8e477690196ae9be5509a2367c1691a04d68fc",
+  "reference_input_sha256": "f8a5e6f1aecefe6c064b5bbd90d64ceaabbce185c7da352d7a42aba5764b8017",
+  "config_sha256": "9d6612020af4735688625f37beb885debeb6ad0874362b406e6edc5affb423d9",
+  "model_revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+  "seed": 42,
+  "conditions": 1,
+  "maximum_generation_calls": 1,
+  "negative_prompt": null,
+  "oom_policy": "Abort, no retry, to preserve exactly one requested generation. Normal CPU-offloaded inference and compositor are unchanged.",
+  "source_artifact_integrity": "all iteration1 run artifact hashes verified before starting",
+  "reference_geometry": {
+    "crop_box_xyxy": [
+      570,
+      189,
+      952,
+      508
+    ],
+    "padding_ltrb": [
+      0,
+      31,
+      0,
+      32
+    ],
+    "padded_side": 382,
+    "original_dimensions": [
+      1280,
+      842
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "reference_settings": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+    "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+    "processing_size": 512,
+    "context_margin": 64,
+    "seed": 42,
+    "steps": 20,
+    "guidance_scale": 7.5,
+    "strength": 0.9,
+    "precision": "float16",
+    "batch_size": 1,
+    "variant": "fp16",
+    "use_safetensors": true,
+    "negative_prompt": null,
+    "generator_device": "cpu",
+    "initial_offload": "model_cpu_offload",
+    "allowed_oom_fallback": "sequential_cpu_offload",
+    "scheduler": "DDIMScheduler",
+    "scheduler_config": {
+      "num_train_timesteps": 1000,
+      "beta_start": 0.00085,
+      "beta_end": 0.012,
+      "beta_schedule": "scaled_linear",
+      "trained_betas": null,
+      "clip_sample": false,
+      "set_alpha_to_one": false,
+      "steps_offset": 1,
+      "prediction_type": "epsilon",
+      "thresholding": false,
+      "dynamic_thresholding_ratio": 0.995,
+      "clip_sample_range": 1.0,
+      "sample_max_value": 1.0,
+      "timestep_spacing": "leading",
+      "rescale_betas_zero_snr": false,
+      "_use_default_values": [
+        "rescale_betas_zero_snr",
+        "prediction_type",
+        "sample_max_value",
+        "dynamic_thresholding_ratio",
+        "clip_sample_range",
+        "thresholding",
+        "timestep_spacing"
+      ],
+      "_class_name": "DDIMScheduler",
+      "_diffusers_version": "0.6.0.dev0",
+      "skip_prk_steps": true
+    },
+    "effective_denoising_steps": 18
+  },
+  "packages": {
+    "torch": "2.15.0+cu132",
+    "transformers": "4.57.6",
+    "diffusers": "0.35.2",
+    "accelerate": "1.11.0",
+    "Pillow": "13.0.0",
+    "huggingface-hub": "0.36.2",
+    "safetensors": "0.8.0"
+  }
+}

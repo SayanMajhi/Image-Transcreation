@@ -1,0 +1,19 @@
+{
+  "assessment_type": "assistant qualitative inspection; not independent human approval or ground-truth measurement",
+  "inspected": [
+    "run/evidence/overlay_0.png",
+    "run/detail.png",
+    "run/raw_generated_crop.png",
+    "run/final.png"
+  ],
+  "bowl_difference": "Clearly changed interior texture and decorative rim. Exterior appears dark reddish brown.",
+  "geometry": "Recognizable bowl within fixed original mask footprint. Interior geometry/texture changed substantially; source silhouette is enforced by compositing, not proved by diffusion.",
+  "lighting": "Warm red/orange lighting is broadly consistent, but the glossy highlights look more metallic than matte terracotta.",
+  "boundary": "No broad background corruption in final. Thin rim transition and the preserved flame/wick-base island can look abrupt; hard seams have not been feathered or hidden.",
+  "flame_compatibility": "Flame pixels outside the mask are exactly preserved. The old wick/flame base can read as an isolated small candle/disc on the new smooth bowl floor; physical continuity is questionable.",
+  "material_prompt_fidelity": "Darker decorated bowl achieved partly; matte terracotta and carved-rim appearance are not convincingly established.",
+  "blur_distortion": "Some smoothed synthetic interior texture; no major gross bowl deformation seen at source resolution. Raw padded crop shows border repetition/context changes that are discarded in restoration/compositing.",
+  "unrelated_objects": "No obvious unrelated new object in the final bowl region, but a small candle-like base impression remains.",
+  "recommendation": "NEEDS FIXES for visual/material/attachment fidelity; technical localized-generation feasibility passed. Await mentor evaluation.",
+  "human_review_notes": ""
+}

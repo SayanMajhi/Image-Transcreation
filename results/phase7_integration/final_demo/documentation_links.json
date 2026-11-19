@@ -1,0 +1,217 @@
+{
+  "scope": "repository README and current Phase7 report",
+  "checked": 42,
+  "broken": 0,
+  "links": [
+    {
+      "from": "README.md",
+      "target": "reports/phase7_integration.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/final_demo/environment.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/final_demo/automated_request.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/final_demo/localization_request.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase1_research.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase2_vlm.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase3_llm.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase4_grounding.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase5_segmentation.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase6_working.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase7_integration.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/final_demo",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/final_demo/ramen_evaluation.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../src/transcreation/guided_research.py",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../src/transcreation/cli.py",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../tests/test_guided_research.py",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/source.webp",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/iteration8/ramen_uncertainty_review/human_decision.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/current_authorization_status.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/predeclared_experiment.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/environment.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/automated/caption.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/automated/planner_audit.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/automated/validated_plan.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/automated/pipeline_result.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/localization/grounding/detection.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/localization/grounding/comparison.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/sam_box/segmentation",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/sam_points/segmentation",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/points_before_inference.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/mask_assessment.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/generation_gate/research_result.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/ramen_evaluation.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/gpu_after.txt",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/historical_inpainting_reference/comparison.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/historical_inpainting_reference/inpainting.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/historical_inpainting_reference/independent_recheck.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/tests_before.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/tests_after.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/cli_checks.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/implementation.diff",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/preservation_after.json",
+      "exists": true
+    }
+  ]
+}

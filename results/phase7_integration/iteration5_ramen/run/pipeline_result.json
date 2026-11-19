@@ -1,0 +1,95 @@
+{
+  "execution_mode": "AUTOMATED_PLANNING",
+  "state": "PLAN_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source",
+    "caption",
+    "planning",
+    "deterministic_validation"
+  ],
+  "stopped_at": "planning_review",
+  "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "90cd209f70a9cb8012d5f299be66ba8ebd259baa3d166dd6a2acc616b807a0d4",
+      "sha256": "90cd209f70a9cb8012d5f299be66ba8ebd259baa3d166dd6a2acc616b807a0d4",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+      "sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+      "path": "evidence/source/ramen.jpg"
+    },
+    "caption.json": {
+      "id": "5dbd1da3be5c73f23349902096e7f0c4fd77c4ccd8a477328e804ef60fe696f4",
+      "sha256": "5dbd1da3be5c73f23349902096e7f0c4fd77c4ccd8a477328e804ef60fe696f4",
+      "path": "caption.json"
+    },
+    "planning_input.json": {
+      "id": "bbde36f1ffbf9a9a51897129ac14c62c8d38828fca674388d6deaeed2fc87cd6",
+      "sha256": "bbde36f1ffbf9a9a51897129ac14c62c8d38828fca674388d6deaeed2fc87cd6",
+      "path": "planning_input.json"
+    },
+    "planner_audit.json": {
+      "id": "e6703b7a37aa7e77611eb976419d4ad8bf9563cdfc7aed69824661b183dd45fb",
+      "sha256": "e6703b7a37aa7e77611eb976419d4ad8bf9563cdfc7aed69824661b183dd45fb",
+      "path": "planner_audit.json"
+    },
+    "validated_plan.json": {
+      "id": "03bd1be26a9d713725bed6a188df4f3959ce11e0e86a0511eee6cca7b588ad95",
+      "sha256": "03bd1be26a9d713725bed6a188df4f3959ce11e0e86a0511eee6cca7b588ad95",
+      "path": "validated_plan.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.12788849999196827
+    },
+    {
+      "stage": "resource_preflight",
+      "action": "QWEN_NOT_RESIDENT",
+      "seconds": 0.1368837999907555
+    },
+    {
+      "stage": "caption",
+      "action": "CAPTION_COMPLETED",
+      "seconds": 13.810609599997406
+    },
+    {
+      "stage": "caption",
+      "action": "MODEL_REFERENCES_RELEASED",
+      "seconds": 13.969216099998448,
+      "cuda_allocated_bytes_after": 0
+    },
+    {
+      "stage": "planning",
+      "action": "VALIDATED",
+      "seconds": 25.42913449999469,
+      "decision": "REVIEW"
+    },
+    {
+      "stage": "planning",
+      "action": "QWEN_UNLOAD_CONFIRMED",
+      "seconds": 25.430585399997653
+    },
+    {
+      "stage": "planning_review",
+      "action": "STOP",
+      "seconds": 25.43059489999723,
+      "state": "PLAN_REQUIRES_REVIEW",
+      "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [
+    "Verify the source-object identity of: Japanese ramen noodles.",
+    "Localization must retain the original object label: Japanese ramen noodles.",
+    "Review the original-scene summary and any paraphrased identities against the image.",
+    "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+  ],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

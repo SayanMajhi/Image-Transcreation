@@ -1,0 +1,37 @@
+{
+  "path": "src/transcreation/stages/planning.py",
+  "sha256": "d63f12ab1c9aa5710abc8321568a05535f190f49183b207993760e54785a211a",
+  "line_anchors": {
+    "CAPTION_INCOMPLETE": [
+      119
+    ],
+    "UNVERIFIED_SOURCE_OBJECT": [
+      124
+    ],
+    "SOURCE_OBJECT_MISMATCH": [
+      128
+    ],
+    "SOURCE_LOCALIZATION_MISMATCH": [
+      132
+    ],
+    "PRESERVATION_CONFLICT": [
+      139,
+      141
+    ],
+    "USER_CONSTRAINTS_UNRESOLVED": [
+      148
+    ],
+    "EDIT_UNCERTAINTY_UNRESOLVED": [
+      150
+    ],
+    "ABSTENTION_CONTEXT_UNVERIFIED": [
+      160
+    ],
+    "blocking =": [
+      161
+    ],
+    "if request.user_instructions and had_candidates": [
+      147
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "generation_calls": 1,
+  "calls": [
+    {
+      "prompt": "A photorealistic traditional oil-lamp bowl made of matte, unglazed reddish-brown terracotta clay. Fine porous earthen texture, subtle handmade imperfections, a gently carved clay rim, and natural warm lighting. Preserve the original bowl geometry and perspective. The existing wick and flame base must appear naturally connected to the oil and clay bowl interior. Match the surrounding photograph's lighting and shadows.",
+      "seed": 42
+    }
+  ],
+  "stage_call_wall_seconds": 25.228315100001055,
+  "status": "COMPLETED",
+  "gpu_before": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 1408 MiB\n",
+  "retry_permitted": false,
+  "implementation": "Unmodified stage/model loader/sampler; harness only enforces at most one call."
+}

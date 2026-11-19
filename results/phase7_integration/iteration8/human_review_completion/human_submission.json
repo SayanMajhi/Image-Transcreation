@@ -1,0 +1,9 @@
+{
+  "evidence_type": "ACTUAL_USER_CHAT_MESSAGES",
+  "recorded_at_utc": "2026-11-11T01:45:23.612002+00:00",
+  "classification": "MATERIAL_UNRESOLVED",
+  "reviewer": "Sayan",
+  "verbatim_decision_message": "Reviewer identity: Sayan. Classification: MATERIAL_UNRESOLVED. Justification: It is unclear which food contents will change and whether the white bowl will remain protected. Record my review and create the review ZIP.",
+  "verbatim_prior_inspection_declarations": "Personally inspected original photograph: yes\nPersonally inspected proposed edit: yes\nPersonally inspected full uncertainty: yes\nChecked complete user instructions and preservation requirements: yes\nPersonally inspected raw/final planning audit and validation issues: yes",
+  "provenance_note": "Identity, judgment and five inspection declarations supplied by the actual user in this conversation. The timestamp records software capture, not an independently supplied inspection time. No independent proof of reviewer identity or cultural correctness is claimed."
+}

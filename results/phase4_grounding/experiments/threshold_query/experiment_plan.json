@@ -1,0 +1,94 @@
+{
+  "declared_at_utc": "2026-11-09T07:02:25.416298+00:00",
+  "base_config": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42
+  },
+  "conditions": [
+    {
+      "id": "R01_bicycle_replay",
+      "role": "reproducibility",
+      "input": "data/vlm_collection/scene_06.jpg",
+      "phrase": "bicycle",
+      "box_threshold": 0.3
+    },
+    {
+      "id": "A01_oil_lamp_030",
+      "role": "matrix",
+      "input": "data/vlm_collection/scene_02.jpg",
+      "phrase": "oil lamp",
+      "box_threshold": 0.3
+    },
+    {
+      "id": "A02_oil_lamp_020",
+      "role": "matrix",
+      "input": "data/vlm_collection/scene_02.jpg",
+      "phrase": "oil lamp",
+      "box_threshold": 0.2
+    },
+    {
+      "id": "A03_diya_030",
+      "role": "matrix",
+      "input": "data/vlm_collection/scene_02.jpg",
+      "phrase": "diya",
+      "box_threshold": 0.3
+    },
+    {
+      "id": "A04_diya_020",
+      "role": "matrix",
+      "input": "data/vlm_collection/scene_02.jpg",
+      "phrase": "diya",
+      "box_threshold": 0.2
+    },
+    {
+      "id": "B01_incense_burner_030",
+      "role": "matrix",
+      "input": "data/sample_images/durga.jpg",
+      "phrase": "incense burner",
+      "box_threshold": 0.3
+    },
+    {
+      "id": "B02_incense_burner_020",
+      "role": "matrix",
+      "input": "data/sample_images/durga.jpg",
+      "phrase": "incense burner",
+      "box_threshold": 0.2
+    },
+    {
+      "id": "B03_clay_incense_burner_030",
+      "role": "matrix",
+      "input": "data/sample_images/durga.jpg",
+      "phrase": "clay incense burner",
+      "box_threshold": 0.3
+    },
+    {
+      "id": "B04_clay_incense_burner_020",
+      "role": "matrix",
+      "input": "data/sample_images/durga.jpg",
+      "phrase": "clay incense burner",
+      "box_threshold": 0.2
+    },
+    {
+      "id": "N01_airplane_negative",
+      "role": "negative_control",
+      "input": "data/vlm_collection/scene_06.jpg",
+      "phrase": "airplane",
+      "box_threshold": 0.3
+    }
+  ],
+  "negative_control_pre_inference_inspection": "Original bicycle image inspected before inference: parked bicycle, building facade, doors, graffiti and pavement. No recognizable airplane or plausible aircraft object is visibly present; abstract graffiti is not verified to depict every possible symbol.",
+  "hypotheses": [
+    "A lower box threshold may recover weaker repeated-object candidates, but can admit unrelated regions or duplicates.",
+    "Alternative wording may change localization scores and extents; neither more detections nor culturally specific wording proves correctness.",
+    "The negative query is expected to return no detections; any returned box must remain visible in the record."
+  ],
+  "matrix_count": 8,
+  "negative_control_count": 1,
+  "unchanged_positive_baseline_replay_count": 1,
+  "strategy": "One lazy-loaded model reused sequentially; baseline replay is an acceptance check, not an additional threshold/query variation."
+}

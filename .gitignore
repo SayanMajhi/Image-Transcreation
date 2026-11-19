@@ -68,3 +68,6 @@ sayan.md
 # Additional generated checkpoint formats
 pytorch_model*.bin
 *.onnx
+
+# Generated review bundles duplicate retained source evidence; keep them locally.
+reports/*review*.zip

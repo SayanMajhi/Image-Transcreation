@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_type": "grounding_box_human_review",
+  "original_image_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+  "original_dimensions": [
+    1280,
+    842
+  ],
+  "source_phrase": "oil lamp",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "prediction_count": 8,
+  "detection_json_sha256": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+  "annotation_sha256": "d99ca620c4aa83d65258fd76c4b4f879d5661ebed4cdd94bbdf6bdf7dc1b4ffd",
+  "image_file": "original.jpg",
+  "detection_file": "detection.json",
+  "annotation_file": "annotated.png",
+  "prediction_indexing": "zero_based_detections_array",
+  "decision": "PENDING",
+  "selected_prediction_index": null,
+  "selected_prediction": null,
+  "candidate_kind": null,
+  "reviewer": null,
+  "explanation": "Awaiting explicit human review; no selection has been made.",
+  "created_at_utc": "2026-11-09T07:39:13.689004+00:00",
+  "reviewed_at_utc": null,
+  "inspected_original": false,
+  "inspected_boxes": false,
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false
+}

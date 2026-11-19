@@ -1,0 +1,6 @@
+{
+  "baseline": "Earlier V4 readiness current-checkout full offline run, 412 passed",
+  "source_files_checked": 54,
+  "source_tests_configs_identical": true,
+  "log_copy": "tests_before.json"
+}

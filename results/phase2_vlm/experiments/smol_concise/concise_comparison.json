@@ -1,0 +1,1197 @@
+{
+  "source_comparison": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\outputs\\vlm_comparison\\comparison.json",
+  "source_comparison_sha256": "5caa6e3a8d8a7899735dcce7d46995d295ddabcd5983005692fcdf3a206af8c3",
+  "prompt_variant": "concise_grounded",
+  "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+  "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+  "changed_factor": "Instruction text only",
+  "model_initializations": 1,
+  "inference_count": 11,
+  "generation_settings": {
+    "max_new_tokens": 128,
+    "num_beams": 1,
+    "do_sample": false,
+    "num_return_sequences": 1,
+    "use_cache": true
+  },
+  "model_generation_defaults": {
+    "max_length": 20,
+    "max_new_tokens": null,
+    "min_length": 0,
+    "min_new_tokens": null,
+    "early_stopping": false,
+    "max_time": null,
+    "stop_strings": null,
+    "do_sample": false,
+    "num_beams": 1,
+    "use_cache": true,
+    "cache_implementation": null,
+    "cache_config": null,
+    "return_legacy_cache": null,
+    "prefill_chunk_size": null,
+    "temperature": 1.0,
+    "top_k": 50,
+    "top_p": 1.0,
+    "min_p": null,
+    "typical_p": 1.0,
+    "epsilon_cutoff": 0.0,
+    "eta_cutoff": 0.0,
+    "repetition_penalty": 1.0,
+    "encoder_repetition_penalty": 1.0,
+    "length_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "bad_words_ids": null,
+    "renormalize_logits": false,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "remove_invalid_values": false,
+    "exponential_decay_length_penalty": null,
+    "suppress_tokens": null,
+    "begin_suppress_tokens": null,
+    "sequence_bias": null,
+    "token_healing": false,
+    "guidance_scale": null,
+    "watermarking_config": null,
+    "num_return_sequences": 1,
+    "output_attentions": false,
+    "output_hidden_states": false,
+    "output_scores": false,
+    "output_logits": null,
+    "return_dict_in_generate": false,
+    "pad_token_id": 2,
+    "bos_token_id": 0,
+    "eos_token_id": 49279,
+    "encoder_no_repeat_ngram_size": 0,
+    "decoder_start_token_id": null,
+    "is_assistant": false,
+    "num_assistant_tokens": 20,
+    "num_assistant_tokens_schedule": "constant",
+    "assistant_confidence_threshold": 0.4,
+    "prompt_lookup_num_tokens": null,
+    "max_matching_ngram_size": null,
+    "assistant_early_exit": null,
+    "assistant_lookbehind": 10,
+    "target_lookbehind": 10,
+    "disable_compile": false,
+    "low_memory": null,
+    "penalty_alpha": null,
+    "dola_layers": null,
+    "diversity_penalty": 0.0,
+    "num_beam_groups": 1,
+    "constraints": null,
+    "force_words_ids": null,
+    "_from_model_config": true,
+    "transformers_version": "4.57.6"
+  },
+  "original_summary": {
+    "image_count": 11,
+    "eos_completions": 6,
+    "completion_rate": 0.5454545454545454,
+    "token_ceiling_reached_count": 5,
+    "suspected_truncation_count": 5,
+    "median_inference_ms": 5617.28239999502,
+    "max_peak_gpu_memory_bytes": 1178738688
+  },
+  "concise_summary": {
+    "image_count": 11,
+    "eos_completions": 6,
+    "completion_rate": 0.5454545454545454,
+    "token_ceiling_reached_count": 5,
+    "suspected_truncation_count": 5,
+    "median_inference_ms": 4926.698700000998,
+    "max_peak_gpu_memory_bytes": 1178764288
+  },
+  "measurement_notes": "Only the eleven collection images ran, sequentially with one SmolVLM load. No Florence or sanity/warmup inference. The first concise execution is cold; original timings followed warmup. Loading and file reading are excluded from inference. CUDA peaks include resident weights, not total driver memory. The baseline is the original 128-token experiment, not the 256-token extension.",
+  "assessment": "Completion is measurable; factual usefulness, repetition and cultural correctness require manual review.",
+  "records": [
+    {
+      "image_id": "scene_01",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\durga.jpg",
+      "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+      "original": {
+        "caption": "The image depicts a large, ornate, and colorful deity, likely a Hindu goddess, prominently featured in the center of the image. The deity is seated on a throne, with its arms outstretched, and is surrounded by a large, swirling, and billowing cloud of smoke. The goddess is adorned with elaborate jewelry, including a large, ornate headdress, and a richly decorated skirt. Her body is adorned with multiple arms, each holding a different object, which may represent various aspects of the goddess's power or attributes.\n\nThe goddess is surrounded by a group of people, some of whom are holding objects, likely offerings",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          980,
+          692
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 5978.217800002312,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 128,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": false,
+        "token_ceiling_reached": true,
+        "image_id": "scene_01",
+        "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\durga.jpg",
+        "caption_words": 101,
+        "caption_characters": 619
+      },
+      "concise": {
+        "caption": "The image depicts a large, ornate deity with multiple arms, prominently featuring the goddess Durga. The goddess is seated on a throne and is surrounded by a large, swirling cloud of smoke. Her body is adorned with intricate patterns and jewelry, including a large, ornate headdress with multiple arms. The goddess is surrounded by a crowd of people, some of whom are holding objects resembling incense sticks, which are likely offerings to the goddess. The people are dressed in traditional Indian attire, and they are all smiling and appear to be in a festive mood.\n\nThe background includes a building with a large, white wall and a few trees",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          980,
+          692
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 6714.840400003595,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 128,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": false,
+        "token_ceiling_reached": true,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": true,
+        "image_id": "scene_01",
+        "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\durga.jpg",
+        "caption_words": 109,
+        "caption_characters": 644
+      }
+    },
+    {
+      "image_id": "scene_02",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_02.jpg",
+      "input_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+      "original": {
+        "caption": "In the image there are a lot of diyas placed on the floor.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          842
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 1103.1737999874167,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 16,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "image_id": "scene_02",
+        "input_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_02.jpg",
+        "caption_words": 13,
+        "caption_characters": 58
+      },
+      "concise": {
+        "caption": "In this image, there are a lot of small lights arranged on the floor. There are some coins placed on the floor.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          842
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 1499.9561999866273,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 26,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": false,
+        "image_id": "scene_02",
+        "input_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_02.jpg",
+        "caption_words": 22,
+        "caption_characters": 111
+      }
+    },
+    {
+      "image_id": "scene_03",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_03.jpg",
+      "input_sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0",
+      "original": {
+        "caption": "A large, colorful lion costume is being worn by a group of people in a street. The costume is yellow, red, and gold, and it has a large, round head with a red nose and two large, yellow eyes. The costume has a long, curling tail, and the arms are outstretched to the sides. The people wearing the costume are standing on a street, and there are other people standing in the background. There are buildings in the background, and the sky is blue with some scattered clouds.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          1443
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 5060.266800006502,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 106,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "image_id": "scene_03",
+        "input_sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_03.jpg",
+        "caption_words": 88,
+        "caption_characters": 472
+      },
+      "concise": {
+        "caption": "The image depicts a street scene featuring a large, colorful lion costume being worn by a performer. The costume is predominantly yellow with red accents, featuring intricate patterns and designs. The lion's face is prominently featured, with large, expressive eyes and a wide, open mouth that reveals a series of sharp teeth. The costume also includes a mane that is adorned with additional red and yellow patterns.\n\nThe performer is dressed in yellow pants and red shoes, which are typical of lion dance costumes. The performer is holding a long, thin stick in their right hand, which is likely used to control the lion's movements. The background of the",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          1443
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 5812.024400016526,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 128,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": false,
+        "token_ceiling_reached": true,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": true,
+        "image_id": "scene_03",
+        "input_sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_03.jpg",
+        "caption_words": 109,
+        "caption_characters": 656
+      }
+    },
+    {
+      "image_id": "scene_04",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_04.jpg",
+      "input_sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+      "original": {
+        "caption": "A woman kneels on a table in front of a tea pot and a dish of food. There is an umbrella behind her. There are red tablecloths on the seating area. There are trees behind the seating area.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          960
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 2342.5189000117825,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 46,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "image_id": "scene_04",
+        "input_sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_04.jpg",
+        "caption_words": 38,
+        "caption_characters": 188
+      },
+      "concise": {
+        "caption": "A woman kneeling on a table in front of a tea set with an umbrella.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          960
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 1237.4813000205904,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 18,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": false,
+        "image_id": "scene_04",
+        "input_sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_04.jpg",
+        "caption_words": 15,
+        "caption_characters": 67
+      }
+    },
+    {
+      "image_id": "scene_05",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_05.jpg",
+      "input_sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99",
+      "original": {
+        "caption": "The image depicts a vibrant and colorful table setup, likely intended for a festive or celebratory occasion. The table is covered with a yellow tablecloth, which is complemented by a colorful patterned drape that includes shades of purple, yellow, and red. The table is also adorned with various fruits and vegetables, arranged in a visually appealing manner.\n\nStarting from the top, there is a framed photograph of a person, likely a family member or close friend, positioned in the center of the table. The photograph is bordered by a decorative frame, adding a touch of elegance to the setup. Below the photograph, there is a bowl filled with",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          1912
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 7655.522699991707,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 128,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": false,
+        "token_ceiling_reached": true,
+        "image_id": "scene_05",
+        "input_sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_05.jpg",
+        "caption_words": 108,
+        "caption_characters": 645
+      },
+      "concise": {
+        "caption": "The image features a vibrant and colorful table setup, adorned with various fruits and vegetables. At the center of the table is a framed photo of a person, likely a family or a significant figure, adding a personal touch to the arrangement. Surrounding the photo are an assortment of fruits, including bananas, apples, and pomegranates, all neatly arranged in a visually appealing manner.\n\nOn the table, there are also several bowls and baskets filled with fresh produce, including tomatoes, cucumbers, and leafy greens. These items are arranged in a way that suggests a variety of fresh produce, indicating a focus on healthy eating.\n\nIn the background",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          1912
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 6133.019900007639,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 128,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": false,
+        "token_ceiling_reached": true,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": true,
+        "image_id": "scene_05",
+        "input_sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_05.jpg",
+        "caption_words": 106,
+        "caption_characters": 654
+      }
+    },
+    {
+      "image_id": "scene_06",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_06.jpg",
+      "input_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+      "original": {
+        "caption": "A medium outdoor shot shows a row of black doors with graffiti on them, a bicycle leaning against the sidewalk in front of the doors, and a brick sidewalk in the foreground. The doors are framed by a white wall, and the graffiti on the doors includes a blue cat, the word \"AGAN\" in white, and the word \"Lane\" in white. The bicycle is a standard two-wheeled bike with a black frame and blue seat. The sidewalk is made of red bricks, and the bricks are laid in a herringbone pattern.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          966
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 5617.28239999502,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 112,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "image_id": "scene_06",
+        "input_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_06.jpg",
+        "caption_words": 91,
+        "caption_characters": 481
+      },
+      "concise": {
+        "caption": "A bicycle is leaning against a set of black doors. The doors are framed with white trim and have graffiti on them. The graffiti is in various colors including blue, white, yellow, and black. The bicycle is black and has a front basket. The sidewalk is made of brick and is lined with black doors.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          966
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 3117.294399999082,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 64,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": false,
+        "image_id": "scene_06",
+        "input_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_06.jpg",
+        "caption_words": 55,
+        "caption_characters": 296
+      }
+    },
+    {
+      "image_id": "scene_07",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_07.jpg",
+      "input_sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+      "original": {
+        "caption": "The image depicts a cozy, rustic interior of a traditional house. The room is dimly lit, with a warm orange hue, suggesting that it is either early morning or late afternoon. The walls are made of rough-hewn stone, giving the space a rustic and homely feel. The ceiling is made of wooden beams, adding to the rustic charm of the room.\n\nIn the center of the room, there is a small, round, glowing fire pit. The fire pit is surrounded by a few items: a few metal pots and pans, a small bowl, and a few other objects that appear to be cooking utensils.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          914
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 6192.096700004186,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 128,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": false,
+        "token_ceiling_reached": true,
+        "image_id": "scene_07",
+        "input_sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_07.jpg",
+        "caption_words": 104,
+        "caption_characters": 549
+      },
+      "concise": {
+        "caption": "The image depicts a cozy, traditional living space. The room is constructed with earthy tones, primarily red, orange, and brown, giving it a warm and inviting atmosphere. The walls are made of rough-hewn stones, and the ceiling is constructed from wooden beams. The room features a thatched roof, which adds to the rustic charm of the space.\n\nIn the center of the room, there is a small, round, glowing fire pit. The fire pit is surrounded by a mat, and a few items are placed around it, including a bowl, a ladle, and a few other cooking utensils. The fire is",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          914
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 6220.571400015615,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 128,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": false,
+        "token_ceiling_reached": true,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": true,
+        "image_id": "scene_07",
+        "input_sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_07.jpg",
+        "caption_words": 101,
+        "caption_characters": 560
+      }
+    },
+    {
+      "image_id": "scene_08",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_08.jpg",
+      "input_sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c",
+      "original": {
+        "caption": "In an outdoor setting, a group of young men are playing soccer on a stone-paved area. One of the players is in a blue shirt with the number 38 on the back. The player is stretching out his body with one arm extended towards the ball. Another player is in a white shirt with a blue and black graphic on the back. The player in the white shirt is looking at the player in the blue shirt. The player in the blue shirt is looking at the ball. The player in the white shirt has his arms extended out to the sides. The player in the blue shirt has his arms extended out to the",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          835
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 6218.498400005046,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 128,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": false,
+        "token_ceiling_reached": true,
+        "image_id": "scene_08",
+        "input_sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_08.jpg",
+        "caption_words": 115,
+        "caption_characters": 570
+      },
+      "concise": {
+        "caption": "In an outdoor setting, a group of young men are playing soccer. One of them is wearing a blue shirt with the number 38 on the back. The other players are in various poses, some stretching, others running. In the background, there is a brick wall and several other people standing and walking.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          835
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 3148.567700001877,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 64,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": false,
+        "image_id": "scene_08",
+        "input_sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_08.jpg",
+        "caption_words": 53,
+        "caption_characters": 292
+      }
+    },
+    {
+      "image_id": "scene_09",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_09.jpg",
+      "input_sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a",
+      "original": {
+        "caption": "The image depicts a scene of a kitchen or cooking area. The primary objects in the image include:\n\n1. **People**: There are three individuals in the image. \n   - **Person in the Front**: This person is standing and appears to be holding a large bowl or container. The person is wearing a long, dark-colored garment, possibly a skirt or a long coat.\n   - **Person Behind the Person in the Front**: This person is standing behind the person in the front. They are wearing a light-colored garment, possibly a shirt or a jacket.\n   - **Person Behind the Person Behind the Person**: This",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          897
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 6743.704200009233,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 128,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": false,
+        "token_ceiling_reached": true,
+        "image_id": "scene_09",
+        "input_sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_09.jpg",
+        "caption_words": 100,
+        "caption_characters": 582
+      },
+      "concise": {
+        "caption": "A painting of a kitchen scene. There are three women in the kitchen. One woman is holding a bowl.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          897
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 1407.2865000052843,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 23,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": false,
+        "image_id": "scene_09",
+        "input_sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_09.jpg",
+        "caption_words": 19,
+        "caption_characters": 97
+      }
+    },
+    {
+      "image_id": "scene_10",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_10.jpg",
+      "input_sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643",
+      "original": {
+        "caption": "An aerial shot of the Netherlands. The river IJsselmeer is on the left side of the image, and the IJsselmeer is on the right side. The IJsselmeer is a large river that flows from the North Sea to the South Sea. The Netherlands is a country in Western Europe. The Netherlands is known for its canals. The canals are a major feature of the Netherlands. The Netherlands is a country that is known for its architecture. The architecture is a mix of Dutch and European styles.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          1696
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 5299.933999995119,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 111,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "image_id": "scene_10",
+        "input_sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_10.jpg",
+        "caption_words": 86,
+        "caption_characters": 471
+      },
+      "concise": {
+        "caption": "An aerial shot of the Netherlands, showing the IJ (the most important river in the country) and the IJsselmeer (the second most important river). The IJ is a narrow strip of water between the Netherlands and Belgium. The IJsselmeer is a large river that flows through the center of the country. The Netherlands is a country in Europe, and the IJsselmeer is a major river in the country.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          1696
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 4926.698700000998,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 95,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": false,
+        "image_id": "scene_10",
+        "input_sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_10.jpg",
+        "caption_words": 68,
+        "caption_characters": 386
+      }
+    },
+    {
+      "image_id": "scene_11",
+      "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_11.jpg",
+      "input_sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d",
+      "original": {
+        "caption": "A train station with two trains parked facing away from the viewer. The train on the right is a blue train with a red sign on top of it. The train on the left is a white train with a blue stripe along the side. There is a pole in the foreground with a sign on it that says \"1\". There is snow on the ground. The sky is dark with a thick, dark cloud above the station.",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          852
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1651.29490000254,
+        "inference_ms": 4192.089100004523,
+        "peak_gpu_memory_bytes": 1178738688,
+        "generated_tokens": 87,
+        "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": true,
+        "token_ceiling_reached": false,
+        "image_id": "scene_11",
+        "input_sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_11.jpg",
+        "caption_words": 78,
+        "caption_characters": 366
+      },
+      "concise": {
+        "caption": "The scene depicts a snowy train station at night. The station is equipped with a red light, indicating that it is operational. The ground is covered in snow, and the tracks are empty. There are two trains parked at the station, both of which are blue. The train on the left is a double-decker, while the one on the right is a single-decker. Both trains have their headlights on, suggesting that they are either at a stop or in motion.\n\nAbove the station, the sky is dark, and there are clouds, which are typical for a night scene. The lighting is sufficient to illuminate",
+        "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+        "image_dimensions": [
+          1280,
+          852
+        ],
+        "seed": 42,
+        "task": "caption",
+        "generation_settings": {
+          "max_new_tokens": 128,
+          "num_beams": 1,
+          "do_sample": false,
+          "num_return_sequences": 1,
+          "use_cache": true
+        },
+        "device": "cuda",
+        "precision": "float16",
+        "torch_version": "2.15.0+cu132",
+        "transformers_version": "4.57.6",
+        "model_loading_ms": 1830.0048999954015,
+        "inference_ms": 6137.156300013885,
+        "peak_gpu_memory_bytes": 1178764288,
+        "generated_tokens": 128,
+        "prompt_text": "Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.",
+        "formatted_prompt": "<|im_start|>User:<image>Describe the main subject, activity, important visible objects, and their relationships in at most four short sentences. Prioritize details essential to understanding the scene. Avoid repetition, speculation, and unsupported cultural identities. Do not describe minor background details unless they are important.<end_of_utterance>\nAssistant:",
+        "processor_settings": {
+          "size": {
+            "longest_edge": 1024
+          },
+          "do_image_splitting": true,
+          "max_image_size": {
+            "longest_edge": 512
+          },
+          "attention_implementation": "sdpa"
+        },
+        "eos_reached": false,
+        "token_ceiling_reached": true,
+        "prompt_variant": "concise_grounded",
+        "suspected_truncation": true,
+        "image_id": "scene_11",
+        "input_sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d",
+        "input_image": "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\data\\vlm_collection\\scene_11.jpg",
+        "caption_words": 104,
+        "caption_characters": 571
+      }
+    }
+  ]
+}

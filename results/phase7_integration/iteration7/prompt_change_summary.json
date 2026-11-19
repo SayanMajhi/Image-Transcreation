@@ -1,0 +1,13 @@
+{
+  "old_sha256": "225239c922face796c1d335a05c50e14ed91da2e825390e1afe10d0e2f3eaf3a",
+  "new_sha256": "a8f94e6e1f05afc91450b8561fb82d80afa84134d88f5d9b36bd81b483e8a83b",
+  "old_prompt_characters": 3178,
+  "new_prompt_characters": 4626,
+  "inserted_characters": 1448,
+  "old_prompt_preserved_verbatim_outside_insertion": true,
+  "generic_example": "red ceramic cup / exterior color change; no cultural rule.",
+  "experiment_specific_terms_in_added_block": false,
+  "nonprompt_adapter_ast_unchanged": true,
+  "schema_unchanged": true,
+  "validator_unchanged": true
+}

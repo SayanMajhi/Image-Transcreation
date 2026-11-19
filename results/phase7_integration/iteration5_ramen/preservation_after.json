@@ -1,0 +1,37 @@
+{
+  "checked": 572,
+  "changed": [
+    "results/phase7_integration/phase7_working_report.md"
+  ],
+  "unexpected_changes": [],
+  "previous_report_exact_prefix": true,
+  "source_image_unchanged": true,
+  "source_copy_exact": true,
+  "all_native_artifact_hashes_verified": [
+    {
+      "artifact": "pipeline_input.json",
+      "sha256_matches": true
+    },
+    {
+      "artifact": "source",
+      "sha256_matches": true
+    },
+    {
+      "artifact": "caption.json",
+      "sha256_matches": true
+    },
+    {
+      "artifact": "planning_input.json",
+      "sha256_matches": true
+    },
+    {
+      "artifact": "planner_audit.json",
+      "sha256_matches": true
+    },
+    {
+      "artifact": "validated_plan.json",
+      "sha256_matches": true
+    }
+  ],
+  "configs_and_application_unchanged": true
+}

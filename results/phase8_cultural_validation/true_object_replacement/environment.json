@@ -1,0 +1,14 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9",
+  "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+  "Pillow": "13.0.0",
+  "numpy": "2.4.6",
+  "opencv": "5.0.0",
+  "execution": "CPU classical compositing only",
+  "new_model_inferences": 0,
+  "new_compositing_experiments": 2,
+  "CUDA_peak": "not applicable: no CUDA/model code invoked",
+  "full_preparation_wall_time": "not instrumented; per-composite wall times in A/B execution.json",
+  "remaining_human_evaluation": "PENDING; no user review of corrected B yet"
+}

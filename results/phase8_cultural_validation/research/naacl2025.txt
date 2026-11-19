@@ -1,0 +1,1086 @@
+PAGE 1
+Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies
+(V olume 1: Long Papers), pages 7034–7047
+April 29 - May 4, 2025 ©2025 Association for Computational Linguistics
+Towards Automatic Evaluation for Image Transcreation
+Simran Khanuja1∗ Vivek Iyer2∗ Claire He2 Graham Neubig1
+1Carnegie Mellon University 2University of Edinburgh
+skhanuja@andrew.cmu.edu vivek.iyer@ed.ac.uk
+Abstract
+Beyond conventional paradigms of translating
+speech and text, recently, there has been in-
+terest in automated transcreation of images to
+facilitate localization of visual content across
+different cultures. Attempts to define this as a
+formal Machine Learning (ML) problem have
+been impeded by the lack of automatic eval-
+uation mechanisms, with previous work rely-
+ing solely on human evaluation. In this pa-
+per, we seek to close this gap by proposing a
+suite of automatic evaluation metrics inspired
+by machine translation (MT) metrics, catego-
+rized into: a) Object-based, b) Embedding-
+based, and c) VLM-based. Drawing on the-
+ories from translation studies and real-world
+transcreation practices, we identify three criti-
+cal dimensions of image transcreation: cultural
+relevance, semantic equivalence and visual sim-
+ilarity, and design our metrics to evaluate sys-
+tems along these axes. Our results show that
+proprietary VLMs best identify cultural rele-
+vance and semantic equivalence, while vision-
+encoder representations are adept at measur-
+ing visual similarity. Meta-evaluation across
+7 countries shows our metrics agree strongly
+with human ratings, with average segment-level
+correlations ranging from 0.55-0.87. Finally,
+through a discussion of the merits and demerits
+of each metric, we offer a robust framework
+for automated image transcreation evaluation,
+grounded in both theoretical foundations and
+practical application. Our code can be found
+here.1
+1 Introduction
+While MT has made commendable progress in the
+text and speech modalities (Kocmi et al., 2024; Ah-
+mad et al., 2024), there has recently been interest
+in the ML community to approach translation in
+the visual modality. This new task, called image
+∗denotes equal contribution
+1https://github.com/simran-khanuja/
+automatic-eval-transcreation
+(a) Source: United States
+ (b) Target: Middle East
+Figure 1: Image Transcreation in the real world: The
+Simpsons (1989) was remade into Al-Shamshoon (2005)
+for a Middle-Eastern audience.
+transcreation, seeks to adapt (or localize) images
+originating from a source culture for a given target
+culture in an attempt to enhance familiarity and
+relatability for the target audience (Khanuja et al.,
+2024). We provide a popular real-world example of
+image transcreation in Figure 1, where content was
+recreated to match cultural norms of a target audi-
+ence. While this problem is well-explored in trans-
+lation studies (Section 2) and is carried out widely
+in industrial settings by human translation experts
+(Section 3), it has not yet taken off in ML, despite
+the availability of powerful Vision-Language Mod-
+els (VLMs). A central reason for this is the lack
+of automated evaluation mechanisms, with prior
+works relying solely on expensive human evalu-
+ation. Khanuja et al. (2024), for instance, report
+spending about 4000 USD for annotating a test
+set of 3500 images across 7 countries, with only
+1 annotator per image. While such a contribution
+is indeed beneficial, as ML researchers, we natu-
+rally need automated metrics to train, validate and
+benchmark image transcreation systems at scale.
+And yet, the very nature of the task makes it dif-
+ficult to propose a singular automated metric. Un-
+like traditional Natural Language Processing (NLP)
+problems like summarization or translation that
+have a relatively small space of valid outputs, there
+can be multiple valid ways of transcreating images.
+7034
+PAGE 2
+The suitability of an adaptation depends on fac-
+tors like the intent/demands of the user/application,
+the creativity of the transcreator and the degree of
+cultural relevance required for the target audience.
+This subjectivity makes it hard to define a singular
+metric like BLEU (Papineni et al., 2002), ROUGE
+(Lin, 2004), or even neural metrics like COMET
+(Rei et al., 2020) that optimize for similarity of
+model outputs against a fixed set of reference(s).
+In this paper, we make progress towards building
+and evaluating automated metrics for image tran-
+screation. First, given that this is a novel task in
+ML, we turn to translation studies for a better under-
+standing of its scope and variables (Section 2). We
+identify key dimensions critical to define the image
+transcreation process: cultural relevance, seman-
+tic equivalence, and visual similarity, and look at
+real-world applications of transcreation through the
+lens of these dimensions in Section 3. Grounded
+in the conceptual and practical insights from pre-
+vious sections, and drawing inspiration from MT
+metrics for text, we propose three metrics that ac-
+count for the varied dimensions of this subjective
+task – a) Object-based; b) Embedding-based and
+c) VLM-based metrics, each of which leverages
+powerful open and closed VLMs and Large Lan-
+guage Models (LLMs). After conducting meta-
+evaluation along all three dimensions, we report
+average segment-level (i.e. instance-level) correla-
+tions with human ratings of up to 0.87 on image
+transcreation test-sets spanning 7 countries. Thus,
+our primary contributions are:
+1. We propose three image transcreation met-
+rics that are a) Object-based; b) Embedding-
+based and c) VLM-based that achieve strong
+segment-level correlation, and to the best of
+our knowledge, are the first set of automatic
+evaluation metrics for this task.
+2. We assess the capabilities of powerful open
+and closed VLMs like Gemini, GPT-4o and
+Molmo to recognise, compare and reason over
+culturally specific objects in images, contribut-
+ing to growing research in this area;
+3. Finally, we widen the scope of image tran-
+screation for ML researchers by drawing from
+translation studies literature and elucidating
+complex real-world examples of this task. We
+hope this helps advance ML research on this
+challenging but important problem.
+2 Transcreation in Translation Studies
+Transcreation has been widely studied by linguists
+and philosophers in translation studies. We trace
+its development in this linguistics-adjacent field
+below, to ground our evaluation in this research.
+Definitions of Transcreation: Transcreation, a
+concept introduced by the translation industry in
+the last century, has been developed to help clients
+of translation service providers tailor marketing
+campaigns for foreign markets (Ray and Kelly,
+2010), and is generally commonly associated with
+creative industries like advertising and entertain-
+ment. With its growing popularity, various defini-
+tions were proposed to underscore its difference
+from translation. Today, transcreation is gener-
+ally described as a blend of linguistic translation,
+cultural adaptation, and creative reinterpretation
+of text elements (Díaz-Millón and Olvera-Lobo,
+2023). Given its “cultural” and “creative” aspects,
+it is also seen as a hybrid practice between “trans-
+lating” and “copywriting” (Benetello, 2018). As
+Ray and Kelly (2010) emphasize, transcreation fo-
+cuses on effectively conveying the original message
+in a way that resonates with the target audience,
+even if this requires substantial deviations from the
+original text or imagery. The source text can be
+dethroned to apply focus on the target culture.
+Parameterizing Transcreation: Broadly, as
+Venuti (2017) discusses, translation often navigates
+between the dichotomy of foreignization, which
+emphasizes preserving the source culture, and do-
+mestication, which adapts the content to fit the
+target culture. Various terms have been used to
+describe the ends of this spectrum, such as “literal”
+vs. “free”, “formal” vs. “dynamic”, and “semantic”
+vs. “communicative”. Yet, no translation deci-
+sion is ever solely one or the other (Venuti, 2017)
+and translators continuously navigate this spectrum,
+weighing several critical factors.
+In transcreation, this dichotomy is even more
+pronounced, and there is a strong emphasis on mak-
+ing the content feel relevant and engaging in a new
+cultural context, especially in areas like marketing
+and entertainment. This often involves adjusting or
+replacing Culturally Specific Items (CSIs), where
+cultural references from the source material may
+not translate well into the target culture (Aixelá,
+1996). The goal is to make the adapted content
+not only culturally relevant, but also effective in
+reaching and persuading the audience.
+A key factor in guiding the transcreation beyond
+7035
+PAGE 3
+cultural relevance, is the user/application’s intent
+behind the process. Skopos theory (Reiss et al.,
+2014) emphasizes that all translation activities are
+intrinsically purpose-driven. In the context of tran-
+screation, the intent can be as broad as the overall
+goals of a marketing campaign or as specific as
+the instructions in a project brief (Díaz-Millón and
+Olvera-Lobo, 2023). Whether the aim is to inform,
+persuade, or entertain, the intent determines how
+much of the original material is adapted to suit the
+target audience’s needs (Ray and Kelly, 2010).
+Finally, transcreation requires a high degree of
+creativity. Creativity is the core component that
+drives the transcreation process, extending beyond
+accuracy of faithfulness to the source, to involve
+a comprehensive reimagining of content (Martín,
+2024). Creativity becomes the mechanism through
+which intent and cultural relevance are aligned. As
+Nord (2009) points out, this creative process often
+demands unique, non-replicable solutions tailored
+to the specific needs of each project.
+3 Visual Transcreation in the Wild
+While text translation operates in a relatively con-
+strained and predictable output space, image tran-
+screation allows for a broader range of creative
+expression and the desired output depends on the
+user’s objectives and application context, as eluci-
+dated above. This intent or purpose of transcre-
+ation also drives the extent of (a)cultural relevance,
+(b) semantic equivalence, and (c) visual similarity
+needed in the final output, as we describe below:
+3.1 Advertisements
+Intent: to emotionally relate to the target audience,
+while preserving the core brand identity
+Given the strong focus on being relatable to the
+target audience to maximize product sales, we of-
+ten see ad transcreations span a broad spectrum of
+creativity. A well-known example is Coca-Cola,
+which embodies its slogan, “Think Global, Act
+Local”, by maintaining brand consistency while
+seamlessly integrating cultural elements into its
+ads. For example, they released a Lunar New Year
+ad in Korea to celebrate the year of the rabbit (Fig-
+ure 2). In a particularly ambitious example, they
+transcreated an entire video ad, using different ac-
+tors speaking in different languages, but with the
+script being exactly the same otherwise (Coca-Cola,
+2023). Beyond region-specific adaptations, some
+ads also focus on universal themes while still target-
+Figure 2: The Coca-Cola homepage depicts different
+cultural concepts in different countries (TranslatePlus,
+2023). The top row shows Marvel-themed ads where
+visuals are consistent but the text is translated for ac-
+cessibility, while the bottom one depicts the Lunar New
+Year to celebrate the Year of the Rabbit in Korea.
+ing specific audiences, such as their Marvel-themed
+campaign (Figure 2). When released in different re-
+gions, these are minimally transcreated, often only
+translating the text while keeping the visuals un-
+changed. In some cases, subtle visual differences
+can emerge across regions, even when ads present
+similar concepts. For instance, in Figure 3, both
+Slack ads promote hybrid work, but the Japanese
+and U.S. versions modify the names and avatars to
+better reflect the demographics of each country.
+Overall, transcreators exhibit a strong focus on
+cultural relevance of the final output, and preserv-
+ing the exact meaning of the source image and even
+its spatial layout may not be necessary (as we see
+in the Marvel / Lunar New-Year example). Hence,
+transcreators would prefer models that can make
+outputs highly culturally relevant, while seman-
+tic equivalence and visual similarity can be given
+lower priorities.
+3.2 Comics
+Intent: to adapt the story and characters in a way
+that remains faithful to the original while making
+them accessible to a new audience
+In the early days of comic and manga transcre-
+ation, adaptations often prioritized cultural rele-
+vance and accessibility for the target audience.
+Translators and publishers frequently made signifi-
+cant changes to align with local norms and expec-
+tations, believing this would enhance the appeal
+7036
+PAGE 4
+(a) Japan advertisement
+ (b) US advertisement
+Figure 3: Both Slack ads convey how the product can be used to facilitate hybrid work, but the names and avatars of
+users are localized to reflect the demographics of each country. Figures sourced from Olaussen.
+of the material. However, over time, audiences
+prefer content that remains faithful to its original
+form, valuing authenticity over localized adjust-
+ments. This is best exemplified by the evolution
+of Japanese manga transcreation for Western audi-
+ences. In early days, U.S. publishers believed that
+altering key elements like reading direction would
+make it more accessible. In Akira, for instance,
+pages were flipped for left-to-right reading, but this
+caused significant cultural errors. Japanese cars
+were incorrectly depicted as driving on the right,
+and characters were shown left-handed, even in sit-
+uations where this affected key plot points, such as
+losing their dominant hand in a fight (Gianordoli
+and Ito, 2023). Over time, it became clear that
+fidelity is strongly preferred over creativity in
+the transcreation of comics, particularly by manga
+fans.2,3
+However, there are still instances where adap-
+tation is unavoidable, often driven by the need to
+align with social norms, legal requirements, cul-
+tural differences, or when concepts are completely
+absent in the target culture. For example, when
+Disney comics like Tarzan and Donald Duck were
+adapted for Kuwait and the UAE, changes were
+made to clothing to conform to local cultural ex-
+pectations (Figure 4). Similarly, in Marvel’s The
+Punisher, a swastika tattoo on a villain was re-
+placed with a parallelogram when adapted for Ger-
+2https://tinyurl.com/58vzy6xu
+3https://tinyurl.com/5c6wua42
+many, adhering to the country’s strict legal restric-
+tions on the depiction of Nazi symbols (Zanettin
+et al., 2014). In the US TV adaptation of the
+manga, Sailor Moon, the character of Artemis, a
+cat, was creatively adapted to match the stereo-
+types and perceptions of American culture (Figure
+5) – showing transcreation also needs to factor in
+cultural ideas and beliefs. Finally, we note that
+Japanese manga often uses onomatopoeia to rep-
+resent sounds, which is less common in Western
+comics. For instance, in Tsuge Yoshiharu’s The
+Swamp, the sound of a rifle crack was changed
+from “zdom” to “kbooom, a term more familiar for
+the target audience (Gianordoli and Ito, 2023).
+Overall, we note that while readers typically pre-
+fer transcreations that remain true to the original,
+adaptations are sometimes necessary to meet social
+norms, legalities, or cultural differences. Hence,
+models that pay more attention to semantic equiv-
+alence and visual similarity would be preferred,
+even at the cost of lower cultural relevance for the
+target audience.
+3.3 Children’s Media
+Intent: to aid learning and cognitive development
+through familiar objects, concepts and experiences
+Several studies highlight how incorporating fa-
+miliar imagery and references improves cognitive
+engagement for children by making abstract con-
+cepts easier to grasp (Unicef et al., 2018; Purcell-
+Gates et al., 2011). We see several examples of this,
+7037
+PAGE 5
+(a) Brad of the Jungle (Kuwaiti version)
+ (b) Donald Duck (UAE adaptation)
+Figure 4: Examples of transcreation to adhere to cultural norms. Left: Tarzan covers his thighs with culturally
+appropriate clothing; Right: woman is completely dressed in black.
+Figure 5: Transcreation reflecting cultural differences–
+in the U.S. adaptation of Sailor Moon, Artemis is por-
+trayed as cunning and mischievous (“catty"), while in
+Japan, cats are seen as part of the cute kawaii culture.
+for example in Pixar and Disney movies, like in
+Zootopia (2016) where the character of the news-
+caster was adapted to match a country’s national
+animal (Figure 6). Another prominent example is
+Dora the Explorer, where Dora switches between
+Hindi and English in its adaptation for India, ref-
+erences local animals like the tiger and peacock,
+and also talks about issues affecting female chil-
+dren like early marriage, and unequal distribution
+of household chores (Khalid, 2012). This approach
+not only promotes bilingual learning and concept-
+learning, but also empowers children to challenge
+social norms. Sesame Square, Sesame Street’s
+adaptation in Nigeria, similarly had Muppets who
+spoke with a Nigerian English accent and tackled
+weighty issues such as HIV/AIDS discrimination,
+hygienic practices and ways to cope with death
+(Sangillo, 2019). Beyond movies and TV , educa-
+tional apps like Toca Boca also incorporate region-
+specific foods (like sushi in Japan), festivals (like
+the Lunar New Year in China), and clothing styles,
+to ensure that children are interacting with cultur-
+ally familiar elements while learning new concepts.
+Figure 6: The newscaster in the Pixar movie "Zootopia"
+was transcreated based on the country: a moose for the
+US/Canada/France, a panda for China, a koala for New
+Zealand/Australia, and a jaguar for Brazil.
+Overall, we again notice a stronger focus on cul-
+tural relevance for the target audience, which can
+come at the cost of visual similarity or complete
+semantic equivalence, even though themes are sim-
+ilar (like in the adaptation of Dora the Explorer or
+Spiderman for India). However, in certain cases
+like for Pixar movies, which specifically focus on
+creating global content, minimal changes are made
+for cultural relevance, and visual similarity + se-
+mantic equivalence takes precedence.
+4 Proposing Automatic Metrics
+Khanuja et al. (2024) conduct a multi-faceted hu-
+man evaluation to assess image transcreation sys-
+7038
+PAGE 6
+tems. Despite being a great first step, a key limita-
+tion of the human evaluation questions they design
+is the lack of grounding in related work from adja-
+cent fields, as well as their specificity to the test set
+they create. From the theories we study in Section
+2, and by diving deep into what applications actu-
+ally need (Section 3), we identify three factors crit-
+ical to a transcreation process, each of which may
+have different preferences based on the user/task:
+namely cultural relevance, semantic equivalence,
+and visual similarity. Hence, we must design met-
+rics that can capture all three dimensions.
+But how do we design such metrics? Similar to
+text-level translation that aims to transfer source-
+side semantics to a target language, during image
+transcreation, the goal is to recreate visual ideas for
+a target culture. Tracing the history of MT evalu-
+ation, we observe that it first started with human
+annotators evaluating the adequacy, fluency, and
+overall quality of the translation. Given high costs
+and time latency associated with this process, au-
+tomatic metrics began to develop, which can be
+broadly categorized into lexical-based, embedding-
+based, and more recently, LLM-based metrics (Fu
+et al., 2023; Liu et al., 2023). Lexical-based met-
+rics measure similarity between the hypothesis and
+reference by a mathematical formula, and are word-
+based or character-based depending on the match-
+ing units (BLEU (Papineni et al., 2002), METEOR
+(Banerjee and Lavie, 2005)). Embedding-based
+metrics use dense vector representations of hy-
+potheses and references to measure their similarity
+(Zhang* et al., 2020; Yuan et al., 2021; Lo, 2019),
+and metrics like COMET (Rei et al., 2020) also
+train regression models on human judgments of
+translation quality. Finally, LLM-based metrics
+have recently emerged, leveraging LLMs to eval-
+uate translations by using their contextual under-
+standing and reasoning capabilities. For example,
+GPTScore (Fu et al., 2023) showed how GPT could
+be prompted to score hypotheses. Further, G-Eval
+(Liu et al., 2023) leveraged GPT-4 for evaluating
+generation based on open-ended reasoning, while
+Gemba-MQM (Kocmi and Federmann, 2023) used
+the same model to detect translation error spans
+and achieved SOTA system-level correlation in the
+WMT’23 Metrics Shared Task.
+Drawing from the above lineage, a parallel evo-
+lution of metrics for image transcreation is listed
+below:
+4.1 Object-based metrics
+Inspired by BLEU (Papineni et al., 2002), we pro-
+pose an object-based metric that evaluates how well
+the model replaces culturally-salient objects with
+valid replacements, given the intent and target de-
+mographic. Concretely, this would involve:
+• Step 1: Object Identification : Identify all
+objects in both the source and target (model
+output) images.
+• Step 2: Obtain Valid Translations: Condi-
+tioned on the intent of transcreation, identify
+the culturally-specific items (CSIs) (Aixelá,
+1996) that would be unfamiliar to the target
+culture. Subsequently, determine a valid set
+of replacements for each CSI based on the
+constraints of this intent.
+• Step 3: Metric Calculation : Calculate the
+proportion of CSIs that have been correctly
+replaced. This is determined by checking
+whether the target CSI is a valid replacement
+of the source CSI according to Step 2.
+For example, let’s say we are transcreating a
+US-based image for Japan, and the source image
+contains three objects identified as CSIs: broccoli,
+spoon, and a dollar bill. Let’s say that given a
+generic intent of relatability to the target audience,
+valid replacements are identified as: a) broccoli:
+{bell pepper, radish}; b) dollar bill: {yen note}; c)
+spoon: {chopsticks}.
+Now, consider the model output contains the
+following objects: bell pepper (correct replacement
+for broccoli), spoon (not replaced) and a euro bill
+(incorrect replacement for dollar bill). Given the
+model correctly replaces one out of three CSIs, we
+get a score of 0.33.
+CSI-Overlap = 1 + 0 + 0 3 = 1 3 ≈ 0.33
+4.2 Embedding-based Metrics
+In MT, embedding-based metrics compare contex-
+tual embeddings of the target and reference texts.
+For image transcreation, collecting large amounts
+of parallel data seems infeasible at present. Instead,
+we can leverage powerful vision-language encoders
+to evaluate transcreation outputs across the three
+axes discussed in Section 3:
+a) cultural relevance: can be measured by evalu-
+ating the change in similarity between the visual
+embeddings of the source Vsource and transcreated
+7039
+PAGE 7
+image Vtarget relative to a cultural reference text
+Tculture, here, "This image is from region X." Math-
+ematically:
+∆Sc-r = cosine(Vtgt, Tcul) − cosine(Vsrc, Tcul)
+where ∆Sc-r represents the change in similarity
+that indicates cultural relevance. Vtgt and Vsrc
+are the visual embeddings of the transcreated
+(target) image and the source image, respectively.
+Tcul is a textual representation of the cultural
+reference, such as "This image is from region
+X.". A higher increase in ∆Sc-r indicates a greater
+change towards cultural relevance for the target
+demographic.
+b) semantic equivalence: can be measured by the
+similarity between the transcreated image’s visual
+representation Vtarget and the textual representation
+of the intent Tint. For example, if we are transcreat-
+ing one food item into another food item, this can
+be measured using the cosine similarity between
+the target image embeddings and the text, "This is
+a food item". Mathematically:
+Ss-e = cosine(Vtarget, Tint)
+where Ss-e represents the semantic equivalence
+between the transcreated image and the intent of
+transcreation. Vtarget is the visual embedding of the
+transcreated (target) image, and Tint is the textual
+representation of the intent. A higher Ss-e value
+indicates a closer alignment with the intended
+semantic meaning.
+c) visual similarity: can be measured by the simi-
+larity between visual representations of the source
+and transcreated images. A high similarity indi-
+cates that the image has stayed close to the source,
+while a lower similarity suggests a greater degree
+of adaptation. Mathematically:
+Sv-s = cosine(Vsrc, Vtgt)
+where Sv-s represents the visual similarity between
+the source and transcreated (target) images. Vsrc
+and Vtgt are the visual embeddings of the source
+image and the transcreated image, respectively.
+4.3 VLM-based Metrics
+Finally, similar to LLM-based scores for text, we
+can prompt VLMs to assign a score on a fixed scale
+to estimate how far the model has transcreated the
+source image for cultural relevance; how seman-
+tically equivalent is the transcreated image to the
+source image; and how they fare on visual similar-
+ity. Prompt formats can leverage chain-of-thought
+reasoning Liu et al. (2023), and our implementation
+of the same is discussed in Section 5.3.
+5 Experiments
+In this section, we conduct a meta-evaluation of the
+transcreation metrics proposed above.
+5.1 Evaluation Dataset
+Country Images Country Images Country Images Country Images
+Brazil 501 India 504 Japan 509 Nigeria 506
+Portugal 506 Turkey 509 USA 508 Total 3543
+Table 1: Dataset size for the 7 target countries.
+Khanuja et al. (2024) create a dataset comprising
+of commonly occurring concepts across 17 seman-
+tic categories (like food, beverages, mammals etc.)
+that are cross-culturally comprehensive, collected
+across seven countries. The final dataset includes
+585 images, and they apply their proposed pipeline
+with each country as the target, using images from
+all other countries as the source. Around 500 im-
+ages are transcreated for each target country (Table
+1). Details about this dataset can be found here.4
+5.2 Systems
+Khanuja et al. (2024) propose three systems com-
+prising of state-of-the-art LLMs, retrievers and
+image-editing models. Briefly, the first sys-
+tem, e2e-instruct, is a trivial end-to-end image-
+editing model prompted to make the image cultur-
+ally relevant to X , where X is the target country.
+The second pipeline, cap-edit, first captions the
+image, then makes the caption ‘culturally relevant’
+using a LLM, and finally edits the original image
+with the culturally-modified caption. The third sys-
+tem, cap-retrieve uses the culturally-modified
+caption from cap-edit to retrieve a natural im-
+age using the modified caption as the query. In
+their dataset, all outputs are given a rating on a
+scale of 1-5 by human annotators, across multi-
+ple dimensions including visual change, semantic
+equivalence, cultural relevance, naturalness and
+offensiveness. They find that the cap-retrieve
+4https://machine-transcreation.github.io/
+image-transcreation/
+7040
+PAGE 8
+Questions from (Khanuja et al., 2024) Category
+Does the image seem like it came from your
+country / is representative of your culture?
+cultural
+relevance
+Is the generated image from the same se-
+mantic category as the original image?
+semantic
+equivalence
+Is there any visual change in the generated
+image compared to the original image?
+visual
+similarity
+Table 2: Questions from the evaluation set of Khanuja
+et al. (2024) used for meta-evaluation in this work.
+pipeline performs best, across countries. Questions
+relevant to our meta-evaluation are in Table 2.
+5.3 Correlations with Human Ratings
+To evaluate the effectiveness of metrics proposed
+in Section 4, we calculate segment-level correla-
+tions of these metrics with the human ratings from
+Khanuja et al. (2024) for cultural relevance, se-
+mantic equivalence, and visual similarity. Similar
+to MT that defines segment-level correlation on
+the order of test instances (sentences), we define
+it at the level of each image in our test set. We
+calculate segment-level correlation using the de-
+fault SciPy (v1.11.4) implementation of Kendall’s
+Tau (Kendall, 1938), and average across the en-
+tire test set for a given country. Segments with
+non-parsable model outputs, or those scored identi-
+cally by all systems (usually a small minority) are
+skipped. We detail how the automated metrics are
+implemented below:
+Object-based (CSI-Overlap): For the first step
+of object identification, we prompt Gemini-1.5-Pro
+(Reid et al., 2024), since current open VLMs have
+been shown to perform poorly on open-vocabulary,
+long-tailed object detection (Gupta et al., 2019).
+For the second and third steps of obtaining valid re-
+placements and calculating the proportion of CSIs
+correctly replaced, we again leverage Gemini-1.5-
+Pro, but any LLM can be used for this purpose.
+Embedding-based: We use SigLIP (Zhai et al.,
+2023), a dual-encoder VLM that improves on CLIP
+(Radford et al., 2021) by using a sigmoid loss in-
+stead of softmax, allowing for stronger alignment
+between images and text without large-scale re-
+sources. To calculate cultural-relevance, we ob-
+tain text embeddings for “This image belongs to
+country X", where X denotes the target country for
+transcreation. To estimate semantic equivalence,
+we similarly obtain text embeddings of the state-
+ment “This image belongs to category X", where X
+Category Model cult-rel sem-eq vis-sim
+Object-based Gemini-1.5-Pro -0.08 0.29 -0.16
+Embedding-based SigLIP 0.35 0.58 0.87
+VLM-based
+Gemini-1.5-Pro 0.81 0.48 0.52
+GPT-4o 0.55 0.86 0.17
+Molmo 7B -0.16 0.44 0.12
+Table 3: Average segment-level correlation between
+human ratings and the three automated metrics proposed.
+‘cult-rel’ – cultural relevance , ‘sem-eq’ – semantic
+equivalence, ‘vis-sim’ – visual similarity ,
+is the semantic category the image belongs to, like
+‘food’, ‘beverage’, ‘mammal’ etc.
+VLM-based: Finally, we prompt the closed
+VLMs Gemini-1.5-Pro, GPT-4o (OpenAI, 2024),
+and the open-sourced Molmo 7B-D model (Deitke
+et al., 2024) to obtain VLM-based scores (prompts
+listed in Appendix A).
+5.4 Results
+Table 3 presents the average segment-level corre-
+lations across seven countries for the three eval-
+uation criteria. For semantic equivalence, propri-
+etary VLMs such as GPT-4o and Gemini-1.5-Pro
+show the highest performance, likely due to their
+advanced multimodal reasoning capabilities. We
+also note that embedding-based metrics outper-
+form open-source VLMs, thus proving to be more
+cost-effective in budget-lean scenarios. However,
+as open-source VLMs improve, these dynamics
+could shift in favor of open-source VLMs. For vi-
+sual similarity, embedding-based metrics using the
+SigLIP model excel, achieving a strong correlation
+of 0.87, significantly surpassing both open-source
+and proprietary VLMs. This suggests that embed-
+ding models are better at capturing fine-grained
+visual nuances than VLMs that primarily focus
+on image-text alignment during training. For cul-
+tural relevance, the trends mirror those of semantic
+equivalence, though with lower overall correlations,
+highlighting the complexity of assessing cultural
+relevance and the potential for future research in
+building metrics that capture this dimension.
+5.5 Strengths, Limitations, Recommendations
+We are inspired by recent research on meta-
+evaluation in MT that has shown that no single MT
+metric is effective in capturing all kinds of trans-
+lation errors and each has its strengths and weak-
+nesses, making a singular overall score from a ‘win-
+ning’ metric uninformative (Moghe et al., 2024).
+7041
+PAGE 9
+We argue that this problem is exacerbated in tran-
+screation, where the open-ended and application-
+dependent nature of the problem might make an
+overall score ambiguous. Thus, we now analyze
+the strengths and limitations of each metric and
+provide recommendations for the metric models
+that researchers might use in different scenarios.
+We also qualitatively analyze the differences across
+categories in the transcreation dataset that contains
+17 categories ranging from concrete (e.g., fruits,
+birds, beverages), to abstract (e.g. education, reli-
+gion) ones. Category-wise correlation scores with
+human ratings can be found here.5
+Object-based metrics share some limitations
+with metrics like BLEU. It focuses on exact ob-
+ject matches and offers no credit for near-correct
+adaptations. Furthermore, like BLEU’s reliance on
+n-gram overlap, this metric does not account for the
+context or positioning of objects, and hence cannot
+capture awkward or nonsensical edits. In general,
+while it captures cultural relevance and semantic
+equivalence somewhat, it fails to compute the ex-
+tent of visual similarity in adaptation. Looking at
+category-wise correlation scores for cultural rele-
+vance and semantic equivalence, it performs well
+with concrete categories (e.g., beverages, vegeta-
+bles, fruits, mammals), but struggles with abstract
+ones (e.g., celebrations, religion, education). Over-
+all, it obtains the lowest correlation values across
+all three axes, likely due to its modular approach
+facilitating error propagation.
+Embedding-based metrics that leverage vision-
+language encoder representations excel at capturing
+visual similarity, even more so than proprietary
+SOTA VLMs. Gains are especially notable for
+concrete categories, though slightly diminished for
+abstract ones (e.g., houses, education, religion).
+While they are not as competent in multimodal
+reasoning, they offer a cost-efficient alternative to
+evaluate systems across all three dimensions.
+VLM-based metrics are highly effective in cap-
+turing cultural relevance and semantic equivalence
+due to their advanced multimodal reasoning abili-
+ties. For cultural relevance, they perform particu-
+larly well for culturally significant categories (e.g.,
+celebrations, religion, music, visual arts), but less
+so for generic ones (e.g., flowers, fruits, birds). For
+instance, VLMs rate culturally unique concepts
+like Holi highly but assign neutral scores to more
+5https://github.com/simran-khanuja/
+automatic-eval-transcreation/tree/main/
+category-correlations
+generic objects like roses – despite the latter hold-
+ing cultural significance in certain contexts, like
+in India. For semantic equivalence, VLMs handle
+concrete categories (e.g. food, beverages, mam-
+mals) effectively but, like CSI-Overlap, struggle
+with abstract ones (e.g. religion, education). Lastly,
+in terms of visual similarity, VLMs are weaker than
+vision encoders, though they perform better with
+concrete categories (e.g., birds, beverages, cloth-
+ing) than abstract ones.
+We conclude by noting that despite the relatively
+higher scores, even proprietary VLMs exhibit only
+moderate absolute correlations with human ratings
+on cultural relevance, underscoring the complexity
+of this task and leaving headroom for improvement.
+Overall, our findings suggest that a hy-
+brid approach—leveraging proprietary VLMs for
+reasoning-heavy tasks like cultural relevance and
+semantic equivalence and embedding models forvi-
+sual similarity, constitutes the most comprehensive
+evaluation strategy. We also note that the evaluation
+of abstract cultural categories remains a challeng-
+ing and open problem for future work – although
+VLMs do show some promise in this regard.
+6 Conclusion
+In this paper, we take a first step towards automat-
+ically evaluating image transcreation - the task of
+adapting visual content from a source culture to
+a target culture. We first review related works in
+translation studies and identify that cultural rele-
+vance for the target audience,semantic equivalence
+of the transcreated image, and its visual similarity
+with the source image are three measurable dimen-
+sions which potentially cover a wide range of ap-
+plications. We explore how visual content is being
+transcreated for real-world applications through
+this lens, and design evaluation metrics that rank
+systems across these three axes, drawing inspira-
+tion from MT metrics. We find that VLM-based
+metrics excel at multimodal reasoning (cultural rel-
+evance and semantic equivalence) but visual simi-
+larities can be better captured using visual-encoder
+embeddings. For all metrics, capturing cultural
+relevance of an image for a target demographic is
+challenging, leaving headroom for progress. We
+hope that our study helps ML researchers make
+progress on this important, real-world task.
+7042
+PAGE 10
+7 Limitations
+Our work does not come without limitations. First,
+even though we broaden the scope of image tran-
+screation to several applications and study real-
+world examples, we do not cover examples from
+videos and gaming, the latter being one of the
+largest markets for localization. However, this
+is a very ambitious scope and we hope to slowly
+make progress toward the same. Second, captur-
+ing both cultural relevance and semantic equiva-
+lence can be very nuanced. We rely on country
+or region names to capture the former, and tex-
+tual/category descriptions for the latter, both of
+which do not capture finer-grained nuances across
+systems. Thirdly, since this is a new task, we only
+have one evaluation dataset available (Khanuja
+et al., 2024) – which only provides scores for three
+systems, with only one annotator rating per target
+image. Cap-retrieve is overwhelmingly better
+than the other two systems which might make rank-
+ing these systems a relatively easier task. We hope
+that as the community develops more image tran-
+screation models, we should be able to test whether
+VLMs can effectively capture nuanced differences
+between systems as well. Lastly, all our prompting
+for VLM-based metrics is in English, but it would
+be quite interesting to explore extensions to other
+languages, particularly those native to the target
+culture, and we leave this for future work.
+8 Acknowledgements
+We were fortunate to obtain feedback on this
+work from a variety of sources. In particular, we
+would like to thank Swaminathan Gurumurthy and
+members of Neulab at Carnegie Mellon Univer-
+sity, as well as Barry Haddow, Alexandra Birch,
+and the StatMT group at the University of Ed-
+inburgh. This work was supported in part by
+grants from Google and the Defense Science and
+Technology Agency Singapore. Computations
+in this work were facilitated by the Baskerville
+Tier 2 HPC service (https://www.baskerville.
+ac.uk). Baskerville was funded by the EPSRC
+and UKRI through the World Class Labs scheme
+(EP/T022221/1) and the Digital Research Infras-
+tructure programme (EP/W032244/1) and is op-
+erated by Advanced Research Computing at the
+University of Birmingham.
+9 Ethical Statement
+In this work, we emphasize that we are not at-
+tempting to formalize the creation of cultural deep-
+fakes or undermine the jobs of artists. On the con-
+trary, the goal is to increase accessibility to culture-
+specific content. We recognize that the demand for
+human-generated translations and human creativity
+will always be paramount.
+At the same time, we acknowledge that some
+people prefer to engage directly with the source
+culture rather than consume localized adaptations.
+This is particularly true among manga fans, who
+often take pride in understanding nuanced cultural
+references that may be lost in translation. In such
+fan communities, translations and localizations are
+frequently criticized, as they inevitably result in
+a distortion or transformation of the original au-
+thor’s intended meaning. While localized adapta-
+tions can expand the global audience, we believe
+there is inherent value in respecting cultures in their
+unadulterated form and providing opportunities for
+people to engage directly with source materials.
+Our aim is to strike a balance between accessibility
+and preserving the integrity of cultural works.
+References
+Ibrahim Sa’id Ahmad, Antonios Anastasopoulos,
+Ondˇrej Bojar, Claudia Borg, Marine Carpuat,
+Roldano Cattoni, Mauro Cettolo, William Chen,
+Qianqian Dong, Marcello Federico, et al. 2024. Find-
+ings of the iwslt 2024 evaluation campaign. In Pro-
+ceedings of the 21st International Conference on Spo-
+ken Language Translation (IWSLT 2024), pages 1–
+11.
+Javier Franco Aixelá. 1996. Culture-specific items in
+translation. Translation, power, subversion, 8:52–78.
+Satanjeev Banerjee and Alon Lavie. 2005. Meteor: An
+automatic metric for mt evaluation with improved cor-
+relation with human judgments. In Proceedings of
+the acl workshop on intrinsic and extrinsic evaluation
+measures for machine translation and/or summariza-
+tion, pages 65–72.
+Claudia Benetello. 2018. When translation is not
+enough: Transcreation as a convention-defying prac-
+tice. a practitioner’s perspective. Journal of Spe-
+cialised Translation, pages 28–44.
+Coca-Cola. 2023. Marketing mind | three nations,
+one ad. https://www.instagram.com/reel/
+C9rAGmqBau1/?igsh=d2IwZmVucmcxN3J6. Insta-
+gram Video.
+Matt Deitke, Christopher Clark, Sangho Lee, Rohun
+Tripathi, Yue Yang, Jae Sung Park, Mohammadreza
+7043
+PAGE 11
+Salehi, Niklas Muennighoff, Kyle Lo, Luca Soldaini,
+et al. 2024. Molmo and pixmo: Open weights and
+open data for state-of-the-art multimodal models.
+arXiv preprint arXiv:2409.17146.
+Mar Díaz-Millón and María Dolores Olvera-Lobo. 2023.
+Towards a definition of transcreation: a systematic
+literature review. Perspectives, 31(2):347–364.
+Jinlan Fu, See-Kiong Ng, Zhengbao Jiang, and Pengfei
+Liu. 2023. Gptscore: Evaluate as you desire. arXiv
+preprint arXiv:2302.04166.
+Gabriel Gianordoli and Robert Ito. 2023. How manga
+was translated for america. The New York Times .
+Accessed: 2024-07-23.
+Agrim Gupta, Piotr Dollar, and Ross Girshick. 2019.
+Lvis: A dataset for large vocabulary instance segmen-
+tation. In Proceedings of the IEEE/CVF conference
+on computer vision and pattern recognition , pages
+5356–5364.
+Maurice G Kendall. 1938. A new measure of rank
+correlation. Biometrika, 30(1-2):81–93.
+Farisa Khalid. 2012. Video: Meena, india’s dora the
+explorer, helps unicef promote ’child rights’. Asia
+Society.
+Simran Khanuja, Sathyanarayanan Ramamoorthy,
+Yueqi Song, and Graham Neubig. 2024. An image
+speaks a thousand words, but can everyone listen?
+on translating images for cultural relevance. arXiv
+preprint arXiv:2404.01247.
+Tom Kocmi, Eleftherios Avramidis, Rachel Bawden,
+Ondrej Bojar, Anton Dvorkovich, Christian Feder-
+mann, Mark Fishel, Markus Freitag, Thamme Gowda,
+Roman Grundkiewicz, et al. 2024. Preliminary
+wmt24 ranking of general mt systems and llms.arXiv
+preprint arXiv:2407.19884.
+Tom Kocmi and Christian Federmann. 2023. GEMBA-
+MQM: Detecting translation quality error spans with
+GPT-4. In Proceedings of the Eighth Conference
+on Machine Translation, pages 768–775, Singapore.
+Association for Computational Linguistics.
+Chin-Yew Lin. 2004. Rouge: A package for automatic
+evaluation of summaries. In Text summarization
+branches out, pages 74–81.
+Yang Liu, Dan Iter, Yichong Xu, Shuohang Wang,
+Ruochen Xu, and Chenguang Zhu. 2023. G-eval:
+Nlg evaluation using gpt-4 with better human align-
+ment. arXiv preprint arXiv:2303.16634.
+Chi-kiu Lo. 2019. Yisi-a unified semantic mt quality
+evaluation and estimation metric for languages with
+different levels of available resources. In Proceed-
+ings of the Fourth Conference on Machine Transla-
+tion (Volume 2: Shared Task Papers, Day 1), pages
+507–513.
+Marián Martín. 2024. Promoting and Assessing Creativ-
+ity for the Training of Transcreators: Some Inspiring
+Training Resources, pages 281–307.
+Nikita Moghe, Arnisa Fazla, Chantal Amrhein, Tom
+Kocmi, Mark Steedman, Alexandra Birch, Rico Sen-
+nrich, and Liane Guillou. 2024. Machine Translation
+Meta Evaluation through Translation Accuracy Chal-
+lenge Sets. Computational Linguistics, pages 1–60.
+Christiane Nord. 2009. El funcionalismo en la en-
+señanza de traducción. Mutatis Mutandis: Revista
+Latinoamericana de Traducción, 2:209–243.
+Vilde Olaussen. Why Marketing Translation Matters,
+and How to Get it Right. https://redokun.com/
+blog/marketing-translation. [Online; accessed
+18-July-2024].
+OpenAI. 2024. Hello gpt-4o. https://openai.com/
+index/hello-gpt-4o/. Accessed: 2024-10-14.
+Kishore Papineni, Salim Roukos, Todd Ward, and Wei-
+Jing Zhu. 2002. Bleu: a method for automatic evalu-
+ation of machine translation. In Proceedings of the
+40th annual meeting of the Association for Computa-
+tional Linguistics, pages 311–318.
+Victoria Purcell-Gates, Gigliana Melzi, Behnosh Najafi,
+and Marjorie Faulstich Orellana. 2011. Building liter-
+acy instruction from children’s sociocultural worlds.
+Child Development Perspectives, 5(1):22–27.
+Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya
+Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sas-
+try, Amanda Askell, Pamela Mishkin, Jack Clark,
+et al. 2021. Learning transferable visual models from
+natural language supervision. In International confer-
+ence on machine learning, pages 8748–8763. PMLR.
+Rebecca Ray and Nataly Kelly. 2010. Reaching new
+markets through transcreation. Common Sense Ad-
+visory.
+Ricardo Rei, Craig Stewart, Ana C Farinha, and Alon
+Lavie. 2020. COMET: A neural framework for MT
+evaluation. In Proceedings of the 2020 Conference
+on Empirical Methods in Natural Language Process-
+ing (EMNLP), pages 2685–2702, Online. Association
+for Computational Linguistics.
+Machel Reid, Nikolay Savinov, Denis Teplyashin,
+Dmitry Lepikhin, Timothy Lillicrap, Jean-baptiste
+Alayrac, Radu Soricut, Angeliki Lazaridou, Orhan Fi-
+rat, Julian Schrittwieser, et al. 2024. Gemini 1.5: Un-
+locking multimodal understanding across millions of
+tokens of context. arXiv preprint arXiv:2403.05530.
+Katharina Reiss, Hans J. Vermeer, Christiane Nord,
+and Marina Dudenhöfer. 2014. Towards a General
+Theory of Translational Action: Skopos Theory Ex-
+plained. Routledge, New York.
+Gregg Sangillo. 2019. How to get to sesame street. . . in
+nigeria. American University News.
+7044
+PAGE 12
+TranslatePlus. 2023. Transcreation examples that hit the
+mark. https://www.translateplus.com/blog/
+transcreation-examples-that-hit-the-mark/ .
+[Online; accessed 18-July-2024].
+Unicef et al. 2018. Learning through play. (No Title).
+Lawrence Venuti. 2017. The translator’s invisibility: A
+history of translation. Routledge.
+Weizhe Yuan, Graham Neubig, and Pengfei Liu. 2021.
+BARTScore: Evaluating generated text as text gener-
+ation. In Advances in Neural Information Processing
+Systems.
+Federico Zanettin et al. 2014. Visual adaptation in trans-
+lated comics. Intralinea, 16:1–34.
+Xiaohua Zhai, Basil Mustafa, Alexander Kolesnikov,
+and Lucas Beyer. 2023. Sigmoid loss for language
+image pre-training. In Proceedings of the IEEE/CVF
+International Conference on Computer Vision, pages
+11975–11986.
+Tianyi Zhang*, Varsha Kishore*, Felix Wu*, Kilian Q.
+Weinberger, and Yoav Artzi. 2020. Bertscore: Eval-
+uating text generation with bert. In International
+Conference on Learning Representations.
+A Appendix
+All the prompts used to calculate the CSI-Overlap
+metric can be found in Table A below.
+7045
+PAGE 13
+Prompts used to calculate CSI Overlap in Section 4.1
+Gemini-1.5 Pro (Object Detection)
+"You are an expert in detecting objects in an image. Detect unique
+objects/entities in the image and only list each object ONCE. Give the
+Wikipedia or Wikidata entity name of the object detected, if possible. The
+output format is a comma-separated list of entities."
+Gemini-1.5-Pro (Getting Replacements)
+"Imagine you are an image editor tasked with adapting visuals for a global
+audience. You are given an image where object detection identified these
+entities: ’, ’.join(extracted_objects). Your goal is to identify any entities
+that represent specific countries, cultures, or regions and are not be
+universally recognizable or relevant to someone from COUNTRY. For each
+culture-specific entity you identify, please provide a diverse and exhaustive
+list of potential replacements that would be more culturally relevant to
+someone in COUNTRY, and belongs to the CATEGORY category. Please explain your
+reasoning step by step for identifying each entity. Please format your response
+as a JSON object where the keys are the culture-specific entities and the
+values are lists of potential replacements. The reasoning should be a separate
+key-value pair. The replacement list should be VERY EXHAUSTIVE and such that
+the replacements are highly relevant to COUNTRY. ONLY output the JSON, DO NOT
+WRITE ANYTHING ELSE."
+GPT4 (Calculate Overlap)
+"You are given two lists of objects, List 1 and List 2. Your task is to identify
+objects that are similar between the two lists, allowing for minor variations
+in spelling, wording, or punctuation. Do not consider broad categories like
+’animal’, ’plant’, ’flower’, ’object’, ’food’, ’material’, or any similar broad
+terms. Focus only on specific, meaningful matches between the lists, ignoring
+any broad or generic terms. Please explain your reasoning step by step and
+provide a final list of matching objects at the end. Provide the output as a
+JSON object with the following format. DO NOT WRITE ANYTHING ELSE."
+7046
+PAGE 14
+Prompts used to for VLM-scores
+Gemini-1.5-Pro (Intent)
+"Given the input image and its category CATEGORY, determine if the comparison
+image belongs to the same category as the input. Please explain your reasoning
+step by step, and provide a final score at the end. The score should be between
+1 and 5, where: 1 = Dissimilar Category, 5 = Same Category."
+source-image
+target-image
+"The output should be a JSON object ONLY with the following format: {"reasoning":
+..., "score": number}"
+Gemini-1.5-Pro (Creativity)
+"Given the input image and its category CATEGORY, determine if there are visual
+changes in the second image as compared to the first. Please explain your
+reasoning step by step, and provide a final score at the end. The score should
+be between 1 and 5, where: 1 = No visual change, 5 = High visual changes."
+source-image
+target-image
+"The output should be a JSON object ONLY with the following format: {"reasoning":
+..., "score": number}"
+Gemini-1.5-Pro (Cultural Relevance)
+"You will be given two images. You have to assess how culturally relevant
+both images are with respect to the culture of COUNTRY. Please explain your
+reasoning step by step for both images, specifically considering cultural
+symbols, styles, traditions, or any features that align with the culture of
+the speaking population of COUNTRY. For each image, the final score should be
+a number between 1 to 5, where 1 and 5 mean the following: 1 = Not culturally
+relevant, 5 = Culturally relevant."
+source-image
+target-image
+"The output should be a JSON object ONLY with the following
+format:{"first_reasoning": ..., "first_score": number, "second_reasoning":
+..., "second_score": number}"
+7047

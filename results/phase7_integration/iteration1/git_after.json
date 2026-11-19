@@ -1,0 +1,5 @@
+{
+  "status": "?? results/phase7_integration/\n?? scripts/run_pipeline.py\n?? src/transcreation/orchestration.py\n?? tests/test_orchestration.py\n",
+  "head_diff_stat": "",
+  "note": "HEAD diff contains pre-existing Phase6 user work; this milestone adds three files and Phase7 evidence only."
+}

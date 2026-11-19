@@ -1,0 +1,15 @@
+{
+  "assessor": "assistant actual raw/full composite inspection, not new human review",
+  "improvements": [
+    "raised ridge and two visible sides give more apparent volume than previous seed43",
+    "more visible fine blister-like surface variation",
+    "no lime, chutney, board, herbs or decorative props observed"
+  ],
+  "remaining_failures": [
+    "rear-left protruding triangular lobe makes one-pastry identity ambiguous",
+    "surface texture remains somewhat uniform and enlarged from512",
+    "visible local contact-shadow cutoff and faint retained source-edge pixels at conservative mask boundary"
+  ],
+  "causal_limit": "A changes geometry, region/crop and prompts together; no isolated cause proven",
+  "human_confirmation": "PENDING"
+}

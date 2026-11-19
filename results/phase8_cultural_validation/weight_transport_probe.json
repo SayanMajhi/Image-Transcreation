@@ -1,0 +1,16 @@
+[
+  {
+    "name": "sdxl_unet",
+    "status": 206,
+    "content_length": "1024",
+    "first_bytes_received": 1024,
+    "seconds": 1.4906826000005822
+  },
+  {
+    "name": "controlnet",
+    "status": 206,
+    "content_length": "1024",
+    "first_bytes_received": 1024,
+    "seconds": 1.2178327000001445
+  }
+]

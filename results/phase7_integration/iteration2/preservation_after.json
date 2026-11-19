@@ -1,0 +1,13 @@
+{
+  "checked": 117,
+  "unchanged": 114,
+  "changed": [
+    "src/transcreation/orchestration.py",
+    "scripts/run_pipeline.py",
+    "results/phase7_integration/phase7_working_report.md"
+  ],
+  "unexpected_changes": [],
+  "previous_report_preserved_as_exact_prefix": true,
+  "iteration1_artifacts_unchanged": true,
+  "real_survey_audits_unchanged": true
+}

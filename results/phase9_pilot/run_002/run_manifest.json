@@ -1,0 +1,283 @@
+{
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "model": null,
+  "approval": false,
+  "manifest": "../../../configs/phase9_pilot_cases.json",
+  "manifest_sha256": "8695d1212171e8d1e4e0569b4919f107eaeac30cabe48ec196a60e02d2df77c1",
+  "repo_root": "../../..",
+  "started_utc": "2026-11-12T04:53:21.593033+00:00",
+  "finished_utc": "2026-11-12T04:53:43.561549+00:00",
+  "elapsed_seconds": 21.965,
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "pillow": "13.0.0",
+    "numpy": "2.4.6",
+    "device": "CPU only; no model weights, GPU, Ollama or network used"
+  },
+  "cases": [
+    {
+      "id": "CASE_01",
+      "status": "HISTORICAL_BASELINE",
+      "direction": "French->Indian",
+      "source_object": "croissant",
+      "target_object": "samosa",
+      "human_review_status": "PASS",
+      "attempts": [],
+      "selected_attempt": "historical",
+      "case_status": "OK",
+      "note": "Historical result copied unchanged (not regenerated)"
+    },
+    {
+      "id": "CASE_02",
+      "status": "NEW",
+      "direction": "German->French",
+      "source_object": "pretzel",
+      "target_object": "croissant",
+      "human_review_status": "PENDING_USER_REVIEW",
+      "attempts": [
+        {
+          "attempt": "A",
+          "role": "primary",
+          "request": "results/phase9_repeatability/case2/request_A.json",
+          "status": "OK",
+          "elapsed_seconds": 0.82,
+          "output_sha256": "66fab2ccad388d7c73ef87c1cb6a1a46af9c6a63fc6a98c97365da8bbd969e61",
+          "target_bbox": [
+            300,
+            350,
+            2400,
+            1462
+          ]
+        }
+      ],
+      "selected_attempt": "A",
+      "case_status": "OK"
+    },
+    {
+      "id": "CASE_03",
+      "status": "NEW",
+      "direction": "American->Japanese",
+      "source_object": "chocolate-chip cookie",
+      "target_object": "yaki-onigiri",
+      "human_review_status": "PENDING_USER_REVIEW",
+      "attempts": [
+        {
+          "attempt": "A",
+          "role": "primary",
+          "request": "results/phase9_repeatability/case3/request_A.json",
+          "status": "OK",
+          "elapsed_seconds": 1.434,
+          "output_sha256": "d33e3bd97c649319dd867e6d97ff53e971e056d0688dc854ee1de117f8610b58",
+          "target_bbox": [
+            575,
+            225,
+            2125,
+            1584
+          ]
+        },
+        {
+          "attempt": "B",
+          "role": "correction",
+          "request": "results/phase9_repeatability/case3/request_B.json",
+          "status": "OK",
+          "elapsed_seconds": 1.381,
+          "output_sha256": "18da8b80f7d0703f4420c5c86ed0cf6737f6c5b92a0bbdfb2cbbd7a95adf2636",
+          "target_bbox": [
+            575,
+            225,
+            2125,
+            1584
+          ]
+        }
+      ],
+      "selected_attempt": "B",
+      "case_status": "OK"
+    },
+    {
+      "id": "CASE_04",
+      "status": "NEW",
+      "direction": "Italian->Moroccan",
+      "source_object": "Borsalino fedora",
+      "target_object": "fez",
+      "human_review_status": "PENDING_USER_REVIEW",
+      "attempts": [
+        {
+          "attempt": "A",
+          "role": "primary",
+          "request": "results/phase9_repeatability/case4/request_A.json",
+          "status": "OK",
+          "elapsed_seconds": 1.318,
+          "output_sha256": "f27218ae69d76423ccd3ddd55a5f9dd52e57a4c6fb7d797b598adae895de9718",
+          "target_bbox": [
+            376,
+            400,
+            1576,
+            1343
+          ]
+        },
+        {
+          "attempt": "B",
+          "role": "correction",
+          "request": "results/phase9_repeatability/case4/request_B.json",
+          "status": "OK",
+          "elapsed_seconds": 1.602,
+          "output_sha256": "038c2dd0e4ce4150c4dd090cb2b56092919713067ba7d21a2396cf5fd7bf7eab",
+          "target_bbox": [
+            376,
+            400,
+            1576,
+            1343
+          ]
+        }
+      ],
+      "selected_attempt": "B",
+      "case_status": "OK"
+    },
+    {
+      "id": "CASE_05",
+      "status": "NEW",
+      "direction": "Moroccan->Italian",
+      "source_object": "fez",
+      "target_object": "Borsalino fedora",
+      "human_review_status": "PENDING_USER_REVIEW",
+      "attempts": [
+        {
+          "attempt": "A",
+          "role": "primary",
+          "request": "results/phase9_repeatability/case5/request_A.json",
+          "status": "OK",
+          "elapsed_seconds": 4.095,
+          "output_sha256": "30d75517d65af3b2cdd1eeff261ff72f79488a89ac55b485dee8bb3e04321f4d",
+          "target_bbox": [
+            1180,
+            700,
+            4580,
+            3717
+          ]
+        },
+        {
+          "attempt": "B",
+          "role": "correction",
+          "request": "results/phase9_repeatability/case5/request_B.json",
+          "status": "OK",
+          "elapsed_seconds": 4.775,
+          "output_sha256": "468c80d873db135776ae7a551186ca432e3b8a09554905ea5dc0cf12e3895818",
+          "target_bbox": [
+            1216,
+            748,
+            4480,
+            3683
+          ]
+        }
+      ],
+      "selected_attempt": "B",
+      "case_status": "OK"
+    },
+    {
+      "id": "CASE_06",
+      "status": "NEW",
+      "direction": "Generic Western->Japanese",
+      "source_object": "handled mug",
+      "target_object": "wabi-sabi tea bowl",
+      "human_review_status": "PENDING_USER_REVIEW",
+      "attempts": [
+        {
+          "attempt": "A",
+          "role": "primary",
+          "request": "results/phase9_repeatability/case6/request_A.json",
+          "status": "OK",
+          "elapsed_seconds": 0.544,
+          "output_sha256": "b123ac2fc87a0247d2cb3b4c0affa0d213cef7e1e7f2e76a49cfe81f1b085b20",
+          "target_bbox": [
+            320,
+            350,
+            1120,
+            1098
+          ]
+        }
+      ],
+      "selected_attempt": "A",
+      "case_status": "OK"
+    }
+  ],
+  "files": {
+    "CASE_01/closeup_native.png": "12eb5bb297644d990b719bf928c85b33aac128aa8d40693bf9b15f47d6fa57be",
+    "CASE_01/comparison.jpg": "7fc12334229fc1ee55fd6d219c9006c3d2cacc7c01a4c16c07c6b06c73a1ad1a",
+    "CASE_01/final.png": "bb922916ccbdd776f2c3ec0300d2fbe40398026ee3e1c92b66e31f3eb894ddfb",
+    "CASE_01/REVIEW.md": "8a8ecde0be61aa61c5383d90c27e6140cda8112a7d4e9f8f85309837f5a34454",
+    "CASE_01/status.json": "5c3c999267a3e81881d72ae365d079aed82bad5477068cd6d3f32d349eafa97e",
+    "CASE_02/attempt_A/execution.json": "9b1a2c37f1e98d6df723ce309d57ac1d11315ab77c8a64503737f4ccaff3ee69",
+    "CASE_02/attempt_A/final.png": "66fab2ccad388d7c73ef87c1cb6a1a46af9c6a63fc6a98c97365da8bbd969e61",
+    "CASE_02/attempt_A/placed_alpha.png": "8071724af8b8ae45520334b51ec172b1ba0bdb6456ff35c72e305efc08a9e417",
+    "CASE_02/attempt_A/shadow_alpha.png": "7e8a97bc62569a2a68714973b0ca226814bd1b708425330eae15ff50d7c6dde6",
+    "CASE_02/attempt_A/source_removed.png": "0f0148acbd78d8a03b7edea2543e8d006d1f2eacf6c2a809654fb8219d651459",
+    "CASE_02/closeup_native.png": "cfdf19d751dd9515ee8606c01150337dad1189bfec5c4da666d3e0a645714c15",
+    "CASE_02/comparison.jpg": "806b9306ea1db3619fbf3b79e20e0bd5c1481f64c44e70d4ad1d9187d5b35bcc",
+    "CASE_02/final.png": "66fab2ccad388d7c73ef87c1cb6a1a46af9c6a63fc6a98c97365da8bbd969e61",
+    "CASE_02/REVIEW.md": "aeb63a562ffd8fb9d225d03ec917281b30714ed9f9888bd1b17e1e9347e46402",
+    "CASE_02/status.json": "dec89b1aa442bd2e4d440be43116db4baf1494fea10d7b377930b128c444828d",
+    "CASE_03/attempt_A/execution.json": "cc8f16be39aac9a73abb09d7caa99f68016bdaf54ef498aae60eef1e3ac249a4",
+    "CASE_03/attempt_A/final.png": "d33e3bd97c649319dd867e6d97ff53e971e056d0688dc854ee1de117f8610b58",
+    "CASE_03/attempt_A/placed_alpha.png": "6f79a179f7bc35dd347fcc04edda462f0422f9a278ab0c054d225733987a8c65",
+    "CASE_03/attempt_A/shadow_alpha.png": "e9a16d032e6a2deee7c7f95d2837c624ab0749e0a0c14c9badc5db721c1451e2",
+    "CASE_03/attempt_A/source_removed.png": "d8ba0cf7614d85c622fb2813760b62e5114bfea639f96609bd7c3941bf1f4a3f",
+    "CASE_03/attempt_B/execution.json": "017df5a5835cf77ad50b676f2af42ff88b9b223a29de1a55499c362e1effa259",
+    "CASE_03/attempt_B/final.png": "18da8b80f7d0703f4420c5c86ed0cf6737f6c5b92a0bbdfb2cbbd7a95adf2636",
+    "CASE_03/attempt_B/placed_alpha.png": "6f79a179f7bc35dd347fcc04edda462f0422f9a278ab0c054d225733987a8c65",
+    "CASE_03/attempt_B/shadow_alpha.png": "e9a16d032e6a2deee7c7f95d2837c624ab0749e0a0c14c9badc5db721c1451e2",
+    "CASE_03/attempt_B/source_removed.png": "de050c326656903aa31850d8cc213c9f8c2a1e97080363210bafc596c68eaa75",
+    "CASE_03/attempts.jpg": "6d55a3e6b6416d17df2560231037fdb0ccd73342f5faca48cbf63242875f1e2c",
+    "CASE_03/closeup_native.png": "f176c9783848f7c3869349a9687c9abed3b66e279856676104b3c3081a44e1b8",
+    "CASE_03/comparison.jpg": "512ff829696d50c1bb266f4379725ac16d2dd3645af29a108bbb9a202929e961",
+    "CASE_03/final.png": "18da8b80f7d0703f4420c5c86ed0cf6737f6c5b92a0bbdfb2cbbd7a95adf2636",
+    "CASE_03/REVIEW.md": "823ab27bffd55d981e0b49dc9d8b0ae41a83919a9353467a1e6beb02f1c4d0f9",
+    "CASE_03/status.json": "97df97018f279376735b6efff6075f8941fbc33611d7d6dbf3c545caafd6b6a0",
+    "CASE_04/attempt_A/execution.json": "79ce47cd0409994ee371573c213efddb56b04a9436f98f9807d84bcc17d33b3d",
+    "CASE_04/attempt_A/final.png": "f27218ae69d76423ccd3ddd55a5f9dd52e57a4c6fb7d797b598adae895de9718",
+    "CASE_04/attempt_A/placed_alpha.png": "b009f87a291e55c1da0bb40fe8ffe31bde7bedc1a2f128ad29515b21d5ce1486",
+    "CASE_04/attempt_A/shadow_alpha.png": "a14cd3452646c664c6627bcca3aaab8a16b80251945fdc8ad8dd05d07405be29",
+    "CASE_04/attempt_A/source_removed.png": "9a3b352544367359e6546d4c5b0d444ce1a2f21dc920b67ab9203885050319c0",
+    "CASE_04/attempt_B/execution.json": "b2742a1b300bda202203f8134450a09b406d9e4fd0e58db420cad7bec8d51e31",
+    "CASE_04/attempt_B/final.png": "038c2dd0e4ce4150c4dd090cb2b56092919713067ba7d21a2396cf5fd7bf7eab",
+    "CASE_04/attempt_B/placed_alpha.png": "d7017438ff314749cada7418297830f2b029b38f2ac7296c9b579437499a2c85",
+    "CASE_04/attempt_B/shadow_alpha.png": "a14cd3452646c664c6627bcca3aaab8a16b80251945fdc8ad8dd05d07405be29",
+    "CASE_04/attempt_B/source_removed.png": "9a3b352544367359e6546d4c5b0d444ce1a2f21dc920b67ab9203885050319c0",
+    "CASE_04/attempts.jpg": "8d7d336b2b33891b6faec36dc6bffe54a5a086b478792daef5f5ed40f702ff86",
+    "CASE_04/closeup_native.png": "891c906d2e1ed03a7948df3a5239fd91f954c14f37d615f5c937c2c70a97052b",
+    "CASE_04/comparison.jpg": "0aef31dd64f7fe236bc6294c4f640dc26d5d6f451f4d7a08ec7d3c03affb2f47",
+    "CASE_04/final.png": "038c2dd0e4ce4150c4dd090cb2b56092919713067ba7d21a2396cf5fd7bf7eab",
+    "CASE_04/REVIEW.md": "096950a6a52646b375efe498bf7098ed13211a7543e90f6d1d12fbc13c654e4e",
+    "CASE_04/status.json": "42406fe680598aad42de39ad033dfcbfe4a23c105b7d894b1e832ee4ff6a1517",
+    "CASE_05/attempt_A/execution.json": "de515aa06f332fadfae990b53f7fcbc48ae47364b2bb9af71cf8d130234b6a60",
+    "CASE_05/attempt_A/final.png": "30d75517d65af3b2cdd1eeff261ff72f79488a89ac55b485dee8bb3e04321f4d",
+    "CASE_05/attempt_A/placed_alpha.png": "4162d0a479e6e77a7b623be937134f9f6539b473df9fdc707f52eef6425c4de4",
+    "CASE_05/attempt_A/shadow_alpha.png": "54cc7d52ae53b2734062e8b4b2ba4a593507a1e2463c0aed8ef48a0c53ff4452",
+    "CASE_05/attempt_A/source_removed.png": "39f7d9b6f2877654891777e5ce83f3b86449b66e9f073472c26a1a108a4e70b6",
+    "CASE_05/attempt_B/execution.json": "1cfceba2c869584c82f522811edbbe0fd572943e282a50bb12b1a1a3ce859830",
+    "CASE_05/attempt_B/final.png": "468c80d873db135776ae7a551186ca432e3b8a09554905ea5dc0cf12e3895818",
+    "CASE_05/attempt_B/placed_alpha.png": "c2c68848f1986283083a459f4bdd31ccc901435eae07eb0d0a47ac0f664cc133",
+    "CASE_05/attempt_B/shadow_alpha.png": "7fe594834ce9a80c55ff61061794decb015b5384d55a9dd16cb5ed6c9367d915",
+    "CASE_05/attempt_B/source_removed.png": "39f7d9b6f2877654891777e5ce83f3b86449b66e9f073472c26a1a108a4e70b6",
+    "CASE_05/attempts.jpg": "c4bd61f5a86d04ca9d39c0f55c6a64b68df286bc964ea750e75a3d5c5aa00664",
+    "CASE_05/closeup_native.png": "7d3ee113e2196e6f64f94a217d2babc924e0dc6857137453bc00673d85bc77d2",
+    "CASE_05/comparison.jpg": "9fbf3d04083abf3322ca16ac6cec55bbad2d341150add94d7b8db975a395d4d7",
+    "CASE_05/final.png": "468c80d873db135776ae7a551186ca432e3b8a09554905ea5dc0cf12e3895818",
+    "CASE_05/REVIEW.md": "a435c85d685472c7f3e2fba5eaef7b59d15e7350c610ea63da992ba8152ba8b8",
+    "CASE_05/status.json": "9416ee0b6d177dda31495690910d1db8203fbbc4cb04e74d1e952b502c481726",
+    "CASE_06/attempt_A/execution.json": "9fdd408d103c50caae7da00ebf680f8e7517ec0fbed2f41c027bb9eac192678e",
+    "CASE_06/attempt_A/final.png": "b123ac2fc87a0247d2cb3b4c0affa0d213cef7e1e7f2e76a49cfe81f1b085b20",
+    "CASE_06/attempt_A/placed_alpha.png": "2da29f727e67ed07efecf3f219b6a03ffa92fbb121f30f21c66db6e105406ecf",
+    "CASE_06/attempt_A/shadow_alpha.png": "2d58d83797d23024404dab605bc264cba7d04a1cac8ec94eb2951188e536c396",
+    "CASE_06/attempt_A/source_removed.png": "49b15b03cb3ce632427f70444d14873c3159cc46b5b44738fe44f148586cea4b",
+    "CASE_06/closeup_native.png": "5afdc285f044c5ee4e3e036a4a2586c30c2d5c2085853482ab14f8280066ac72",
+    "CASE_06/comparison.jpg": "a84296d08ece80cd684a40ebe6b5ca40d650033e96040e8d50c00c601e50002a",
+    "CASE_06/final.png": "b123ac2fc87a0247d2cb3b4c0affa0d213cef7e1e7f2e76a49cfe81f1b085b20",
+    "CASE_06/REVIEW.md": "a26f0a9576f303a0b7809a84389f173cf87372b60baec6a099deaccd20040541",
+    "CASE_06/status.json": "7c13ab5817c17a383d70315dfc3f050c777efd785bc9e57bbe2efdb1409c9504",
+    "execution.log": "e49ff9bb3acbbaaa82dcd994d609af771bdfaa690166a75b92a69c7c98a99d16",
+    "overview.jpg": "4cc49070fa1c981f1b40af573d17c951533ce1c5ce7781ed931dec533db3ff3e"
+  }
+}

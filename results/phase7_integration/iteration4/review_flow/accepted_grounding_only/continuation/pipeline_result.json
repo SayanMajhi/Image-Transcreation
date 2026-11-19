@@ -1,0 +1,88 @@
+{
+  "execution_mode": "GROUNDING_TEST",
+  "state": "SOURCE_OBJECT_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source",
+    "edit_intent_review",
+    "grounding"
+  ],
+  "stopped_at": "box_review",
+  "reason": "All boxes retained; explicit box review required. No SAM or diffusion dispatched.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "8288d5c8b7d89fbc2e8d03f91551527f5f88148230945840e4b3055031626568",
+      "sha256": "8288d5c8b7d89fbc2e8d03f91551527f5f88148230945840e4b3055031626568",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "path": "evidence/source/original.png"
+    },
+    "edit_intent": {
+      "id": "f9f04f565c5faf129bc5c31dc283133873067097d23786253726ecc7167049d2",
+      "sha256": "f9f04f565c5faf129bc5c31dc283133873067097d23786253726ecc7167049d2",
+      "path": "evidence/edit_intent/decision.json"
+    },
+    "grounding/detection.json": {
+      "id": "652bacfb57734e2785b2ccf3348e3ce8bbbbb67bc15255420dc4af9d9c4d77c3",
+      "sha256": "652bacfb57734e2785b2ccf3348e3ce8bbbbb67bc15255420dc4af9d9c4d77c3",
+      "path": "grounding/detection.json"
+    },
+    "grounding/comparison.png": {
+      "id": "1492e323946c33036b8aac9648ae9cbac55d0694c5185c22d5156daff13487d1",
+      "sha256": "1492e323946c33036b8aac9648ae9cbac55d0694c5185c22d5156daff13487d1",
+      "path": "grounding/comparison.png"
+    },
+    "box_review": {
+      "id": "bd179e06487dcf92c17fff968e2d67198013e07d79cbc423ec3d36a9241d95ab",
+      "sha256": "bd179e06487dcf92c17fff968e2d67198013e07d79cbc423ec3d36a9241d95ab",
+      "path": "evidence/box_review/pending.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.002365799999097362
+    },
+    {
+      "stage": "edit_intent_review",
+      "action": "ACCEPTED_FOR_GROUNDING_ONLY",
+      "seconds": 0.05540610000025481,
+      "evidence_scope": "SYNTHETIC_TEST_ONLY"
+    },
+    {
+      "stage": "grounding",
+      "action": "DISPATCH",
+      "seconds": 0.07221230000141077,
+      "source_phrase": "synthetic object",
+      "execution": "SYNTHETIC_MOCK"
+    },
+    {
+      "stage": "grounding",
+      "action": "MODEL_RELEASED",
+      "seconds": 0.0802068999983021
+    },
+    {
+      "stage": "grounding",
+      "action": "COMPLETED",
+      "seconds": 0.08020989999931771,
+      "count": 2
+    },
+    {
+      "stage": "box_review",
+      "action": "STOP",
+      "seconds": 0.0933182000007946,
+      "state": "SOURCE_OBJECT_REQUIRES_REVIEW",
+      "reason": "All boxes retained; explicit box review required. No SAM or diffusion dispatched.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [
+    "BOX_REVIEW_PENDING"
+  ],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

@@ -1,0 +1,363 @@
+{
+  "_id": "68378cef5cbef05290b4d045",
+  "id": "black-forest-labs/FLUX.1-Kontext-dev",
+  "private": false,
+  "pipeline_tag": "image-to-image",
+  "library_name": "diffusers",
+  "tags": [
+    "diffusers",
+    "safetensors",
+    "image-generation",
+    "flux",
+    "diffusion-single-file",
+    "image-to-image",
+    "en",
+    "arxiv:2506.15742",
+    "license:other",
+    "eval-results",
+    "diffusers:FluxKontextPipeline",
+    "region:us"
+  ],
+  "downloads": 242659,
+  "likes": 2952,
+  "modelId": "black-forest-labs/FLUX.1-Kontext-dev",
+  "author": "black-forest-labs",
+  "sha": "24e9dedc4ef646698dc8eb4e18ae2cec3c9fea0d",
+  "lastModified": "2026-01-01T15:35:36.000Z",
+  "gated": "auto",
+  "disabled": false,
+  "model-index": null,
+  "config": {
+    "diffusers": {
+      "_class_name": "FluxKontextPipeline"
+    }
+  },
+  "cardData": {
+    "language": [
+      "en"
+    ],
+    "license": "other",
+    "license_name": "flux-1-dev-non-commercial-license",
+    "license_link": "LICENSE.md",
+    "extra_gated_prompt": "By clicking \"Agree\", you agree to the [FluxDev Non-Commercial License Agreement](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev/blob/main/LICENSE.md) and acknowledge the [Acceptable Use Policy](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev/blob/main/POLICY.md).",
+    "tags": [
+      "image-generation",
+      "flux",
+      "diffusion-single-file"
+    ],
+    "pipeline_tag": "image-to-image",
+    "library_name": "diffusers"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "83a295b587faf735513748818145139fc594e470",
+      "size": 1656
+    },
+    {
+      "rfilename": "LICENSE.md",
+      "blobId": "763a44c31c02064a8388981040487ce8731ddc86",
+      "size": 18621
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "ea5931c277da1d127bd15105b7b95897579bf7e3",
+      "size": 9640
+    },
+    {
+      "rfilename": "ae.safetensors",
+      "blobId": "71f11a92800c4a93cead7cebc556531926ecfc33",
+      "size": 335304388,
+      "lfs": {
+        "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38",
+        "size": 335304388,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev.safetensors",
+      "blobId": "73d6c0936c8e711081ad19afd503ec6b3f7c227b",
+      "size": 23802947360,
+      "lfs": {
+        "sha256": "843a26dc765d3105dba081c30bce7b14c65b0988f9e8d14e9fbc8856a6deebd5",
+        "size": 23802947360,
+        "pointerSize": 136
+      }
+    },
+    {
+      "rfilename": "model_index.json",
+      "blobId": "c4d1fd0e61682e02e74e379572b2c12d39bbbe60",
+      "size": 688
+    },
+    {
+      "rfilename": "scheduler/scheduler_config.json",
+      "blobId": "c9ef07f783510dddfe4c63bec65462f063f5bbed",
+      "size": 486
+    },
+    {
+      "rfilename": "teaser.png",
+      "blobId": "8a966c2f14ab160684589209435a1831a8fc5e58",
+      "size": 6171062,
+      "lfs": {
+        "sha256": "ba5354462fe3f3df42609b4e96635b35ef407d85ff0196a07b62749d86fb9fa9",
+        "size": 6171062,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "text_encoder/config.json",
+      "blobId": "60694284dee24af4b721ed1e83b8e9c4755428e8",
+      "size": 561
+    },
+    {
+      "rfilename": "text_encoder/model.safetensors",
+      "blobId": "40a62c5746d88a2483eb10db5ef38d12c5b6b893",
+      "size": 246144352,
+      "lfs": {
+        "sha256": "893d67a23f4693ed42cdab4cbad7fe3e727cf59609c40da28a46b5470f9ed082",
+        "size": 246144352,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "text_encoder_2/config.json",
+      "blobId": "438bc3b6f06ad249d8f6796a3926d543f9b374b9",
+      "size": 741
+    },
+    {
+      "rfilename": "text_encoder_2/model-00001-of-00002.safetensors",
+      "blobId": "fb543745ed2f4aa1105e3a8f97ff89a6ff7b5662",
+      "size": 4994582224,
+      "lfs": {
+        "sha256": "ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e",
+        "size": 4994582224,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "text_encoder_2/model-00002-of-00002.safetensors",
+      "blobId": "c1596ab4886c9962503f01891b16715d1469fbe5",
+      "size": 4530066360,
+      "lfs": {
+        "sha256": "a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00",
+        "size": 4530066360,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "text_encoder_2/model.safetensors.index.json",
+      "blobId": "c8728bc3dca59d2616a2a594cbac3ddb9eb77d5b",
+      "size": 19885
+    },
+    {
+      "rfilename": "tokenizer/merges.txt",
+      "blobId": "76e821f1b6f0a9709293c3b6b51ed90980b3166b",
+      "size": 524619
+    },
+    {
+      "rfilename": "tokenizer/special_tokens_map.json",
+      "blobId": "cf0682d6de72c1547f41b4f6d7c59f62deffef94",
+      "size": 588
+    },
+    {
+      "rfilename": "tokenizer/tokenizer_config.json",
+      "blobId": "5ec3aeb286ec1bd51d32a092c5246e1bfeb38958",
+      "size": 735
+    },
+    {
+      "rfilename": "tokenizer/vocab.json",
+      "blobId": "469be27c5c010538f845f518c4f5e8574c78f7c8",
+      "size": 1059962
+    },
+    {
+      "rfilename": "tokenizer_2/special_tokens_map.json",
+      "blobId": "17ade346a1042cbe0c1436f5bedcbd85c099d582",
+      "size": 2543
+    },
+    {
+      "rfilename": "tokenizer_2/spiece.model",
+      "blobId": "317a5ccbde45300f5d1d970d4d449af2108b147e",
+      "size": 791656,
+      "lfs": {
+        "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+        "size": 791656,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tokenizer_2/tokenizer.json",
+      "blobId": "21ed409afa3df5a822caa0fd5da30d13941f90b5",
+      "size": 2424235
+    },
+    {
+      "rfilename": "tokenizer_2/tokenizer_config.json",
+      "blobId": "ab25e5b781898f1326d306c8313c0f7562280db4",
+      "size": 20847
+    },
+    {
+      "rfilename": "transformer/config.json",
+      "blobId": "1b80da9fc6735e733607df1f3f48dcf18e250ee6",
+      "size": 452
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+      "blobId": "98617fa1c7acb1b6d9e0929d674c30f50fa9b618",
+      "size": 9983040304,
+      "lfs": {
+        "sha256": "5414f9ba3d3945512769b1b5ecd41122c8bcfebb7ec906a3ac60daf371d38946",
+        "size": 9983040304,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+      "blobId": "8c42886559e4aa46689b66b2e9911a419bcc7b80",
+      "size": 9949328904,
+      "lfs": {
+        "sha256": "a6fa67a12833c30040f794365a187cac8eef2e467152b84319034ae2828d9d03",
+        "size": 9949328904,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+      "blobId": "9c4c2b9c2981f346d1cf7c6ca4fe049c6cf4876f",
+      "size": 3870584832,
+      "lfs": {
+        "sha256": "464f5343b6b06a2337d8c34b72ebec38219ebbfb7aafecbc9b342dc031417e7a",
+        "size": 3870584832,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "blobId": "a7b03767f2395865d98ad50c6e8234f3726af8c0",
+      "size": 121262
+    },
+    {
+      "rfilename": "vae/config.json",
+      "blobId": "4ff62a03d28f5db33183264cf1fca1b90c477135",
+      "size": 914
+    },
+    {
+      "rfilename": "vae/diffusion_pytorch_model.safetensors",
+      "blobId": "3557b83a132d75a1f71bde9963021e667b1a0d2d",
+      "size": 167666902,
+      "lfs": {
+        "sha256": "f5b59a26851551b67ae1fe58d32e76486e1e812def4696a4bea97f16604d40a3",
+        "size": 167666902,
+        "pointerSize": 134
+      }
+    }
+  ],
+  "spaces": [
+    "black-forest-labs/FLUX.1-Kontext-Dev",
+    "kontext-community/kontext-relight",
+    "kontext-community/FLUX.1-Kontext-portrait",
+    "kontext-community/FLUX.1-Kontext-multi-image",
+    "prithivMLmods/Photo-Mate-i2i",
+    "wcy1122/DreamOmni2-Gen",
+    "wcy1122/DreamOmni2-Edit",
+    "rizavelioglu/vae-comparison",
+    "lvwerra/agent-ui",
+    "ChenDY/NAG_FLUX.1-Kontext-Dev",
+    "WithAnyone/WithAnyone_demo",
+    "akhaliq/FLUX.1-Kontext-dev",
+    "Yuanshi/FLUX.1-Kontext-Turbo",
+    "zerogpu-aoti/FLUX.1-Kontext-Dev",
+    "ginigen/Flux-Kontext-FaceLORA",
+    "prithivMLmods/FLUX.1-Kontext-Photo-Mate-v2",
+    "AlekseyCalvin/fast-Kontext-Flux-LoRAs-bySilverAgePoets",
+    "ysharma/Workflow1111",
+    "jairwaal/image",
+    "Nymbo/FLUX.1-Kontext-Dev",
+    "LPX55/Kontext-Multi_Lightning_4bit-nf4",
+    "mcp-tools/FLUX.1-Kontext-Dev",
+    "Kontext-Style/Kontext-Style-LoRAs",
+    "Kapanther/manga-translator",
+    "TIGER-Lab/RationalRewards-Demo",
+    "fffiloni/reachy-mini-doll",
+    "ginigen/Flux-Kontext-Style",
+    "abidlabs/Flux-Kontext-Slider",
+    "Velvessence/watermark-remover",
+    "nazdridoy/inferoxy-hub",
+    "umint/openwebui",
+    "zerogpu-aoti/FLUX.1-Kontext-Dev-fp8-dynamic",
+    "SahilCarterr/Tattoo_FLUX.1_Kontext_LoRA",
+    "csbowei/ART-Makeup-Transfer",
+    "mcjhn/ai",
+    "gparmar/Group-Inference-FLUX.1-Kontext",
+    "Jakob08/moneychatbot",
+    "NoobDoge/Multi_Ref_Edit",
+    "LiuZichen/MagicQuillV2",
+    "akhaliq/black-forest-labs-FLUX.1-Kontext-dev",
+    "ginigen/FLUX.1-Kontext-Dev",
+    "Shakker-Labs/FLUX-Kontext-LoRA-Gallery",
+    "KingNish/Personalized-Video-Gen",
+    "ImDilawer/black-forest-labs-FLUX.1-Kontext-dev",
+    "ovi054/virtual-tryon-flux-kontext",
+    "aiqtech/FLUX.1-Kontext-multi-image",
+    "snap-research/KontinuousKontext",
+    "Secondprinsipal/image",
+    "sean96t/Flux-Kontext-TryOn",
+    "build-small-hackathon/NEXUS_Visual_Weaver",
+    "SarowarSaurav/Finetuned-SLM",
+    "YANGnews/black-forest-labs-FLUX.1-Kontext-dev",
+    "rahul7star/WANGP1",
+    "DoozyWo/Kontext_Lora-Avatar_Transformation",
+    "DoozyWo/Avatar-Navi",
+    "Carlexx/Aduc-srd_Novim",
+    "EU-IA/Aduc-sdr-VIDEO",
+    "ovi054/Draw2Photo",
+    "Jonny001/Image-Editor",
+    "huggingfaceramki/Ramkiran_searchgpt",
+    "XCarleX/Aduc-sdr-cinematic-videoX",
+    "USF00/Wan2GP_Demo",
+    "svjack/WithAnyone_demo_HF",
+    "Hasanarshad/black-forest-labs-FLUX.1-Kontext-dev",
+    "Hasanarshad/Photo-Mate-i2i",
+    "oindrila13saha/sigma-gen-demo",
+    "nicovlr/trumpify-me",
+    "cduss/hfs_backend_exemple",
+    "ZhaoJingzi/moodboard-to-product-shot",
+    "hsmith27/floorplan-to-3d-interior",
+    "pikapool1994/Image_Editor_Fast",
+    "aaryanshah/wearwise-ai-backend",
+    "3Diiamond/MaterialTransform",
+    "Aqzszdrftgyhujikolpm/uncensored-upscale-edit",
+    "suvadityamuk/inspiration-seeds",
+    "hugging-apps/replan-image-editing",
+    "KeaiPandas/NiuLaiStyleImageGenerator",
+    "Kenner062/imagenes-ia-editor-flux",
+    "jkorstad/daggr-studio",
+    "SMSD75/SynthScope",
+    "gvdkooij/stencil-art",
+    "AstrodiR/YESNS",
+    "yongyeol/makeFT",
+    "yongyeol/mk3d",
+    "anujdullar0911/black-forest-labs-FLUX.1-Kontext-dev",
+    "LPX55/ListFluxLayers",
+    "jblas/black-forest-labs-FLUX.1-Kontext-dev",
+    "dafersaurio/black-forest-labs-FLUX.1-Kontext-dev",
+    "gfdfdsfffds/black-forest-labs-FLUX.1-Kontext-dev",
+    "dotisbob/black-forest-labs-FLUX.1-Kontext-dev",
+    "williamchans/black-forest-labs-FLUX.1-Kontext-dev",
+    "pumkinverz/black-forest-labs-FLUX.1-Kontext-dev",
+    "jinhaoyu/kontext-relight",
+    "IntroSpectate/black-forest-labs-FLUX.1-Kontext-dev",
+    "templatedepoot/FLUX.1-Kontext-Dev",
+    "jexlon/black-forest-labs-FLUX.1-Kontext-dev",
+    "nebukad/black-forest-labs-FLUX.1-Kontext-dev",
+    "cisiv62244/black-forest-labs-FLUX.1-Kontext-dev",
+    "nimraaaajhduksy/Flux",
+    "nimraaaajhduksy/flux-onnx"
+  ],
+  "createdAt": "2025-05-28T22:23:43.000Z",
+  "safetensors": {
+    "parameters": {
+      "BF16": 11901408320
+    },
+    "total": 11901408320
+  },
+  "usedStorage": 67092629094
+}

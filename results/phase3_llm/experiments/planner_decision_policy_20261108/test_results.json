@@ -1,0 +1,13 @@
+{
+  "before": {
+    "count": 53,
+    "seconds": 0.338,
+    "result": "OK"
+  },
+  "after": {
+    "count": 70,
+    "seconds": 0.229,
+    "result": "OK"
+  },
+  "inference_started_only_after_offline_tests_passed": true
+}

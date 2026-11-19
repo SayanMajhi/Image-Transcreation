@@ -1,0 +1,40 @@
+{
+  "case_id": "case1-croissant-samosa",
+  "edit_type": "TYPE_B_OBJECT_REPLACEMENT",
+  "scope": "RESEARCH_ONLY",
+  "human_approved": false,
+  "source_image_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+  "source_culture": "French-associated croissant, research culinary frame; photo does not prove origin",
+  "target_culture": "India / samosa snack context; not exclusive to India",
+  "source_object": "one croissant on a white background",
+  "target_object": "one triangular golden-brown fried samosa",
+  "original_function": "isolated handheld snack photograph",
+  "adapted_function": "isolated handheld snack photograph",
+  "visible_change": "replace the crescent layered croissant with a single triangular folded fried pastry shell characteristic of a samosa",
+  "must_preserve": [
+    "original image dimensions",
+    "white background outside the declared edit rectangle",
+    "camera viewpoint",
+    "one-snack product-photo composition",
+    "lighting direction"
+  ],
+  "research_assumptions": [
+    "This is snack-product localization, not breakfast-menu equivalence or a claim of unique national ownership.",
+    "The permitted rectangle includes the entire old pastry and nearby white surface/contact shadow to allow silhouette replacement. No plate, utensil or person is visible.",
+    "A hand-drawn triangular ControlNet silhouette will guide target shape; it is not source segmentation or ground truth."
+  ],
+  "cultural_evidence": [
+    "https://chhatarpur.nic.in/en/culinary-delight/samosa/",
+    "https://commons.wikimedia.org/wiki/File:Croissant.jpg"
+  ],
+  "source_license": "CC0 1.0, Petr Kratochvil; https://commons.wikimedia.org/wiki/File:Croissant-Petr_Kratochvil.jpg; https://www.publicdomainpictures.net/en/view-image.php?image=12541&picture=croissant",
+  "visual_requirements": [
+    "recognizable triangular folded samosa instead of crescent croissant",
+    "crisp fried pastry texture, not laminated croissant ridges",
+    "plausible perspective and shadow",
+    "no text or duplicated snacks",
+    "no hard composite rectangle"
+  ],
+  "pending_human_evaluation": true,
+  "frozen_before_generation_utc": "2026-11-11T13:56:56.260864+00:00"
+}

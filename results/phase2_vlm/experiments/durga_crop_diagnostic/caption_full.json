@@ -1,0 +1,48 @@
+{
+  "caption": "A group of women are dancing together. They are all dressed in traditional Indian garb. One of the women is in the middle of the group dancing. She is wearing a colorful garb and headdress. The women are holding brown bowls in their hands. There is smoke coming out of the bowls. There are wires hanging above the women.",
+  "model_id": "microsoft/Florence-2-base-ft",
+  "resolved_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "requested_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "image_dimensions": [
+    980,
+    692
+  ],
+  "seed": 42,
+  "task": "<MORE_DETAILED_CAPTION>",
+  "generation_settings": {
+    "max_new_tokens": 128,
+    "num_beams": 3,
+    "do_sample": false,
+    "num_return_sequences": 1,
+    "use_cache": false
+  },
+  "device": "cuda",
+  "precision": "float16",
+  "torch_version": "2.15.0+cu132",
+  "transformers_version": "4.57.6",
+  "model_loading_ms": 6430.891399999382,
+  "inference_ms": 3334.070299999439,
+  "peak_gpu_memory_bytes": 639576064,
+  "generated_tokens": 71,
+  "view": "full",
+  "input_image": "data\\durga.jpg",
+  "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+  "source_image": "data\\durga.jpg",
+  "source_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+  "source_dimensions": [
+    980,
+    692
+  ],
+  "crop_image": "outputs\\durga_crop_diagnostic\\crop.png",
+  "crop_sha256": "f9c4886a4eebe7270e63d05e10e290a81f464914ea6a46ee3e36f0b6eab936f3",
+  "selected_crop_coordinates": [
+    300,
+    100,
+    700,
+    600
+  ],
+  "crop_coordinates": null,
+  "coordinate_convention": "Decoded RGB pixels, origin top-left; X1/Y1 inclusive, X2/Y2 exclusive. No EXIF orientation transpose, resizing or padding before cropping.",
+  "assessment": "Unreviewed model output; no deity, festival or ritual identity verified.",
+  "measurement_notes": "One sequential observation per view, full first, no warmup. Inference excludes loading, image decoding, cropping and saving. CUDA peak allocated bytes include resident weights; CPU value is null. Model loading time is metadata for the same single load, not additive."
+}

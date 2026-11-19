@@ -1,0 +1,17 @@
+{
+  "case": 4,
+  "explanation": "fedora -> fez",
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "selected_condition": "A",
+  "technical_status": "PASS",
+  "visual_status": "STRONG",
+  "human_review_status": "PENDING_USER_REVIEW",
+  "diagnosis": "Recognizable fez, felt/tassel detail and native photographic contact shadow. Reference lighting differs, but coherent on the isolated white scene; faint original background flecks retained.",
+  "cultural_status": "Plausible researcher-defined association; cultural appropriateness pending user review",
+  "assessor": "Assistant qualitative inspection, except explicit historical user feedback for case1",
+  "review_question": "Does the replacement look recognizable and naturally placed, or pasted? What looks wrong?",
+  "output": "results\\phase9_repeatability\\case4\\A\\final.png",
+  "comparison": "results\\phase9_repeatability\\case4\\comparison.jpg",
+  "native_closeup": "results\\phase9_repeatability\\case4\\native_closeup.png"
+}

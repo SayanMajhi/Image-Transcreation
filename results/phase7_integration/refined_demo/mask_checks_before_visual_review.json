@@ -1,0 +1,26 @@
+{
+  "origin": "RESEARCH_MASK_MANUALLY_REFINED",
+  "scope": "RESEARCH_ONLY",
+  "source_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "sam_reference_sha256": "84c46f946790a3cceee46cd2e52191f1fb56c442e30611c5bb3a6b27d2c2617a",
+  "refined_mask_sha256": "7c848a20efef1fea04a8895db17e7d325d9055055e871f55cbb1ffdd4c62984e",
+  "protected_mask_sha256": "f90137ab3c868c5fdd9e769a7ac3594531c847e4877ac698e964362fa254dc7a",
+  "dimensions": [
+    1408,
+    1120
+  ],
+  "mask_bounds": [
+    537,
+    404,
+    643,
+    460
+  ],
+  "editable_pixels": 4224,
+  "percent_source_image": 0.26785714285714285,
+  "original_reference_pixels": 200805,
+  "removed_relative_to_sam": 196581,
+  "added_relative_to_sam": 0,
+  "overlap_with_full_protected_regions": 0,
+  "noodle_ground_truth_available": false,
+  "coverage_note": "A small manually traced patch only. No total-noodle coverage percentage can be claimed without independent annotation."
+}

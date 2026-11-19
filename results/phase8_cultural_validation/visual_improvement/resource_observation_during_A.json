@@ -1,0 +1,10 @@
+{
+  "observed_utc": "2026-11-11T18:20:16.714649+00:00",
+  "system_free_physical_memory_KiB": 88728,
+  "earlier_observation_free_KiB": 91512,
+  "gpu_total_MiB": 4096,
+  "free_gpu_MiB_during_A_observation": 766,
+  "ollama_models_observed_resident": [],
+  "unrelated_application_details_not_collected_for_package": true,
+  "interpretation": "current memory pressure may affect wall time; not a controlled timing comparison against the earlier seed43"
+}

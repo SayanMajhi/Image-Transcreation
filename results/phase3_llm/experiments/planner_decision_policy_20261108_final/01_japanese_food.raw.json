@@ -1,0 +1,18 @@
+{
+  "decision": "PROPOSE",
+  "decision_reason": "The meal (ramen) is adapted to a culturally appropriate Indian dish, maintaining the scene purpose and relationships.",
+  "scene_summary": "Two people share lunch at a table. A bowl of ramen with chopsticks sits between them. The meal is adapted to an Indian dish, maintaining the scene purpose and relationships.",
+  "candidate_edits": [
+    {
+      "object_description": "bowl of dal with curry and rice",
+      "localization_phrase": "bowl of dal with curry and rice",
+      "proposed_change": "bowl of dal with curry and rice",
+      "cultural_reason": "Dal is a common Indian dish that can be served with rice and curry, providing a culturally appropriate alternative to ramen.",
+      "identity_uncertain": false,
+      "verified_object_id": "meal-1"
+    }
+  ],
+  "must_preserve": ["Two people share lunch at a table.", "A bowl of ramen with chopsticks sits between them.", "Both people remain seated."],
+  "uncertainties": [],
+  "verification_requirements": []
+}

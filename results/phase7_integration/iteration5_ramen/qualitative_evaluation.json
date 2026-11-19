@@ -1,0 +1,38 @@
+{
+  "scope": "Assistant qualitative assessment; no independent human annotation or cultural approval.",
+  "vlm": {
+    "caption": "A bowl of food with chopsticks and a spoon.",
+    "caption_complete": true,
+    "supported": [
+      "Bowl, food, chopsticks and spoon are visible."
+    ],
+    "misses": [
+      "Does not specifically identify noodles or ramen.",
+      "No toppings/ingredients or tabletop context described."
+    ],
+    "hallucinations_detected": "No unsupported detail in this short caption was identified by visual comparison.",
+    "limitation": "Complete EOS output is still too generic for the requested food identity; completeness is not detail or factual completeness."
+  },
+  "qwen": {
+    "source_target_direction": "Correctly follows declared Japanese source and Indian target.",
+    "requested_goal": "Repeats the user-requested masala-noodles adaptation.",
+    "source_localization_error": "Names Indian-style masala noodles, the future replacement, instead of the original ramen/noodles.",
+    "original_scene_error": "Scene summary describes an already-adapted result and attributes Japanese ramen to a caption that only said bowl of food.",
+    "unsupported_certainty": "identity_uncertain=false with no verified source-object ID or confirmed human image check.",
+    "preservation": "Lists exactly bowl, table, camera angle, lighting, background. This is not proof those constraints can be enforced visually.",
+    "cultural_reasoning": "User-directed goal is understood; broad common-dish/similar-serving claims are model statements, not independent cultural evidence.",
+    "physical_or_ingredient_quality": "No generated image exists; composition fit, recipe appropriateness and changed topping scope are unresolved."
+  },
+  "validator": {
+    "assessment": "REVIEW with empty released candidates is appropriate for absent verified identity and wrong original localization.",
+    "retained_human_warning": "USER_CONSTRAINTS_UNRESOLVED remains human_verification, not the old unconditional blocking issue.",
+    "limitation": "The future-scene/false-caption-attribution error was not separately coded. Its paraphrased future phrase evades the literal future-change check.",
+    "raw_and_final_text_not_repaired": true
+  },
+  "follow_up_requires_separate_milestone": [
+    "Image-bound actual user source verification under the existing contract.",
+    "A correct original-object localization phrase; do not repair this raw proposal into an approved one.",
+    "Human assessment of the requested food adaptation and preservation before any later localization."
+  ],
+  "recommendation": "NEEDS FIXES for a valid review-eligible cultural proposal; technical execution and safety stopping succeeded."
+}

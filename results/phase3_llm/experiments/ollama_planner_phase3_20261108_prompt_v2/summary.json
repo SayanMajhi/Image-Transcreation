@@ -1,0 +1,136 @@
+[
+  {
+    "scenario": "01_japanese_food",
+    "validation": {
+      "status": "valid",
+      "raw_decision": "PROPOSE",
+      "final_decision": "REVIEW",
+      "deterministic_review_applied": true,
+      "cultural_correctness": "not assessed; human review required"
+    },
+    "decision": "REVIEW",
+    "elapsed_seconds": 8.902830399998493,
+    "prompt_tokens": 670,
+    "output_tokens": 273,
+    "policy_check": {
+      "expected_decisions": [
+        "PROPOSE",
+        "REVIEW"
+      ],
+      "matched": true,
+      "note": "Policy expectations only; not cultural-correctness scores."
+    },
+    "human_review_notes": ""
+  },
+  {
+    "scenario": "02_durga_uncertain_incense",
+    "validation": {
+      "status": "valid",
+      "raw_decision": "ABSTAIN",
+      "final_decision": "REVIEW",
+      "deterministic_review_applied": true,
+      "cultural_correctness": "not assessed; human review required"
+    },
+    "decision": "REVIEW",
+    "elapsed_seconds": 8.872334100000444,
+    "prompt_tokens": 775,
+    "output_tokens": 356,
+    "policy_check": {
+      "expected_decisions": [
+        "REVIEW"
+      ],
+      "matched": true,
+      "note": "Policy expectations only; not cultural-correctness scores."
+    },
+    "human_review_notes": ""
+  },
+  {
+    "scenario": "03_bicycle_no_change",
+    "validation": {
+      "status": "valid",
+      "raw_decision": "ABSTAIN",
+      "final_decision": "REVIEW",
+      "deterministic_review_applied": true,
+      "cultural_correctness": "not assessed; human review required"
+    },
+    "decision": "REVIEW",
+    "elapsed_seconds": 8.656105900001421,
+    "prompt_tokens": 689,
+    "output_tokens": 272,
+    "policy_check": {
+      "expected_decisions": [
+        "ABSTAIN"
+      ],
+      "matched": false,
+      "note": "Policy expectations only; not cultural-correctness scores."
+    },
+    "human_review_notes": ""
+  },
+  {
+    "scenario": "04_truncated_caption",
+    "validation": {
+      "status": "valid",
+      "raw_decision": "ABSTAIN",
+      "final_decision": "REVIEW",
+      "deterministic_review_applied": true,
+      "cultural_correctness": "not assessed; human review required"
+    },
+    "decision": "REVIEW",
+    "elapsed_seconds": 8.2720797999973,
+    "prompt_tokens": 756,
+    "output_tokens": 250,
+    "policy_check": {
+      "expected_decisions": [
+        "REVIEW"
+      ],
+      "matched": true,
+      "note": "Policy expectations only; not cultural-correctness scores."
+    },
+    "human_review_notes": ""
+  },
+  {
+    "scenario": "05_unknown_source_culture",
+    "validation": {
+      "status": "valid",
+      "raw_decision": "ABSTAIN",
+      "final_decision": "REVIEW",
+      "deterministic_review_applied": true,
+      "cultural_correctness": "not assessed; human review required"
+    },
+    "decision": "REVIEW",
+    "elapsed_seconds": 7.305317500002275,
+    "prompt_tokens": 646,
+    "output_tokens": 173,
+    "policy_check": {
+      "expected_decisions": [
+        "REVIEW",
+        "ABSTAIN"
+      ],
+      "matched": true,
+      "note": "Policy expectations only; not cultural-correctness scores."
+    },
+    "human_review_notes": ""
+  },
+  {
+    "scenario": "06_caption_injection",
+    "validation": {
+      "status": "valid",
+      "raw_decision": "ABSTAIN",
+      "final_decision": "REVIEW",
+      "deterministic_review_applied": true,
+      "cultural_correctness": "not assessed; human review required"
+    },
+    "decision": "REVIEW",
+    "elapsed_seconds": 7.656244999998307,
+    "prompt_tokens": 714,
+    "output_tokens": 206,
+    "policy_check": {
+      "expected_decisions": [
+        "REVIEW"
+      ],
+      "matched": true,
+      "note": "Policy expectations only; not cultural-correctness scores."
+    },
+    "human_review_notes": ""
+  }
+]

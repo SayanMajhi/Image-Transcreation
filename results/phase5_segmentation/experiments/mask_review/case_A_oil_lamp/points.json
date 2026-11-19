@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "annotation_status": "RESEARCH_ONLY_REQUIRES_REVIEW",
+  "coordinate_system": "original_image_xy_pixels",
+  "source_image_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+  "detection_json_sha256": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+  "prediction_index": 2,
+  "target_definition": "For this diagnostic only: visible clay lamp bowl/body. Exclude flame, unrelated tray, rice/grains and surrounding background. This bowl-only target is not sufficient for full lamp replacement; eventual flame, wick and supporting-object treatment remains separate and unresolved.",
+  "placement_method": "manual assistant research placement after original-photo inspection; no automatic point generation or independent human approval",
+  "declared_at_utc": "2026-11-09T11:09:44.916159+00:00",
+  "points": [
+    {
+      "x": 650,
+      "y": 330,
+      "label": 1,
+      "note": "Left clay bowl/rim"
+    },
+    {
+      "x": 760,
+      "y": 418,
+      "label": 1,
+      "note": "Front clay bowl body"
+    },
+    {
+      "x": 850,
+      "y": 365,
+      "label": 1,
+      "note": "Right clay rim/body"
+    },
+    {
+      "x": 769,
+      "y": 310,
+      "label": 0,
+      "note": "Bright flame interior"
+    },
+    {
+      "x": 880,
+      "y": 420,
+      "label": 0,
+      "note": "Unrelated tray/rice/background beside the bowl"
+    }
+  ]
+}

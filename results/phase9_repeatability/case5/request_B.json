@@ -1,0 +1,97 @@
+{
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source": {
+    "path": "../assets/fez.jpg",
+    "sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344"
+  },
+  "reference": {
+    "path": "../assets/fedora.jpg",
+    "sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b"
+  },
+  "selection": {
+    "path": "../reference_masks/fedora_B.png",
+    "sha256": "e54060df0dcae24e4aeb19ec501e7707558c3f6b4e673608cb9e9bf304d314f3"
+  },
+  "permitted": {
+    "path": "permitted.png",
+    "sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448"
+  },
+  "protected": {
+    "path": "protected.png",
+    "sha256": "edaa80c4cef807ccfe8859f2ca041209c3a6b6d3a07c84ea34b35c1ad7dc13fb"
+  },
+  "parameters": {
+    "target_width": 3400,
+    "position": [
+      1180,
+      700
+    ],
+    "background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "edge_radius": 1.0,
+    "shadows": [
+      {
+        "ellipse": [
+          1450,
+          3620,
+          4520,
+          3730
+        ],
+        "blur": 40,
+        "opacity": 0.16
+      }
+    ],
+    "reference_box": [
+      0,
+      0,
+      1952,
+      1732
+    ]
+  },
+  "attribution": {
+    "path": "results\\phase9_repeatability\\assets\\fedora.jpg",
+    "sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+    "dimensions": [
+      1952,
+      1732
+    ],
+    "title": "A fedora hat, made by Borsalino.jpg",
+    "author": "Kjetil Ree",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:A_fedora_hat,_made_by_Borsalino.jpg"
+  },
+  "source_attribution": {
+    "path": "results\\phase9_repeatability\\assets\\fez.jpg",
+    "sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+    "dimensions": [
+      5760,
+      4320
+    ],
+    "title": "Fez.jpg",
+    "author": "Edouard Hue",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fez.jpg"
+  },
+  "annotation_method": "Frozen annotations.json reference photo patch or manual polygon. Source envelope: largest RGB-min<235 component +30px margin, union explicit reference placement and declared soft-shadow footprint. Not SAM, not human approval.; native source tassel envelope [700,500,5050,3920] explicitly included after preflight showed disconnected hairs outside largest component. No composite executed before this correction.; B reference hat mask: largest maxRGB<240 component and external-contour fill, original crop fixed; not SAM.",
+  "case": {
+    "id": 5,
+    "source": "fez",
+    "target": "fedora",
+    "source_culture": "Moroccan-associated fez, not an exclusive national object",
+    "target_culture": "Italian Borsalino fedora / wider Western headwear context",
+    "category": "headwear",
+    "difficulty": "medium: inverse headwear case reuses assets; not statistically independent"
+  },
+  "frozen_at_utc": "2026-11-11T20:12:56.908919+00:00",
+  "frozen_manifest_sha256": "741ce80c309eb37b35f4af23d0172f86f3c26c273e36e6a31b26b230291d419b",
+  "lighting_limits": "Reference illumination retained; no intrinsic relighting or 3D pose recovery. Uniform source background reconstruction is a research assumption.",
+  "correction": {
+    "issue_A": "Reference photo patch has little contact shadow, causing floating/sticker-like placement",
+    "change": "Replace opaque photo-patch matte by hat contour and add declared soft contact shadow. Two coupled compositing changes; no isolated causal claim. Keep crop and pose identical.",
+    "frozen_at_utc": "2026-11-11T20:14:40.270192+00:00"
+  }
+}

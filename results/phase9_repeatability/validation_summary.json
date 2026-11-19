@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "cases": 6,
+  "saved_outputs_independently_reopened": 8,
+  "max_new_conditions_per_case": 2,
+  "outside_region_changes": 0,
+  "protected_differences": 0,
+  "frozen_manifest_verified": true,
+  "new_human_reviews": 0
+}

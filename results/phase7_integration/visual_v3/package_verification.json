@@ -1,0 +1,15 @@
+{
+  "zip": "results/final_project_review_v3.zip",
+  "bytes": 88152926,
+  "sha256": "1fdb9a6d0d9bbb9b8d1dbf1e57a7d12c2eefdc15a1cd3a8b1f0ce1c6a5d03f3e",
+  "entries": 264,
+  "crc": "passed",
+  "manifest_members": "all matched",
+  "portable_full_tests_passed": 412,
+  "portable_pixel_and_provenance_checks": "passed",
+  "primary_document_links": "all valid",
+  "project_status": "PARTIALLY_COMPLETE",
+  "guided_visual_demonstration": "FAIL",
+  "new_diffusion_calls": 2,
+  "quality_retries": 0
+}

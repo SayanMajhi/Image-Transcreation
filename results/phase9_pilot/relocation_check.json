@@ -1,0 +1,12 @@
+{
+  "purpose": "Prove the review package is self-contained: unzip into an empty folder outside the repository and rerun the pilot there.",
+  "executed": "2026-11-12, provisional package built from run_001 with the final code (docs updated afterwards)",
+  "first_attempt": "FAILED: validate required the phase-9 historical reference outputs, which the package deliberately omits. Fixed in src/transcreation/pilot.py (absent reference copies are reported, CASE_01 benchmark is now packaged); regression test test_unzipped_package_reproduces_elsewhere added.",
+  "second_attempt": {
+    "package_files": 147,
+    "validate": "VALID (7 historical reference outputs reported absent; compared by recorded SHA-256)",
+    "run": "6/6 cases OK, 19.8 s",
+    "verify": "PASS, 0 failures",
+    "final_png_byte_identical_to_repository_run_001": "14/14"
+  }
+}

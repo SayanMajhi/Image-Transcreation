@@ -1,0 +1,19 @@
+{
+  "project_status": "PARTIALLY_COMPLETE",
+  "technical_research_generation": "PASS",
+  "cultural_target_appearance": "FAIL_TEXT_LIKE_ARTIFACT",
+  "transformation_scope": "PARTIAL_LOCAL_TRANSFORMATION_ATTEMPT",
+  "new_diffusion_calls": 1,
+  "quality_retries": 0,
+  "new_caption_qwen_grounding_sam_calls": 0,
+  "historical_human_decision": "MATERIAL_UNRESOLVED unchanged",
+  "original_automated_final_decision": "REVIEW, zero released candidates",
+  "new_human_approvals": 0,
+  "test_count": 407,
+  "failures": 0,
+  "outside_mask_changes": 0,
+  "inside_mask_changes": 4224,
+  "protected_region_changes": 0,
+  "image_fraction_edited": 0.0026785714285714286,
+  "remaining_blocker": "Generation produced label-like text rather than plausible masala noodles; entire-dish scope/cultural appropriateness unestablished. Stop for mentor evaluation."
+}

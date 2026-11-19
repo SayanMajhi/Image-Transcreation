@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "annotation_status": "RESEARCH_ONLY_REQUIRES_REVIEW",
+  "coordinate_system": "original_image_xy_pixels",
+  "source_image_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+  "detection_json_sha256": "424abf5cdd98ad02be3e9ae9e68e40cc9186ba6167874bf5488dbadec94d6992",
+  "prediction_index": 0,
+  "target_definition": "Physical bicycle parts, including frame, handlebars, saddle, rims, tires and visible spokes. Exclude wall, road and background visible through wheels.",
+  "placement_method": "manual assistant research placement after original-photo inspection; no automatic point generation or independent human approval",
+  "declared_at_utc": "2026-11-09T11:09:44.916159+00:00",
+  "points": [
+    {
+      "x": 680,
+      "y": 653,
+      "label": 1,
+      "note": "Visible horizontal frame tube"
+    },
+    {
+      "x": 658,
+      "y": 722,
+      "label": 1,
+      "note": "Visible diagonal frame tube"
+    },
+    {
+      "x": 550,
+      "y": 913,
+      "label": 1,
+      "note": "Rear-wheel tire/rim structure"
+    },
+    {
+      "x": 850,
+      "y": 882,
+      "label": 1,
+      "note": "Front-wheel tire/rim structure"
+    },
+    {
+      "x": 830,
+      "y": 625,
+      "label": 0,
+      "note": "Wall/graffiti above and to the right of the frame"
+    },
+    {
+      "x": 680,
+      "y": 695,
+      "label": 0,
+      "note": "Wall visible inside the main frame opening"
+    },
+    {
+      "x": 505,
+      "y": 750,
+      "label": 0,
+      "note": "Wall/graffiti visible through rear-wheel opening"
+    },
+    {
+      "x": 908,
+      "y": 758,
+      "label": 0,
+      "note": "Background between visible front-wheel spokes; placement requires independent review"
+    }
+  ]
+}

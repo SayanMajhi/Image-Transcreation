@@ -1,0 +1,12 @@
+{
+  "Python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+  "Pillow": "13.0.0",
+  "numpy": "2.4.6",
+  "OpenCV": "5.0.0",
+  "execution": "CPU reference composites; no new model inference",
+  "GPU_memory": "not applicable: no CUDA/model execution",
+  "CPU_peak_memory": "not instrumented",
+  "preparation_download_time": "not instrumented; per-composite times include loading/compositing/saving, exclude annotation preparation"
+}

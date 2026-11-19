@@ -1,0 +1,22 @@
+{
+  "previous_files_checked": 1260,
+  "modified_or_missing": [],
+  "model_config_policy_and_historical_evidence": "all prior snapshotted bytes unchanged",
+  "documents_updated": [
+    "README.md",
+    "reports/final_project_report.md"
+  ],
+  "document_originals_saved": [
+    "README_before.md",
+    "final_project_report_before.md"
+  ],
+  "new_implementation": [
+    "src/transcreation/stages/appearance_transfer.py",
+    "scripts/appearance_transfer.py"
+  ],
+  "new_tests": [
+    "tests/test_appearance_transfer.py"
+  ],
+  "new_model_calls": 0,
+  "new_parameter_conditions": 1
+}

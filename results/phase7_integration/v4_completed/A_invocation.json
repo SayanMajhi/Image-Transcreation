@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "scripts.inpaint",
+    "--refined-input",
+    "results\\phase7_integration\\v4_completed\\input_A.json",
+    "--out",
+    "results\\phase7_integration\\v4_completed\\A",
+    "--max-attempts",
+    "1"
+  ],
+  "started_at_utc": "2026-11-11T12:32:18.226914+00:00",
+  "planned_condition": "A; no negative prompt",
+  "max_attempts": 1
+}

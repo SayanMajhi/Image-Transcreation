@@ -1,0 +1,40 @@
+{
+  "id": "CASE_05",
+  "status": "NEW",
+  "direction": "Moroccan->Italian",
+  "source_object": "fez",
+  "target_object": "Borsalino fedora",
+  "human_review_status": "PENDING_USER_REVIEW",
+  "attempts": [
+    {
+      "attempt": "A",
+      "role": "primary",
+      "request": "results/phase9_repeatability/case5/request_A.json",
+      "status": "OK",
+      "elapsed_seconds": 3.524,
+      "output_sha256": "30d75517d65af3b2cdd1eeff261ff72f79488a89ac55b485dee8bb3e04321f4d",
+      "target_bbox": [
+        1180,
+        700,
+        4580,
+        3717
+      ]
+    },
+    {
+      "attempt": "B",
+      "role": "correction",
+      "request": "results/phase9_repeatability/case5/request_B.json",
+      "status": "OK",
+      "elapsed_seconds": 4.454,
+      "output_sha256": "468c80d873db135776ae7a551186ca432e3b8a09554905ea5dc0cf12e3895818",
+      "target_bbox": [
+        1216,
+        748,
+        4480,
+        3683
+      ]
+    }
+  ],
+  "selected_attempt": "B",
+  "case_status": "OK"
+}

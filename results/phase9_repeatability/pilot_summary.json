@@ -1,0 +1,31 @@
+{
+  "total_cases": 6,
+  "historical_baseline_cases": 1,
+  "new_cases_executed": 5,
+  "new_composite_attempts": 7,
+  "primary_new_attempts": 5,
+  "corrective_new_attempts": 2,
+  "new_model_inferences": 0,
+  "technical_pass": 6,
+  "technical_fail": 0,
+  "assistant_visual_strong": 3,
+  "assistant_visual_partial": 3,
+  "assistant_visual_fail_selected_results": 0,
+  "new_visual_strong": 2,
+  "human_pass": 1,
+  "new_human_pending": 5,
+  "outside_region_changes_all_results": 0,
+  "protected_differences_all_results": 0,
+  "strongest_new_cases_for_review": [
+    2,
+    4
+  ],
+  "repeatability_conclusion": "Technical repeatability on selected isolated scenes; mixed visual coherence, not generalization or five new human successes",
+  "common_failure_modes": [
+    "Contact shadow/lighting mismatch",
+    "Cutout edges and target/source perspective mismatch",
+    "Low-resolution reference upsampling",
+    "Residual source shadow in primary case3, corrected once",
+    "Reference reuse and near-white background selection bias"
+  ]
+}

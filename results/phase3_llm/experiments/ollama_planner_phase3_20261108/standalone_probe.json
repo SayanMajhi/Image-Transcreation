@@ -1,0 +1,164 @@
+{
+  "request": {
+    "model": "qwen2.5:3b",
+    "stream": false,
+    "keep_alive": 0,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 4096,
+      "num_predict": 32
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "Return only a JSON object with ready set to true."
+      }
+    ],
+    "format": {
+      "type": "object",
+      "properties": {
+        "ready": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ready"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "response": {
+    "model": "qwen2.5:3b",
+    "created_at": "2026-11-08T09:07:42.4812621Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\n  \"ready\": true\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3963463700,
+    "load_duration": 3697877800,
+    "prompt_eval_count": 19,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 113535000,
+    "eval_count": 9,
+    "eval_duration": 142342000
+  },
+  "elapsed_seconds": 4.192548699997133,
+  "memory_samples": [
+    {
+      "at": "2026-11-08T09:07:38.471879+00:00",
+      "ollama_ps": {
+        "models": []
+      },
+      "nvidia_smi": "1469, 4096, 7"
+    },
+    {
+      "at": "2026-11-08T09:07:39.021033+00:00",
+      "ollama_ps": {
+        "models": []
+      },
+      "nvidia_smi": "1471, 4096, 16"
+    },
+    {
+      "at": "2026-11-08T09:07:39.593615+00:00",
+      "ollama_ps": {
+        "models": []
+      },
+      "nvidia_smi": "1477, 4096, 4"
+    },
+    {
+      "at": "2026-11-08T09:07:40.152876+00:00",
+      "ollama_ps": {
+        "models": []
+      },
+      "nvidia_smi": "3374, 4096, 58"
+    },
+    {
+      "at": "2026-11-08T09:07:40.712816+00:00",
+      "ollama_ps": {
+        "models": []
+      },
+      "nvidia_smi": "3374, 4096, 12"
+    },
+    {
+      "at": "2026-11-08T09:07:41.303101+00:00",
+      "ollama_ps": {
+        "models": []
+      },
+      "nvidia_smi": "3374, 4096, 11"
+    },
+    {
+      "at": "2026-11-08T09:07:41.894364+00:00",
+      "ollama_ps": {
+        "models": []
+      },
+      "nvidia_smi": "3583, 4096, 1"
+    },
+    {
+      "at": "2026-11-08T09:07:42.454882+00:00",
+      "ollama_ps": {
+        "models": [
+          {
+            "name": "qwen2.5:3b",
+            "model": "qwen2.5:3b",
+            "size": 2163568803,
+            "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen2",
+              "families": [
+                "qwen2"
+              ],
+              "parameter_size": "3.1B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-08T14:37:42.4556616+05:30",
+            "size_vram": 2163568803,
+            "context_length": 4096,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "nvidia_smi": "1438, 4096, 2"
+    },
+    {
+      "at": "2026-11-08T09:07:42.560416+00:00",
+      "ollama_ps": {
+        "models": []
+      },
+      "nvidia_smi": "1438, 4096, 2"
+    }
+  ],
+  "resolved_models": {
+    "models": [
+      {
+        "name": "qwen2.5:3b",
+        "model": "qwen2.5:3b",
+        "modified_at": "2026-11-08T14:30:01.081001+05:30",
+        "size": 1929912432,
+        "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "3.1B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 32768,
+          "embedding_length": 2048,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      }
+    ]
+  },
+  "passed": true
+}

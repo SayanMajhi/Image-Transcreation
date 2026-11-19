@@ -1,0 +1,81 @@
+[
+  {
+    "case": "accepted_multiple",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "decision": "ACCEPT_FOR_GROUNDING_TEST",
+    "state": "SOURCE_OBJECT_REQUIRES_REVIEW",
+    "stopped_at": "box_review",
+    "reason": "All boxes retained; explicit box review required. No SAM or diffusion dispatched.",
+    "mock_detection_calls": 1,
+    "mock_close_calls": 1,
+    "live_model_calls": 0,
+    "image_generation_permitted": false
+  },
+  {
+    "case": "synthetic_cannot_dispatch_live",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "state": "EDIT_INTENT_REQUIRES_REVIEW",
+    "reason": "Synthetic approvals cannot dispatch live models; offline mock required.",
+    "live_model_calls": 0
+  },
+  {
+    "case": "accepted_no_detections",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "decision": "ACCEPT_FOR_GROUNDING_TEST",
+    "state": "SOURCE_OBJECT_REQUIRES_REVIEW",
+    "stopped_at": "box_review",
+    "reason": "All boxes retained; explicit box review required. No SAM or diffusion dispatched.",
+    "mock_detection_calls": 1,
+    "mock_close_calls": 1,
+    "live_model_calls": 0,
+    "image_generation_permitted": false
+  },
+  {
+    "case": "pending",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "decision": "PENDING",
+    "state": "EDIT_INTENT_REQUIRES_REVIEW",
+    "stopped_at": "edit_intent_review",
+    "reason": "Explicit acceptance is absent; localization blocked.",
+    "mock_detection_calls": 0,
+    "mock_close_calls": 0,
+    "live_model_calls": 0,
+    "image_generation_permitted": false
+  },
+  {
+    "case": "reject",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "decision": "REJECT",
+    "state": "EDIT_INTENT_REJECTED",
+    "stopped_at": "edit_intent_review",
+    "reason": "Reviewer rejected this edit intent; localization blocked.",
+    "mock_detection_calls": 0,
+    "mock_close_calls": 0,
+    "live_model_calls": 0,
+    "image_generation_permitted": false
+  },
+  {
+    "case": "needs_review",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "decision": "NEEDS_REVIEW",
+    "state": "EDIT_INTENT_REQUIRES_REVIEW",
+    "stopped_at": "edit_intent_review",
+    "reason": "Explicit acceptance is absent; localization blocked.",
+    "mock_detection_calls": 0,
+    "mock_close_calls": 0,
+    "live_model_calls": 0,
+    "image_generation_permitted": false
+  },
+  {
+    "case": "changed_plan",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "decision": "ACCEPT_FOR_GROUNDING_TEST",
+    "state": "FAILED",
+    "stopped_at": "edit_intent_review",
+    "reason": "changed planning evidence: validated_plan.json",
+    "mock_detection_calls": 0,
+    "mock_close_calls": 0,
+    "live_model_calls": 0,
+    "image_generation_permitted": false
+  }
+]

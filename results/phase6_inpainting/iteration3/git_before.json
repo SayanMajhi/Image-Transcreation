@@ -1,0 +1,4 @@
+{
+  "status": " M README.md\n M pyproject.toml\n M src/transcreation/config.py\n M src/transcreation/contracts.py\n?? configs/inpainting.yaml\n?? reports/phase6_working.md\n?? results/phase6_inpainting/\n?? scripts/inpaint.py\n?? src/transcreation/stages/inpainting.py\n?? tests/test_inpainting.py\n",
+  "diff": " README.md                      | 17 +++++++++++++----\n pyproject.toml                 |  3 +++\n src/transcreation/config.py    | 42 ++++++++++++++++++++++++++++++++++++++++++\n src/transcreation/contracts.py | 28 ++++++++++++++++++++++++++++\n 4 files changed, 86 insertions(+), 4 deletions(-)\n"
+}

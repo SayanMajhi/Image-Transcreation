@@ -1,0 +1,97 @@
+{
+  "accepted": [
+    {
+      "case": 1,
+      "why": "historical baseline",
+      "source_culture": "French pastry context",
+      "target_culture": "Indian snack context",
+      "category": "food"
+    },
+    {
+      "case": 2,
+      "why": "low: isolated studio white background, target photographic texture",
+      "source_culture": "German-associated pretzel context",
+      "target_culture": "French pastry context",
+      "category": "food"
+    },
+    {
+      "case": 3,
+      "why": "medium: target perspective/scale differs, must isolate one rice snack from tray",
+      "source_culture": "American-style chocolate-chip snack context",
+      "target_culture": "Japanese yaki-onigiri snack context",
+      "category": "food"
+    },
+    {
+      "case": 4,
+      "why": "medium: thin tassel extraction and studio shadow matching",
+      "source_culture": "Italian Borsalino hat / wider Western headwear context",
+      "target_culture": "Moroccan-associated fez, also worn in other regions",
+      "category": "headwear"
+    },
+    {
+      "case": 5,
+      "why": "medium: inverse headwear case reuses assets; not statistically independent",
+      "source_culture": "Moroccan-associated fez, not an exclusive national object",
+      "target_culture": "Italian Borsalino fedora / wider Western headwear context",
+      "category": "headwear"
+    },
+    {
+      "case": 6,
+      "why": "high: strong original directional shadow; low-resolution target and surface-texture extraction",
+      "source_culture": "Generic Western-style handled mug, culturally nonexclusive",
+      "target_culture": "Japanese-style wabi-sabi tea vessel aesthetic, no claim of manufacture in Japan",
+      "category": "drinkware"
+    }
+  ],
+  "rejected": [
+    {
+      "candidate": "Onigiri photo as SOURCE",
+      "reason": "Two rice snacks and patterned tray; unnecessary multi-object removal",
+      "cultures": "Japan to Germany",
+      "category": "food",
+      "difficulty": "high"
+    },
+    {
+      "candidate": "Fedora Hat.png",
+      "reason": "Icon, not genuine photo",
+      "cultures": "Western to Morocco",
+      "category": "headwear",
+      "difficulty": "not suitable"
+    },
+    {
+      "candidate": "Fedora OS photographs",
+      "reason": "Search ambiguity: not a hat",
+      "cultures": "not applicable",
+      "category": "not applicable",
+      "difficulty": "not suitable"
+    },
+    {
+      "candidate": "Candle white background.jpg to diya",
+      "reason": "179px narrow source severely limits horizontal lamp replacement; avoid ceremonial scope for this pilot",
+      "cultures": "generic candle to India",
+      "category": "lighting",
+      "difficulty": "high"
+    },
+    {
+      "candidate": "Espresso cup.jpg",
+      "reason": "Blue textured cloth background adds reconstruction complexity",
+      "cultures": "Italian coffee to Japanese tea",
+      "category": "drinkware",
+      "difficulty": "high"
+    },
+    {
+      "candidate": "Walters tea bowl reference",
+      "reason": "License verified but repeated HTTP429; use preregistered available wabi-sabi vessel instead before output selection",
+      "cultures": "generic mug to Japanese vessel",
+      "category": "drinkware",
+      "difficulty": "medium"
+    },
+    {
+      "candidate": "Three-object mug/croissant source",
+      "reason": "Unrelated objects complicate removal",
+      "cultures": "Western to Japanese",
+      "category": "drinkware",
+      "difficulty": "high"
+    }
+  ]
+}

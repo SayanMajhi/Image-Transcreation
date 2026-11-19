@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "record_type": "grounding_box_human_review",
+  "original_image_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+  "original_dimensions": [
+    1280,
+    966
+  ],
+  "source_phrase": "bicycle",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "prediction_count": 1,
+  "detection_json_sha256": "424abf5cdd98ad02be3e9ae9e68e40cc9186ba6167874bf5488dbadec94d6992",
+  "annotation_sha256": "325660ae396962dcf67685c7ba6a138b6236da5a5306150be3cefcf7c4363cab",
+  "image_file": "original.jpg",
+  "detection_file": "detection.json",
+  "annotation_file": "annotated.png",
+  "prediction_indexing": "zero_based_detections_array",
+  "decision": "ACCEPT",
+  "selected_prediction_index": 0,
+  "selected_prediction": {
+    "box": [
+      441.8973388671875,
+      581.3589477539062,
+      953.31396484375,
+      924.9127197265625
+    ],
+    "score": 0.9432805180549622,
+    "label": "bicycle"
+  },
+  "candidate_kind": "reviewed segmentation-test candidate",
+  "reviewer": "YOUR_NAME",
+  "explanation": "The box encloses the visible bicycle and is suitable for a segmentation test",
+  "created_at_utc": "2026-11-09T07:39:12.961408+00:00",
+  "reviewed_at_utc": "2026-11-09T08:05:54.954006+00:00",
+  "inspected_original": true,
+  "inspected_boxes": true,
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false,
+  "source_request_file": "pending.json",
+  "source_request_sha256": "725e9e7a00e0b1cee72db14c98acb850d39ea6fd247d42e428d81cf07e819081"
+}

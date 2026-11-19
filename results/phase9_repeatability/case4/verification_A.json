@@ -1,0 +1,45 @@
+{
+  "case": 4,
+  "attempt": "A",
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source_path": "results\\phase9_repeatability\\case4\\..\\assets\\fedora.jpg",
+  "source_sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+  "mask_path": "results\\phase9_repeatability\\case4\\permitted.png",
+  "mask_sha256": "749309db56baaa36b225180aeae5027de5057aa5c2c0872d60a73f1381705f44",
+  "output_path": "results\\phase9_repeatability\\case4\\A\\final.png",
+  "output_sha256": "f27218ae69d76423ccd3ddd55a5f9dd52e57a4c6fb7d797b598adae895de9718",
+  "dimensions": [
+    1952,
+    1732
+  ],
+  "permitted_pixels": 2537722,
+  "protected_pixels": 843142,
+  "changed_inside": 2367894,
+  "changed_outside": 0,
+  "maximum_outside_channel_difference": 0,
+  "protected_differences": 0,
+  "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+  "memory": "not instrumented; CPU only, no new CUDA/model inference",
+  "input_hash_checks": {
+    "source": true,
+    "reference": true,
+    "selection": true,
+    "permitted": true,
+    "protected": true
+  },
+  "reference": {
+    "path": "results\\phase9_repeatability\\assets\\fez.jpg",
+    "sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+    "dimensions": [
+      5760,
+      4320
+    ],
+    "title": "Fez.jpg",
+    "author": "Edouard Hue",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fez.jpg"
+  },
+  "runtime_seconds": 1.203649499999301,
+  "clean_plate_inside_equals_background": true
+}

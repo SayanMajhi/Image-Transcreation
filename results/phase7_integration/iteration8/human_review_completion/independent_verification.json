@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-c",
+    "from pathlib import Path; import json; from scripts.review_uncertainty import verify,PERMISSIONS; r=verify(Path('results/phase7_integration/iteration8/ramen_uncertainty_review/human_decision.json')); print(json.dumps({k:r[k] for k in ('decision','reviewer','reason','original_validated_decision','original_released_candidate_count','pending_sha256',*PERMISSIONS)},indent=2))"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"decision\": \"MATERIAL_UNRESOLVED\",\n  \"reviewer\": \"Sayan\",\n  \"reason\": \"It is unclear which food contents will change and whether the white bowl will remain protected.\",\n  \"original_validated_decision\": \"REVIEW\",\n  \"original_released_candidate_count\": 0,\n  \"pending_sha256\": \"7b62777122ba543c6430ce50ed22a7f02398d50b719582d2a939b43b102b6923\",\n  \"candidate_release_authorized\": false,\n  \"edit_intent_authorized\": false,\n  \"grounding_authorized\": false,\n  \"sam_authorized\": false,\n  \"diffusion_authorized\": false,\n  \"image_edit_authorized\": false,\n  \"cultural_transformation_authorized\": false\n}\n",
+  "stderr": "",
+  "verification_process": "fresh Python process, existing scripts.review_uncertainty.verify"
+}

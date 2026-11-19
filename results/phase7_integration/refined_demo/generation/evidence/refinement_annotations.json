@@ -1,0 +1,205 @@
+{
+  "scope": "RESEARCH_ONLY",
+  "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED",
+  "annotation_method": "operator_polygon_trace_with_protected_exclusions",
+  "operator": "Codex assistant; explicit coordinate tracing from the original image, not a human reviewer",
+  "human_approved": false,
+  "cultural_edit_authorized": false,
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "original_dimensions": [
+    1408,
+    1120
+  ],
+  "sam_result_sha256": "7debbe003cb931999d7f13e1076f5deaf48b5e2919f2aea9f68d921c180d8e0d",
+  "sam_reference_index": 1,
+  "sam_reference_mask_sha256": "84c46f946790a3cceee46cd2e52191f1fb56c442e30611c5bb3a6b27d2c2617a",
+  "target_definition": "One small, clearly visible central-left noodle patch and immediate sauce gaps only. All egg, meat, seaweed, garnish, other toppings, spoon including contents, chopsticks, white ceramic and surroundings are protected. Not the whole dish.",
+  "boundary_reason": "Patch lies between the tan topping at left, dark strips above, pink/white topping to right and green garnish below, with an inward margin. Every uncertain contact boundary is excluded. No global dilation or automatic SAM thresholding.",
+  "editable_polygons": [
+    {
+      "label": "central visible noodles and immediate inter-noodle sauce only",
+      "points": [
+        [
+          537,
+          414
+        ],
+        [
+          552,
+          407
+        ],
+        [
+          575,
+          405
+        ],
+        [
+          602,
+          404
+        ],
+        [
+          624,
+          407
+        ],
+        [
+          641,
+          414
+        ],
+        [
+          642,
+          433
+        ],
+        [
+          636,
+          451
+        ],
+        [
+          621,
+          459
+        ],
+        [
+          605,
+          454
+        ],
+        [
+          584,
+          451
+        ],
+        [
+          564,
+          445
+        ],
+        [
+          549,
+          433
+        ]
+      ]
+    }
+  ],
+  "protected_polygons": [
+    {
+      "label": "all upper regions including bowl/egg/seaweed and upper toppings",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1407,
+          0
+        ],
+        [
+          1407,
+          399
+        ],
+        [
+          0,
+          399
+        ]
+      ]
+    },
+    {
+      "label": "all lower regions including green garnish/meat/bowl/table",
+      "points": [
+        [
+          0,
+          466
+        ],
+        [
+          1407,
+          466
+        ],
+        [
+          1407,
+          1119
+        ],
+        [
+          0,
+          1119
+        ]
+      ]
+    },
+    {
+      "label": "all left regions including chopsticks/ceramic/tan toppings",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          529,
+          0
+        ],
+        [
+          529,
+          1119
+        ],
+        [
+          0,
+          1119
+        ]
+      ]
+    },
+    {
+      "label": "all right regions including spoon and its contents/ceramic/pink topping",
+      "points": [
+        [
+          651,
+          0
+        ],
+        [
+          1407,
+          0
+        ],
+        [
+          1407,
+          1119
+        ],
+        [
+          651,
+          1119
+        ]
+      ]
+    },
+    {
+      "label": "pink-white topping conservatively enclosed",
+      "points": [
+        [
+          649,
+          342
+        ],
+        [
+          833,
+          342
+        ],
+        [
+          833,
+          526
+        ],
+        [
+          649,
+          526
+        ]
+      ]
+    },
+    {
+      "label": "green garnish conservatively enclosed",
+      "points": [
+        [
+          492,
+          465
+        ],
+        [
+          945,
+          465
+        ],
+        [
+          945,
+          710
+        ],
+        [
+          492,
+          710
+        ]
+      ]
+    }
+  ]
+}

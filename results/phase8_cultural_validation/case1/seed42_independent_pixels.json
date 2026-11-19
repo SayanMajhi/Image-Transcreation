@@ -1,0 +1,20 @@
+{
+  "condition": "seed42",
+  "dimensions": [
+    1280,
+    853
+  ],
+  "editable_pixels": 749700,
+  "image_fraction_editable": 0.6866390679953107,
+  "changed_inside_mask": 748804,
+  "changed_outside_mask": 0,
+  "protected_differences": 0,
+  "maximum_outside_channel_difference": 0,
+  "changed_original_near_white_pixels_inside": 354545,
+  "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+  "mask_sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d",
+  "output_sha256": "ad8adc92a919070f1abd22b1d8fc38d35165f0d75bbfe699f28482339c906b0f",
+  "cultural_score": null,
+  "ground_truth_segmentation_accuracy": null,
+  "scope": "RESEARCH_ONLY"
+}

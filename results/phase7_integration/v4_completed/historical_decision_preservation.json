@@ -1,0 +1,11 @@
+{
+  "source_record": "results/phase7_integration/iteration8/ramen_uncertainty_review/human_decision.json",
+  "sha256": "0d6fac07cb62c49e03392fd75846618a197f821833457483a20082a717c1ceab",
+  "original_human_decision": "MATERIAL_UNRESOLVED",
+  "reviewer": "Sayan",
+  "reason": "It is unclear which food contents will change and whether the white bowl will remain protected.",
+  "original_planner": "REVIEW",
+  "released_candidates": 0,
+  "record_reverified_locally": true,
+  "note": "Summary only, not a new review or approval. The original ramen bundle remains at its unchanged historical path; unrelated historical images are not required for the V4 demonstration package."
+}

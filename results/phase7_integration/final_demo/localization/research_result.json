@@ -1,0 +1,36 @@
+{
+  "execution_mode": "GUIDED_RESEARCH",
+  "scope": "RESEARCH_ONLY",
+  "human_approved": false,
+  "automated_plan_success": false,
+  "cultural_edit_authorized": false,
+  "status": "SOURCE_OBJECT_REQUIRES_REVIEW",
+  "events": [
+    {
+      "stage": "resources",
+      "action": "OLLAMA_IDLE_CONFIRMED",
+      "seconds": 0.10199629999988247
+    },
+    {
+      "stage": "grounding",
+      "action": "DISPATCH",
+      "seconds": 0.10288580000087677,
+      "phrase": "noodles"
+    },
+    {
+      "stage": "grounding",
+      "action": "RELEASED",
+      "seconds": 9.886419300000853
+    }
+  ],
+  "reason": "Inspect every predicted box; supply pinned detection, explicit index and selection note. No SAM or generation ran.",
+  "total_seconds": 9.886428100000558,
+  "artifact_sha256": {
+    "request.json": "7ac3e47c0e8c05d8aff04f4184f479dce7d02e0162ed1f79e37fa8c1ea1a5777",
+    "source.webp": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+    "grounding/annotated.png": "2c01d61cfab48502bdfa4d47dbca04facd1ae4f9a744be8e665efee35e3d0e0d",
+    "grounding/comparison.png": "a8ac494083250cba813a1e032f75738bb8c234dabd927a54736b295ea2d7c9a3",
+    "grounding/detection.json": "26ebbb6012d651e58d9189efd9d71eb36a136f561551cb9d4a04197541542a13",
+    "grounding/original.png": "d70aed679def659e7475987cfabd7719da6a8519b187856ba6f69534aaf805d9"
+  }
+}

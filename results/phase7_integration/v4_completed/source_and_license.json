@@ -1,0 +1,26 @@
+{
+  "status": "VERIFIED_SOURCE_USED_FOR_EXPLICIT_V4_RESEARCH",
+  "file": "source_candidate.jpg",
+  "sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+  "sha1": "32a88f31d3bfa761862d60f91ec5b51346ac4cab",
+  "commons_sha1_match": true,
+  "bytes": 799638,
+  "dimensions": [
+    2272,
+    1704
+  ],
+  "encoding": "JPEG",
+  "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Spaghetti_aglio_e_olio.jpg",
+  "description_page": "https://commons.wikimedia.org/wiki/File:Spaghetti_aglio_e_olio.jpg",
+  "archived_description_revision": "https://commons.wikimedia.org/w/index.php?title=File:Spaghetti_aglio_e_olio.jpg&oldid=1174343414",
+  "author": "10Rosso",
+  "original_source": "https://www.flickr.com/photos/29768027@N07/4345842519/",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "license_evidence": "Commons description page identifies author and CC BY 2.0; records Flickr license verified by UploadWizard at transfer. Image SHA-1 matches the Commons published original.",
+  "retrieved_at_utc": "2026-11-11T11:57:25.186523+00:00",
+  "alterations": "Original JPEG unchanged. A/B final PNGs, raw generated crops and comparison figures are modified research derivatives; visual objective failed. Attribution preserved; no photographer endorsement implied.",
+  "human_verified_identity": false,
+  "new_model_calls": 0,
+  "local_source": "source.jpg"
+}

@@ -1,0 +1,32 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "Pillow": "13.0.0",
+  "new_dependencies": 0,
+  "real_model_calls": 0,
+  "new_points_or_masks": 0,
+  "actual_human_decisions_submitted": 0,
+  "pending_human_requests": 5,
+  "oil_lamp_review_indices": [
+    0,
+    1
+  ],
+  "bicycle_review_indices": [
+    0,
+    1,
+    2
+  ],
+  "bicycle_case_preparation_status": "NEEDS_REVIEW",
+  "bicycle_case_status_origin": "preparation triage only, not an invented human decision",
+  "all_human_decisions": "PENDING",
+  "accepted_real_masks": 0,
+  "research_only_history_preserved": true,
+  "review_scope": "named controlled segmentation experiment only; never diffusion, editing or cultural transformation",
+  "source_segmentation_id": "facebook/sam-vit-base",
+  "source_revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+  "limitations": [
+    "Names/inspection declarations are local self-reports, not authenticated identity or attention.",
+    "Hashes bind bytes after preparation, not semantic correctness. Actual source files were also compared with the prior review ZIP.",
+    "A person with unrestricted write access can forge a new evidence chain; no signature/access-control platform is implemented.",
+    "No real quality acceptance or Phase 6 authorization is created."
+  ]
+}

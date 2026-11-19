@@ -1,0 +1,15 @@
+{
+  "editable_pixels": 20484,
+  "source_image_percent": 1.2989549512987013,
+  "protected_intersection": 0,
+  "bounds": [
+    356,
+    379,
+    945,
+    860
+  ],
+  "mask_sha256": "21f0e7c4c0fefb815b45a402fe7005345ae5f5bc75870bd81f5fd247dad84f45",
+  "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED",
+  "total_noodle_coverage": "not measured; no independently annotated noodle area",
+  "reference_sam_pixels": 200805
+}

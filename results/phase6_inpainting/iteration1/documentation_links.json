@@ -1,0 +1,232 @@
+{
+  "broken": [],
+  "checked": 45,
+  "links": [
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/detail.png",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/comparison.png",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/final.png",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/raw_generated_crop.png",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/review_status.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/input.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/preregistration.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/evidence/mask_0.png",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/evidence/overlay_0.png",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/checkpoint_access.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/download.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/installed_api.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/dependency_install.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/environment_before.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/environment_after.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/processing_image.png",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/processing_mask.png",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/restored_crop.png",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/generated_region.png",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/composite_diagnostics.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/run/inpainting.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/independent_verification.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/real_invocation.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/inference_stderr.txt",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/visual_assessment.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/tests_before.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/tests_after.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/preservation_after.json",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/inpainting_cli_help.txt",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/existing_cli_help.txt",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/git_diff_summary.txt",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/git_status_after.txt",
+      "exists": true
+    },
+    {
+      "source": "reports/phase6_working.md",
+      "target": "../results/phase6_inpainting/iteration1/ATTRIBUTION.txt",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "results/relocation_manifest.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "reports/phase6_working.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "reports/phase1_research.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "reports/phase2_vlm.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "results/phase2_vlm/summary.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "reports/phase3_llm.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "results/phase3_llm/summary.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "reports/phase4_grounding.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "results/phase4_grounding/summary.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "reports/phase5_segmentation.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "results/phase5_segmentation/summary.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "results/historical_text_provenance.zip",
+      "exists": true
+    }
+  ],
+  "remote_urls_not_retested": true
+}

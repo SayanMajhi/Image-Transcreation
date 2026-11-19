@@ -1,0 +1,16 @@
+{
+  "zip": "results/phase7_integration/iteration4_review.zip",
+  "sha256": "4576dbd97279c5ccaab858bcfb2f3ec1598aaedceebf60149928002b032902ad",
+  "bytes": 9547229,
+  "entries": 548,
+  "crc": "passed",
+  "manifest_hashes": "all matched",
+  "working_report_links": 86,
+  "broken_links": 0,
+  "extracted_focused_tests_passed": 32,
+  "reproduced_replay_jsons": 16,
+  "review_schema_2_and_legacy_1_verified": true,
+  "no_live_model_inference": true,
+  "recommendation": "PASS for scoped offline correction; mentor evaluation pending",
+  "note": "Only report text and verification metadata were added after portable execution; tested application code is unchanged."
+}

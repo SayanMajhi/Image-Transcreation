@@ -1,0 +1,31 @@
+{
+  "planning_result": {
+    "decision": "REVIEW",
+    "decision_reason": "Review required; no candidate edit is released downstream. The model requested review; its candidates are draft-only, not downstream edits.",
+    "scene_summary": "Caption describes a synthetic object.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "background"
+    ],
+    "uncertainties": [],
+    "verification_requirements": [
+      "The model requested review; its candidates are draft-only, not downstream edits.",
+      "Review the original-scene summary and any paraphrased identities against the image.",
+      "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+    ]
+  },
+  "issues": [
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    },
+    {
+      "code": "MODEL_REVIEW_ONLY",
+      "message": "The model requested review; its candidates are draft-only, not downstream edits.",
+      "candidate_index": null,
+      "severity": "review"
+    }
+  ]
+}

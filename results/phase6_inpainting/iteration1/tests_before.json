@@ -1,0 +1,9 @@
+{
+  "tests": 199,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 30.136,
+  "command": "python -B -m unittest discover -s tests -v",
+  "result": "OK",
+  "HF_HUB_OFFLINE": "1"
+}
