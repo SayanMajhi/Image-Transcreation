@@ -1,0 +1,13 @@
+{
+  "source_image": "data/chole_puri.jpg",
+  "image_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+  "segmentation_file": "outputs/segmentation_chole/segmentation.json",
+  "segmentation_sha256": "694e6ccd60c67e93e6d927887da89195e3255f01885498d3da9368171bd271cc",
+  "mask_file": "outputs/combined_puris_chole/combined_mask.png",
+  "mask_sha256": "04c3c619f89c06b797c61b5bff7ddd8a59fca30b7edca8fda533154e14043336",
+  "candidate_index": 0,
+  "prompt": "Replace the puris with realistic Japanese-style flatbreads and replace the chole with Japanese curry. Preserve the plate, table, lighting, bottle, spoon, and background. Edit only the masked areas.",
+  "selection_note": "Combined mask created from the inspected mask_0 candidates for both puris and chole.",
+  "scope": "RESEARCH_ONLY",
+  "mask_kind": "COMBINED"
+}

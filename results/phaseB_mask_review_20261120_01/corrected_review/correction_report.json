@@ -1,0 +1,78 @@
+{
+  "status": "PENDING_USER_REVIEW",
+  "source": "data\\chole_puri.jpg",
+  "source_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+  "dimensions": [
+    4000,
+    2252
+  ],
+  "before_directory": "results\\phaseB_mask_review_20261120_01\\candidate_review",
+  "preserved_candidate_masks": [
+    "results\\phaseB_mask_review_20261120_01\\sam_puri_0\\mask_0.png",
+    "results\\phaseB_mask_review_20261120_01\\sam_curry_0\\mask_0.png"
+  ],
+  "corrections": {
+    "removed_puri_components": [
+      {
+        "component": 2,
+        "area": 625,
+        "bbox_xyxy": [
+          3937,
+          336,
+          3968,
+          375
+        ]
+      }
+    ],
+    "filled_curry_enclosed_holes": [
+      {
+        "component": 2,
+        "area": 670,
+        "bbox_xyxy": [
+          1273,
+          1378,
+          1307,
+          1406
+        ]
+      },
+      {
+        "component": 3,
+        "area": 135,
+        "bbox_xyxy": [
+          1260,
+          1418,
+          1277,
+          1431
+        ]
+      },
+      {
+        "component": 4,
+        "area": 133,
+        "bbox_xyxy": [
+          1356,
+          1607,
+          1372,
+          1619
+        ]
+      }
+    ],
+    "minimum_removed_component_area": 1000,
+    "orange_sauce_and_upper_left_food": "not separately edited; no unrestricted morphology applied"
+  },
+  "pixel_counts": {
+    "puri_before": 2058837,
+    "puri_after": 2058212,
+    "curry_before": 759477,
+    "curry_after": 760415,
+    "combined_before": 2818314,
+    "combined_after": 2818627,
+    "removed_combined": 625,
+    "added_combined": 938
+  },
+  "hashes": {
+    "puri": "68ef7e19c4fa1677229539697a4f9c31e958f2afc6fd84c84466a840f37c265f",
+    "curry": "9dd9d1a07da9a684c2fbfcc14240fdf6a09f0e5a997d5b67da11c4c21605659e",
+    "combined": "56c8bac29ec0a85fec39d231042aa2cc6f9142fd93a1579ef54619fa8feff84a"
+  },
+  "approval_recorded": false
+}

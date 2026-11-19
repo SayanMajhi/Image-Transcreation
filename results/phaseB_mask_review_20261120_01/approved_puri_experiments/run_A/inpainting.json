@@ -1,0 +1,162 @@
+{
+  "status": "COMPLETED",
+  "scope": "RESEARCH_ONLY",
+  "request": {
+    "source_image": "data\\chole_puri.jpg",
+    "image_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+    "segmentation_file": "results\\phaseB_mask_review_20261120_01\\approved_puri_experiments\\approved_mask_bundle\\segmentation.json",
+    "segmentation_sha256": "41a8dea27a5e9a6aeae5707ac40b298372364a83aaf71a6393c9cb7299e4fc30",
+    "mask_file": "results\\phaseB_mask_review_20261120_01\\approved_puri_experiments\\approved_mask_bundle\\mask_0.png",
+    "mask_sha256": "68ef7e19c4fa1677229539697a4f9c31e958f2afc6fd84c84466a840f37c265f",
+    "candidate_index": 0,
+    "prompt": "A realistic Japanese shrimp and vegetable tempura arrangement replacing the puri, matching the original plate, camera perspective, lighting and scale. Preserve the chickpea curry, orange sauce, plate, other food, background and utensils.",
+    "selection_note": "User-approved corrected puri mask for experimental generation only.",
+    "scope": "RESEARCH_ONLY",
+    "mask_kind": "SAM_CANDIDATE"
+  },
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "resolved_revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+  "settings": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+    "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+    "processing_size": 512,
+    "context_margin": 64,
+    "seed": 42,
+    "steps": 20,
+    "guidance_scale": 7.5,
+    "strength": 0.9,
+    "precision": "float16",
+    "batch_size": 1,
+    "variant": "fp16",
+    "use_safetensors": true,
+    "negative_prompt": null,
+    "generator_device": "cpu",
+    "initial_offload": "model_cpu_offload",
+    "allowed_oom_fallback": "sequential_cpu_offload",
+    "scheduler": "DDIMScheduler",
+    "scheduler_config": {
+      "num_train_timesteps": 1000,
+      "beta_start": 0.00085,
+      "beta_end": 0.012,
+      "beta_schedule": "scaled_linear",
+      "trained_betas": null,
+      "clip_sample": false,
+      "set_alpha_to_one": false,
+      "steps_offset": 1,
+      "prediction_type": "epsilon",
+      "thresholding": false,
+      "dynamic_thresholding_ratio": 0.995,
+      "clip_sample_range": 1.0,
+      "sample_max_value": 1.0,
+      "timestep_spacing": "leading",
+      "rescale_betas_zero_snr": false,
+      "_use_default_values": [
+        "rescale_betas_zero_snr",
+        "dynamic_thresholding_ratio",
+        "thresholding",
+        "timestep_spacing",
+        "clip_sample_range",
+        "sample_max_value",
+        "prediction_type"
+      ],
+      "_class_name": "DDIMScheduler",
+      "_diffusers_version": "0.6.0.dev0",
+      "skip_prk_steps": true
+    },
+    "effective_denoising_steps": 18
+  },
+  "source_sam": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "grounding_index": 0,
+    "grounding_box": [
+      1728.289794921875,
+      186.15438842773438,
+      3919.0556640625,
+      1563.4697265625
+    ],
+    "detection_sha256": "5366449d2ce917ef370c9c54f892ea06a263d562036966e45210cec783a0434c",
+    "point_sha256": null,
+    "selection_status": "RESEARCH_ONLY"
+  },
+  "geometry": {
+    "crop_box_xyxy": [
+      1677,
+      136,
+      3974,
+      1620
+    ],
+    "padding_ltrb": [
+      0,
+      406,
+      0,
+      407
+    ],
+    "padded_side": 2297,
+    "original_dimensions": [
+      4000,
+      2252
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "attempts": [
+    {
+      "offload": "model_cpu_offload",
+      "status": "COMPLETED",
+      "seconds": 12.1113095000037,
+      "peak_allocated_cuda_bytes": 2654782464
+    }
+  ],
+  "timing": {
+    "load_seconds": 10.819693800003733,
+    "inference_seconds": 12.1113095000037,
+    "stage_seconds": 31.196515099989483
+  },
+  "memory": {
+    "initial_allocated_bytes": 0,
+    "free_total_before": [
+      3459986228,
+      4294443008
+    ],
+    "peak_allocated_cuda_bytes": 2654782464
+  },
+  "observations": [],
+  "cultural_edit_authorized": false,
+  "human_approved": false,
+  "safety_checker_flags": [
+    false
+  ],
+  "metrics": {
+    "editable_pixels": 2058212,
+    "changed_inside_mask": 2058208,
+    "changed_outside_mask": 0,
+    "dimensions": [
+      4000,
+      2252
+    ]
+  },
+  "artifact_sha256": {
+    "comparison.png": "b3e9af3585a00b5a42bab043b8bba0e7342f4f353d9005977c07bd8e17d92a13",
+    "detail.png": "6171e2e04c385d7d83ec8d6c941115a5a71360c7f55e57276b48ac17ada2c861",
+    "final.png": "3103fcd2f41bedf7eaec70a680ee1807226bf93287371420d84fb8d92ab64ba1",
+    "generated_region.png": "06639679f9c3d305b868580256025a8780196a624715cb65ce6022cd90fb4563",
+    "processing_image.png": "37480ba01e275bd09ba3fbadde51eb28dc5204ecff10ca85d3573625b758eb79",
+    "processing_mask.png": "3fc4fcdf69d57c0c27172d2593bd3ad5b0ec8daa5128583b37afeacd8e1e0082",
+    "raw_generated_crop.png": "4a372829b44ca8631c98565c92a160e5dc5790496baaf5c7dc21346c7960c769",
+    "restored_crop.png": "2302805059351a4f31012b14aefcc7240edbb14d9f8587d8f23ee4a43951032d",
+    "source_decoded.png": "5e171c4ff746a86dcc12fbb1613eeb3e929348a7e239f50cd993ec35e62c59d0",
+    "evidence/box.png": "a7817e3988b04f334f756a0a6e809da56717ed430f5c1d710938b91456b0252c",
+    "evidence/mask_0.png": "68ef7e19c4fa1677229539697a4f9c31e958f2afc6fd84c84466a840f37c265f",
+    "evidence/mask_1.png": "cf4664ab21ab033a390b08ccd1fbb6762cafb2defcddd3f840d009d570301865",
+    "evidence/mask_2.png": "d8f1efcd5935e49e37ba86bb5c19a528fd441f329c996dd195161c444e1c12e8",
+    "evidence/original.jpg": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+    "evidence/overlay_0.png": "8bb4e6d85a0d8eaaed4e7a21f287078fb614af2c5636fd0f54d6ac6091f10ca6",
+    "evidence/overlay_1.png": "eb4302f6f628150f7cd0c571fe2363ba4c374a3a11cc472816a18e5c4cd8bd27",
+    "evidence/overlay_2.png": "5540ddf6eadddc3ded5e8a7613d4446e6d929c6d45e0d2ade5d1772515c080ed",
+    "evidence/segmentation.json": "41a8dea27a5e9a6aeae5707ac40b298372364a83aaf71a6393c9cb7299e4fc30",
+    "evidence/source_detection.json": "5366449d2ce917ef370c9c54f892ea06a263d562036966e45210cec783a0434c"
+  }
+}

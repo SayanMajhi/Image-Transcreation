@@ -1,0 +1,199 @@
+{
+  "date_utc": "2026-11-12T07:01:17.983768+00:00",
+  "why": "Put each phase's report next to its evidence so results/ holds all project work; archive review ZIPs.",
+  "note": "Evidence files were not edited, so old paths inside them (reports/..., outputs/..., results/*.zip) are historical. Resolve them with this list. Only the moved reports had relative links rewritten.",
+  "moves": [
+    {
+      "original": "reports/phase1_research.md",
+      "destination": "results/phase1_research/README.md",
+      "sha256": "65043e0579264ffc444a915f1ff1018632882ac169a13ace0f1e10ef81aa059d",
+      "git": "git mv"
+    },
+    {
+      "original": "reports/phase2_vlm.md",
+      "destination": "results/phase2_vlm/README.md",
+      "sha256": "ee8b1ef326e71af0bca50c67b99992a1d8c7e29a9884c80321055d6234d16ba4",
+      "git": "git mv"
+    },
+    {
+      "original": "reports/phase3_llm.md",
+      "destination": "results/phase3_llm/README.md",
+      "sha256": "3b09644336730964bc31dd64443950d9a148e9c4351e5dd8b8c428be2a1ddcdd",
+      "git": "git mv"
+    },
+    {
+      "original": "reports/phase4_grounding.md",
+      "destination": "results/phase4_grounding/README.md",
+      "sha256": "d5ef9d202dbf14dd710adbf5ceff0bb83d23ea0ae2d45d982c597e59292a4277",
+      "git": "git mv"
+    },
+    {
+      "original": "reports/phase5_segmentation.md",
+      "destination": "results/phase5_segmentation/README.md",
+      "sha256": "5eb6dc6fce2e5df2efc464bdd492b9fd7c4a4833d1e9fd3eb7402e248b628fd9",
+      "git": "git mv"
+    },
+    {
+      "original": "reports/phase6_working.md",
+      "destination": "results/phase6_inpainting/README.md",
+      "sha256": "ebf0b20849c2e3c1ebb945f5d06ade9d6e167327201d67af911c43b1f359f1ed",
+      "git": "git mv"
+    },
+    {
+      "original": "reports/phase7_integration.md",
+      "destination": "results/phase7_integration/README.md",
+      "sha256": "675dbd785b61a22b2293576689dd3edc36dad29799231c8abc9e1a6c5ecf4fd7",
+      "git": "git mv"
+    },
+    {
+      "original": "reports/final_project_report.md",
+      "destination": "results/phase7_integration/final_project_report.md",
+      "sha256": "f7749c5b8d68baff82d2d79fb2026efb270b2e18d0ae47fdc3bb308da13bac30",
+      "git": "git mv"
+    },
+    {
+      "original": "reports/cultural_transcreation_validation.md",
+      "destination": "results/phase8_cultural_validation/README.md",
+      "sha256": "c919c2cdf2218b37c2c07979f3aaf449dbe7fbfb8c0edbf489e162db3fcac9c1",
+      "git": "git mv"
+    },
+    {
+      "original": "reports/repeatability_pilot.md",
+      "destination": "results/phase9_pilot/README.md",
+      "sha256": "c84d9c00f96e77508843c12674d5f553a0d02e4405328d2406c439b08a20b3c4",
+      "git": "git mv"
+    },
+    {
+      "original": "results/cultural_human_evaluation_review.zip",
+      "destination": "results/archive/cultural_human_evaluation_review.zip",
+      "sha256": "3f45594bee03f18ebe044dca2215f6975b5648d8064942d0ef02601b3379d7b2",
+      "git": "git mv"
+    },
+    {
+      "original": "results/cultural_validation_review.zip",
+      "destination": "results/archive/cultural_validation_review.zip",
+      "sha256": "0aeb5415ba508deb51cc377e097e8536147078a59145dfce9946205d9417682d",
+      "git": "git mv"
+    },
+    {
+      "original": "results/cultural_visual_improvement_review.zip",
+      "destination": "results/archive/cultural_visual_improvement_review.zip",
+      "sha256": "dbb2359a3f430c7d2a76a69389acac58da1cd080324772897eae93e1b4fe052a",
+      "git": "git mv"
+    },
+    {
+      "original": "results/final_project_review.zip",
+      "destination": "results/archive/final_project_review.zip",
+      "sha256": "a53795e2c7f8f70c95990ce2791f6e171726239f13b34217b3176d51d8b4eed3",
+      "git": "git mv"
+    },
+    {
+      "original": "results/final_project_review_v2.zip",
+      "destination": "results/archive/final_project_review_v2.zip",
+      "sha256": "dd5e45564426ede87cb9bce3f10921b1eef5fe380353b08942a24cd106fb881a",
+      "git": "git mv"
+    },
+    {
+      "original": "results/final_project_review_v3.zip",
+      "destination": "results/archive/final_project_review_v3.zip",
+      "sha256": "1fdb9a6d0d9bbb9b8d1dbf1e57a7d12c2eefdc15a1cd3a8b1f0ce1c6a5d03f3e",
+      "git": "git mv"
+    },
+    {
+      "original": "results/final_project_review_v4.zip",
+      "destination": "results/archive/final_project_review_v4.zip",
+      "sha256": "f15321a3663154b6d2b679f07178983603b60b2268a3f6e33937a7ef92ca403a",
+      "git": "git mv"
+    },
+    {
+      "original": "results/final_project_review_v4_completed.zip",
+      "destination": "results/archive/final_project_review_v4_completed.zip",
+      "sha256": "70746b0481c71fd03bbbad15e4c4c29cd0f9e0e566d40159053f906e0bb75380",
+      "git": "git mv"
+    },
+    {
+      "original": "results/final_project_submission.zip",
+      "destination": "results/archive/final_project_submission.zip",
+      "sha256": "e34beab51c323d4fe0f96cb881dd6b10f3491841c85367beeee0876428d3d802",
+      "git": "git mv"
+    },
+    {
+      "original": "results/historical_text_provenance.zip",
+      "destination": "results/archive/historical_text_provenance.zip",
+      "sha256": "1de0f31b82a98c1766e561f05ee5419c1efd542c9b90be358c4e1885163448f7",
+      "git": "git mv"
+    },
+    {
+      "original": "results/my_review.zip",
+      "destination": "results/archive/my_review.zip",
+      "sha256": "f01ad3eac34bd4fd63f3d60fcaf4ac7e11e9a7633ca0cf1a5e477e6a507f9df1",
+      "git": "git mv"
+    },
+    {
+      "original": "results/repeatability_pilot_review.zip",
+      "destination": "results/archive/repeatability_pilot_review.zip",
+      "sha256": "2dbfd74a5230f1138fcfda1b24dac95d25234f55735e4d47de13de686b4e61b6",
+      "git": "git mv"
+    },
+    {
+      "original": "results/true_object_replacement_review.zip",
+      "destination": "results/archive/true_object_replacement_review.zip",
+      "sha256": "f4c8ab90394def43082669badb8f968fbad61025838a9295a2a2d6689c34d683",
+      "git": "git mv"
+    },
+    {
+      "original": "results/repeatability_pilot_review.receipt.json",
+      "destination": "results/archive/repeatability_pilot_review.receipt.json",
+      "sha256": "83a646c7fb3b0e27d31dbe2649bcb498b9b72d49f645ed6b4e43ab7fb50f74e8",
+      "git": "git mv"
+    },
+    {
+      "original": "outputs/box_review_demo_20261109_133420_307/annotated.png",
+      "destination": "results/archive/early_outputs/box_review_demo_20261109_133420_307/annotated.png",
+      "sha256": "325660ae396962dcf67685c7ba6a138b6236da5a5306150be3cefcf7c4363cab",
+      "git": "move (untracked/ignored)"
+    },
+    {
+      "original": "outputs/box_review_demo_20261109_133420_307/detection.json",
+      "destination": "results/archive/early_outputs/box_review_demo_20261109_133420_307/detection.json",
+      "sha256": "424abf5cdd98ad02be3e9ae9e68e40cc9186ba6167874bf5488dbadec94d6992",
+      "git": "move (untracked/ignored)"
+    },
+    {
+      "original": "outputs/box_review_demo_20261109_133420_307/original.jpg",
+      "destination": "results/archive/early_outputs/box_review_demo_20261109_133420_307/original.jpg",
+      "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+      "git": "move (untracked/ignored)"
+    },
+    {
+      "original": "outputs/box_review_demo_20261109_133420_307/pending.json",
+      "destination": "results/archive/early_outputs/box_review_demo_20261109_133420_307/pending.json",
+      "sha256": "ae5d59b5a7b1c438cf21602ee68b3e43bcea0db7331bec3689697601d53daca1",
+      "git": "move (untracked/ignored)"
+    },
+    {
+      "original": "outputs/caption.json",
+      "destination": "results/archive/early_outputs/caption.json",
+      "sha256": "11448a81a7cc2b8461fa7e5d1ce61262263da85ac378547663208110eb021d21",
+      "git": "move (untracked/ignored)"
+    },
+    {
+      "original": "outputs/new_food_plan.json",
+      "destination": "results/archive/early_outputs/new_food_plan.json",
+      "sha256": "d35a860ff5d31ffd8a33fdad792c386fa76d9464347e0afa6299f10f0c214ea9",
+      "git": "move (untracked/ignored)"
+    },
+    {
+      "original": "outputs/planner_review.md",
+      "destination": "results/archive/early_outputs/planner_review.md",
+      "sha256": "29e9b5d27365343048fea8b4de6a04abfbf9f52b3339efa0d495fc5a7a9f859f",
+      "git": "move (untracked/ignored)"
+    },
+    {
+      "original": "outputs/planning/01_japanese_food_cli_20261108.json",
+      "destination": "results/archive/early_outputs/planning/01_japanese_food_cli_20261108.json",
+      "sha256": "802a1eede13f38eaa093ea5a4ad4b7b9258d1b59d76ec26db9302921ebeb3cba",
+      "git": "move (untracked/ignored)"
+    }
+  ]
+}

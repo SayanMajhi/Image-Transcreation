@@ -1,0 +1,104 @@
+{
+  "image_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+  "original_dimensions": [
+    4000,
+    2252
+  ],
+  "source_phrase": "chickpea curry",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "resolved_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        731.5772094726562,
+        1035.384521484375,
+        2101.0595703125,
+        1958.5052490234375
+      ],
+      "score": 0.8225978016853333,
+      "label": "chickpea curry"
+    }
+  ],
+  "settings": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42,
+    "effective_device": "cuda",
+    "normalized_prompt": "chickpea curry.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "disable_custom_kernels": true,
+    "inference_mode": true,
+    "eval": true,
+    "coordinate_format": "xyxy_original_pixels",
+    "postprocess_box_argument": "threshold",
+    "target_sizes": [
+      [
+        2252,
+        4000
+      ]
+    ],
+    "image_processor": {
+      "_processor_class": "GroundingDinoProcessor",
+      "image_processor_type": "GroundingDinoImageProcessor",
+      "format": "coco_detection",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1333,
+        "shortest_edge": 800
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "do_convert_annotations": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": null
+    }
+  },
+  "timing": {
+    "load_seconds": 12.184925400011707,
+    "preprocess_seconds": 0.15116219999617897,
+    "inference_seconds": 1.4772095999942394,
+    "postprocess_seconds": 0.017952099995454773,
+    "total_seconds": 13.895211099996231
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 692084224,
+    "inference_peak_allocated_bytes": 2030494720,
+    "device": "cuda"
+  },
+  "raw_predictions": {
+    "boxes": [
+      [
+        731.5772094726562,
+        1035.384521484375,
+        2101.0595703125,
+        1958.5052490234375
+      ]
+    ],
+    "scores": [
+      0.8225978016853333
+    ],
+    "text_labels": [
+      "chickpea curry"
+    ]
+  },
+  "observations": [],
+  "research_only": true
+}

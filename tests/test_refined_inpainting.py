@@ -43,6 +43,13 @@ class RefinedInpaintingTests(unittest.TestCase):
             'mask_origin':ORIGIN})
         self.out = self.root/'derived_generation'
 
+    def test_refined_fields_are_keyword_only_and_constructible(self):
+        fields = RefinedMaskInput.__dataclass_fields__
+        for name in ('annotation_file', 'annotation_sha256', 'protected_mask_file',
+                     'protected_mask_sha256', 'mask_origin', 'negative_prompt'):
+            self.assertTrue(fields[name].kw_only)
+        self.assertEqual(self.request.mask_origin, ORIGIN)
+
     def execute(self, pipe, max_attempts=2):
         with ExitStack() as stack:
             stack.enter_context(patch('transcreation.stages.inpainting.load_pipeline',return_value=pipe))

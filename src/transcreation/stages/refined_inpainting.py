@@ -18,7 +18,7 @@ from transcreation.stages.inpainting import digest, validate_mask, _run_inpainti
 ORIGIN = "RESEARCH_MASK_MANUALLY_REFINED"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RefinedMaskInput(InpaintingInput):
     annotation_file: str
     annotation_sha256: str

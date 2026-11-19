@@ -1,0 +1,13 @@
+\chapter{Implementation}
+\label{ch:implementation}
+\section{Code organization}
+The Python package under \CodePath{src/transcreation} separates stages for planning, grounding, segmentation, inpainting, appearance transfer, instruction editing and reference replacement. Command-line entry points in \CodePath{scripts} call those stages. The Phase 9 pilot adds a manifest-driven runner with \CodePath{validate}, \CodePath{run}, \CodePath{verify} and \CodePath{package} operations.
+
+\section{Execution environments}
+The project targets Windows with Python 3.11. The CPU-only pilot uses Pillow and NumPy; live model stages require pinned model weights, PyTorch and an RTX 3050 Laptop GPU with 4 GB VRAM. Components load one at a time. The recorded Phase 8 SDXL+Canny fallback used FP16 and sequential CPU offload; it is not a FLUX result.
+
+\section{Automated and guided boundaries}
+The real automated example reached \texttt{REVIEW} with zero released candidates. Guided experiments carry \texttt{RESEARCH\_ONLY} scope, no approval flag and their own frozen request. This distinction prevents a reviewer from mistaking a manually selected object substitution for a planner-authorized cultural decision.
+
+\section{Verification implementation}
+Verification reopens saved PNGs, checks SHA-256 hashes, validates manifest provenance, measures permitted and protected pixel differences, searches for leftover source content in reconstruction regions and performs deterministic in-memory replay. Output directories refuse overwrite. Offline unit tests use synthetic images and mocks; real-model evidence is reported separately.

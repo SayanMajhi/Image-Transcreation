@@ -1,0 +1,42 @@
+{
+  "status": "PENDING_USER_REVIEW",
+  "source_image": "data\\chole_puri.jpg",
+  "source_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+  "dimensions": [
+    4000,
+    2252
+  ],
+  "target_culture": "Japan",
+  "editable_regions": [
+    "puri",
+    "chickpea curry"
+  ],
+  "protected_regions": [
+    "plate",
+    "table",
+    "utensils",
+    "background",
+    "unrelated objects"
+  ],
+  "selected_candidates": {
+    "puri": {
+      "sam_mask": "results\\phaseB_mask_review_20261120_01\\sam_puri_0\\mask_0.png",
+      "sha256": "fdbb1af231b93676626cb02c877c253a62b7e8e9f5727341df6d9477541ca9aa",
+      "candidate_index": 0
+    },
+    "chickpea_curry": {
+      "sam_mask": "results\\phaseB_mask_review_20261120_01\\sam_curry_0\\mask_0.png",
+      "sha256": "62c365a584239714c13f4344616176eb522d1592baef44722d30dfb2119ca12e",
+      "candidate_index": 0
+    }
+  },
+  "combined_mask_sha256": "3984c56984349eb7fb1480ab7d95164c5beef64f898464cb67c6164c2ae3bafd",
+  "editable_pixels": 2818314,
+  "editable_percentage": 31.28678952042629,
+  "approval_recorded": false,
+  "notes": [
+    "SAM candidates are automatic research outputs, not manual verification.",
+    "Candidate 0 selections are provisional and require visual user review.",
+    "No diffusion or image editing was run."
+  ]
+}

@@ -1,0 +1,3 @@
+# Canonical IEEE compilation path for Overleaf.
+$pdf_mode = 1;
+$pdflatex = 'pdflatex %O %S';

@@ -1,0 +1,25 @@
+% IEEE conference style; compile with pdfLaTeX, BibTeX, then pdfLaTeX twice.
+\documentclass[conference]{IEEEtran}
+\input{preamble}
+\title{Culture-Aware Image Transcreation: A Guarded and Reproducible Research Pipeline}
+\author{\IEEEauthorblockN{Sayan Majhi}
+\IEEEauthorblockA{Undergraduate Mini Project\\Institution and department to be added before submission}}
+\begin{document}
+\maketitle
+\begin{abstract}
+\input{frontmatter/abstract}
+\end{abstract}
+\begin{IEEEkeywords}
+image transcreation, cultural adaptation, image editing, segmentation, provenance, reproducibility
+\end{IEEEkeywords}
+\input{chapters/introduction}
+\input{chapters/literature_review}
+\input{chapters/proposed_system}
+\input{chapters/implementation}
+\input{chapters/experiments_results}
+\input{chapters/conclusion}
+\appendices
+\input{appendices/reproducibility}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}

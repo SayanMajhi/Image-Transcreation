@@ -70,4 +70,4 @@ pytorch_model*.bin
 *.onnx
 
 # Generated review bundles duplicate retained source evidence; keep them locally.
-reports/*review*.zip
+results/archive/*.zip
