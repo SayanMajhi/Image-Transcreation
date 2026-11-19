@@ -1,0 +1,12 @@
+{
+  "path": "results/final_project_review.zip",
+  "bytes": 69955622,
+  "sha256": "a53795e2c7f8f70c95990ce2791f6e171726239f13b34217b3176d51d8b4eed3",
+  "entries": 198,
+  "crc": "passed",
+  "manifest_hashes": "all matched",
+  "portable_full_tests": 392,
+  "portable_cli_safety_gate": "passed",
+  "package_local_links": "all checked links exist",
+  "status": "PARTIALLY_COMPLETE; real ramen generation blocked by unsuitable masks"
+}

@@ -1,0 +1,616 @@
+--- /dev/null
++++ after/scripts/review_uncertainty.py
+@@ -0,0 +1,310 @@
++"""Human classification of a narrowly eligible blocked plan; never releases edits."""
++import argparse
++from dataclasses import asdict
++from datetime import datetime, timezone
++from io import BytesIO
++import json
++from pathlib import Path
++import re
++
++from PIL import Image
++
++from scripts.review_edit_intent import _human
++from scripts.review_grounding import _write, digest
++from transcreation.contracts import PlanningInput
++from transcreation.orchestration import validate_planner_audit
++from transcreation.stages import planning as policy
++from transcreation.stages.caption import SmolCaptionResult
++from transcreation.stages.ollama_planner import OllamaPlannerError, parse_planning_input
++
++
++DECISIONS = ('ROUTINE_VERIFICATION_REQUIRED', 'MATERIAL_UNRESOLVED', 'REJECT', 'NEEDS_REVIEW')
++DECLARATIONS = ('inspected_original', 'inspected_edit', 'inspected_uncertainties',
++                'checked_user_instructions', 'inspected_audit')
++PERMISSIONS = {name: False for name in ('candidate_release_authorized', 'edit_intent_authorized',
++    'grounding_authorized', 'sam_authorized', 'diffusion_authorized', 'image_edit_authorized',
++    'cultural_transformation_authorized')}
++EVIDENCE = ('planning_input.json', 'planner_audit.json', 'validated_plan.json', 'experiment_frozen.json',
++            'saved_caption.json', 'human_confirmation.json', 'raw_response_before_validation.json', 'raw_qwen_message.txt')
++BUNDLE_FILES = (*EVIDENCE, 'original.webp', 'preview.png', 'review_request.md')
++QUESTIONS = (
++    'Does the proposed edit target the original noodles/object, rather than a future replacement?',
++    'Is the original source identity supported by the image and supplied user verification?',
++    'Does the edit preserve the requested bowl/protected object and scene?',
++    'Is the adaptation reasonable for this user-directed objective?',
++    'Does the exact uncertainty identify a material problem, or only a normal pre-edit verification requirement?',
++    'Is the proposed change sufficiently specific for a later, separately authorized localization review?',
++)
++
++
++def _json(data):
++    def unique(pairs):
++        result = {}
++        for key, value in pairs:
++            if key in result:
++                raise ValueError(f'duplicate JSON key: {key}')
++            result[key] = value
++        return result
++    def invalid(value):
++        raise ValueError(f'non-finite JSON value: {value}')
++    result = json.loads(data.decode('utf-8-sig'), object_pairs_hook=unique, parse_constant=invalid)
++    if not isinstance(result, dict):
++        raise ValueError('expected a JSON object')
++    return result
++
++
++def _same(left, right):
++    return json.dumps(left, sort_keys=True, allow_nan=False) == json.dumps(right, sort_keys=True, allow_nan=False)
++
++
++def _case(folder: Path, image: Path, index: int):
++    """Only the documented single-candidate, uncertainty-only REVIEW profile."""
++    payload = {name: (folder/name).read_bytes() for name in EVIDENCE}
++    docs = {name: _json(raw) for name, raw in payload.items() if name.endswith('.json')}
++    source = image.read_bytes()
++    image_hash = digest(source)
++    frozen, audit = docs['experiment_frozen.json'], docs['planner_audit.json']
++    supplied = parse_planning_input(docs['planning_input.json'])
++    if image_hash != frozen['source_image_sha256']:
++        raise ValueError('source image hash differs from frozen evidence')
++    for name, key in (('planning_input.json', 'planning_input_sha256'),
++                      ('saved_caption.json', 'saved_caption_sha256'),
++                      ('human_confirmation.json', 'human_confirmation_sha256')):
++        if digest(payload[name]) != frozen[key]:
++            raise ValueError(f'frozen evidence hash mismatch: {name}')
++    if digest(Path(policy.__file__).read_bytes()) != frozen['validator_source_sha256']:
++        raise ValueError('validator version differs from this frozen review evidence')
++    with Image.open(BytesIO(source)) as original:
++        original.load()
++        dimensions, file_format = original.size, original.format
++        preview = original.convert('RGB')
++    if list(dimensions) != frozen['dimensions'] or file_format != frozen['format']:
++        raise ValueError('source dimensions/format mismatch')
++    caption_values = dict(docs['saved_caption.json'])
++    if caption_values.pop('input_sha256') != image_hash:
++        raise ValueError('caption belongs to another image')
++    caption = SmolCaptionResult(**caption_values)
++    if tuple(caption.image_dimensions or ()) != dimensions:
++        raise ValueError('caption dimensions mismatch')
++    expected = PlanningInput.from_caption(caption, supplied.target_culture, source_culture=supplied.source_culture,
++        user_instructions=supplied.user_instructions, verified_objects=supplied.verified_objects)
++    if not _same(asdict(expected), asdict(supplied)) or not _same(frozen['planning_input'], asdict(supplied)):
++        raise ValueError('caption/input/frozen context mismatch')
++    if (not _same(audit['request'], frozen['predeclared_expected_request'])
++            or not _same(audit['config'], frozen['config'])
++            or not _same(audit['resolved_model'], frozen['model'])
++            or not _same(audit['request']['format'], frozen['schema'])):
++        raise ValueError('actual planner request/model differs from frozen evidence')
++    messages = audit['request']['messages']
++    if (len(messages) != 2 or messages[0]['role'] != 'system' or messages[1]['role'] != 'user'
++            or digest(messages[0]['content'].encode()) != frozen['new_system_prompt_sha256']
++            or not _same(_json(messages[1]['content'].encode()), asdict(supplied))):
++        raise ValueError('actual system/user message differs from planning input')
++    if (not _same(audit['response'], docs['raw_response_before_validation.json'])
++            or payload['raw_qwen_message.txt'].decode('utf8') != audit['response']['message']['content']):
++        raise ValueError('raw response copies conflict')
++    response = audit['response']
++    if (response.get('done') is not True or response.get('done_reason') != 'stop'
++            or response.get('model') != audit['config']['model']
++            or response['message'].get('role') != 'assistant' or response['message'].get('tool_calls')):
++        raise ValueError('incomplete or unexpected planner response is not triage-eligible')
++    raw = _json(payload['raw_qwen_message.txt'])
++    if (raw.get('decision') != 'PROPOSE' or len(raw.get('candidate_edits', [])) != 1
++            or audit.get('parse_issues') != [] or audit['validation'].get('raw_schema_valid') is not True):
++        raise ValueError('only one schema-valid original raw PROPOSE candidate is triage-eligible')
++    try:
++        final, issues = validate_planner_audit(supplied, audit)
++    except OllamaPlannerError as exc:
++        raise ValueError(f'original planner audit is invalid: {exc.code}: {exc}') from exc
++    if (not _same(docs['validated_plan.json'], {'planning_result': asdict(final), 'issues': issues})
++            or not _same(audit['validation']['issues'], issues)
++            or audit['validation'].get('automatically_authorized') is not False):
++        raise ValueError('validated REVIEW result or issues differ from recomputed evidence')
++    profile = [(i['code'], i['severity'], i['candidate_index']) for i in issues]
++    if (final.decision != 'REVIEW' or final.candidate_edits or not final.uncertainties
++            or len(profile) != 2 or set(profile) != {
++                ('USER_CONSTRAINTS_UNRESOLVED', 'human_verification', None),
++                ('EDIT_UNCERTAINTY_UNRESOLVED', 'review', None)}):
++        raise ValueError('ineligible issue profile: no other blocking or unknown issue may be triaged')
++    if type(index) is not int or index != 0:
++        raise ValueError('select the explicit original raw candidate index (zero for this single-candidate case)')
++    candidate = raw['candidate_edits'][index]
++    verified = next((v for v in supplied.verified_objects if v.object_id == candidate['verified_object_id']), None)
++    if verified is None or candidate['object_description'] != verified.description or candidate['identity_uncertain'] is not False:
++        raise ValueError('source identity must already match supplied verified evidence')
++    confirmation = docs['human_confirmation.json']
++    if audit.get('fixture_scope') not in (None, 'SYNTHETIC_TEST_ONLY'):
++        raise ValueError('unknown fixture/evidence scope')
++    synthetic = audit.get('fixture_scope') == 'SYNTHETIC_TEST_ONLY'
++    if (confirmation['source_image_sha256'] != image_hash or not _same(confirmation['confirmed_object'], asdict(verified))
++            or confirmation['image_edit_authorized'] is not False):
++        raise ValueError('source confirmation conflicts with image/object or claims editing authorization')
++    if synthetic:
++        if confirmation.get('evidence_type') != 'SYNTHETIC_TEST_ONLY':
++            raise ValueError('synthetic audit must remain explicitly synthetic')
++    elif (confirmation.get('evidence_type') != 'ACTUAL_USER_MESSAGE'
++            or confirmation.get('source_verification_provided_by_actual_user') is not True):
++        raise ValueError('real evidence requires the original actual-user confirmation')
++    if not isinstance(confirmation.get('verbatim_user_confirmation'), str) or not confirmation['verbatim_user_confirmation'].strip():
++        raise ValueError('the original source-confirmation text is required')
++    rejected = audit['validation'].get('rejected_candidates')
++    if (not isinstance(rejected, list) or len(rejected) != 1
++            or rejected[0].get('candidate_index') != index or not _same(rejected[0].get('raw_proposal'), candidate)
++            or rejected[0].get('issue_codes') != [i['code'] for i in issues]):
++        raise ValueError('original quarantine record must match the blocked proposal and issues')
++    binding = {'original_image_sha256': image_hash, 'original_dimensions': list(dimensions),
++        'planning_input_sha256': digest(payload['planning_input.json']),
++        'planner_audit_sha256': digest(payload['planner_audit.json']),
++        'raw_response_sha256': digest(payload['raw_response_before_validation.json']),
++        'raw_message_sha256': digest(payload['raw_qwen_message.txt']),
++        'validated_review_sha256': digest(payload['validated_plan.json']),
++        'original_raw_candidate_index': index, 'verified_object': asdict(verified), 'original_raw_candidate': candidate,
++        'original_scene_summary': raw['scene_summary'], 'source_culture': supplied.source_culture,
++        'target_culture': supplied.target_culture, 'user_instructions': supplied.user_instructions,
++        'must_preserve': list(final.must_preserve), 'original_uncertainties': list(final.uncertainties),
++        'raw_verification_requirements': raw['verification_requirements'],
++        'validated_verification_requirements': list(final.verification_requirements),
++        'validation_issues': issues, 'original_issue_codes': [i['code'] for i in issues],
++        'original_raw_decision': 'PROPOSE', 'original_validated_decision': 'REVIEW',
++        'original_released_candidate_count': 0, 'triage_eligible': True,
++        'eligibility_basis': 'Exact coded uncertainty-only profile; not proof of semantic or cultural correctness.',
++        'evidence_scope': 'SYNTHETIC_TEST_ONLY' if synthetic else 'REAL_SAVED_PLANNING_EVIDENCE'}
++    return binding, payload, source, preview
++
++
++def prepare(case: Path, image: Path, index: int, out: Path) -> Path:
++    binding, payload, source, preview = _case(case, image, index)
++    out.mkdir(parents=True, exist_ok=False)
++    for name, data in payload.items():
++        (out/name).write_bytes(data)
++    (out/'original.webp').write_bytes(source)  # byte identity matters; Pillow detects actual encoding
++    preview.thumbnail((850, 850)); preview.save(out/'preview.png')
++    text = ('# PENDING human uncertainty triage\n\n'
++        'Classification only. Original final decision remains REVIEW with zero released candidates.\n'
++        'No decision here authorizes grounding, segmentation or image editing.\n\n'
++        '![Original photograph preview](preview.png)\n\n[Original byte-identical image](original.webp)\n\n'
++        '## Exact bound case\n\n```json\n'+json.dumps(binding, indent=2, ensure_ascii=False)+'\n```\n\n'
++        '## Required human questions\n\n'+'\n'.join(f'{i}. {question}' for i, question in enumerate(QUESTIONS, 1))+
++        '\n\nRead the full original instructions, raw proposal, uncertainty and raw/final audit. '
++        'Record a specific explanation. ROUTINE_VERIFICATION_REQUIRED records only your classification; '
++        'it does not satisfy other user-constraint checks or release any candidate.\n')
++    (out/'review_request.md').write_text(text, encoding='utf8')
++    record = {'schema_version': 1, 'record_type': 'planning_uncertainty_human_review',
++        'scope': 'UNCERTAINTY_CLASSIFICATION_ONLY', **binding,
++        'file_sha256': {name: digest((out/name).read_bytes()) for name in BUNDLE_FILES},
++        'decision': 'PENDING', 'reviewer': None, 'reason': 'Awaiting real human uncertainty triage.',
++        'created_at_utc': datetime.now(timezone.utc).isoformat(), 'reviewed_at_utc': None,
++        **{flag: False for flag in DECLARATIONS}, **PERMISSIONS}
++    check(record, out)
++    path = out/'pending.json'; _write(path, record)
++    return path
++
++
++def _reviewer(record):
++    _human(record)  # reuse existing identity, reason, original/edit inspection and timestamp checks
++    placeholders = {'yourname', 'yourrealname', 'reviewer', 'reviewername', 'name', 'yourfullname', 'fullname',
++                    'unknown', 'pending', 'todo', 'tbd', 'na', 'none', 'null', 'reason', 'yourreason',
++                    'explanation', 'justification', 'placeholder', 'ok', 'yes', 'approved'}
++    placeholders.update(re.sub(r'\W|_', '', value.casefold()) for value in DECISIONS)
++    for field in ('reviewer', 'reason'):
++        value = record[field]
++        if re.sub(r'\W|_', '', value.casefold()) in placeholders or '<' in value or '>' in value:
++            raise ValueError('reviewer and explanation must not be placeholders or a bare classification label')
++    if any(record.get(flag) is not True for flag in DECLARATIONS):
++        raise ValueError('declare inspection of original, proposal, uncertainties, complete instructions and audit')
++
++
++def check(record: dict, folder: Path):
++    if (type(record.get('schema_version')) is not int or record.get('schema_version') != 1 or record.get('record_type') != 'planning_uncertainty_human_review'
++            or record.get('scope') != 'UNCERTAINTY_CLASSIFICATION_ONLY'
++            or any(record.get(key) is not False for key in PERMISSIONS)):
++        raise ValueError('uncertainty classification cannot authorize candidate release or any execution')
++    if (not isinstance(record.get('reason'), str) or not record['reason'].strip()
++            or datetime.fromisoformat(record['created_at_utc']).utcoffset() is None):
++        raise ValueError('a reason and timezone-aware request creation timestamp are required')
++    manifest = record.get('file_sha256')
++    if not isinstance(manifest, dict) or set(manifest) != set(BUNDLE_FILES):
++        raise ValueError('complete fixed-file evidence manifest is required')
++    for name, expected in manifest.items():
++        if digest((folder/name).read_bytes()) != expected:
++            raise ValueError(f'review evidence hash mismatch: {name}')
++    binding, _, _, _ = _case(folder, folder/'original.webp', record['original_raw_candidate_index'])
++    if any(not _same(record.get(key), value) for key, value in binding.items()):
++        raise ValueError('review metadata conflicts with original source, candidate, uncertainty or issues')
++    keys = set(binding) | {'schema_version', 'record_type', 'scope', 'file_sha256', 'decision', 'reviewer',
++                          'reason', 'created_at_utc', 'reviewed_at_utc', *DECLARATIONS, *PERMISSIONS}
++    if record['decision'] == 'PENDING':
++        if (record['reviewer'] is not None or record['reviewed_at_utc'] is not None
++                or any(record.get(flag) is not False for flag in DECLARATIONS)):
++            raise ValueError('PENDING cannot claim inspection, a reviewer or a decision timestamp')
++    elif record['decision'] in DECISIONS:
++        keys |= {'pending_file', 'pending_sha256'}
++        _reviewer(record)
++        if record.get('pending_file') != 'pending.json':
++            raise ValueError('a decision must reference its original pending.json in this bundle')
++        data = (folder/'pending.json').read_bytes()
++        if digest(data) != record.get('pending_sha256'):
++            raise ValueError('pending request hash mismatch')
++        parent = _json(data)
++        if parent.get('decision') != 'PENDING':
++            raise ValueError('the parent must be the original PENDING request')
++        check(parent, folder)
++        mutable = {'decision', 'reviewer', 'reason', 'reviewed_at_utc', *DECLARATIONS}
++        if any(not _same(record.get(key), value) for key, value in parent.items() if key not in mutable):
++            raise ValueError('decision changed the original evidence or review scope')
++    else:
++        raise ValueError('unknown uncertainty-review decision')
++    if set(record) != keys:
++        raise ValueError('missing or unexpected uncertainty-review fields')
++    return binding
++
++
++def verify(path: Path) -> dict:
++    record = _json(path.read_bytes()); check(record, path.parent)
++    return record
++
++
++def decide(pending: Path, out: Path, decision: str, reviewer: str, reason: str, *,
++           inspected_original=False, inspected_edit=False, inspected_uncertainties=False,
++           checked_user_instructions=False, inspected_audit=False) -> Path:
++    record = verify(pending)
++    if (record['decision'] != 'PENDING' or pending.name != 'pending.json' or decision not in DECISIONS
++            or pending.parent.resolve() != out.parent.resolve()):
++        raise ValueError('write one new classification beside its original PENDING evidence')
++    record.update(decision=decision, reviewer=reviewer, reason=reason,
++        reviewed_at_utc=datetime.now(timezone.utc).isoformat(), inspected_original=inspected_original,
++        inspected_edit=inspected_edit, inspected_uncertainties=inspected_uncertainties,
++        checked_user_instructions=checked_user_instructions, inspected_audit=inspected_audit,
++        pending_file='pending.json', pending_sha256=digest(pending.read_bytes()))
++    check(record, pending.parent); _write(out, record)
++    return out
++
++
++def main(argv=None):
++    parser = argparse.ArgumentParser(description=__doc__)
++    commands = parser.add_subparsers(dest='command', required=True)
++    ready = commands.add_parser('prepare')
++    for name in ('case', 'image', 'out'):
++        ready.add_argument('--'+name, type=Path, required=True)
++    ready.add_argument('--index', type=int, required=True)
++    submit = commands.add_parser('decide')
++    submit.add_argument('--pending', type=Path, required=True); submit.add_argument('--out', type=Path, required=True)
++    submit.add_argument('--decision', choices=DECISIONS, required=True)
++    submit.add_argument('--reviewer', required=True); submit.add_argument('--reason', required=True)
++    for flag in DECLARATIONS:
++        submit.add_argument('--'+flag.replace('_', '-'), action='store_true')
++    commands.add_parser('verify').add_argument('--review', type=Path, required=True)
++    args = parser.parse_args(argv)
++    try:
++        if args.command == 'prepare': path = prepare(args.case, args.image, args.index, args.out)
++        elif args.command == 'decide':
++            path = decide(args.pending, args.out, args.decision, args.reviewer, args.reason,
++                          **{flag: getattr(args, flag) for flag in DECLARATIONS})
++        else: path = args.review
++        print(json.dumps(verify(path), indent=2, ensure_ascii=False))
++    except (OSError, ValueError, TypeError, KeyError) as exc:
++        parser.error(str(exc))
++
++
++if __name__ == '__main__':
++    main()
+--- /dev/null
++++ after/tests/test_uncertainty_review.py
+@@ -0,0 +1,300 @@
++"""Synthetic uncertainty reviews only; no real reviewer decisions or model inference."""
++from contextlib import ExitStack, redirect_stderr, redirect_stdout
++from copy import deepcopy
++from dataclasses import asdict, replace
++from io import StringIO
++import json
++from pathlib import Path
++import tempfile
++import unittest
++from unittest.mock import patch
++
++from PIL import Image
++
++from scripts.review_grounding import digest
++from scripts.review_uncertainty import DECLARATIONS, PERMISSIONS, check, decide, main, prepare, verify
++from transcreation.config import PlannerConfig
++from transcreation.contracts import CaptionStatus, PlanningInput, VerifiedObject
++from transcreation.orchestration import IntentReference, PipelineInput, PipelineState, run_pipeline
++from transcreation.stages.caption import SmolCaptionResult
++from transcreation.stages import planning as policy
++from transcreation.stages.ollama_planner import OllamaPlanner, SYSTEM_PROMPT
++
++
++class UncertaintyReviewTests(unittest.TestCase):
++    def setUp(self):
++        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
++        self.root=Path(self.temp.name);self.image=self.root/'image.png'
++        Image.new('RGB',(80,60),'white').save(self.image)
++        self.request=PlanningInput('A red ceramic cup is on a table.',CaptionStatus.COMPLETE,'test target',
++            user_instructions='Change the exterior finish; preserve table and lighting.',
++            verified_objects=(VerifiedObject('cup-1','red ceramic cup'),))
++        self.raw={'decision':'PROPOSE','decision_reason':'Synthetic user-directed draft only.',
++            'scene_summary':'The caption reports a red ceramic cup on a table.',
++            'candidate_edits':[{'object_description':'red ceramic cup','localization_phrase':'red ceramic cup',
++                'proposed_change':'blue exterior finish','cultural_reason':'Synthetic contextual user preference only.',
++                'identity_uncertain':False,'verified_object_id':'cup-1'}],
++            'must_preserve':['table','lighting'],'uncertainties':['Review the proposed finish against the original photograph.'],
++            'verification_requirements':['Check the finish in a later controlled experiment.']}
++        self.counter=0;self.case=self.build()
++        self.pending=prepare(self.case,self.image,0,self.root/'review')
++        self.stack=ExitStack();self.addCleanup(self.stack.close)
++        self.model_mocks=[self.stack.enter_context(patch(name)) for name in (
++            'transcreation.orchestration.create_captioner',
++            'transcreation.stages.ollama_planner.OllamaPlanner.plan',
++            'transcreation.stages.grounding.GroundingDetector',
++            'transcreation.stages.segmentation.SamSegmenter',
++            'transcreation.stages.inpainting.run_inpainting')]
++        self.addCleanup(self.assert_no_models)
++
++    def assert_no_models(self):
++        for model in self.model_mocks:model.assert_not_called()
++
++    def build(self, raw=None, request=None):
++        self.counter+=1;case=self.root/f'evidence_{self.counter}';case.mkdir()
++        request=request or self.request;raw=deepcopy(raw or self.raw)
++        # Produce a native-format synthetic audit without invoking a planner/model.
++        draft,initial=policy.parse_model_draft(raw)
++        final,issues=policy.validate_planning_result(request,draft,initial)
++        config=asdict(PlannerConfig());model={'name':config['model'],'digest':'SYNTHETIC_TEST_ONLY'}
++        body={'model':config['model'],'stream':False,'format':{},'options':config['options'],'keep_alive':0,
++              'messages':[{'role':'system','content':SYSTEM_PROMPT},{'role':'user','content':json.dumps(asdict(request))}]}
++        response={'model':config['model'],'done':True,'done_reason':'stop',
++                  'message':{'role':'assistant','content':json.dumps(raw)}}
++        audit={'fixture_scope':'SYNTHETIC_TEST_ONLY','input':asdict(request),'request':body,'config':config,
++            'resolved_model':model,'response':response,'raw_planning_result':raw,'planning_result':asdict(final),
++            'parse_issues':initial,'validation':{'status':'valid','raw_schema_valid':not initial,'issues':issues,
++                'automatically_authorized':False,'rejected_candidates':[{'candidate_index':i,'raw_proposal':edit,
++                    'issue_codes':list(dict.fromkeys(v['code'] for v in issues if v['candidate_index'] in (None,i)))}
++                    for i,edit in enumerate(raw['candidate_edits'])] if final.decision=='REVIEW' else []}}
++        caption=SmolCaptionResult(request.source_caption,'SYNTHETIC_TEST_ONLY',image_dimensions=(80,60),
++            eos_reached=request.caption_status==CaptionStatus.COMPLETE,
++            token_ceiling_reached=request.caption_status==CaptionStatus.TRUNCATED)
++        confirmation={'evidence_type':'SYNTHETIC_TEST_ONLY','source_image_sha256':digest(self.image.read_bytes()),
++            'confirmed_object':{'object_id':'cup-1','description':'red ceramic cup'},
++            'verbatim_user_confirmation':'Synthetic source-confirmation fixture, not actual human approval.',
++            'image_edit_authorized':False,'source_verification_provided_by_actual_user':False}
++        def save(name,value):(case/name).write_text(json.dumps(value,indent=2),encoding='utf8')
++        save('planning_input.json',asdict(request));save('planner_audit.json',audit)
++        save('validated_plan.json',{'planning_result':asdict(final),'issues':issues})
++        save('saved_caption.json',{**asdict(caption),'input_sha256':digest(self.image.read_bytes())})
++        save('human_confirmation.json',confirmation);save('raw_response_before_validation.json',response)
++        (case/'raw_qwen_message.txt').write_bytes(response['message']['content'].encode())
++        save('experiment_frozen.json',{'source_image_sha256':digest(self.image.read_bytes()),'dimensions':[80,60],'format':'PNG',
++            'planning_input':asdict(request),'planning_input_sha256':digest((case/'planning_input.json').read_bytes()),
++            'saved_caption_sha256':digest((case/'saved_caption.json').read_bytes()),
++            'human_confirmation_sha256':digest((case/'human_confirmation.json').read_bytes()),
++            'validator_source_sha256':digest(Path(policy.__file__).read_bytes()),
++            'predeclared_expected_request':body,'config':config,'model':model,'schema':{},
++            'new_system_prompt_sha256':digest(SYSTEM_PROMPT.encode())})
++        return case
++
++    def mutate(self,path,change):
++        value=json.loads(path.read_text(encoding='utf8'));change(value)
++        path.write_text(json.dumps(value),encoding='utf8')
++
++    def classify(self, decision='ROUTINE_VERIFICATION_REQUIRED', **changes):
++        values={'reviewer':'synthetic test reviewer','reason':'Synthetic judgment: this is a routine pre-edit check, not an unresolved source fact.',
++                **{flag:True for flag in DECLARATIONS}}
++        values.update(changes)
++        return decide(self.pending,self.pending.with_name('decision.json'),decision,**values)
++
++    def test_valid_pending_has_no_fabricated_human_decision(self):
++        record=verify(self.pending)
++        self.assertEqual(record['decision'],'PENDING');self.assertIsNone(record['reviewer'])
++        self.assertIsNone(record['reviewed_at_utc']);self.assertEqual(record['evidence_scope'],'SYNTHETIC_TEST_ONLY')
++        self.assertEqual(record['original_uncertainties'],self.raw['uncertainties'])
++        self.assertEqual(record['user_instructions'],self.request.user_instructions)
++        self.assertTrue(all(record[flag] is False for flag in DECLARATIONS))
++
++    def test_explicit_routine_classification_never_releases_candidate(self):
++        record=verify(self.classify())
++        self.assertEqual(record['decision'],'ROUTINE_VERIFICATION_REQUIRED')
++        self.assertEqual(record['original_validated_decision'],'REVIEW')
++        self.assertEqual(record['original_released_candidate_count'],0)
++        self.assertTrue(all(record[name] is False for name in PERMISSIONS))
++
++    def test_material_unresolved_is_separate_evidence(self):
++        self.assertEqual(verify(self.classify('MATERIAL_UNRESOLVED'))['decision'],'MATERIAL_UNRESOLVED')
++
++    def test_reject_is_not_candidate_release(self):
++        self.assertFalse(verify(self.classify('REJECT'))['candidate_release_authorized'])
++
++    def test_needs_review_records_no_execution_permission(self):
++        self.assertFalse(verify(self.classify('NEEDS_REVIEW'))['grounding_authorized'])
++
++    def test_missing_and_placeholder_reviewer_rejected(self):
++        for name in (None,'','YOUR_NAME','your-name','<name>','reviewer','unknown'):
++            with self.subTest(name=name),self.assertRaises((ValueError,TypeError)):
++                self.classify(reviewer=name)
++
++    def test_missing_or_nonboolean_inspection_declarations_rejected(self):
++        for flag in DECLARATIONS:
++            for value in (False,None,1):
++                with self.subTest(flag=flag,value=value),self.assertRaises(ValueError):self.classify(**{flag:value})
++
++    def test_empty_placeholder_or_bare_classification_reason_rejected(self):
++        for reason in ('',' ','null','N/A','YOUR_REASON','ROUTINE_VERIFICATION_REQUIRED','ok','<explanation>'):
++            with self.subTest(reason=reason),self.assertRaises(ValueError):self.classify(reason=reason)
++
++    def test_changed_source_image_hash_rejected(self):
++        image=self.pending.parent/'original.webp';image.write_bytes(image.read_bytes()+b' ')
++        with self.assertRaises(ValueError):verify(self.pending)
++
++    def test_changed_audit_hash_rejected(self):
++        path=self.pending.parent/'planner_audit.json';path.write_bytes(path.read_bytes()+b' ')
++        with self.assertRaises(ValueError):verify(self.pending)
++
++    def test_changed_validated_result_hash_rejected(self):
++        path=self.pending.parent/'validated_plan.json';path.write_bytes(path.read_bytes()+b' ')
++        with self.assertRaises(ValueError):verify(self.pending)
++
++    def test_changed_uncertainty_text_rejected(self):
++        self.mutate(self.pending,lambda v:v.update(original_uncertainties=['Rewritten to appear routine.']))
++        with self.assertRaises(ValueError):verify(self.pending)
++
++    def test_invalid_index_cannot_default_to_zero(self):
++        for index in (None,True,-1,1):
++            with self.subTest(index=index),self.assertRaises(ValueError):
++                prepare(self.case,self.image,index,self.root/'invalid_index')
++
++    def test_changed_record_verified_object_id_rejected(self):
++        self.mutate(self.pending,lambda v:v['verified_object'].update(object_id='invented'))
++        with self.assertRaises(ValueError):verify(self.pending)
++
++    def test_all_independent_blockers_remain_ineligible(self):
++        mutations=(
++            lambda p:p['candidate_edits'][0].update(object_description='different object'),
++            lambda p:p['candidate_edits'][0].update(localization_phrase='blue exterior finish'),
++            lambda p:p['candidate_edits'][0].update(proposed_change='red ceramic cup'),
++            lambda p:p['candidate_edits'][0].update(verified_object_id='missing'),
++            lambda p:p['candidate_edits'][0].update(verified_object_id=None),
++            lambda p:p['candidate_edits'][0].update(identity_uncertain=True),
++            lambda p:p.update(scene_summary='The scene contains a blue exterior finish.'),
++            lambda p:p.update(must_preserve=['red ceramic cup']),
++            lambda p:p['candidate_edits'][0].update(object_description='null'),
++            lambda p:p['candidate_edits'][0].update(unexpected='malformed'),
++        )
++        for number,change in enumerate(mutations):
++            raw=deepcopy(self.raw);change(raw);case=self.build(raw)
++            with self.subTest(number=number),self.assertRaises(ValueError):
++                prepare(case,self.image,0,self.root/f'ineligible_{number}')
++
++    def test_truncated_caption_is_ineligible(self):
++        case=self.build(request=replace(self.request,caption_status=CaptionStatus.TRUNCATED))
++        with self.assertRaises(ValueError):prepare(case,self.image,0,self.root/'truncated')
++
++    def test_raw_review_and_abstain_are_ineligible(self):
++        for decision in ('REVIEW','ABSTAIN'):
++            raw={**self.raw,'decision':decision,'candidate_edits':[]};case=self.build(raw)
++            with self.subTest(decision=decision),self.assertRaises(ValueError):
++                prepare(case,self.image,0,self.root/decision)
++
++    def test_unknown_extra_blocker_fails_closed(self):
++        from transcreation.orchestration import validate_planner_audit
++        audit=json.loads((self.case/'planner_audit.json').read_text())
++        final,issues=validate_planner_audit(self.request,audit)
++        issues.append({'code':'FUTURE_UNKNOWN_BLOCKER','message':'Synthetic unknown condition.', 'candidate_index':None,'severity':'review'})
++        self.mutate(self.case/'planner_audit.json',lambda v:v['validation'].update(issues=issues))
++        self.mutate(self.case/'validated_plan.json',lambda v:v.update(issues=issues))
++        with patch('scripts.review_uncertainty.validate_planner_audit',return_value=(final,issues)),self.assertRaisesRegex(ValueError,'issue profile'):
++            prepare(self.case,self.image,0,self.root/'unknown')
++
++    def test_no_keyword_based_routine_classification(self):
++        raw=deepcopy(self.raw);raw['uncertainties']=['A serious source-identity question remains unresolved.']
++        pending=prepare(self.build(raw),self.image,0,self.root/'different_uncertainty')
++        self.assertEqual(verify(pending)['decision'],'PENDING')
++        self.assertFalse(verify(pending)['candidate_release_authorized'])
++
++    def test_classification_cannot_be_consumed_as_edit_intent(self):
++        from scripts.review_edit_intent import verify as verify_intent
++        decision=self.classify()
++        with self.assertRaises(ValueError):verify_intent(decision)
++        request=PipelineInput(str(self.image),digest(self.image.read_bytes()),self.request.target_culture,
++            str(self.root/'continuation'),'GROUNDING_TEST',user_instructions=self.request.user_instructions,
++            verified_objects=self.request.verified_objects,edit_intent=IntentReference(str(decision),digest(decision.read_bytes())))
++        result=run_pipeline(request)
++        self.assertEqual(result.state,PipelineState.FAILED)
++        self.assertFalse(result.image_generation_permitted)
++
++    def test_audit_and_original_final_remain_byte_identical_after_classification(self):
++        before={p.name:p.read_bytes() for p in self.case.iterdir()}
++        bundle={p.name:p.read_bytes() for p in self.pending.parent.iterdir()}
++        self.classify()
++        self.assertEqual(before,{p.name:p.read_bytes() for p in self.case.iterdir()})
++        for name,data in bundle.items():self.assertEqual(data,(self.pending.parent/name).read_bytes())
++
++    def test_permission_escalation_is_rejected(self):
++        for field in PERMISSIONS:
++            record=json.loads(self.pending.read_text());record[field]=True
++            with self.subTest(field=field),self.assertRaises(ValueError):check(record,self.pending.parent)
++
++    def test_changed_pending_request_invalidates_decision(self):
++        decision=self.classify();self.pending.write_bytes(self.pending.read_bytes()+b' ')
++        with self.assertRaises(ValueError):verify(decision)
++
++    def test_existing_review_outputs_never_overwritten(self):
++        decision=self.classify();before=decision.read_bytes()
++        with self.assertRaises(FileExistsError):self.classify()
++        self.assertEqual(before,decision.read_bytes())
++        with self.assertRaises(FileExistsError):prepare(self.case,self.image,0,self.pending.parent)
++
++    def test_changed_preview_or_readable_request_is_rejected(self):
++        for filename in ('preview.png','review_request.md'):
++            path=self.pending.parent/filename;before=path.read_bytes();path.write_bytes(before+b' ')
++            with self.subTest(filename=filename),self.assertRaises(ValueError):verify(self.pending)
++            path.write_bytes(before)
++
++    def test_cli_displays_bound_instructions_uncertainties_and_no_permissions(self):
++        with redirect_stdout(StringIO()) as output:main(['verify','--review',str(self.pending)])
++        record=json.loads(output.getvalue())
++        self.assertEqual(record['user_instructions'],self.request.user_instructions)
++        self.assertEqual(record['original_uncertainties'],self.raw['uncertainties'])
++        self.assertFalse(record['grounding_authorized'])
++
++    def test_cli_classification_requires_all_inspection_declarations(self):
++        out=self.pending.with_name('cli_decision.json')
++        args=['decide','--pending',str(self.pending),'--out',str(out),'--decision','ROUTINE_VERIFICATION_REQUIRED',
++              '--reviewer','synthetic reviewer','--reason','Synthetic assessment of normal pre-edit checks.']
++        with redirect_stderr(StringIO()),self.assertRaises(SystemExit):main(args)
++        self.assertFalse(out.exists())
++        with redirect_stdout(StringIO()):main(args+['--'+flag.replace('_','-') for flag in DECLARATIONS])
++        record=verify(out)
++        self.assertEqual(record['decision'],'ROUTINE_VERIFICATION_REQUIRED')
++        self.assertFalse(record['candidate_release_authorized'])
++
++    def test_unknown_record_fields_or_decisions_rejected(self):
++        record=json.loads(self.pending.read_text());record['candidate_edits']=[self.raw['candidate_edits'][0]]
++        with self.assertRaises(ValueError):check(record,self.pending.parent)
++        with self.assertRaises(ValueError):self.classify('ACCEPT_FOR_GROUNDING_TEST')
++
++    def test_missing_evidence_rejected_before_preparation(self):
++        (self.case/'raw_qwen_message.txt').unlink()
++        with self.assertRaises(FileNotFoundError):prepare(self.case,self.image,0,self.root/'missing')
++
++    def test_conflicting_raw_response_copies_rejected(self):
++        self.mutate(self.case/'raw_response_before_validation.json',lambda v:v['message'].update(content='{}'))
++        with self.assertRaises(ValueError):prepare(self.case,self.image,0,self.root/'conflict')
++
++    def test_incomplete_wrong_model_or_nonassistant_responses_are_ineligible(self):
++        changes=(lambda v:v.update(done=False),lambda v:v.update(done_reason='length'),
++                 lambda v:v.update(model='unexpected-model'),lambda v:v['message'].update(role='system'),
++                 lambda v:v['message'].update(tool_calls=[{'name':'not-an-edit-review'}]))
++        for index,change in enumerate(changes):
++            case=self.build()
++            self.mutate(case/'planner_audit.json',lambda v:change(v['response']))
++            self.mutate(case/'raw_response_before_validation.json',change)
++            with self.subTest(index=index),self.assertRaisesRegex(ValueError,'incomplete or unexpected'):
++                prepare(case,self.image,0,self.root/f'invalid_response_{index}')
++
++    def test_duplicate_json_keys_rejected(self):
++        self.pending.write_text(self.pending.read_text().replace('"decision": "PENDING"','"decision": "PENDING", "decision": "REJECT"'))
++        with self.assertRaisesRegex(ValueError,'duplicate JSON key'):verify(self.pending)
++
++    def test_cannot_erase_source_confirmation(self):
++        self.mutate(self.case/'human_confirmation.json',lambda v:v.update(verbatim_user_confirmation=''))
++        with self.assertRaises(ValueError):prepare(self.case,self.image,0,self.root/'erased')
++
++
++if __name__=='__main__':
++    unittest.main()

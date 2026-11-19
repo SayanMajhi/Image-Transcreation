@@ -1,0 +1,18 @@
+{
+  "zip": "results/phase7_integration/iteration5_ramen_review.zip",
+  "sha256": "7cfa1d27296922a17824fa9db5fcaeba4de98f822c170253f77cfb8ce91ec5ba",
+  "bytes": 11573454,
+  "entries": 595,
+  "crc": "passed",
+  "manifest_hashes": "all matched",
+  "working_report_links": 127,
+  "broken_links": 0,
+  "previous_report_exact_prefix": true,
+  "portable_saved_run_revalidation": "passed; no model calls",
+  "original_phase3_files_unchanged": 92,
+  "live_planning_conditions": 1,
+  "raw_decision": "PROPOSE",
+  "final_decision": "REVIEW",
+  "released_candidates": 0,
+  "recommendation": "NEEDS FIXES; safe REVIEW stop"
+}

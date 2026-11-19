@@ -1,0 +1,18 @@
+{
+  "path": "results/cultural_visual_improvement_review.zip",
+  "bytes": 34845370,
+  "sha256": "dbb2359a3f430c7d2a76a69389acac58da1cd080324772897eae93e1b4fe052a",
+  "manifest_members_verified": 199,
+  "CRC": "PASS",
+  "tests_passed": 440,
+  "completed_conditions": [
+    "A",
+    "B"
+  ],
+  "actual_new_generation_calls": 2,
+  "outside_mask_changes": 0,
+  "protected_changes": 0,
+  "new_output_human_review": "PENDING",
+  "broken_report_links": [],
+  "historical_changes_other_than_report": []
+}

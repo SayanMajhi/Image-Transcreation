@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "scripts.inpaint",
+    "--refined-input",
+    "results\\phase7_integration\\visual_v3\\input_B.json",
+    "--out",
+    "results\\phase7_integration\\visual_v3\\B",
+    "--max-attempts",
+    "1"
+  ],
+  "started_at_utc": "2026-11-11T09:35:07.629211+00:00",
+  "remaining_actual_call_budget": 1
+}

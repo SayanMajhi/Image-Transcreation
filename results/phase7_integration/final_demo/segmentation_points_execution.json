@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "transcreation.cli",
+    "run",
+    "--input",
+    "results\\phase7_integration\\final_demo\\segmentation_points_request.json"
+  ],
+  "returncode": 0,
+  "wall_seconds": 12.375647999999273,
+  "stdout": "MASK_REQUIRES_REVIEW: Inspect all masks/overlays against protected objects; supply pinned SAM result, explicit candidate, mask hash and research selection note. No generation ran.\n",
+  "stderr": ""
+}

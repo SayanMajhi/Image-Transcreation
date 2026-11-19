@@ -1,0 +1,45 @@
+{
+  "case": 3,
+  "attempt": "B",
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source_path": "results\\phase9_repeatability\\case3\\..\\assets\\cookie.jpg",
+  "source_sha256": "8cb875b937dd642930fb421e5ad7a0e4e518144aa865293d7d7de35643bb1871",
+  "mask_path": "results\\phase9_repeatability\\case3\\permitted_B.png",
+  "mask_sha256": "2073ee8812c1e0b234d9e1cd4115b4176c0c6a3e4fed8ccf2d6ef25d8e7ab23f",
+  "output_path": "results\\phase9_repeatability\\case3\\B\\final.png",
+  "output_sha256": "18da8b80f7d0703f4420c5c86ed0cf6737f6c5b92a0bbdfb2cbbd7a95adf2636",
+  "dimensions": [
+    2700,
+    1800
+  ],
+  "permitted_pixels": 3510000,
+  "protected_pixels": 1350000,
+  "changed_inside": 2404354,
+  "changed_outside": 0,
+  "maximum_outside_channel_difference": 0,
+  "protected_differences": 0,
+  "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+  "memory": "not instrumented; CPU only, no new CUDA/model inference",
+  "input_hash_checks": {
+    "source": true,
+    "reference": true,
+    "selection": true,
+    "permitted": true,
+    "protected": true
+  },
+  "reference": {
+    "path": "results\\phase9_repeatability\\assets\\onigiri.jpg",
+    "sha256": "768bc6594037651fabbd6c0a86fcda52dd229d67a1ee5d62f5b4c7199cdd0d67",
+    "dimensions": [
+      3770,
+      2828
+    ],
+    "title": "Yaki-Onigiri 001.jpg",
+    "author": "Ocdp",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yaki-Onigiri_001.jpg"
+  },
+  "runtime_seconds": 1.1904756000003545,
+  "clean_plate_inside_equals_background": true
+}

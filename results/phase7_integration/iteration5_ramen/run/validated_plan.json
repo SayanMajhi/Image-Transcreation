@@ -1,0 +1,42 @@
+{
+  "planning_result": {
+    "decision": "REVIEW",
+    "decision_reason": "Review required; no candidate edit is released downstream. Verify the source-object identity of: Japanese ramen noodles. Localization must retain the original object label: Japanese ramen noodles.",
+    "scene_summary": "A bowl of food with chopsticks and a spoon. The caption reports a Japanese bowl of ramen noodles, but the scene is adapted to an Indian-style masala noodle dish.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "bowl",
+      "table",
+      "camera angle",
+      "lighting",
+      "background"
+    ],
+    "uncertainties": [],
+    "verification_requirements": [
+      "Verify the source-object identity of: Japanese ramen noodles.",
+      "Localization must retain the original object label: Japanese ramen noodles.",
+      "Review the original-scene summary and any paraphrased identities against the image.",
+      "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+    ]
+  },
+  "issues": [
+    {
+      "code": "UNVERIFIED_SOURCE_OBJECT",
+      "message": "Verify the source-object identity of: Japanese ramen noodles.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "SOURCE_LOCALIZATION_MISMATCH",
+      "message": "Localization must retain the original object label: Japanese ramen noodles.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "links": [
+    {
+      "target": "iteration1/offline/planner_regressions.json",
+      "package_path": "results/phase7_integration/iteration1/offline/planner_regressions.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/offline/replay_input.json",
+      "package_path": "results/phase7_integration/iteration1/offline/replay_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/offline/oil_lamp_replay/pipeline_result.json",
+      "package_path": "results/phase7_integration/iteration1/offline/oil_lamp_replay/pipeline_result.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/offline/summary.json",
+      "package_path": "results/phase7_integration/iteration1/offline/summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/offline/guard_evaluations.json",
+      "package_path": "results/phase7_integration/iteration1/offline/guard_evaluations.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_preregistration.json",
+      "package_path": "results/phase7_integration/iteration1/real_preregistration.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_input.json",
+      "package_path": "results/phase7_integration/iteration1/real_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/evidence/source/scene_06.jpg",
+      "package_path": "results/phase7_integration/iteration1/real_run/evidence/source/scene_06.jpg",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/caption.json",
+      "package_path": "results/phase7_integration/iteration1/real_run/caption.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/planning_input.json",
+      "package_path": "results/phase7_integration/iteration1/real_run/planning_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/planner_audit.json",
+      "package_path": "results/phase7_integration/iteration1/real_run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/validated_plan.json",
+      "package_path": "results/phase7_integration/iteration1/real_run/validated_plan.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/pipeline_result.json",
+      "package_path": "results/phase7_integration/iteration1/real_run/pipeline_result.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_invocation.json",
+      "package_path": "results/phase7_integration/iteration1/real_invocation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/tests_before.json",
+      "package_path": "results/phase7_integration/iteration1/tests_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/tests_after.json",
+      "package_path": "results/phase7_integration/iteration1/tests_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/environment.json",
+      "package_path": "results/phase7_integration/iteration1/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/preservation_after.json",
+      "package_path": "results/phase7_integration/iteration1/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/git_before.json",
+      "package_path": "results/phase7_integration/iteration1/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/git_after.json",
+      "package_path": "results/phase7_integration/iteration1/git_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/iteration2_changes.patch",
+      "package_path": "results/phase7_integration/iteration2/iteration2_changes.patch",
+      "exists": true
+    },
+    {
+      "target": "iteration2/change_summary.json",
+      "package_path": "results/phase7_integration/iteration2/change_summary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic_block_input.json",
+      "package_path": "results/phase7_integration/iteration2/synthetic_block_input.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic_evaluation.json",
+      "package_path": "results/phase7_integration/iteration2/synthetic_evaluation.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/intent/pending.json",
+      "package_path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/intent/pending.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/intent/decision.json",
+      "package_path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/intent/decision.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/run/validated_plan.json",
+      "package_path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/run/validated_plan.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/run/planner_audit.json",
+      "package_path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/continuation/pipeline_result.json",
+      "package_path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/continuation/pipeline_result.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/continuation/grounding/comparison.png",
+      "package_path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/continuation/grounding/comparison.png",
+      "exists": true
+    },
+    {
+      "target": "iteration2/synthetic/accepted_multiple/continuation/box_review/pending.json",
+      "package_path": "results/phase7_integration/iteration2/synthetic/accepted_multiple/continuation/box_review/pending.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/01_japanese_food.audit.json",
+      "package_path": "results/phase7_integration/iteration2/real_evidence/01_japanese_food.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/02_durga_uncertain_incense.audit.json",
+      "package_path": "results/phase7_integration/iteration2/real_evidence/02_durga_uncertain_incense.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/03_bicycle_no_change.audit.json",
+      "package_path": "results/phase7_integration/iteration2/real_evidence/03_bicycle_no_change.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_review_boundary.json",
+      "package_path": "results/phase7_integration/iteration2/real_review_boundary.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/image_suitability.json",
+      "package_path": "results/phase7_integration/iteration2/image_suitability.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_candidate_survey.json",
+      "package_path": "results/phase7_integration/iteration2/real_candidate_survey.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/tests_before.json",
+      "package_path": "results/phase7_integration/iteration2/tests_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/tests_after.json",
+      "package_path": "results/phase7_integration/iteration2/tests_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/cli_checks.json",
+      "package_path": "results/phase7_integration/iteration2/cli_checks.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/environment.json",
+      "package_path": "results/phase7_integration/iteration2/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/preservation_before.json",
+      "package_path": "results/phase7_integration/iteration2/preservation_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/preservation_after.json",
+      "package_path": "results/phase7_integration/iteration2/preservation_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/git_before.json",
+      "package_path": "results/phase7_integration/iteration2/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/git_after.json",
+      "package_path": "results/phase7_integration/iteration2/git_after.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/extraction_verification.json",
+      "package_path": "results/phase7_integration/iteration2/extraction_verification.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/execution_status.json",
+      "package_path": "results/phase7_integration/iteration3/execution_status.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/policy_diagnostics.json",
+      "package_path": "results/phase7_integration/iteration3/policy_diagnostics.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/reproduce_policy_diagnostics.py",
+      "package_path": "results/phase7_integration/iteration3/reproduce_policy_diagnostics.py",
+      "exists": true
+    },
+    {
+      "target": "iteration3/policy_source_anchors.json",
+      "package_path": "results/phase7_integration/iteration3/policy_source_anchors.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/historical_bottleneck_analysis.json",
+      "package_path": "results/phase7_integration/iteration3/historical_bottleneck_analysis.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/01_japanese_food.audit.json",
+      "package_path": "results/phase7_integration/iteration2/real_evidence/01_japanese_food.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/02_durga_uncertain_incense.audit.json",
+      "package_path": "results/phase7_integration/iteration2/real_evidence/02_durga_uncertain_incense.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration2/real_evidence/03_bicycle_no_change.audit.json",
+      "package_path": "results/phase7_integration/iteration2/real_evidence/03_bicycle_no_change.audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration1/real_run/planner_audit.json",
+      "package_path": "results/phase7_integration/iteration1/real_run/planner_audit.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/original.jpg",
+      "package_path": "results/phase7_integration/iteration3/original.jpg",
+      "exists": true
+    },
+    {
+      "target": "iteration3/source_preview.jpg",
+      "package_path": "results/phase7_integration/iteration3/source_preview.jpg",
+      "exists": true
+    },
+    {
+      "target": "iteration3/source_provenance.json",
+      "package_path": "results/phase7_integration/iteration3/source_provenance.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/pending_source_verification.json",
+      "package_path": "results/phase7_integration/iteration3/pending_source_verification.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/configured_future_run_settings.json",
+      "package_path": "results/phase7_integration/iteration3/configured_future_run_settings.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/tests.json",
+      "package_path": "results/phase7_integration/iteration3/tests.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/environment.json",
+      "package_path": "results/phase7_integration/iteration3/environment.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/git_before.json",
+      "package_path": "results/phase7_integration/iteration3/git_before.json",
+      "exists": true
+    },
+    {
+      "target": "iteration3/preservation_after.json",
+      "package_path": "results/phase7_integration/iteration3/preservation_after.json",
+      "exists": true
+    }
+  ],
+  "broken": []
+}

@@ -1,0 +1,76 @@
+{
+  "input": {
+    "source_caption": "A synthetic object sits on a surface.",
+    "caption_status": "COMPLETE",
+    "target_culture": "test target",
+    "source_culture": null,
+    "user_instructions": "Keep the background unchanged.\nPreserve the camera angle; do not infer cultural suitability.",
+    "verified_objects": [
+      {
+        "object_id": "object-1",
+        "description": "synthetic object"
+      }
+    ]
+  },
+  "response": {
+    "message": {
+      "content": "{\"decision\": \"REVIEW\", \"decision_reason\": \"A conditional material adaptation.\", \"scene_summary\": \"Caption describes a synthetic object.\", \"candidate_edits\": [{\"object_description\": \"synthetic object\", \"localization_phrase\": \"synthetic object\", \"proposed_change\": \"a different surface material\", \"cultural_reason\": \"Contextual test suggestion only\", \"identity_uncertain\": false, \"verified_object_id\": \"object-1\"}], \"must_preserve\": [\"background\"], \"uncertainties\": [], \"verification_requirements\": []}"
+    }
+  },
+  "raw_planning_result": {
+    "decision": "REVIEW",
+    "decision_reason": "A conditional material adaptation.",
+    "scene_summary": "Caption describes a synthetic object.",
+    "candidate_edits": [
+      {
+        "object_description": "synthetic object",
+        "localization_phrase": "synthetic object",
+        "proposed_change": "a different surface material",
+        "cultural_reason": "Contextual test suggestion only",
+        "identity_uncertain": false,
+        "verified_object_id": "object-1"
+      }
+    ],
+    "must_preserve": [
+      "background"
+    ],
+    "uncertainties": [],
+    "verification_requirements": []
+  },
+  "planning_result": {
+    "decision": "REVIEW",
+    "decision_reason": "Review required; no candidate edit is released downstream. The model requested review; its candidates are draft-only, not downstream edits.",
+    "scene_summary": "Caption describes a synthetic object.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "background"
+    ],
+    "uncertainties": [],
+    "verification_requirements": [
+      "The model requested review; its candidates are draft-only, not downstream edits.",
+      "Review the original-scene summary and any paraphrased identities against the image.",
+      "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+    ]
+  },
+  "validation": {
+    "status": "valid",
+    "issues": [
+      {
+        "code": "USER_CONSTRAINTS_UNRESOLVED",
+        "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "candidate_index": null,
+        "severity": "human_verification"
+      },
+      {
+        "code": "MODEL_REVIEW_ONLY",
+        "message": "The model requested review; its candidates are draft-only, not downstream edits.",
+        "candidate_index": null,
+        "severity": "review"
+      }
+    ]
+  },
+  "unload": {
+    "status": "sent"
+  },
+  "fixture_scope": "SYNTHETIC_TEST_ONLY"
+}

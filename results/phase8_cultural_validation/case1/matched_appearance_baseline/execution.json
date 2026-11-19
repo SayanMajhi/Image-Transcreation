@@ -1,0 +1,8 @@
+{
+  "method": "DETERMINISTIC_APPEARANCE_TRANSFER_BASELINE",
+  "seconds": 0.2488463999980013,
+  "scope": "RESEARCH_ONLY",
+  "final_sha256": "e5e974d0703f493d8366016266c0b6b88e60678d804e8d7ff8f9172c1b8e118e",
+  "human_approved": false,
+  "new_model_calls": 0
+}

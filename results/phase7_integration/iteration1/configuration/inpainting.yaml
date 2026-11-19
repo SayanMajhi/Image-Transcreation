@@ -1,0 +1,8 @@
+model_id: stable-diffusion-v1-5/stable-diffusion-inpainting
+revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+processing_size: 512 # square padded local crop; never stretch the full photograph
+context_margin: 64 # surrounding pixels on each side of the mask bounds
+seed: 42
+steps: 20
+guidance_scale: 7.5
+strength: 0.9

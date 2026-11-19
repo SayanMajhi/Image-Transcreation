@@ -1,0 +1,11 @@
+{
+  "evidence_type": "SYNTHETIC_TEST_ONLY",
+  "source_image_sha256": "d99bb410cdf0d6284a4fcf480088bc87c3c4a9009656c2fdb80d1292e729b8ec",
+  "confirmed_object": {
+    "object_id": "cup-1",
+    "description": "red ceramic cup"
+  },
+  "verbatim_user_confirmation": "Synthetic source-confirmation fixture, not actual human approval.",
+  "image_edit_authorized": false,
+  "source_verification_provided_by_actual_user": false
+}

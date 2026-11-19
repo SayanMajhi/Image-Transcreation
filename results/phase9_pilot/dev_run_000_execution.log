@@ -1,0 +1,11 @@
+Phase 9 pilot run -> results\phase9_pilot\run_001  (manifest 8695d1212171)
+CASE_01: historical baseline copied, sha256 verified
+CASE_02 attempt A: OK in 0.78s
+CASE_03 attempt A: OK in 1.19s
+CASE_03 attempt B: OK in 1.08s
+CASE_04 attempt A: OK in 1.18s
+CASE_04 attempt B: OK in 1.59s
+CASE_05 attempt A: OK in 3.84s
+CASE_05 attempt B: OK in 4.28s
+CASE_06 attempt A: OK in 0.54s
+Finished in 20.1s; cases OK: 6/6

@@ -1,0 +1,48 @@
+{
+  "scope": "observed interval after model load, not full-lifetime RSS peak",
+  "samples": [
+    {
+      "unix_time": 1794406327.1856143,
+      "editor_processes": [
+        {
+          "pid": 61788,
+          "rss": 7717388288
+        },
+        {
+          "pid": 69476,
+          "rss": 1269760
+        }
+      ],
+      "free_system_ram": 547151872
+    },
+    {
+      "unix_time": 1794406333.0847054,
+      "editor_processes": [
+        {
+          "pid": 61788,
+          "rss": 7717408768
+        },
+        {
+          "pid": 69476,
+          "rss": 1269760
+        }
+      ],
+      "free_system_ram": 491536384
+    },
+    {
+      "unix_time": 1794406338.1755857,
+      "editor_processes": [
+        {
+          "pid": 61788,
+          "rss": 320552960
+        },
+        {
+          "pid": 69476,
+          "rss": 1269760
+        }
+      ],
+      "free_system_ram": 8100761600
+    }
+  ],
+  "max_observed_editor_rss_sum": 7718678528
+}

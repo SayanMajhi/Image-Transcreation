@@ -1,0 +1,45 @@
+{
+  "execution_mode": "RESEARCH_REPLAY",
+  "state": "SOURCE_OBJECT_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source"
+  ],
+  "stopped_at": "grounding_evidence",
+  "reason": "Requested source phrase does not match the recorded source query; replacements cannot substitute for originals.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "095badca225fa9d8db20e773d18b12a3961764ef4967e8dce9c2c893f0d1ccbc",
+      "sha256": "095badca225fa9d8db20e773d18b12a3961764ef4967e8dce9c2c893f0d1ccbc",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+      "sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+      "path": "evidence/source/original.jpg"
+    },
+    "grounding": {
+      "id": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+      "sha256": "ecf6178788fb81e7ebe2ba53b4e87479def087521b35cbdda5d87494526646a6",
+      "path": "evidence/grounding/source_detection.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.0413780000017141
+    },
+    {
+      "stage": "grounding_evidence",
+      "action": "STOP",
+      "seconds": 0.08354839999810793,
+      "state": "SOURCE_OBJECT_REQUIRES_REVIEW",
+      "reason": "Requested source phrase does not match the recorded source query; replacements cannot substitute for originals.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

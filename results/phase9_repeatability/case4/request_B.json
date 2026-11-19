@@ -1,0 +1,82 @@
+{
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source": {
+    "path": "../assets/fedora.jpg",
+    "sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b"
+  },
+  "reference": {
+    "path": "../assets/fez.jpg",
+    "sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344"
+  },
+  "selection": {
+    "path": "../reference_masks/fez.png",
+    "sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448"
+  },
+  "permitted": {
+    "path": "permitted.png",
+    "sha256": "749309db56baaa36b225180aeae5027de5057aa5c2c0872d60a73f1381705f44"
+  },
+  "protected": {
+    "path": "protected.png",
+    "sha256": "60fd467b2535c9d9ec5b934d2821d2deeaff9fdcfcc63c99cb16c43c6db2ed56"
+  },
+  "parameters": {
+    "target_width": 1200,
+    "position": [
+      376,
+      400
+    ],
+    "background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "edge_radius": 1.0,
+    "shadows": [],
+    "patch_fade_sigma": 15
+  },
+  "attribution": {
+    "path": "results\\phase9_repeatability\\assets\\fez.jpg",
+    "sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+    "dimensions": [
+      5760,
+      4320
+    ],
+    "title": "Fez.jpg",
+    "author": "Edouard Hue",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fez.jpg"
+  },
+  "source_attribution": {
+    "path": "results\\phase9_repeatability\\assets\\fedora.jpg",
+    "sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+    "dimensions": [
+      1952,
+      1732
+    ],
+    "title": "A fedora hat, made by Borsalino.jpg",
+    "author": "Kjetil Ree",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:A_fedora_hat,_made_by_Borsalino.jpg"
+  },
+  "annotation_method": "Frozen annotations.json reference photo patch or manual polygon. Source envelope: largest RGB-min<235 component +30px margin, union explicit reference placement and declared soft-shadow footprint. Not SAM, not human approval.",
+  "case": {
+    "id": 4,
+    "source": "fedora",
+    "target": "fez",
+    "source_culture": "Italian Borsalino hat / wider Western headwear context",
+    "target_culture": "Moroccan-associated fez, also worn in other regions",
+    "category": "headwear",
+    "difficulty": "medium: thin tassel extraction and studio shadow matching"
+  },
+  "frozen_at_utc": "2026-11-11T20:12:55.786838+00:00",
+  "frozen_manifest_sha256": "741ce80c309eb37b35f4af23d0172f86f3c26c273e36e6a31b26b230291d419b",
+  "lighting_limits": "Reference illumination retained; no intrinsic relighting or 3D pose recovery. Uniform source background reconstruction is a research assumption.",
+  "correction": {
+    "issue_A": "The rectangular reference photo patch has a slightly grey top border (mean RGB 252.9/253.1/254.4 vs 255 plate). At native resolution a faint straight horizontal line is visible about 40 px above the fez.",
+    "change": "Single condition: patch_fade_sigma=15 reference pixels fades the outer patch border to the reconstructed plate. Pre-check: zero reference pixels with min(RGB)<235 within 40 px of any patch edge, so fez and tassel stay opaque. Crop, scale, position, shadows, masks and source are unchanged.",
+    "frozen_at_utc": "2026-11-11T21:01:08.527488+00:00",
+    "added_by": "Phase 9 pilot-runner milestone (second and final allowed attempt for case 4)"
+  }
+}

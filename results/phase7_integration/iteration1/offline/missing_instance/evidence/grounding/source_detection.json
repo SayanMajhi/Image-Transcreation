@@ -1,0 +1,230 @@
+{
+  "image_sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+  "original_dimensions": [
+    1280,
+    842
+  ],
+  "source_phrase": "oil lamp",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "resolved_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        735.2825927734375,
+        62.24811553955078,
+        927.81005859375,
+        220.5501251220703
+      ],
+      "score": 0.278545618057251,
+      "label": "oil lamp"
+    },
+    {
+      "box": [
+        1123.554931640625,
+        181.26942443847656,
+        1278.0057373046875,
+        528.7737426757812
+      ],
+      "score": 0.2787924110889435,
+      "label": "oil lamp"
+    },
+    {
+      "box": [
+        631.4442138671875,
+        248.13294982910156,
+        889.331787109375,
+        443.25518798828125
+      ],
+      "score": 0.31422239542007446,
+      "label": "oil lamp"
+    },
+    {
+      "box": [
+        897.9613037109375,
+        426.39447021484375,
+        1193.229248046875,
+        681.9464111328125
+      ],
+      "score": 0.2399579882621765,
+      "label": ""
+    },
+    {
+      "box": [
+        53.623008728027344,
+        180.76321411132812,
+        367.1987609863281,
+        707.6920776367188
+      ],
+      "score": 0.2564091384410858,
+      "label": "oil"
+    },
+    {
+      "box": [
+        426.4567565917969,
+        120.35665893554688,
+        637.9077758789062,
+        284.0110168457031
+      ],
+      "score": 0.22418521344661713,
+      "label": ""
+    },
+    {
+      "box": [
+        1031.105224609375,
+        128.7802734375,
+        1243.134521484375,
+        297.03973388671875
+      ],
+      "score": 0.20935706794261932,
+      "label": ""
+    },
+    {
+      "box": [
+        425.9380798339844,
+        119.31079864501953,
+        638.4198608398438,
+        327.4777526855469
+      ],
+      "score": 0.20336082577705383,
+      "label": ""
+    }
+  ],
+  "settings": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.2,
+    "text_threshold": 0.25,
+    "seed": 42,
+    "effective_device": "cuda",
+    "normalized_prompt": "oil lamp.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "disable_custom_kernels": true,
+    "inference_mode": true,
+    "eval": true,
+    "coordinate_format": "xyxy_original_pixels",
+    "postprocess_box_argument": "threshold",
+    "target_sizes": [
+      [
+        842,
+        1280
+      ]
+    ],
+    "image_processor": {
+      "_processor_class": "GroundingDinoProcessor",
+      "image_processor_type": "GroundingDinoImageProcessor",
+      "format": "coco_detection",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1333,
+        "shortest_edge": 800
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "do_convert_annotations": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": null
+    }
+  },
+  "timing": {
+    "load_seconds": 1.300009898841381e-06,
+    "preprocess_seconds": 0.09782789999735542,
+    "inference_seconds": 0.4923999000020558,
+    "postprocess_seconds": 0.005469800002174452,
+    "total_seconds": 0.5982178999984171
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 692084224,
+    "inference_peak_allocated_bytes": 1984237056,
+    "device": "cuda"
+  },
+  "raw_predictions": {
+    "boxes": [
+      [
+        735.2825927734375,
+        62.24811553955078,
+        927.81005859375,
+        220.5501251220703
+      ],
+      [
+        1123.554931640625,
+        181.26942443847656,
+        1278.0057373046875,
+        528.7737426757812
+      ],
+      [
+        631.4442138671875,
+        248.13294982910156,
+        889.331787109375,
+        443.25518798828125
+      ],
+      [
+        897.9613037109375,
+        426.39447021484375,
+        1193.229248046875,
+        681.9464111328125
+      ],
+      [
+        53.623008728027344,
+        180.76321411132812,
+        367.1987609863281,
+        707.6920776367188
+      ],
+      [
+        426.4567565917969,
+        120.35665893554688,
+        637.9077758789062,
+        284.0110168457031
+      ],
+      [
+        1031.105224609375,
+        128.7802734375,
+        1243.134521484375,
+        297.03973388671875
+      ],
+      [
+        425.9380798339844,
+        119.31079864501953,
+        638.4198608398438,
+        327.4777526855469
+      ]
+    ],
+    "scores": [
+      0.278545618057251,
+      0.2787924110889435,
+      0.31422239542007446,
+      0.2399579882621765,
+      0.2564091384410858,
+      0.22418521344661713,
+      0.20935706794261932,
+      0.20336082577705383
+    ],
+    "text_labels": [
+      "oil lamp",
+      "oil lamp",
+      "oil lamp",
+      "",
+      "oil",
+      "",
+      "",
+      ""
+    ]
+  },
+  "observations": [],
+  "research_only": true
+}

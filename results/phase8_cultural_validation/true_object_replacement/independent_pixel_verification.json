@@ -1,0 +1,40 @@
+{
+  "A": {
+    "dimensions": [
+      1280,
+      853
+    ],
+    "permitted_pixels": 749700,
+    "changed_inside": 474322,
+    "changed_outside": 0,
+    "maximum_outside_channel_difference": 0,
+    "protected_changed": 0,
+    "target_alpha_footprint": 264825,
+    "target_alpha_outside": 0,
+    "removal_region_entirely_RGB255": true,
+    "clean_background_outside_unchanged": true,
+    "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "mask_sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d",
+    "output_sha256": "9a1a096fbf6a75874e79998707af459b4abea257f63ef8d8f242b715b36a5722",
+    "clean_sha256": "c8623102ac01dffdfa2d94878798ed813d3d258fb0ef34ef5a563ca334385fbb"
+  },
+  "B": {
+    "dimensions": [
+      1280,
+      853
+    ],
+    "permitted_pixels": 749700,
+    "changed_inside": 469215,
+    "changed_outside": 0,
+    "maximum_outside_channel_difference": 0,
+    "protected_changed": 0,
+    "target_alpha_footprint": 252951,
+    "target_alpha_outside": 0,
+    "removal_region_entirely_RGB255": true,
+    "clean_background_outside_unchanged": true,
+    "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "mask_sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d",
+    "output_sha256": "bb922916ccbdd776f2c3ec0300d2fbe40398026ee3e1c92b66e31f3eb894ddfb",
+    "clean_sha256": "c8623102ac01dffdfa2d94878798ed813d3d258fb0ef34ef5a563ca334385fbb"
+  }
+}

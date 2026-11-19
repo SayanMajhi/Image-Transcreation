@@ -1,0 +1,108 @@
+{
+  "record_type": "POLICY_REPLAY_ONLY",
+  "case": "planner_decision_policy_20261108_final/03_bicycle_no_change",
+  "provenance": {
+    "source": "results/phase3_llm/experiments/planner_decision_policy_20261108_final/03_bicycle_no_change.audit.json",
+    "sha256": "5e4b66f12f792ec5e732020f6ca4adc67efae01ff8277158c89f21edba82fb18",
+    "saved_final_decision": "ABSTAIN",
+    "scope": "HISTORICAL_SAVED_RAW_RESPONSE"
+  },
+  "input": {
+    "source_caption": "A bicycle is leaning against a set of black doors. The doors are framed with white trim and have graffiti on them. The graffiti is in various colors including blue, white, yellow, and black. The bicycle is black and has a front basket. The sidewalk is made of brick and is lined with black doors.",
+    "caption_status": "COMPLETE",
+    "target_culture": "India",
+    "source_culture": null,
+    "user_instructions": "Keep the ordinary parked-bicycle activity; do not add cultural decoration.",
+    "verified_objects": []
+  },
+  "untouched_raw_result": {
+    "decision": "PROPOSE",
+    "decision_reason": "The scene depicts a common parked bicycle activity in a specific urban setting. The target culture is India, which is a diverse country with various urban landscapes. The proposed change is to keep the ordinary parked-bicycle activity and maintain the original scene's meaning and relationships. The bicycle, doors, graffiti, and sidewalk are kept as they are, and no cultural decoration is added. The bicycle is black and has a front basket, and the doors are black with graffiti. The sidewalk is made of brick and lined with black doors. The scene's purpose is to depict a typical urban setting with a parked bicycle, and the target culture is India, which can accommodate this scene without adding cultural decoration.",
+    "scene_summary": "A bicycle is leaning against a set of black doors. The doors are framed with white trim and have graffiti on them. The bicycle is black and has a front basket. The sidewalk is made of brick and is lined with black doors.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "A bicycle is leaning against a set of black doors.",
+      "The doors are framed with white trim and have graffiti on them.",
+      "The bicycle is black and has a front basket.",
+      "The sidewalk is made of brick and is lined with black doors."
+    ],
+    "uncertainties": [],
+    "verification_requirements": []
+  },
+  "before": {
+    "status": "VALIDATED",
+    "planning_result": {
+      "decision": "ABSTAIN",
+      "decision_reason": "No justified image edit is established; leave the source image unchanged. This does not authorize modification or certify cultural appropriateness.",
+      "scene_summary": "A bicycle is leaning against a set of black doors. The doors are framed with white trim and have graffiti on them. The bicycle is black and has a front basket. The sidewalk is made of brick and is lined with black doors.",
+      "candidate_edits": [],
+      "must_preserve": [
+        "A bicycle is leaning against a set of black doors.",
+        "The doors are framed with white trim and have graffiti on them.",
+        "The bicycle is black and has a front basket.",
+        "The sidewalk is made of brick and is lined with black doors."
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "issues": [
+      {
+        "code": "PROPOSE_WITHOUT_EDITS",
+        "message": "The raw decision proposed no edit; resolve only to a no-action disposition, never invent a candidate.",
+        "candidate_index": null,
+        "severity": "info"
+      },
+      {
+        "code": "ABSTENTION_NORMALIZED",
+        "message": "No-edit reason and checks normalized; raw cultural claims/checks remain in the audit.",
+        "candidate_index": null,
+        "severity": "info"
+      }
+    ],
+    "decision": "ABSTAIN",
+    "candidate_count": 0,
+    "human_review_requirement": "NO_RELEASED_CANDIDATES",
+    "grounding_permitted": false,
+    "sam_permitted": false,
+    "inpainting_permitted": false
+  },
+  "after": {
+    "status": "VALIDATED",
+    "planning_result": {
+      "decision": "ABSTAIN",
+      "decision_reason": "No justified image edit is established; leave the source image unchanged. This does not authorize modification or certify cultural appropriateness.",
+      "scene_summary": "A bicycle is leaning against a set of black doors. The doors are framed with white trim and have graffiti on them. The bicycle is black and has a front basket. The sidewalk is made of brick and is lined with black doors.",
+      "candidate_edits": [],
+      "must_preserve": [
+        "A bicycle is leaning against a set of black doors.",
+        "The doors are framed with white trim and have graffiti on them.",
+        "The bicycle is black and has a front basket.",
+        "The sidewalk is made of brick and is lined with black doors."
+      ],
+      "uncertainties": [],
+      "verification_requirements": []
+    },
+    "issues": [
+      {
+        "code": "PROPOSE_WITHOUT_EDITS",
+        "message": "The raw decision proposed no edit; resolve only to a no-action disposition, never invent a candidate.",
+        "candidate_index": null,
+        "severity": "info"
+      },
+      {
+        "code": "ABSTENTION_NORMALIZED",
+        "message": "No-edit reason and checks normalized; raw cultural claims/checks remain in the audit.",
+        "candidate_index": null,
+        "severity": "info"
+      }
+    ],
+    "decision": "ABSTAIN",
+    "candidate_count": 0,
+    "human_review_requirement": "NO_RELEASED_CANDIDATES",
+    "grounding_permitted": false,
+    "sam_permitted": false,
+    "inpainting_permitted": false
+  },
+  "model_calls": 0,
+  "review_approval_created": false
+}

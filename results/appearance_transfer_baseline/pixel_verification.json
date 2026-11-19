@@ -1,0 +1,23 @@
+{
+  "method": "DETERMINISTIC_APPEARANCE_TRANSFER_BASELINE",
+  "scope": "RESEARCH_ONLY",
+  "dimensions": [
+    2272,
+    1704
+  ],
+  "editable_pixels": 1846716,
+  "changed_inside_mask": 1846716,
+  "changed_outside_mask": 0,
+  "changed_in_protected_regions": 0,
+  "max_outside_channel_difference": 0,
+  "mean_absolute_L_difference_inside": 0.27125331839722777,
+  "mean_a_difference_inside": 1.6685012746951886,
+  "mean_b_difference_inside": 9.51925417876923,
+  "luminance_gradient_magnitude_correlation_inside": 0.9969670991582735,
+  "source_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+  "mask_sha256": "a025cfe02f676ac6464d62cf143feca3292e016049ff9778ca239514a91167cb",
+  "protected_sha256": "75508040b65e99635504dd84e6652e790edb41d423fc19316305f91ea9537baa",
+  "final_sha256": "152d6aee370a0043ff33fb648290f66e6d0083fc695cece33fa453038e6be123",
+  "no_ground_truth_scores": true,
+  "note": "LAB/gradient differences describe appearance only, not realism or cultural quality."
+}

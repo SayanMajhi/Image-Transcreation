@@ -1,0 +1,247 @@
+{
+  "links_checked": 48,
+  "broken": 0,
+  "scope": "current README and report",
+  "links": [
+    {
+      "from": "README.md",
+      "target": "reports/phase7_integration.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/final_demo/environment.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/final_demo/automated_request.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/final_demo/localization_request.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase1_research.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase2_vlm.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase3_llm.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase4_grounding.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase5_segmentation.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase6_working.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "reports/phase7_integration.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/final_demo",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/final_demo/ramen_evaluation.png",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "results/phase7_integration/visual_v3/original_v2_A_B_comparison.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo/automated",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/final_demo",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/iteration8/ramen_uncertainty_review/human_decision.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/refined_demo/generation/final.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/refined_demo/annotations.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/geometry_diagnosis.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/report_before_v3.txt",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/annotations.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/research_mask.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/protected_regions.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/mask_overlay.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/central_overlay.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/protected_overlay.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/mask_geometry_checks.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/preregistration.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/input_comparison_to_v2.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/A_B_input_comparison.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/A_visual_assessment.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/A",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/B",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/A_execution.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/B_execution.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/A_pixel_verification.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/B_pixel_verification.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/original_v2_A_B_comparison.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/central_native_comparison.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/lower_left_native_comparison.png",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/visual_evaluation.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/tests_before.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/tests_after.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/focused_tests_before_B.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/bounded_prompt_tests.json",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/implementation.diff",
+      "exists": true
+    },
+    {
+      "from": "reports/phase7_integration.md",
+      "target": "../results/phase7_integration/visual_v3/preservation_after.json",
+      "exists": true
+    }
+  ]
+}

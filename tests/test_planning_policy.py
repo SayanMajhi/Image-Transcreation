@@ -99,14 +99,18 @@ class TestDecisionPolicy(unittest.TestCase):
 
     def test_user_protected_content_cannot_silently_be_edited(self):
         final, issues = evaluate(proposal(), source_request(user_instructions="Protect the family cup and its role in this practice."))
-        self.assertFalse(final.candidate_edits)
-        self.assertEqual(final.decision, "REVIEW")
-        self.assertIn("USER_CONSTRAINTS_UNRESOLVED", {item["code"] for item in issues})
+        # Eligibility is a draft for explicit human review, never silent editing.
+        self.assertEqual(final.decision, "PROPOSE")
+        warning = next(item for item in issues if item["code"] == "USER_CONSTRAINTS_UNRESOLVED")
+        self.assertEqual(warning["severity"], "human_verification")
+        self.assertIn(warning["message"], final.verification_requirements)
+        self.assertTrue(any("not approval" in note for note in final.verification_requirements))
 
     def test_unresolved_protection_paraphrase_is_not_claimed_compatible(self):
         final, issues = evaluate(proposal(), source_request(user_instructions="The user's treasured symbol and shared purpose must remain."))
-        self.assertFalse(final.candidate_edits)
+        self.assertEqual(final.decision, "PROPOSE")
         self.assertTrue(any("cannot prove compatibility" in item["message"] for item in issues))
+        self.assertTrue(any("cannot prove compatibility" in note for note in final.verification_requirements))
 
     def test_preserved_source_object_cannot_be_released_for_replacement(self):
         payload = proposal()

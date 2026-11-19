@@ -1,0 +1,12 @@
+{
+  "zip": "results/phase7_integration/iteration1_review.zip",
+  "sha256": "94787d1d248e265ca2e46377f82fd6f0eea8f33d7171d75ae796f56d43de0a35",
+  "files": 143,
+  "bytes": 20149481,
+  "CRC": "passed",
+  "manifest_hashes": "all passed",
+  "local_review_links": 27,
+  "portable_integration_tests": 28,
+  "new_model_calls_packaging": 0,
+  "weights_or_environments": false
+}

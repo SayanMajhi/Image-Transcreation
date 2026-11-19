@@ -1,0 +1,16 @@
+{
+  "path": "results/cultural_human_evaluation_review.zip",
+  "bytes": 27986844,
+  "sha256": "9b534bb6e5d4b4fbf4d0481146918f05bebfe421ed6eb3e27c663552b9945f56",
+  "manifest_entries_verified": 210,
+  "CRC_and_hash_verification": "PASS",
+  "tests_passed": 440,
+  "analysis_status": "BLOCKED_MISSING_GENUINE_RESPONSES",
+  "all_candidates": "INSUFFICIENT_EVIDENCE",
+  "raw_completed_response_files": 0,
+  "unblinded_for_analysis": false,
+  "private_key_included": false,
+  "historical_phase8_files_changed": [],
+  "new_model_calls": 0,
+  "broken_report_links": []
+}

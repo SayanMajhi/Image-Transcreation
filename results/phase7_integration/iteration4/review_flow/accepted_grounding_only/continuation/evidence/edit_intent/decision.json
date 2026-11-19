@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "record_type": "edit_intent_review",
+  "scope": "GROUNDING_TEST_ONLY",
+  "original_image_sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+  "source_culture": null,
+  "target_culture": "test target",
+  "user_instructions": "Keep the background unchanged.\nPreserve the camera angle; do not infer cultural suitability.",
+  "verified_objects": [
+    {
+      "object_id": "object-1",
+      "description": "synthetic object"
+    }
+  ],
+  "validated_plan_sha256": "39f57c7fd88aa15b1e3673668f4cd95613a925fcf08d256a43e894cc16a57e5c",
+  "planning_result_sha256": "34de43da1eaf91533b84204b368617321ffb382fb5c60979ab44aa88ce76e2a1",
+  "planner_audit_sha256": "f4586bf013c5a371155ce41a7a2a700e9629798f7f8be15bf32b956963e93b29",
+  "planning_run_sha256": "fff1e8eb2bba7c29d4717f2e8b1f4fbc497bebf67674e609dd462f9dcef2ab40",
+  "candidate_index": 0,
+  "candidate": {
+    "object_description": "synthetic object",
+    "localization_phrase": "synthetic object",
+    "proposed_change": "a different surface material",
+    "cultural_reason": "Contextual test suggestion only",
+    "identity_uncertain": false,
+    "verified_object_id": "object-1"
+  },
+  "must_preserve": [
+    "background",
+    "original scene purpose",
+    "important people",
+    "activity",
+    "person and object relationships"
+  ],
+  "verification_requirements": [
+    "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+    "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
+    "Verify localization phrases against the original image before grounding or editing.",
+    "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",
+    "Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness."
+  ],
+  "evidence_scope": "SYNTHETIC_TEST_ONLY",
+  "user_constraints_status": "REQUIRES_HUMAN_VERIFICATION",
+  "planning_issues": [
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    }
+  ],
+  "uncertainties": [],
+  "image_file": "original.png",
+  "run_file": "evidence/pipeline_result.json",
+  "decision": "ACCEPT_FOR_GROUNDING_TEST",
+  "reviewer": "synthetic test reviewer",
+  "reason": "Synthetic check of the full instruction text; not actual human approval.",
+  "created_at_utc": "2026-11-10T11:00:13.506962+00:00",
+  "reviewed_at_utc": "2026-11-10T11:00:13.540294+00:00",
+  "inspected_original": true,
+  "inspected_edit": true,
+  "checked_user_instructions": true,
+  "sam_authorized": false,
+  "image_edit_authorized": false,
+  "diffusion_authorized": false,
+  "cultural_transformation_authorized": false,
+  "pending_file": "pending.json",
+  "pending_sha256": "e1219b694e92b36808941484dcedb92ff758e36107297103c8954436ac0aee78"
+}

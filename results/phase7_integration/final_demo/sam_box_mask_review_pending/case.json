@@ -1,0 +1,19 @@
+{
+  "record_type": "mask_review_case_manifest",
+  "preparation_status": "PENDING",
+  "status_origin": "preparation triage, not a human decision",
+  "case_note": "",
+  "human_decision": "PENDING",
+  "target_definition": "Proposed research food contents; exclude white ceramic bowl, spoon, chopsticks, table and background. Not approved for editing.",
+  "controlled_experiment": "Inspect unsafe boundaries; no automatic selection or image editing",
+  "candidate_indices": [
+    0,
+    1,
+    2
+  ],
+  "requests": [
+    "pending_0.json",
+    "pending_1.json",
+    "pending_2.json"
+  ]
+}

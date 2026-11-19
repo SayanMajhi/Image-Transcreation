@@ -1,0 +1,43 @@
+{
+  "frozen_utc": "2026-11-11T18:14:58.432619+00:00",
+  "maximum_new_generations": 2,
+  "experiment_A": {
+    "seed": 43,
+    "request_sha256": "b654b8707c9535fb6b36487a8b4507909a139f78b4e44bc556f1cd879cc4628f",
+    "config_sha256": "52de65723c947dd5a92ed0a5b51cbe0d29945f4c93dd38e81d5d3f28f8a7159e",
+    "specification_sha256": "609293e32d436fec9aa25cf6d44ec60e93f4f1e441ab8b35d2f1a44efbe79a4e",
+    "control_sha256": "b8b49af20d40abb794b05aab6f2678a77b9b703a05d2d7f1c6e014b494300b3b",
+    "tokens": {
+      "tokenizer": {
+        "positive": 64,
+        "negative": 61,
+        "limit": 77
+      },
+      "tokenizer_2": {
+        "positive": 64,
+        "negative": 61,
+        "limit": 77
+      }
+    },
+    "changes_from_previous_seed43": [
+      "perspective geometry guide",
+      "tighter edit region and derived crop",
+      "positive prompt",
+      "negative prompt"
+    ],
+    "unchanged": [
+      "original photo",
+      "checkpoint revisions",
+      "512 processing",
+      "FP16/offload",
+      "24 steps",
+      "strength .99",
+      "guidance 5",
+      "control scale .5",
+      "seed43",
+      "hard compositor"
+    ]
+  },
+  "experiment_B": "not selected until a specific A failure and single corrective change are documented",
+  "causal_limit": "A changes multiple conditions together; cannot identify which change caused any improvement"
+}

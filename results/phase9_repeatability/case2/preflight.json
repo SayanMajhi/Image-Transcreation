@@ -1,0 +1,24 @@
+{
+  "permitted_pixels": 2970760,
+  "protected_pixels": 1889240,
+  "source_dimensions": [
+    2700,
+    1800
+  ],
+  "target_size": [
+    2100,
+    1112
+  ],
+  "position": [
+    300,
+    350
+  ],
+  "background_rgb": [
+    255,
+    255,
+    255
+  ],
+  "overlap_protected": 0,
+  "source_main_component_pixels": 2122612,
+  "source_envelope_note": "Threshold is an engineering removal envelope, not ground truth; visual inspection required"
+}

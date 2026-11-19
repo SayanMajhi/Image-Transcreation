@@ -1,0 +1,22 @@
+{
+  "status": "PENDING_HUMAN_EVALUATION",
+  "reviewers_required": 3,
+  "independence": "three distinct actual reviewers, including target-culture familiarity, no model substitute",
+  "blindness": "randomized candidate IDs; no model, seed or automatic/assistant quality labels; original and target intent shown",
+  "dimensions_1_to_5": [
+    "target cultural relevance",
+    "scene semantic function preservation",
+    "photographic realism",
+    "unrelated scene preservation"
+  ],
+  "open_questions": [
+    "identify target object without being told its name first",
+    "visual defects",
+    "plausible or stereotyped?",
+    "major factual or culturally inappropriate issue?"
+  ],
+  "pass_rule": "no critical preservation failure; target recognizable; at least 2 of 3 reviewers score ALL four dimensions >=4; no unresolved major factual/cultural objection",
+  "rubric_origin": "project-specific pilot criterion, not published benchmark standard",
+  "pilot_gate": "Do not expand to six cases before first-case technical and visual feasibility and genuine initial-case acceptance are established.",
+  "ratings": []
+}

@@ -1,0 +1,360 @@
+{
+  "request": {
+    "source_image": "data\\ramen.jpg",
+    "image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+    "original_dimensions": [
+      1408,
+      1120
+    ],
+    "detection_file": "results\\phase7_integration\\final_demo\\localization\\grounding\\detection.json",
+    "detection_sha256": "26ebbb6012d651e58d9189efd9d71eb36a136f561551cb9d4a04197541542a13",
+    "prediction_index": 0,
+    "selected_detection": {
+      "box": [
+        244.73678588867188,
+        160.3011016845703,
+        1145.2908935546875,
+        914.7277221679688
+      ],
+      "score": 0.8188716769218445,
+      "label": "noodles"
+    },
+    "source_phrase": "noodles",
+    "grounding_model_id": "IDEA-Research/grounding-dino-tiny",
+    "grounding_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "selection_status": "RESEARCH_ONLY",
+    "selection_note": "One fixed assistant research correction after inspecting all box-only masks. Positive noodle points; negative ceramic/spoon/chopstick points. Exact points and preview saved before inference; no human approval and no repeated tuning.",
+    "review_file": null,
+    "review_sha256": null,
+    "image_edit_authorized": false,
+    "cultural_transformation_authorized": false,
+    "points": [
+      {
+        "x": 562,
+        "y": 467,
+        "label": 1,
+        "note": ""
+      },
+      {
+        "x": 1030,
+        "y": 258,
+        "label": 1,
+        "note": ""
+      },
+      {
+        "x": 405,
+        "y": 718,
+        "label": 1,
+        "note": ""
+      },
+      {
+        "x": 980,
+        "y": 462,
+        "label": 0,
+        "note": ""
+      },
+      {
+        "x": 1100,
+        "y": 657,
+        "label": 0,
+        "note": ""
+      },
+      {
+        "x": 290,
+        "y": 530,
+        "label": 0,
+        "note": ""
+      },
+      {
+        "x": 206,
+        "y": 550,
+        "label": 0,
+        "note": ""
+      },
+      {
+        "x": 1187,
+        "y": 535,
+        "label": 0,
+        "note": ""
+      },
+      {
+        "x": 800,
+        "y": 1054,
+        "label": 0,
+        "note": ""
+      },
+      {
+        "x": 473,
+        "y": 115,
+        "label": 0,
+        "note": ""
+      }
+    ],
+    "point_prompt_file": "results\\phase7_integration\\final_demo\\points.json",
+    "point_prompt_sha256": "50e439a84794ca48369d251e6fe299a56b3e4ff2b89ed036455f5c1c89b7a174"
+  },
+  "model_id": "facebook/sam-vit-base",
+  "resolved_revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+  "status": "SEGMENTED",
+  "masks": [
+    {
+      "index": 0,
+      "filename": "mask_0.png",
+      "dimensions": [
+        1408,
+        1120
+      ],
+      "sam_score": 0.8411538600921631,
+      "foreground_pixels": 228070,
+      "mask_box": [
+        237,
+        139,
+        1149,
+        1000
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 1,
+      "filename": "mask_1.png",
+      "dimensions": [
+        1408,
+        1120
+      ],
+      "sam_score": 0.8154893517494202,
+      "foreground_pixels": 165421,
+      "mask_box": [
+        244,
+        136,
+        1149,
+        1004
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 2,
+      "filename": "mask_2.png",
+      "dimensions": [
+        1408,
+        1120
+      ],
+      "sam_score": 0.873136043548584,
+      "foreground_pixels": 209839,
+      "mask_box": [
+        109,
+        117,
+        1271,
+        1070
+      ],
+      "status": "VALID"
+    }
+  ],
+  "visualization_mask_index": 2,
+  "settings": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "precision": "float32",
+    "seed": 42,
+    "multimask_output": true,
+    "mask_threshold": 0.0,
+    "effective_device": "cuda",
+    "batch_size": 1,
+    "eval": true,
+    "inference_mode": true,
+    "postprocess_device": "cpu",
+    "attention_backend": "sdpa",
+    "processor": {
+      "_processor_class": "SamProcessor",
+      "image_processor_type": "SamImageProcessor",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1024
+      },
+      "mask_size": {
+        "longest_edge": 256
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": {
+        "height": 1024,
+        "width": 1024
+      },
+      "mask_pad_size": {
+        "height": 256,
+        "width": 256
+      },
+      "do_convert_rgb": true
+    },
+    "api_shapes": {
+      "input_points": [
+        1,
+        1,
+        10,
+        2
+      ],
+      "input_labels": [
+        1,
+        1,
+        10
+      ],
+      "transformed_input_points": [
+        [
+          [
+            [
+              408.72727272727275,
+              339.82589285714283
+            ],
+            [
+              749.0909090909091,
+              187.74107142857142
+            ],
+            [
+              294.54545454545456,
+              522.4732142857142
+            ],
+            [
+              712.7272727272727,
+              336.1875
+            ],
+            [
+              800.0,
+              478.0848214285714
+            ],
+            [
+              210.9090909090909,
+              385.66964285714283
+            ],
+            [
+              149.8181818181818,
+              400.2232142857143
+            ],
+            [
+              863.2727272727273,
+              389.3080357142857
+            ],
+            [
+              581.8181818181819,
+              766.9732142857142
+            ],
+            [
+              344.0,
+              83.68303571428571
+            ]
+          ]
+        ]
+      ],
+      "point_labels": [
+        [
+          [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "input_boxes": [
+        1,
+        1,
+        4
+      ],
+      "transformed_input_boxes": [
+        [
+          [
+            177.9903897372159,
+            116.64767667225428,
+            832.9388316761364,
+            665.6277621132987
+          ]
+        ]
+      ],
+      "original_sizes": [
+        [
+          1120,
+          1408
+        ]
+      ],
+      "reshaped_input_sizes": [
+        [
+          815,
+          1024
+        ]
+      ],
+      "pred_masks": [
+        1,
+        1,
+        3,
+        256,
+        256
+      ],
+      "iou_scores": [
+        1,
+        1,
+        3
+      ],
+      "restored_masks": [
+        1,
+        3,
+        1120,
+        1408
+      ]
+    },
+    "binary_values": [
+      0,
+      255
+    ],
+    "mask_box_upper_bounds": "exclusive",
+    "source_image_copy": "original.jpg",
+    "source_detection_copy": "source_detection.json",
+    "visualization_selection": "highest finite SAM score among nonempty candidates; no human mask approval",
+    "point_prompt_copy": "points.json",
+    "point_preview": "points.png",
+    "point_annotation_status": "RESEARCH_ONLY_REQUIRES_REVIEW"
+  },
+  "timing": {
+    "load_seconds": 5.734036200001356,
+    "preprocess_seconds": 0.06674509999902511,
+    "inference_seconds": 0.8641772999999375,
+    "postprocess_and_mask_save_seconds": 0.061371499999950174,
+    "stage_seconds": 6.751188000000184,
+    "visualization_seconds": 1.2458948000003147
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 374956544,
+    "effective_device": "cuda",
+    "peak_allocated_cuda_bytes": 2065263616
+  },
+  "observations": [
+    {
+      "code": "RESEARCH_SCOPE",
+      "message": "Segmentation test only; SAM scores are not measured accuracy and no image editing is authorized."
+    },
+    {
+      "code": "NO_CONFIRMED_HUMAN_APPROVAL",
+      "message": "One fixed assistant research correction after inspecting all box-only masks. Positive noodle points; negative ceramic/spoon/chopstick points. Exact points and preview saved before inference; no human approval and no repeated tuning."
+    }
+  ],
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false
+}

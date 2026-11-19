@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-11-11T08:54:28.779064+00:00",
+  "config": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+    "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+    "processing_size": 512,
+    "context_margin": 64,
+    "seed": 42,
+    "steps": 20,
+    "guidance_scale": 7.5,
+    "strength": 0.9
+  },
+  "precision": "float16",
+  "offload": "model_cpu_offload",
+  "batch_size": 1,
+  "negative_prompt": null,
+  "planned_generations": 1,
+  "technical_oom_fallback": "existing one same-condition sequential CPU offload fallback only",
+  "prompt": "Photorealistic Indian-style masala noodles with reddish-brown spiced seasoning, natural noodle texture, matching the original food position, perspective and warm lighting.",
+  "prompt_token_count_including_special": 31,
+  "tokenizer_context_limit": 77,
+  "schema": "RefinedMaskInput, separate from InpaintingInput and automated planner paths",
+  "new_caption_qwen_grounding_sam_calls": 0,
+  "source_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "mask_sha256": "7c848a20efef1fea04a8895db17e7d325d9055055e871f55cbb1ffdd4c62984e",
+  "annotation_sha256": "bd17310572fc78317121760a821f46995eec2bfb6f3d5bdb16d8c1cfb533e9c8",
+  "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED"
+}

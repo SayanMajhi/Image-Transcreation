@@ -1,0 +1,12 @@
+{
+  "evidence_scope": "HISTORICAL_PHASE6_ITERATION2_NOT_CURRENT_RAMEN",
+  "new_diffusion_inference": false,
+  "changed_inside_mask": 32081,
+  "changed_outside_mask": 0,
+  "dimensions": [
+    1280,
+    842
+  ],
+  "mask_hash_matches_historical_metadata": true,
+  "observations": "Prior technical localized generation only; physical wick continuity unresolved. Does not show ramen cultural adaptation."
+}

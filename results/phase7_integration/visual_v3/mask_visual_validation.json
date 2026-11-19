@@ -1,0 +1,20 @@
+{
+  "assessor": "Codex assistant; not a human approval",
+  "views": [
+    "central_overlay.png",
+    "left_lower_overlay.png",
+    "mask_overlay.png",
+    "center_grid.png",
+    "lower_grid.png"
+  ],
+  "passed": true,
+  "finding": "Three separate regions cover recognizable exposed noodle strands and their immediate sauce gaps. Central fan avoids pink/tan/dark/green toppings; right wedge lies between spoon and meat/garnish; left lower region is inside the broth/strand pocket, away from ceramic, chopstick and meat edges. Uncertain contact pixels are excluded.",
+  "protected_intersection": 0,
+  "dimensions": [
+    1408,
+    1120
+  ],
+  "editable_pixels": 20484,
+  "ground_truth_noodle_coverage": null,
+  "scope": "Partial localized food changes only, no whole-dish coverage claim."
+}

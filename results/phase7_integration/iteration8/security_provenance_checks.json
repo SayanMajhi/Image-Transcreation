@@ -1,0 +1,98 @@
+{
+  "actual_status": "PENDING",
+  "triage_eligible": true,
+  "eligibility_is_not_semantic_approval": true,
+  "exact_eligible_profile": [
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    },
+    {
+      "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+      "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "candidate_index": null,
+      "severity": "review"
+    }
+  ],
+  "original_decision": "REVIEW",
+  "original_released_candidates": 0,
+  "actual_human_classifier": null,
+  "actual_classification_timestamp": null,
+  "existing_edit_intent_gate_denials": [
+    {
+      "case": "actual_pending",
+      "edit_intent_rejected": true,
+      "reason": "edit-intent review never authorizes SAM or image editing"
+    },
+    {
+      "case": "synthetic_routine",
+      "edit_intent_rejected": true,
+      "reason": "edit-intent review never authorizes SAM or image editing"
+    }
+  ],
+  "frozen_evidence_copy_checks": [
+    {
+      "file": "planning_input.json",
+      "original": "results/phase7_integration/iteration7/planning_input.json",
+      "sha256": "f6f92654e5cee49c8340580de772d85d0211dbe4e503ad101d822fed09466e65",
+      "byte_identical_to_iteration7": true
+    },
+    {
+      "file": "planner_audit.json",
+      "original": "results/phase7_integration/iteration7/planner_audit.json",
+      "sha256": "5dee35147680522f7cd2bc6f6702171d21a0f85081525cbd95edf401e68ea2fc",
+      "byte_identical_to_iteration7": true
+    },
+    {
+      "file": "validated_plan.json",
+      "original": "results/phase7_integration/iteration7/validated_plan.json",
+      "sha256": "0d187494ac277ae35c72360ca427b39583c9c3dd03ceb1f529c04c4951590c56",
+      "byte_identical_to_iteration7": true
+    },
+    {
+      "file": "experiment_frozen.json",
+      "original": "results/phase7_integration/iteration7/experiment_frozen.json",
+      "sha256": "c9c28fa8484ac5e3deb59ec39403df60ec84093284aca2de16abe6b8005ceaeb",
+      "byte_identical_to_iteration7": true
+    },
+    {
+      "file": "saved_caption.json",
+      "original": "results/phase7_integration/iteration7/saved_caption.json",
+      "sha256": "5dbd1da3be5c73f23349902096e7f0c4fd77c4ccd8a477328e804ef60fe696f4",
+      "byte_identical_to_iteration7": true
+    },
+    {
+      "file": "human_confirmation.json",
+      "original": "results/phase7_integration/iteration7/human_confirmation.json",
+      "sha256": "b20ac0cf777edf302cd3b5eacda95b74f301d8f8a3fc1c5e50317a969295b0c7",
+      "byte_identical_to_iteration7": true
+    },
+    {
+      "file": "raw_response_before_validation.json",
+      "original": "results/phase7_integration/iteration7/raw_response_before_validation.json",
+      "sha256": "b17dd8dd1b6213e9926e183e155ae740f1c8ce082cb408705e1dd65dcebc5ecb",
+      "byte_identical_to_iteration7": true
+    },
+    {
+      "file": "raw_qwen_message.txt",
+      "original": "results/phase7_integration/iteration7/raw_qwen_message.txt",
+      "sha256": "8bd74ca43f6038b12653c4a77d40083a9bb57d54271efc5614428b72cbd414ec",
+      "byte_identical_to_iteration7": true
+    }
+  ],
+  "permissions": {
+    "candidate_release_authorized": false,
+    "edit_intent_authorized": false,
+    "grounding_authorized": false,
+    "sam_authorized": false,
+    "diffusion_authorized": false,
+    "image_edit_authorized": false,
+    "cultural_transformation_authorized": false
+  },
+  "downstream_handoff_implemented": false,
+  "automatic_semantic_classifier": false,
+  "new_real_model_calls": 0,
+  "tests_cover": "Typed/lexical blockers, unknown issues, tampering, placeholders, all declarations, routine classification with no release, rejected edit-intent handoff."
+}

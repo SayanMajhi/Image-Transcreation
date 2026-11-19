@@ -1,0 +1,50 @@
+{
+  "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED",
+  "dimensions": [
+    2272,
+    1704
+  ],
+  "binary_values": [
+    0,
+    255
+  ],
+  "editable_pixels": 2021206,
+  "source_image_percent": 52.20747164914369,
+  "original_sam_reference_pixels": 2476478,
+  "added_relative_to_sam": 64828,
+  "removed_relative_to_sam": 520100,
+  "protected_intersection": 0,
+  "bounds_exclusive": [
+    75,
+    470,
+    2191,
+    1621
+  ],
+  "mask_sha256": "924282437346e9c8a4d48bde0ffa74dc5ae4b1c1fd1b9b4257d109749c8bc74e",
+  "protected_sha256": "a14ded2800189aeb0295d468ec54919edbf446b7d09292e99830016673e3b384",
+  "geometry": {
+    "crop_box_xyxy": [
+      11,
+      406,
+      2255,
+      1685
+    ],
+    "padding_ltrb": [
+      0,
+      482,
+      0,
+      483
+    ],
+    "padded_side": 2244,
+    "original_dimensions": [
+      2272,
+      1704
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "processing_mask_pixels": 105137,
+  "ground_truth_noodle_coverage_percentage": null
+}

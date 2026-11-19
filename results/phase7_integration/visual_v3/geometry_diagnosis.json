@@ -1,0 +1,30 @@
+{
+  "V2_source_mask_pixels": 4224,
+  "V3_source_mask_pixels": 20484,
+  "original_area_ratio": 4.849431818181818,
+  "V2_sam_reference_fraction": 0.021035332785538208,
+  "V3_sam_reference_fraction": 0.10200941211623217,
+  "interpretation": "Fractions of an imperfect SAM output are descriptive only, not ground-truth noodle coverage.",
+  "processing_512_mask_foreground_pixels": {
+    "V2": 20255,
+    "A": 10473
+  },
+  "mask_changes": {
+    "new_relative_to_V2": 16260,
+    "removed_from_V2": 0
+  },
+  "original_sam_difference": {
+    "added": 234,
+    "removed": 180555
+  },
+  "diagnosis": {
+    "measured": "V2 edits a small fragment in a 234-square padded crop. New geometry distributes edits across three visible strand groups in a 717-square padded crop. More source pixels do not imply more 512-grid mask pixels.",
+    "qualitative": "V2 text-like artifact replaces only a fragment of noodle geometry. Nearby toppings constrain all mask edges. A crop contains noodle context, but texture/target-following remains imperfect.",
+    "hypotheses_not_proven": [
+      "small fragment/context/scale may limit coherent food generation",
+      "label-like output is compatible with diffusion texture or prompt-following failure",
+      "this single comparison cannot establish the root cause of watermark-like artifacts"
+    ]
+  },
+  "protected_intersection": 0
+}

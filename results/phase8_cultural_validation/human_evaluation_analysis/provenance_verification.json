@@ -1,0 +1,60 @@
+{
+  "checked_at_utc": "2026-11-11T16:40:43.370950+00:00",
+  "prior_zip_sha256": "0aeb5415ba508deb51cc377e097e8536147078a59145dfce9946205d9417682d",
+  "archive_manifest_members": 198,
+  "all_archive_members_match": true,
+  "bound_review_materials": {
+    "results/phase8_cultural_validation/human_evaluation/admin/blinding_key.json": {
+      "expected_sha256": "1e600704e2fd4a14a5225c8c1874cf9849adedeb52499c086b56ac10b8e23543",
+      "actual_sha256": "1e600704e2fd4a14a5225c8c1874cf9849adedeb52499c086b56ac10b8e23543",
+      "matches": true
+    },
+    "results/phase8_cultural_validation/human_evaluation/reviewer_materials/candidate_1.png": {
+      "expected_sha256": "cddc4748690cd8ee078bef2428c54fcb836a473801f4a6b39190e48bbf53f9b1",
+      "actual_sha256": "cddc4748690cd8ee078bef2428c54fcb836a473801f4a6b39190e48bbf53f9b1",
+      "matches": true
+    },
+    "results/phase8_cultural_validation/human_evaluation/reviewer_materials/candidate_2.png": {
+      "expected_sha256": "ad8adc92a919070f1abd22b1d8fc38d35165f0d75bbfe699f28482339c906b0f",
+      "actual_sha256": "ad8adc92a919070f1abd22b1d8fc38d35165f0d75bbfe699f28482339c906b0f",
+      "matches": true
+    },
+    "results/phase8_cultural_validation/human_evaluation/reviewer_materials/candidate_3.png": {
+      "expected_sha256": "e5e974d0703f493d8366016266c0b6b88e60678d804e8d7ff8f9172c1b8e118e",
+      "actual_sha256": "e5e974d0703f493d8366016266c0b6b88e60678d804e8d7ff8f9172c1b8e118e",
+      "matches": true
+    },
+    "results/phase8_cultural_validation/human_evaluation/reviewer_materials/instructions.md": {
+      "expected_sha256": "ffe053567822557968c7bac9968c8c594a1b789ccfb6648247d130b96c8bb1db",
+      "actual_sha256": "ffe053567822557968c7bac9968c8c594a1b789ccfb6648247d130b96c8bb1db",
+      "matches": true
+    },
+    "results/phase8_cultural_validation/human_evaluation/reviewer_materials/original.jpg": {
+      "expected_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+      "actual_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+      "matches": true
+    },
+    "results/phase8_cultural_validation/human_evaluation/reviewer_materials/responses_blank.csv": {
+      "expected_sha256": "7b9e10de39b6cc3d9e5c17eecad236dd846dfec183c1a1e56e68b71db33d301d",
+      "actual_sha256": "7b9e10de39b6cc3d9e5c17eecad236dd846dfec183c1a1e56e68b71db33d301d",
+      "matches": true
+    },
+    "results/phase8_cultural_validation/human_evaluation/status.json": {
+      "expected_sha256": "bff33d1c3bac8ae029ab5f48672d541ff155dfcddb477ea784870986b4773edd",
+      "actual_sha256": "bff33d1c3bac8ae029ab5f48672d541ff155dfcddb477ea784870986b4773edd",
+      "matches": true
+    },
+    "results/phase8_cultural_validation/human_protocol_preregistration.json": {
+      "expected_sha256": "bd7d6b7b486f21abec2411cdab7b3ba67cf302bd810b31d4a0fe32bf26c1eb03",
+      "actual_sha256": "bd7d6b7b486f21abec2411cdab7b3ba67cf302bd810b31d4a0fe32bf26c1eb03",
+      "matches": true
+    },
+    "results/phase8_cultural_validation/preregistration.json": {
+      "expected_sha256": "b8f523d3b8e6f1cff375fa4b03330743f2332f7b9c61db91c8d8a9e0689b89fd",
+      "actual_sha256": "b8f523d3b8e6f1cff375fa4b03330743f2332f7b9c61db91c8d8a9e0689b89fd",
+      "matches": true
+    }
+  },
+  "blinding_key_content_parsed": false,
+  "candidate_conditions_unblinded_for_analysis": false
+}

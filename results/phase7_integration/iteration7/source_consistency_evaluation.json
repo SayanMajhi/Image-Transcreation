@@ -1,0 +1,19 @@
+{
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "source_description_exact_copy": true,
+  "verified_id_exact_copy": true,
+  "original_localization_exact_copy": true,
+  "desired_future_change_separate": true,
+  "summary_assessment": "Assistant qualitative inspection: original scene only; generic caption attributed to caption and ramen identity to user verification. No future-food-as-present claim identified.",
+  "caption_misrepresentation_detected": false,
+  "preservation_assessment": "Raw must_preserve lists the five requested elements. No mask/box/generation verifies physical food-only scope or preserved pixels.",
+  "cultural_reasoning": "Rationale repeats the user-directed target and calls it contextual; no independent culinary justification is established. No broad common-dish claim like I6 appears.",
+  "uncertainty": {
+    "exact_text": "The user instruction to transform the ramen into masala noodles is a cultural adaptation, which may require visual verification beyond the provided caption and verified object description.",
+    "assessment": "Acknowledges need for visual verification, but does not identify a specific unresolved source fact. It may be an ordinary pre-edit requirement rather than material planning uncertainty; that classification requires mentor/human assessment.",
+    "current_policy": "Any uncertainty with edits blocks release; policy was not changed or overridden."
+  },
+  "validator_assessment": "REVIEW is correct under the unchanged policy; its broad uncertainty rule cannot itself prove semantic materiality.",
+  "source_anchor_scope": "Improved in this one real case; no claim of general reliability or automatic cultural correctness.",
+  "recommendation": "NEEDS FIXES before a review-eligible candidate; source anchoring improved but uncertainty disposition remains unresolved."
+}

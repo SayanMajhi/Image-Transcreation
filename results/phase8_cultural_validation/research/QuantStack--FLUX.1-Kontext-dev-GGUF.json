@@ -1,0 +1,194 @@
+{
+  "_id": "685d8eebb569c5ddf353f338",
+  "id": "QuantStack/FLUX.1-Kontext-dev-GGUF",
+  "private": false,
+  "pipeline_tag": "image-to-image",
+  "library_name": "gguf",
+  "tags": [
+    "gguf",
+    "flux",
+    "image-to-image",
+    "base_model:black-forest-labs/FLUX.1-Kontext-dev",
+    "base_model:quantized:black-forest-labs/FLUX.1-Kontext-dev",
+    "license:other",
+    "region:us"
+  ],
+  "downloads": 86828,
+  "likes": 167,
+  "modelId": "QuantStack/FLUX.1-Kontext-dev-GGUF",
+  "author": "QuantStack",
+  "sha": "2d083027732f81e5548620b57ac47da22d30aa5a",
+  "lastModified": "2025-07-24T06:33:58.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "other",
+    "license_name": "flux-1-dev-non-commercial-license",
+    "license_link": "LICENSE.md",
+    "base_model": [
+      "black-forest-labs/FLUX.1-Kontext-dev"
+    ],
+    "library_name": "gguf",
+    "tags": [
+      "flux",
+      "image-to-image"
+    ]
+  },
+  "gguf": {
+    "total": 11901408320,
+    "architecture": "flux",
+    "totalFileSize": 4023690528
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "b22315e1f424a159c3fbc5d9a459f0d24ffcc458",
+      "size": 2363
+    },
+    {
+      "rfilename": "LICENSE.md",
+      "blobId": "bd375c41245c99a2ae67801014cf8593a7486f1b",
+      "size": 18620
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "910c7062db4b2384d16b3b8550e775c9082ae7ca",
+      "size": 708
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q2_K.gguf",
+      "blobId": "fcedda65f3333f033dcbe03d0f9249e4119a26d4",
+      "size": 4023690528,
+      "lfs": {
+        "sha256": "36b6024a4cd4432da2f43bfdf48153215c34429aec4cf9cff93d9ad6fe44feec",
+        "size": 4023690528,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q3_K_M.gguf",
+      "blobId": "73b040deb5e0cbd033dd6cea9c94b671dae7548a",
+      "size": 5368489248,
+      "lfs": {
+        "sha256": "d0584c8781911e7d43dc1f9669e123a32bc2dca5260c68a753a8de750cc6312c",
+        "size": 5368489248,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q3_K_S.gguf",
+      "blobId": "3ba1bd3fa593f5b4d79400d9402251227917846e",
+      "size": 5225604384,
+      "lfs": {
+        "sha256": "9061368b63caa680fcbe7c9417cd82e9c0286bfd214a9cf2d3aa72b1b40610dc",
+        "size": 5225604384,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q4_0.gguf",
+      "blobId": "244e7fd9ad9a9fffe94fbceb4e4d3c305dab5c3e",
+      "size": 6797337888,
+      "lfs": {
+        "sha256": "859f06ce2b492a2a88b675ed55fed97a2d57d43b9d9aeffb5b6d4ce3b155259e",
+        "size": 6797337888,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q4_1.gguf",
+      "blobId": "dd0816ae6cf5f5368c9246298f3c211b28f0d5ed",
+      "size": 7536977184,
+      "lfs": {
+        "sha256": "3de6aef01cebb33aa2355854a7779ecf4eaefc677ea222319fa50c53d59fb09f",
+        "size": 7536977184,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q4_K_M.gguf",
+      "blobId": "e4def1c402f8d2811d23f305bba4cd886ce612ca",
+      "size": 6931817760,
+      "lfs": {
+        "sha256": "ebd4e92c44c47f104ad64e4353692f37addf06eb99420c9b459334d871c8b750",
+        "size": 6931817760,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q4_K_S.gguf",
+      "blobId": "28e5f2962b8505ca1102567d26981d99fbc83df2",
+      "size": 6797337888,
+      "lfs": {
+        "sha256": "cc22ff7a2debb02e63765fa53af8c5ae0b6883b462d0601b9b55f51a15cdd6da",
+        "size": 6797337888,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q5_0.gguf",
+      "blobId": "32bc4fcaa5ddc3ce639084619f555d2f04a38a5e",
+      "size": 8276616480,
+      "lfs": {
+        "sha256": "487313f45650fcec0bae9327849fc1a0e7712d3d0a266ac6a5fe0cd8b7a83ef0",
+        "size": 8276616480,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q5_1.gguf",
+      "blobId": "2ea2c0bcf1d128e83cb90943b6033d96d2da89b6",
+      "size": 9016255776,
+      "lfs": {
+        "sha256": "4f3677d57115b012d93b5cde57c7136dc5c90178812f6a9b940f54ad3849c24b",
+        "size": 9016255776,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q5_K_M.gguf",
+      "blobId": "a3ae427638ae788cc157ed7c180bf2bd0dc7d475",
+      "size": 8419501344,
+      "lfs": {
+        "sha256": "7f7b98b1d496176cb0b0c8b12edb35cc6a1a467a9809d7372242a117484ad422",
+        "size": 8419501344,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q5_K_S.gguf",
+      "blobId": "29427e372c57c5d63bbe4a7e8ac8d55c33bbc7bb",
+      "size": 8276616480,
+      "lfs": {
+        "sha256": "2148f87a91a55513448551511021d36632cbd3307b4086306a8c08e22615798e",
+        "size": 8276616480,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q6_K.gguf",
+      "blobId": "92764524d370c1dc41de19e4273468d0f7be7845",
+      "size": 9848349984,
+      "lfs": {
+        "sha256": "b01dcd428fe5783082f8177415a2c45b64918ea1b08a1e9ed19e3eab1f29fa7e",
+        "size": 9848349984,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "flux1-kontext-dev-Q8_0.gguf",
+      "blobId": "2ac2e8ea66652e48493edfaa83b26e28c0c47bd9",
+      "size": 12714452256,
+      "lfs": {
+        "sha256": "ff2ff71c3755c8ab394398a412252c23382a83138b65190b16e736d457b80f73",
+        "size": 12714452256,
+        "pointerSize": 136
+      }
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2025-06-26T18:18:19.000Z",
+  "usedStorage": 99233047200
+}

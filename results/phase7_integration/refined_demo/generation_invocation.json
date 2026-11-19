@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "scripts.inpaint",
+    "--refined-input",
+    "results\\phase7_integration\\refined_demo\\input.json",
+    "--out",
+    "results\\phase7_integration\\refined_demo\\generation"
+  ],
+  "started_at_utc": "2026-11-11T08:55:05.519523+00:00",
+  "condition": "exactly one fixed research mask/prompt/seed; no quality retries"
+}

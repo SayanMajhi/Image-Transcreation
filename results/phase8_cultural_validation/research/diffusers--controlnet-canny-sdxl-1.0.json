@@ -1,0 +1,266 @@
+{
+  "_id": "64c88b66cf159388b2df43ea",
+  "id": "diffusers/controlnet-canny-sdxl-1.0",
+  "private": false,
+  "pipeline_tag": "text-to-image",
+  "library_name": "diffusers",
+  "tags": [
+    "diffusers",
+    "safetensors",
+    "stable-diffusion-xl",
+    "stable-diffusion-xl-diffusers",
+    "text-to-image",
+    "base_model:runwayml/stable-diffusion-v1-5",
+    "base_model:finetune:runwayml/stable-diffusion-v1-5",
+    "license:openrail++",
+    "region:us"
+  ],
+  "downloads": 56389,
+  "likes": 536,
+  "modelId": "diffusers/controlnet-canny-sdxl-1.0",
+  "author": "diffusers",
+  "sha": "eb115a19a10d14909256db740ed109532ab1483c",
+  "lastModified": "2023-09-19T15:25:43.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "openrail++",
+    "base_model": "runwayml/stable-diffusion-v1-5",
+    "tags": [
+      "stable-diffusion-xl",
+      "stable-diffusion-xl-diffusers",
+      "text-to-image",
+      "diffusers"
+    ],
+    "inference": false
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "9b9898b45af8ac54cf70db518a6211661af9b205",
+      "size": 1824
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "e0d3061d55bced91483105e02b1aa0e3fdf14510",
+      "size": 3580
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "c38f38aa9f7b635abd06ccd5d211870d9c8c150b",
+      "size": 1309
+    },
+    {
+      "rfilename": "diffusion_pytorch_model.bin",
+      "blobId": "541b0648d070763730adae8482713dbcb7da2fe2",
+      "size": 5004438321,
+      "lfs": {
+        "sha256": "982e12f72cb41031c060de08a5d78ff6912e9b02c6ad91fc480f05a72cad10cb",
+        "size": 5004438321,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "diffusion_pytorch_model.fp16.bin",
+      "blobId": "8518d03625ac40ef0e1235c5434973d2ed6d7f69",
+      "size": 2502401039,
+      "lfs": {
+        "sha256": "a42da57d6e2fd6ec786ccfea1cf1a06d2c1d91b2d8a14c7de3a67553b10b2948",
+        "size": 2502401039,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "diffusion_pytorch_model.fp16.safetensors",
+      "blobId": "264c8b72d1ec4ddaf6fdcaf97e1146e8fd5b6c03",
+      "size": 2502139136,
+      "lfs": {
+        "sha256": "b2e7d3921058a442cc80430d1ec8847f42599c705e2451c95e77cf4dcf8d6c25",
+        "size": 2502139136,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "diffusion_pytorch_model.safetensors",
+      "blobId": "e8ac2fb5f7d12d92b15dae07cbc5122e1f3902b5",
+      "size": 5004167864,
+      "lfs": {
+        "sha256": "ea99040544a999f814fd854575a3aee069a005d026864c8d321b82576706a221",
+        "size": 5004167864,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "out_bird.png",
+      "blobId": "947f423ed6da57d3ecf18ce2b96524e879de532e",
+      "size": 6935069,
+      "lfs": {
+        "sha256": "596aecc5291798f1f25b665a92110627f7661d13d4eef3ae038b175de9db93c2",
+        "size": 6935069,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "out_couple.png",
+      "blobId": "01979e8b8ab9d01e1d77992c124e39034acf2be9",
+      "size": 7286999,
+      "lfs": {
+        "sha256": "3613a6c3119ccc39d687ed917c8b364f05c17e16c1d9cf0c36816ef07da80868",
+        "size": 7286999,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "out_hug_lab_7.png",
+      "blobId": "a8643c07c888c8ffd3397cfc2344e1a55d1963cb",
+      "size": 1967716,
+      "lfs": {
+        "sha256": "33d7a1f77d34f565df9910bf8a3276817cb21fa7f4025174f93f1f3517b2a4f1",
+        "size": 1967716,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "out_room.png",
+      "blobId": "4014b8d67d0423aa8a076843c356815ea730fbf5",
+      "size": 6420362,
+      "lfs": {
+        "sha256": "fce39ad0ca4c081aecd90a2c16118bc38d89ac27c7ca25d59a80d470b1c4ed31",
+        "size": 6420362,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "out_tornado.png",
+      "blobId": "8fca3e2085b95ffd13551ac7530d7669002b64a2",
+      "size": 8511428,
+      "lfs": {
+        "sha256": "b2ecd942a61e5ee4f8b5d1c8d108232a0e3a012036eaa4b8865ebfd0b7e15346",
+        "size": 8511428,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "out_women.png",
+      "blobId": "7823f480bfe51c8fb86fb7a9e3742a11995b3142",
+      "size": 7586978,
+      "lfs": {
+        "sha256": "ada3827272bdd1599372d5d8842a173e054bc1164097c4e347c4bcd7cfcd3c7c",
+        "size": 7586978,
+        "pointerSize": 132
+      }
+    }
+  ],
+  "spaces": [
+    "InstantX/InstantID",
+    "aquanode/gpu-vram-calculator",
+    "radames/Real-Time-Latent-Consistency-Model",
+    "InstantX/InstantStyle",
+    "radames/Enhance-This-HiDiffusion-SDXL",
+    "radames/Enhance-This-DemoFusion-SDXL",
+    "radames/Real-Time-Latent-Consistency-Model-Text-To-Image",
+    "radames/Real-Time-SD-Turbo",
+    "radames/MistoLine-ControlNet-demo",
+    "radames/real-time-pix2pix-turbo",
+    "TencentARC/ColorFlow",
+    "fffiloni/sdxl-control-loras",
+    "TIGER-Lab/AnyV2V",
+    "briaai/BRIA-Eraser-API",
+    "jeasinema/UltraEdit-SD3",
+    "latent-consistency/Real-Time-LCM-ControlNet-Lora-SD1.5",
+    "prs-eth/rollingdepth",
+    "radames/InstantStyle-SDXL-Lightning",
+    "Fucius/OMG-InstantID",
+    "Fucius/OMG",
+    "multimodalart/InstantID-FaceID-6M",
+    "ddosxd/InstantID",
+    "radames/InstantStyle-Hyper-SDXL",
+    "LTT/DiMeR",
+    "DawnC/SceneWeaver",
+    "latent-consistency/Real-Time-LCM-Text-to-Image-Lora-SD1.5",
+    "theSure/Omnieraser",
+    "multimodalart/Cosmos-Predict2-2B",
+    "LTT/Kiss3DGen",
+    "John6666/Enhance-This-HiDiffusion-SDXL",
+    "diffusers/compute-pipeline-size",
+    "mann-e/mann-e-Mann-E_Dreams",
+    "charlieguo610/InstantID",
+    "fffiloni/Cobra",
+    "waloneai/InstantAIPortrait",
+    "daily-co/RealtimeSDWebRTC",
+    "smartfeed/image2image",
+    "DiscloseAI/ChatAnything",
+    "k-l-lambda/InstantID-api",
+    "egg22314/object-to-object-replace",
+    "JunhaoZhuang/Cobra",
+    "JoPmt/Vid2Vid_Canny_Cntrl_SDXL_Turbo",
+    "ar0551/ArchitecturalRendering_SD-XL-1.0",
+    "multimodalart/Real-Time-Latent-SDXL-Lightning",
+    "jcudit/InstantID2",
+    "awacke1/MistoLine-ControlNet-demo",
+    "dmaniloff/API-InstantStyle-SDXL-Lightning",
+    "Gainward777/Sketcher",
+    "douglasgoodwin/Real-Time-SD-Turbo",
+    "APGASU/RefEdit-SD3",
+    "buxiangzhiren/GeoRemover",
+    "John6666/t2i_test1",
+    "johnygoddard/Enhance-This-DemoFusion-SDXL",
+    "Festrcze/Real-Time-SD-Turbooooooo",
+    "cocktailpeanut/InstantStyle",
+    "Honglee003/BRIA-Background-Generation4",
+    "K00B404/image_gen_supaqueue_game_assets",
+    "Sainirmit/Interior_Design_Style_Fusion",
+    "wencheng256/DiffusionRAWSpace",
+    "fritzgnad2/InstantStyle",
+    "FlowChef/RefEdit-SD3",
+    "Moibe/InstantID2_Experimental",
+    "saassa/rt",
+    "rbanfield/ControlNetV1.1",
+    "RamAnanth1/controlnet-sdxl-canny",
+    "diffusers/benchmark-pt2.1",
+    "ClaireOzzz/train-dreambooth-lora-sdxl",
+    "ClaireOzzz/sdxl-control-loras",
+    "1Monster/MonsterSDXL-LoRa",
+    "sergeicu/Real-Time-Latent-Consistency-Model",
+    "vloikas/Mycelium",
+    "ClaireOzzz/ShopGenV2",
+    "HusseinHE/Magic",
+    "jensinjames/Real-Time-SD-Turbo",
+    "hillman2000hk/Real-Time-Latent-Consistency-Model",
+    "akatukime/ChatLei",
+    "vloikas/NEW-Mycelium",
+    "fataler/Enhance-This-DemoFusion-SDXL",
+    "AIADC/Enhance-This-DemoFusion-SDXL",
+    "osmunphotography/Enhance-This-DemoFusion-SDXL",
+    "Amesssjiao/Enhance-This-DemoFusion-SDXL",
+    "Cometo/Enhance-This-DemoFusion-SDXL",
+    "SashaDes94/Enhance-This-DemoFusion-SDXL",
+    "hady20100/Real-Time-Latent-Consistency-Model",
+    "garrettscott/Real-Time-Latent-Consistency-Model",
+    "johnygoddard/Enhance-This-DemoFusion-SDXL-Duplicated",
+    "CJAlos/InstantID2",
+    "jw1900/InstantID",
+    "namuit/InstantID",
+    "TroubleDz/dzai",
+    "brianying/InstantID",
+    "seawolf2357/vidiid",
+    "IrinaSvetlana/splashmix",
+    "MehmetK/Real-Time-Latent-Consistency-Model",
+    "hideosnes/SDXL-Lightning",
+    "douglasgoodwin/one-more-gloomy-sunday",
+    "kddaad/InstantID",
+    "malchish61/Real-Time-Latent-Consistency-Model",
+    "3bqriino/InstantID",
+    "ahmed24444/Real-Time-Latent-Consistency-Model"
+  ],
+  "createdAt": "2023-08-01T04:34:46.000Z",
+  "safetensors": {
+    "parameters": {
+      "F32": 1251014160
+    },
+    "total": 1251014160
+  },
+  "usedStorage": 30068554528
+}

@@ -1,0 +1,17 @@
+{
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "human_evidence": "Actual user confirmed the exact hash-bound photograph; identity evidence, not proof of origin or editing authorization.",
+  "model_errors": [
+    "object_description describes masala noodles, not the verified original ramen.",
+    "localization_phrase describes future food.",
+    "proposed_change equals object_description exactly.",
+    "scene_summary describes masala noodles already present and misattributes a ramen description to the caption."
+  ],
+  "verified_id": "ramen-food-1 is copied correctly and exists, but the attached source description does not match it.",
+  "preservation": "The model repeats bowl/table/camera/lighting/background; semantic compliance and food-only extent are not proved.",
+  "cultural_reasoning": "Broad Indian-cuisine/similar-serving statements are model claims, not verified cultural findings.",
+  "uncertainty": "Model adds unspecified future masala recipe uncertainty. Current policy blocks uncertainty with edits; other identity/localization errors already independently justify REVIEW.",
+  "validator": "Correctly stops and quarantines; USER_CONSTRAINTS_UNRESOLVED remains a human-verification warning.",
+  "validator_limitation": "Paraphrased future-scene/false-caption attribution is not separately flagged by the literal FUTURE_SCENE_CONTAMINATION check.",
+  "recommendation": "NEEDS FIXES; no retry, repaired proposal or downstream execution."
+}

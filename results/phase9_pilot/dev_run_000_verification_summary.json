@@ -1,0 +1,394 @@
+{
+  "run": "results\\phase9_pilot\\run_001",
+  "verified_utc": "2026-11-11T21:05:27.013993+00:00",
+  "failures": [],
+  "files": {
+    "recorded": 75,
+    "missing": [],
+    "tampered": []
+  },
+  "manifest_provenance": "VALID",
+  "cases": [
+    {
+      "id": "CASE_01",
+      "direction": "French->Indian",
+      "human_review_status": "PASS",
+      "selected_attempt": "historical",
+      "attempts": [
+        {
+          "attempt": "historical",
+          "checks": {
+            "output_sha256": "bb922916ccbdd776f2c3ec0300d2fbe40398026ee3e1c92b66e31f3eb894ddfb",
+            "dimensions": [
+              1280,
+              853
+            ],
+            "mask_sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d",
+            "permitted_pixels": 749700,
+            "changed_inside": 469215,
+            "changed_outside": 0,
+            "protected_changed": 0,
+            "in_memory_replay_pixel_identical": true
+          },
+          "failures": [],
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "id": "CASE_02",
+      "direction": "German->French",
+      "human_review_status": "PENDING_USER_REVIEW",
+      "selected_attempt": "A",
+      "attempts": [
+        {
+          "attempt": "A",
+          "checks": {
+            "source_sha256": "47a8f399d08e33bd86bce10f5921b63ed9a0eca511635fa3ff1674ef5f66ff4b",
+            "reference_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+            "selection_sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d",
+            "permitted_sha256": "f2d48140e3c39779018559ea48aaaa7580b75c3359db14222de22267dd69b476",
+            "protected_sha256": "6ef41180c14fb94a5d70319d32cf6ede42dbb6e8694712b7c28d470915223355",
+            "output_sha256": "66fab2ccad388d7c73ef87c1cb6a1a46af9c6a63fc6a98c97365da8bbd969e61",
+            "mask_sha256": "f2d48140e3c39779018559ea48aaaa7580b75c3359db14222de22267dd69b476",
+            "dimensions": [
+              2700,
+              1800
+            ],
+            "permitted_pixels": 2970760,
+            "protected_pixels": 1889240,
+            "changed_inside": 2499350,
+            "changed_outside": 0,
+            "max_outside_channel_difference": 0,
+            "protected_changed": 0,
+            "inside_breakdown": {
+              "target_footprint_pixels": 2335200,
+              "shadow_only_pixels": 0,
+              "background_reconstruction_only_pixels": 635560,
+              "background_reconstruction_changed_pixels": 538606,
+              "source_object_pixels_replaced_by_background": 519930,
+              "mean_abs_change_in_reconstruction_only": 122.861
+            },
+            "source_residual_pixels_in_region": 0,
+            "info_dark_source_pixels_outside_region": 6224,
+            "clean_plate_region_is_background": true,
+            "deterministic_replay_pixel_identical": true,
+            "historical_bytes_identical": true,
+            "historical_pixels_identical": true
+          },
+          "failures": [],
+          "result": "PASS"
+        }
+      ],
+      "selected_matches_attempt": true,
+      "result": "PASS"
+    },
+    {
+      "id": "CASE_03",
+      "direction": "American->Japanese",
+      "human_review_status": "PENDING_USER_REVIEW",
+      "selected_attempt": "B",
+      "attempts": [
+        {
+          "attempt": "A",
+          "checks": {
+            "source_sha256": "8cb875b937dd642930fb421e5ad7a0e4e518144aa865293d7d7de35643bb1871",
+            "reference_sha256": "768bc6594037651fabbd6c0a86fcda52dd229d67a1ee5d62f5b4c7199cdd0d67",
+            "selection_sha256": "64fc4a49e1f17bdff8a7ad61d9cf94c9564cc1438bd37b42e24b04b17e73dc24",
+            "permitted_sha256": "d1a528522f1a40e1728f1f97bed47779b23724125a14254b94e430ca3cba54eb",
+            "protected_sha256": "81da5fb29e647f0bb35c48e616b1a1ed028e0c6e46cb11464c0a3620c111cefe",
+            "output_sha256": "d33e3bd97c649319dd867e6d97ff53e971e056d0688dc854ee1de117f8610b58",
+            "mask_sha256": "d1a528522f1a40e1728f1f97bed47779b23724125a14254b94e430ca3cba54eb",
+            "dimensions": [
+              2700,
+              1800
+            ],
+            "permitted_pixels": 2565107,
+            "protected_pixels": 2294893,
+            "changed_inside": 2357135,
+            "changed_outside": 0,
+            "max_outside_channel_difference": 0,
+            "protected_changed": 0,
+            "inside_breakdown": {
+              "target_footprint_pixels": 1450404,
+              "shadow_only_pixels": 67021,
+              "background_reconstruction_only_pixels": 1047682,
+              "background_reconstruction_changed_pixels": 839810,
+              "source_object_pixels_replaced_by_background": 752911,
+              "mean_abs_change_in_reconstruction_only": 68.577
+            },
+            "source_residual_pixels_in_region": 0,
+            "info_dark_source_pixels_outside_region": 56,
+            "clean_plate_region_is_background": true,
+            "deterministic_replay_pixel_identical": true,
+            "historical_bytes_identical": true,
+            "historical_pixels_identical": true
+          },
+          "failures": [],
+          "result": "PASS"
+        },
+        {
+          "attempt": "B",
+          "checks": {
+            "source_sha256": "8cb875b937dd642930fb421e5ad7a0e4e518144aa865293d7d7de35643bb1871",
+            "reference_sha256": "768bc6594037651fabbd6c0a86fcda52dd229d67a1ee5d62f5b4c7199cdd0d67",
+            "selection_sha256": "64fc4a49e1f17bdff8a7ad61d9cf94c9564cc1438bd37b42e24b04b17e73dc24",
+            "permitted_sha256": "2073ee8812c1e0b234d9e1cd4115b4176c0c6a3e4fed8ccf2d6ef25d8e7ab23f",
+            "protected_sha256": "2dafeaf39314da6c039b65af0ea9e2e7b1151f18cd3962d3d1464087d99bf0ec",
+            "output_sha256": "18da8b80f7d0703f4420c5c86ed0cf6737f6c5b92a0bbdfb2cbbd7a95adf2636",
+            "mask_sha256": "2073ee8812c1e0b234d9e1cd4115b4176c0c6a3e4fed8ccf2d6ef25d8e7ab23f",
+            "dimensions": [
+              2700,
+              1800
+            ],
+            "permitted_pixels": 3510000,
+            "protected_pixels": 1350000,
+            "changed_inside": 2404354,
+            "changed_outside": 0,
+            "max_outside_channel_difference": 0,
+            "protected_changed": 0,
+            "inside_breakdown": {
+              "target_footprint_pixels": 1450404,
+              "shadow_only_pixels": 67021,
+              "background_reconstruction_only_pixels": 1992575,
+              "background_reconstruction_changed_pixels": 887029,
+              "source_object_pixels_replaced_by_background": 752946,
+              "mean_abs_change_in_reconstruction_only": 36.13
+            },
+            "source_residual_pixels_in_region": 0,
+            "info_dark_source_pixels_outside_region": 21,
+            "clean_plate_region_is_background": true,
+            "deterministic_replay_pixel_identical": true,
+            "historical_bytes_identical": true,
+            "historical_pixels_identical": true
+          },
+          "failures": [],
+          "result": "PASS"
+        }
+      ],
+      "selected_matches_attempt": true,
+      "result": "PASS"
+    },
+    {
+      "id": "CASE_04",
+      "direction": "Italian->Moroccan",
+      "human_review_status": "PENDING_USER_REVIEW",
+      "selected_attempt": "B",
+      "attempts": [
+        {
+          "attempt": "A",
+          "checks": {
+            "source_sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+            "reference_sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+            "selection_sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448",
+            "permitted_sha256": "749309db56baaa36b225180aeae5027de5057aa5c2c0872d60a73f1381705f44",
+            "protected_sha256": "60fd467b2535c9d9ec5b934d2821d2deeaff9fdcfcc63c99cb16c43c6db2ed56",
+            "output_sha256": "f27218ae69d76423ccd3ddd55a5f9dd52e57a4c6fb7d797b598adae895de9718",
+            "mask_sha256": "749309db56baaa36b225180aeae5027de5057aa5c2c0872d60a73f1381705f44",
+            "dimensions": [
+              1952,
+              1732
+            ],
+            "permitted_pixels": 2537722,
+            "protected_pixels": 843142,
+            "changed_inside": 2367894,
+            "changed_outside": 0,
+            "max_outside_channel_difference": 0,
+            "protected_changed": 0,
+            "inside_breakdown": {
+              "target_footprint_pixels": 1131600,
+              "shadow_only_pixels": 0,
+              "background_reconstruction_only_pixels": 1406122,
+              "background_reconstruction_changed_pixels": 1246111,
+              "source_object_pixels_replaced_by_background": 1199188,
+              "mean_abs_change_in_reconstruction_only": 114.917
+            },
+            "source_residual_pixels_in_region": 0,
+            "info_dark_source_pixels_outside_region": 53,
+            "clean_plate_region_is_background": true,
+            "deterministic_replay_pixel_identical": true,
+            "historical_bytes_identical": true,
+            "historical_pixels_identical": true
+          },
+          "failures": [],
+          "result": "PASS"
+        },
+        {
+          "attempt": "B",
+          "checks": {
+            "source_sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+            "reference_sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+            "selection_sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448",
+            "permitted_sha256": "749309db56baaa36b225180aeae5027de5057aa5c2c0872d60a73f1381705f44",
+            "protected_sha256": "60fd467b2535c9d9ec5b934d2821d2deeaff9fdcfcc63c99cb16c43c6db2ed56",
+            "output_sha256": "038c2dd0e4ce4150c4dd090cb2b56092919713067ba7d21a2396cf5fd7bf7eab",
+            "mask_sha256": "749309db56baaa36b225180aeae5027de5057aa5c2c0872d60a73f1381705f44",
+            "dimensions": [
+              1952,
+              1732
+            ],
+            "permitted_pixels": 2537722,
+            "protected_pixels": 843142,
+            "changed_inside": 2367722,
+            "changed_outside": 0,
+            "max_outside_channel_difference": 0,
+            "protected_changed": 0,
+            "inside_breakdown": {
+              "target_footprint_pixels": 1131552,
+              "shadow_only_pixels": 0,
+              "background_reconstruction_only_pixels": 1406170,
+              "background_reconstruction_changed_pixels": 1246135,
+              "source_object_pixels_replaced_by_background": 1199212,
+              "mean_abs_change_in_reconstruction_only": 114.915
+            },
+            "source_residual_pixels_in_region": 0,
+            "info_dark_source_pixels_outside_region": 53,
+            "clean_plate_region_is_background": true,
+            "deterministic_replay_pixel_identical": true
+          },
+          "failures": [],
+          "result": "PASS"
+        }
+      ],
+      "selected_matches_attempt": true,
+      "result": "PASS"
+    },
+    {
+      "id": "CASE_05",
+      "direction": "Moroccan->Italian",
+      "human_review_status": "PENDING_USER_REVIEW",
+      "selected_attempt": "B",
+      "attempts": [
+        {
+          "attempt": "A",
+          "checks": {
+            "source_sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+            "reference_sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+            "selection_sha256": "d8bd3fc38d9803bfc9d59cb63bb736ea8bd758baddfd9a51f8d0e32759e83a54",
+            "permitted_sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448",
+            "protected_sha256": "edaa80c4cef807ccfe8859f2ca041209c3a6b6d3a07c84ea34b35c1ad7dc13fb",
+            "output_sha256": "30d75517d65af3b2cdd1eeff261ff72f79488a89ac55b485dee8bb3e04321f4d",
+            "mask_sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448",
+            "dimensions": [
+              5760,
+              4320
+            ],
+            "permitted_pixels": 14877000,
+            "protected_pixels": 10006200,
+            "changed_inside": 11426476,
+            "changed_outside": 0,
+            "max_outside_channel_difference": 0,
+            "protected_changed": 0,
+            "inside_breakdown": {
+              "target_footprint_pixels": 10257800,
+              "shadow_only_pixels": 0,
+              "background_reconstruction_only_pixels": 4619200,
+              "background_reconstruction_changed_pixels": 1633921,
+              "source_object_pixels_replaced_by_background": 734370,
+              "mean_abs_change_in_reconstruction_only": 25.087
+            },
+            "source_residual_pixels_in_region": 0,
+            "info_dark_source_pixels_outside_region": 0,
+            "clean_plate_region_is_background": true,
+            "deterministic_replay_pixel_identical": true,
+            "historical_bytes_identical": true,
+            "historical_pixels_identical": true
+          },
+          "failures": [],
+          "result": "PASS"
+        },
+        {
+          "attempt": "B",
+          "checks": {
+            "source_sha256": "2eb3993ef8da1d645196db08e8b3174f316a9507b85ee2065941b1a9a74ef344",
+            "reference_sha256": "857b037d2621e958896143a36832760c12d1afbf018e9b58b3b52fc5c6b0b03b",
+            "selection_sha256": "e54060df0dcae24e4aeb19ec501e7707558c3f6b4e673608cb9e9bf304d314f3",
+            "permitted_sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448",
+            "protected_sha256": "edaa80c4cef807ccfe8859f2ca041209c3a6b6d3a07c84ea34b35c1ad7dc13fb",
+            "output_sha256": "468c80d873db135776ae7a551186ca432e3b8a09554905ea5dc0cf12e3895818",
+            "mask_sha256": "40841fb491309b9e9306ff2f52b71d513e9401e67f1acbf19079a51fc3627448",
+            "dimensions": [
+              5760,
+              4320
+            ],
+            "permitted_pixels": 14877000,
+            "protected_pixels": 10006200,
+            "changed_inside": 11815546,
+            "changed_outside": 0,
+            "max_outside_channel_difference": 0,
+            "protected_changed": 0,
+            "inside_breakdown": {
+              "target_footprint_pixels": 7048727,
+              "shadow_only_pixels": 652669,
+              "background_reconstruction_only_pixels": 7175604,
+              "background_reconstruction_changed_pixels": 4116678,
+              "source_object_pixels_replaced_by_background": 3026343,
+              "mean_abs_change_in_reconstruction_only": 78.065
+            },
+            "source_residual_pixels_in_region": 0,
+            "info_dark_source_pixels_outside_region": 0,
+            "clean_plate_region_is_background": true,
+            "deterministic_replay_pixel_identical": true,
+            "historical_bytes_identical": true,
+            "historical_pixels_identical": true
+          },
+          "failures": [],
+          "result": "PASS"
+        }
+      ],
+      "selected_matches_attempt": true,
+      "result": "PASS"
+    },
+    {
+      "id": "CASE_06",
+      "direction": "Generic Western->Japanese",
+      "human_review_status": "PENDING_USER_REVIEW",
+      "selected_attempt": "A",
+      "attempts": [
+        {
+          "attempt": "A",
+          "checks": {
+            "source_sha256": "b4c4efc124de1a87c2f5c569656aafd686fbb2caea9f76cc1021d625b1254831",
+            "reference_sha256": "31e636e6a873317803dac4327cd057b5fcf0a71a07ac39a78c0b8e1293232fbd",
+            "selection_sha256": "b1365287936909557ff21f591625e012ae46e60cd0350f67fb19c0252985055c",
+            "permitted_sha256": "f6784de3f5fe9c9bcb3d04a8745009a3e761b9820e4da78bbb8ff4d32c6366d0",
+            "protected_sha256": "3aaec1fbf246c44145c4aabeb61370462def7a0553c64a1d60c141a2608d2790",
+            "output_sha256": "b123ac2fc87a0247d2cb3b4c0affa0d213cef7e1e7f2e76a49cfe81f1b085b20",
+            "mask_sha256": "f6784de3f5fe9c9bcb3d04a8745009a3e761b9820e4da78bbb8ff4d32c6366d0",
+            "dimensions": [
+              2008,
+              1754
+            ],
+            "permitted_pixels": 1518259,
+            "protected_pixels": 2003773,
+            "changed_inside": 1298848,
+            "changed_outside": 0,
+            "max_outside_channel_difference": 0,
+            "protected_changed": 0,
+            "inside_breakdown": {
+              "target_footprint_pixels": 474269,
+              "shadow_only_pixels": 75020,
+              "background_reconstruction_only_pixels": 968970,
+              "background_reconstruction_changed_pixels": 749730,
+              "source_object_pixels_replaced_by_background": 694616,
+              "mean_abs_change_in_reconstruction_only": 121.768
+            },
+            "source_residual_pixels_in_region": 0,
+            "info_dark_source_pixels_outside_region": 0,
+            "clean_plate_region_is_background": true,
+            "deterministic_replay_pixel_identical": true,
+            "historical_bytes_identical": true,
+            "historical_pixels_identical": true
+          },
+          "failures": [],
+          "result": "PASS"
+        }
+      ],
+      "selected_matches_attempt": true,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS",
+  "note": "Pixel locality, provenance and replay checks do not measure photographic realism or cultural correctness; those need human review."
+}

@@ -1,0 +1,18 @@
+{
+  "zip": "results\\repeatability_pilot_review.zip",
+  "files": 148,
+  "bytes": 94842438,
+  "zip_sha256": "2dbfd74a5230f1138fcfda1b24dac95d25234f55735e4d47de13de686b4e61b6",
+  "verification": "PASS",
+  "verification_failures": [],
+  "missing_expected_docs": [],
+  "package_check": {
+    "result": "PASS",
+    "members": 149,
+    "crc_error": null,
+    "not_in_manifest": [],
+    "listed_but_missing": [],
+    "hash_mismatch": [],
+    "forbidden_members": []
+  }
+}

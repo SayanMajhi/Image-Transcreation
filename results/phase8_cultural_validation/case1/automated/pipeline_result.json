@@ -1,0 +1,95 @@
+{
+  "execution_mode": "AUTOMATED_PLANNING",
+  "state": "PLAN_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source",
+    "caption",
+    "planning",
+    "deterministic_validation"
+  ],
+  "stopped_at": "planning_review",
+  "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "c362cd0f6802c598aa015bae894a9589b99fbcb55f5cda3de7563725807aa8cb",
+      "sha256": "c362cd0f6802c598aa015bae894a9589b99fbcb55f5cda3de7563725807aa8cb",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+      "sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+      "path": "evidence/source/source.jpg"
+    },
+    "caption.json": {
+      "id": "d023baf9b3c98e470291d560ddcd2dba2d268226ae085fca24cced3588a6157d",
+      "sha256": "d023baf9b3c98e470291d560ddcd2dba2d268226ae085fca24cced3588a6157d",
+      "path": "caption.json"
+    },
+    "planning_input.json": {
+      "id": "55580eba4e389f024b85a2d8e014e9904469682512fd0c8b932f458e2d6b3c8b",
+      "sha256": "55580eba4e389f024b85a2d8e014e9904469682512fd0c8b932f458e2d6b3c8b",
+      "path": "planning_input.json"
+    },
+    "planner_audit.json": {
+      "id": "e14d3f404bd76f97b2e18365c37746ec03ef80355c187479941ce01e2d166c9a",
+      "sha256": "e14d3f404bd76f97b2e18365c37746ec03ef80355c187479941ce01e2d166c9a",
+      "path": "planner_audit.json"
+    },
+    "validated_plan.json": {
+      "id": "81010e7ead14907e70fbbbea69246d07cd3803a69ad27a5d2be5ecdeb253e334",
+      "sha256": "81010e7ead14907e70fbbbea69246d07cd3803a69ad27a5d2be5ecdeb253e334",
+      "path": "validated_plan.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.09713770000234945
+    },
+    {
+      "stage": "resource_preflight",
+      "action": "QWEN_NOT_RESIDENT",
+      "seconds": 0.10550590000275406
+    },
+    {
+      "stage": "caption",
+      "action": "CAPTION_COMPLETED",
+      "seconds": 14.407796999999846
+    },
+    {
+      "stage": "caption",
+      "action": "MODEL_REFERENCES_RELEASED",
+      "seconds": 14.545755200000713,
+      "cuda_allocated_bytes_after": 0
+    },
+    {
+      "stage": "planning",
+      "action": "VALIDATED",
+      "seconds": 26.390157800000452,
+      "decision": "REVIEW"
+    },
+    {
+      "stage": "planning",
+      "action": "QWEN_UNLOAD_CONFIRMED",
+      "seconds": 26.391366200001357
+    },
+    {
+      "stage": "planning_review",
+      "action": "STOP",
+      "seconds": 26.39137480000136,
+      "state": "PLAN_REQUIRES_REVIEW",
+      "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [
+    "Verify the source-object identity of: golden-brown triangular Indian samosa.",
+    "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+    "Review the original-scene summary and any paraphrased identities against the image.",
+    "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+  ],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

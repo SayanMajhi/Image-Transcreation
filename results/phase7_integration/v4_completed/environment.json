@@ -1,0 +1,15 @@
+{
+  "packages": {
+    "torch": "2.15.0+cu132",
+    "transformers": "4.57.6",
+    "diffusers": "0.35.2",
+    "accelerate": "1.11.0",
+    "Pillow": "13.0.0",
+    "numpy": "2.4.6",
+    "PyYAML": "6.0.3",
+    "huggingface-hub": "0.36.2"
+  },
+  "new_dependencies": [],
+  "tested_platform": "Windows / Python 3.11 / RTX 3050 Laptop GPU 4 GB",
+  "new_application_code_changes": []
+}

@@ -1,0 +1,26 @@
+{
+  "id": "CASE_06",
+  "status": "NEW",
+  "direction": "Generic Western->Japanese",
+  "source_object": "handled mug",
+  "target_object": "wabi-sabi tea bowl",
+  "human_review_status": "PENDING_USER_REVIEW",
+  "attempts": [
+    {
+      "attempt": "A",
+      "role": "primary",
+      "request": "results/phase9_repeatability/case6/request_A.json",
+      "status": "OK",
+      "elapsed_seconds": 0.544,
+      "output_sha256": "b123ac2fc87a0247d2cb3b4c0affa0d213cef7e1e7f2e76a49cfe81f1b085b20",
+      "target_bbox": [
+        320,
+        350,
+        1120,
+        1098
+      ]
+    }
+  ],
+  "selected_attempt": "A",
+  "case_status": "OK"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "CASE_03",
+  "status": "NEW",
+  "direction": "American->Japanese",
+  "source_object": "chocolate-chip cookie",
+  "target_object": "yaki-onigiri",
+  "human_review_status": "PENDING_USER_REVIEW",
+  "attempts": [
+    {
+      "attempt": "A",
+      "role": "primary",
+      "request": "results/phase9_repeatability/case3/request_A.json",
+      "status": "OK",
+      "elapsed_seconds": 1.231,
+      "output_sha256": "d33e3bd97c649319dd867e6d97ff53e971e056d0688dc854ee1de117f8610b58",
+      "target_bbox": [
+        575,
+        225,
+        2125,
+        1584
+      ]
+    },
+    {
+      "attempt": "B",
+      "role": "correction",
+      "request": "results/phase9_repeatability/case3/request_B.json",
+      "status": "OK",
+      "elapsed_seconds": 1.09,
+      "output_sha256": "18da8b80f7d0703f4420c5c86ed0cf6737f6c5b92a0bbdfb2cbbd7a95adf2636",
+      "target_bbox": [
+        575,
+        225,
+        2125,
+        1584
+      ]
+    }
+  ],
+  "selected_attempt": "B",
+  "case_status": "OK"
+}

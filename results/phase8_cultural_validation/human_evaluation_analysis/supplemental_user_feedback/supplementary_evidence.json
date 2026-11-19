@@ -1,0 +1,33 @@
+{
+  "status": "SUPPLEMENTARY_UNBLINDED_QUALITATIVE_FEEDBACK_RECEIVED",
+  "source": "genuine user message in this conversation",
+  "raw_feedback_file": "results\\phase8_cultural_validation\\human_evaluation_analysis\\user_feedback\\20261111T175015583079Z_verbatim.txt",
+  "raw_feedback_sha256": "25fa0b7e12e95d832134e0ced4f0c5da7d809b9e1585275384ce48ad0bce28b9",
+  "new_user_confirmation": "results\\phase8_cultural_validation\\human_evaluation_analysis\\supplemental_user_feedback\\user_confirmation_verbatim.txt",
+  "candidate_assignment": null,
+  "independence_or_target_culture_expertise_claimed": false,
+  "complete_form_received": false,
+  "numeric_ratings_supplied": null,
+  "numeric_ratings_inferred": false,
+  "reviewer_supplied_timestamp": null,
+  "inspection_declarations_inferred": false,
+  "pre_reveal_recognition_claimed": false,
+  "formal_eligible_panel_reviewers": 0,
+  "verbatim_supported_observations": [
+    "user identifies a croissant-to-samosa shape change",
+    "user finds target recognition and cultural relevance successful",
+    "user identifies texture and thickness realism limitations"
+  ],
+  "unstated_items": [
+    "candidate ID",
+    "four separate 1-5 ratings",
+    "review time",
+    "target-culture familiarity",
+    "required inspection declarations",
+    "explicit cultural-objection declaration"
+  ],
+  "all_candidates_formal_decision": "INSUFFICIENT_EVIDENCE",
+  "original_rubric_changed": false,
+  "new_image_generations": 0,
+  "blinding_key_parsed": false
+}

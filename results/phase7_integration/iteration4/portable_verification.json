@@ -1,0 +1,99 @@
+{
+  "manifest_entries": 546,
+  "manifest_mismatches": [],
+  "commands": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_instruction_review.py -v",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_acceptance_requires_instruction_check_beyond_two_inspection_flags (test_instruction_review.InstructionReviewTests.test_acceptance_requires_instruction_check_beyond_two_inspection_flags) ... ok\ntest_bound_warning_cannot_be_erased (test_instruction_review.InstructionReviewTests.test_bound_warning_cannot_be_erased) ... ok\ntest_changed_confirmation_cannot_be_treated_as_acceptance (test_instruction_review.InstructionReviewTests.test_changed_confirmation_cannot_be_treated_as_acceptance) ... ok\ntest_changed_planning_input_instructions_invalidate_acceptance (test_instruction_review.InstructionReviewTests.test_changed_planning_input_instructions_invalidate_acceptance) ... ok\ntest_changed_review_instructions_invalidate_acceptance (test_instruction_review.InstructionReviewTests.test_changed_review_instructions_invalidate_acceptance) ... ok\ntest_cli_presents_complete_review_context (test_instruction_review.InstructionReviewTests.test_cli_presents_complete_review_context) ... ok\ntest_cli_requires_and_records_instruction_check_flag (test_instruction_review.InstructionReviewTests.test_cli_requires_and_records_instruction_check_flag) ... ok\ntest_complete_no_edit_raw_abstain_stays_abstain (test_instruction_review.InstructionReviewTests.test_complete_no_edit_raw_abstain_stays_abstain) ... ok\ntest_confirmed_synthetic_acceptance_allows_original_phrase_grounding_only (test_instruction_review.InstructionReviewTests.test_confirmed_synthetic_acceptance_allows_original_phrase_grounding_only) ... ok\ntest_free_text_compatibility_is_not_certified_by_eligibility (test_instruction_review.InstructionReviewTests.test_free_text_compatibility_is_not_certified_by_eligibility) ... ok\ntest_instructions_allow_unapproved_draft_with_explicit_human_warning (test_instruction_review.InstructionReviewTests.test_instructions_allow_unapproved_draft_with_explicit_human_warning) ... ok\ntest_legacy_no_instruction_review_remains_verifiable (test_instruction_review.InstructionReviewTests.test_legacy_no_instruction_review_remains_verifiable) ... ok\ntest_malformed_candidate_still_quarantined (test_instruction_review.InstructionReviewTests.test_malformed_candidate_still_quarantined) ... ok\ntest_missing_verified_identity_still_blocks (test_instruction_review.InstructionReviewTests.test_missing_verified_identity_still_blocks) ... ok\ntest_modified_image_and_plan_invalidate_review (test_instruction_review.InstructionReviewTests.test_modified_image_and_plan_invalidate_review) ... ok\ntest_needs_review_cannot_dispatch (test_instruction_review.InstructionReviewTests.test_needs_review_cannot_dispatch) ... ok\ntest_original_description_mismatch_still_blocks (test_instruction_review.InstructionReviewTests.test_original_description_mismatch_still_blocks) ... ok\ntest_pending_cannot_claim_instruction_confirmation (test_instruction_review.InstructionReviewTests.test_pending_cannot_claim_instruction_confirmation) ... ok\ntest_pending_review_cannot_dispatch (test_instruction_review.InstructionReviewTests.test_pending_review_cannot_dispatch) ... ok\ntest_placeholder_candidate_still_quarantined (test_instruction_review.InstructionReviewTests.test_placeholder_candidate_still_quarantined) ... ok\ntest_preservation_conflict_still_blocks (test_instruction_review.InstructionReviewTests.test_preservation_conflict_still_blocks) ... ok\ntest_raw_review_is_never_promoted (test_instruction_review.InstructionReviewTests.test_raw_review_is_never_promoted) ... ok\ntest_rejected_review_cannot_dispatch_without_constraint_confirmation (test_instruction_review.InstructionReviewTests.test_rejected_review_cannot_dispatch_without_constraint_confirmation) ... ok\ntest_replacement_localization_still_blocks (test_instruction_review.InstructionReviewTests.test_replacement_localization_still_blocks) ... ok\ntest_schema_downgrade_cannot_bypass_instruction_confirmation (test_instruction_review.InstructionReviewTests.test_schema_downgrade_cannot_bypass_instruction_confirmation) ... ok\ntest_synthetic_acceptance_still_cannot_dispatch_real_model (test_instruction_review.InstructionReviewTests.test_synthetic_acceptance_still_cannot_dispatch_real_model) ... ok\ntest_truncated_caption_still_blocks (test_instruction_review.InstructionReviewTests.test_truncated_caption_still_blocks) ... ok\ntest_uncertain_source_identity_still_blocks (test_instruction_review.InstructionReviewTests.test_uncertain_source_identity_still_blocks) ... ok\ntest_uncertainty_and_identical_replacement_still_block (test_instruction_review.InstructionReviewTests.test_uncertainty_and_identical_replacement_still_block) ... ok\ntest_unknown_verified_id_still_blocks (test_instruction_review.InstructionReviewTests.test_unknown_verified_id_still_blocks) ... ok\ntest_valid_draft_without_instructions_still_requires_pending_review (test_instruction_review.InstructionReviewTests.test_valid_draft_without_instructions_still_requires_pending_review) ... ok\ntest_warning_status_cannot_claim_automatic_satisfaction (test_instruction_review.InstructionReviewTests.test_warning_status_cannot_claim_automatic_satisfaction) ... ok\n\n----------------------------------------------------------------------\nRan 32 tests in 7.408s\n\nOK\n"
+    },
+    {
+      "command": "python -B results/phase7_integration/iteration4/replay_policy.py --out replay_reproduced",
+      "returncode": 0,
+      "stdout": "{\n  \"synthetic_cases\": 18,\n  \"historical_cases\": 7,\n  \"synthetic_decision_changes\": [\n    {\n      \"case\": \"same_candidate_with_satisfied_preservation_instruction\",\n      \"before\": \"REVIEW\",\n      \"after\": \"PROPOSE\"\n    },\n    {\n      \"case\": \"same_candidate_with_general_non_preservation_instruction\",\n      \"before\": \"REVIEW\",\n      \"after\": \"PROPOSE\"\n    }\n  ],\n  \"historical_decision_changes\": [],\n  \"historical_positive_candidates\": 0,\n  \"baseline_policy_sha256\": \"d63f12ab1c9aa5710abc8321568a05535f190f49183b207993760e54785a211a\",\n  \"corrected_policy_sha256\": \"f74e0ad77714c5489df466c4d3663916aa08ef0fdaf8dcbb04ab586d572a0c87\",\n  \"live_model_calls\": 0,\n  \"replay_outputs_are_not_executable_plans\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "python -B -m scripts.review_edit_intent verify --review results/phase7_integration/iteration4/review_flow/accepted_grounding_only/intent/decision.json",
+      "returncode": 0,
+      "stdout": "{\n  \"review\": \"results\\\\phase7_integration\\\\iteration4\\\\review_flow\\\\accepted_grounding_only\\\\intent\\\\decision.json\",\n  \"original_image\": \"C:\\\\Users\\\\sayan\\\\AppData\\\\Local\\\\Temp\\\\phase7_i4_portable_2vt9p60n\\\\results\\\\phase7_integration\\\\iteration4\\\\review_flow\\\\accepted_grounding_only\\\\intent\\\\original.png\",\n  \"decision\": \"ACCEPT_FOR_GROUNDING_TEST\",\n  \"scope\": \"GROUNDING_TEST_ONLY\",\n  \"candidate\": {\n    \"object_description\": \"synthetic object\",\n    \"localization_phrase\": \"synthetic object\",\n    \"proposed_change\": \"a different surface material\",\n    \"cultural_reason\": \"Contextual test suggestion only\",\n    \"identity_uncertain\": false,\n    \"verified_object_id\": \"object-1\"\n  },\n  \"evidence_scope\": \"SYNTHETIC_TEST_ONLY\",\n  \"verified_objects\": [\n    {\n      \"object_id\": \"object-1\",\n      \"description\": \"synthetic object\"\n    }\n  ],\n  \"source_culture\": null,\n  \"target_culture\": \"test target\",\n  \"user_instructions\": \"Keep the background unchanged.\\nPreserve the camera angle; do not infer cultural suitability.\",\n  \"must_preserve\": [\n    \"background\",\n    \"original scene purpose\",\n    \"important people\",\n    \"activity\",\n    \"person and object relationships\"\n  ],\n  \"verification_requirements\": [\n    \"Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.\",\n    \"Check proposed changes and cultural reasons with the user; PROPOSE is not approval.\",\n    \"Verify localization phrases against the original image before grounding or editing.\",\n    \"Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.\",\n    \"Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness.\"\n  ],\n  \"planning_issues\": [\n    {\n      \"code\": \"USER_CONSTRAINTS_UNRESOLVED\",\n      \"message\": \"Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.\",\n      \"candidate_index\": null,\n      \"severity\": \"human_verification\"\n    }\n  ],\n  \"uncertainties\": [],\n  \"user_constraints_status\": \"REQUIRES_HUMAN_VERIFICATION\",\n  \"checked_user_instructions\": true,\n  \"reason\": \"Synthetic check of the full instruction text; not actual human approval.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "python -B -m scripts.review_edit_intent verify --review results/phase7_integration/iteration2/synthetic/accepted_multiple/intent/decision.json",
+      "returncode": 0,
+      "stdout": "{\n  \"review\": \"results\\\\phase7_integration\\\\iteration2\\\\synthetic\\\\accepted_multiple\\\\intent\\\\decision.json\",\n  \"original_image\": \"C:\\\\Users\\\\sayan\\\\AppData\\\\Local\\\\Temp\\\\phase7_i4_portable_2vt9p60n\\\\results\\\\phase7_integration\\\\iteration2\\\\synthetic\\\\accepted_multiple\\\\intent\\\\original.png\",\n  \"decision\": \"ACCEPT_FOR_GROUNDING_TEST\",\n  \"scope\": \"GROUNDING_TEST_ONLY\",\n  \"candidate\": {\n    \"object_description\": \"synthetic object\",\n    \"localization_phrase\": \"synthetic object\",\n    \"proposed_change\": \"a different surface material\",\n    \"cultural_reason\": \"Contextual test suggestion only\",\n    \"identity_uncertain\": false,\n    \"verified_object_id\": \"object-1\"\n  },\n  \"evidence_scope\": \"SYNTHETIC_TEST_ONLY\",\n  \"verified_objects\": [\n    {\n      \"object_id\": \"object-1\",\n      \"description\": \"synthetic object\"\n    }\n  ],\n  \"source_culture\": null,\n  \"target_culture\": \"test target\",\n  \"user_instructions\": null,\n  \"must_preserve\": [\n    \"background\",\n    \"original scene purpose\",\n    \"important people\",\n    \"activity\",\n    \"person and object relationships\"\n  ],\n  \"verification_requirements\": [\n    \"Check proposed changes and cultural reasons with the user; PROPOSE is not approval.\",\n    \"Verify localization phrases against the original image before grounding or editing.\",\n    \"Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.\",\n    \"Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness.\"\n  ],\n  \"planning_issues\": null,\n  \"uncertainties\": null,\n  \"user_constraints_status\": null,\n  \"checked_user_instructions\": null,\n  \"reason\": \"Synthetic inspection declaration, not actual human approval\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "replay_matches": [
+    {
+      "file": "planner_decision_policy_20261108_01_japanese_food.original_audit.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_01_japanese_food.replay.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_02_durga_uncertain_incense.original_audit.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_02_durga_uncertain_incense.replay.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_03_bicycle_no_change.original_audit.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_03_bicycle_no_change.replay.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_final_01_japanese_food.original_audit.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_final_01_japanese_food.replay.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_final_02_durga_uncertain_incense.original_audit.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_final_02_durga_uncertain_incense.replay.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_final_03_bicycle_no_change.original_audit.json",
+      "matches": true
+    },
+    {
+      "file": "planner_decision_policy_20261108_final_03_bicycle_no_change.replay.json",
+      "matches": true
+    },
+    {
+      "file": "planner_quality_review_20261108_final_02_durga_uncertain_incense.original_audit.json",
+      "matches": true
+    },
+    {
+      "file": "planner_quality_review_20261108_final_02_durga_uncertain_incense.replay.json",
+      "matches": true
+    },
+    {
+      "file": "summary.json",
+      "matches": true
+    },
+    {
+      "file": "synthetic_before_after.json",
+      "matches": true
+    }
+  ],
+  "model_inference_calls": 0,
+  "original_repository_paths_required": false,
+  "all_passed": true
+}

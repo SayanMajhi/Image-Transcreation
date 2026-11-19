@@ -1,0 +1,17 @@
+{
+  "source_image": "data/ramen.jpg",
+  "image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "segmentation_file": "results/phase7_integration/final_demo/sam_box/segmentation/segmentation.json",
+  "segmentation_sha256": "7debbe003cb931999d7f13e1076f5deaf48b5e2919f2aea9f68d921c180d8e0d",
+  "mask_file": "results\\phase7_integration\\refined_demo\\research_mask.png",
+  "mask_sha256": "7c848a20efef1fea04a8895db17e7d325d9055055e871f55cbb1ffdd4c62984e",
+  "candidate_index": 1,
+  "prompt": "Photorealistic Indian-style masala noodles with reddish-brown spiced seasoning, natural noodle texture, matching the original food position, perspective and warm lighting.",
+  "selection_note": "One conservative assistant-traced central noodle patch only; all other food and objects protected. RESEARCH_ONLY operator annotation, not human approval and not the old Qwen candidate.",
+  "scope": "RESEARCH_ONLY",
+  "annotation_file": "results\\phase7_integration\\refined_demo\\annotations.json",
+  "annotation_sha256": "bd17310572fc78317121760a821f46995eec2bfb6f3d5bdb16d8c1cfb533e9c8",
+  "protected_mask_file": "results\\phase7_integration\\refined_demo\\protected_regions.png",
+  "protected_mask_sha256": "f90137ab3c868c5fdd9e769a7ac3594531c847e4877ac698e964362fa254dc7a",
+  "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED"
+}

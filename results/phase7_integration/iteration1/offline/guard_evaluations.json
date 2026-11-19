@@ -1,0 +1,31 @@
+[
+  {
+    "case": "wrong_source_query",
+    "state": "SOURCE_OBJECT_REQUIRES_REVIEW",
+    "stopped_at": "grounding_evidence",
+    "completed_stages": [
+      "source"
+    ],
+    "generation_permitted": false
+  },
+  {
+    "case": "missing_instance",
+    "state": "SOURCE_OBJECT_REQUIRES_REVIEW",
+    "stopped_at": "box_selection",
+    "completed_stages": [
+      "source",
+      "grounding_evidence"
+    ],
+    "generation_permitted": false
+  },
+  {
+    "case": "wrong_mask_hash",
+    "state": "FAILED",
+    "stopped_at": "segmentation_evidence",
+    "completed_stages": [
+      "source",
+      "grounding_evidence"
+    ],
+    "generation_permitted": false
+  }
+]

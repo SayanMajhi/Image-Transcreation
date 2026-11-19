@@ -1,0 +1,21 @@
+{
+  "condition": "B",
+  "dimensions": [
+    2272,
+    1704
+  ],
+  "editable_pixels": 1846716,
+  "changed_inside_mask": 1846686,
+  "changed_outside_mask": 0,
+  "maximum_outside_channel_difference": 0,
+  "changed_in_protected_regions": 0,
+  "protected_pixels": 1550006,
+  "editable_protected_intersection": 0,
+  "image_fraction_editable": 0.4770041906367784,
+  "ground_truth_noodle_coverage": null,
+  "source_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+  "mask_sha256": "a025cfe02f676ac6464d62cf143feca3292e016049ff9778ca239514a91167cb",
+  "final_sha256": "d800a3e8d04cf366cd841b788e3d55ff7166a773b539ff5d997dbc5d97dc3640",
+  "verification": "All reopened decoded RGB pixels; independent of diffusion/compositor code.",
+  "annotation_limit": "Protected polygons are operator research geometry, not independent pixel ground truth."
+}

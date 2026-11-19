@@ -1,0 +1,11 @@
+{
+  "manifest_entries": 321,
+  "manifest_mismatches": [],
+  "command": "python -B results/phase7_integration/iteration3/reproduce_policy_diagnostics.py --output diagnostics_reproduced.json",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "all_14_diagnostics_reproduced_exactly": true,
+  "live_model_calls": 0,
+  "original_project_paths_required": false
+}

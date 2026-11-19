@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "transcreation.cli",
+    "run",
+    "--input",
+    "results\\phase7_integration\\final_demo\\localization_request.json"
+  ],
+  "returncode": 0,
+  "wall_seconds": 13.896463099999892,
+  "stdout": "SOURCE_OBJECT_REQUIRES_REVIEW: Inspect every predicted box; supply pinned detection, explicit index and selection note. No SAM or generation ran.\n",
+  "stderr": ""
+}

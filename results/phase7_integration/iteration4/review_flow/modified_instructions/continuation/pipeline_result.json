@@ -1,0 +1,63 @@
+{
+  "execution_mode": "GROUNDING_TEST",
+  "state": "FAILED",
+  "completed_stages": [
+    "source"
+  ],
+  "stopped_at": "edit_intent_review",
+  "reason": "review binding differs from original plan, audit, image or candidate",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "0f376dffd70636c9a2518f3d84f7018bdab3595acd360a33e69e9378c63c008d",
+      "sha256": "0f376dffd70636c9a2518f3d84f7018bdab3595acd360a33e69e9378c63c008d",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+      "path": "evidence/source/original.png"
+    },
+    "edit_intent": {
+      "id": "1ab75e56ae67aba0f187524deb515b0d4829f7b8e73e04eff6a016893d4bcce5",
+      "sha256": "1ab75e56ae67aba0f187524deb515b0d4829f7b8e73e04eff6a016893d4bcce5",
+      "path": "evidence/edit_intent/decision.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.001614000000699889
+    },
+    {
+      "stage": "edit_intent_review",
+      "action": "FAILED",
+      "seconds": 0.00982040000235429,
+      "error": {
+        "stage": "edit_intent_review",
+        "type": "ValueError",
+        "code": "ValueError",
+        "message": "review binding differs from original plan, audit, image or candidate"
+      }
+    },
+    {
+      "stage": "edit_intent_review",
+      "action": "STOP",
+      "seconds": 0.009824100001424085,
+      "state": "FAILED",
+      "reason": "review binding differs from original plan, audit, image or candidate",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [],
+  "errors": [
+    {
+      "stage": "edit_intent_review",
+      "type": "ValueError",
+      "code": "ValueError",
+      "message": "review binding differs from original plan, audit, image or candidate"
+    }
+  ],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

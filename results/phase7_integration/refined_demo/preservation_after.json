@@ -1,0 +1,18 @@
+{
+  "previous_files_checked": 947,
+  "changed_existing_snapshot_files": [
+    "src/transcreation/stages/inpainting.py",
+    "scripts/inpaint.py",
+    "reports/phase7_integration.md"
+  ],
+  "missing": [],
+  "all_existing_model_configs_unchanged": true,
+  "all_previous_model_outputs_sam_masks_audits_and_human_decisions_unchanged": true,
+  "source_unchanged": true,
+  "v1_zip_unchanged": true,
+  "previous_report_preserved_exactly_as_text": true,
+  "original_human_decision": "MATERIAL_UNRESOLVED",
+  "original_planner_decision": "REVIEW",
+  "original_released_candidates": 0,
+  "code_changes_scope": "Shared inpainting body, separate refined-mask validator/input and explicit CLI option only. README/current report updated; new tests added."
+}

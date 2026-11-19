@@ -1,0 +1,20 @@
+{
+  "settings": {
+    "method": "DETERMINISTIC_APPEARANCE_TRANSFER_BASELINE",
+    "scope": "RESEARCH_ONLY",
+    "color_space": "CIELAB D50 via Pillow LittleCMS",
+    "delta_a": 14.0,
+    "delta_b": 26.0,
+    "strength": 0.75,
+    "inward_gaussian_radius_pixels": 12.0,
+    "highlight_start_L": 70.0,
+    "highlight_end_L": 95.0,
+    "minimum_highlight_effect": 0.35,
+    "palette_reason": "Positive a/b warm reddish-yellow cue; no reference dish or authenticity claim."
+  },
+  "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+  "edit_region_sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d",
+  "new_parameters": false,
+  "scope": "RESEARCH_ONLY",
+  "purpose": "matched-source non-generative baseline, not a Type B object replacement"
+}

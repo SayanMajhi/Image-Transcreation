@@ -1,0 +1,23 @@
+{
+  "status": "BLOCKED_PENDING_USER_VERIFICATION",
+  "live_image_to_plan_conditions_executed": 0,
+  "model_calls": {
+    "SmolVLM": 0,
+    "Qwen": 0,
+    "GroundingDINO": 0,
+    "SAM": 0,
+    "Diffusion": 0
+  },
+  "new_caption": null,
+  "new_raw_qwen_response": null,
+  "new_final_plan": null,
+  "new_rejected_candidates": null,
+  "new_localization_phrase": null,
+  "new_proposed_replacement": null,
+  "new_edit_intent_review": null,
+  "inference_time_seconds": null,
+  "peak_cuda_memory_bytes": null,
+  "reason": "Actual user has not verified the image/object, target, intended change and preservation constraints. Required stop before inference.",
+  "predeclared_live_experiment": false,
+  "new_generation_settings_effective": null
+}

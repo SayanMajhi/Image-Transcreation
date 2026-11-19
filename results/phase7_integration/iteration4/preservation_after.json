@@ -1,0 +1,14 @@
+{
+  "checked": 421,
+  "changed": [
+    "src/transcreation/orchestration.py",
+    "src/transcreation/stages/planning.py",
+    "scripts/review_edit_intent.py",
+    "tests/test_planning_policy.py",
+    "results/phase7_integration/phase7_working_report.md"
+  ],
+  "unexpected_changes": [],
+  "previous_report_exact_prefix": true,
+  "historical_evidence_unchanged": true,
+  "model_configs_and_stage_inference_files_unchanged": true
+}

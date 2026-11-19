@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "transcreation.cli",
+    "run",
+    "--input",
+    "results\\phase7_integration\\v4_completed\\automated_request.json"
+  ],
+  "returncode": 0,
+  "wall_seconds": 32.322661599999265,
+  "stdout": "PLAN_REQUIRES_REVIEW: stopped at planning_review; generation permitted: False\n",
+  "stderr": ""
+}

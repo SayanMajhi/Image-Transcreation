@@ -1,0 +1,39 @@
+{
+  "image_sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+  "original_dimensions": [
+    60,
+    40
+  ],
+  "source_phrase": "synthetic object",
+  "model_id": "synthetic detector",
+  "resolved_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        0,
+        0,
+        9,
+        20
+      ],
+      "score": 0.5,
+      "label": "synthetic object"
+    },
+    {
+      "box": [
+        10,
+        0,
+        19,
+        20
+      ],
+      "score": 0.5,
+      "label": "synthetic object"
+    }
+  ],
+  "settings": {},
+  "timing": {},
+  "memory": {},
+  "raw_predictions": {},
+  "observations": [],
+  "research_only": true
+}

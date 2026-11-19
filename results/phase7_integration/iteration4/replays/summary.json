@@ -1,0 +1,22 @@
+{
+  "synthetic_cases": 18,
+  "historical_cases": 7,
+  "synthetic_decision_changes": [
+    {
+      "case": "same_candidate_with_satisfied_preservation_instruction",
+      "before": "REVIEW",
+      "after": "PROPOSE"
+    },
+    {
+      "case": "same_candidate_with_general_non_preservation_instruction",
+      "before": "REVIEW",
+      "after": "PROPOSE"
+    }
+  ],
+  "historical_decision_changes": [],
+  "historical_positive_candidates": 0,
+  "baseline_policy_sha256": "d63f12ab1c9aa5710abc8321568a05535f190f49183b207993760e54785a211a",
+  "corrected_policy_sha256": "f74e0ad77714c5489df466c4d3663916aa08ef0fdaf8dcbb04ab586d572a0c87",
+  "live_model_calls": 0,
+  "replay_outputs_are_not_executable_plans": true
+}

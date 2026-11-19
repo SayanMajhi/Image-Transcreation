@@ -15,6 +15,8 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--version", action="version",
                         version=f"transcreate {version('culture-transcreation')}")
     commands = parser.add_subparsers(dest="command")
+    run = commands.add_parser("run", help="Run automated planning/reviewed grounding/replay or explicit guided research from JSON")
+    run.add_argument("--input", type=Path, required=True, help="PipelineInput or independent ResearchInput JSON; paths relative to current directory")
     caption = commands.add_parser("caption", help="Caption one image with SmolVLM-500M")
     caption.add_argument("--image", type=Path, required=True)
     caption.add_argument("--model", choices=("smolvlm",))
@@ -39,6 +41,22 @@ def main(argv: list[str] | None = None) -> None:
     args = parser.parse_args(argv)
     if args.command is None:
         print("Culture Transcreation CLI is ready.")
+        return
+
+    if args.command == "run":
+        try:
+            values = json.loads(args.input.read_text(encoding="utf-8-sig"))
+            if values.get("execution_mode") == "GUIDED_RESEARCH":
+                from transcreation.guided_research import ResearchInput, run_guided_research
+                result = run_guided_research(ResearchInput(**values))
+                print(f"{result['status']}: {result['reason']}")
+                if result["status"] == "FAILED":
+                    raise SystemExit(1)
+            else:
+                from scripts.run_pipeline import main as pipeline_main
+                pipeline_main(["--input", str(args.input)])
+        except (OSError, TypeError, ValueError, KeyError) as exc:
+            parser.error(str(exc))
         return
 
     if args.command == "ground":

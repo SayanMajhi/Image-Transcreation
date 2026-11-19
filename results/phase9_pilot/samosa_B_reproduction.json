@@ -1,0 +1,9 @@
+{
+  "command": "python -B -m scripts.reference_replacement --request results/phase8_cultural_validation/true_object_replacement/request_B.json --output results/phase8_cultural_validation/true_object_replacement/reproduction_B_phase9",
+  "executed": "2026-11-12, Python 3.11.9, Pillow 13.0.0, NumPy 2.4.6, CPU",
+  "frozen_output_sha256": "bb922916ccbdd776f2c3ec0300d2fbe40398026ee3e1c92b66e31f3eb894ddfb",
+  "reproduced_output_sha256": "bb922916ccbdd776f2c3ec0300d2fbe40398026ee3e1c92b66e31f3eb894ddfb",
+  "decoded_pixels_identical": true,
+  "png_bytes_identical": true,
+  "note": "Pixel identity is the reproducibility criterion; byte identity can differ across Pillow/zlib versions without any pixel change."
+}

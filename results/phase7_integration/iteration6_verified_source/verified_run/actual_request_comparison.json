@@ -1,0 +1,14 @@
+{
+  "unchanged_request_fields": {
+    "model": true,
+    "stream": true,
+    "format": true,
+    "options": true,
+    "keep_alive": true,
+    "system_prompt": true
+  },
+  "actual_user_message_changed_fields": [
+    "verified_objects"
+  ],
+  "no_system_prompt_or_generation_change": true
+}

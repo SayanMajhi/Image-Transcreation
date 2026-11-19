@@ -1,0 +1,64 @@
+{
+  "status": "PENDING",
+  "record_type": "edit_scope_clarification_request",
+  "created_at_utc": "2026-11-11T08:03:00.145545+00:00",
+  "source_path": "data/ramen.jpg",
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "dimensions": [
+    1408,
+    1120
+  ],
+  "encoding": "WEBP",
+  "reviewer": null,
+  "human_confirmation": null,
+  "editable_contents": null,
+  "protected_contents": null,
+  "target_appearance": null,
+  "existing_preservation_requirements": [
+    "white ceramic bowl",
+    "table",
+    "camera angle",
+    "lighting",
+    "background"
+  ],
+  "visible_regions_assistant_observations": [
+    "Noodles are visible through the center and lower parts of the bowl, partly covered by toppings and utensils.",
+    "Broth is visible between food contents and in the black spoon; ingredient composition is not established by appearance.",
+    "A halved egg is visible near the upper center.",
+    "Apparent meat slices overlap the lower food region; their exact composition is not independently verified.",
+    "Dark sheet-like seaweed is visible at the upper edge, overlapping the inner bowl.",
+    "Green sliced garnish, tan strips, dark strips and a white/pink patterned topping overlap the noodles; exact ingredient identities are not all established.",
+    "The white ceramic bowl surrounds the food; its inner surface meets liquid/food along irregular boundaries.",
+    "A black spoon lies over the right interior and extends across the rim; broth inside it is visually continuous in type but not a bowl-region mask.",
+    "Wooden chopsticks overlap the left food region and bowl edge.",
+    "The pale tabletop/background surrounds the bowl."
+  ],
+  "unresolved_segmentation_boundaries": [
+    "Food, broth and the curved inner white bowl meet along thin irregular boundaries; a broad food box would also contain protected ceramic.",
+    "Spoon and chopsticks occlude food and cross bowl boundaries. Removing or regenerating food must not imply permission to alter these utensils.",
+    "Seaweed, egg, garnish and other toppings overlap noodles; changing only noodles does not specify permission to remove toppings.",
+    "Broth visible inside the spoon requires explicit scope clarification if broth is editable but the spoon is protected.",
+    "These observations are assistant visual inspection, not user confirmation, verified segmentation boundaries or editing authorization."
+  ],
+  "questions": {
+    "editable_food": "State exactly which contents may change: only noodles; noodles and broth; all edible contents including toppings; or a precise custom selection. For egg, meat slices, seaweed, green garnish and other toppings, state whether to keep, replace or remove. No choice is preselected.",
+    "protected_objects": "Confirm the white ceramic bowl, table, camera angle, lighting and background remain protected. Separately state whether the black spoon and wooden chopsticks must remain unchanged. If broth changes, clarify whether liquid visible inside the spoon may change.",
+    "desired_appearance": "Describe the intended final appearance of Indian-style masala noodles in your own words, including retained/replaced/removed toppings and broth/sauce appearance if relevant. Do not rely on an unstated ingredient list.",
+    "image_bound_confirmation": "Explicitly confirm these choices apply to this exact photograph and SHA-256. This is scope evidence only, not permission to execute image editing."
+  },
+  "prior_human_classification": "MATERIAL_UNRESOLVED",
+  "prior_human_reason": "It is unclear which food contents will change and whether the white bowl will remain protected.",
+  "old_evidence_sha256": {
+    "results/phase7_integration/iteration8/ramen_uncertainty_review/planning_input.json": "f6f92654e5cee49c8340580de772d85d0211dbe4e503ad101d822fed09466e65",
+    "results/phase7_integration/iteration8/ramen_uncertainty_review/pending.json": "7b62777122ba543c6430ce50ed22a7f02398d50b719582d2a939b43b102b6923",
+    "results/phase7_integration/iteration8/ramen_uncertainty_review/human_decision.json": "0d6fac07cb62c49e03392fd75846618a197f821833457483a20082a717c1ceab",
+    "results/phase7_integration/iteration8/ramen_uncertainty_review/planner_audit.json": "5dee35147680522f7cd2bc6f6702171d21a0f85081525cbd95edf401e68ea2fc",
+    "results/phase7_integration/iteration8/ramen_uncertainty_review/validated_plan.json": "0d187494ac277ae35c72360ca427b39583c9c3dd03ceb1f529c04c4951590c56"
+  },
+  "new_planning_input_created": false,
+  "new_qwen_calls": 0,
+  "grounding_authorized": false,
+  "sam_authorized": false,
+  "diffusion_authorized": false,
+  "image_edit_authorized": false
+}

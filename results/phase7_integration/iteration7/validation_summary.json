@@ -1,0 +1,47 @@
+{
+  "raw_decision": "PROPOSE",
+  "final_decision": "REVIEW",
+  "raw_candidate_count": 1,
+  "released_candidate_count": 0,
+  "quarantined_candidates": [
+    {
+      "candidate_index": 0,
+      "raw_proposal": {
+        "object_description": "Japanese ramen noodles in a white bowl",
+        "localization_phrase": "Japanese ramen noodles in a white bowl",
+        "proposed_change": "change the noodles to masala noodles",
+        "cultural_reason": "Transforming the Japanese ramen into Indian-style masala noodles is a contextually justified adaptation of the scene to the target culture, Indian.",
+        "identity_uncertain": false,
+        "verified_object_id": "ramen-food-1"
+      },
+      "issue_codes": [
+        "USER_CONSTRAINTS_UNRESOLVED",
+        "EDIT_UNCERTAINTY_UNRESOLVED"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    },
+    {
+      "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+      "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "candidate_index": null,
+      "severity": "review"
+    }
+  ],
+  "review_preparation": {
+    "pending_reviews": [],
+    "accepted": false,
+    "reason": "Final REVIEW; no released candidate eligible for edit-intent review."
+  },
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "generation_permitted": false,
+  "GroundingDINO_calls": 0,
+  "SAM_calls": 0,
+  "Diffusion_calls": 0
+}

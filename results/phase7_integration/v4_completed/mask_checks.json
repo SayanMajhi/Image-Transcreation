@@ -1,0 +1,53 @@
+{
+  "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED",
+  "dimensions": [
+    2272,
+    1704
+  ],
+  "binary_values": [
+    0,
+    255
+  ],
+  "editable_pixels": 1846716,
+  "source_image_percent": 47.70041906367784,
+  "original_sam_reference_pixels": 2476478,
+  "added_relative_to_sam": 0,
+  "removed_relative_to_sam": 629762,
+  "protected_intersection": 0,
+  "protected_pixels": 1550006,
+  "bounds_exclusive": [
+    75,
+    470,
+    2191,
+    1621
+  ],
+  "uncertain_gap_exclusion_boxes": 116,
+  "mask_sha256": "a025cfe02f676ac6464d62cf143feca3292e016049ff9778ca239514a91167cb",
+  "protected_sha256": "75508040b65e99635504dd84e6652e790edb41d423fc19316305f91ea9537baa",
+  "geometry": {
+    "crop_box_xyxy": [
+      11,
+      406,
+      2255,
+      1685
+    ],
+    "padding_ltrb": [
+      0,
+      482,
+      0,
+      483
+    ],
+    "padded_side": 2244,
+    "original_dimensions": [
+      2272,
+      1704
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "processing_mask_pixels": 96044,
+  "ground_truth_noodle_coverage_percentage": null,
+  "status": "Final geometry before first diffusion; draft preserved separately; no mask tuning after generation."
+}

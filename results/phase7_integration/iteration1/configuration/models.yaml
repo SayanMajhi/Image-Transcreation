@@ -1,0 +1,12 @@
+active_model: smolvlm #model SmolVLM--500M
+device: auto # use the graphics card if available,otherwise use the processor
+precision: float16 # use less memory on the graphics card; the processor uses float32
+seed: 42 # helps make results repeatable
+
+models: # settings for the available models
+  smolvlm:
+    model_id: HuggingFaceTB/SmolVLM-500M-Instruct # where to download the model
+    revision: a7da5b986cb59b408707209984f360a5f4ad7e47 # use this exact version of the model
+    task: caption # describe what is visible in the image
+    max_new_tokens: 128 # maximum number of text pieces to generate; a piece can be part of a word
+    num_beams: 1 # build one description without comparing several possible versions

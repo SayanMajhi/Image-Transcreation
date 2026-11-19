@@ -1,0 +1,110 @@
+[
+  {
+    "iteration": "Iteration 5",
+    "audit_sha256": "e6703b7a37aa7e77611eb976419d4ad8bf9563cdfc7aed69824661b183dd45fb",
+    "raw_decision": "PROPOSE",
+    "object_description": "Japanese ramen noodles",
+    "verified_object_id": null,
+    "localization_phrase": "Indian-style masala noodles",
+    "proposed_change": "Indian-style masala noodles",
+    "scene_summary": "A bowl of food with chopsticks and a spoon. The caption reports a Japanese bowl of ramen noodles, but the scene is adapted to an Indian-style masala noodle dish.",
+    "summary_qualitative_assessment": "Original/future confusion and false caption attribution",
+    "final_decision": "REVIEW",
+    "released_candidate_count": 0,
+    "issues": [
+      {
+        "code": "UNVERIFIED_SOURCE_OBJECT",
+        "message": "Verify the source-object identity of: Japanese ramen noodles.",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "SOURCE_LOCALIZATION_MISMATCH",
+        "message": "Localization must retain the original object label: Japanese ramen noodles.",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "USER_CONSTRAINTS_UNRESOLVED",
+        "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "candidate_index": null,
+        "severity": "human_verification"
+      }
+    ],
+    "edit_intent_review_status": "Not prepared; final REVIEW"
+  },
+  {
+    "iteration": "Iteration 6",
+    "audit_sha256": "77a58cacdb0ed0367384cae8d4a276981cd36d4df0cf1778d015c9e57dd7918f",
+    "raw_decision": "PROPOSE",
+    "object_description": "A bowl of masala noodles with chopsticks and a spoon.",
+    "verified_object_id": "ramen-food-1",
+    "localization_phrase": "Indian masala noodles in a bowl",
+    "proposed_change": "A bowl of masala noodles with chopsticks and a spoon.",
+    "scene_summary": "A bowl of food with chopsticks and a spoon. The caption reports a Japanese ramen bowl with chopsticks and a spoon, but the bowl contains masala noodles instead of ramen.",
+    "summary_qualitative_assessment": "Original/future confusion and false caption attribution",
+    "final_decision": "REVIEW",
+    "released_candidate_count": 0,
+    "issues": [
+      {
+        "code": "SOURCE_OBJECT_MISMATCH",
+        "message": "The source-object identity does not match the user-verified description.",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "SOURCE_LOCALIZATION_MISMATCH",
+        "message": "Localization must retain the original object label: A bowl of masala noodles with chopsticks and a spoon..",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "SOURCE_REPLACEMENT_IDENTICAL",
+        "message": "The proposed replacement/modification is indistinguishable from the original object.",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "USER_CONSTRAINTS_UNRESOLVED",
+        "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "candidate_index": null,
+        "severity": "human_verification"
+      },
+      {
+        "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+        "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+        "candidate_index": null,
+        "severity": "review"
+      }
+    ],
+    "edit_intent_review_status": "Not prepared; final REVIEW"
+  },
+  {
+    "iteration": "Iteration 7",
+    "audit_sha256": "5dee35147680522f7cd2bc6f6702171d21a0f85081525cbd95edf401e68ea2fc",
+    "raw_decision": "PROPOSE",
+    "object_description": "Japanese ramen noodles in a white bowl",
+    "verified_object_id": "ramen-food-1",
+    "localization_phrase": "Japanese ramen noodles in a white bowl",
+    "proposed_change": "change the noodles to masala noodles",
+    "scene_summary": "The caption reports a bowl of food with chopsticks and a spoon. The user verified a Japanese ramen noodles in a white bowl.",
+    "summary_qualitative_assessment": "Original-only with separate caption/user attribution",
+    "final_decision": "REVIEW",
+    "released_candidate_count": 0,
+    "issues": [
+      {
+        "code": "USER_CONSTRAINTS_UNRESOLVED",
+        "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "candidate_index": null,
+        "severity": "human_verification"
+      },
+      {
+        "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+        "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+        "candidate_index": null,
+        "severity": "review"
+      }
+    ],
+    "edit_intent_review_status": "Not prepared; final REVIEW"
+  }
+]

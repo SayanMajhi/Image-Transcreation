@@ -1,0 +1,15 @@
+{
+  "source_image": "data\\ramen.jpg",
+  "image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "target_culture": "Indian",
+  "source_culture": "Japanese",
+  "user_instructions": "Original visible object, as declared by the user:\n\"Japanese ramen noodles in a bowl\"\n\nTransform the ramen into Indian-style masala noodles.\n\nPreserve the bowl, table, camera angle, lighting, and background.",
+  "verified_objects": [
+    {
+      "object_id": "ramen-food-1",
+      "description": "Japanese ramen noodles in a white bowl"
+    }
+  ],
+  "output_dir": "results\\phase7_integration\\final_demo\\automated",
+  "execution_mode": "AUTOMATED_PLANNING"
+}

@@ -1,0 +1,26 @@
+{
+  "record_type": "source_verification_request",
+  "status": "PENDING_USER_VERIFICATION",
+  "created_at_utc": "2026-11-10T10:30:36.094865+00:00",
+  "image_file": "original.jpg",
+  "preview_file": "source_preview.jpg",
+  "image_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+  "verified_object": null,
+  "source_culture": null,
+  "target_culture": null,
+  "user_instructions": null,
+  "user_preservation_requirements": null,
+  "questions": [
+    "What precise original object description do you personally verify in this image?",
+    "What target culture is intended, and is the source culture actually known?",
+    "What change do you actually want, and why does it fit the intended context? No change is a valid answer.",
+    "Which scene elements, object features and relationships must stay unchanged?"
+  ],
+  "required_before_inference": true,
+  "is_planning_input": false,
+  "predeclaration_complete": false,
+  "warning": "All genuine instructions must be retained. With any nonempty user_instructions and a candidate, the unchanged validator forces REVIEW.",
+  "approval_scope": null,
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false
+}

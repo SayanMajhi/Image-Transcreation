@@ -139,13 +139,13 @@ def validate_planning_result(
             issues.append(_issue("PRESERVATION_CONFLICT", f"Potential preserve/edit conflict involving: {edit.object_description}; distinguish identity from unchanged features.", index))
         if any(_contains_label(item, edit.proposed_change) for item in result.must_preserve):
             issues.append(_issue("PRESERVATION_CONFLICT", "A preservation statement names the intended change.", index))
-    # User constraints are opaque prose in the existing contract. Even candidates
-    # rejected before construction must not bypass this protection boundary.
+    # Opaque user prose requires an explicit human check, not automatic approval
+    # or unconditional rejection. Independently invalid candidates still block.
     had_candidates = bool(result.candidate_edits) or any(
         issue["candidate_index"] is not None for issue in (initial_issues or [])
     )
     if request.user_instructions and had_candidates:
-        issues.append(_issue("USER_CONSTRAINTS_UNRESOLVED", "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility."))
+        issues.append(_issue("USER_CONSTRAINTS_UNRESOLVED", "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.", severity="human_verification"))
     if result.uncertainties and result.candidate_edits:
         issues.append(_issue("EDIT_UNCERTAINTY_UNRESOLVED", "Resolve uncertainties material to the proposed edits; relevance is not automatically proven."))
     if result.decision == PlanningDecision.REVIEW and result.candidate_edits:
@@ -178,6 +178,7 @@ def validate_planning_result(
             decision_reason="No justified image edit is established; leave the source image unchanged. This does not authorize modification or certify cultural appropriateness.",
         ), issues
     requirements = tuple(dict.fromkeys((*result.verification_requirements,
+        *(issue["message"] for issue in issues if issue["severity"] == "human_verification"),
         "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
         "Verify localization phrases against the original image before grounding or editing.",
         "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",

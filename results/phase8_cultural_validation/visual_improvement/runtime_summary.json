@@ -1,0 +1,24 @@
+[
+  {
+    "condition": "A",
+    "inference_seconds": 356.47139599999355,
+    "load_seconds": 10.787891100000707,
+    "internal_process_seconds": 370.37546080000175,
+    "external_wall_seconds": 378.18652779999684,
+    "peak_allocated_CUDA_bytes": 673392640,
+    "peak_allocated_CUDA_GiB": 0.6271457672119141,
+    "effective_steps": 23,
+    "scope": "RESEARCH_ONLY"
+  },
+  {
+    "condition": "B",
+    "inference_seconds": 169.8043730999998,
+    "load_seconds": 12.555301299995335,
+    "internal_process_seconds": 186.28351350000594,
+    "external_wall_seconds": 197.2251127999989,
+    "peak_allocated_CUDA_bytes": 673392640,
+    "peak_allocated_CUDA_GiB": 0.6271457672119141,
+    "effective_steps": 23,
+    "scope": "RESEARCH_ONLY"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_refined_inpainting.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_absent_negative_prompt_preserves_existing_call_options (test_refined_inpainting.RefinedInpaintingTests.test_absent_negative_prompt_preserves_existing_call_options) ... ok\ntest_annotation_reference_cannot_change (test_refined_inpainting.RefinedInpaintingTests.test_annotation_reference_cannot_change) ... ok\ntest_bounded_research_oom_cannot_exceed_one_call (test_refined_inpainting.RefinedInpaintingTests.test_bounded_research_oom_cannot_exceed_one_call) ... ok\ntest_cli_explicit_refined_input_dispatch (test_refined_inpainting.RefinedInpaintingTests.test_cli_explicit_refined_input_dispatch) ... ok\ntest_every_pinned_hash_is_enforced (test_refined_inpainting.RefinedInpaintingTests.test_every_pinned_hash_is_enforced) ... ok\ntest_full_region_protection_is_subtracted (test_refined_inpainting.RefinedInpaintingTests.test_full_region_protection_is_subtracted) ... ok\ntest_input_modified_during_loading_stops_before_generation (test_refined_inpainting.RefinedInpaintingTests.test_input_modified_during_loading_stops_before_generation) ... ok\ntest_invalid_attempt_limits_rejected_before_loading (test_refined_inpainting.RefinedInpaintingTests.test_invalid_attempt_limits_rejected_before_loading) ... ok\ntest_invalid_negative_prompts_rejected_without_model_dispatch (test_refined_inpainting.RefinedInpaintingTests.test_invalid_negative_prompts_rejected_without_model_dispatch) ... ok\ntest_isolated_from_original_and_guided_routes (test_refined_inpainting.RefinedInpaintingTests.test_isolated_from_original_and_guided_routes) ... ok\ntest_manual_origin_distinct_from_original_sam (test_refined_inpainting.RefinedInpaintingTests.test_manual_origin_distinct_from_original_sam) ... ok\ntest_mocked_generation_uses_actual_refined_mask_and_original_resolution (test_refined_inpainting.RefinedInpaintingTests.test_mocked_generation_uses_actual_refined_mask_and_original_resolution) ... ok\ntest_negative_prompt_only_when_explicitly_supplied_for_research (test_refined_inpainting.RefinedInpaintingTests.test_negative_prompt_only_when_explicitly_supplied_for_research) ... ok\ntest_no_human_or_permission_escalation (test_refined_inpainting.RefinedInpaintingTests.test_no_human_or_permission_escalation) ... ok\ntest_nonbinary_empty_wrong_size_masks_rejected (test_refined_inpainting.RefinedInpaintingTests.test_nonbinary_empty_wrong_size_masks_rejected) ... ok\ntest_polygon_coordinates_validated_before_rasterization (test_refined_inpainting.RefinedInpaintingTests.test_polygon_coordinates_validated_before_rasterization) ... ok\ntest_prior_output_cannot_be_overwritten (test_refined_inpainting.RefinedInpaintingTests.test_prior_output_cannot_be_overwritten) ... ok\ntest_protected_region_inclusion_rejected_even_with_new_hash (test_refined_inpainting.RefinedInpaintingTests.test_protected_region_inclusion_rejected_even_with_new_hash) ... ok\ntest_real_error_propagation_without_retry_or_false_success (test_refined_inpainting.RefinedInpaintingTests.test_real_error_propagation_without_retry_or_false_success) ... ok\ntest_saved_pixel_geometry_cannot_silently_change (test_refined_inpainting.RefinedInpaintingTests.test_saved_pixel_geometry_cannot_silently_change) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 2.932s\n\nOK\n"
+}

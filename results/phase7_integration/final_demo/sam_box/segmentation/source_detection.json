@@ -1,0 +1,104 @@
+{
+  "image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "original_dimensions": [
+    1408,
+    1120
+  ],
+  "source_phrase": "noodles",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "resolved_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        244.73678588867188,
+        160.3011016845703,
+        1145.2908935546875,
+        914.7277221679688
+      ],
+      "score": 0.8188716769218445,
+      "label": "noodles"
+    }
+  ],
+  "settings": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42,
+    "effective_device": "cuda",
+    "normalized_prompt": "noodles.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "disable_custom_kernels": true,
+    "inference_mode": true,
+    "eval": true,
+    "coordinate_format": "xyxy_original_pixels",
+    "postprocess_box_argument": "threshold",
+    "target_sizes": [
+      [
+        1120,
+        1408
+      ]
+    ],
+    "image_processor": {
+      "_processor_class": "GroundingDinoProcessor",
+      "image_processor_type": "GroundingDinoImageProcessor",
+      "format": "coco_detection",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1333,
+        "shortest_edge": 800
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "do_convert_annotations": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": null
+    }
+  },
+  "timing": {
+    "load_seconds": 8.05227399999967,
+    "preprocess_seconds": 0.05857800000012503,
+    "inference_seconds": 1.1579712000002473,
+    "postprocess_seconds": 0.0177469000009296,
+    "total_seconds": 9.312312400001247
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 692084224,
+    "inference_peak_allocated_bytes": 1763250688,
+    "device": "cuda"
+  },
+  "raw_predictions": {
+    "boxes": [
+      [
+        244.73678588867188,
+        160.3011016845703,
+        1145.2908935546875,
+        914.7277221679688
+      ]
+    ],
+    "scores": [
+      0.8188716769218445
+    ],
+    "text_labels": [
+      "noodles"
+    ]
+  },
+  "observations": [],
+  "research_only": true
+}

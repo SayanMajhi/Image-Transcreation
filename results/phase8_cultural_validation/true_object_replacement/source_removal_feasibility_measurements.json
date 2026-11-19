@@ -1,0 +1,38 @@
+{
+  "source_dimensions": [
+    1280,
+    853
+  ],
+  "outer_ring_pixels": 36800,
+  "outer_ring_RGB_min": [
+    253,
+    250,
+    247
+  ],
+  "outer_ring_RGB_max": [
+    255,
+    255,
+    255
+  ],
+  "outer_ring_RGB_median": [
+    255.0,
+    255.0,
+    255.0
+  ],
+  "outer_ring_exact_white_fraction": 0.9808967391304347,
+  "warm_pixel_heuristic_outside_old_rectangle": 0,
+  "warm_pixel_heuristic_outside_latest_tight_region": 341,
+  "heuristic_not_ground_truth": true,
+  "previous_raw_generation_analysis": {
+    "A": {
+      "unchanged_original_RGB_pixels_inside_SAM0": 2,
+      "SAM0_pixels": 343864,
+      "unchanged_warm_original_pixels_outside_tight_region": 341
+    },
+    "B": {
+      "unchanged_original_RGB_pixels_inside_SAM0": 0,
+      "SAM0_pixels": 343864,
+      "unchanged_warm_original_pixels_outside_tight_region": 341
+    }
+  }
+}

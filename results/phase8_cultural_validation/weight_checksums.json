@@ -1,0 +1,46 @@
+{
+  "reason": "normal large-file transfer stalled; ranged probes succeeded",
+  "files": [
+    {
+      "model": "diffusers/stable-diffusion-xl-1.0-inpainting-0.1",
+      "revision": "115134f363124c53c7d878647567d04daf26e41e",
+      "filename": "text_encoder/model.fp16.safetensors",
+      "bytes": 246144867,
+      "sha256": "fc83cf401d930147807e7c44021c164bcc5508c9d4cc0ff35f4e354685ca9cd0",
+      "verification": "existing complete file matched"
+    },
+    {
+      "model": "diffusers/stable-diffusion-xl-1.0-inpainting-0.1",
+      "revision": "115134f363124c53c7d878647567d04daf26e41e",
+      "filename": "text_encoder_2/model.fp16.safetensors",
+      "bytes": 1389382884,
+      "sha256": "a8622bd41f8d359df484fdf9de091edb9337a2fd747f0a5c9c320a62e24d1fd3",
+      "verification": "existing complete file matched"
+    },
+    {
+      "model": "diffusers/stable-diffusion-xl-1.0-inpainting-0.1",
+      "revision": "115134f363124c53c7d878647567d04daf26e41e",
+      "filename": "unet/diffusion_pytorch_model.fp16.safetensors",
+      "bytes": 5135178560,
+      "sha256": "6470840731e98cc16713ddf3ac7ee458c9fdbcb881a98c6727cd4a938f227d3f",
+      "verification": "existing complete file matched"
+    },
+    {
+      "model": "diffusers/stable-diffusion-xl-1.0-inpainting-0.1",
+      "revision": "115134f363124c53c7d878647567d04daf26e41e",
+      "filename": "vae/diffusion_pytorch_model.fp16.safetensors",
+      "bytes": 167335338,
+      "sha256": "4ad62825e5c8b31eefb77355ba6693785619bf7d669d9b1a6fd9f19dec6d65b3",
+      "verification": "existing complete file matched"
+    },
+    {
+      "model": "diffusers/controlnet-canny-sdxl-1.0",
+      "revision": "eb115a19a10d14909256db740ed109532ab1483c",
+      "filename": "diffusion_pytorch_model.fp16.safetensors",
+      "bytes": 2502139136,
+      "sha256": "b2e7d3921058a442cc80430d1ec8847f42599c705e2451c95e77cf4dcf8d6c25",
+      "verification": "full SHA-256 matched official pinned LFS metadata",
+      "download_seconds": 211.661463299999
+    }
+  ]
+}

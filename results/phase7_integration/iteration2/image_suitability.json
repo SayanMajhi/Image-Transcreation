@@ -1,0 +1,49 @@
+{
+  "sources": [
+    {
+      "id": "scene_04",
+      "path": "scene_04.jpg",
+      "group": "cultural",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Japan_tea_ceremony_1165.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Japan_tea_ceremony_1165.jpg/1280px-Japan_tea_ceremony_1165.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Japan tea ceremony 1165.jpg",
+      "search_query": "Japanese tea ceremony",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Ermell\" title=\"User:Ermell\">Ermell</a>",
+      "sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+      "current_sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+      "hash_matches_manifest": true
+    },
+    {
+      "id": "scene_06",
+      "path": "scene_06.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg/1280px-Parked_bicycle_with_graffitied_building_facade_and_doors_in_Amsterdam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Parked bicycle with graffitied building facade and doors in Amsterdam.jpg",
+      "search_query": "bicycle parked street",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+      "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+      "current_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+      "hash_matches_manifest": true
+    },
+    {
+      "id": "scene_07",
+      "path": "scene_07.jpg",
+      "group": "ordinary",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grandmother_preparing_food_inside_traditional_kitchen_(edited).jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Grandmother_preparing_food_inside_traditional_kitchen_%28edited%29.jpg/1280px-Grandmother_preparing_food_inside_traditional_kitchen_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source_title": "File:Grandmother preparing food inside traditional kitchen (edited).jpg",
+      "search_query": "person cooking kitchen",
+      "license": "CC BY-SA 4.0",
+      "attribution_html": "<ul><li><b>Original: </b> <a href=\"//commons.wikimedia.org/wiki/User:Mithunkunwar9\" title=\"User:Mithunkunwar9\">Mithun Kunwar</a></li>\n<li><b>Derivative work: </b> <a href=\"//commons.wikimedia.org/wiki/User:Radomianin\" title=\"User:Radomianin\">Radomianin</a></li></ul>",
+      "sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+      "current_sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+      "hash_matches_manifest": true
+    }
+  ],
+  "visual_observation_scene_07": "Person beside a fire and vessels; actual contents of vessels are not visually identifiable. This observation is not a user-verified food identity or cultural claim.",
+  "selection_decision": "No new planning run. There is no eligible existing final PROPOSE or actual user-supplied verification for a new food proposal. Do not manufacture verification from a photograph title.",
+  "permissions": "No cultural-editing authority or genuine human acceptance inferred."
+}

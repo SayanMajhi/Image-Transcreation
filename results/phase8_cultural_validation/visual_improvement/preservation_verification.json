@@ -1,0 +1,16 @@
+{
+  "prior_files_checked": 262,
+  "changed_old_files": [
+    "reports\\cultural_transcreation_validation.md"
+  ],
+  "only_report_append_allowed": true,
+  "model_policy_and_historical_evidence_unchanged": true,
+  "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+  "completed_conditions": [
+    "A",
+    "B"
+  ],
+  "actual_new_generation_calls": 2,
+  "direct_human_review_of_new_outputs": "PENDING",
+  "independent_three_person_panel_claimed": false
+}

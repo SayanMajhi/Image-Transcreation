@@ -1,0 +1,12 @@
+{
+  "human_decision": "MATERIAL_UNRESOLVED",
+  "reviewer": "Sayan",
+  "reason": "It is unclear which food contents will change and whether the white bowl will remain protected.",
+  "prior_final_decision": "REVIEW",
+  "released_candidates": 0,
+  "prior_decision_sha256": "0d6fac07cb62c49e03392fd75846618a197f821833457483a20082a717c1ceab",
+  "research_scope": "Assistant-inspected conservative proposed scope, not actual user scope confirmation or human mask approval.",
+  "next_required": "Reliable food-only mask excluding protected bowl and utensils, explicit food-content scope, and real review for any automated continuation.",
+  "generation_status": "BLOCKED_UNSUITABLE_MASKS",
+  "new_diffusion_calls": 0
+}

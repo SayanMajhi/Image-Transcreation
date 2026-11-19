@@ -1,0 +1,36 @@
+{
+  "execution_mode": "GUIDED_RESEARCH",
+  "scope": "RESEARCH_ONLY",
+  "human_approved": false,
+  "automated_plan_success": false,
+  "cultural_edit_authorized": false,
+  "status": "SOURCE_OBJECT_REQUIRES_REVIEW",
+  "events": [
+    {
+      "stage": "resources",
+      "action": "OLLAMA_IDLE_CONFIRMED",
+      "seconds": 0.028447199998481665
+    },
+    {
+      "stage": "grounding",
+      "action": "DISPATCH",
+      "seconds": 0.029235699999844655,
+      "phrase": "spaghetti noodles"
+    },
+    {
+      "stage": "grounding",
+      "action": "RELEASED",
+      "seconds": 10.604165400000056
+    }
+  ],
+  "reason": "Inspect every predicted box; supply pinned detection, explicit index and selection note. No SAM or generation ran.",
+  "total_seconds": 10.604174199997942,
+  "artifact_sha256": {
+    "request.json": "bf30d33aa924bd296392a3ad0fc56c4c09efa46ff12e2facb3205d923ea62aaf",
+    "source.jpg": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+    "grounding/annotated.png": "d71d5502eabb925b3dff600abf5aceb287622a5411fe073c938a932e65c583f6",
+    "grounding/comparison.png": "b4d23ce92f0cf3e72b2bfa46d2bb2edf9748e989d34061d848e216313ae28c6a",
+    "grounding/detection.json": "a7bd4d39ff3011c548d25f2c379617a7c8daf58ce195eff8465703e898ab4e30",
+    "grounding/original.png": "d6e2e3d2bce6c47f10befcf7d903bde0c8f499512185be0d48d12f0c2bd7932e"
+  }
+}

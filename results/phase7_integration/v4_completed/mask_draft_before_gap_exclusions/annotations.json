@@ -1,0 +1,287 @@
+{
+  "scope": "RESEARCH_ONLY",
+  "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED",
+  "annotation_method": "operator_polygon_trace_with_protected_exclusions",
+  "operator": "Codex assistant source-image inspection and polygon tracing; not human mask approval",
+  "human_approved": false,
+  "cultural_edit_authorized": false,
+  "source_image_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+  "original_dimensions": [
+    2272,
+    1704
+  ],
+  "sam_result_sha256": "31d6cfece2d8b67a5dc87e42c2a8c1a25f6e0ac7e8a4ee12b4988a05b44b4a2e",
+  "sam_reference_index": 0,
+  "sam_reference_mask_sha256": "387d469b5f94d0d9b3e38a9c4c7cc3ad2c54956e71198d1570ff20b0cd915e1b",
+  "target_definition": "A substantial contiguous visible pasta surface and attached seasoning. Exclude visible white plate/rim, rear restaurant objects and background; preserve an uncertain food-edge margin. User-defined Indian-style masala spaghetti research adaptation, not a verified traditional dish.",
+  "boundary_reason": "SAM 0 is coherent but reaches image borders and has uncertain peripheral plate speckles. Fresh source-coordinate inner-food polygon follows the broad pasta mound with generous inward margins; uncertain outer food/plate boundary pixels are excluded. Attached herb/garlic-like seasoning is within explicit V4 editable scope. No global dilation or synthetic SAM JSON.",
+  "editable_polygons": [
+    {
+      "label": "contiguous interior spaghetti mound and attached seasoning",
+      "points": [
+        [
+          80,
+          800
+        ],
+        [
+          130,
+          630
+        ],
+        [
+          225,
+          510
+        ],
+        [
+          315,
+          470
+        ],
+        [
+          425,
+          490
+        ],
+        [
+          530,
+          560
+        ],
+        [
+          645,
+          630
+        ],
+        [
+          755,
+          615
+        ],
+        [
+          845,
+          540
+        ],
+        [
+          945,
+          515
+        ],
+        [
+          1050,
+          565
+        ],
+        [
+          1160,
+          550
+        ],
+        [
+          1290,
+          565
+        ],
+        [
+          1410,
+          630
+        ],
+        [
+          1510,
+          680
+        ],
+        [
+          1630,
+          710
+        ],
+        [
+          1790,
+          760
+        ],
+        [
+          1960,
+          825
+        ],
+        [
+          2120,
+          895
+        ],
+        [
+          2190,
+          980
+        ],
+        [
+          2190,
+          1510
+        ],
+        [
+          2050,
+          1600
+        ],
+        [
+          1770,
+          1620
+        ],
+        [
+          1400,
+          1620
+        ],
+        [
+          1050,
+          1620
+        ],
+        [
+          720,
+          1610
+        ],
+        [
+          430,
+          1590
+        ],
+        [
+          220,
+          1550
+        ],
+        [
+          95,
+          1440
+        ],
+        [
+          75,
+          1200
+        ]
+      ]
+    }
+  ],
+  "protected_polygons": [
+    {
+      "label": "all rear background and conservatively enclosed plate/rim",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          2271,
+          0
+        ],
+        [
+          2271,
+          840
+        ],
+        [
+          2200,
+          790
+        ],
+        [
+          2000,
+          680
+        ],
+        [
+          1800,
+          610
+        ],
+        [
+          1650,
+          560
+        ],
+        [
+          1450,
+          510
+        ],
+        [
+          1300,
+          430
+        ],
+        [
+          1120,
+          450
+        ],
+        [
+          920,
+          405
+        ],
+        [
+          790,
+          440
+        ],
+        [
+          680,
+          520
+        ],
+        [
+          560,
+          465
+        ],
+        [
+          440,
+          370
+        ],
+        [
+          300,
+          370
+        ],
+        [
+          160,
+          490
+        ],
+        [
+          0,
+          660
+        ]
+      ]
+    },
+    {
+      "label": "bottom uncertain frame margin",
+      "points": [
+        [
+          0,
+          1660
+        ],
+        [
+          2271,
+          1660
+        ],
+        [
+          2271,
+          1703
+        ],
+        [
+          0,
+          1703
+        ]
+      ]
+    },
+    {
+      "label": "left uncertain frame margin",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          45,
+          0
+        ],
+        [
+          45,
+          1703
+        ],
+        [
+          0,
+          1703
+        ]
+      ]
+    },
+    {
+      "label": "right uncertain frame margin",
+      "points": [
+        [
+          2230,
+          0
+        ],
+        [
+          2271,
+          0
+        ],
+        [
+          2271,
+          1703
+        ],
+        [
+          2230,
+          1703
+        ]
+      ]
+    }
+  ]
+}

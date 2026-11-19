@@ -1,0 +1,34 @@
+{
+  "planning_result": {
+    "decision": "REVIEW",
+    "decision_reason": "Review required; no candidate edit is released downstream. Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+    "scene_summary": "The caption reports a red ceramic cup on a table.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "table",
+      "lighting"
+    ],
+    "uncertainties": [
+      "Review the proposed finish against the original photograph."
+    ],
+    "verification_requirements": [
+      "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "Review the original-scene summary and any paraphrased identities against the image.",
+      "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+    ]
+  },
+  "issues": [
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    },
+    {
+      "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+      "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "candidate_index": null,
+      "severity": "review"
+    }
+  ]
+}

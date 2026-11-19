@@ -1,0 +1,94 @@
+{
+  "execution_mode": "AUTOMATED_PLANNING",
+  "state": "PLAN_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source",
+    "caption",
+    "planning",
+    "deterministic_validation"
+  ],
+  "stopped_at": "planning_review",
+  "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "5212e630e3abd17c7136b4dc4b8b7837abeb35abb6d318db80eb2c8c333ca300",
+      "sha256": "5212e630e3abd17c7136b4dc4b8b7837abeb35abb6d318db80eb2c8c333ca300",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+      "sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+      "path": "evidence/source/ramen.jpg"
+    },
+    "caption.json": {
+      "id": "a3231e9bab8e12d321fdf44b1092c5b6a6f6b82f8d0e4e6a1200f4e9bcda1677",
+      "sha256": "a3231e9bab8e12d321fdf44b1092c5b6a6f6b82f8d0e4e6a1200f4e9bcda1677",
+      "path": "caption.json"
+    },
+    "planning_input.json": {
+      "id": "8973edc419eb1bc465761511d68d0d829c62543ba25302bcb1e4345e19b368d9",
+      "sha256": "8973edc419eb1bc465761511d68d0d829c62543ba25302bcb1e4345e19b368d9",
+      "path": "planning_input.json"
+    },
+    "planner_audit.json": {
+      "id": "6aba399b7e6a595d16a37d4d62186a50fa28732914ef9347e100ce3b442b32d6",
+      "sha256": "6aba399b7e6a595d16a37d4d62186a50fa28732914ef9347e100ce3b442b32d6",
+      "path": "planner_audit.json"
+    },
+    "validated_plan.json": {
+      "id": "7c481e58e3ef258f6fd6ec83fa49c18b9ede9667f3145beab9fe61253a12015e",
+      "sha256": "7c481e58e3ef258f6fd6ec83fa49c18b9ede9667f3145beab9fe61253a12015e",
+      "path": "validated_plan.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.14022819999991043
+    },
+    {
+      "stage": "resource_preflight",
+      "action": "QWEN_NOT_RESIDENT",
+      "seconds": 0.16969400000016321
+    },
+    {
+      "stage": "caption",
+      "action": "CAPTION_COMPLETED",
+      "seconds": 14.013178699999116
+    },
+    {
+      "stage": "caption",
+      "action": "MODEL_REFERENCES_RELEASED",
+      "seconds": 14.148379199999908,
+      "cuda_allocated_bytes_after": 0
+    },
+    {
+      "stage": "planning",
+      "action": "VALIDATED",
+      "seconds": 25.954829099999188,
+      "decision": "REVIEW"
+    },
+    {
+      "stage": "planning",
+      "action": "QWEN_UNLOAD_CONFIRMED",
+      "seconds": 25.95642869999938
+    },
+    {
+      "stage": "planning_review",
+      "action": "STOP",
+      "seconds": 25.956443600000057,
+      "state": "PLAN_REQUIRES_REVIEW",
+      "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [
+    "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+    "Review the original-scene summary and any paraphrased identities against the image.",
+    "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+  ],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

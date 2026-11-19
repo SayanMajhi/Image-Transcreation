@@ -1,0 +1,7 @@
+User-provided Phase9 baseline declaration:
+CASE 1:
+French croissant -> Indian samosa
+Method: REFERENCE_GUIDED_COMPOSITING
+Human result: PASS - the user judged the final samosa replacement as natural and realistic.
+
+This is the evidence supplied by the current user protocol, not a new three-person evaluation or numeric rating. Historical files are unchanged.

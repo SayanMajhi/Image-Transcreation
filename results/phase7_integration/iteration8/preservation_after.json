@@ -1,0 +1,11 @@
+{
+  "checked": 707,
+  "changed": [
+    "results/phase7_integration/phase7_working_report.md"
+  ],
+  "unexpected_changes": [],
+  "previous_report_exact_prefix": true,
+  "existing_application_prompt_policy_review_code_unchanged": true,
+  "iteration7_evidence_unchanged": true,
+  "real_classification_status": "PENDING"
+}

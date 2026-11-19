@@ -1,0 +1,13 @@
+{
+  "source_caption": "A red ceramic cup is on a table.",
+  "caption_status": "COMPLETE",
+  "target_culture": "test target",
+  "source_culture": null,
+  "user_instructions": "Change the exterior finish; preserve table and lighting.",
+  "verified_objects": [
+    {
+      "object_id": "cup-1",
+      "description": "red ceramic cup"
+    }
+  ]
+}

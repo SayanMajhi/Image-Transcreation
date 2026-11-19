@@ -1,0 +1,13 @@
+{
+  "method": "DETERMINISTIC_APPEARANCE_TRANSFER_BASELINE",
+  "scope": "RESEARCH_ONLY",
+  "color_space": "CIELAB D50 via Pillow LittleCMS",
+  "delta_a": 14.0,
+  "delta_b": 26.0,
+  "strength": 0.75,
+  "inward_gaussian_radius_pixels": 12.0,
+  "highlight_start_L": 70.0,
+  "highlight_end_L": 95.0,
+  "minimum_highlight_effect": 0.35,
+  "palette_reason": "Positive a/b warm reddish-yellow cue; no reference dish or authenticity claim."
+}

@@ -1,0 +1,16 @@
+{
+  "assessor": "Codex assistant visual inspection",
+  "views": [
+    "A/final.png",
+    "A/raw_generated_crop.png"
+  ],
+  "visual_verdict": "FAIL",
+  "findings": [
+    "Large conspicuous red chunk/insert rather than a distributed masala coating.",
+    "Most pasta remains pale; strands become flattened/broad in places.",
+    "Hard-compositing transitions and rectangular original-gap islands are visible.",
+    "Plate/background preserved numerically; this does not establish visual realism or cultural target success."
+  ],
+  "B_eligibility": "A has unnatural food texture and insufficient coherent masala appearance; execute only the predefined negative-prompt correction.",
+  "human_approved": false
+}

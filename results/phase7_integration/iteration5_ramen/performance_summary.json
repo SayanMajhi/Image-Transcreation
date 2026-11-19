@@ -1,0 +1,55 @@
+{
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "coordinator_invocations": 1,
+  "model_generation_calls": {
+    "SmolVLM": 1,
+    "Qwen": 1
+  },
+  "qwen_unload_is_not_a_generation": true,
+  "retry_count": 0,
+  "process_wall_seconds": 26.872827600003802,
+  "coordinator_last_transition_seconds": 25.43059489999723,
+  "smolvlm": {
+    "loading_seconds": 2.624070000005304,
+    "inference_seconds": 1.9558607999933884,
+    "generated_tokens": 12,
+    "eos_reached": true,
+    "token_ceiling_reached": false,
+    "device": "cuda",
+    "precision": "float16"
+  },
+  "qwen": {
+    "adapter_elapsed_seconds": 11.3337337999983,
+    "server_total_seconds": 11.2604401,
+    "server_load_seconds": 6.4004034,
+    "prompt_tokens": 718,
+    "prompt_eval_seconds": 0.413451,
+    "generated_tokens": 266,
+    "generation_seconds": 4.420712,
+    "done_reason": "stop"
+  },
+  "memory": {
+    "smolvlm_peak_allocated_bytes": 1178738688,
+    "smolvlm_peak_allocated_GiB": 1.0977859497070312,
+    "sampled_total_device_used_peak_MiB": 3423.0,
+    "sampled_total_device_utilization_peak_percent": 96.0,
+    "valid_device_samples": 24,
+    "qwen_per_model_allocated_peak": null,
+    "limitations": "nvidia-smi values are sampled device totals including other applications and desktop, not per-model allocations."
+  },
+  "cpu_inference_utilization": null,
+  "cpu_measurement_note": "Not reliably measured; no per-stage CPU figure invented.",
+  "cleanup_evidence": [
+    {
+      "stage": "caption",
+      "action": "MODEL_REFERENCES_RELEASED",
+      "seconds": 13.969216099998448,
+      "cuda_allocated_bytes_after": 0
+    },
+    {
+      "stage": "planning",
+      "action": "QWEN_UNLOAD_CONFIRMED",
+      "seconds": 25.430585399997653
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-11-11T18:25:47.334178+00:00",
+  "condition": "B",
+  "specific_A_failure": "ambiguous second rear-left triangular lobe extends left of the intended projected envelope",
+  "single_change": {
+    "control_scale": {
+      "A": 0.5,
+      "B": 0.8
+    }
+  },
+  "hypothesis": "stronger edge conditioning may align the generated silhouette with the single closed pyramidal envelope and suppress the extra lobe",
+  "limitation": "may increase artificial geometric edges; does not directly encode depth, fix all texture issues or repair hard-composite boundary limits",
+  "request_A_sha256": "b654b8707c9535fb6b36487a8b4507909a139f78b4e44bc556f1cd879cc4628f",
+  "request_B_sha256": "b654b8707c9535fb6b36487a8b4507909a139f78b4e44bc556f1cd879cc4628f",
+  "config_B_sha256": "117750add9003ab0032f8bca793ebb2b246dce737f280a048c3ff205f1c6488a",
+  "source_mask_control_specification_and_seed_unchanged": true,
+  "maximum_remaining_generation_calls": 1,
+  "no_additional_condition_after_B": true
+}

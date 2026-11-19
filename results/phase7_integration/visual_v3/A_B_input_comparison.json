@@ -1,0 +1,16 @@
+{
+  "changed_fields": {
+    "prompt": {
+      "A": "Photorealistic Indian-style masala noodles with reddish-brown spiced seasoning, natural noodle texture, matching the original food position, perspective and warm lighting.",
+      "B": "Photorealistic cooked noodle strands coated in reddish-brown Indian masala spices and sauce, with visible individual noodles, natural food texture, matching the original camera perspective and warm light."
+    },
+    "negative_prompt": {
+      "A": null,
+      "B": "text, letters, words, numbers, labels, packaging, logo, watermark, printed graphics, signs"
+    }
+  },
+  "same_source_mask_sam_annotations_and_protection": true,
+  "sampling_config_unchanged": true,
+  "B_call_limit": 1,
+  "reason_for_limit": "A consumed one call. Disable OOM retry for B so total actual calls cannot exceed two. Successful inference settings are unchanged."
+}

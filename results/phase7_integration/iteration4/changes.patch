@@ -1,0 +1,447 @@
+--- before/src/transcreation/stages/planning.py
++++ after/src/transcreation/stages/planning.py
+@@ -139,13 +139,13 @@
+             issues.append(_issue("PRESERVATION_CONFLICT", f"Potential preserve/edit conflict involving: {edit.object_description}; distinguish identity from unchanged features.", index))
+         if any(_contains_label(item, edit.proposed_change) for item in result.must_preserve):
+             issues.append(_issue("PRESERVATION_CONFLICT", "A preservation statement names the intended change.", index))
+-    # User constraints are opaque prose in the existing contract. Even candidates
+-    # rejected before construction must not bypass this protection boundary.
++    # Opaque user prose requires an explicit human check, not automatic approval
++    # or unconditional rejection. Independently invalid candidates still block.
+     had_candidates = bool(result.candidate_edits) or any(
+         issue["candidate_index"] is not None for issue in (initial_issues or [])
+     )
+     if request.user_instructions and had_candidates:
+-        issues.append(_issue("USER_CONSTRAINTS_UNRESOLVED", "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility."))
++        issues.append(_issue("USER_CONSTRAINTS_UNRESOLVED", "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.", severity="human_verification"))
+     if result.uncertainties and result.candidate_edits:
+         issues.append(_issue("EDIT_UNCERTAINTY_UNRESOLVED", "Resolve uncertainties material to the proposed edits; relevance is not automatically proven."))
+     if result.decision == PlanningDecision.REVIEW and result.candidate_edits:
+@@ -178,6 +178,7 @@
+             decision_reason="No justified image edit is established; leave the source image unchanged. This does not authorize modification or certify cultural appropriateness.",
+         ), issues
+     requirements = tuple(dict.fromkeys((*result.verification_requirements,
++        *(issue["message"] for issue in issues if issue["severity"] == "human_verification"),
+         "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
+         "Verify localization phrases against the original image before grounding or editing.",
+         "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",
+--- before/scripts/review_edit_intent.py
++++ after/scripts/review_edit_intent.py
+@@ -28,7 +28,7 @@
+     return digest(json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False).encode())
+ 
+ 
+-def _proposal(run_file: Path, image: Path, index: int):
++def _proposal(run_file: Path, image: Path, index: int, *, schema_version: int = 2):
+     """Revalidate the original run, not a free-standing candidate copied out of quarantine."""
+     from transcreation.orchestration import validate_planner_audit
+     from transcreation.stages.caption import SmolCaptionResult
+@@ -87,6 +87,11 @@
+         "planning_run_sha256": digest(run_bytes), "candidate_index": index, "candidate": asdict(candidate),
+         "must_preserve": list(plan.must_preserve), "verification_requirements": list(plan.verification_requirements),
+         "evidence_scope": "SYNTHETIC_TEST_ONLY" if audit.get("fixture_scope") == "SYNTHETIC_TEST_ONLY" else "REAL_PLANNING_EVIDENCE"}
++    if schema_version == 2:
++        binding.update(user_constraints_status="REQUIRES_HUMAN_VERIFICATION" if planning.user_instructions else "NOT_APPLICABLE",
++                       planning_issues=issues, uncertainties=list(plan.uncertainties))
++    elif planning.user_instructions:
++        raise ValueError("legacy review cannot authorize an instruction-bearing draft; prepare a new review")
+     return binding, payload
+ 
+ 
+@@ -99,11 +104,11 @@
+         target.write_bytes(raw)
+     image_name = "original" + image.suffix.lower()
+     (out / image_name).write_bytes(image.read_bytes())
+-    record = {"schema_version": 1, "record_type": "edit_intent_review", "scope": "GROUNDING_TEST_ONLY",
++    record = {"schema_version": 2, "record_type": "edit_intent_review", "scope": "GROUNDING_TEST_ONLY",
+               **binding, "image_file": image_name, "run_file": "evidence/pipeline_result.json",
+               "decision": "PENDING", "reviewer": None, "reason": "Awaiting explicit image and proposal inspection.",
+               "created_at_utc": datetime.now(timezone.utc).isoformat(), "reviewed_at_utc": None,
+-              "inspected_original": False, "inspected_edit": False, **PERMISSIONS}
++              "inspected_original": False, "inspected_edit": False, "checked_user_instructions": False, **PERMISSIONS}
+     # Check the copied evidence too, including a source modified during preparation.
+     check(record, out)
+     path = out / "pending.json"
+@@ -121,22 +126,29 @@
+         raise ValueError("a non-placeholder reviewer identity and explanation are required")
+     if record.get("inspected_original") is not True or record.get("inspected_edit") is not True:
+         raise ValueError("explicit original-image and edit-proposal inspection declarations are required")
++    if (record.get("decision") == "ACCEPT_FOR_GROUNDING_TEST" and record.get("user_instructions")
++            and record.get("checked_user_instructions") is not True):
++        raise ValueError("acceptance requires explicit checking against the complete original user instructions")
+     stamp = datetime.fromisoformat(record["reviewed_at_utc"])
+     if stamp.utcoffset() is None:
+         raise ValueError("review timestamp must include a timezone")
+ 
+ 
+ def check(record: dict, folder: Path):
+-    if (record.get("record_type") != "edit_intent_review" or record.get("schema_version") != 1
++    if (record.get("record_type") != "edit_intent_review" or record.get("schema_version") not in (1, 2)
+             or record.get("scope") != "GROUNDING_TEST_ONLY"
+             or any(record.get(k) is not False for k in PERMISSIONS)):
+         raise ValueError("edit-intent review never authorizes SAM or image editing")
+-    binding, _ = _proposal(_local(folder, record["run_file"]), _local(folder, record["image_file"]), record["candidate_index"])
++    binding, _ = _proposal(_local(folder, record["run_file"]), _local(folder, record["image_file"]), record["candidate_index"],
++                           schema_version=record["schema_version"])
+     if any(record.get(key) != value for key, value in binding.items()):
+         raise ValueError("review binding differs from original plan, audit, image or candidate")
++    if record["schema_version"] == 2 and type(record.get("checked_user_instructions")) is not bool:
++        raise ValueError("instruction-check declaration must be an explicit boolean")
+     if record["decision"] == "PENDING":
+         if (record.get("reviewer") is not None or record.get("reviewed_at_utc") is not None
+-                or record.get("inspected_original") is not False or record.get("inspected_edit") is not False):
++                or record.get("inspected_original") is not False or record.get("inspected_edit") is not False
++                or record.get("checked_user_instructions", False) is not False):
+             raise ValueError("pending review cannot claim human inspection or acceptance")
+     elif record["decision"] in DECISIONS:
+         _human(record)
+@@ -148,7 +160,7 @@
+         if parent.get("decision") != "PENDING":
+             raise ValueError("a decision must reference its original pending request")
+         check(parent, folder)
+-        unchanged = set(parent) - {"decision", "reviewer", "reason", "reviewed_at_utc", "inspected_original", "inspected_edit"}
++        unchanged = set(parent) - {"decision", "reviewer", "reason", "reviewed_at_utc", "inspected_original", "inspected_edit", "checked_user_instructions"}
+         if any(record.get(k) != parent[k] for k in unchanged):
+             raise ValueError("decision changed the pending review scope or evidence")
+     else:
+@@ -157,13 +169,14 @@
+ 
+ 
+ def decide(pending: Path, out: Path, decision: str, reviewer: str, reason: str,
+-           inspected_original: bool, inspected_edit: bool) -> Path:
++           inspected_original: bool, inspected_edit: bool, *, checked_user_instructions: bool = False) -> Path:
+     record = _json(pending.read_bytes())
+     check(record, pending.parent)
+     if record["decision"] != "PENDING" or decision not in DECISIONS or out.parent.resolve() != pending.parent.resolve():
+         raise ValueError("write a new decision beside its original pending evidence")
+     record.update(decision=decision, reviewer=reviewer, reason=reason, inspected_original=inspected_original,
+                   inspected_edit=inspected_edit, reviewed_at_utc=datetime.now(timezone.utc).isoformat(),
++                  checked_user_instructions=checked_user_instructions,
+                   pending_file=pending.name, pending_sha256=digest(pending.read_bytes()))
+     check(record, pending.parent)
+     _write(out, record)
+@@ -191,18 +204,24 @@
+     decision_parser.add_argument("--reason", required=True)
+     decision_parser.add_argument("--inspected-original", action="store_true")
+     decision_parser.add_argument("--inspected-edit", action="store_true")
++    decision_parser.add_argument("--checked-user-instructions", action="store_true",
++                                 help="declare that the proposal was checked against the complete original instructions")
+     commands.add_parser("verify").add_argument("--review", type=Path, required=True)
+     args = parser.parse_args(argv)
+     try:
+         if args.command == "prepare":
+             path = prepare(args.run, args.image, args.index, args.out)
+         elif args.command == "decide":
+-            path = decide(args.pending, args.out, args.decision, args.reviewer, args.reason, args.inspected_original, args.inspected_edit)
++            path = decide(args.pending, args.out, args.decision, args.reviewer, args.reason, args.inspected_original, args.inspected_edit,
++                          checked_user_instructions=args.checked_user_instructions)
+         else:
+             path = args.review
+         record = verify(path)
+-        print(json.dumps({"review": str(path), "decision": record["decision"], "scope": record["scope"],
+-                          "candidate": record["candidate"], "evidence_scope": record["evidence_scope"]}, indent=2))
++        print(json.dumps({"review": str(path), "original_image": str(_local(path.parent, record["image_file"])),
++                          **{key: record.get(key) for key in ("decision", "scope", "candidate", "evidence_scope", "verified_objects",
++                              "source_culture", "target_culture", "user_instructions", "must_preserve", "verification_requirements",
++                              "planning_issues", "uncertainties", "user_constraints_status", "checked_user_instructions", "reason")}},
++                         indent=2, ensure_ascii=False))
+     except (OSError, ValueError, TypeError, KeyError) as exc:
+         parser.error(str(exc))
+ 
+--- before/src/transcreation/orchestration.py
++++ after/src/transcreation/orchestration.py
+@@ -251,7 +251,7 @@
+             # Snapshot the full review bundle so the handoff remains independently auditable.
+             from scripts.review_edit_intent import _proposal, _local
+             binding, review_payload = _proposal(_local(Path(intent.review_file).parent, record["run_file"]),
+-                                          Path(request.source_image), record["candidate_index"])
++                                          Path(request.source_image), record["candidate_index"], schema_version=record["schema_version"])
+             if any(record.get(key) != value for key, value in binding.items()):
+                 raise ValueError("planning evidence changed during continuation")
+             for name, raw in review_payload.items():
+--- before/tests/test_planning_policy.py
++++ after/tests/test_planning_policy.py
+@@ -99,14 +99,18 @@
+ 
+     def test_user_protected_content_cannot_silently_be_edited(self):
+         final, issues = evaluate(proposal(), source_request(user_instructions="Protect the family cup and its role in this practice."))
+-        self.assertFalse(final.candidate_edits)
+-        self.assertEqual(final.decision, "REVIEW")
+-        self.assertIn("USER_CONSTRAINTS_UNRESOLVED", {item["code"] for item in issues})
++        # Eligibility is a draft for explicit human review, never silent editing.
++        self.assertEqual(final.decision, "PROPOSE")
++        warning = next(item for item in issues if item["code"] == "USER_CONSTRAINTS_UNRESOLVED")
++        self.assertEqual(warning["severity"], "human_verification")
++        self.assertIn(warning["message"], final.verification_requirements)
++        self.assertTrue(any("not approval" in note for note in final.verification_requirements))
+ 
+     def test_unresolved_protection_paraphrase_is_not_claimed_compatible(self):
+         final, issues = evaluate(proposal(), source_request(user_instructions="The user's treasured symbol and shared purpose must remain."))
+-        self.assertFalse(final.candidate_edits)
++        self.assertEqual(final.decision, "PROPOSE")
+         self.assertTrue(any("cannot prove compatibility" in item["message"] for item in issues))
++        self.assertTrue(any("cannot prove compatibility" in note for note in final.verification_requirements))
+ 
+     def test_preserved_source_object_cannot_be_released_for_replacement(self):
+         payload = proposal()
+--- /dev/null
++++ after/tests/test_instruction_review.py
+@@ -0,0 +1,258 @@
++"""Synthetic instruction-bearing drafts; no live model or genuine human approval."""
++from contextlib import redirect_stderr, redirect_stdout
++from copy import deepcopy
++from dataclasses import replace
++from io import StringIO
++import json
++import unittest
++
++from scripts.review_edit_intent import decide, main, verify
++from transcreation.contracts import CaptionStatus, PlanningInput
++from transcreation.orchestration import PipelineState
++from transcreation.stages.planning import parse_model_draft, validate_planning_result
++
++
++INSTRUCTIONS = "Keep the background unchanged.\nPreserve the camera angle; do not infer cultural suitability."
++
++
++class InstructionReviewTests(unittest.TestCase):
++    def setUp(self):
++        from test_edit_intent import EditIntentTests
++        self.flow = EditIntentTests()
++        self.flow.setUp()
++        self.addCleanup(self.flow.doCleanups)
++        self.base = self.flow.fixture
++        self.base.request = replace(self.base.request, user_instructions=INSTRUCTIONS)
++
++    def validate(self, change=None, **context):
++        payload = deepcopy(self.base.raw)
++        if change:
++            change(payload)
++        request = PlanningInput.from_caption(self.base.caption, self.base.request.target_culture,
++            user_instructions=self.base.request.user_instructions, verified_objects=self.base.request.verified_objects)
++        request = replace(request, **context)
++        draft, initial = parse_model_draft(payload)
++        return validate_planning_result(request, draft, initial)
++
++    def accepted(self, decision='ACCEPT_FOR_GROUNDING_TEST', checked=True):
++        pending = self.flow.proposal()
++        return decide(pending, pending.with_name('decision.json'), decision,
++            'synthetic test reviewer', 'Synthetic check of the full instruction text; not actual human approval.',
++            True, True, checked_user_instructions=checked)
++
++    def blocked(self, change=None, **context):
++        result, issues = self.validate(change, **context)
++        self.assertEqual(result.decision, 'REVIEW')
++        self.assertEqual(result.candidate_edits, ())
++        return {issue['code'] for issue in issues}
++
++    def test_valid_draft_without_instructions_still_requires_pending_review(self):
++        self.base.request = replace(self.base.request, user_instructions=None)
++        result, _ = self.validate()
++        self.assertEqual(result.decision, 'PROPOSE')
++        pending = verify(self.flow.proposal())
++        self.assertEqual(pending['decision'], 'PENDING')
++        self.assertEqual(pending['user_constraints_status'], 'NOT_APPLICABLE')
++        self.assertFalse(pending['image_edit_authorized'])
++
++    def test_instructions_allow_unapproved_draft_with_explicit_human_warning(self):
++        result, issues = self.validate()
++        self.assertEqual(result.decision, 'PROPOSE')
++        self.assertEqual(len(result.candidate_edits), 1)
++        warning = next(i for i in issues if i['code'] == 'USER_CONSTRAINTS_UNRESOLVED')
++        self.assertEqual(warning['severity'], 'human_verification')
++        self.assertIn(warning['message'], result.verification_requirements)
++        record = verify(self.flow.proposal())
++        self.assertEqual(record['user_instructions'], INSTRUCTIONS)
++        self.assertEqual(record['user_constraints_status'], 'REQUIRES_HUMAN_VERIFICATION')
++        self.assertEqual(record['decision'], 'PENDING')
++        self.assertFalse(record['checked_user_instructions'])
++
++    def test_missing_verified_identity_still_blocks(self):
++        codes = self.blocked(lambda p:p['candidate_edits'][0].update(verified_object_id=None), verified_objects=())
++        self.assertIn('UNVERIFIED_SOURCE_OBJECT', codes)
++
++    def test_unknown_verified_id_still_blocks(self):
++        self.assertIn('UNKNOWN_VERIFIED_OBJECT_ID', self.blocked(
++            lambda p:p['candidate_edits'][0].update(verified_object_id='invented-id')))
++
++    def test_original_description_mismatch_still_blocks(self):
++        self.assertIn('SOURCE_OBJECT_MISMATCH', self.blocked(
++            lambda p:p['candidate_edits'][0].update(object_description='different object')))
++
++    def test_replacement_localization_still_blocks(self):
++        self.assertIn('SOURCE_LOCALIZATION_MISMATCH', self.blocked(
++            lambda p:p['candidate_edits'][0].update(localization_phrase='a different surface material')))
++
++    def test_placeholder_candidate_still_quarantined(self):
++        codes = self.blocked(lambda p:p['candidate_edits'][0].update(object_description='null'))
++        self.assertTrue({'PLACEHOLDER_OBJECT_FIELD','BATCH_REVIEW_REQUIRED'} <= codes)
++
++    def test_malformed_candidate_still_quarantined(self):
++        self.assertIn('CANDIDATE_SCHEMA_INVALID', self.blocked(
++            lambda p:p['candidate_edits'][0].update(unexpected_field='invalid')))
++
++    def test_preservation_conflict_still_blocks(self):
++        self.assertIn('PRESERVATION_CONFLICT', self.blocked(lambda p:p.update(must_preserve=['synthetic object'])))
++
++    def test_uncertain_source_identity_still_blocks(self):
++        self.assertIn('SOURCE_IDENTITY_UNCERTAIN', self.blocked(
++            lambda p:p['candidate_edits'][0].update(identity_uncertain=True)))
++
++    def test_truncated_caption_still_blocks(self):
++        self.assertIn('CAPTION_INCOMPLETE', self.blocked(caption_status=CaptionStatus.TRUNCATED))
++
++    def test_uncertainty_and_identical_replacement_still_block(self):
++        self.assertIn('EDIT_UNCERTAINTY_UNRESOLVED', self.blocked(lambda p:p.update(uncertainties=['Unresolved object material.'])))
++        self.assertIn('SOURCE_REPLACEMENT_IDENTICAL', self.blocked(
++            lambda p:p['candidate_edits'][0].update(proposed_change='synthetic object')))
++
++    def test_raw_review_is_never_promoted(self):
++        self.assertIn('MODEL_REVIEW_ONLY', self.blocked(lambda p:p.update(decision='REVIEW')))
++
++    def test_complete_no_edit_raw_abstain_stays_abstain(self):
++        result, _ = self.validate(lambda p:p.update(decision='ABSTAIN', candidate_edits=[]))
++        self.assertEqual(result.decision, 'ABSTAIN')
++        self.assertEqual(result.candidate_edits, ())
++
++    def test_pending_review_cannot_dispatch(self):
++        pending = self.flow.proposal()
++        detector = self.flow.detector()
++        result = self.flow.continuation(pending, detector)
++        self.assertEqual(result.state, PipelineState.EDIT_INTENT_REQUIRES_REVIEW)
++        detector.detect.assert_not_called()
++
++    def test_rejected_review_cannot_dispatch_without_constraint_confirmation(self):
++        review = self.accepted('REJECT', checked=False)
++        detector = self.flow.detector()
++        self.assertEqual(self.flow.continuation(review, detector).state, PipelineState.EDIT_INTENT_REJECTED)
++        detector.detect.assert_not_called()
++
++    def test_needs_review_cannot_dispatch(self):
++        review = self.accepted('NEEDS_REVIEW', checked=False)
++        detector = self.flow.detector()
++        self.assertEqual(self.flow.continuation(review, detector).state, PipelineState.EDIT_INTENT_REQUIRES_REVIEW)
++        detector.detect.assert_not_called()
++
++    def test_acceptance_requires_instruction_check_beyond_two_inspection_flags(self):
++        pending = self.flow.proposal()
++        with self.assertRaisesRegex(ValueError, 'complete original user instructions'):
++            decide(pending, pending.with_name('invalid.json'), 'ACCEPT_FOR_GROUNDING_TEST',
++                   'synthetic reviewer', 'Synthetic check only', True, True)
++        self.assertFalse(pending.with_name('invalid.json').exists())
++
++    def test_confirmed_synthetic_acceptance_allows_original_phrase_grounding_only(self):
++        review = self.accepted()
++        self.assertTrue(verify(review)['checked_user_instructions'])
++        detector = self.flow.detector()
++        result = self.flow.continuation(review, detector)
++        self.assertEqual(result.state, PipelineState.SOURCE_OBJECT_REQUIRES_REVIEW, result.errors)
++        detector.detect.assert_called_once_with(self.flow.image, 'synthetic object')
++        detector.close.assert_called_once()
++        self.assertFalse(result.image_generation_permitted)
++        for key in ('sam_authorized','image_edit_authorized','diffusion_authorized','cultural_transformation_authorized'):
++            self.assertIs(verify(review)[key], False)
++
++    def test_synthetic_acceptance_still_cannot_dispatch_real_model(self):
++        result = self.flow.continuation(self.accepted())
++        self.assertEqual(result.state, PipelineState.EDIT_INTENT_REQUIRES_REVIEW)
++
++    def test_changed_review_instructions_invalidate_acceptance(self):
++        review = self.accepted()
++        self.flow.mutate(review, lambda v:v.update(user_instructions='Different instructions'))
++        with self.assertRaises(ValueError):
++            verify(review)
++
++    def test_changed_planning_input_instructions_invalidate_acceptance(self):
++        review = self.accepted()
++        self.flow.mutate(review.parent/'evidence/planning_input.json', lambda v:v.update(user_instructions='Modified'))
++        self.assertEqual(self.flow.continuation(review, self.flow.detector()).state, PipelineState.FAILED)
++
++    def test_modified_image_and_plan_invalidate_review(self):
++        review = self.accepted()
++        image = review.parent/'original.png'
++        before = image.read_bytes()
++        image.write_bytes(before+b' ')
++        with self.assertRaises(ValueError):verify(review)
++        image.write_bytes(before)  # restore disposable fixture to isolate the plan check
++        plan = review.parent/'evidence/validated_plan.json'
++        plan.write_bytes(plan.read_bytes()+b' ')
++        with self.assertRaises(ValueError):verify(review)
++
++    def test_changed_confirmation_cannot_be_treated_as_acceptance(self):
++        review = self.accepted()
++        self.flow.mutate(review, lambda v:v.update(checked_user_instructions=False))
++        with self.assertRaises(ValueError):verify(review)
++
++    def test_pending_cannot_claim_instruction_confirmation(self):
++        pending = self.flow.proposal()
++        self.flow.mutate(pending, lambda v:v.update(checked_user_instructions=True))
++        with self.assertRaises(ValueError):verify(pending)
++
++    def test_warning_status_cannot_claim_automatic_satisfaction(self):
++        pending = self.flow.proposal()
++        self.flow.mutate(pending, lambda v:v.update(user_constraints_status='AUTOMATICALLY_SATISFIED'))
++        with self.assertRaises(ValueError):verify(pending)
++
++    def test_bound_warning_cannot_be_erased(self):
++        pending = self.flow.proposal()
++        self.flow.mutate(pending, lambda v:v.update(planning_issues=[]))
++        with self.assertRaises(ValueError):verify(pending)
++
++    def test_cli_presents_complete_review_context(self):
++        pending = self.flow.proposal()
++        with redirect_stdout(StringIO()) as output:
++            main(['verify','--review',str(pending)])
++        displayed = json.loads(output.getvalue())
++        self.assertEqual(displayed['user_instructions'], INSTRUCTIONS)
++        self.assertEqual(displayed['candidate']['localization_phrase'], 'synthetic object')
++        self.assertEqual(displayed['candidate']['proposed_change'], 'a different surface material')
++        self.assertIn('background', displayed['must_preserve'])
++        self.assertEqual(displayed['planning_issues'][0]['code'], 'USER_CONSTRAINTS_UNRESOLVED')
++        self.assertEqual(displayed['uncertainties'], [])
++        self.assertTrue(displayed['original_image'].endswith('original.png'))
++
++    def test_cli_requires_and_records_instruction_check_flag(self):
++        pending = self.flow.proposal()
++        out = pending.with_name('cli_decision.json')
++        args = ['decide','--pending',str(pending),'--out',str(out),'--decision','ACCEPT_FOR_GROUNDING_TEST',
++                '--reviewer','synthetic reviewer','--reason','Synthetic test only', '--inspected-original','--inspected-edit']
++        with redirect_stderr(StringIO()), self.assertRaises(SystemExit): main(args)
++        with redirect_stdout(StringIO()): main(args+['--checked-user-instructions'])
++        self.assertTrue(verify(out)['checked_user_instructions'])
++
++    def test_legacy_no_instruction_review_remains_verifiable(self):
++        self.base.request = replace(self.base.request, user_instructions=None)
++        pending = self.flow.proposal()
++        def legacy(record):
++            record['schema_version'] = 1
++            for key in ('user_constraints_status','planning_issues','uncertainties','checked_user_instructions'):
++                record.pop(key)
++        self.flow.mutate(pending, legacy)
++        verify(pending)
++        out = decide(pending, pending.with_name('legacy_decision.json'), 'ACCEPT_FOR_GROUNDING_TEST',
++                     'synthetic reviewer', 'Synthetic legacy test', True, True)
++        self.assertEqual(verify(out)['schema_version'], 1)
++        self.assertEqual(self.flow.continuation(out, self.flow.detector()).state, PipelineState.SOURCE_OBJECT_REQUIRES_REVIEW)
++
++    def test_schema_downgrade_cannot_bypass_instruction_confirmation(self):
++        review = self.accepted()
++        self.flow.mutate(review, lambda v:v.update(schema_version=1))
++        with self.assertRaisesRegex(ValueError, 'legacy review'):
++            verify(review)
++
++    def test_free_text_compatibility_is_not_certified_by_eligibility(self):
++        # No claim that lexical validation can resolve this semantic conflict.
++        self.base.request = replace(self.base.request, user_instructions='Keep the original object completely unchanged.')
++        pending = self.flow.proposal()
++        record = verify(pending)
++        self.assertEqual(record['user_constraints_status'], 'REQUIRES_HUMAN_VERIFICATION')
++        self.assertFalse(record['checked_user_instructions'])
++        rejected = decide(pending, pending.with_name('rejected.json'), 'REJECT', 'synthetic reviewer',
++            'Synthetic review: the requested preservation conflicts with the proposal.', True, True,
++            checked_user_instructions=True)
++        self.assertEqual(self.flow.continuation(rejected, self.flow.detector()).state, PipelineState.EDIT_INTENT_REJECTED)
++
++
++if __name__ == '__main__':
++    unittest.main()

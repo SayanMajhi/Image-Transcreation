@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "Samosa.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Samosa.jpg",
+    "author": "Aotearoa",
+    "license": "CC BY-SA 3.0",
+    "sha256": "3360b785ed6f638651619a7228163c5d3dbe61e7162ecc74e33fb49cf4e463fb",
+    "bytes": 917504
+  },
+  {
+    "filename": "Samosa_fried.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Samosa_fried.JPG",
+    "author": "Miansari66",
+    "license": "public-domain dedication by copyright holder",
+    "sha256": "5b5304e16b0b5ded98a197b72c92eed78ddec829ef222efc7d5b727e40afb5d6",
+    "bytes": 2912098
+  },
+  {
+    "filename": "Samosa_1.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Samosa_1.jpg",
+    "author": "Zantastik",
+    "license": "CC BY-SA 3.0",
+    "sha256": "7e2f931fcccf61b53782cf191fc479ecec7a7aef506996c570c7a5fe889b513f",
+    "bytes": 826342
+  }
+]

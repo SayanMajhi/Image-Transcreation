@@ -1,0 +1,10 @@
+{
+  "validator_unchanged": true,
+  "qwen_system_prompt_unchanged": true,
+  "caption_config_unchanged": true,
+  "qwen_config_unchanged": true,
+  "caption_copy_byte_identical": true,
+  "before_planning_input_byte_identical": true,
+  "caption_text_matches_input": true,
+  "caption_status_complete": true
+}

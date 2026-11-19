@@ -1,0 +1,38 @@
+[
+  {
+    "command": [
+      "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_inpainting.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "wall_seconds": 23.86599059999935,
+    "stdout": "",
+    "stderr": "test_edge_crop_is_bounded_and_non_square_source_not_stretched (test_inpainting.InpaintingTests.test_edge_crop_is_bounded_and_non_square_source_not_stretched) ... ok\ntest_empty_prompt_and_invalid_candidate (test_inpainting.InpaintingTests.test_empty_prompt_and_invalid_candidate) ... ok\ntest_exact_outside_pixels_and_original_resolution (test_inpainting.InpaintingTests.test_exact_outside_pixels_and_original_resolution) ... ok\ntest_existing_config_defaults_and_invalid_settings (test_inpainting.InpaintingTests.test_existing_config_defaults_and_invalid_settings) ... ok\ntest_explicit_lower_score_candidate_and_hashes (test_inpainting.InpaintingTests.test_explicit_lower_score_candidate_and_hashes) ... ok\ntest_image_hash_mismatch (test_inpainting.InpaintingTests.test_image_hash_mismatch) ... ok\ntest_invalid_restoration_dimensions_and_crop (test_inpainting.InpaintingTests.test_invalid_restoration_dimensions_and_crop) ... ok\ntest_loading_failure_audited (test_inpainting.InpaintingTests.test_loading_failure_audited) ... ok\ntest_local_crop_padding_preserves_geometry (test_inpainting.InpaintingTests.test_local_crop_padding_preserves_geometry) ... ok\ntest_mocked_success_serialization_and_original_preservation (test_inpainting.InpaintingTests.test_mocked_success_serialization_and_original_preservation) ... ok\ntest_modified_png_even_when_pixels_unchanged (test_inpainting.InpaintingTests.test_modified_png_even_when_pixels_unchanged) ... ok\ntest_no_cuda_is_explicit (test_inpainting.InpaintingTests.test_no_cuda_is_explicit) ... ok\ntest_no_overwrite_and_raw_planner_input_rejected (test_inpainting.InpaintingTests.test_no_overwrite_and_raw_planner_input_rejected) ... ok\ntest_non_oom_pipeline_error_not_retried (test_inpainting.InpaintingTests.test_non_oom_pipeline_error_not_retried) ... ok\ntest_nonbinary_empty_and_dimension_mismatch (test_inpainting.InpaintingTests.test_nonbinary_empty_and_dimension_mismatch) ... ok\ntest_one_explicit_oom_fallback (test_inpainting.InpaintingTests.test_one_explicit_oom_fallback) ... ok\ntest_research_scope_never_inherited_from_review (test_inpainting.InpaintingTests.test_research_scope_never_inherited_from_review) ... ok\ntest_restoration_removes_padding_without_distorting_axes (test_inpainting.InpaintingTests.test_restoration_removes_padding_without_distorting_axes) ... ok\ntest_safetensors_only_pinned_loader (test_inpainting.InpaintingTests.test_safetensors_only_pinned_loader) ... ok\ntest_safety_flag_not_claimed_as_success (test_inpainting.InpaintingTests.test_safety_flag_not_claimed_as_success) ... ok\ntest_second_oom_stops_and_preserves_error (test_inpainting.InpaintingTests.test_second_oom_stops_and_preserves_error) ... ok\ntest_segmentation_json_hash_mismatch (test_inpainting.InpaintingTests.test_segmentation_json_hash_mismatch) ... ok\ntest_source_modified_during_loading_blocks_inference (test_inpainting.InpaintingTests.test_source_modified_during_loading_blocks_inference) ... ok\ntest_unrelated_mask_rejected (test_inpainting.InpaintingTests.test_unrelated_mask_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 12.957s\n\nOK\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_refined_inpainting.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "wall_seconds": 6.862745599999471,
+    "stdout": "",
+    "stderr": "test_annotation_reference_cannot_change (test_refined_inpainting.RefinedInpaintingTests.test_annotation_reference_cannot_change) ... ok\ntest_cli_explicit_refined_input_dispatch (test_refined_inpainting.RefinedInpaintingTests.test_cli_explicit_refined_input_dispatch) ... ok\ntest_every_pinned_hash_is_enforced (test_refined_inpainting.RefinedInpaintingTests.test_every_pinned_hash_is_enforced) ... ok\ntest_full_region_protection_is_subtracted (test_refined_inpainting.RefinedInpaintingTests.test_full_region_protection_is_subtracted) ... ok\ntest_input_modified_during_loading_stops_before_generation (test_refined_inpainting.RefinedInpaintingTests.test_input_modified_during_loading_stops_before_generation) ... ok\ntest_isolated_from_original_and_guided_routes (test_refined_inpainting.RefinedInpaintingTests.test_isolated_from_original_and_guided_routes) ... ok\ntest_manual_origin_distinct_from_original_sam (test_refined_inpainting.RefinedInpaintingTests.test_manual_origin_distinct_from_original_sam) ... ok\ntest_mocked_generation_uses_actual_refined_mask_and_original_resolution (test_refined_inpainting.RefinedInpaintingTests.test_mocked_generation_uses_actual_refined_mask_and_original_resolution) ... ok\ntest_no_human_or_permission_escalation (test_refined_inpainting.RefinedInpaintingTests.test_no_human_or_permission_escalation) ... ok\ntest_nonbinary_empty_wrong_size_masks_rejected (test_refined_inpainting.RefinedInpaintingTests.test_nonbinary_empty_wrong_size_masks_rejected) ... ok\ntest_polygon_coordinates_validated_before_rasterization (test_refined_inpainting.RefinedInpaintingTests.test_polygon_coordinates_validated_before_rasterization) ... ok\ntest_prior_output_cannot_be_overwritten (test_refined_inpainting.RefinedInpaintingTests.test_prior_output_cannot_be_overwritten) ... ok\ntest_protected_region_inclusion_rejected_even_with_new_hash (test_refined_inpainting.RefinedInpaintingTests.test_protected_region_inclusion_rejected_even_with_new_hash) ... ok\ntest_real_error_propagation_without_retry_or_false_success (test_refined_inpainting.RefinedInpaintingTests.test_real_error_propagation_without_retry_or_false_success) ... ok\ntest_saved_pixel_geometry_cannot_silently_change (test_refined_inpainting.RefinedInpaintingTests.test_saved_pixel_geometry_cannot_silently_change) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 1.487s\n\nOK\n"
+  }
+]

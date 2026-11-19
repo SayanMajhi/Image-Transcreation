@@ -1,0 +1,9 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "device_properties_total_bytes": 4294443008,
+  "torch_cuda_build": "13.2",
+  "T4_observed": false,
+  "models_on_T4": 0,
+  "runtime": "local Windows; not Colab",
+  "driver_query": "name, memory.total [MiB], memory.free [MiB]\nNVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 3254 MiB\n"
+}

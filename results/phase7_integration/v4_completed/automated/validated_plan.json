@@ -1,0 +1,52 @@
+{
+  "planning_result": {
+    "decision": "REVIEW",
+    "decision_reason": "Review required; no candidate edit is released downstream. Verify the source-object identity of: white spaghetti strands. Localization must retain the original object label: white spaghetti strands. Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+    "scene_summary": "The caption reports a plate of spaghetti with parsley on top. The user verified a white plate, table, and background glass jars. The scene includes a small piece of what appears to be a mushroom or a small piece of meat on top of the parsley. The plate is white and is sitting on a table.",
+    "candidate_edits": [],
+    "must_preserve": [
+      "white plate",
+      "table",
+      "background glass jars",
+      "visible spaghetti strand structure",
+      "visible parsley",
+      "small piece of mushroom or meat"
+    ],
+    "uncertainties": [
+      "The exact masala coating color and texture may vary, but the overall appearance should be recognizable as masala-coated spaghetti."
+    ],
+    "verification_requirements": [
+      "Verify the source-object identity of: white spaghetti strands.",
+      "Localization must retain the original object label: white spaghetti strands.",
+      "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "Review the original-scene summary and any paraphrased identities against the image.",
+      "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+    ]
+  },
+  "issues": [
+    {
+      "code": "UNVERIFIED_SOURCE_OBJECT",
+      "message": "Verify the source-object identity of: white spaghetti strands.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "SOURCE_LOCALIZATION_MISMATCH",
+      "message": "Localization must retain the original object label: white spaghetti strands.",
+      "candidate_index": 0,
+      "severity": "review"
+    },
+    {
+      "code": "USER_CONSTRAINTS_UNRESOLVED",
+      "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+      "candidate_index": null,
+      "severity": "human_verification"
+    },
+    {
+      "code": "EDIT_UNCERTAINTY_UNRESOLVED",
+      "message": "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+      "candidate_index": null,
+      "severity": "review"
+    }
+  ]
+}

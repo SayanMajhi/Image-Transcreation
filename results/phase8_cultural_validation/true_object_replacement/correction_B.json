@@ -1,0 +1,12 @@
+{
+  "failure_A": "Visible green/black reference leaf fringe",
+  "one_changed_input": "reference selection mask",
+  "hypothesis": "Boundary color/graph-cut separation removes leaf fringe while retaining real pastry interior",
+  "old_pixels": 809994,
+  "new_pixels": 772395,
+  "removed": 37599,
+  "added": 0,
+  "algorithm": "Assistant researcher manually traced one complete upper samosa; original-resolution polygon is in annotation.json, not a SAM prediction or human approval; B corrects reference boundary only using OpenCV GrabCut: polygon interior eroded51x51 sure foreground, green HSV H31..99 S>35 and maxRGB<90 in boundary ring sure background, 5 iterations RNG42; intersect original polygon and keep largest component. Not SAM or human approval.",
+  "iterations": 5,
+  "geometry_invariant": "Explicit reference_box equals implicit A selection bounding box [759,467,1972,1468]. Uniform scale and target position therefore identical despite extraction-boundary correction."
+}

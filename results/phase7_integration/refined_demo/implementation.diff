@@ -1,0 +1,402 @@
+diff --git a/scripts/inpaint.py b/scripts/inpaint.py
+index 6071f6e..ee42f8d 100644
+--- a/scripts/inpaint.py
++++ b/scripts/inpaint.py
+@@ -10,14 +10,21 @@ from transcreation.stages.inpainting import run_inpainting
+ 
+ def main(argv: list[str] | None = None):
+     parser=argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument("--input",type=Path,required=True,help="Explicit RESEARCH_ONLY request with pinned source hashes")
++    inputs=parser.add_mutually_exclusive_group(required=True)
++    inputs.add_argument("--input",type=Path,help="Original SAM-mask RESEARCH_ONLY request")
++    inputs.add_argument("--refined-input",type=Path,help="Separate manually refined RESEARCH_ONLY request with polygon/exclusion provenance")
+     parser.add_argument("--config",type=Path,default=Path("configs/inpainting.yaml"))
+     parser.add_argument("--out",type=Path,required=True,help="New experiment directory")
+     args=parser.parse_args(argv)
+     try:
+-        request=InpaintingInput(**json.loads(args.input.read_text(encoding="utf-8")))
+         config=load_inpainting_config(args.config)
+-        result=run_inpainting(request,config,args.out)
++        if args.refined_input:
++            from transcreation.stages.refined_inpainting import RefinedMaskInput, run_refined_inpainting
++            request=RefinedMaskInput(**json.loads(args.refined_input.read_text(encoding="utf-8")))
++            result=run_refined_inpainting(request,config,args.out)
++        else:
++            request=InpaintingInput(**json.loads(args.input.read_text(encoding="utf-8")))
++            result=run_inpainting(request,config,args.out)
+     except (OSError,ValueError,TypeError,KeyError) as exc:
+         parser.error(str(exc))
+     print(f"{result['status']}: RESEARCH_ONLY; saved {args.out}")
+diff --git a/src/transcreation/stages/inpainting.py b/src/transcreation/stages/inpainting.py
+index d208bcf..73ce60f 100644
+--- a/src/transcreation/stages/inpainting.py
++++ b/src/transcreation/stages/inpainting.py
+@@ -126,10 +126,10 @@ def load_pipeline(config: InpaintingConfig):
+     return pipe
+ 
+ 
+-def _visuals(image, mask, final, geometry, out):
++def _visuals(image, mask, final, geometry, out, mask_label="original SAM mask"):
+     overlay = Image.composite(Image.new("RGB", image.size, "lime"), image, mask.point(lambda p: 90 if p else 0))
+     comparison = Image.new("RGB", (image.width*3, image.height+40), "white")
+-    for col, (view, title) in enumerate([(image,"original"),(overlay,"original SAM mask"),(final,"RESEARCH_ONLY final; no cultural adaptation claim")]):
++    for col, (view, title) in enumerate([(image,"original"),(overlay,mask_label),(final,"RESEARCH_ONLY final; no cultural adaptation claim")]):
+         comparison.paste(view, (image.width*col,40)); ImageDraw.Draw(comparison).text((image.width*col+8,12),title,fill="black")
+     comparison.save(out/"comparison.png")
+     box=geometry["crop_box_xyxy"]; width,height=image.crop(box).size
+@@ -140,7 +140,14 @@ def _visuals(image, mask, final, geometry, out):
+ 
+ 
+ def run_inpainting(request: InpaintingInput, config: InpaintingConfig, out: Path) -> dict:
+-    image, mask, sam, payload = validate_inputs(request)
++    if type(request) is not InpaintingInput:
++        raise ValueError("original SAM route requires InpaintingInput; derived masks need the separate research route")
++    return _run_inpainting(request, config, out, validate_inputs)
++
++
++def _run_inpainting(request, config, out, validate, mask_origin="ORIGINAL_SAM_PREDICTION"):
++    """Shared diffusion execution; callers supply their own strict evidence validator."""
++    image, mask, sam, payload = validate(request)
+     out.mkdir(parents=True, exist_ok=False)
+     evidence=out/"evidence"; evidence.mkdir()
+     for name,data in payload.items():
+@@ -157,6 +164,14 @@ def run_inpainting(request: InpaintingInput, config: InpaintingConfig, out: Path
+                           "point_sha256":sam.request.point_prompt_sha256,"selection_status":sam.request.selection_status},
+             "geometry":geometry,"attempts":[],"timing":{},"memory":{},"observations":[],
+             "cultural_edit_authorized":False,"human_approved":False}
++    if mask_origin != "ORIGINAL_SAM_PREDICTION":
++        reference = next(m for m in sam.masks if m.index == request.candidate_index)
++        report["editing_mask"] = {"origin":mask_origin, "human_approved":False,
++            "original_sam_reference_candidate_index":reference.index,
++            "original_sam_reference_mask_sha256":digest(payload[reference.filename]),
++            "refined_mask_sha256":request.mask_sha256,
++            "annotation_sha256":request.annotation_sha256,
++            "protected_mask_sha256":request.protected_mask_sha256}
+     pipe=None; start=time.perf_counter()
+     try:
+         if not torch.cuda.is_available():
+@@ -167,7 +182,7 @@ def run_inpainting(request: InpaintingInput, config: InpaintingConfig, out: Path
+         report["timing"]["load_seconds"]=time.perf_counter()-loading
+         report["settings"]["scheduler"]=type(pipe.scheduler).__name__
+         report["settings"]["scheduler_config"]=dict(pipe.scheduler.config)
+-        validate_inputs(request)  # detect source changes while loading/downloading
++        validate(request)  # detect source changes while loading/downloading
+         for attempt,offload in enumerate(("model_cpu_offload","sequential_cpu_offload")):
+             torch.cuda.synchronize(); torch.cuda.reset_peak_memory_stats(); t=time.perf_counter()
+             try:
+@@ -192,13 +207,16 @@ def run_inpainting(request: InpaintingInput, config: InpaintingConfig, out: Path
+             report["settings"]["effective_denoising_steps"]=pipe.num_timesteps
+         if result.nsfw_content_detected and any(result.nsfw_content_detected):
+             raise ValueError("pipeline safety checker flagged the result; no usable final image claimed")
+-        validate_inputs(request)
++        validate(request)
+         final,restored,region,metrics=restore_and_composite(image,mask,raw,geometry)
+         final.save(out/"final.png"); restored.save(out/"restored_crop.png"); region.save(out/"generated_region.png")
+         with Image.open(out/"final.png") as saved:
+             if saved.size!=image.size or not np.array_equal(np.asarray(saved)[np.asarray(mask)==0],np.asarray(image)[np.asarray(mask)==0]):
+                 raise ValueError("saved final PNG failed outside-mask equality")
+-        _visuals(image,mask,final,geometry,out)
++        if mask_origin == "ORIGINAL_SAM_PREDICTION":
++            _visuals(image,mask,final,geometry,out)
++        else:
++            _visuals(image,mask,final,geometry,out,"manually refined RESEARCH_ONLY mask")
+         report["status"]="COMPLETED"; report["metrics"]=metrics
+         report["timing"]["inference_seconds"]=report["attempts"][-1]["seconds"]
+         report["memory"]["peak_allocated_cuda_bytes"]=max(a["peak_allocated_cuda_bytes"] for a in report["attempts"])
+--- /dev/null
++++ b/src/transcreation/stages/refined_inpainting.py
+@@ -0,0 +1,137 @@
++"""Source-bound polygon masks for isolated research; never predicted SAM masks.
++
++Annotations record operator geometry, not human approval or ground-truth segmentation.
++The existing diffusion implementation is shared without altering its model settings.
++"""
++from dataclasses import dataclass
++from io import BytesIO
++import json
++from pathlib import Path
++
++import numpy as np
++from PIL import Image, ImageDraw
++
++from transcreation.contracts import InpaintingInput
++from transcreation.stages.inpainting import digest, validate_mask, _run_inpainting
++
++
++ORIGIN = "RESEARCH_MASK_MANUALLY_REFINED"
++
++
++@dataclass(frozen=True)
++class RefinedMaskInput(InpaintingInput):
++    annotation_file: str
++    annotation_sha256: str
++    protected_mask_file: str
++    protected_mask_sha256: str
++    mask_origin: str
++
++    def __post_init__(self):
++        super().__post_init__()
++        if self.mask_origin != ORIGIN:
++            raise ValueError("derived mask must declare its actual manually refined research origin")
++        for name in ("annotation_file", "protected_mask_file"):
++            if not isinstance(getattr(self,name), str) or not getattr(self,name).strip():
++                raise ValueError(f"{name} is required")
++        for name in ("annotation_sha256", "protected_mask_sha256"):
++            value = getattr(self,name)
++            if not isinstance(value,str) or len(value)!=64 or any(c not in "0123456789abcdef" for c in value):
++                raise ValueError(f"{name} must be SHA-256")
++
++
++def rasterize_annotations(document: dict, size: tuple[int, int]):
++    """Rasterize recorded original-coordinate polygons, subtracting all exclusions."""
++    def layer(key):
++        polygons = document.get(key)
++        if not isinstance(polygons,list) or not polygons:
++            raise ValueError(f"explicit {key} are required")
++        result = Image.new("L",size,0)
++        draw = ImageDraw.Draw(result)
++        for polygon in polygons:
++            points = polygon.get("points") if isinstance(polygon,dict) else None
++            if (not isinstance(polygon,dict) or set(polygon)!={"label","points"}
++                    or not isinstance(polygon["label"],str) or not polygon["label"].strip()
++                    or not isinstance(points,list) or len(points)<3):
++                raise ValueError("polygons require a label and at least three original-image XY points")
++            if any(not isinstance(p,list) or len(p)!=2 or any(type(v) is not int for v in p)
++                   or not (0<=p[0]<size[0] and 0<=p[1]<size[1]) for p in points):
++                raise ValueError("polygon coordinates must be original-image integers within bounds")
++            draw.polygon([tuple(p) for p in points],fill=255)
++        return result
++    editable, protected = layer("editable_polygons"), layer("protected_polygons")
++    refined = Image.fromarray(np.where((np.asarray(editable)==255)&(np.asarray(protected)==0),255,0).astype('uint8'))
++    return refined, protected
++
++
++def validate_refined_inputs(request: RefinedMaskInput):
++    from scripts.review_mask import _bundle
++
++    if type(request) is not RefinedMaskInput:
++        raise ValueError("refined research input is required; no planner or review record accepted")
++    def read(path, expected):
++        raw = Path(path).read_bytes()
++        if digest(raw)!=expected:
++            raise ValueError(f"SHA-256 mismatch: {path}")
++        return raw
++    segmentation = Path(request.segmentation_file)
++    read(segmentation,request.segmentation_sha256)
++    sam, payload = _bundle(segmentation)
++    references = [m for m in sam.masks if m.index==request.candidate_index and m.status=="VALID"]
++    if len(references)!=1:
++        raise ValueError("explicit original SAM reference index is missing or ambiguous")
++    if sam.request.image_sha256 != request.image_sha256:
++        raise ValueError("SAM reference belongs to a different source image")
++    source_bytes = read(request.source_image,request.image_sha256)
++    with Image.open(BytesIO(source_bytes)) as source:
++        image = source.convert("RGB")
++    if image.size != sam.request.original_dimensions:
++        raise ValueError("SAM/source dimensions differ")
++    document_bytes = read(request.annotation_file,request.annotation_sha256)
++    document = json.loads(document_bytes)
++    expected_keys = {"scope","mask_origin","annotation_method","operator","human_approved",
++                     "cultural_edit_authorized","source_image_sha256","original_dimensions",
++                     "sam_result_sha256","sam_reference_index","sam_reference_mask_sha256",
++                     "target_definition","boundary_reason","editable_polygons","protected_polygons"}
++    if not isinstance(document,dict) or set(document)!=expected_keys:
++        raise ValueError("missing or unexpected annotation fields; no approval/permission extensions accepted")
++    if any(not isinstance(document[key],str) or not document[key].strip()
++           for key in ("target_definition","boundary_reason")):
++        raise ValueError("describe the research target and conservative boundary reasoning")
++    if (document.get("scope")!="RESEARCH_ONLY" or document.get("mask_origin")!=ORIGIN
++            or document.get("annotation_method")!="operator_polygon_trace_with_protected_exclusions"
++            or not isinstance(document.get("operator"),str) or not document["operator"].strip()
++            or document.get("human_approved") is not False or document.get("cultural_edit_authorized") is not False):
++        raise ValueError("annotation must declare manual research provenance without approval claims")
++    if (document.get("source_image_sha256")!=request.image_sha256
++            or document.get("original_dimensions")!=list(image.size)
++            or document.get("sam_result_sha256")!=request.segmentation_sha256
++            or type(document.get("sam_reference_index")) is not int
++            or document.get("sam_reference_index")!=request.candidate_index
++            or document.get("sam_reference_mask_sha256")!=digest(payload[references[0].filename])):
++        raise ValueError("annotation source/SAM binding conflicts with original evidence")
++    expected_mask, expected_protected = rasterize_annotations(document,image.size)
++    mask_bytes = read(request.mask_file,request.mask_sha256)
++    protected_bytes = read(request.protected_mask_file,request.protected_mask_sha256)
++    with Image.open(BytesIO(mask_bytes)) as source:
++        if source.format!="PNG": raise ValueError("refined mask must be PNG")
++        mask=source.copy()
++    with Image.open(BytesIO(protected_bytes)) as source:
++        if source.format!="PNG": raise ValueError("protected mask must be PNG")
++        protected=source.copy()
++    validate_mask(image,mask); validate_mask(image,protected)
++    if np.any((np.asarray(mask)==255)&(np.asarray(protected)==255)):
++        raise ValueError("refined mask intersects a full-region protected exclusion")
++    if mask.tobytes()!=expected_mask.tobytes() or protected.tobytes()!=expected_protected.tobytes():
++        raise ValueError("saved masks disagree with recorded polygon geometry")
++    if digest(mask_bytes)==digest(payload[references[0].filename]):
++        raise ValueError("derived mask must not masquerade as an unchanged SAM prediction")
++    for name,data in {"refined_mask.png":mask_bytes,"protected_exclusions.png":protected_bytes,
++                      "refinement_annotations.json":document_bytes}.items():
++        if name in payload:
++            raise ValueError("derived evidence filename conflicts with original SAM bundle")
++        payload[name]=data
++    return image,mask,sam,payload
++
++
++def run_refined_inpainting(request, config, out):
++    return _run_inpainting(request,config,out,validate_refined_inputs,mask_origin=ORIGIN)
+--- /dev/null
++++ b/tests/test_refined_inpainting.py
+@@ -0,0 +1,154 @@
++"""Synthetic polygon masks and mocked diffusion only; no human approvals or weights."""
++from contextlib import ExitStack, redirect_stdout
++from dataclasses import asdict, replace
++from io import StringIO
++import json
++from pathlib import Path
++import unittest
++from unittest.mock import patch
++
++import numpy as np
++from PIL import Image
++
++from transcreation.config import InpaintingConfig
++from transcreation.contracts import InpaintingInput
++from transcreation.stages.inpainting import digest, run_inpainting
++from transcreation.stages.refined_inpainting import (
++    ORIGIN, RefinedMaskInput, rasterize_annotations, run_refined_inpainting, validate_refined_inputs)
++
++
++class RefinedInpaintingTests(unittest.TestCase):
++    def setUp(self):
++        from test_inpainting import InpaintingTests
++        self.fixture = InpaintingTests(); self.fixture.setUp(); self.addCleanup(self.fixture.doCleanups)
++        self.root = self.fixture.root
++        self.annotation = self.root/'annotations.json'
++        self.mask = self.root/'refined.png'; self.protected = self.root/'protected.png'
++        self.doc = {'scope':'RESEARCH_ONLY','mask_origin':ORIGIN,
++            'annotation_method':'operator_polygon_trace_with_protected_exclusions',
++            'operator':'synthetic operator, not a real approval','human_approved':False,
++            'cultural_edit_authorized':False,'source_image_sha256':self.fixture.request.image_sha256,
++            'original_dimensions':[60,40],'sam_result_sha256':self.fixture.request.segmentation_sha256,
++            'sam_reference_index':1,'sam_reference_mask_sha256':self.fixture.request.mask_sha256,
++            'target_definition':'Synthetic small surface only','boundary_reason':'Exclude uncertain surrounding region',
++            'editable_polygons':[{'label':'synthetic interior','points':[[12,12],[24,12],[24,22],[12,22]]}],
++            'protected_polygons':[{'label':'synthetic protected top','points':[[0,0],[59,0],[59,10],[0,10]]},
++                                  {'label':'synthetic protected island','points':[[20,15],[22,15],[22,17],[20,17]]}]}
++        self.annotation.write_text(json.dumps(self.doc))
++        mask,protected = rasterize_annotations(self.doc,(60,40));mask.save(self.mask);protected.save(self.protected)
++        original = asdict(self.fixture.request)
++        self.request = RefinedMaskInput(**{**original,'mask_file':str(self.mask),'mask_sha256':digest(self.mask.read_bytes()),
++            'annotation_file':str(self.annotation),'annotation_sha256':digest(self.annotation.read_bytes()),
++            'protected_mask_file':str(self.protected),'protected_mask_sha256':digest(self.protected.read_bytes()),
++            'mask_origin':ORIGIN})
++        self.out = self.root/'derived_generation'
++
++    def execute(self, pipe):
++        with ExitStack() as stack:
++            stack.enter_context(patch('transcreation.stages.inpainting.load_pipeline',return_value=pipe))
++            for key,value in [('is_available',True),('synchronize',None),('reset_peak_memory_stats',None),
++                              ('memory_allocated',0),('mem_get_info',(1000,4000)),('max_memory_allocated',1234),('empty_cache',None)]:
++                stack.enter_context(patch('torch.cuda.'+key,return_value=value))
++            return run_refined_inpainting(self.request,InpaintingConfig(),self.out)
++
++    def test_manual_origin_distinct_from_original_sam(self):
++        _,mask,sam,payload = validate_refined_inputs(self.request)
++        self.assertNotEqual(mask.tobytes(),Image.open(self.fixture.request.mask_file).tobytes())
++        self.assertEqual(sam.masks[1].foreground_pixels,285)
++        self.assertEqual(payload['mask_1.png'],Path(self.fixture.request.mask_file).read_bytes())
++        self.assertEqual(payload['refined_mask.png'],self.mask.read_bytes())
++
++    def test_full_region_protection_is_subtracted(self):
++        mask,protected = rasterize_annotations(self.doc,(60,40))
++        self.assertEqual(mask.getpixel((21,16)),0)
++        self.assertEqual(protected.getpixel((21,16)),255)
++        self.assertEqual(int(((np.asarray(mask)>0)&(np.asarray(protected)>0)).sum()),0)
++
++    def test_every_pinned_hash_is_enforced(self):
++        for key in ('image_sha256','segmentation_sha256','mask_sha256','annotation_sha256','protected_mask_sha256'):
++            with self.subTest(key=key), self.assertRaises(ValueError):
++                validate_refined_inputs(replace(self.request,**{key:'f'*64}))
++
++    def test_annotation_reference_cannot_change(self):
++        for key,value in [('source_image_sha256','f'*64),('sam_reference_index',0),
++                          ('sam_reference_mask_sha256','f'*64),('original_dimensions',[40,60])]:
++            doc={**self.doc,key:value};self.annotation.write_text(json.dumps(doc))
++            req=replace(self.request,annotation_sha256=digest(self.annotation.read_bytes()))
++            with self.subTest(key=key),self.assertRaises(ValueError):validate_refined_inputs(req)
++
++    def test_polygon_coordinates_validated_before_rasterization(self):
++        for point in [[-1,2],[60,2],[1,40],[True,3],[1.5,4]]:
++            doc={**self.doc,'editable_polygons':[{'label':'invalid','points':[point,[12,2],[12,8]]}]}
++            with self.subTest(point=point),self.assertRaises(ValueError):rasterize_annotations(doc,(60,40))
++
++    def test_saved_pixel_geometry_cannot_silently_change(self):
++        with Image.open(self.mask) as im:
++            im.putpixel((13,13),0);im.save(self.mask)
++        with self.assertRaisesRegex(ValueError,'polygon geometry'):
++            validate_refined_inputs(replace(self.request,mask_sha256=digest(self.mask.read_bytes())))
++
++    def test_protected_region_inclusion_rejected_even_with_new_hash(self):
++        with Image.open(self.mask) as im:
++            im.putpixel((21,16),255);im.save(self.mask)
++        with self.assertRaisesRegex(ValueError,'protected exclusion'):
++            validate_refined_inputs(replace(self.request,mask_sha256=digest(self.mask.read_bytes())))
++
++    def test_nonbinary_empty_wrong_size_masks_rejected(self):
++        for im in [Image.new('L',(60,40),128),Image.new('L',(60,40),0),Image.new('L',(40,60),255)]:
++            im.save(self.mask)
++            with self.assertRaises(ValueError):validate_refined_inputs(replace(self.request,mask_sha256=digest(self.mask.read_bytes())))
++
++    def test_no_human_or_permission_escalation(self):
++        for update in [{'human_approved':True},{'cultural_edit_authorized':True},{'image_edit_authorized':True}]:
++            self.annotation.write_text(json.dumps({**self.doc,**update}))
++            with self.assertRaises(ValueError):
++                validate_refined_inputs(replace(self.request,annotation_sha256=digest(self.annotation.read_bytes())))
++        with self.assertRaises(ValueError):replace(self.request,scope='APPROVED')
++        with self.assertRaises(ValueError):replace(self.request,mask_origin='SAM_PREDICTED')
++
++    def test_isolated_from_original_and_guided_routes(self):
++        from transcreation.guided_research import ResearchInput
++        with self.assertRaises(ValueError):run_inpainting(self.request,InpaintingConfig(),self.out)
++        with self.assertRaises(TypeError):InpaintingInput(**asdict(self.request))
++        with self.assertRaises(TypeError):ResearchInput(**asdict(self.request))
++
++    def test_mocked_generation_uses_actual_refined_mask_and_original_resolution(self):
++        before={p:p.read_bytes() for p in self.fixture.source.iterdir() if p.is_file()}
++        pipe=self.fixture.fake();report=self.execute(pipe)
++        self.assertEqual(report['status'],'COMPLETED')
++        self.assertEqual(report['editing_mask']['origin'],ORIGIN)
++        self.assertEqual(report['editing_mask']['original_sam_reference_mask_sha256'],self.fixture.request.mask_sha256)
++        self.assertFalse(report['human_approved']);self.assertFalse(report['cultural_edit_authorized'])
++        with Image.open(self.fixture.request.source_image) as source,Image.open(self.out/'final.png') as final,Image.open(self.mask) as mask:
++            self.assertEqual(final.size,(60,40))
++            changed=np.any(np.asarray(source)!=np.asarray(final),axis=2)
++            self.assertEqual(int((changed&(np.asarray(mask)==0)).sum()),0)
++            self.assertGreater(int((changed&(np.asarray(mask)==255)).sum()),0)
++        self.assertTrue(all(p.read_bytes()==raw for p,raw in before.items()))
++
++    def test_real_error_propagation_without_retry_or_false_success(self):
++        pipe=self.fixture.fake([RuntimeError('synthetic pipeline error')])
++        report=self.execute(pipe)
++        self.assertEqual(report['status'],'ERROR');self.assertEqual(pipe.call_count,1)
++        self.assertFalse((self.out/'final.png').exists())
++
++    def test_input_modified_during_loading_stops_before_generation(self):
++        def loader(_):
++            self.mask.write_bytes(self.mask.read_bytes()+b'changed')
++            return self.fixture.fake()
++        with patch('transcreation.stages.inpainting.load_pipeline',side_effect=loader),patch('torch.cuda.is_available',return_value=True),patch('torch.cuda.memory_allocated',return_value=0),patch('torch.cuda.mem_get_info',return_value=(1,4)),patch('torch.cuda.empty_cache'):
++            report=run_refined_inpainting(self.request,InpaintingConfig(),self.out)
++        self.assertEqual(report['status'],'ERROR');self.assertEqual(report['attempts'],[])
++
++    def test_prior_output_cannot_be_overwritten(self):
++        self.out.mkdir();sentinel=self.out/'keep.txt';sentinel.write_text('unchanged')
++        with self.assertRaises(FileExistsError):run_refined_inpainting(self.request,InpaintingConfig(),self.out)
++        self.assertEqual(sentinel.read_text(),'unchanged')
++
++    def test_cli_explicit_refined_input_dispatch(self):
++        from scripts.inpaint import main
++        path=self.root/'request.json';path.write_text(json.dumps(asdict(self.request)))
++        with patch('transcreation.stages.refined_inpainting.run_refined_inpainting',return_value={'status':'COMPLETED'}) as run,redirect_stdout(StringIO()):
++            main(['--refined-input',str(path),'--out',str(self.out)])
++        self.assertIsInstance(run.call_args.args[0],RefinedMaskInput)
++

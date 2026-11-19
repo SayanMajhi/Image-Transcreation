@@ -1,0 +1,12 @@
+{
+  "status": "WITHHELD_PENDING_FINALIZED_RESPONSES",
+  "blinded_candidate_ids": [
+    "candidate_1",
+    "candidate_2",
+    "candidate_3"
+  ],
+  "condition_mapping": null,
+  "original_private_key_path": "results\\phase8_cultural_validation\\human_evaluation\\admin\\blinding_key.json",
+  "original_private_key_sha256": "1e600704e2fd4a14a5225c8c1874cf9849adedeb52499c086b56ac10b8e23543",
+  "reason": "User step 6 permits unblinding only after all responses are finalized; none were supplied. Original key not copied into the incomplete analyst package."
+}

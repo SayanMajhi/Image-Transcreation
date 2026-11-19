@@ -1,0 +1,77 @@
+{
+  "input": {
+    "source_caption": "A synthetic object sits on a surface.",
+    "caption_status": "COMPLETE",
+    "target_culture": "test target",
+    "source_culture": null,
+    "user_instructions": null,
+    "verified_objects": [
+      {
+        "object_id": "object-1",
+        "description": "synthetic object"
+      }
+    ]
+  },
+  "response": {
+    "message": {
+      "content": "{\"decision\": \"PROPOSE\", \"decision_reason\": \"A conditional material adaptation.\", \"scene_summary\": \"Caption describes a synthetic object.\", \"candidate_edits\": [{\"object_description\": \"synthetic object\", \"localization_phrase\": \"synthetic object\", \"proposed_change\": \"a different surface material\", \"cultural_reason\": \"Contextual test suggestion only\", \"identity_uncertain\": false, \"verified_object_id\": \"object-1\"}], \"must_preserve\": [\"background\"], \"uncertainties\": [], \"verification_requirements\": []}"
+    }
+  },
+  "raw_planning_result": {
+    "decision": "PROPOSE",
+    "decision_reason": "A conditional material adaptation.",
+    "scene_summary": "Caption describes a synthetic object.",
+    "candidate_edits": [
+      {
+        "object_description": "synthetic object",
+        "localization_phrase": "synthetic object",
+        "proposed_change": "a different surface material",
+        "cultural_reason": "Contextual test suggestion only",
+        "identity_uncertain": false,
+        "verified_object_id": "object-1"
+      }
+    ],
+    "must_preserve": [
+      "background"
+    ],
+    "uncertainties": [],
+    "verification_requirements": []
+  },
+  "planning_result": {
+    "decision": "PROPOSE",
+    "decision_reason": "A conditional material adaptation.",
+    "scene_summary": "Caption describes a synthetic object.",
+    "candidate_edits": [
+      {
+        "object_description": "synthetic object",
+        "localization_phrase": "synthetic object",
+        "proposed_change": "a different surface material",
+        "cultural_reason": "Contextual test suggestion only",
+        "identity_uncertain": false,
+        "verified_object_id": "object-1"
+      }
+    ],
+    "must_preserve": [
+      "background",
+      "original scene purpose",
+      "important people",
+      "activity",
+      "person and object relationships"
+    ],
+    "uncertainties": [],
+    "verification_requirements": [
+      "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
+      "Verify localization phrases against the original image before grounding or editing.",
+      "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",
+      "Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness."
+    ]
+  },
+  "validation": {
+    "status": "valid",
+    "issues": []
+  },
+  "unload": {
+    "status": "sent"
+  },
+  "fixture_scope": "SYNTHETIC_TEST_ONLY"
+}

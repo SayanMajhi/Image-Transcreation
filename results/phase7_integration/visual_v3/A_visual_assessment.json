@@ -1,0 +1,15 @@
+{
+  "assessor": "Codex assistant visual inspection",
+  "views": [
+    "A/final.png",
+    "central_native_comparison.png"
+  ],
+  "text_artifact": "No obvious text-like markings visible. Resolved relative to V2 in inspected regions.",
+  "noodle_strands": "Recognizable food strands, but some central bands are waxy/flattened with discontinuities.",
+  "target_appearance": "Not convincing reddish-brown masala coating; remains predominantly pale/yellow ramen.",
+  "preservation": "All 20,484 masked pixels changed, outside/protected changes zero.",
+  "normal_size": "Local rearrangement is modest; not a clear broad cultural transformation.",
+  "boundary_seams": "Visible local contrast/continuity differences at central fan and below-spoon wedge.",
+  "visual_verdict": "NEEDS FIXES",
+  "B_eligibility": "Important food-texture/transition artifacts and weak target appearance remain; execute exactly the preregistered corrective condition. No further variants."
+}

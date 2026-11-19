@@ -1,0 +1,23 @@
+{
+  "assessor": "Codex assistant qualitative visual inspection, not independent human cultural review",
+  "views_inspected": [
+    "generation/final.png",
+    "generated_closeup.png",
+    "mask_overlay.png"
+  ],
+  "technical_generation": "PASS: one real diffusion call altered all 4,224 editable pixels; independent output verification passed.",
+  "cultural_target_appearance": "FAIL: generated region contains brown text-like, label-like marks instead of convincing reddish-brown spiced noodles. No cultural authenticity or masala-noodle success is claimed.",
+  "protected_objects": "PASS for exact decoded RGB preservation outside the manually traced patch, including all visible ceramic, spoon and its contents, chopsticks, toppings and background. Polygon semantics remain assistant visual annotation, not pixel ground truth.",
+  "visual_consistency": "FAIL: paper/label-like patch interrupts noodle continuity. Text-like artifact is clearly visible when enlarged and resembles an unrelated inserted graphic. Surrounding lighting/perspective is unchanged because those pixels are unchanged; generated food texture is not plausible.",
+  "coverage": "PARTIAL LOCAL TRANSFORMATION attempt: 4,224 pixels (0.267857% of source image) in a central noodle patch only. No total-noodle coverage estimate or complete dish transformation.",
+  "remaining_defects": [
+    "unwanted text-like label instead of food texture",
+    "local noodle continuity disrupted",
+    "most noodles and all toppings intentionally unchanged"
+  ],
+  "decision": "NEEDS FIXES for cultural/visual objective; technical source-bound localized generation milestone demonstrated. Preserve single attempt and stop; no further seeds, prompts or masks tested.",
+  "generation_calls": 1,
+  "quality_retries": 0,
+  "human_approved": false,
+  "historical_human_decision_unchanged": "MATERIAL_UNRESOLVED"
+}

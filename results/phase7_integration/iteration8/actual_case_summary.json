@@ -1,0 +1,39 @@
+{
+  "original_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "planning_input_sha256": "f6f92654e5cee49c8340580de772d85d0211dbe4e503ad101d822fed09466e65",
+  "planner_audit_sha256": "5dee35147680522f7cd2bc6f6702171d21a0f85081525cbd95edf401e68ea2fc",
+  "raw_response_sha256": "b17dd8dd1b6213e9926e183e155ae740f1c8ce082cb408705e1dd65dcebc5ecb",
+  "validated_review_sha256": "0d187494ac277ae35c72360ca427b39583c9c3dd03ceb1f529c04c4951590c56",
+  "pending_request_sha256": "7b62777122ba543c6430ce50ed22a7f02398d50b719582d2a939b43b102b6923",
+  "candidate_index": 0,
+  "verified_object": {
+    "object_id": "ramen-food-1",
+    "description": "Japanese ramen noodles in a white bowl"
+  },
+  "original_source_phrase": "Japanese ramen noodles in a white bowl",
+  "proposed_change": "change the noodles to masala noodles",
+  "uncertainties": [
+    "The user instruction to transform the ramen into masala noodles is a cultural adaptation, which may require visual verification beyond the provided caption and verified object description."
+  ],
+  "outstanding_instruction_checks": "Original visible object, as declared by the user:\n\"Japanese ramen noodles in a bowl\"\n\nTransform the ramen into Indian-style masala noodles.\n\nPreserve the bowl, table, camera angle, lighting, and background.",
+  "issue_codes": [
+    "USER_CONSTRAINTS_UNRESOLVED",
+    "EDIT_UNCERTAINTY_UNRESOLVED"
+  ],
+  "triage_eligible": true,
+  "review_status": "PENDING",
+  "reviewer": null,
+  "decision_timestamp": null,
+  "original_final_decision": "REVIEW",
+  "original_released_candidates": 0,
+  "permitted_next_action": "A real reviewer may inspect the full bound evidence and record one justified classification.",
+  "prohibited_actions": [
+    "Candidate release",
+    "Automatic intent approval",
+    "Grounding",
+    "SAM",
+    "Diffusion",
+    "Image editing"
+  ],
+  "future_review_milestone": "Any later handoff needs separate authorization and traceability to this blocked result and actual classification."
+}

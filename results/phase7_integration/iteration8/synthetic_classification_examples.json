@@ -1,0 +1,70 @@
+[
+  {
+    "decision": "ROUTINE_VERIFICATION_REQUIRED",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "record": "results/phase7_integration/iteration8/synthetic_examples/ROUTINE_VERIFICATION_REQUIRED/decision.json",
+    "original_final_decision": "REVIEW",
+    "original_released_candidates": 0,
+    "permissions": {
+      "candidate_release_authorized": false,
+      "edit_intent_authorized": false,
+      "grounding_authorized": false,
+      "sam_authorized": false,
+      "diffusion_authorized": false,
+      "image_edit_authorized": false,
+      "cultural_transformation_authorized": false
+    },
+    "actual_human_judgment": false
+  },
+  {
+    "decision": "MATERIAL_UNRESOLVED",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "record": "results/phase7_integration/iteration8/synthetic_examples/MATERIAL_UNRESOLVED/decision.json",
+    "original_final_decision": "REVIEW",
+    "original_released_candidates": 0,
+    "permissions": {
+      "candidate_release_authorized": false,
+      "edit_intent_authorized": false,
+      "grounding_authorized": false,
+      "sam_authorized": false,
+      "diffusion_authorized": false,
+      "image_edit_authorized": false,
+      "cultural_transformation_authorized": false
+    },
+    "actual_human_judgment": false
+  },
+  {
+    "decision": "REJECT",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "record": "results/phase7_integration/iteration8/synthetic_examples/REJECT/decision.json",
+    "original_final_decision": "REVIEW",
+    "original_released_candidates": 0,
+    "permissions": {
+      "candidate_release_authorized": false,
+      "edit_intent_authorized": false,
+      "grounding_authorized": false,
+      "sam_authorized": false,
+      "diffusion_authorized": false,
+      "image_edit_authorized": false,
+      "cultural_transformation_authorized": false
+    },
+    "actual_human_judgment": false
+  },
+  {
+    "decision": "NEEDS_REVIEW",
+    "scope": "SYNTHETIC_TEST_ONLY",
+    "record": "results/phase7_integration/iteration8/synthetic_examples/NEEDS_REVIEW/decision.json",
+    "original_final_decision": "REVIEW",
+    "original_released_candidates": 0,
+    "permissions": {
+      "candidate_release_authorized": false,
+      "edit_intent_authorized": false,
+      "grounding_authorized": false,
+      "sam_authorized": false,
+      "diffusion_authorized": false,
+      "image_edit_authorized": false,
+      "cultural_transformation_authorized": false
+    },
+    "actual_human_judgment": false
+  }
+]

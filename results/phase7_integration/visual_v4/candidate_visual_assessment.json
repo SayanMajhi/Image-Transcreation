@@ -1,0 +1,11 @@
+{
+  "assessor": "Codex assistant, not a human verification",
+  "visible": "A coherent mound of pale noodle strands with small herb/garlic-like pieces; white plate partly visible and dark restaurant background. No utensil crossing the food.",
+  "advantages_relative_to_ramen": "Larger continuous food surface and fewer large protected occluding toppings.",
+  "limitations": [
+    "bright flash/overexposed highlights reduce texture detail",
+    "food cropped by image edges and plate partly obscured",
+    "exact recipe and culture are source-page claims, not independently proved by appearance"
+  ],
+  "status": "Provisional source candidate only; no mask, scope or generation condition frozen."
+}

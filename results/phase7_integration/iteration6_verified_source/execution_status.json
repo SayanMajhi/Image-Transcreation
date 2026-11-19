@@ -1,0 +1,23 @@
+{
+  "status": "BLOCKED_PENDING_ACTUAL_USER_CONFIRMATION",
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "verified_object_created": false,
+  "new_planning_input_created": false,
+  "actual_changed_input_fields": [],
+  "model_calls": {
+    "SmolVLM": 0,
+    "Qwen": 0,
+    "GroundingDINO": 0,
+    "SAM": 0,
+    "Diffusion": 0
+  },
+  "original_object_description_from_new_qwen": null,
+  "localization_phrase_from_new_qwen": null,
+  "raw_decision": null,
+  "validated_decision": null,
+  "released_candidate_count": null,
+  "issue_codes": null,
+  "pending_edit_intent_created": false,
+  "reason": "The actual user was shown the exact photograph and asked for image-bound confirmation; no confirmation reply is available. Stop before creating verified identity or calling Qwen.",
+  "no_model_failure_or_abstention_claimed": true
+}

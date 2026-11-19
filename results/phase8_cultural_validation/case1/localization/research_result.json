@@ -1,0 +1,36 @@
+{
+  "execution_mode": "GUIDED_RESEARCH",
+  "scope": "RESEARCH_ONLY",
+  "human_approved": false,
+  "automated_plan_success": false,
+  "cultural_edit_authorized": false,
+  "status": "SOURCE_OBJECT_REQUIRES_REVIEW",
+  "events": [
+    {
+      "stage": "resources",
+      "action": "OLLAMA_IDLE_CONFIRMED",
+      "seconds": 0.0302893000007316
+    },
+    {
+      "stage": "grounding",
+      "action": "DISPATCH",
+      "seconds": 0.031127000002015848,
+      "phrase": "croissant"
+    },
+    {
+      "stage": "grounding",
+      "action": "RELEASED",
+      "seconds": 9.828441800000292
+    }
+  ],
+  "reason": "Inspect every predicted box; supply pinned detection, explicit index and selection note. No SAM or generation ran.",
+  "total_seconds": 9.828450900000462,
+  "artifact_sha256": {
+    "request.json": "37bbe94033c84056e658e965703543f4967b3548a394082a0efb7a75aaba908f",
+    "source.jpg": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "grounding/annotated.png": "636be83643c047202d40246f25a396940ccefa5200271845aeca4e280019a542",
+    "grounding/comparison.png": "58007ad8c60c134a8e421437d8221648a75a39d16ea800480128d30582360434",
+    "grounding/detection.json": "fb55b34edfd0a065c822baa634bf39e05cd02d8cc8c0cd26173f3250f7de0fa3",
+    "grounding/original.png": "bbac4c0f4df6179c0490a95ca9d937bbcd2ce49a72bc72172bbffb17180c5c7c"
+  }
+}

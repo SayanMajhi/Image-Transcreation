@@ -1,0 +1,12 @@
+{
+  "status": " M src/transcreation/stages/ollama_planner.py\n M src/transcreation/stages/planning.py\n M tests/test_planning_policy.py\n?? results/phase7_integration/\n?? scripts/review_edit_intent.py\n?? scripts/review_uncertainty.py\n?? scripts/run_pipeline.py\n?? src/transcreation/orchestration.py\n?? tests/test_edit_intent.py\n?? tests/test_instruction_review.py\n?? tests/test_orchestration.py\n?? tests/test_source_anchor_prompt.py\n?? tests/test_uncertainty_review.py\n",
+  "head_diffstat": " src/transcreation/stages/ollama_planner.py | 22 ++++++++++++++++++++++\n src/transcreation/stages/planning.py       |  7 ++++---\n tests/test_planning_policy.py              | 12 ++++++++----\n 3 files changed, 34 insertions(+), 7 deletions(-)\n",
+  "iteration8_modified_existing_code": [],
+  "iteration8_added": [
+    "scripts/review_uncertainty.py",
+    "tests/test_uncertainty_review.py"
+  ],
+  "note": "Pre-existing tracked changes/untracked integration work remain; changes.patch shows only the two I8 additions.",
+  "commits": 0,
+  "pushes": 0
+}

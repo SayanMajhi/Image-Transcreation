@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_type": "grounding_box_human_review",
+  "original_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "original_dimensions": [
+    1408,
+    1120
+  ],
+  "source_phrase": "noodles",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "prediction_count": 1,
+  "detection_json_sha256": "26ebbb6012d651e58d9189efd9d71eb36a136f561551cb9d4a04197541542a13",
+  "annotation_sha256": "a09719fde92738716f2cd963b74b22d91b56edf09e0179492d78d7b49a8e272b",
+  "image_file": "original.jpg",
+  "detection_file": "detection.json",
+  "annotation_file": "annotated.png",
+  "prediction_indexing": "zero_based_detections_array",
+  "decision": "PENDING",
+  "selected_prediction_index": null,
+  "selected_prediction": null,
+  "candidate_kind": null,
+  "reviewer": null,
+  "explanation": "Awaiting explicit human review; no selection has been made.",
+  "created_at_utc": "2026-11-11T08:22:43.238504+00:00",
+  "reviewed_at_utc": null,
+  "inspected_original": false,
+  "inspected_boxes": false,
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false
+}

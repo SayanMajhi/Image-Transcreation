@@ -1,0 +1,104 @@
+{
+  "image_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+  "original_dimensions": [
+    2272,
+    1704
+  ],
+  "source_phrase": "spaghetti noodles",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "resolved_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        3.6668148040771484,
+        394.75372314453125,
+        2266.13720703125,
+        1698.0286865234375
+      ],
+      "score": 0.9185943007469177,
+      "label": "spaghetti noodles"
+    }
+  ],
+  "settings": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42,
+    "effective_device": "cuda",
+    "normalized_prompt": "spaghetti noodles.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "disable_custom_kernels": true,
+    "inference_mode": true,
+    "eval": true,
+    "coordinate_format": "xyxy_original_pixels",
+    "postprocess_box_argument": "threshold",
+    "target_sizes": [
+      [
+        1704,
+        2272
+      ]
+    ],
+    "image_processor": {
+      "_processor_class": "GroundingDinoProcessor",
+      "image_processor_type": "GroundingDinoImageProcessor",
+      "format": "coco_detection",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1333,
+        "shortest_edge": 800
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "do_convert_annotations": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": null
+    }
+  },
+  "timing": {
+    "load_seconds": 8.018776000000798,
+    "preprocess_seconds": 0.07618209999782266,
+    "inference_seconds": 1.0848217999991903,
+    "postprocess_seconds": 0.015153500000451459,
+    "total_seconds": 9.219570399996883
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 692084224,
+    "inference_peak_allocated_bytes": 1830748160,
+    "device": "cuda"
+  },
+  "raw_predictions": {
+    "boxes": [
+      [
+        3.6668148040771484,
+        394.75372314453125,
+        2266.13720703125,
+        1698.0286865234375
+      ]
+    ],
+    "scores": [
+      0.9185943007469177
+    ],
+    "text_labels": [
+      "spaghetti noodles"
+    ]
+  },
+  "observations": [],
+  "research_only": true
+}

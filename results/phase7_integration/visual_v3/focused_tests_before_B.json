@@ -1,0 +1,56 @@
+[
+  {
+    "command": [
+      "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_inpainting.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "wall_seconds": 22.202113900000768,
+    "stdout": "",
+    "stderr": "test_edge_crop_is_bounded_and_non_square_source_not_stretched (test_inpainting.InpaintingTests.test_edge_crop_is_bounded_and_non_square_source_not_stretched) ... ok\ntest_empty_prompt_and_invalid_candidate (test_inpainting.InpaintingTests.test_empty_prompt_and_invalid_candidate) ... ok\ntest_exact_outside_pixels_and_original_resolution (test_inpainting.InpaintingTests.test_exact_outside_pixels_and_original_resolution) ... ok\ntest_existing_config_defaults_and_invalid_settings (test_inpainting.InpaintingTests.test_existing_config_defaults_and_invalid_settings) ... ok\ntest_explicit_lower_score_candidate_and_hashes (test_inpainting.InpaintingTests.test_explicit_lower_score_candidate_and_hashes) ... ok\ntest_image_hash_mismatch (test_inpainting.InpaintingTests.test_image_hash_mismatch) ... ok\ntest_invalid_restoration_dimensions_and_crop (test_inpainting.InpaintingTests.test_invalid_restoration_dimensions_and_crop) ... ok\ntest_loading_failure_audited (test_inpainting.InpaintingTests.test_loading_failure_audited) ... ok\ntest_local_crop_padding_preserves_geometry (test_inpainting.InpaintingTests.test_local_crop_padding_preserves_geometry) ... ok\ntest_mocked_success_serialization_and_original_preservation (test_inpainting.InpaintingTests.test_mocked_success_serialization_and_original_preservation) ... ok\ntest_modified_png_even_when_pixels_unchanged (test_inpainting.InpaintingTests.test_modified_png_even_when_pixels_unchanged) ... ok\ntest_no_cuda_is_explicit (test_inpainting.InpaintingTests.test_no_cuda_is_explicit) ... ok\ntest_no_overwrite_and_raw_planner_input_rejected (test_inpainting.InpaintingTests.test_no_overwrite_and_raw_planner_input_rejected) ... ok\ntest_non_oom_pipeline_error_not_retried (test_inpainting.InpaintingTests.test_non_oom_pipeline_error_not_retried) ... ok\ntest_nonbinary_empty_and_dimension_mismatch (test_inpainting.InpaintingTests.test_nonbinary_empty_and_dimension_mismatch) ... ok\ntest_one_explicit_oom_fallback (test_inpainting.InpaintingTests.test_one_explicit_oom_fallback) ... ok\ntest_research_scope_never_inherited_from_review (test_inpainting.InpaintingTests.test_research_scope_never_inherited_from_review) ... ok\ntest_restoration_removes_padding_without_distorting_axes (test_inpainting.InpaintingTests.test_restoration_removes_padding_without_distorting_axes) ... ok\ntest_safetensors_only_pinned_loader (test_inpainting.InpaintingTests.test_safetensors_only_pinned_loader) ... ok\ntest_safety_flag_not_claimed_as_success (test_inpainting.InpaintingTests.test_safety_flag_not_claimed_as_success) ... ok\ntest_second_oom_stops_and_preserves_error (test_inpainting.InpaintingTests.test_second_oom_stops_and_preserves_error) ... ok\ntest_segmentation_json_hash_mismatch (test_inpainting.InpaintingTests.test_segmentation_json_hash_mismatch) ... ok\ntest_source_modified_during_loading_blocks_inference (test_inpainting.InpaintingTests.test_source_modified_during_loading_blocks_inference) ... ok\ntest_unrelated_mask_rejected (test_inpainting.InpaintingTests.test_unrelated_mask_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 14.905s\n\nOK\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_refined_inpainting.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "wall_seconds": 8.901691200000641,
+    "stdout": "",
+    "stderr": "test_absent_negative_prompt_preserves_existing_call_options (test_refined_inpainting.RefinedInpaintingTests.test_absent_negative_prompt_preserves_existing_call_options) ... ok\ntest_annotation_reference_cannot_change (test_refined_inpainting.RefinedInpaintingTests.test_annotation_reference_cannot_change) ... ok\ntest_cli_explicit_refined_input_dispatch (test_refined_inpainting.RefinedInpaintingTests.test_cli_explicit_refined_input_dispatch) ... ok\ntest_every_pinned_hash_is_enforced (test_refined_inpainting.RefinedInpaintingTests.test_every_pinned_hash_is_enforced) ... ok\ntest_full_region_protection_is_subtracted (test_refined_inpainting.RefinedInpaintingTests.test_full_region_protection_is_subtracted) ... ok\ntest_input_modified_during_loading_stops_before_generation (test_refined_inpainting.RefinedInpaintingTests.test_input_modified_during_loading_stops_before_generation) ... ok\ntest_invalid_negative_prompts_rejected_without_model_dispatch (test_refined_inpainting.RefinedInpaintingTests.test_invalid_negative_prompts_rejected_without_model_dispatch) ... ok\ntest_isolated_from_original_and_guided_routes (test_refined_inpainting.RefinedInpaintingTests.test_isolated_from_original_and_guided_routes) ... ok\ntest_manual_origin_distinct_from_original_sam (test_refined_inpainting.RefinedInpaintingTests.test_manual_origin_distinct_from_original_sam) ... ok\ntest_mocked_generation_uses_actual_refined_mask_and_original_resolution (test_refined_inpainting.RefinedInpaintingTests.test_mocked_generation_uses_actual_refined_mask_and_original_resolution) ... ok\ntest_negative_prompt_only_when_explicitly_supplied_for_research (test_refined_inpainting.RefinedInpaintingTests.test_negative_prompt_only_when_explicitly_supplied_for_research) ... ok\ntest_no_human_or_permission_escalation (test_refined_inpainting.RefinedInpaintingTests.test_no_human_or_permission_escalation) ... ok\ntest_nonbinary_empty_wrong_size_masks_rejected (test_refined_inpainting.RefinedInpaintingTests.test_nonbinary_empty_wrong_size_masks_rejected) ... ok\ntest_polygon_coordinates_validated_before_rasterization (test_refined_inpainting.RefinedInpaintingTests.test_polygon_coordinates_validated_before_rasterization) ... ok\ntest_prior_output_cannot_be_overwritten (test_refined_inpainting.RefinedInpaintingTests.test_prior_output_cannot_be_overwritten) ... ok\ntest_protected_region_inclusion_rejected_even_with_new_hash (test_refined_inpainting.RefinedInpaintingTests.test_protected_region_inclusion_rejected_even_with_new_hash) ... ok\ntest_real_error_propagation_without_retry_or_false_success (test_refined_inpainting.RefinedInpaintingTests.test_real_error_propagation_without_retry_or_false_success) ... ok\ntest_saved_pixel_geometry_cannot_silently_change (test_refined_inpainting.RefinedInpaintingTests.test_saved_pixel_geometry_cannot_silently_change) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 2.421s\n\nOK\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_guided_research.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "wall_seconds": 8.37242999999944,
+    "stdout": "",
+    "stderr": "test_all_pinned_evidence_tampering_blocks_generation (test_guided_research.GuidedResearchTests.test_all_pinned_evidence_tampering_blocks_generation) ... ok\ntest_cli_routes_guided_request_without_planner (test_guided_research.GuidedResearchTests.test_cli_routes_guided_request_without_planner) ... ok\ntest_explicit_box_to_sam_handoff_uses_source_not_replacement (test_guided_research.GuidedResearchTests.test_explicit_box_to_sam_handoff_uses_source_not_replacement) ... ok\ntest_explicit_lower_score_mask_generation_and_independent_pixel_check (test_guided_research.GuidedResearchTests.test_explicit_lower_score_mask_generation_and_independent_pixel_check) ... ok\ntest_failed_generation_is_not_success (test_guided_research.GuidedResearchTests.test_failed_generation_is_not_success) ... ok\ntest_failure_releases_detector (test_guided_research.GuidedResearchTests.test_failure_releases_detector) ... ok\ntest_failure_releases_sam_and_blocks_generation (test_guided_research.GuidedResearchTests.test_failure_releases_sam_and_blocks_generation) ... ok\ntest_false_success_with_outside_changes_is_rejected (test_guided_research.GuidedResearchTests.test_false_success_with_outside_changes_is_rejected) ... ok\ntest_invalid_index_and_unselected_multiple_boxes (test_guided_research.GuidedResearchTests.test_invalid_index_and_unselected_multiple_boxes) ... ok\ntest_missing_box_selection_stops_after_live_boundary_mock (test_guided_research.GuidedResearchTests.test_missing_box_selection_stops_after_live_boundary_mock) ... ok\ntest_missing_mask_selection_keeps_all_candidates (test_guided_research.GuidedResearchTests.test_missing_mask_selection_keeps_all_candidates) ... ok\ntest_model_order_residency_preflight_then_sam_then_release (test_guided_research.GuidedResearchTests.test_model_order_residency_preflight_then_sam_then_release) ... ok\ntest_no_approval_or_rejected_plan_fields_accepted (test_guided_research.GuidedResearchTests.test_no_approval_or_rejected_plan_fields_accepted) ... ok\ntest_no_detections_are_retained_without_dispatch (test_guided_research.GuidedResearchTests.test_no_detections_are_retained_without_dispatch) ... ok\ntest_no_implicit_selection_from_saved_detection (test_guided_research.GuidedResearchTests.test_no_implicit_selection_from_saved_detection) ... ok\ntest_originals_preserved_and_outputs_cannot_overwrite (test_guided_research.GuidedResearchTests.test_originals_preserved_and_outputs_cannot_overwrite) ... ok\ntest_outside_protected_samples_do_not_expand_edit_scope (test_guided_research.GuidedResearchTests.test_outside_protected_samples_do_not_expand_edit_scope) ... ok\ntest_protected_sample_in_mask_blocks_generation (test_guided_research.GuidedResearchTests.test_protected_sample_in_mask_blocks_generation) ... ok\ntest_protected_samples_require_original_coordinates (test_guided_research.GuidedResearchTests.test_protected_samples_require_original_coordinates) ... ok\ntest_replacement_as_source_query_mismatch_is_rejected (test_guided_research.GuidedResearchTests.test_replacement_as_source_query_mismatch_is_rejected) ... ok\ntest_require_complete_explicit_specification_and_paired_hashes (test_guided_research.GuidedResearchTests.test_require_complete_explicit_specification_and_paired_hashes) ... ok\ntest_unrelated_resident_model_blocks_dispatch (test_guided_research.GuidedResearchTests.test_unrelated_resident_model_blocks_dispatch) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 7.016s\n\nOK\n"
+  }
+]

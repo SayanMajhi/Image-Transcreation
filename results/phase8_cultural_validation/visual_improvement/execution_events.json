@@ -1,0 +1,7 @@
+[
+  {
+    "event": "initial launch prerequisite check found the test-log file still pending; wrapper stopped before editor invocation",
+    "actual_model_calls": 0,
+    "correction": "awaited complete regression process before launching; no model settings changed"
+  }
+]

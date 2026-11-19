@@ -1,0 +1,18 @@
+{
+  "image_sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+  "original_dimensions": [
+    60,
+    40
+  ],
+  "source_phrase": "synthetic object",
+  "model_id": "synthetic detector",
+  "resolved_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "status": "NO_DETECTIONS",
+  "detections": [],
+  "settings": {},
+  "timing": {},
+  "memory": {},
+  "raw_predictions": {},
+  "observations": [],
+  "research_only": true
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "/api/tags",
+    "generation": false,
+    "seconds": 0.03133089999028016,
+    "request_payload_sha256": null
+  },
+  {
+    "path": "/api/chat",
+    "generation": true,
+    "seconds": 38.76066330001049,
+    "request_payload_sha256": "fe34931bad6881e6d5aaf432bd3f45fb774f9b0a1e00afe0e3f28e65289055ea"
+  },
+  {
+    "path": "/api/chat",
+    "generation": false,
+    "seconds": 0.23763370000233408,
+    "request_payload_sha256": "26ec6f2441cd4d4c5b4c679142bff4728c07801c073a0d13982f72f3b23b1744"
+  }
+]

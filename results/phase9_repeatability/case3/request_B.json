@@ -1,0 +1,91 @@
+{
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source": {
+    "path": "../assets/cookie.jpg",
+    "sha256": "8cb875b937dd642930fb421e5ad7a0e4e518144aa865293d7d7de35643bb1871"
+  },
+  "reference": {
+    "path": "../assets/onigiri.jpg",
+    "sha256": "768bc6594037651fabbd6c0a86fcda52dd229d67a1ee5d62f5b4c7199cdd0d67"
+  },
+  "selection": {
+    "path": "../reference_masks/onigiri.png",
+    "sha256": "64fc4a49e1f17bdff8a7ad61d9cf94c9564cc1438bd37b42e24b04b17e73dc24"
+  },
+  "permitted": {
+    "path": "permitted_B.png",
+    "sha256": "2073ee8812c1e0b234d9e1cd4115b4176c0c6a3e4fed8ccf2d6ef25d8e7ab23f"
+  },
+  "protected": {
+    "path": "protected_B.png",
+    "sha256": "2dafeaf39314da6c039b65af0ea9e2e7b1151f18cd3962d3d1464087d99bf0ec"
+  },
+  "parameters": {
+    "target_width": 1550,
+    "position": [
+      575,
+      225
+    ],
+    "background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "edge_radius": 1.0,
+    "shadows": [
+      {
+        "ellipse": [
+          720,
+          1490,
+          2010,
+          1560
+        ],
+        "blur": 25,
+        "opacity": 0.13
+      }
+    ]
+  },
+  "attribution": {
+    "path": "results\\phase9_repeatability\\assets\\onigiri.jpg",
+    "sha256": "768bc6594037651fabbd6c0a86fcda52dd229d67a1ee5d62f5b4c7199cdd0d67",
+    "dimensions": [
+      3770,
+      2828
+    ],
+    "title": "Yaki-Onigiri 001.jpg",
+    "author": "Ocdp",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yaki-Onigiri_001.jpg"
+  },
+  "source_attribution": {
+    "path": "results\\phase9_repeatability\\assets\\cookie.jpg",
+    "sha256": "8cb875b937dd642930fb421e5ad7a0e4e518144aa865293d7d7de35643bb1871",
+    "dimensions": [
+      2700,
+      1800
+    ],
+    "title": "Chocolate chip cookie.jpg",
+    "author": "Renee Comet / NCI; 2017 color correction by Hohum",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Chocolate_chip_cookie.jpg"
+  },
+  "annotation_method": "Frozen annotations.json reference photo patch or manual polygon. Source envelope: largest RGB-min<235 component +30px margin, union explicit reference placement and declared soft-shadow footprint. Not SAM, not human approval.",
+  "case": {
+    "id": 3,
+    "source": "cookie",
+    "target": "onigiri",
+    "source_culture": "American-style chocolate-chip snack context",
+    "target_culture": "Japanese yaki-onigiri snack context",
+    "category": "food",
+    "difficulty": "medium: target perspective/scale differs, must isolate one rice snack from tray"
+  },
+  "frozen_at_utc": "2026-11-11T20:12:55.503896+00:00",
+  "frozen_manifest_sha256": "741ce80c309eb37b35f4af23d0172f86f3c26c273e36e6a31b26b230291d419b",
+  "lighting_limits": "Reference illumination retained; no intrinsic relighting or 3D pose recovery. Uniform source background reconstruction is a research assumption.",
+  "correction": {
+    "issue_A": "Faint original cookie shadow/outline remains below the replacement",
+    "change": "Add explicit source object+shadow cleanup rectangle [400,0,2350,1800]; all target, scale, lighting, source and reference conditions fixed",
+    "frozen_at_utc": "2026-11-11T20:14:40.129528+00:00"
+  }
+}

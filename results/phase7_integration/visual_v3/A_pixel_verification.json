@@ -1,0 +1,42 @@
+{
+  "experiment": "A",
+  "dimensions": [
+    1408,
+    1120
+  ],
+  "editable_pixels": 20484,
+  "changed_inside_mask": 20484,
+  "changed_outside_mask": 0,
+  "maximum_outside_channel_difference": 0,
+  "changed_in_protected_regions": 0,
+  "protected_region_pixels": 1530720,
+  "protected_editable_intersection": 0,
+  "source_image_percent_editable": 1.2989549512987013,
+  "noodle_coverage_percentage": null,
+  "regions": [
+    {
+      "label": "exposed central noodle fan between tan/dark/pink/green toppings",
+      "editable_pixels": 12012,
+      "changed_pixels": 12012
+    },
+    {
+      "label": "exposed noodle strands below spoon and to right of green garnish",
+      "editable_pixels": 3170,
+      "changed_pixels": 3170
+    },
+    {
+      "label": "exposed lower-left noodle strands between chopstick and meat",
+      "editable_pixels": 5302,
+      "changed_pixels": 5302
+    }
+  ],
+  "hashes": {
+    "original.webp": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+    "research_mask.png": "21f0e7c4c0fefb815b45a402fe7005345ae5f5bc75870bd81f5fd247dad84f45",
+    "annotations.json": "7daae71157567bef8c762fbfdf8042b10834d15812f38a06119fb6925d974e38",
+    "protected_regions.png": "b7598fdf6bf6580d69f181ac6adefab1570a5e258a55e791c7f845c9d5f2e8f0",
+    "final.png": "9a86edd3578c856271c7466ffbe6b1707afb9d2da80fea7091caf95ae4c8d82a"
+  },
+  "verification": "All reopened decoded RGB pixels; independent from generation/compositing implementation.",
+  "semantic_limit": "Exclusions are assistant operator annotations, not independent pixel ground truth."
+}

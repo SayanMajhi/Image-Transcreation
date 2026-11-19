@@ -1,0 +1,11 @@
+{
+  "checked": 662,
+  "changed": [
+    "src/transcreation/stages/ollama_planner.py",
+    "results/phase7_integration/phase7_working_report.md"
+  ],
+  "unexpected_changes": [],
+  "previous_report_exact_prefix": true,
+  "iteration6_evidence_byte_identical": true,
+  "validator_and_review_files_unchanged": true
+}

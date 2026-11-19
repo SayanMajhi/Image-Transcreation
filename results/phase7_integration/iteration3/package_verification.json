@@ -1,0 +1,13 @@
+{
+  "zip": "results/phase7_integration/iteration3_review.zip",
+  "sha256": "ca09938ec1868c4c8bd760a88a37b278e8f323b7b28c5c3ab4a740ecc34a00f2",
+  "bytes": 9230140,
+  "entries": 323,
+  "crc": "passed",
+  "broken_working_report_links": 0,
+  "working_report_links": 64,
+  "previous_report_prefix_preserved": true,
+  "status": "BLOCKED_PENDING_USER_VERIFICATION",
+  "portable_diagnostics": "14/14 reproduced exactly after extraction",
+  "manifest_hashes": "all matched"
+}

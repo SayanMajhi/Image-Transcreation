@@ -1,0 +1,26 @@
+{
+  "source": "actual user message in this conversation",
+  "received_at_utc": "2026-11-11T17:50:15.584376+00:00",
+  "received_timestamp_is_not_reviewer_supplied_review_time": true,
+  "raw_feedback_file": "20261111T175015583079Z_verbatim.txt",
+  "raw_sha256": "25fa0b7e12e95d832134e0ced4f0c5da7d809b9e1585275384ce48ad0bce28b9",
+  "status": "INCOMPLETE_UNBLINDED_QUALITATIVE_FEEDBACK",
+  "candidate_id": null,
+  "reviewer_identity_supplied_in_this_message": null,
+  "reviewer_supplied_timestamp": null,
+  "four_numeric_ratings": null,
+  "inspection_declarations": null,
+  "pre_reveal_identification": null,
+  "blindness": "user has already seen labeled outputs and intended target; not a valid pre-reveal recognition measurement",
+  "scored_or_counted_toward_original_threshold": false,
+  "human_protocol_modified": false,
+  "prior_evaluation_packages_overwritten": false,
+  "missing": [
+    "explicit candidate ID",
+    "reviewer identification and familiarity",
+    "review timestamp",
+    "required inspection declarations",
+    "four 1-5 ratings"
+  ],
+  "other_independent_reviewers_required": true
+}

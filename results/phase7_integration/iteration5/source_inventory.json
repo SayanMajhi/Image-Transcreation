@@ -1,0 +1,90 @@
+[
+  {
+    "path": "data/sample_images/durga.jpg",
+    "sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0",
+    "dimensions": [
+      980,
+      692
+    ]
+  },
+  {
+    "path": "data/vlm_collection/scene_02.jpg",
+    "sha256": "321c415a72e47d745949c90170c6342f70dafcbbe47380ff4cfaffbaf2b4dfc2",
+    "dimensions": [
+      1280,
+      842
+    ]
+  },
+  {
+    "path": "data/vlm_collection/scene_03.jpg",
+    "sha256": "12ad692ef221e14113160a2f1be5365dc68f316c4fe98af0deb7e1a4319f00d0",
+    "dimensions": [
+      1280,
+      1443
+    ]
+  },
+  {
+    "path": "data/vlm_collection/scene_04.jpg",
+    "sha256": "8c1b1a8880238c03d1f056a12d27d7b46e8d20bcc518b230ae105c0c977403ab",
+    "dimensions": [
+      1280,
+      960
+    ]
+  },
+  {
+    "path": "data/vlm_collection/scene_05.jpg",
+    "sha256": "3f38b0c2934d7e395700966b6b258de4a7fdbf613f17e6cb84758a327bbddd99",
+    "dimensions": [
+      1280,
+      1912
+    ]
+  },
+  {
+    "path": "data/vlm_collection/scene_06.jpg",
+    "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+    "dimensions": [
+      1280,
+      966
+    ]
+  },
+  {
+    "path": "data/vlm_collection/scene_07.jpg",
+    "sha256": "7eabd572dd34109dffc90c4ba7a60863a01fadd2f070c77dbfe7cb88636d6d7a",
+    "dimensions": [
+      1280,
+      914
+    ]
+  },
+  {
+    "path": "data/vlm_collection/scene_08.jpg",
+    "sha256": "249a8c34530c2c5d68d266372b787401e2197bc0e8faa0b57b21735082e1fa1c",
+    "dimensions": [
+      1280,
+      835
+    ]
+  },
+  {
+    "path": "data/vlm_collection/scene_09.jpg",
+    "sha256": "91348a0926e75d082f6298d13db9fb82b2a6d6934ecbd5d52b2cb16854db119a",
+    "dimensions": [
+      1280,
+      897
+    ]
+  },
+  {
+    "path": "data/vlm_collection/scene_10.jpg",
+    "sha256": "2fb7febc73bf3113266c6ff2a0fe21159efa440f6dee8c858b2c72ef6a375643",
+    "dimensions": [
+      1280,
+      1696
+    ]
+  },
+  {
+    "path": "data/vlm_collection/scene_11.jpg",
+    "sha256": "3dae75e7e6274c66ed235f4cc675dd71c949d3d198debd24c8628984daa7ec7d",
+    "dimensions": [
+      1280,
+      852
+    ]
+  }
+]

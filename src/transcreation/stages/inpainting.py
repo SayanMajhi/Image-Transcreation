@@ -32,16 +32,17 @@ def validate_inputs(request: InpaintingInput):
         raise ValueError("selected candidate index is absent or ambiguous")
     candidate = candidates[0]
     mask_path = segmentation.parent / candidate.filename
-    if Path(request.mask_file).resolve() != mask_path.resolve():
+    if request.mask_kind == "SAM_CANDIDATE" and Path(request.mask_file).resolve() != mask_path.resolve():
         raise ValueError("selected mask must belong to the referenced SAM result")
     image_bytes = Path(request.source_image).read_bytes()
     if digest(image_bytes) != request.image_sha256 or request.image_sha256 != result.request.image_sha256:
         raise ValueError("source image SHA-256 mismatch")
-    if digest(payload[candidate.filename]) != request.mask_sha256:
+    mask_bytes = payload[candidate.filename] if request.mask_kind == "SAM_CANDIDATE" else Path(request.mask_file).read_bytes()
+    if digest(mask_bytes) != request.mask_sha256:
         raise ValueError("selected mask SHA-256 mismatch")
     with Image.open(BytesIO(image_bytes)) as source:
         image = source.convert("RGB")
-    with Image.open(BytesIO(payload[candidate.filename])) as source:
+    with Image.open(BytesIO(mask_bytes)) as source:
         mask = source.copy()
     validate_mask(image, mask)
     return image, mask, result, payload
@@ -126,10 +127,10 @@ def load_pipeline(config: InpaintingConfig):
     return pipe
 
 
-def _visuals(image, mask, final, geometry, out):
+def _visuals(image, mask, final, geometry, out, mask_label="original SAM mask"):
     overlay = Image.composite(Image.new("RGB", image.size, "lime"), image, mask.point(lambda p: 90 if p else 0))
     comparison = Image.new("RGB", (image.width*3, image.height+40), "white")
-    for col, (view, title) in enumerate([(image,"original"),(overlay,"original SAM mask"),(final,"RESEARCH_ONLY final; no cultural adaptation claim")]):
+    for col, (view, title) in enumerate([(image,"original"),(overlay,mask_label),(final,"RESEARCH_ONLY final; no cultural adaptation claim")]):
         comparison.paste(view, (image.width*col,40)); ImageDraw.Draw(comparison).text((image.width*col+8,12),title,fill="black")
     comparison.save(out/"comparison.png")
     box=geometry["crop_box_xyxy"]; width,height=image.crop(box).size
@@ -140,7 +141,17 @@ def _visuals(image, mask, final, geometry, out):
 
 
 def run_inpainting(request: InpaintingInput, config: InpaintingConfig, out: Path) -> dict:
-    image, mask, sam, payload = validate_inputs(request)
+    if type(request) is not InpaintingInput:
+        raise ValueError("original SAM route requires InpaintingInput; derived masks need the separate research route")
+    return _run_inpainting(request, config, out, validate_inputs)
+
+
+def _run_inpainting(request, config, out, validate, mask_origin="ORIGINAL_SAM_PREDICTION", negative_prompt=None,
+                    max_attempts=2):
+    """Shared diffusion execution; callers supply their own strict evidence validator."""
+    if type(max_attempts) is not int or max_attempts not in (1,2):
+        raise ValueError("generation attempt limit must be one or two")
+    image, mask, sam, payload = validate(request)
     out.mkdir(parents=True, exist_ok=False)
     evidence=out/"evidence"; evidence.mkdir()
     for name,data in payload.items():
@@ -150,13 +161,24 @@ def run_inpainting(request: InpaintingInput, config: InpaintingConfig, out: Path
     model_image.save(out/"processing_image.png"); model_mask.save(out/"processing_mask.png")
     report={"status":"ERROR","scope":"RESEARCH_ONLY","request":asdict(request),"model_id":config.model_id,
             "resolved_revision":config.revision,"settings":{**asdict(config),"precision":"float16","batch_size":1,
-            "variant":"fp16","use_safetensors":True,"negative_prompt":None,"generator_device":"cpu",
+            "variant":"fp16","use_safetensors":True,"negative_prompt":negative_prompt,"generator_device":"cpu",
             "initial_offload":"model_cpu_offload","allowed_oom_fallback":"sequential_cpu_offload"},
             "source_sam":{"model_id":sam.model_id,"revision":sam.resolved_revision,"grounding_index":sam.request.prediction_index,
                           "grounding_box":list(sam.request.selected_detection.box),"detection_sha256":sam.request.detection_sha256,
                           "point_sha256":sam.request.point_prompt_sha256,"selection_status":sam.request.selection_status},
             "geometry":geometry,"attempts":[],"timing":{},"memory":{},"observations":[],
             "cultural_edit_authorized":False,"human_approved":False}
+    if mask_origin != "ORIGINAL_SAM_PREDICTION":
+        reference = next(m for m in sam.masks if m.index == request.candidate_index)
+        report["editing_mask"] = {"origin":mask_origin, "human_approved":False,
+            "original_sam_reference_candidate_index":reference.index,
+            "original_sam_reference_mask_sha256":digest(payload[reference.filename]),
+            "refined_mask_sha256":request.mask_sha256,
+            "annotation_sha256":request.annotation_sha256,
+            "protected_mask_sha256":request.protected_mask_sha256}
+    if max_attempts == 1:
+        report["settings"]["allowed_oom_fallback"] = None
+        report["settings"]["max_generation_attempts"] = 1
     pipe=None; start=time.perf_counter()
     try:
         if not torch.cuda.is_available():
@@ -167,14 +189,16 @@ def run_inpainting(request: InpaintingInput, config: InpaintingConfig, out: Path
         report["timing"]["load_seconds"]=time.perf_counter()-loading
         report["settings"]["scheduler"]=type(pipe.scheduler).__name__
         report["settings"]["scheduler_config"]=dict(pipe.scheduler.config)
-        validate_inputs(request)  # detect source changes while loading/downloading
-        for attempt,offload in enumerate(("model_cpu_offload","sequential_cpu_offload")):
+        validate(request)  # detect source changes while loading/downloading
+        for attempt,offload in enumerate(("model_cpu_offload","sequential_cpu_offload")[:max_attempts]):
             torch.cuda.synchronize(); torch.cuda.reset_peak_memory_stats(); t=time.perf_counter()
             try:
                 with torch.inference_mode():
+                    prompt_options = {"negative_prompt":negative_prompt} if negative_prompt is not None else {}
                     result=pipe(prompt=request.prompt,image=model_image,mask_image=model_mask,height=512,width=512,
                                 num_inference_steps=config.steps,guidance_scale=config.guidance_scale,strength=config.strength,
-                                num_images_per_prompt=1,generator=torch.Generator(device="cpu").manual_seed(config.seed))
+                                num_images_per_prompt=1,generator=torch.Generator(device="cpu").manual_seed(config.seed),
+                                **prompt_options)
                 torch.cuda.synchronize()
                 report["attempts"].append({"offload":offload,"status":"COMPLETED","seconds":time.perf_counter()-t,
                                           "peak_allocated_cuda_bytes":torch.cuda.max_memory_allocated()})
@@ -182,7 +206,7 @@ def run_inpainting(request: InpaintingInput, config: InpaintingConfig, out: Path
             except torch.cuda.OutOfMemoryError as exc:
                 report["attempts"].append({"offload":offload,"status":"CUDA_OOM","seconds":time.perf_counter()-t,
                                           "peak_allocated_cuda_bytes":torch.cuda.max_memory_allocated(),"error":str(exc)})
-                if attempt: raise
+                if attempt or max_attempts == 1: raise
                 pipe.remove_all_hooks(); pipe.to("cpu"); gc.collect(); torch.cuda.empty_cache()
                 pipe.enable_sequential_cpu_offload(gpu_id=0)  # one retry, same prompt/seed/settings
         raw=result.images[0]
@@ -192,13 +216,16 @@ def run_inpainting(request: InpaintingInput, config: InpaintingConfig, out: Path
             report["settings"]["effective_denoising_steps"]=pipe.num_timesteps
         if result.nsfw_content_detected and any(result.nsfw_content_detected):
             raise ValueError("pipeline safety checker flagged the result; no usable final image claimed")
-        validate_inputs(request)
+        validate(request)
         final,restored,region,metrics=restore_and_composite(image,mask,raw,geometry)
         final.save(out/"final.png"); restored.save(out/"restored_crop.png"); region.save(out/"generated_region.png")
         with Image.open(out/"final.png") as saved:
             if saved.size!=image.size or not np.array_equal(np.asarray(saved)[np.asarray(mask)==0],np.asarray(image)[np.asarray(mask)==0]):
                 raise ValueError("saved final PNG failed outside-mask equality")
-        _visuals(image,mask,final,geometry,out)
+        if mask_origin == "ORIGINAL_SAM_PREDICTION":
+            _visuals(image,mask,final,geometry,out)
+        else:
+            _visuals(image,mask,final,geometry,out,"manually refined RESEARCH_ONLY mask")
         report["status"]="COMPLETED"; report["metrics"]=metrics
         report["timing"]["inference_seconds"]=report["attempts"][-1]["seconds"]
         report["memory"]["peak_allocated_cuda_bytes"]=max(a["peak_allocated_cuda_bytes"] for a in report["attempts"])

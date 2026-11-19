@@ -1,0 +1,8 @@
+ README.md                                  | 111 +++++++++++------------------
+ src/transcreation/cli.py                   |  18 +++++
+ src/transcreation/stages/ollama_planner.py |  22 ++++++
+ src/transcreation/stages/planning.py       |   7 +-
+ tests/test_planning_policy.py              |  12 ++--
+ 5 files changed, 95 insertions(+), 75 deletions(-)
+
+New source: guided_research.py; new tests: test_guided_research.py (22 cases). Existing unrelated dirty files were preserved.

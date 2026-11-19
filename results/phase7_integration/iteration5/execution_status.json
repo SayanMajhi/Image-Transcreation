@@ -1,0 +1,27 @@
+{
+  "status": "BLOCKED_PENDING_USER_VERIFICATION",
+  "predeclared_condition": false,
+  "live_conditions_executed": 0,
+  "source_user_verified": false,
+  "model_calls": {
+    "SmolVLM": 0,
+    "Qwen": 0,
+    "GroundingDINO": 0,
+    "SAM": 0,
+    "Diffusion": 0
+  },
+  "actual_caption": null,
+  "caption_completion_status": null,
+  "actual_planning_input": null,
+  "actual_raw_qwen_response": null,
+  "actual_qwen_decision": null,
+  "actual_final_plan": null,
+  "actual_validator_decision": null,
+  "new_candidate_eligible_for_review": false,
+  "pending_edit_intent_created": false,
+  "human_review_status": "SOURCE_VERIFICATION_PENDING; edit-intent review not created.",
+  "inference_seconds": null,
+  "peak_cuda_memory_bytes": null,
+  "inference_cpu_usage": null,
+  "reason": "The actual user has not supplied the explicit image/object, target, adaptation and preservation answers required before inference. Not run is neither REVIEW nor ABSTAIN."
+}

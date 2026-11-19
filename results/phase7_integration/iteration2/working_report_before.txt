@@ -1,0 +1,163 @@
+# Phase 7 working report
+
+Working integration evidence; **not a polished final Phase 7 report or mentor approval**. Future targeted corrections should append another labeled iteration and preserve these outcomes.
+
+## Iteration 1 — Pipeline Orchestration and Safety
+
+### Objective and scope
+
+Connect existing data contracts and enforce explicit stopping. Implemented here: **live image → caption → validated plan**, and **read-only replay of independently generated localization/segmentation/inpainting artifacts**. No new diffusion was permitted or performed.
+
+**Recommendation: NEEDS FIXES before full approved live-stage orchestration.** The implemented planning/replay paths and their safety tests pass. However, no edit-intent approval/resume contract exists; box and mask acceptances authorize segmentation testing only; diffusion input is explicitly RESEARCH_ONLY. Those contracts were not weakened. Live grounding/SAM/generation dispatch after approval is not implemented by this coordinator and must not be claimed as completed end-to-end integration.
+
+### Existing interfaces inspected
+
+| Component | Existing interface / output | Boundary |
+| --- | --- | --- |
+| SmolVLM | `create_captioner(config).caption(PIL_RGB)` → typed caption with completion flags/settings | Caption claims are unverified; no culture or object verification is inferred. |
+| Planning input | `PlanningInput.from_caption(...)` | Completion flags, target and optional user context transfer without fabricating verified objects. |
+| Ollama | `record_plan(PlanningInput)` → request/raw/final audit, errors and unload status | Exact system/user prompts, model digest and transport outcomes remain archived. |
+| Deterministic policy | `parse_model_draft` + `validate_planning_result` | REVIEW quarantines candidates; ABSTAIN releases no edits; PROPOSE is conditional. |
+| Grounding | `GroundingDetector.detect(image_path, phrase)` → boxes/scores; standalone saver | Existing detector unchanged. Replay uses `_evidence` to validate saved source hash, dimensions and box contracts, never detector inference. |
+| Box review | Existing bound ACCEPT / REJECT / NEEDS_REVIEW records | Accepted record is a segmentation-test candidate. Existing SAM input loader also rejects placeholder identity. |
+| SAM | `load_segmentation_input(...)`, `SamSegmenter.segment(...)` → mask bundle | Replay uses existing `_bundle` integrity checks; selected index/hash and detection provenance must agree. No SAM inference. |
+| Mask review | `_check`, `read_candidate` | Accepted mask is for a named controlled segmentation experiment; it does not authorize cultural editing. |
+| Inpainting | `InpaintingInput` / `run_inpainting(...)` | Current entry is isolated research generation. Coordinator only checks an existing result and exact final locality; never calls it. |
+
+The independent implemented model stages remain functional and unchanged. Their existence is distinct from having an approved live dispatch path through this coordinator.
+
+### New implementation and contract
+
+Three files added: `src/transcreation/orchestration.py`, `scripts/run_pipeline.py`, `tests/test_orchestration.py`. No dependencies, existing stage code, prompts, policies, checkpoints, thresholds or generation settings changed.
+
+`PipelineInput` requires source image path/SHA-256, target culture, a new output directory and explicit execution mode. Optional user fields are source culture, instructions and existing typed `VerifiedObject` records. Research mode additionally requires a `ReplayChain`: explicit source phrase, pinned detection reference, explicit selection indices, bound SAM/mask references and fixed independent generation prompt. Missing selections return review states; malformed contracts are rejected. No request field can enable generation permission.
+
+`PipelineResult` records mode, final state, completed stages, stopped stage/reason, content-hash artifact IDs, transitions, outstanding reviews, errors and whether replay integrity was validated. `image_generation_permitted` is **false in both modes throughout this milestone**. `CAPTION_COMPLETED` is logged as a transition; final states include PLAN_REQUIRES_REVIEW, NO_EDIT_JUSTIFIED, EDIT_PROPOSAL_READY, SOURCE_OBJECT_REQUIRES_REVIEW, MASK_REQUIRES_REVIEW, RESEARCH_REPLAY_VALIDATED and FAILED.
+
+Every run creates a new directory with source copy, input JSON, produced/checked artifacts and `pipeline_result.json`. Existing directories are never overwritten. Validating an old image is labeled `EXISTING_OUTPUT_VERIFIED_NOT_GENERATED`, not generation completed.
+
+### Data flow
+
+```mermaid
+flowchart TD
+    A[Original image + pinned hash] --> M{Explicit mode}
+    M -->|AUTOMATED_PLANNING| C[SmolVLM caption]
+    C --> R[Release caption weights]
+    R --> Q[Qwen audit + existing deterministic validation]
+    Q -->|REVIEW| S[Stop: planning review]
+    Q -->|ABSTAIN| N[Stop: no edit]
+    Q -->|PROPOSE| I[Stop: edit-intent approval required]
+    M -->|RESEARCH_REPLAY| D[Verify saved detection and explicit source selection]
+    D --> K[Verify saved SAM bundle and selected mask]
+    K --> G[Verify existing research output and outside-mask pixels]
+    G --> V[Return review-required or replay-validated state]
+    V --> X[No new generation / no approval promotion]
+```
+
+Intended future live continuation remains edit-intent review → detection → box review → SAM → mask/edit authorization → generation. The coordinator does **not** currently implement that approved continuation/resume path. No permissive boolean or invented review record was introduced to simulate it.
+
+### Modes and review boundaries
+
+**AUTOMATED_PLANNING:** verify and decode exact image bytes; confirm Qwen is not resident; load unchanged SmolVLM configuration; caption; release model/processor references and CUDA cache; map the actual typed caption into PlanningInput; call the unchanged planner; preserve its audit; revalidate the untouched raw response through existing policy and compare to the saved final. This extra check does not query Qwen again or change its policy.
+
+Final REVIEW stops before localization and exposes no executable candidates. ABSTAIN terminates without editing. PROPOSE stops at edit-intent review. Source-image changes during captioning/planning fail the run. Planning errors remain errors rather than becoming a fabricated successful draft.
+
+**RESEARCH_REPLAY:** no captioner, Ollama, detector, SAM or diffusion model is instantiated. It reads the specified independent chain; compares source/query/index/detection hashes; validates masks and optional reviews using existing helpers; checks saved generation request/prompt/SAM bindings, every recorded output hash and final outside-mask equality. Exact source-query matching prevents silently substituting a future replacement phrase. It cannot prove semantic object identity.
+
+Missing review may coexist with read-only validation of later *existing files*: this is inspection, not downstream model execution. Missing explicit selection, wrong phrases, invalid review bindings or failed integrity checks stop before later evidence inspection as shown in guard evaluations. No stop result triggers further execution.
+
+Research replay is never labeled an LLM-planned cultural transformation. Even synthetic test fixtures with accepted box/mask records still cannot permit generation: segmentation-test acceptance is not cultural-edit authorization. No real acceptance was fabricated.
+
+### Offline evaluation
+
+Archived raw/final planner cases were checked without model inference. Exact original audit bytes are retained in the package; saved decisions were not rewritten:
+
+| Archived case | Raw → validated | Candidate release |
+| --- | --- | --- |
+| Japanese food → India | PROPOSE → REVIEW | None |
+| Durga Puja → Japan | REVIEW → REVIEW | None |
+| Bicycle → India | PROPOSE → ABSTAIN | None |
+
+These are planning-fixture regressions, not new image runs. The meal's user-verified ramen is a hypothetical fixture assertion, not new photographic verification. [Planner regression details](iteration1/offline/planner_regressions.json).
+
+The real saved oil-lamp chain was traced from original source hash through detection index **2**, SAM point-guided mask **0**, and Phase 6 Iteration 2's existing research output. All artifact checks passed. Final replay state: **SOURCE_OBJECT_REQUIRES_REVIEW**; outstanding gates: **BOX_REVIEW_MISSING** and **MASK_REVIEW_PENDING**; `replay_validated=true`, `image_generation_permitted=false`. Target culture is a declared common input field only; this replay does not apply it to the old material prompt or claim cultural adaptation.
+
+[Replay input](iteration1/offline/replay_input.json) · [Replay transitions/artifacts](iteration1/offline/oil_lamp_replay/pipeline_result.json) · [Combined offline summary](iteration1/offline/summary.json).
+
+Three additional saved-evidence guards produced the expected stops: replacement query → SOURCE_OBJECT_REQUIRES_REVIEW at grounding evidence; missing instance → SOURCE_OBJECT_REQUIRES_REVIEW at box selection; wrong mask hash → FAILED at segmentation evidence. None read/released an inpainting artifact or invoked a model. [Guard results](iteration1/offline/guard_evaluations.json).
+
+### One actual image-to-caption-to-plan run
+
+Predeclared existing parked-bicycle photograph, target **India**, source culture null, no user instructions and no verified-object assertions. Configuration and input hashes were frozen before execution. One run was performed; no retry, alternative image, planner override or second scenario.
+
+[Predeclaration](iteration1/real_preregistration.json) · [Actual input](iteration1/real_input.json) · [Original image copy](iteration1/real_run/evidence/source/scene_06.jpg).
+
+| Observation | Actual result |
+| --- | --- |
+| Source SHA-256 | `e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0` |
+| SmolVLM revision | `a7da5b986cb59b408707209984f360a5f4ad7e47` |
+| Caption status | EOS reached; **112 generated tokens**, not truncated |
+| Caption model load / inference | 2.141017 s / 6.152280 s |
+| Caption peak allocated CUDA | 1,178,738,688 bytes |
+| Caption handoff | Exact text and COMPLETE status, target India, no invented verified objects |
+| Qwen | qwen2.5:3b, 3.1B Q4_K_M |
+| Resolved model digest | `357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b` |
+| Qwen prompt/output tokens | **768 / 184** |
+| Qwen reported generation time | **2.784218 s**; load 6.664519 s; server total 9.899929 s |
+| Raw planner decision | **REVIEW**, empty candidate list |
+| Final deterministic decision | **REVIEW**, empty candidate list |
+| Validation issue | MODEL_REVIEW_REQUESTED |
+| Pipeline state / stopped stage | **PLAN_REQUIRES_REVIEW / planning_review** |
+| Generation permitted | **false** |
+| New grounding / SAM / diffusion calls | **0 / 0 / 0** |
+| Process wall time | 28.605055 s |
+
+These are execution observations for integration, not new model benchmarking. Caption claims about graffiti words/colors are unverified. Qwen's raw reason suggested graffiti and a bicycle might be inappropriate for India. This is an **unsupported cultural assumption**, not a research finding about India. Safe stopping worked, but valid JSON and a REVIEW label do not make that reasoning good. No policy/prompt change or forced ABSTAIN was made to improve this result.
+
+[Actual caption with exact prompt/settings](iteration1/real_run/caption.json) · [Derived planning input](iteration1/real_run/planning_input.json) · [Full raw/final Qwen audit](iteration1/real_run/planner_audit.json) · [Revalidated final plan](iteration1/real_run/validated_plan.json) · [Stage transitions and artifact IDs](iteration1/real_run/pipeline_result.json) · [Invocation](iteration1/real_invocation.json).
+
+### Resource management and failures
+
+The coordinator is single-process and sequential. It checks Ollama residency before captioning; it may unload the configured Qwen but fails rather than silently evicting unrelated models. Caption weight/processor references are explicitly released in `finally`; existing SmolVLM has no close method, so the coordinator owns this cleanup without modifying the adapter.
+
+In the real run, Torch allocated CUDA memory was **0 bytes after caption release and before Qwen**. The planner's existing keep_alive=0/unload behavior was retained, and `/api/ps` confirmed Qwen absent afterward. This proves the measured cleanup for this path, not whole-board memory freedom. Qwen peak memory was not measured. Grounding/SAM/diffusion had no live instances to close in this iteration; their future live lifecycle remains outside the implemented continuation path.
+
+Unexpected caption/planner errors release owned references and attempt Qwen cleanup. Cleanup failures are recorded and fail closed; primary stage errors remain in the error list. Runtime failures persist a FAILED result with stage/type/code/message. Malformed requests and existing output paths are rejected before a run can overwrite user work.
+
+### Regression tests
+
+Baseline: **232 passed**, zero failures/errors, in 16.084 s. After: **260 passed**, zero failures/errors, in 19.402 s. The 28 new mocked integration tests passed independently as well. No model weights were downloaded/loaded by offline tests.
+
+Coverage includes successful caption/planning and saved-chain handoffs; truncation; Qwen REVIEW/ABSTAIN; invalid/quarantined candidates; source/replacement phrase confusion; no detections; multiple boxes without selection; wrong/missing box review; invalid/unreviewed mask; source/detection/mask/output hash mismatches; **saved** inpainting failure; error propagation; stage order; blocked-state behavior; no research-to-approved promotion; cleanup and no-overwrite.
+
+Important test limit: inpainting failure tests validate a **historical failed result**, not a live inpainting dispatch from this coordinator. Existing inpainting unit tests still cover its own mocked runtime failures. No claim is made that an approved live downstream chain was exercised.
+
+[Before tests](iteration1/tests_before.json) · [After full suite](iteration1/tests_after.json) · [Environment/dependency check](iteration1/environment.json) · [Preserved old files](iteration1/preservation_after.json).
+
+### Git summary and reproducibility
+
+Only three implementation/test files were added, plus Phase 7 evidence and this working report. All **47 inventoried existing source/script/test/config/report files** remain byte-identical. Pre-existing uncommitted Phase 6 changes are preserved and are not attributed to this iteration. No dependency, model/prompt/config, review policy, old report or saved decision changed. No automatic staging, commit or push.
+
+[Git before](iteration1/git_before.json) · [Git after](iteration1/git_after.json). Current relevant code/config snapshots and a content manifest are in the review ZIP. It excludes weights, caches, environments and unrelated datasets. Bicycle attribution: Basile Morin / CC BY-SA 4.0; lamp: Benoy / CC BY-SA 3.0. Their original Commons references and modification details are retained in the package attribution record.
+
+Run from the repository root:
+
+```powershell
+$env:PYTHONPATH = (Resolve-Path .\src).Path
+python -B -m scripts.run_pipeline --input results/phase7_integration/iteration1/real_input.json
+```
+
+The exact saved input points to an already-existing output directory and deliberately cannot be rerun in place. To intentionally reproduce later, use a new output directory. Review does not require another model call. The portable package instead provides a path-remapped **read-only replay** input and checker; original audits retain their original bytes/paths as historical provenance.
+
+### Remaining limits and recommendation
+
+**NEEDS FIXES for the full approved live orchestration milestone.** Current safety/data-flow behavior passes its tests and real early-stop evaluation, but the following are explicit blocked integration points:
+
+- No bound edit-intent approval schema or review/resume mechanism exists. Automated PROPOSE always stops before localization.
+- Existing box/mask acceptance scopes cannot authorize cultural editing; the independent inpainting interface remains research-only.
+- Live detector/SAM/inpainting dispatch after approval is intentionally absent, not hidden behind a successful test label.
+- Semantic identity, mask adequacy, physical continuity and cultural appropriateness are not proved by hashes or types. The ordinary bicycle's unsupported cultural REVIEW remains a model-quality limitation.
+- Review identities/inspection declarations are not authenticated signatures. Existing reviewed test fixtures are synthetic and do not fabricate real approvals.
+- Reused review helpers live under scripts and assume repository-root execution; wheel-only packaging is not addressed.
+
+This is safe planning plus artifact-chain validation, **not successful culturally verified end-to-end image generation**. No new image was generated. Mentor evaluation should decide the next narrow authorization/resumption correction. No Phase 8 or polished final Phase 7 report was created. **STOP.**

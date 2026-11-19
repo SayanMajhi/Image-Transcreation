@@ -1,0 +1,72 @@
+{
+  "caption": {
+    "active_model": "smolvlm",
+    "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+    "revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+    "device": "auto",
+    "precision": "float16",
+    "task": "caption",
+    "max_new_tokens": 128,
+    "num_beams": 1,
+    "seed": 42,
+    "prompt_variant": "default"
+  },
+  "planner": {
+    "model": "qwen2.5:3b",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "timeout": 180,
+    "keep_alive": 0,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 4096,
+      "num_predict": 1024
+    }
+  },
+  "grounding": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42
+  },
+  "sam": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "precision": "float32",
+    "seed": 42,
+    "multimask_output": true,
+    "mask_threshold": 0.0
+  },
+  "inpainting": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+    "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+    "processing_size": 512,
+    "context_margin": 64,
+    "seed": 42,
+    "steps": 20,
+    "guidance_scale": 7.5,
+    "strength": 0.9
+  },
+  "predeclared_budget": {
+    "new_caption_calls": 1,
+    "new_qwen_calls": 1,
+    "grounding_conditions": [
+      {
+        "phrase": "noodles",
+        "box_threshold": 0.3,
+        "text_threshold": 0.25
+      }
+    ],
+    "sam_conditions": "one box-only run, at most one visually justified point-guided correction",
+    "diffusion": "at most one generation with fixed prompt above; one existing OOM fallback allowed, both attempts retained",
+    "selection": "explicit assistant visual research selection, never automatic highest score or human approval"
+  },
+  "timestamp_utc": "2026-11-11T08:20:02.357356+00:00",
+  "source_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "historical_human_decision": "MATERIAL_UNRESOLVED; unchanged, not consumed by guided route"
+}

@@ -1,0 +1,21 @@
+{
+  "assessor": "Codex assistant, not an independent named human reviewer",
+  "views": [
+    "mask_overlay.png",
+    "mask_boundary_native.png",
+    "protected_overlay.png",
+    "processing_overlay_preview.png",
+    "uncertain_reference_holes_inspection.png"
+  ],
+  "passed": true,
+  "finding": "Large coherent foreground pasta interior, including attached seasoning allowed by V4. A wide inward border avoids visible plate/rim and background. All uncertain reference gaps are preserved. Visible noodle strands remain recognizable at actual 512-grid processing resolution.",
+  "limitations": [
+    "Outer food boundary remains unedited.",
+    "Conservative gap boxes also preserve some food; not perfect semantic segmentation.",
+    "Flash highlights obscure detail in places.",
+    "Polygon edge crosses strands; hard-compositing seams must be evaluated."
+  ],
+  "foreground_pixels": 1846716,
+  "noodle_ground_truth_percentage": null,
+  "human_approved": false
+}

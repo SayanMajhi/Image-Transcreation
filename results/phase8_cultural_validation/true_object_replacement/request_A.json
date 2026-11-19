@@ -1,0 +1,80 @@
+{
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "annotation_method": "Assistant researcher manually traced one complete upper samosa; original-resolution polygon is in annotation.json, not a SAM prediction or human approval",
+  "attribution": {
+    "author": "Kaushalspeed",
+    "title": "Samosa-and-Chatni.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Samosa-and-Chatni.jpg",
+    "revision": "https://commons.wikimedia.org/w/index.php?title=File:Samosa-and-Chatni.jpg&oldid=1132783440",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "Extract upper samosa, uniform scaling, inward alpha feather, white background reconstruction and modeled contact shadow; derivative images distributed CC BY-SA 4.0",
+    "original_published_sha1": "047dd1cbe3464f9eaf1fb53fe53af2316ce327e8"
+  },
+  "source_attribution": {
+    "author": "Petr Kratochvil",
+    "title": "Croissant",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Croissant-Petr_Kratochvil.jpg"
+  },
+  "parameters": {
+    "target_width": 690,
+    "position": [
+      295,
+      185
+    ],
+    "background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "edge_radius": 1.0,
+    "shadows": [
+      {
+        "ellipse": [
+          520,
+          717,
+          985,
+          756
+        ],
+        "blur": 14,
+        "opacity": 0.14
+      },
+      {
+        "ellipse": [
+          650,
+          739,
+          916,
+          753
+        ],
+        "blur": 5,
+        "opacity": 0.2
+      }
+    ]
+  },
+  "frozen_at_utc": "2026-11-11T19:37:34.508165+00:00",
+  "hypothesis": "Actual photographic folded texture and volume replace synthetic hybrid entirely. No source pastry pixels are blended into target. Background is near-uniform white, measured in outer ring. Shadow is a documented artist model, not physically estimated illumination.",
+  "intent": "One Indian samosa replaces one French croissant, retaining snack/pastry scene function; not cultural uniqueness or authenticity certification",
+  "unchanged_automated_status": "REVIEW; no released candidates; no real review decision modified",
+  "source": {
+    "path": "source.jpg",
+    "sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8"
+  },
+  "reference": {
+    "path": "references/Samosa-and-Chatni.jpg",
+    "sha256": "b66a0c427e4d1a5ca5b50ab58e70ec54d3c13c538991de1ab63595f3c51eccb0"
+  },
+  "selection": {
+    "path": "reference_selection.png",
+    "sha256": "a706f14ba83aa5769331dd5dbf8676aad574f61c580e446987850dfbd3067954"
+  },
+  "permitted": {
+    "path": "permitted.png",
+    "sha256": "573e0c89834613a69910f2171c75ba8b930d253581888b9ae3e0f02d4a30742d"
+  },
+  "protected": {
+    "path": "protected.png",
+    "sha256": "f5772bcde6baf7e18d2882ec58a16d65defaaa3869e5a12773cb3613768d8139"
+  }
+}

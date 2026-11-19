@@ -1,0 +1,48 @@
+{
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "only_changed_planning_input_field": "verified_objects",
+  "iteration5": {
+    "caption": "A bowl of food with chopsticks and a spoon.",
+    "verified_objects": [],
+    "object_description": "Japanese ramen noodles",
+    "localization_phrase": "Indian-style masala noodles",
+    "verified_object_id": null,
+    "raw_decision": "PROPOSE",
+    "final_decision": "REVIEW",
+    "released_candidates": 0,
+    "issue_codes": [
+      "UNVERIFIED_SOURCE_OBJECT",
+      "SOURCE_LOCALIZATION_MISMATCH",
+      "USER_CONSTRAINTS_UNRESOLVED"
+    ]
+  },
+  "iteration6": {
+    "caption": "A bowl of food with chopsticks and a spoon.",
+    "verified_objects": [
+      {
+        "object_id": "ramen-food-1",
+        "description": "Japanese ramen noodles in a white bowl"
+      }
+    ],
+    "object_description": "A bowl of masala noodles with chopsticks and a spoon.",
+    "localization_phrase": "Indian masala noodles in a bowl",
+    "verified_object_id": "ramen-food-1",
+    "raw_decision": "PROPOSE",
+    "final_decision": "REVIEW",
+    "released_candidates": 0,
+    "issue_codes": [
+      "SOURCE_OBJECT_MISMATCH",
+      "SOURCE_LOCALIZATION_MISMATCH",
+      "SOURCE_REPLACEMENT_IDENTICAL",
+      "USER_CONSTRAINTS_UNRESOLVED",
+      "EDIT_UNCERTAINTY_UNRESOLVED"
+    ]
+  },
+  "assessment": {
+    "missing_identity_evidence": "Resolved by actual image-bound user confirmation and supplied ID; UNVERIFIED_SOURCE_OBJECT removed.",
+    "object_description": "Not resolved; now incorrectly describes the replacement and triggers SOURCE_OBJECT_MISMATCH.",
+    "localization": "Not resolved; still names future masala noodles.",
+    "scene_summary": "Not resolved; describes future contents and falsely attributes ramen detail to the generic caption.",
+    "cultural_appropriateness": "Not independently established. A copied verified ID is not proof of correct model reasoning."
+  }
+}

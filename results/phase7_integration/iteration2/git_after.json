@@ -1,0 +1,15 @@
+{
+  "status": "?? results/phase7_integration/\n?? scripts/review_edit_intent.py\n?? scripts/run_pipeline.py\n?? src/transcreation/orchestration.py\n?? tests/test_edit_intent.py\n?? tests/test_orchestration.py\n",
+  "head_diffstat": "",
+  "note": "Iteration 1 application and evidence were already untracked at entry. Git diff omits untracked files. iteration2_changes.patch compares against SHA-matched pre-change I1 snapshots.",
+  "iteration2_added": [
+    "scripts/review_edit_intent.py",
+    "tests/test_edit_intent.py"
+  ],
+  "iteration2_modified": [
+    "src/transcreation/orchestration.py",
+    "scripts/run_pipeline.py"
+  ],
+  "commits": 0,
+  "pushes": 0
+}

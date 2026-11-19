@@ -1,0 +1,30 @@
+{
+  "inspected_source_inventory": "source_inventory.json",
+  "food_preference": "No suitable uncomplicated Japanese-food photograph identified among the inspected source images.",
+  "excluded_candidates": [
+    {
+      "path": "data/vlm_collection/scene_04.jpg",
+      "reason": "Ceremonial setting with vessels; not a verified ramen/food photograph. Avoid for the initial non-sensitive example."
+    },
+    {
+      "path": "data/vlm_collection/scene_05.jpg",
+      "reason": "Visible food/fruit belongs to an altar scene; avoid culturally sensitive setting."
+    },
+    {
+      "path": "data/vlm_collection/scene_07.jpg",
+      "reason": "Cooking setting is visible, but food contents/identity cannot be established from the image inspection."
+    },
+    {
+      "path": "data/vlm_collection/scene_09.jpg",
+      "reason": "Market illustration, not the required real photograph."
+    }
+  ],
+  "ramen_evidence": "Historical Japanese ramen case is a text fixture; no matching verified source photograph was established.",
+  "selected_fallback": "data/vlm_collection/scene_06.jpg",
+  "selection_reason": "Clearly visible ordinary object for user inspection; not a guarantee of meaningful cultural adaptation.",
+  "source_inventory_sheet_packaged": false,
+  "reason_inventory_sheet_excluded": "Only the selected source is needed; avoid redistributing unrelated religious-scene thumbnails.",
+  "source_images_inspected": 11,
+  "inspected_photographs": 10,
+  "inspected_illustrations": 1
+}

@@ -1,0 +1,6 @@
+{
+  "ollama_idle_confirmed": true,
+  "new_qwen_inference": false,
+  "other_project_models_loaded": false,
+  "strategy": "Separate fresh process for diffusion; existing model CPU offload enabled."
+}

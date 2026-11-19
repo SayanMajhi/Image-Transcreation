@@ -1,0 +1,7 @@
+{
+  "stage_imports": "all five succeeded",
+  "configuration_loads": "all five succeeded",
+  "historical_review_verification": "passed MATERIAL_UNRESOLVED/REVIEW/zero candidates",
+  "new_model_calls": 0,
+  "local_documentation_links": 42
+}

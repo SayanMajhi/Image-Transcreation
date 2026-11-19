@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "scripts.inpaint",
+    "--refined-input",
+    "results\\phase7_integration\\visual_v3\\input_A.json",
+    "--out",
+    "results\\phase7_integration\\visual_v3\\A"
+  ],
+  "returncode": 0,
+  "wall_seconds": 131.64709100000073,
+  "stdout": "COMPLETED: RESEARCH_ONLY; saved results\\phase7_integration\\visual_v3\\A\n",
+  "stderr": "\nLoading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]\nLoading pipeline components...:  14%|#4        | 1/7 [00:00<00:02,  2.58it/s]`torch_dtype` is deprecated! Use `dtype` instead!\n\nLoading pipeline components...:  57%|#####7    | 4/7 [00:00<00:00,  5.18it/s]\nLoading pipeline components...:  86%|########5 | 6/7 [00:01<00:00,  5.21it/s]\nLoading pipeline components...: 100%|##########| 7/7 [00:01<00:00,  5.75it/s]\nLoading pipeline components...: 100%|##########| 7/7 [00:01<00:00,  5.27it/s]\n\n  0%|          | 0/18 [00:00<?, ?it/s]\n  6%|5         | 1/18 [00:15<04:31, 15.97s/it]\n 11%|#1        | 2/18 [00:19<02:20,  8.76s/it]\n 17%|#6        | 3/18 [00:23<01:37,  6.52s/it]\n 22%|##2       | 4/18 [00:27<01:17,  5.52s/it]\n 28%|##7       | 5/18 [00:31<01:04,  4.96s/it]\n 33%|###3      | 6/18 [00:35<00:57,  4.79s/it]\n 39%|###8      | 7/18 [00:40<00:50,  4.63s/it]\n 44%|####4     | 8/18 [00:44<00:44,  4.46s/it]\n 50%|#####     | 9/18 [00:48<00:40,  4.51s/it]\n 56%|#####5    | 10/18 [00:53<00:36,  4.57s/it]\n 61%|######1   | 11/18 [00:57<00:30,  4.39s/it]\n 67%|######6   | 12/18 [01:01<00:25,  4.20s/it]\n 72%|#######2  | 13/18 [01:05<00:20,  4.17s/it]\n 78%|#######7  | 14/18 [01:09<00:16,  4.03s/it]\n 83%|########3 | 15/18 [01:13<00:12,  4.13s/it]\n 89%|########8 | 16/18 [01:17<00:08,  4.21s/it]\n 94%|#########4| 17/18 [01:21<00:04,  4.09s/it]\n100%|##########| 18/18 [01:25<00:00,  3.83s/it]\n100%|##########| 18/18 [01:25<00:00,  4.72s/it]\n"
+}

@@ -1,0 +1,66 @@
+{
+  "method": "Wikimedia Commons imageinfo API (iiprop=sha1|user|size|extmetadata), read 2026-11-12 by an assistant sub-agent",
+  "local_sha1_equals_commons_sha1": true,
+  "images": {
+    "croissant": {
+      "title": "Croissant-Petr Kratochvil.jpg",
+      "local_sha1": "eeebab3198cb77a97874ce4cca826d7bde6aea0c",
+      "license_used": "CC0",
+      "notes": ""
+    },
+    "samosa": {
+      "title": "Samosa-and-Chatni.jpg",
+      "local_sha1": "047dd1cbe3464f9eaf1fb53fe53af2316ce327e8",
+      "license_used": "CC BY-SA 4.0",
+      "notes": ""
+    },
+    "pretzel": {
+      "title": "Pretzel (1).jpg",
+      "local_sha1": "7d65cc3eca1ee8328dc456bcfb390bfe5a4f2237",
+      "license_used": "Public domain",
+      "notes": ""
+    },
+    "cookie": {
+      "title": "Chocolate chip cookie.jpg",
+      "local_sha1": "762a2da448f82a7e27d2918411f858a08f674eb3",
+      "license_used": "Public domain",
+      "notes": "Commons API lists Hohum as current-revision uploader; the earlier 'colour correction' credit was not confirmed in API fields."
+    },
+    "onigiri": {
+      "title": "Yaki-Onigiri 001.jpg",
+      "local_sha1": "e7dfe505becb87a53ad6e1765103d61c43603ed8",
+      "license_used": "CC0",
+      "notes": ""
+    },
+    "fedora": {
+      "title": "A fedora hat, made by Borsalino.jpg",
+      "local_sha1": "0bf4514523a380a46edf502620956f1b07591df7",
+      "license_used": "CC BY-SA 3.0",
+      "notes": "LICENCE DISCREPANCY RECORDED: Commons structured metadata shows CC BY 2.5 while the permission text links CC BY-SA 3.0 (GFDL category also present), i.e. a multi-licensed file. We redistribute under CC BY-SA 3.0, the more restrictive offered option; attribution is given either way."
+    },
+    "fez": {
+      "title": "Fez.jpg",
+      "local_sha1": "8ae57f1c393ff5b196a27be516d8661b502256e8",
+      "license_used": "CC BY-SA 3.0",
+      "notes": ""
+    },
+    "mug": {
+      "title": "Mug.jpg",
+      "local_sha1": "cc807516cddb5ad93273c5b68e3ac033161f5326",
+      "license_used": "CC BY-SA 4.0",
+      "notes": ""
+    },
+    "wabi": {
+      "title": "Contemporary wabi-sabi tea bowl.jpg",
+      "local_sha1": "66a7ba3a6597a427c514842e0ec65ff65659cb24",
+      "license_used": "CC BY-SA 2.0",
+      "notes": "600x450 low-resolution original; 'o2ma' alias from earlier notes was not confirmed in Commons fields."
+    }
+  },
+  "discrepancies": [
+    "fedora: structured metadata CC BY 2.5, permission text CC BY-SA 3.0 (multi-licensed); redistributed under CC BY-SA 3.0",
+    "cookie: 'colour correction by Hohum' not in API fields; Hohum is current-revision uploader",
+    "wabi: 'o2ma' alias not in API fields",
+    "cookie and fez histories are paginated; SHA-1 compared to the current file version"
+  ]
+}

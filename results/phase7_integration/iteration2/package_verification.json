@@ -1,0 +1,15 @@
+{
+  "zip": "results/phase7_integration/iteration2_review.zip",
+  "sha256": "9f3a856d030dd6ece76df65d2885cb2fa65bf0688768f0f728e89c0c7898db4c",
+  "bytes": 8524602,
+  "entries": 305,
+  "CRC": "passed",
+  "manifest_hashes": "all matched",
+  "working_report_links": 46,
+  "broken_links": 0,
+  "previous_report_prefix_preserved": true,
+  "independent_extraction_tests": 39,
+  "independent_extraction_failures": 0,
+  "portable_review_verification": "passed",
+  "note": "Only appended report text and verification metadata changed after the extraction test; tested code and experiment evidence are unchanged."
+}

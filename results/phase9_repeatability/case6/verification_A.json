@@ -1,0 +1,45 @@
+{
+  "case": 6,
+  "attempt": "A",
+  "method": "REFERENCE_GUIDED_COMPOSITING",
+  "scope": "RESEARCH_ONLY",
+  "source_path": "results\\phase9_repeatability\\case6\\..\\assets\\mug.jpg",
+  "source_sha256": "b4c4efc124de1a87c2f5c569656aafd686fbb2caea9f76cc1021d625b1254831",
+  "mask_path": "results\\phase9_repeatability\\case6\\permitted.png",
+  "mask_sha256": "f6784de3f5fe9c9bcb3d04a8745009a3e761b9820e4da78bbb8ff4d32c6366d0",
+  "output_path": "results\\phase9_repeatability\\case6\\A\\final.png",
+  "output_sha256": "b123ac2fc87a0247d2cb3b4c0affa0d213cef7e1e7f2e76a49cfe81f1b085b20",
+  "dimensions": [
+    2008,
+    1754
+  ],
+  "permitted_pixels": 1518259,
+  "protected_pixels": 2003773,
+  "changed_inside": 1298848,
+  "changed_outside": 0,
+  "maximum_outside_channel_difference": 0,
+  "protected_differences": 0,
+  "source_removed_visual_check": "One original main object absent in chosen final; A3 retained faint source shadow, corrected in B",
+  "memory": "not instrumented; CPU only, no new CUDA/model inference",
+  "input_hash_checks": {
+    "source": true,
+    "reference": true,
+    "selection": true,
+    "permitted": true,
+    "protected": true
+  },
+  "reference": {
+    "path": "results\\phase9_repeatability\\assets\\wabi.jpg",
+    "sha256": "31e636e6a873317803dac4327cd057b5fcf0a71a07ac39a78c0b8e1293232fbd",
+    "dimensions": [
+      600,
+      450
+    ],
+    "title": "Contemporary wabi-sabi tea bowl.jpg",
+    "author": "ottmarliebert.com / o2ma",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Contemporary_wabi-sabi_tea_bowl.jpg"
+  },
+  "runtime_seconds": 0.5671868999997969,
+  "clean_plate_inside_equals_background": true
+}

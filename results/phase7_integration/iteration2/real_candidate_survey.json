@@ -1,0 +1,424 @@
+{
+  "records": [
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108/01_japanese_food.json",
+      "sha256": "13304fa3587dc8e576c6c5edf9b4ff9572f83000f44971fb7fa6d85b90c4b458",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108/02_durga_uncertain_incense.json",
+      "sha256": "0f84ddbc505ff1a6d4094b72d1557372ec886091c6b9fec4d521b8ca942f80b8",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108/03_bicycle_no_change.json",
+      "sha256": "27bb87c81b7fb50cd06a15debb05c804b35b5b875503765dc7feda1e79da5c2f",
+      "saved_final_decision": "ABSTAIN",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108/04_truncated_caption.json",
+      "sha256": "ef612ad45d0cda4feb9e521bb629ad0c509905ce050653d5003eedffa1fb989d",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108/05_unknown_source_culture.json",
+      "sha256": "a503031ab52c60f6edde06471a45f5cbdbfdbcfe4c3b73a78541206cddb5b922",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108/06_caption_injection.json",
+      "sha256": "9167f12a218d8f4cf34ea5ec7b9c3676598cd956df70ca6b0a70986ef73e7bd3",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v2/01_japanese_food.json",
+      "sha256": "55f659077e950fe6cfbb0c80d1f46acf76b42eee1d64d507c713520782faf10f",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 1,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v2/02_durga_uncertain_incense.json",
+      "sha256": "8344ea9eabedd2d167cb3b228c4c292c1757ab2e77ee56702c6db74568f5a82a",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v2/03_bicycle_no_change.json",
+      "sha256": "42465fba45cf4162517b5ce924341319b7cb34e03fb6f0badfe600aedd802d1a",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v2/04_truncated_caption.json",
+      "sha256": "5882c57944fd1122a475b12e40008d26726d2190efd8644483aea5e158795374",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v2/05_unknown_source_culture.json",
+      "sha256": "83c10d0603f1d9fbb7b83cff8ad741b23d97bff30ee6e8fe2ff33bc8077f21cb",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v2/06_caption_injection.json",
+      "sha256": "c59c668c9ccc8929788ec7391e3cbfc6e7a31e87789d3bfda16cc48a62d92cf6",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v3/01_japanese_food.json",
+      "sha256": "851cbcca4e1cbd0d1f057b2ac237c031249cb2d3e6b4cdfba8b51b48d12867c5",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 1,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v3/02_durga_uncertain_incense.json",
+      "sha256": "634f58f806c4ba0d2b5d8186c6e07efa600ea8ddb7bd92a5abbd532787ac8613",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v3/03_bicycle_no_change.json",
+      "sha256": "ec70f06b217c4c52331b3c3c4fdec8785db323f3910ea1050b1690ae44f6d981",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v3/04_truncated_caption.json",
+      "sha256": "035a7ab17feadb2030e627b5cf908a628b653927fb71a55578f50f8312d126e1",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/ollama_planner_phase3_20261108_prompt_v3/05_unknown_source_culture.json",
+      "sha256": "9dea7869d998cfeb8dfaefdd7ca3405688c3b23938a66a9d828eb588c0058fe4",
+      "saved_final_decision": "ABSTAIN",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/phase3_step2_three_examples_20261108/01_japanese_food.audit.json",
+      "sha256": "a8d2cb07441f7b52e2a393b822dd3521ae894ecd396b6f3ffcabbe8e8cba0fc2",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 1,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/phase3_step2_three_examples_20261108/02_durga_uncertain_incense.audit.json",
+      "sha256": "215557d60c142a03aafbeee85ce9d76aa3f506e13581d65bd6672918c28e50c1",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/phase3_step2_three_examples_20261108/03_bicycle_no_change.audit.json",
+      "sha256": "0f2664b65abe0ebf10c153e8e862a80d07e0e4f7c07ce4e1222b1739e5a97b81",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108/01_japanese_food.audit.json",
+      "sha256": "88fdb908abeb631abafc19024538ccf313780fea8816ad2abac80cb30de35c3e",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": true,
+      "eligible_final_propose": false,
+      "current_decision": "REVIEW",
+      "current_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108/02_durga_uncertain_incense.audit.json",
+      "sha256": "a8dcbb9e78dcf066ae8075e8b7edf41a1aef1f6398f797a6f945dcb8407cf242",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": true,
+      "eligible_final_propose": false,
+      "revalidation_error": "saved final plan does not match existing deterministic validation"
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108_final/01_japanese_food.audit.json",
+      "sha256": "e830fd69b71b0177dc9f147c9eb4e5f560d600af28118d182c761684f11d31ce",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": true,
+      "eligible_final_propose": false,
+      "current_decision": "REVIEW",
+      "current_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108_final/02_durga_uncertain_incense.audit.json",
+      "sha256": "2eceabb9ee3f51f8e448e0d0050b4cac8711659b739a53afebf804b0fd417e67",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": true,
+      "eligible_final_propose": false,
+      "current_decision": "REVIEW",
+      "current_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108_final/03_bicycle_no_change.audit.json",
+      "sha256": "5e4b66f12f792ec5e732020f6ca4adc67efae01ff8277158c89f21edba82fb18",
+      "saved_final_decision": "ABSTAIN",
+      "saved_candidate_count": 0,
+      "current_format": true,
+      "eligible_final_propose": false,
+      "current_decision": "ABSTAIN",
+      "current_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108/01_japanese_food.audit.json",
+      "sha256": "277a6d062d8fb8657bf9829507cceed0bac87a0f011420a25398c506db6c0f0a",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 1,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108/02_durga_uncertain_incense.audit.json",
+      "sha256": "ffe60173a1a3f7a544f1a4fd774e8212cd4ae89efc8291ace61d71115f7eaa71",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108/03_bicycle_no_change.audit.json",
+      "sha256": "a61e55c6b78ea5aade20bfb3740be842f1cfbc93209371fbd32de7ecf59f90f7",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108_final/01_japanese_food.audit.json",
+      "sha256": "fc20b0fde2aaa090f91cc5042490423d50dabb5249a2322c01399fd9bd314e3a",
+      "saved_final_decision": "ABSTAIN",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108_final/02_durga_uncertain_incense.audit.json",
+      "sha256": "ca7432c776c0f5b3ab25b5c12807926ab2d8c1e170603bccae2699142f54d7e1",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 1,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108_final/03_bicycle_no_change.audit.json",
+      "sha256": "e23dd43a46fbf74c44c735c74d31410f80d025df0cfd5d06c2d36ddcd42aae07",
+      "saved_final_decision": "ABSTAIN",
+      "saved_candidate_count": 0,
+      "current_format": false,
+      "eligible_final_propose": false,
+      "limitation": "Legacy audit schema; not upgraded into a current eligible review. Original saved result retained."
+    },
+    {
+      "path": "results/phase7_integration/iteration1/real_run/planner_audit.json",
+      "sha256": "49245e71448088fb63f9a0d9c9f5c891de5b622d3918813b52c422abc76e868c",
+      "saved_final_decision": "REVIEW",
+      "saved_candidate_count": 0,
+      "current_format": true,
+      "eligible_final_propose": false,
+      "current_decision": "REVIEW",
+      "current_candidate_count": 0
+    }
+  ],
+  "standalone_plan_files": [
+    {
+      "path": "results/phase3_llm/experiments/phase3_step2_three_examples_20261108/01_japanese_food.plan.json",
+      "sha256": "0369f40f0261b810bf0616eca45778e25df117c601bc47b4b750ec978dc8325f",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 1
+    },
+    {
+      "path": "results/phase3_llm/experiments/phase3_step2_three_examples_20261108/02_durga_uncertain_incense.plan.json",
+      "sha256": "707cac992095f20f302d847edcb78f3645dad0242f071029887d94d8b3a71894",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/phase3_step2_three_examples_20261108/03_bicycle_no_change.plan.json",
+      "sha256": "be0f324d8c7ac5f42ca4b7570052ed53549bd25c31ba328df0c9bbc7158d9047",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108/01_japanese_food.plan.json",
+      "sha256": "d5f636c488083d15c0c5a39f4b96959e8cb27fe767e7754bee33823e16885a7c",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108/01_japanese_food.raw.json",
+      "sha256": "f7dd36a29a366f8cb5eb6c4856ade77e36652927708941658f8a7da02b0133d4",
+      "saved_decision": "PROPOSE",
+      "saved_candidate_count": 1
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108/02_durga_uncertain_incense.plan.json",
+      "sha256": "9b90e7691667534e68e1afd7c1ba2142d3afa8967830ecc970bfa35ac4537664",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108/02_durga_uncertain_incense.raw.json",
+      "sha256": "8c858df10e38a4d42222baedd335f12dfee18f82e8e2fd62408f515a4c98db97",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108/03_bicycle_no_change.raw.json",
+      "sha256": "fc8da2807da331d23f685087092e4c9c7d7a08c78fb308b4e2ba4d7a6ec96e19",
+      "saved_decision": "PROPOSE",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108_final/01_japanese_food.plan.json",
+      "sha256": "d5f636c488083d15c0c5a39f4b96959e8cb27fe767e7754bee33823e16885a7c",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108_final/01_japanese_food.raw.json",
+      "sha256": "f7dd36a29a366f8cb5eb6c4856ade77e36652927708941658f8a7da02b0133d4",
+      "saved_decision": "PROPOSE",
+      "saved_candidate_count": 1
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108_final/02_durga_uncertain_incense.plan.json",
+      "sha256": "452ac6dfc82ca41d7ce154731a9b1fb9bbf74730a09313cfe9fff39c909139bf",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108_final/02_durga_uncertain_incense.raw.json",
+      "sha256": "8c858df10e38a4d42222baedd335f12dfee18f82e8e2fd62408f515a4c98db97",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108_final/03_bicycle_no_change.plan.json",
+      "sha256": "68c6a7c91e199f440c755043f8d4a9903093d3ee296ba019c75427a63f093c72",
+      "saved_decision": "ABSTAIN",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_decision_policy_20261108_final/03_bicycle_no_change.raw.json",
+      "sha256": "fc8da2807da331d23f685087092e4c9c7d7a08c78fb308b4e2ba4d7a6ec96e19",
+      "saved_decision": "PROPOSE",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108/01_japanese_food.plan.json",
+      "sha256": "8720c12e6e882e228d7e2e41105cea18f781b88eee18eda424432aa2ba56c065",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 1
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108/02_durga_uncertain_incense.plan.json",
+      "sha256": "2d442043059561a0808c850e0395f6cce47e1b490461e04933abfdc660e75d1b",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108/03_bicycle_no_change.plan.json",
+      "sha256": "53a7e9c14ee5c18401db2c4d1a0c2a2781714ff851895b91360dd5bcfe1a776b",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108_final/01_japanese_food.plan.json",
+      "sha256": "f3fcb57f1a09c70e6cf3dd42eb9ae7d44b19ac61d8199b61ba2d4a885e1bdcde",
+      "saved_decision": "ABSTAIN",
+      "saved_candidate_count": 0
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108_final/02_durga_uncertain_incense.plan.json",
+      "sha256": "5516cab8d29bd97c9915cacf0dbc7d63c945f1c6df77a6e97809c7bb59e83728",
+      "saved_decision": "REVIEW",
+      "saved_candidate_count": 1
+    },
+    {
+      "path": "results/phase3_llm/experiments/planner_quality_review_20261108_final/03_bicycle_no_change.plan.json",
+      "sha256": "427a8159d7c334523808eda8c935fdce0065c86dc422702154afef3e8db88972",
+      "saved_decision": "ABSTAIN",
+      "saved_candidate_count": 0
+    }
+  ],
+  "eligible_final_propose": 0,
+  "new_planning_calls": 0,
+  "live_grounding_calls": 0,
+  "genuine_edit_intent_acceptances": 0,
+  "note": "Raw PROPOSE does not override final REVIEW, quarantine or missing image-bound run evidence."
+}

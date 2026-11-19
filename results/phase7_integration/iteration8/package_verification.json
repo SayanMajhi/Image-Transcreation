@@ -1,0 +1,18 @@
+{
+  "zip": "results/phase7_integration/iteration8_review.zip",
+  "sha256": "d6114d891316730e9f01039a001d0ee7348d35d4843e582ba528371530aa5982",
+  "bytes": 15854439,
+  "entries": 769,
+  "crc": "passed",
+  "manifest_hashes": "all matched",
+  "checked_local_links": 233,
+  "broken_links": 0,
+  "previous_report_exact_prefix": true,
+  "full_tests_passed": 370,
+  "portable_focused_tests_passed": 33,
+  "actual_status": "PENDING",
+  "original_final_decision": "REVIEW",
+  "released_candidates": 0,
+  "real_model_calls": 0,
+  "recommendation": "PASS for classification-only mechanism; actual human judgment pending"
+}

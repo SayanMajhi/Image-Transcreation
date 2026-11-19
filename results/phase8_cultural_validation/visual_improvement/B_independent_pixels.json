@@ -1,0 +1,25 @@
+{
+  "condition": "B",
+  "dimensions": [
+    1280,
+    853
+  ],
+  "mask_dimensions": [
+    1280,
+    853
+  ],
+  "editable_pixels": 433403,
+  "changed_inside_mask": 432183,
+  "changed_outside_mask": 0,
+  "changed_protected_pixels": 0,
+  "maximum_outside_channel_difference": 0,
+  "changes_outside_old_allowed_rectangle": 0,
+  "source_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+  "mask_sha256": "230255929336b256e1eba1108a0120c25df94202d56cc1b74c055b57add9045f",
+  "protected_sha256": "5c03f9d72f06a330ac2e2c8039a6b81cdce91c2daf85638297dfc13765aada20",
+  "control_sha256": "b8b49af20d40abb794b05aab6f2678a77b9b703a05d2d7f1c6e014b494300b3b",
+  "final_sha256": "2217822ba9cfcef47d09872e4f25807eaebbbd4bf47f65dbea12dd333e5d7967",
+  "raw_sha256": "5f214f18cb8d82366a7837b1f6fcba8cae354bfeb82d7405218f2de6c791298c",
+  "new_background_region_is_not_ground_truth": true,
+  "pixel_integrity_is_not_a_realism_score": true
+}

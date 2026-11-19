@@ -1,0 +1,96 @@
+{
+  "execution_mode": "AUTOMATED_PLANNING",
+  "state": "PLAN_REQUIRES_REVIEW",
+  "completed_stages": [
+    "source",
+    "caption",
+    "planning",
+    "deterministic_validation"
+  ],
+  "stopped_at": "planning_review",
+  "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+  "artifact_ids": {
+    "pipeline_input.json": {
+      "id": "c872458a7497f416af4044e2804009f22e036680a82cc811be01a78ebdf1cf27",
+      "sha256": "c872458a7497f416af4044e2804009f22e036680a82cc811be01a78ebdf1cf27",
+      "path": "pipeline_input.json"
+    },
+    "source": {
+      "id": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+      "sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+      "path": "evidence/source/source.jpg"
+    },
+    "caption.json": {
+      "id": "c13d333f1b6a80eaa2e6bd4cf67d92b32f64529dcf1c5b6848d6222dd9a617bf",
+      "sha256": "c13d333f1b6a80eaa2e6bd4cf67d92b32f64529dcf1c5b6848d6222dd9a617bf",
+      "path": "caption.json"
+    },
+    "planning_input.json": {
+      "id": "33e59672c9275de5b55eb902392c327831131ec6f8c9232329ee52927f6cb7e8",
+      "sha256": "33e59672c9275de5b55eb902392c327831131ec6f8c9232329ee52927f6cb7e8",
+      "path": "planning_input.json"
+    },
+    "planner_audit.json": {
+      "id": "6f646b8ade4e1f6a104c65163e0b1e3f4046af6b3f20ae7c0ed4d174a4b23e5c",
+      "sha256": "6f646b8ade4e1f6a104c65163e0b1e3f4046af6b3f20ae7c0ed4d174a4b23e5c",
+      "path": "planner_audit.json"
+    },
+    "validated_plan.json": {
+      "id": "9d39b1e2afd8fa4860a262a0566bda7aea219812e0a0568db358479f09c13f01",
+      "sha256": "9d39b1e2afd8fa4860a262a0566bda7aea219812e0a0568db358479f09c13f01",
+      "path": "validated_plan.json"
+    }
+  },
+  "transitions": [
+    {
+      "stage": "source",
+      "action": "HASH_AND_IMAGE_VALIDATED",
+      "seconds": 0.06770979999782867
+    },
+    {
+      "stage": "resource_preflight",
+      "action": "QWEN_NOT_RESIDENT",
+      "seconds": 0.09541080000053626
+    },
+    {
+      "stage": "caption",
+      "action": "CAPTION_COMPLETED",
+      "seconds": 18.114416799999162
+    },
+    {
+      "stage": "caption",
+      "action": "MODEL_REFERENCES_RELEASED",
+      "seconds": 18.250790099998994,
+      "cuda_allocated_bytes_after": 0
+    },
+    {
+      "stage": "planning",
+      "action": "VALIDATED",
+      "seconds": 30.751589799998328,
+      "decision": "REVIEW"
+    },
+    {
+      "stage": "planning",
+      "action": "QWEN_UNLOAD_CONFIRMED",
+      "seconds": 30.75283539999873
+    },
+    {
+      "stage": "planning_review",
+      "action": "STOP",
+      "seconds": 30.752842699999746,
+      "state": "PLAN_REQUIRES_REVIEW",
+      "reason": "Validated REVIEW; no draft or quarantined candidate is executable.",
+      "generation_permitted": false
+    }
+  ],
+  "required_reviews": [
+    "Verify the source-object identity of: white spaghetti strands.",
+    "Localization must retain the original object label: white spaghetti strands.",
+    "Resolve uncertainties material to the proposed edits; relevance is not automatically proven.",
+    "Review the original-scene summary and any paraphrased identities against the image.",
+    "Human review must check protected content and preservation; text checks cannot prove semantic correctness."
+  ],
+  "errors": [],
+  "image_generation_permitted": false,
+  "replay_validated": false
+}

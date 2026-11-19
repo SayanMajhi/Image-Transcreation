@@ -1,0 +1,9 @@
+{
+  "checked_files": 315,
+  "changed": [
+    "reports\\cultural_transcreation_validation.md"
+  ],
+  "missing": [],
+  "allowed_change": "Append only to existing Phase8 report",
+  "original_report_prefix_intact": true
+}

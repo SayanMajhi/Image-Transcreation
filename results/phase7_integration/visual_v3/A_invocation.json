@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\sayan\\PycharmProjects\\MiniProject\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "scripts.inpaint",
+    "--refined-input",
+    "results\\phase7_integration\\visual_v3\\input_A.json",
+    "--out",
+    "results\\phase7_integration\\visual_v3\\A"
+  ],
+  "started_at_utc": "2026-11-11T09:29:38.036283+00:00"
+}

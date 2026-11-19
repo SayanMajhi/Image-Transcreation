@@ -1,0 +1,48 @@
+{
+  "source_image_sha256": "37e9b669cac70fb782a7ea7637c27ffd20726dcb1e88ad3f3d54c2f7f38ffee0",
+  "iteration6_status": "NOT_EXECUTED_PENDING_CONFIRMATION",
+  "iteration5": {
+    "source_caption": "A bowl of food with chopsticks and a spoon.",
+    "caption_status": "COMPLETE",
+    "verified_objects": [],
+    "raw_decision": "PROPOSE",
+    "object_description": "Japanese ramen noodles",
+    "localization_phrase": "Indian-style masala noodles",
+    "verified_object_id": null,
+    "final_decision": "REVIEW",
+    "released_candidate_count": 0,
+    "issues": [
+      {
+        "code": "UNVERIFIED_SOURCE_OBJECT",
+        "message": "Verify the source-object identity of: Japanese ramen noodles.",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "SOURCE_LOCALIZATION_MISMATCH",
+        "message": "Localization must retain the original object label: Japanese ramen noodles.",
+        "candidate_index": 0,
+        "severity": "review"
+      },
+      {
+        "code": "USER_CONSTRAINTS_UNRESOLVED",
+        "message": "Check all proposals against supplied user instructions/protected constraints; text validation cannot prove compatibility.",
+        "candidate_index": null,
+        "severity": "human_verification"
+      }
+    ]
+  },
+  "iteration6": {
+    "saved_caption_for_future_reuse": "A bowl of food with chopsticks and a spoon.",
+    "new_planning_input": null,
+    "verified_object": null,
+    "raw_decision": null,
+    "object_description": null,
+    "localization_phrase": null,
+    "verified_object_id": null,
+    "final_decision": null,
+    "released_candidate_count": null,
+    "issue_codes": null
+  },
+  "assessment": "No before/after Qwen outcome exists yet. Identity, localization and scene-summary improvements cannot be inferred without the confirmed input and one actual run."
+}

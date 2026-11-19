@@ -1,0 +1,26 @@
+{
+  "selected": "Croissant-Petr Kratochvil.jpg -> samosa; single object, CC0, white background, identifiable target geometry",
+  "rejected_before_generation": [
+    {
+      "source": "historical ramen/spaghetti",
+      "reason": "Appearance-only changes/complex food protection already failed; not Type B primary."
+    },
+    {
+      "source": "Croissant.jpg, JidGom",
+      "reason": "320x250 original insufficient object detail."
+    },
+    {
+      "source": "Green croissant on plate.jpg",
+      "reason": "nonstandard green surface and extra plate geometry."
+    },
+    {
+      "source": "cafe photographs with people/utensils from search",
+      "reason": "overlapping protected objects and people; not downloaded."
+    },
+    {
+      "source": "Khanuja repository images",
+      "reason": "dataset card says MIT, but per-photo original redistribution provenance was not established for selected photographs; not reused."
+    }
+  ],
+  "selection_not_based_on_generated_outputs": true
+}

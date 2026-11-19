@@ -1,0 +1,13 @@
+{
+  "source_caption": "A synthetic object sits on a surface.",
+  "caption_status": "COMPLETE",
+  "target_culture": "test target",
+  "source_culture": null,
+  "user_instructions": null,
+  "verified_objects": [
+    {
+      "object_id": "object-1",
+      "description": "synthetic object"
+    }
+  ]
+}

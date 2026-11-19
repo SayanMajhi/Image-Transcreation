@@ -1,0 +1,20 @@
+[
+  {
+    "command": "python -B -m scripts.review_uncertainty prepare --help",
+    "returncode": 0,
+    "stdout": "usage: review_uncertainty.py prepare [-h] --case CASE --image IMAGE --out OUT\n                                     --index INDEX\n\noptions:\n  -h, --help     show this help message and exit\n  --case CASE\n  --image IMAGE\n  --out OUT\n  --index INDEX\n",
+    "stderr": ""
+  },
+  {
+    "command": "python -B -m scripts.review_uncertainty decide --help",
+    "returncode": 0,
+    "stdout": "usage: review_uncertainty.py decide [-h] --pending PENDING --out OUT\n                                    --decision\n                                    {ROUTINE_VERIFICATION_REQUIRED,MATERIAL_UNRESOLVED,REJECT,NEEDS_REVIEW}\n                                    --reviewer REVIEWER --reason REASON\n                                    [--inspected-original] [--inspected-edit]\n                                    [--inspected-uncertainties]\n                                    [--checked-user-instructions]\n                                    [--inspected-audit]\n\noptions:\n  -h, --help            show this help message and exit\n  --pending PENDING\n  --out OUT\n  --decision {ROUTINE_VERIFICATION_REQUIRED,MATERIAL_UNRESOLVED,REJECT,NEEDS_REVIEW}\n  --reviewer REVIEWER\n  --reason REASON\n  --inspected-original\n  --inspected-edit\n  --inspected-uncertainties\n  --checked-user-instructions\n  --inspected-audit\n",
+    "stderr": ""
+  },
+  {
+    "command": "python -B -m scripts.review_uncertainty verify --help",
+    "returncode": 0,
+    "stdout": "usage: review_uncertainty.py verify [-h] --review REVIEW\n\noptions:\n  -h, --help       show this help message and exit\n  --review REVIEW\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "declared_utc": "2026-11-10T09:23:14.900874+00:00",
+  "scenario": "Existing parked bicycle photograph to target culture India",
+  "source_culture": null,
+  "verified_objects": [],
+  "user_instructions": null,
+  "source_sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+  "pipeline_input_sha256": "a905ec4f19e432e793aad09516c589e1e324cb949c35ce370bb49a3ac18e79d7",
+  "configuration_sha256": {
+    "models.yaml": "cc26e25c666b839acdd5a38a68d0f6a74a296ee087fab954c003856337c86e77",
+    "planner.yaml": "5e9434a484d8347df5fa67472cbe199d78c9e2b734a25644fc1c11144ce096d5"
+  },
+  "caption_prompt_variant": "default from unchanged config",
+  "maximum_real_caption_plan_runs": 1,
+  "new_grounding_calls": 0,
+  "new_sam_calls": 0,
+  "new_diffusion_calls": 0,
+  "policy": "Stop on REVIEW/ABSTAIN; PROPOSE also stops at missing edit-intent approval. No override or retry."
+}

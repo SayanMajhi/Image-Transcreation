@@ -1,0 +1,29 @@
+{
+  "before": {
+    "source_caption": "A bowl of food with chopsticks and a spoon.",
+    "caption_status": "COMPLETE",
+    "target_culture": "Indian",
+    "source_culture": "Japanese",
+    "user_instructions": "Original visible object, as declared by the user:\n\"Japanese ramen noodles in a bowl\"\n\nTransform the ramen into Indian-style masala noodles.\n\nPreserve the bowl, table, camera angle, lighting, and background.",
+    "verified_objects": []
+  },
+  "after": {
+    "source_caption": "A bowl of food with chopsticks and a spoon.",
+    "caption_status": "COMPLETE",
+    "target_culture": "Indian",
+    "source_culture": "Japanese",
+    "user_instructions": "Original visible object, as declared by the user:\n\"Japanese ramen noodles in a bowl\"\n\nTransform the ramen into Indian-style masala noodles.\n\nPreserve the bowl, table, camera angle, lighting, and background.",
+    "verified_objects": [
+      {
+        "object_id": "ramen-food-1",
+        "description": "Japanese ramen noodles in a white bowl"
+      }
+    ]
+  },
+  "changed_fields": [
+    "verified_objects"
+  ],
+  "all_other_fields_exactly_equal": true,
+  "user_instructions_unchanged": true,
+  "note": "The confirmation mentions a white bowl; the exact confirmed wording is used only inside the added VerifiedObject. The older instructions/declaration are intentionally not edited."
+}

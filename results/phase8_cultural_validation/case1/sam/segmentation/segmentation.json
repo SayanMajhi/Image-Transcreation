@@ -1,0 +1,223 @@
+{
+  "request": {
+    "source_image": "results\\phase8_cultural_validation\\case1\\source.jpg",
+    "image_sha256": "06d784865dd559ff33ff54a9d66759c478f74c75a5fdf121a30c6313463fc3b8",
+    "original_dimensions": [
+      1280,
+      853
+    ],
+    "detection_file": "results\\phase8_cultural_validation\\case1\\localization\\grounding\\detection.json",
+    "detection_sha256": "fb55b34edfd0a065c822baa634bf39e05cd02d8cc8c0cd26173f3250f7de0fa3",
+    "prediction_index": 0,
+    "selected_detection": {
+      "box": [
+        63.56884002685547,
+        207.62059020996094,
+        1174.200439453125,
+        732.7499389648438
+      ],
+      "score": 0.8973962664604187,
+      "label": "croissant"
+    },
+    "source_phrase": "croissant",
+    "grounding_model_id": "IDEA-Research/grounding-dino-tiny",
+    "grounding_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "selection_status": "RESEARCH_ONLY",
+    "selection_note": "Assistant research inspection: the sole box encloses the actual croissant with white margins. Used only as an original-object SAM prompt, not human approval or target object detection.",
+    "review_file": null,
+    "review_sha256": null,
+    "image_edit_authorized": false,
+    "cultural_transformation_authorized": false,
+    "points": [],
+    "point_prompt_file": null,
+    "point_prompt_sha256": null
+  },
+  "model_id": "facebook/sam-vit-base",
+  "resolved_revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+  "status": "SEGMENTED",
+  "masks": [
+    {
+      "index": 0,
+      "filename": "mask_0.png",
+      "dimensions": [
+        1280,
+        853
+      ],
+      "sam_score": 1.0119425058364868,
+      "foreground_pixels": 343864,
+      "mask_box": [
+        67,
+        212,
+        1172,
+        731
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 1,
+      "filename": "mask_1.png",
+      "dimensions": [
+        1280,
+        853
+      ],
+      "sam_score": 0.9960376620292664,
+      "foreground_pixels": 342250,
+      "mask_box": [
+        67,
+        212,
+        1172,
+        730
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 2,
+      "filename": "mask_2.png",
+      "dimensions": [
+        1280,
+        853
+      ],
+      "sam_score": 0.7961519956588745,
+      "foreground_pixels": 184885,
+      "mask_box": [
+        67,
+        216,
+        1172,
+        729
+      ],
+      "status": "VALID"
+    }
+  ],
+  "visualization_mask_index": 0,
+  "settings": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "precision": "float32",
+    "seed": 42,
+    "multimask_output": true,
+    "mask_threshold": 0.0,
+    "effective_device": "cuda",
+    "batch_size": 1,
+    "eval": true,
+    "inference_mode": true,
+    "postprocess_device": "cpu",
+    "attention_backend": "sdpa",
+    "processor": {
+      "_processor_class": "SamProcessor",
+      "image_processor_type": "SamImageProcessor",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1024
+      },
+      "mask_size": {
+        "longest_edge": 256
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": {
+        "height": 1024,
+        "width": 1024
+      },
+      "mask_pad_size": {
+        "height": 256,
+        "width": 256
+      },
+      "do_convert_rgb": true
+    },
+    "api_shapes": {
+      "input_boxes": [
+        1,
+        1,
+        4
+      ],
+      "transformed_input_boxes": [
+        [
+          [
+            50.855072021484375,
+            165.99911198498634,
+            939.3603515625,
+            585.8563404150333
+          ]
+        ]
+      ],
+      "original_sizes": [
+        [
+          853,
+          1280
+        ]
+      ],
+      "reshaped_input_sizes": [
+        [
+          682,
+          1024
+        ]
+      ],
+      "pred_masks": [
+        1,
+        1,
+        3,
+        256,
+        256
+      ],
+      "iou_scores": [
+        1,
+        1,
+        3
+      ],
+      "restored_masks": [
+        1,
+        3,
+        853,
+        1280
+      ]
+    },
+    "binary_values": [
+      0,
+      255
+    ],
+    "mask_box_upper_bounds": "exclusive",
+    "source_image_copy": "original.jpg",
+    "source_detection_copy": "source_detection.json",
+    "visualization_selection": "highest finite SAM score among nonempty candidates; no human mask approval"
+  },
+  "timing": {
+    "load_seconds": 6.099999400001252,
+    "preprocess_seconds": 0.04993600000307197,
+    "inference_seconds": 0.9336877999994613,
+    "postprocess_and_mask_save_seconds": 0.07897099999900092,
+    "stage_seconds": 7.186330500000622,
+    "visualization_seconds": 0.6209410999981628
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 374956544,
+    "effective_device": "cuda",
+    "peak_allocated_cuda_bytes": 2065262592
+  },
+  "observations": [
+    {
+      "code": "RESEARCH_SCOPE",
+      "message": "Segmentation test only; SAM scores are not measured accuracy and no image editing is authorized."
+    },
+    {
+      "code": "NO_CONFIRMED_HUMAN_APPROVAL",
+      "message": "Assistant research inspection: the sole box encloses the actual croissant with white margins. Used only as an original-object SAM prompt, not human approval or target object detection."
+    }
+  ],
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false
+}

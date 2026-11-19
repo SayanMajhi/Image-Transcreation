@@ -1,0 +1,12 @@
+{
+  "source_image": "results\\phase7_integration\\v4_completed\\source.jpg",
+  "image_sha256": "062eb9f18e0175dec675f9e1edefd3ef1238837e627727e58b9d9c309fa49d0e",
+  "target_culture": "Indian-style masala spaghetti",
+  "output_dir": "results\\phase7_integration\\v4_completed\\automated",
+  "execution_mode": "AUTOMATED_PLANNING",
+  "source_culture": "Italian spaghetti aglio e olio (source-page label)",
+  "user_instructions": "Transform pale spaghetti into recognizable spaghetti strands visibly coated with reddish-brown Indian-style masala seasoning or sauce. User-directed cross-cultural food reinterpretation; not a universally traditional Indian dish.\nPreserve the white plate and visible rim, table/background, camera angle/composition, lighting direction and unrelated objects. Preserve spaghetti strand structure as much as possible. Editable: visible spaghetti surface, attached seasoning and necessary food pixels for a coherent masala-coated appearance.",
+  "verified_objects": [],
+  "replay": null,
+  "edit_intent": null
+}

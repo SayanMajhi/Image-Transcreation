@@ -1,0 +1,41 @@
+{
+  "/api/version": {
+    "version": "0.40.15"
+  },
+  "/api/tags": {
+    "models": [
+      {
+        "name": "qwen2.5:3b",
+        "model": "qwen2.5:3b",
+        "modified_at": "2026-11-08T14:30:01.081001+05:30",
+        "size": 1929912432,
+        "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "3.1B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 32768,
+          "embedding_length": 2048,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      }
+    ]
+  },
+  "/api/ps": {
+    "models": []
+  },
+  "nvidia_smi": {
+    "returncode": 0,
+    "stdout": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1291, 592.00\n",
+    "stderr": ""
+  }
+}

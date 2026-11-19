@@ -413,6 +413,7 @@ class InpaintingInput:
     prompt: str
     selection_note: str
     scope: str  # explicit user-directed isolated research, never inferred from a review or plan
+    mask_kind: str = "SAM_CANDIDATE"
 
     def __post_init__(self) -> None:
         if self.scope != "RESEARCH_ONLY":
@@ -427,3 +428,5 @@ class InpaintingInput:
                 raise ValueError(f"{name} must be a SHA-256")
         if type(self.candidate_index) is not int or self.candidate_index < 0:
             raise ValueError("select one explicit integer SAM candidate index")
+        if self.mask_kind not in ("SAM_CANDIDATE", "COMBINED"):
+            raise ValueError("mask_kind must be SAM_CANDIDATE or COMBINED")

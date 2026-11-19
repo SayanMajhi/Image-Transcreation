@@ -1,0 +1,59 @@
+{
+  "schema_version": 2,
+  "record_type": "edit_intent_review",
+  "scope": "GROUNDING_TEST_ONLY",
+  "original_image_sha256": "0a82d46b32a151b0da9b5736d2817a9b151bb3b15957503d0a9208ad21dffc30",
+  "source_culture": null,
+  "target_culture": "test target",
+  "user_instructions": null,
+  "verified_objects": [
+    {
+      "object_id": "object-1",
+      "description": "synthetic object"
+    }
+  ],
+  "validated_plan_sha256": "36787e83f4b1b6c809b41e0d8d655d0905fc05723e92e5c914030a02b0649c40",
+  "planning_result_sha256": "8c3dca46355d2372c19ef42e1b595a51363515f0ee33b3a1ef9f2b8e2159c76e",
+  "planner_audit_sha256": "f399a1b3271aade1d20bdb0de2ea1046ee597f7fc0fb2060ba9747c9b542a743",
+  "planning_run_sha256": "e397c71bf2007897d748746b77ab0844cf7d1073a8cda4792205ae9a331a93d9",
+  "candidate_index": 0,
+  "candidate": {
+    "object_description": "synthetic object",
+    "localization_phrase": "synthetic object",
+    "proposed_change": "a different surface material",
+    "cultural_reason": "Contextual test suggestion only",
+    "identity_uncertain": false,
+    "verified_object_id": "object-1"
+  },
+  "must_preserve": [
+    "background",
+    "original scene purpose",
+    "important people",
+    "activity",
+    "person and object relationships"
+  ],
+  "verification_requirements": [
+    "Check proposed changes and cultural reasons with the user; PROPOSE is not approval.",
+    "Verify localization phrases against the original image before grounding or editing.",
+    "Compare scene_summary with the original image; caption-only claims and paraphrased identities remain unverified.",
+    "Check every preservation statement against the edit; text checks cannot prove semantic or cultural correctness."
+  ],
+  "evidence_scope": "SYNTHETIC_TEST_ONLY",
+  "user_constraints_status": "NOT_APPLICABLE",
+  "planning_issues": [],
+  "uncertainties": [],
+  "image_file": "original.png",
+  "run_file": "evidence/pipeline_result.json",
+  "decision": "PENDING",
+  "reviewer": null,
+  "reason": "Awaiting explicit image and proposal inspection.",
+  "created_at_utc": "2026-11-10T11:00:12.832534+00:00",
+  "reviewed_at_utc": null,
+  "inspected_original": false,
+  "inspected_edit": false,
+  "checked_user_instructions": false,
+  "sam_authorized": false,
+  "image_edit_authorized": false,
+  "diffusion_authorized": false,
+  "cultural_transformation_authorized": false
+}
