@@ -1,0 +1,19 @@
+{
+  "decision": "APPROVED_FOR_EXPERIMENTAL_IMAGE_GENERATION_ONLY",
+  "date": "2026-11-20",
+  "source_image": "data\\chole_puri.jpg",
+  "source_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+  "approved_masks": {
+    "results\\phaseB_mask_review_20261120_01\\corrected_review\\puri_mask.png": "68ef7e19c4fa1677229539697a4f9c31e958f2afc6fd84c84466a840f37c265f",
+    "results\\phaseB_mask_review_20261120_01\\corrected_review\\curry_mask.png": "9dd9d1a07da9a684c2fbfcc14240fdf6a09f0e5a997d5b67da11c4c21605659e"
+  },
+  "scope": "Corrected masks only; Japan; preserve all non-target pixels; no production promotion",
+  "limitations": [
+    "Generated-image visual and cultural assessments PENDING_USER_REVIEW",
+    "No mask expansion approved"
+  ],
+  "approval_evidence": {
+    "path": "C:\\Users\\justg\\Downloads\\Pasted text.txt",
+    "sha256": "a9cdc245faef04d685318c8a26c430985766252f313da16b6ffce1963a723095"
+  }
+}

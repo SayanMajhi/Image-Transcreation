@@ -1,0 +1,140 @@
+{
+  "image_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+  "original_dimensions": [
+    4000,
+    2252
+  ],
+  "source_phrase": "puri",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "resolved_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "status": "DETECTED",
+  "detections": [
+    {
+      "box": [
+        1728.289794921875,
+        186.15438842773438,
+        3919.0556640625,
+        1563.4697265625
+      ],
+      "score": 0.5803283452987671,
+      "label": "puri"
+    },
+    {
+      "box": [
+        1139.210693359375,
+        427.45037841796875,
+        1906.0330810546875,
+        997.6640014648438
+      ],
+      "score": 0.36617475748062134,
+      "label": "puri"
+    },
+    {
+      "box": [
+        729.9191284179688,
+        1034.1136474609375,
+        2101.011474609375,
+        1961.64111328125
+      ],
+      "score": 0.4426738917827606,
+      "label": "puri"
+    }
+  ],
+  "settings": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "box_threshold": 0.3,
+    "text_threshold": 0.25,
+    "seed": 42,
+    "effective_device": "cuda",
+    "normalized_prompt": "puri.",
+    "batch_size": 1,
+    "dtype": "float32",
+    "disable_custom_kernels": true,
+    "inference_mode": true,
+    "eval": true,
+    "coordinate_format": "xyxy_original_pixels",
+    "postprocess_box_argument": "threshold",
+    "target_sizes": [
+      [
+        2252,
+        4000
+      ]
+    ],
+    "image_processor": {
+      "_processor_class": "GroundingDinoProcessor",
+      "image_processor_type": "GroundingDinoImageProcessor",
+      "format": "coco_detection",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1333,
+        "shortest_edge": 800
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "do_convert_annotations": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": null
+    }
+  },
+  "timing": {
+    "load_seconds": 13.928575800004182,
+    "preprocess_seconds": 0.22710009998991154,
+    "inference_seconds": 1.7478414000070188,
+    "postprocess_seconds": 0.025219899995136075,
+    "total_seconds": 16.002031199997873
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 692084224,
+    "inference_peak_allocated_bytes": 2028848640,
+    "device": "cuda"
+  },
+  "raw_predictions": {
+    "boxes": [
+      [
+        1728.289794921875,
+        186.15438842773438,
+        3919.0556640625,
+        1563.4697265625
+      ],
+      [
+        1139.210693359375,
+        427.45037841796875,
+        1906.0330810546875,
+        997.6640014648438
+      ],
+      [
+        729.9191284179688,
+        1034.1136474609375,
+        2101.011474609375,
+        1961.64111328125
+      ]
+    ],
+    "scores": [
+      0.5803283452987671,
+      0.36617475748062134,
+      0.4426738917827606
+    ],
+    "text_labels": [
+      "puri",
+      "puri",
+      "puri"
+    ]
+  },
+  "observations": [],
+  "research_only": true
+}

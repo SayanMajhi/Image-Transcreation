@@ -1,0 +1,128 @@
+{
+  "status": "ERROR",
+  "scope": "RESEARCH_ONLY",
+  "request": {
+    "source_image": "data\\chole_puri.jpg",
+    "image_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+    "segmentation_file": "results\\phaseB_mask_review_20261120_01\\sam_puri_0\\segmentation.json",
+    "segmentation_sha256": "b52deab7374d67ee535acbe21ace58c2aad1ca1c8e37bff8db4b44d30c694b5b",
+    "mask_file": "results\\phaseB_mask_review_20261120_01\\corrected_review\\puri_mask.png",
+    "mask_sha256": "68ef7e19c4fa1677229539697a4f9c31e958f2afc6fd84c84466a840f37c265f",
+    "candidate_index": 0,
+    "prompt": "A realistic Japanese tempura serving: one recognizable golden shrimp tempura and several crisp vegetable tempura pieces replacing the puri; preserve the chickpea curry, orange sauce, plate, other food, background, lighting and perspective.",
+    "selection_note": "User-approved corrected puri mask for experimental generation only.",
+    "scope": "RESEARCH_ONLY",
+    "mask_kind": "SAM_CANDIDATE",
+    "annotation_file": "results\\phaseB_mask_review_20261120_01\\controlled_diffusion\\annotation.json",
+    "annotation_sha256": "06be31450470fd11bd7e668c8a6b78231aeef3aceb0b8ba75f6131548487992b",
+    "protected_mask_file": "results\\phaseB_mask_review_20261120_01\\approved_puri_experiments\\protected_exclusions.png",
+    "protected_mask_sha256": "e53ecfbac9c370ad6d6f57f41bd80e0137d5005b7b7f36cafc171982c20710e1",
+    "mask_origin": "RESEARCH_MASK_MANUALLY_REFINED",
+    "negative_prompt": null
+  },
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "resolved_revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+  "settings": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+    "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+    "processing_size": 512,
+    "context_margin": 64,
+    "seed": 42,
+    "steps": 20,
+    "guidance_scale": 7.5,
+    "strength": 0.9,
+    "precision": "float16",
+    "batch_size": 1,
+    "variant": "fp16",
+    "use_safetensors": true,
+    "negative_prompt": null,
+    "generator_device": "cpu",
+    "initial_offload": "model_cpu_offload",
+    "allowed_oom_fallback": null,
+    "max_generation_attempts": 1
+  },
+  "source_sam": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "grounding_index": 0,
+    "grounding_box": [
+      1728.289794921875,
+      186.15438842773438,
+      3919.0556640625,
+      1563.4697265625
+    ],
+    "detection_sha256": "5366449d2ce917ef370c9c54f892ea06a263d562036966e45210cec783a0434c",
+    "point_sha256": null,
+    "selection_status": "RESEARCH_ONLY"
+  },
+  "geometry": {
+    "crop_box_xyxy": [
+      1677,
+      136,
+      3974,
+      1620
+    ],
+    "padding_ltrb": [
+      0,
+      406,
+      0,
+      407
+    ],
+    "padded_side": 2297,
+    "original_dimensions": [
+      4000,
+      2252
+    ],
+    "processing_size": 512,
+    "image_resize": "LANCZOS",
+    "mask_resize": "NEAREST",
+    "padding": "edge RGB; zero mask"
+  },
+  "attempts": [],
+  "timing": {
+    "stage_seconds": 0.12724749999688356
+  },
+  "memory": {
+    "initial_allocated_bytes": 0,
+    "free_total_before": [
+      5379194880,
+      6441926656
+    ]
+  },
+  "observations": [
+    {
+      "code": "INPAINTING_FAILED",
+      "type": "LocalEntryNotFoundError",
+      "message": "Cannot find an appropriate cached snapshot folder for the specified revision on the local disk and outgoing traffic has been disabled. To enable repo look-ups and downloads online, set 'HF_HUB_OFFLINE=0' as environment variable."
+    }
+  ],
+  "cultural_edit_authorized": false,
+  "human_approved": false,
+  "editing_mask": {
+    "origin": "RESEARCH_MASK_MANUALLY_REFINED",
+    "human_approved": false,
+    "original_sam_reference_candidate_index": 0,
+    "original_sam_reference_mask_sha256": "fdbb1af231b93676626cb02c877c253a62b7e8e9f5727341df6d9477541ca9aa",
+    "refined_mask_sha256": "68ef7e19c4fa1677229539697a4f9c31e958f2afc6fd84c84466a840f37c265f",
+    "annotation_sha256": "06be31450470fd11bd7e668c8a6b78231aeef3aceb0b8ba75f6131548487992b",
+    "protected_mask_sha256": "e53ecfbac9c370ad6d6f57f41bd80e0137d5005b7b7f36cafc171982c20710e1"
+  },
+  "artifact_sha256": {
+    "processing_image.png": "37480ba01e275bd09ba3fbadde51eb28dc5204ecff10ca85d3573625b758eb79",
+    "processing_mask.png": "3fc4fcdf69d57c0c27172d2593bd3ad5b0ec8daa5128583b37afeacd8e1e0082",
+    "source_decoded.png": "5e171c4ff746a86dcc12fbb1613eeb3e929348a7e239f50cd993ec35e62c59d0",
+    "evidence/box.png": "a7817e3988b04f334f756a0a6e809da56717ed430f5c1d710938b91456b0252c",
+    "evidence/mask_0.png": "fdbb1af231b93676626cb02c877c253a62b7e8e9f5727341df6d9477541ca9aa",
+    "evidence/mask_1.png": "cf4664ab21ab033a390b08ccd1fbb6762cafb2defcddd3f840d009d570301865",
+    "evidence/mask_2.png": "d8f1efcd5935e49e37ba86bb5c19a528fd441f329c996dd195161c444e1c12e8",
+    "evidence/original.jpg": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+    "evidence/overlay_0.png": "8bb4e6d85a0d8eaaed4e7a21f287078fb614af2c5636fd0f54d6ac6091f10ca6",
+    "evidence/overlay_1.png": "eb4302f6f628150f7cd0c571fe2363ba4c374a3a11cc472816a18e5c4cd8bd27",
+    "evidence/overlay_2.png": "5540ddf6eadddc3ded5e8a7613d4446e6d929c6d45e0d2ade5d1772515c080ed",
+    "evidence/protected_exclusions.png": "e53ecfbac9c370ad6d6f57f41bd80e0137d5005b7b7f36cafc171982c20710e1",
+    "evidence/refined_mask.png": "68ef7e19c4fa1677229539697a4f9c31e958f2afc6fd84c84466a840f37c265f",
+    "evidence/refinement_annotations.json": "06be31450470fd11bd7e668c8a6b78231aeef3aceb0b8ba75f6131548487992b",
+    "evidence/segmentation.json": "b52deab7374d67ee535acbe21ace58c2aad1ca1c8e37bff8db4b44d30c694b5b",
+    "evidence/source_detection.json": "5366449d2ce917ef370c9c54f892ea06a263d562036966e45210cec783a0434c"
+  }
+}
