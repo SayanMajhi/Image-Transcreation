@@ -1,0 +1,223 @@
+{
+  "request": {
+    "source_image": "data\\chole_puri.jpg",
+    "image_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+    "original_dimensions": [
+      4000,
+      2252
+    ],
+    "detection_file": "results\\phaseB_mask_review_20261120_01\\ground_puri\\detection.json",
+    "detection_sha256": "5366449d2ce917ef370c9c54f892ea06a263d562036966e45210cec783a0434c",
+    "prediction_index": 0,
+    "selected_detection": {
+      "box": [
+        1728.289794921875,
+        186.15438842773438,
+        3919.0556640625,
+        1563.4697265625
+      ],
+      "score": 0.5803283452987671,
+      "label": "puri"
+    },
+    "source_phrase": "puri",
+    "grounding_model_id": "IDEA-Research/grounding-dino-tiny",
+    "grounding_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "selection_status": "RESEARCH_ONLY",
+    "selection_note": "Research-only candidate for the largest detected puri; pending user mask review.",
+    "review_file": null,
+    "review_sha256": null,
+    "image_edit_authorized": false,
+    "cultural_transformation_authorized": false,
+    "points": [],
+    "point_prompt_file": null,
+    "point_prompt_sha256": null
+  },
+  "model_id": "facebook/sam-vit-base",
+  "resolved_revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+  "status": "SEGMENTED",
+  "masks": [
+    {
+      "index": 0,
+      "filename": "mask_0.png",
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "sam_score": 0.9849362373352051,
+      "foreground_pixels": 2058837,
+      "mask_box": [
+        1741,
+        200,
+        3968,
+        1556
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 1,
+      "filename": "mask_1.png",
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "sam_score": 0.9917450547218323,
+      "foreground_pixels": 2057485,
+      "mask_box": [
+        1741,
+        199,
+        3963,
+        1557
+      ],
+      "status": "VALID"
+    },
+    {
+      "index": 2,
+      "filename": "mask_2.png",
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "sam_score": 0.8882156610488892,
+      "foreground_pixels": 2034169,
+      "mask_box": [
+        1745,
+        203,
+        3907,
+        1556
+      ],
+      "status": "VALID"
+    }
+  ],
+  "visualization_mask_index": 1,
+  "settings": {
+    "model_id": "facebook/sam-vit-base",
+    "revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "device": "cuda",
+    "cpu_fallback": true,
+    "precision": "float32",
+    "seed": 42,
+    "multimask_output": true,
+    "mask_threshold": 0.0,
+    "effective_device": "cuda",
+    "batch_size": 1,
+    "eval": true,
+    "inference_mode": true,
+    "postprocess_device": "cpu",
+    "attention_backend": "sdpa",
+    "processor": {
+      "_processor_class": "SamProcessor",
+      "image_processor_type": "SamImageProcessor",
+      "do_resize": true,
+      "size": {
+        "longest_edge": 1024
+      },
+      "mask_size": {
+        "longest_edge": 256
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_pad": true,
+      "pad_size": {
+        "height": 1024,
+        "width": 1024
+      },
+      "mask_pad_size": {
+        "height": 256,
+        "width": 256
+      },
+      "do_convert_rgb": true
+    },
+    "api_shapes": {
+      "input_boxes": [
+        1,
+        1,
+        4
+      ],
+      "transformed_input_boxes": [
+        [
+          [
+            442.4421875,
+            47.69586239911311,
+            1003.2782500000001,
+            400.58704805797623
+          ]
+        ]
+      ],
+      "original_sizes": [
+        [
+          2252,
+          4000
+        ]
+      ],
+      "reshaped_input_sizes": [
+        [
+          577,
+          1024
+        ]
+      ],
+      "pred_masks": [
+        1,
+        1,
+        3,
+        256,
+        256
+      ],
+      "iou_scores": [
+        1,
+        1,
+        3
+      ],
+      "restored_masks": [
+        1,
+        3,
+        2252,
+        4000
+      ]
+    },
+    "binary_values": [
+      0,
+      255
+    ],
+    "mask_box_upper_bounds": "exclusive",
+    "source_image_copy": "original.jpg",
+    "source_detection_copy": "source_detection.json",
+    "visualization_selection": "highest finite SAM score among nonempty candidates; no human mask approval"
+  },
+  "timing": {
+    "load_seconds": 9.51125690000481,
+    "preprocess_seconds": 0.1223827999929199,
+    "inference_seconds": 1.1923851000028662,
+    "postprocess_and_mask_save_seconds": 0.2815866000019014,
+    "stage_seconds": 11.140881100000115,
+    "visualization_seconds": 7.9390501999878325
+  },
+  "memory": {
+    "load_peak_allocated_bytes": 374956544,
+    "effective_device": "cuda",
+    "peak_allocated_cuda_bytes": 2065262592
+  },
+  "observations": [
+    {
+      "code": "RESEARCH_SCOPE",
+      "message": "Segmentation test only; SAM scores are not measured accuracy and no image editing is authorized."
+    },
+    {
+      "code": "NO_CONFIRMED_HUMAN_APPROVAL",
+      "message": "Research-only candidate for the largest detected puri; pending user mask review."
+    }
+  ],
+  "image_edit_authorized": false,
+  "cultural_transformation_authorized": false
+}

@@ -1,0 +1,184 @@
+[
+  {
+    "run": "A",
+    "status": "ERROR",
+    "prompt": "A realistic Japanese shrimp and vegetable tempura arrangement replacing the puri, matching the original plate, camera perspective, lighting and scale. Preserve the chickpea curry, orange sauce, plate, other food, background and utensils.",
+    "settings": {
+      "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+      "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+      "processing_size": 512,
+      "context_margin": 64,
+      "seed": 42,
+      "steps": 20,
+      "guidance_scale": 7.5,
+      "strength": 0.9,
+      "precision": "float16",
+      "batch_size": 1,
+      "variant": "fp16",
+      "use_safetensors": true,
+      "negative_prompt": null,
+      "generator_device": "cpu",
+      "initial_offload": "model_cpu_offload",
+      "allowed_oom_fallback": null,
+      "max_generation_attempts": 1
+    },
+    "runtime": {
+      "stage_seconds": 6.478676599999744
+    },
+    "VRAM": {
+      "initial_allocated_bytes": 0,
+      "free_total_before": [
+        5379194880,
+        6441926656
+      ]
+    },
+    "visual_assessment": "PENDING_USER_REVIEW",
+    "cultural_assessment": "PENDING_USER_REVIEW"
+  },
+  {
+    "run": "B",
+    "status": "ERROR",
+    "prompt": "A realistic Japanese shrimp and vegetable tempura arrangement replacing the puri, matching the original plate, camera perspective, lighting and scale. Preserve the chickpea curry, orange sauce, plate, other food, background and utensils.",
+    "settings": {
+      "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+      "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+      "processing_size": 512,
+      "context_margin": 64,
+      "seed": 42,
+      "steps": 30,
+      "guidance_scale": 7.5,
+      "strength": 0.9,
+      "precision": "float16",
+      "batch_size": 1,
+      "variant": "fp16",
+      "use_safetensors": true,
+      "negative_prompt": null,
+      "generator_device": "cpu",
+      "initial_offload": "model_cpu_offload",
+      "allowed_oom_fallback": null,
+      "max_generation_attempts": 1
+    },
+    "runtime": {
+      "stage_seconds": 0.13681500000166125
+    },
+    "VRAM": {
+      "initial_allocated_bytes": 0,
+      "free_total_before": [
+        5379194880,
+        6441926656
+      ]
+    },
+    "visual_assessment": "PENDING_USER_REVIEW",
+    "cultural_assessment": "PENDING_USER_REVIEW"
+  },
+  {
+    "run": "C",
+    "status": "ERROR",
+    "prompt": "A realistic Japanese tempura serving: one recognizable golden shrimp tempura and several crisp vegetable tempura pieces replacing the puri; preserve the chickpea curry, orange sauce, plate, other food, background, lighting and perspective.",
+    "settings": {
+      "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+      "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+      "processing_size": 512,
+      "context_margin": 64,
+      "seed": 42,
+      "steps": 20,
+      "guidance_scale": 7.5,
+      "strength": 0.9,
+      "precision": "float16",
+      "batch_size": 1,
+      "variant": "fp16",
+      "use_safetensors": true,
+      "negative_prompt": null,
+      "generator_device": "cpu",
+      "initial_offload": "model_cpu_offload",
+      "allowed_oom_fallback": null,
+      "max_generation_attempts": 1
+    },
+    "runtime": {
+      "stage_seconds": 0.12724749999688356
+    },
+    "VRAM": {
+      "initial_allocated_bytes": 0,
+      "free_total_before": [
+        5379194880,
+        6441926656
+      ]
+    },
+    "visual_assessment": "PENDING_USER_REVIEW",
+    "cultural_assessment": "PENDING_USER_REVIEW"
+  },
+  {
+    "run": "historical_A",
+    "status": "COMPLETED",
+    "prompt": "A realistic Japanese shrimp and vegetable tempura arrangement replacing the puri, matching the original plate, camera perspective, lighting and scale. Preserve the chickpea curry, orange sauce, plate, other food, background and utensils.",
+    "settings": {
+      "model_id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+      "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+      "processing_size": 512,
+      "context_margin": 64,
+      "seed": 42,
+      "steps": 20,
+      "guidance_scale": 7.5,
+      "strength": 0.9,
+      "precision": "float16",
+      "batch_size": 1,
+      "variant": "fp16",
+      "use_safetensors": true,
+      "negative_prompt": null,
+      "generator_device": "cpu",
+      "initial_offload": "model_cpu_offload",
+      "allowed_oom_fallback": "sequential_cpu_offload",
+      "scheduler": "DDIMScheduler",
+      "scheduler_config": {
+        "num_train_timesteps": 1000,
+        "beta_start": 0.00085,
+        "beta_end": 0.012,
+        "beta_schedule": "scaled_linear",
+        "trained_betas": null,
+        "clip_sample": false,
+        "set_alpha_to_one": false,
+        "steps_offset": 1,
+        "prediction_type": "epsilon",
+        "thresholding": false,
+        "dynamic_thresholding_ratio": 0.995,
+        "clip_sample_range": 1.0,
+        "sample_max_value": 1.0,
+        "timestep_spacing": "leading",
+        "rescale_betas_zero_snr": false,
+        "_use_default_values": [
+          "rescale_betas_zero_snr",
+          "dynamic_thresholding_ratio",
+          "thresholding",
+          "timestep_spacing",
+          "clip_sample_range",
+          "sample_max_value",
+          "prediction_type"
+        ],
+        "_class_name": "DDIMScheduler",
+        "_diffusers_version": "0.6.0.dev0",
+        "skip_prk_steps": true
+      },
+      "effective_denoising_steps": 18
+    },
+    "runtime": {
+      "load_seconds": 10.819693800003733,
+      "inference_seconds": 12.1113095000037,
+      "stage_seconds": 31.196515099989483
+    },
+    "VRAM": {
+      "initial_allocated_bytes": 0,
+      "free_total_before": [
+        3459986228,
+        4294443008
+      ],
+      "peak_allocated_cuda_bytes": 2654782464
+    },
+    "visual_assessment": "PENDING_USER_REVIEW",
+    "cultural_assessment": "PENDING_USER_REVIEW",
+    "changed_protected_pixels": 0,
+    "changed_outer_boundary_pixels": 0,
+    "changed_inner_boundary_pixels": 14119,
+    "output_sha256": "3103fcd2f41bedf7eaec70a680ee1807226bf93287371420d84fb8d92ab64ba1",
+    "technical_validation": "PASS"
+  }
+]
