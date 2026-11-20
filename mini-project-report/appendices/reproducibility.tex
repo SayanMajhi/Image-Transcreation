@@ -1,0 +1,18 @@
+\section{Reproducibility and Evidence}
+\subsection{Commands}
+The repository root contains \CodePath{REPRODUCTION.md} with setup instructions. The CPU-only pilot is reproduced by the \CodePath{scripts.pilot} validate, run, verify and package commands using a new output directory. The full test suite uses Python's \CodePath{unittest discover} command under Python 3.11 with the source path configured.
+
+\subsection{Evidence boundaries}
+\begin{table*}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{p{0.27\textwidth}Y}
+\toprule
+Evidence type & Permitted conclusion\\\midrule
+Offline tests & Implementation contracts and regression behaviour; not model or visual quality.\\
+Saved-pixel verifier & Locality, protected-pixel preservation, hashes and replay; not realism or culture.\\
+Assistant visual notes & Diagnostic observations only; not human ratings.\\
+Direct user feedback & A stated user's observation for the identified output; not an independent panel.\\
+Guided full-scene illustration & Presentation concept only; excluded from project metrics.\\
+\bottomrule
+\end{tabularx}
+\end{table*}

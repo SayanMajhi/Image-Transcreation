@@ -1,0 +1,17 @@
+{
+  "source_caption": "A plate containing puris, chole, vegetables, and hummus.",
+  "caption_status": "COMPLETE",
+  "target_culture": "Japan",
+  "source_culture": "India",
+  "user_instructions": "Suggest culturally appropriate Japanese replacements for the puris and chole. Preserve the plate, table, lighting, bottle, spoon, and background.",
+  "verified_objects": [
+    {
+      "object_id": "puri-1",
+      "description": "Puri flatbreads on the plate"
+    },
+    {
+      "object_id": "chole-1",
+      "description": "Chole chickpea curry in the small dish"
+    }
+  ]
+}

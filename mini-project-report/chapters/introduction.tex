@@ -1,0 +1,19 @@
+\chapter{Introduction}
+\label{ch:introduction}
+\section{Problem statement}
+Image transcreation adapts visual material for another cultural context while preserving intended function and unrelated scene content. It differs from applying a national colour palette or generating an unrelated image. A responsible edit should identify a source object, select a functionally comparable target, make a bounded alteration and disclose uncertainty. Cultural relevance cannot be established from pixels alone; it requires careful scope and human judgement.
+
+The project is motivated by multicultural image-understanding work that separates cultural relevance, semantic preservation and visual similarity \cite{khanuja2024image,khanuja2025evaluating}. Its practical question is narrower: can small independently inspectable components support a safe research workflow on a 4 GB laptop GPU?
+
+\section{Objectives and research questions}
+\begin{enumerate}[label=\textbf{RQ\arabic*:},leftmargin=*]
+\item Can a staged implementation preserve pixels outside a declared edit region and retain provenance for every decision?
+\item Can reference-guided replacement be replayed across several object categories while retaining technical locality?
+\item What visual limitations remain when diffusion or simple compositing is used under the available hardware constraints?
+\end{enumerate}
+
+\section{Scope and claims}
+The system provides an automated planning path that stops at a human-review boundary, and separate guided research paths. It does not claim autonomous cultural reasoning, professional image-editing quality or production readiness. The supplementary full-scene illustration is a guided AI visualization only; it is not included in any quantitative result.
+
+\section{Report organization}
+\Cref{ch:literature} reviews the relevant concepts. \Cref{ch:system} describes the implemented pipeline. \Cref{ch:implementation} maps that design to code and safety contracts. \Cref{ch:results} presents completed experiments and their limits. \Cref{ch:conclusion} concludes with evidence-supported findings.

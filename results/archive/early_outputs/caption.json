@@ -1,0 +1,43 @@
+{
+  "caption": "The image depicts a large, ornate, and colorful deity, likely a Hindu goddess, prominently featured in the center of the image. The deity is seated on a throne, with its arms outstretched, and is surrounded by a large, swirling, and billowing cloud of smoke. The goddess is adorned with elaborate jewelry, including a large, ornate headdress, and a richly decorated skirt. Her body is adorned with multiple arms, each holding a different object, which may represent various aspects of the goddess's power or attributes.\n\nThe goddess is surrounded by a group of people, some of whom are holding objects, likely offerings",
+  "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+  "resolved_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "requested_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "image_dimensions": [
+    980,
+    692
+  ],
+  "seed": 42,
+  "task": "caption",
+  "generation_settings": {
+    "max_new_tokens": 128,
+    "num_beams": 1,
+    "do_sample": false,
+    "num_return_sequences": 1,
+    "use_cache": true
+  },
+  "device": "cuda",
+  "precision": "float16",
+  "torch_version": "2.15.0+cu132",
+  "transformers_version": "4.57.6",
+  "model_loading_ms": 5438.33530000029,
+  "inference_ms": 6737.729800000125,
+  "peak_gpu_memory_bytes": 1178738688,
+  "generated_tokens": 128,
+  "prompt_text": "Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.",
+  "formatted_prompt": "<|im_start|>User:<image>Describe the visible objects, activities, and spatial relationships in this image. Use only visible evidence. Do not guess uncertain identities, cultural identities, locations, or events; describe their visible appearance instead.<end_of_utterance>\nAssistant:",
+  "processor_settings": {
+    "size": {
+      "longest_edge": 1024
+    },
+    "do_image_splitting": true,
+    "max_image_size": {
+      "longest_edge": 512
+    },
+    "attention_implementation": "sdpa"
+  },
+  "eos_reached": false,
+  "token_ceiling_reached": true,
+  "prompt_variant": "default",
+  "input_sha256": "c43e0c3f07b88a310d0e120e7aa32ea5a29cecba37747015bcdec75c284e5ab0"
+}

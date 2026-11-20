@@ -1,0 +1,10 @@
+\chapter{Literature Review}
+\label{ch:literature}
+\section{Culturally situated image understanding}
+Khanuja et al. introduce a benchmark and motivation for culturally inclusive image interpretation \cite{khanuja2024image}. Their later work emphasizes that cultural relevance, semantic equivalence and visual similarity are different dimensions \cite{khanuja2025evaluating}. This report follows that separation: exact pixel locality is a technical metric, whereas realism and cultural appropriateness require human evidence.
+
+\section{Components used by the pipeline}
+Vision-language captioning supplies an inspectable description before a plan is requested. Grounding DINO performs open-set object grounding \cite{liu2023groundingdino}; SAM supplies candidate object masks \cite{kirillov2023sam}. Diffusion inpainting is evaluated as a bounded editor rather than treated as proof that an edit is culturally correct \cite{rombach2022ldm,podell2023sdxl}. The planner produces a proposal, not authority to edit.
+
+\section{Gap addressed}
+Most component papers optimize model capabilities. This work concentrates on the engineering boundary between them: typed evidence, explicit review states, immutable inputs, protected regions, saved-output verification and truthful reporting of failure. It is consequently an implementation study with limited external validity rather than a benchmark comparison against a large transcreation model.

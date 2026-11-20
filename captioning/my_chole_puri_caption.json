@@ -1,0 +1,13 @@
+{
+  "source_caption": "A plate of food sits on a wooden table. The plate contains a large, flaky flatbread, a small dish of vegetables, and a side of hummus. In the background, there is a bottle and a spoon on the table.",
+  "caption_status": "COMPLETE",
+  "target_culture": "Japan",
+  "source_culture": "india",
+  "user_instructions": "Adapt the flatbread meal toward a Japanese-style presentation. Preserve the plate, vegetables, hummus, table, bottle, spoon, lighting, and camera angle.",
+  "verified_objects": [
+    {
+      "object_id": "flatbread-1",
+      "description": "A large flaky flatbread on the plate"
+    }
+  ]
+}

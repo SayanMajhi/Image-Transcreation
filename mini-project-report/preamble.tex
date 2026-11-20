@@ -1,0 +1,31 @@
+% IEEEtran supplies the standard Times-compatible IEEE text face under pdfLaTeX.
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,longtable,array,multirow}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{positioning,arrows.meta}
+\pgfplotsset{compat=1.18}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{cite}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black,pdftitle={Culture-Aware Image Transcreation}}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.18}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\ProjectTitle}{Culture-Aware Image Transcreation}
+\newcommand{\StudentName}{Sayan Majhi}
+\newcommand{\InstituteName}{Institute name not supplied}
+\newcommand{\DepartmentName}{Department name not supplied}
+\newcommand{\DegreeName}{Undergraduate Mini Project}
+\newcommand{\CodePath}[1]{\nolinkurl{#1}}
+% Map report-style source headings to IEEE sections while retaining modular files.
+\makeatletter
+\newcommand{\ieeechapter}[1]{\section{#1}}
+\newcommand{\ieeechapterstar}[1]{\section*{#1}}
+\newcommand{\chapter}{\@ifstar\ieeechapterstar\ieeechapter}
+\makeatother

@@ -1,0 +1,33 @@
+\chapter{Proposed System}
+\label{ch:system}
+\section{Architecture}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[node distance=7mm and 8mm, every node/.style={draw,rounded corners,align=center,minimum height=9mm,font=\small}, >=latex]
+\node (img) {Input image};
+\node[right=of img] (cap) {SmolVLM\\caption};
+\node[right=of cap] (plan) {Qwen2.5\\proposal};
+\node[right=of plan,fill=orange!15] (val) {Validator +\\human review boundary};
+\node[below=of val,fill=green!12] (guide) {Guided research specification};
+\node[left=of guide] (sam) {Grounding DINO\\+ SAM};
+\node[left=of sam] (edit) {Research-only editor\\or reference compositor};
+\node[left=of edit,fill=blue!10] (verify) {Saved-pixel\\verification};
+\draw[->] (img)--(cap); \draw[->] (cap)--(plan); \draw[->] (plan)--(val);
+\draw[->] (val)--node[right,font=\scriptsize]{approved scope only}(guide);
+\draw[->] (guide)--(sam); \draw[->] (sam)--(edit); \draw[->] (edit)--(verify);
+\end{tikzpicture}
+\caption{Implemented architecture. The planning path is deliberately stopped unless a typed review contract releases a limited next step. Guided research does not convert a rejected or uncertain plan into an approved edit.}
+\label{fig:architecture}
+\end{figure}
+
+\section{Safety and evidence contracts}
+Every request binds image and mask hashes, source and replacement descriptions, edit scope and output directory. The validator can return \texttt{PROPOSE}, \texttt{REVIEW} or \texttt{ABSTAIN}; only appropriate, explicit review data permits continuation. The pilot's compositor additionally restores original pixels outside the permitted region after processing.
+
+Let $I$ be the source image, $O$ the output, $M$ the permitted binary mask and $P$ a protected mask. Locality requires
+\[
+\forall x\notin M,\quad O(x)=I(x), \qquad \forall x\in P,\quad O(x)=I(x).
+\]
+These conditions prove containment of decoded RGB changes, not semantic or photographic quality.
+
+\section{Reference-guided replacement}
+For the final repeatability pilot, a frozen request selects a target reference, alpha selection, placement, shadow settings and a near-white reconstruction region. The compositor removes the source object in the approved region, places the aspect-preserved cutout and restores exterior pixels. This method is deterministic and CPU-only but depends on researcher-selected references and simple studio backgrounds.

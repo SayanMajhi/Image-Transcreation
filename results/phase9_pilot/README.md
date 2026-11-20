@@ -255,11 +255,11 @@ native crops. They are not a human review.
 python -B -m scripts.pilot validate --manifest configs/phase9_pilot_cases.json
 python -B -m scripts.pilot run --manifest configs/phase9_pilot_cases.json --out results/phase9_pilot/run_001
 python -B -m scripts.pilot verify --run results/phase9_pilot/run_001
-python -B -m scripts.pilot package --run results/phase9_pilot/run_001 --out results/archive/repeatability_pilot_review.zip
+python -B -m scripts.pilot package --run results/phase9_pilot/run_001 --out results/repeatability_pilot_review.zip
 python -B -m scripts.reference_replacement --request results/phase8_cultural_validation/true_object_replacement/request_B.json --output results/phase8_cultural_validation/true_object_replacement/reproduction_B_phase9
 ```
 
-Transcript: `results/phase9_pilot/commands.log`. The first `run_001` was built before the
+Transcript: `results/phase9_pilot/commands.log`. (On 2026-11-12 the ZIP was later moved to `results/archive/`.) The first `run_001` was built before the
 visual notes existed. It was replaced by an identical rerun (38/38 PNGs same); its manifest,
 log and verification are kept as `dev_run_000_*`.
 

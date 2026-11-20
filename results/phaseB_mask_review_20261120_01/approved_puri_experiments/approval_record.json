@@ -1,0 +1,15 @@
+{
+  "decision": "APPROVED_FOR_EXPERIMENTAL_IMAGE_GENERATION_ONLY",
+  "date": "2026-11-20",
+  "scope": "Corrected puri mask only; SD1.5 research runs; no production promotion",
+  "source_image": "data\\chole_puri.jpg",
+  "source_image_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+  "approved_mask": "results\\phaseB_mask_review_20261120_01\\corrected_review\\puri_mask.png",
+  "approved_mask_sha256": "68ef7e19c4fa1677229539697a4f9c31e958f2afc6fd84c84466a840f37c265f",
+  "limitations": [
+    "Approval does not establish cultural correctness, recognizability, realism, or semantic consistency.",
+    "Chickpea curry, orange sauce, plate, background, utensils and unrelated food remain protected.",
+    "All outputs remain RESEARCH_ONLY and require human visual assessment."
+  ],
+  "approval_recorded": true
+}

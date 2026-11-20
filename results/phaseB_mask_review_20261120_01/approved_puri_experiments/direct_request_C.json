@@ -1,0 +1,12 @@
+{
+  "source_image": "data\\chole_puri.jpg",
+  "image_sha256": "6a810ea787be3b3f466339a067b785c29b175810c3de15be91fb0bfc7dde947d",
+  "segmentation_file": "results\\phaseB_mask_review_20261120_01\\approved_puri_experiments\\approved_mask_bundle\\segmentation.json",
+  "segmentation_sha256": "41a8dea27a5e9a6aeae5707ac40b298372364a83aaf71a6393c9cb7299e4fc30",
+  "mask_file": "results\\phaseB_mask_review_20261120_01\\approved_puri_experiments\\approved_mask_bundle\\mask_0.png",
+  "mask_sha256": "68ef7e19c4fa1677229539697a4f9c31e958f2afc6fd84c84466a840f37c265f",
+  "candidate_index": 0,
+  "prompt": "A realistic Japanese tempura serving: one recognizable golden shrimp tempura and several crisp vegetable tempura pieces replacing the puri; preserve the chickpea curry, orange sauce, plate, other food, background, lighting and perspective.",
+  "selection_note": "User-approved corrected puri mask for experimental generation only.",
+  "scope": "RESEARCH_ONLY"
+}
